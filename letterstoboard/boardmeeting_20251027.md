@@ -1,6 +1,7 @@
 ---
 title: October 27 Board Meeting
 parent: Letters to the Board
+layout: home
 nav_order: 1
 ---
 
