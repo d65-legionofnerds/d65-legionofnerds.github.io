@@ -1,4 +1,11 @@
+---
+title: November 1 Meeting Recap
+parent: Letters to the Admin
+layout: home
+nav_order: 1
+---
 
+# November 1 Meeting Recap
 
 Thank you for your time. 
 
