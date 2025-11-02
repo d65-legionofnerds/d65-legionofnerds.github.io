@@ -1,6 +1,7 @@
 ---
 title: Letters to the Board
 layout: home
+nav_order: 2
 ---
 
 # Letters to the Board

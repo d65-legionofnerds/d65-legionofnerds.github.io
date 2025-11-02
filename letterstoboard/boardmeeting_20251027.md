@@ -85,50 +85,50 @@ Let’s fix what’s broken — not what’s working. Let’s build a district t
 
 Signatories:
 
-*John Brady*
+*John Brady*<br>
 John Brady holds a Bachelor Degree in Computer Engineering from Tufts University and has over 15 years of professional experience working with financial data.  
 john.brady.jr@gmail.com
 
-*Scot Campbell*
+*Scot Campbell*<br>
 Scot Campbell holds a Ph.D. in Aerospace Engineering from the University of Illinois at Urbana-Champaign and has 21 years of experience working with data at MIT and Airbus. 
 secampbe@gmail.com
 
-*Jean Clipperton*
+*Jean Clipperton*<br>
 Jean Clipperton holds a PhD from the University of Michigan and has 19 years of professional experience working with data.
 jean.clipperton@gmail.com
 
-*Jacob Karlin*
+*Jacob Karlin*<br>
 Jacob Karlin works as a Senior Options Trader and has 17 years of professional experience working with data.
 jacob.karlin@gmail.com
 
-*Alexis Lauricella*
+*Alexis Lauricella*<br>
 Alexis Lauricella has a PhD in Developmental Psychology and a Masters degree in Public Policy from Georgetown University. She has 20 years of using qualitative and quantitative data to inform policy and industry decisions related to children, learning, and technology.
 alexislauricella@gmail.com
 
-*Kelly McCabe*
+*Kelly McCabe*<br>
 Kelly McCabe holds an MSPH in Public Health and Tropical Medicine from Tulane University and has over 20 years of professional experience working with data as an epidemiologist focused on community health research.
 mccabekelly322@gmail.com
 
-*Erin McCarville*
+*Erin McCarville*<br>
 Erin McCarville holds a Doctorate in Public Health from the University of Illinois at Chicago and has over 20 years of experience in the collection, analysis, and use of data for decision-making.
 erinemccarville@gmail.com
 
-*Lauren McNamara*
+*Lauren McNamara*<br>
 Lauren McNamara has an MS in Biostatistics from the University of Illinois at Chicago and has 20 years of professional experience working with data.
 laurenmcnamara@gmail.com
 
-*Katy Paige*
+*Katy Paige*<br>
 Katy Paige has an MBA from the University of Chicago. She is a Financial Economist at the U.S. Securities and Exchange Commission and has 20 years of professional experience in data analysis.
 @katymacswain@gmail.com
 
-*Esteban J. Quiñones*
+*Esteban J. Quiñones*<br>
 Esteban J. Quiñones holds a Ph.D. in Agricultural and Applied Economics from the University of Wisconsin-Madison and has 20 years of professional experience working with data in global development for evidence-informed policymaking.
 estebanjq@gmail.com
 
-*Dan Rey*
+*Dan Rey*<br>
 Dan Rey has a PhD in computational physics from the University of California San Diego and has 20 years of professional experience working with data
 nadrey@gmail.com
 
-*Eric Shore*
+*Eric Shore*<br>
 Eric Shore holds a BSE in Computer Science (University of Pennsylvania) and an MBA (UIUC). With 19 years of professional experience in business analytics and data-driven decision-making, he currently serves as Chief Innovation Officer at a technology company.
 emshore@gmail.com 
