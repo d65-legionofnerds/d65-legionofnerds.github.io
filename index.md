@@ -17,6 +17,8 @@ We want to provide clarity into the methods of the process and how those affect 
 
 These concerns are not about the community process or underlying goals. The concerns are about how the methodological choices of the process have predetermined the results. 
 
+## Our partners
+[Invest in Neighborhood Schools](https://sites.google.com/view/d65-slow-down/home)
 
 
 <!-- 
