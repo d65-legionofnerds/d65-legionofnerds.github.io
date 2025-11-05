@@ -2,7 +2,7 @@
 title: November 3 Board Meeting
 parent: Letters to the Board
 layout: home
-nav_order: 2
+nav_order: 1
 ---
 
 # If nobody knows, we shouldn't close
