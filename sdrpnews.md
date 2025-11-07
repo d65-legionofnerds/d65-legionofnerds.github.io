@@ -19,3 +19,7 @@ nav_order: 5
 [Construction on Foster School closing in on halfway point](https://evanstonroundtable.com/2025/11/04/construction-on-foster-school-coming-in-almost-4-million-under-budget/), *11/4/2025* 
 
 [Guest Essay: District 65 has more employees now than in 2018-19](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/), *11/2/2025* 
+
+[Letter: I am stepping down from the District 65 school board](https://evanstonroundtable.com/2025/11/02/letter-i-am-stepping-down-from-the-district-65-school-board/), *11/2/2025* 
+
+[An Analysis: Why the increase of 140 District 65 employees in FY’24?](https://evanstonroundtable.com/2024/07/14/an-analysis-why-the-increase-of-140-district-65-employees-in-fy24/), *7/14/2024*
