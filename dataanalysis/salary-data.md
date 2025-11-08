@@ -44,7 +44,7 @@ Districts with lower per-student administrative costs demonstrate that effective
 
 ## Estimated Excess Administrative Cost
 
-<iframe src="assets/fig_extra_admin.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/fig_extra_admin.html" width="100%" height="1000" frameborder="0"></iframe>
 
 ### Methodology
 
@@ -69,4 +69,4 @@ When evaluating budget reduction strategies, comparing administrative cost struc
 
 ---
 
-*Calculations for these figures can be viewed in the calculations.ipynb Jupyter notebook.*
+*Calculations for these figures can be viewed in the [interactive Jupyter notebook](calculations.html).*

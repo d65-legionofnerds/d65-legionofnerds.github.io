@@ -12,19 +12,19 @@ Evanston CCSD 65 has experienced significant enrollment decline over recent year
 
 ## Total Enrollment Over Time
 
-![Total Enrollment Trends](assets/total_enrollment_series.png)
+<iframe src="assets/enrollment_totals.html" width="100%" height="650" frameborder="0"></iframe>
 
 This chart shows the absolute enrollment numbers for District 65 and comparable districts from 2018 to present.
 
 ## Percent Change in Enrollment
 
-![Percent Enrollment Change](assets/pct_enrollment_series.png)
+<iframe src="assets/enrollment_pct_change.html" width="100%" height="650" frameborder="0"></iframe>
 
 This visualization compares the percentage change in enrollment across peer districts. While many districts have experienced some enrollment decline, District 65's 18.75% decline stands out as particularly severe among its peers.
 
 ## Statistical Significance: Z-Score Analysis
 
-![Enrollment Change Z-Scores](assets/pct_enrollment_zscores.png)
+<iframe src="assets/enrollment_pct_change_table.html" width="100%" height="650" frameborder="0"></iframe>
 
 ### Understanding Z-Scores
 
@@ -41,4 +41,4 @@ District 65's enrollment decline has a **z-score of -2.23**, meaning its 18.75% 
 
 The severity of this decline, as indicated by the z-score, suggests that District 65 faces unique challenges that extend beyond general demographic trends affecting all districts. This data should inform discussions about why District 65 is underperforming with the understanding that the district's enrollment crisis is statistically exceptional rather than part of a universal pattern.
 
-Calculations for these figures can be viewed in the calculations.ipynb Jupyter notebook.
+Calculations for these figures can be viewed in the [interactive Jupyter notebook](calculations.html).
