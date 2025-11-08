@@ -24,7 +24,7 @@ This visualization compares the percentage change in enrollment across peer dist
 
 ## Statistical Significance: Z-Score Analysis
 
-<iframe src="assets/enrollment_pct_change_table.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/enrollment_pct_change_table.html" width="100%" height="700" frameborder="0"></iframe>
 
 ### Understanding Z-Scores
 
