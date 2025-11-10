@@ -2,7 +2,7 @@
 title: November 1 Meeting Recap
 parent: Letters to the Admin
 layout: home
-nav_order: 1
+nav_order: 2
 ---
 
 # November 1 Meeting Recap
