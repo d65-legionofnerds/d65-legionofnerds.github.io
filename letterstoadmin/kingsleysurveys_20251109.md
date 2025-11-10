@@ -5,6 +5,8 @@ layout: home
 nav_order: 1
 ---
 
+# Major concerns about Kingsley surveys
+
 My name is Lauren McNamara and I am writing on behalf of the Legion of Data Nerds with concerns on the two surveys sent to the Kingsley community on Friday 11/7. Dr. Turner sent a Boundary Input Survey at 2:00pm and Principal Davis sent a Preparing for Possible School Closure Survey at 4:00 pm. For context, I have 11 years of experience working in survey research at a top nonpartisan research organization, and I have direct experience in working to pull insight out of open-ended responses.
 
 I share the feedback below in the interest of helping the district do better on any upcoming surveys.
@@ -19,9 +21,9 @@ My primary concerns are with the Kingsley Community Boundary Input survey sent b
 
 3. The single open-ended response is problematic for many reasons.
 
-    a. Participants are forced to come up with concerns themselves for a closure process moving at blinding speed. Parents may not be caught up on the latest implications of the latest maps. Displaying a finite list of closed-ended options with additional space given for other responses would reflect that the district has heard community feedback already provided and is weighing the options; this method indicates the district does not know where to start.
+  a. Participants are forced to come up with concerns themselves for a closure process moving at blinding speed. Parents may not be caught up on the latest implications of the latest maps. Displaying a finite list of closed-ended options with additional space given for other responses would reflect that the district has heard community feedback already provided and is weighing the options; this method indicates the district does not know where to start.
 
-    b. It is now up to the district to make sense of coding these open-ended responses into discrete concepts. This is a difficult task which takes time (which we don’t seem to have) and relies on an unbiased researcher. This methodology choice means the district will need to be incredibly transparent on how these responses were coded including sharing the raw responses with the public so that the coding can be verified. 
+  b. It is now up to the district to make sense of coding these open-ended responses into discrete concepts. This is a difficult task which takes time (which we don’t seem to have) and relies on an unbiased researcher. This methodology choice means the district will need to be incredibly transparent on how these responses were coded including sharing the raw responses with the public so that the coding can be verified. 
 
 Additionally, for both surveys:
 
@@ -32,6 +34,7 @@ Additionally, for both surveys:
 6. Both surveys do not limit the number of responses per respondent. This makes it impossible to accurately measure the Kingsley community’s opinion.
 
 7. It is not clear how the data will be used by the school or by the administration. This needs to be articulated to potential respondents to ensure relevant responses that are within scope. Many potential respondents will not have an intuitive sense of how this data might be useful.
+
 
 The Boundary Input survey appears to be a quick and dirty way to collect feedback. This is no way to define school boundaries. School boundaries should be set based on a thoughtful and considered vision for our district. Instead of helping answer questions with data insights and inform policy, this rushed and opaque survey effort will likely result in more distrust and unanswered questions. 
 
