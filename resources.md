@@ -37,6 +37,8 @@ October 14, 2025
 
 [Student Data Reports](https://www.district65.net/about/data-reports)
 
+[Needs Assessment Guidebook]({{ '/assets/NeedsAssessmentGuidebook.pdf' | relative_url }}){:target="_blank"} *PDF*
+
 
 ## D65 Board
 
