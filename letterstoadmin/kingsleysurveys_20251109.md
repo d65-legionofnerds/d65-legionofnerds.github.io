@@ -19,15 +19,15 @@ My primary concerns are with the Kingsley Community Boundary Input survey sent b
 
 <li>The survey introduction simply states, “Please complete this short survey to provide input on potential school boundary changes.” There is no background information provided on what the potential boundary changes under consideration are. There is no notice that current closure scenarios are for two north side schools. This process is being forced through at lightning speed and many families likely are not aware of the latest developments being considered. It is unfair to ask their thoughts without the context of the current plan.</li>
 
-<li>3. The single open-ended response is problematic for many reasons.
+<li>The single open-ended response is problematic for many reasons.
   <ol type="a">
   <li>Participants are forced to come up with concerns themselves for a closure process moving at blinding speed. Parents may not be caught up on the latest implications of the latest maps. Displaying a finite list of closed-ended options with additional space given for other responses would reflect that the district has heard community feedback already provided and is weighing the options; this method indicates the district does not know where to start.</li>
 
-  <li>It is now up to the district to make sense of coding these open-ended responses into discrete concepts. This is a difficult task which takes time (which we don’t seem to have) and relies on an unbiased researcher. This methodology choice means the district will need to be incredibly transparent on how these responses were coded including sharing the raw responses with the public so that the coding can be verified. </li>
-</ol></li></ol>
+  <li>It is now up to the district to make sense of coding these open-ended responses into discrete concepts. This is a difficult task which takes time (which we don’t seem to have) and relies on an unbiased researcher. This methodology choice means the district will need to be incredibly transparent on how these responses were coded including sharing the raw responses with the public so that the coding can be verified. </li></ol>
+</li></ol>
 Additionally, for both surveys:
-<ol>
-<li start="4">There is no information provided on when the survey closes. Parents should be given a timeframe in which they are asked to complete their response. The SDRP process is highly accelerated and it’s likely parents don’t have a long window to respond, but this is not made clear.</li>
+<ol start="4">
+<li>There is no information provided on when the survey closes. Parents should be given a timeframe in which they are asked to complete their response. The SDRP process is highly accelerated and it’s likely parents don’t have a long window to respond, but this is not made clear.</li>
 
 <li>While each survey was only sent directly to the Kingsley community, the link is able to be shared and anyone with the link can complete the survey. These surveys are directed at Kingsley and should be limited to Kingsley respondents. How will you ensure quality control to verify that only eligible survey respondents’ answers are incorporated?</li>
 
