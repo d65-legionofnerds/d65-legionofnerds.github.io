@@ -11,3 +11,5 @@ nav_order: 4
 [Victor Filippini on D65 and City Government Cooperation]({{ '/assets/VicFilippiniMemo.pdf' | relative_url }}){:target="_blank"} *PDF* *11/06/2025*
 
 [Victor Filippini on Lincolnwood Deed Restrictions]({{ '/assets/VicFilippiniMemoLincolnwood.pdf' | relative_url }}){:target="_blank"} *PDF* *11/09/2025*
+
+**[Legion of Data Nerds: Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/12/2025*
