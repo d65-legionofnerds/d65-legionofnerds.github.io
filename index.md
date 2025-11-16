@@ -9,8 +9,7 @@ nav_order: 1
 
 Nerds or Data Nerds, our underlying purpose is the same: **data-driven, methodologically sound approaches to problem-solving in District 65**. 
 
-Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | relative_url }}){:target="_blank"}, where we propose levers to reach district utilization above 70% in each middle
-school feeder pattern1 while prioritizing students, Title I schools, and programming.
+Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | relative_url }}){:target="_blank"}, where we propose levers to reach district utilization above 70% in each middle school feeder pattern while prioritizing students, Title I schools, and programming.
 
 ## Who we are
 The Legion of Nerds is a group of concerned parents reviewing the Evanston D65 redistricting plan, validating its assumptions, and trying to identify if more solutions are available than closing schools outright. Combined, we have more than 200 years of professional experience working with data analysis, research methodology and evidence-informed decision-making across fields including public health, economics, engineering, finance, education and policy.
