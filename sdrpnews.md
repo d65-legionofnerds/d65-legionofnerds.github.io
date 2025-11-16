@@ -6,6 +6,12 @@ nav_order: 5
 
 # SDRP in the News
 
+[District 65 parents submit three proposals offering alternatives to two school closures](https://evanstonroundtable.com/2025/11/14/district-65-parents-submit-three-proposals-offering-alternatives-to-planned-school-closures/), *11/14/2025*
+
+[Guest essay: Closing 2 schools in the manner proposed may accelerate enrollment declines](https://evanstonroundtable.com/2025/11/12/guest-essay-district-65-school-closures-2/), *11/12/2025*
+
+[Letter: District 65, keep your promise to Fifth Ward families](https://evanstonroundtable.com/2025/11/11/letter-district-65-keep-your-promise-to-fifth-ward-families/), *11/11/2025*
+
 [Willard two-way immersion families say Hispanic voices have been ‘pushed aside’ in school closure process](https://evanstonroundtable.com/2025/11/05/willard-two-way-immersion-families-say-hispanic-voices-have-been-pushed-aside-in-school-closure-process/), *11/5/2025* 
 
 [Guest Essay: Amend the school closure process](https://evanstonroundtable.com/2025/11/04/guest-essay-amend-the-school-closure-process/), *11/4/2025*
