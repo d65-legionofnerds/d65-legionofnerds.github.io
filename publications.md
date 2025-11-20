@@ -14,4 +14,4 @@ nav_order: 4
 
 **[Legion of Data Nerds: Financial Levers Memo]({{ '/assets/FinancialLeversMemoV2.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/12/2025* Updated with additional endnotes 11/17/2025
 
-**[Legion of Data Nerds: Financial Discrepancy Memo]({{ '/assets/FinancialDiscrepamcyMemo.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/20/2025*
+**[Legion of Data Nerds: Financial Discrepancy Memo]({{ '/assets/FinancialDiscrepancyMemo.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/20/2025*
