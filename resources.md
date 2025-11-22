@@ -10,6 +10,13 @@ nav_order: 6
 
 Presentation materials downloaded from the D65 board meeting agendas.
 
+November 20, 2025
+* [Scenario 1B-R Data](board_meeting_artifacts/Scenario 1B-R Data 11.20.25.pdf){:target="_blank"}
+
+November 17, 2025
+* [SDRP Phase 3 Scenario Presentation](board_meeting_artifacts/SDRP Phase 3 Scenario Presentation_11.17.25.pdf){:target="_blank"}
+* [SDRP Phase 3 Scenario Memo](board_meeting_artifacts/SDRP III Scenario Modeling for Potenital School Closure Memo 25_11_17.pdf){:target="_blank"}
+
 November 3, 2025
 * [SDRP Phase 3 Scenario Presentation](board_meeting_artifacts/SDRP Phase 3 Scenario Presentation_11.3.25.pdf){:target="_blank"}
 * [SCS Contract Extension](board_meeting_artifacts/D65_ SCS Contract Extension 10.29.25.pdf){:target="_blank"}
