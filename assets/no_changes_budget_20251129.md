@@ -1,6 +1,7 @@
+---
 title: No Changes Budget Model Explained
-layout: home
-nav_order: 1
+layout: default
+nav_exclude: true
 ---
 
 # No Changes Budget Model Explained
