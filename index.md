@@ -13,6 +13,7 @@ Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | rel
 
 ## Latest from the Nerds
 **[Legion of Data Nerds: No Changes Budget Model Explained]({{ '/no_changes_budget_20251129.html' | relative_url }}){:target="_blank"}** *11/29/2025*
+
 **[Legion of Data Nerds: Financial Discrepancy Memo]({{ '/assets/FinancialDiscrepancyMemo.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/20/2025*
 
 ## Who we are

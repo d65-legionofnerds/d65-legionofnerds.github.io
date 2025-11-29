@@ -16,4 +16,4 @@ nav_order: 4
 
 **[Legion of Data Nerds: Financial Discrepancy Memo]({{ '/assets/FinancialDiscrepancyMemo.pdf' | relative_url }}){:target="_blank"}** *PDF* *11/20/2025*
 
-**[Legion of Data Nerds: No Changes Budget Model Explained]({{ '/no_changes_budget_20251129.html' | relative_url }}){:target="_blank"}** *11/29/2025*
+**[Legion of Data Nerds: No Changes Budget Model Explained]({{ '/assets/no_changes_budget_20251129.html' | relative_url }}){:target="_blank"}** *11/29/2025*
