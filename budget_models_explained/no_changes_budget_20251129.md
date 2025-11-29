@@ -34,8 +34,8 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 
 District CFO Tamara Mitchell gave a verbal explanation on how to read the table at the November 3 board meeting, but the table as presented comes with no footnotes or explanatory text. It also assumes the reader has a base understanding of financial terms. This table is driving important and impactful decisions for our community, and the general population deserves more insight and education on how to interpret and understand the financial crisis we are in.
 
-![No Changes Budget Chart](/assets/images/no_changes_budget_20251129.png)
+![No Changes Budget Chart](/assets/no_changes_budget_20251129.png)
 
-Link to [structural deficit]()
+Link to [structural deficit](#structural-deficit)
 
 
