@@ -13,7 +13,7 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 ## Definitions
 
 **Definitions**
-* <span id="structural-deficit>**Structural Deficit:**</span> A budget imbalance where expenses are increasing faster than revenues
+* <span id="structural-deficit">**Structural Deficit:**</span> A budget imbalance where expenses are increasing faster than revenues
 * **Deferred Maintenance:** Postponing necessary upkeep and repairs of facilities, infrastructure, property, or equipment. This is usually done to save money in the short term but can lead to more expensive repairs in the long run. 
 * **Lease Certificates:** Funding mechanism used to build Foster School. Investors buy lease certificates and make a profit when the district pays back the money owed plus interest.
 * **Fiscal Year (FY):** A 12-month period used for budgeting, accounting, and financial reporting. A fiscal year may not align with a calendar year. District 65’s 2026 fiscal year 2026 runs from July 1, 2025 to June 30, 2026.
@@ -27,10 +27,15 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 
 
 **Units**
+* Capital M in a dollar amount denotes millions rounded to two digits. For example, $3.2M represents $3,200,000 (rounded) and could reflect an underlying amount like $3,227,125.
+* Capital K in a dollar amount denotes dollars rounded to the thousands. For example, $916K represents $916,000 (rounded) and could reflect an underlying amount like $915,610.
 
 ## Budget Model Explanation
+
+District CFO Tamara Mitchell gave a verbal explanation on how to read the table at the November 3 board meeting, but the table as presented comes with no footnotes or explanatory text. It also assumes the reader has a base understanding of financial terms. This table is driving important and impactful decisions for our community, and the general population deserves more insight and education on how to interpret and understand the financial crisis we are in.
+
+![No Changes Budget Chart](/assets/images/no_changes_budget_20251129.png)
 
 Link to [structural deficit]()
 
 
-![No Changes Budget Chart](/assets/images/no_changes_budget_20251129.png)
