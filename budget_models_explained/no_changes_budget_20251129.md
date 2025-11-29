@@ -14,16 +14,16 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 
 **Definitions**
 * <span id="structural-deficit">**Structural Deficit:**</span> A budget imbalance where expenses are increasing faster than revenues
-* **Deferred Maintenance:** Postponing necessary upkeep and repairs of facilities, infrastructure, property, or equipment. This is usually done to save money in the short term but can lead to more expensive repairs in the long run. 
-* **Lease Certificates:** Funding mechanism used to build Foster School. Investors buy lease certificates and make a profit when the district pays back the money owed plus interest.
-* **Fiscal Year (FY):** A 12-month period used for budgeting, accounting, and financial reporting. A fiscal year may not align with a calendar year. District 65’s 2026 fiscal year 2026 runs from July 1, 2025 to June 30, 2026.
-* **Referendum:** A question on the ballot that offers the community a choice between accepting and rejecting a proposal.
-* **Fund Balance:** A comparison of the district’s total assets (money it has) against liabilities (money it owes). Fund Balance can be thought of like a savings account.
-* **Fund Balance Reserves, or Cash on Hand:** A part of the fund balance set aside for specific purposes, such as emergencies or payment obligations.
-* **90 Days Cash on Hand:** The amount of money the district spends on operating expenses in a 90 day period. District 65’s goal is to maintain 90 days cash on hand.
-* **Debt Service Extension Base (DSEB):** a provision under Illinois's Property Tax Extension Limitation Law (PTELL) that allows local taxing districts (such as school districts) to levy a limited amount of property taxes to repay non-referendum bonds without seeking voter approval for the tax extension itself. 
-* **Operating Expenses (OpEx):** Short term, usually recurring costs to support day to day operations of an organization, such as salaries, debt payments, technology, and supplies. These are usually spent and tracked within a one year period.
-* **Capital Expenses (CapEx):** Long term costs for assets that will benefit an organization for more than a year, such as constructing and maintaining buildings or vehicles.
+* <span id="deferred-maintenance">**Deferred Maintenance:**</span> Postponing necessary upkeep and repairs of facilities, infrastructure, property, or equipment. This is usually done to save money in the short term but can lead to more expensive repairs in the long run. 
+* <span id="lease-cert">**Lease Certificates:**</span> Funding mechanism used to build Foster School. Investors buy lease certificates and make a profit when the district pays back the money owed plus interest.
+* <span id="fiscal-year">**Fiscal Year (FY):**</span> A 12-month period used for budgeting, accounting, and financial reporting. A fiscal year may not align with a calendar year. District 65’s 2026 fiscal year 2026 runs from July 1, 2025 to June 30, 2026.
+* <span id="referendum">**Referendum:**</span> A question on the ballot that offers the community a choice between accepting and rejecting a proposal.
+* <span id="fund-balance">**Fund Balance:**</span> A comparison of the district’s total assets (money it has) against liabilities (money it owes). Fund Balance can be thought of like a savings account.
+* <span id="fund-bal-reserve">**Fund Balance Reserves, or Cash on Hand:**</span> A part of the fund balance set aside for specific purposes, such as emergencies or payment obligations.
+* <span id="90dayscoh">**90 Days Cash on Hand:**</span> The amount of money the district spends on operating expenses in a 90 day period. District 65’s goal is to maintain 90 days cash on hand.
+* <span id="dseb"> **Debt Service Extension Base (DSEB):**</span> a provision under Illinois's Property Tax Extension Limitation Law (PTELL) that allows local taxing districts (such as school districts) to levy a limited amount of property taxes to repay non-referendum bonds without seeking voter approval for the tax extension itself. 
+*<span id="opex">**Operating Expenses (OpEx):**</span> Short term, usually recurring costs to support day to day operations of an organization, such as salaries, debt payments, technology, and supplies. These are usually spent and tracked within a one year period.
+*<span id="capex"> **Capital Expenses (CapEx):**</span> Long term costs for assets that will benefit an organization for more than a year, such as constructing and maintaining buildings or vehicles.
 
 
 **Units**
@@ -34,8 +34,9 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 
 District CFO Tamara Mitchell gave a verbal explanation on how to read the table at the November 3 board meeting, but the table as presented comes with no footnotes or explanatory text. It also assumes the reader has a base understanding of financial terms. This table is driving important and impactful decisions for our community, and the general population deserves more insight and education on how to interpret and understand the financial crisis we are in.
 
-<!-- ![No Changes Budget Chart](/assets/no_changes_budget_20251129.png) -->
-![No Changes Budget Chart]({{ '/assets/no_changes_budget.png' | relative_url }})
+![No Changes Budget Chart]({{ '../assets/no_changes_budget.png' | relative_url }})
+
+There are two types of expenses that are considered when organizations are budgeting - [operational expenses](#opex) and [capital expenses](#capex). This table covers operating expenses only. 
 
 Link to [structural deficit](#structural-deficit)
 
