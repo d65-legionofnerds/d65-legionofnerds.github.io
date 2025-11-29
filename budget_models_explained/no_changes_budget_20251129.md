@@ -22,7 +22,7 @@ This piece begins with definitions of key terms. [Click here to skip to the expl
 * <span id="fund-bal-reserve">**Fund Balance Reserves, or Cash on Hand:**</span> A part of the fund balance set aside for specific purposes, such as emergencies or payment obligations.
 * <span id="90dayscoh">**90 Days Cash on Hand:**</span> The amount of money the district spends on operating expenses in a 90 day period. District 65’s goal is to maintain 90 days cash on hand.
 * <span id="dseb"> **Debt Service Extension Base (DSEB):**</span> a provision under Illinois's Property Tax Extension Limitation Law (PTELL) that allows local taxing districts (such as school districts) to levy a limited amount of property taxes to repay non-referendum bonds without seeking voter approval for the tax extension itself. 
-*<span id="opex">**Operating Expenses (OpEx):**</span> Short term, usually recurring costs to support day to day operations of an organization, such as salaries, debt payments, technology, and supplies. These are usually spent and tracked within a one year period.
+*[opex]**Operating Expenses (OpEx):**</span> Short term, usually recurring costs to support day to day operations of an organization, such as salaries, debt payments, technology, and supplies. These are usually spent and tracked within a one year period.
 *<span id="capex"> **Capital Expenses (CapEx):**</span> Long term costs for assets that will benefit an organization for more than a year, such as constructing and maintaining buildings or vehicles.
 
 
@@ -36,7 +36,7 @@ District CFO Tamara Mitchell gave a verbal explanation on how to read the table 
 
 ![No Changes Budget Chart]({{ '../assets/no_changes_budget.png' | relative_url }})
 
-There are two types of expenses that are considered when organizations are budgeting - [operational expenses](#opex) and [capital expenses](#capex). This table covers operating expenses only. 
+There are two types of expenses that are considered when organizations are budgeting - [operational expenses][opex] and [capital expenses](#capex). This table covers operating expenses only. 
 
 Link to [structural deficit](#structural-deficit)
 
