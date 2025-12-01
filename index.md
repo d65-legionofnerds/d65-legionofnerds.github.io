@@ -12,6 +12,10 @@ Nerds or Data Nerds, our underlying purpose is the same: **data-driven, methodol
 Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | relative_url }}){:target="_blank"}, where we propose levers to reach district utilization above 70% in each middle school feeder pattern while prioritizing students, Title I schools, and programming.
 
 ## Latest from the Nerds
+**[Financial Levers App](https://jclip.shinyapps.io/Financial_Levers/){:target="_blank"}** *Interactive App* *12/01/2025*
+
+**[Financial Levers App Explainer]({{ 'assets/12_01_App_explainer.pdf' | relative_url }}){:target="_blank"}** *PDF* *12/01/2025*
+
 **[Staff Directory Analysis]({{ 'dataanalysis/staff-data.html' | relative_url }})** *12/01/2025*
 
 **[No Changes Budget Model Explained]({{ 'assets/no_changes_budget_20251129.html' | relative_url }}){:target="_blank"}** *11/29/2025*
