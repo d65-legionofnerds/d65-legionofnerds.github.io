@@ -52,4 +52,4 @@ This metric normalizes staffing levels by enrollment, showing how many staff mem
 
 Similar to the staff ratio above, this shows the number of teachers per 100 students at each elementary school, providing insight into classroom teacher availability relative to student population.
 
-Calculations for these figures can be viewed in the [interactive Jupyter notebook](staff_directory_calculations.html).
+Calculations for these figures can be viewed in the [interactive Jupyter notebook](assets/staff_directory_calculations.html).
