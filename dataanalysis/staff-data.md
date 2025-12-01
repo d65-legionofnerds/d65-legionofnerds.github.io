@@ -52,4 +52,10 @@ This metric normalizes staffing levels by enrollment, showing how many staff mem
 
 Similar to the staff ratio above, this shows the number of teachers per 100 students at each elementary school, providing insight into classroom teacher availability relative to student population.
 
-Calculations for these figures can be viewed in the [interactive Jupyter notebook](assets/staff_directory_calculations.html).
+## Average Class Size by Elementary School
+
+<iframe src="assets/avg_class_size_fig.html" width="100%" height="850" frameborder="0"></iframe>
+
+This data is taken from the latest [Illinois State Board of Education Report Card Data Set (SY25)](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx){:target="_blank"}
+
+Calculations for these figures can be viewed in the [interactive Jupyter notebook](dataanalysis/staff_directory_calculations.html).
