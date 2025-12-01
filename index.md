@@ -16,6 +16,8 @@ Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | rel
 
 **[Financial Levers App Explainer]({{ 'assets/12_01_App_explainer.pdf' | relative_url }}){:target="_blank"}** *PDF* *12/01/2025*
 
+**[Walkability Analysis]({{ 'dataanalysis/walkability.html' | relative_url }})** *12/01/2025*
+
 **[Staff Directory Analysis]({{ 'dataanalysis/staff-data.html' | relative_url }})** *12/01/2025*
 
 **[No Changes Budget Model Explained]({{ 'assets/no_changes_budget_20251129.html' | relative_url }}){:target="_blank"}** *11/29/2025*

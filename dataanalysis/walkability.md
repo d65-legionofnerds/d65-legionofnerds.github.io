@@ -12,13 +12,13 @@ This analysis uses data made available by District 65 on the School Closure Hub 
 
 ## Walkability for Each School by Each Scenario
 
-<iframe src="assets/elementary_walkability_comparison.html" width="100%" height="1600" frameborder="0"></iframe>
+<iframe src="assets/elementary_walkability_comparison.html" width="100%" height="1650" frameborder="0"></iframe>
 
 This chart shows the percentage of students who would have a .75 mile or less walk to school in each scenario.
 
 ## Walkability for Each Feeder Pattern by Each Scenario
 
-<iframe src="assets/feeder_walkability_comparison.html" width="100%" height="800" frameborder="0"></iframe>
+<iframe src="assets/feeder_walkability_comparison.html" width="100%" height="850" frameborder="0"></iframe>
 
 This chart aggregates the same school data into each school's repective feeder middle school and then shows the percentage of students who would have a .75 mile or less walk to school in each scenario.
 
