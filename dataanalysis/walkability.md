@@ -22,4 +22,4 @@ This chart shows the percentage of students who would have a .75 mile or less wa
 
 This chart aggregates the same school data into each school's repective feeder middle school and then shows the percentage of students who would have a .75 mile or less walk to school in each scenario.
 
-Calculations for these figures can be viewed in the [interactive Jupyter notebook](dataanalysis/walkability_calc.html).
+Calculations for these figures can be viewed in the [interactive Jupyter notebook](dataanalysis/assets/walkability_calc.html).
