@@ -22,8 +22,17 @@ The survey was sent to 470 parent emails on the Kingsley PTA mailing list and wa
 The survey contained 20 questions on school boundaries, transition support, intent to stay in District 65, and demographics.
 
 ## Results
+Most respondents are assigned to Lincolnwood school based on the drawn boundaries.
 
 ![Assigned School](assets/kingsley_survey/assigned_school.png)
+
+Most respondents also prefer to attend Lincolnwood school.
+
+![Preferred School](assets/kingsley_survey/preferred_school.png)
+
+Sankey
+
+<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0"></iframe>
 
 Survey results show strong alignment between Kingsley families and the district’s proposed attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries. 69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27. Lincolnwood emerged consistently as the most preferred receiving school, both under the proposed boundaries and across alternative placement scenarios.
 
