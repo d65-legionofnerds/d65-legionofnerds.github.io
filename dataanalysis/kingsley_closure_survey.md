@@ -26,13 +26,15 @@ Most respondents are assigned to Lincolnwood school based on the drawn boundarie
 
 ![Assigned School](assets/kingsley_survey/assigned_school.png)
 
-Most respondents also prefer to attend Lincolnwood school.
+Lincolnwood emerged consistently as the most preferred receiving school.
 
 ![Preferred School](assets/kingsley_survey/preferred_school.png)
 
-Sankey
+69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27. 
 
-<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="80%" height="650" frameborder="0"></iframe>
 
-Survey results show strong alignment between Kingsley families and the district’s proposed attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries. 69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27. Lincolnwood emerged consistently as the most preferred receiving school, both under the proposed boundaries and across alternative placement scenarios.
+Survey results show strong alignment between Kingsley families and the district’s attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries.
+
+![Boundary Factors](assets/kingsley_survey/boundary_factors.png)
 
