@@ -32,9 +32,24 @@ Lincolnwood emerged consistently as the most preferred receiving school.
 
 69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27. 
 
-<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="80%" height="650" frameborder="0"></iframe>
+<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0"></iframe>
 
 Survey results show strong alignment between Kingsley families and the district’s attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries.
 
 ![Boundary Factors](assets/kingsley_survey/boundary_factors.png)
 
+The survey asked respondents to what extent they would support a districting approach to maximize walkability and community continuity by assigning walkable attendance boundaries, and also offering guaranteed placement at a designated Kingsley receiving school for those that request it, without requiring permissive transfers. There was overwhelming support (78%) for this approach.
+
+![Support Walkability and Continuity](assets/kingsley_survey/support_walkability_continuity.png)
+
+68% of respondents preferred Lincolnwood be instated as the preferred receiving school. The question noted that Lincolnwood may be an ideal school for this approach given its central location and proximity to Kingsley.
+
+![Walkability and Continuity Preferred School](assets/kingsley_survey/walkability_continuity_pref_school.png)
+
+If guaranteed placement were offered for current Kingsley students, Lincolnwood is the ideal receiving school for most respondents (58%)
+
+![Preferred School Guaranteed Placement](assets/kingsley_survey/pref_school_guaranteed_placement.png)
+
+Most respondents (50%) would not request a permissive transfer in which a final placement would not be known until just before the new school year begins.
+
+![Request Permissive Transfer](assets/kingsley_survey/req_permissive_transfer.png)
