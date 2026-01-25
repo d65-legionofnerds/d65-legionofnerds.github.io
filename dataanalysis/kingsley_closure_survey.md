@@ -36,6 +36,8 @@ Lincolnwood emerged consistently as the most preferred receiving school.
 
 Survey results show strong alignment between Kingsley families and the district’s attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries.
 
+Respondents simultaneously expressed concern about the potential loss of Kingsley’s close-knit community. 75% of survey respondents either prioritized maximizing the number of students who remain together or offering flexibility for families to choose the school that works best for them.
+
 ![Boundary Factors](assets/kingsley_survey/boundary_factors.png)
 
 The survey asked respondents to what extent they would support a districting approach to maximize walkability and community continuity by assigning walkable attendance boundaries, and also offering guaranteed placement at a designated Kingsley receiving school for those that request it, without requiring permissive transfers. There was overwhelming support (78%) for this approach.
