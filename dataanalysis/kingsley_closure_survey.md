@@ -76,7 +76,8 @@ Most respondents (50%) would not request a permissive transfer in which a final 
 Survey respondents were presented with several ways that a new school might welcome incoming Kingsley students, and asked to select all that they felt would help their children feel welcomed. Most ideas received strong support, with the top rated being ways that incoming students can enter and explore the new building.
 
 <!-- ![New School Welcome Support](assets/kingsley_survey/welcome_support.png) -->
-<img src="assets/kingsley_survey/welcome_support.png" alt="New School Welcome Support" width="500">
+<!-- <img src="assets/kingsley_survey/welcome_support.png" alt="New School Welcome Support" width="500"> -->
+<iframe src="assets/kingsley_survey/welcome_support.png" width="100%" height="650" frameborder="0"></iframe>
 
 ### Intent to Stay
 
