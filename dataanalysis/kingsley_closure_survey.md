@@ -63,7 +63,7 @@ The survey asked respondents to what extent they would support a districting app
 
 ![Walkability and Continuity Preferred School](assets/kingsley_survey/walkability_continuity_pref_school.png)
 
-If guaranteed placement were offered for current Kingsley students, Lincolnwood is the ideal receiving school for most respondents (58%)
+If guaranteed placement were offered for current Kingsley students, Lincolnwood is the ideal receiving school for most respondents (58%).
 
 ![Preferred School Guaranteed Placement](assets/kingsley_survey/pref_school_guaranteed_placement.png)
 
@@ -107,6 +107,6 @@ All grade levels were represented with 4th grade parents being the most common r
 
 ## Discussion
 
-Kingsley parents are supportive of the walkable boundaries drawn and most intend to remain in District 65 next year. However, there is also broad community support for allowing early guaranteed placement to keep the current Kingsley cohorts together, and strong sentiments of dissatisfaction at the district leadership level. 
+Kingsley parents are supportive of the walkable boundaries the board approved and most intend to remain in District 65 next year. However, there is also broad community support for allowing early guaranteed placement to keep the current Kingsley cohorts together, and strong sentiments of dissatisfaction at the district leadership level. 
 
 Kingsley parents identified numerous ways to help ease their children's transition to a new school, foremost being ample opportunities to tour and become familiar with the new spaces.
