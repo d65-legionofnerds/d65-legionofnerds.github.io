@@ -25,13 +25,13 @@ The survey was sent to 470 parent emails on the Kingsley PTA mailing list and wa
 
 The survey contained 20 questions on school boundaries, transition support, intent to stay in District 65, and demographics.
 
-The complete analysis can be found in this [Jupyter notebook](kingsley_closure_survey.ipynb).
+The complete analysis can be found in this [Jupyter notebook](assets/kingsley_survey/kingsley_closure_survey.html).
 
 ### Data Preparation
 
 The dataset was checked for duplicate emails and none were found. Respondents who answered "no" at the informed consent statement were not included in the analysis.
 
-Many questions offered an "Other - specify" response. These texts provided nuance and insight, but to facilitate analysis these responses were recoded into existing or common topics where possible. The recoding details are available in the [Jupyter notebook](kingsley_closure_survey.ipynb).
+Many questions offered an "Other - specify" response. These texts provided nuance and insight, but to facilitate analysis these responses were recoded into existing or common topics where possible. The recoding details are available in the [Jupyter notebook](assets/kingsley_survey/kingsley_closure_survey.html).
 
 ## Results
 
@@ -76,8 +76,6 @@ Most respondents (50%) would not request a permissive transfer in which a final 
 Survey respondents were presented with several ways that a new school might welcome incoming Kingsley students, and asked to select all that they felt would help their children feel welcomed. Most ideas received strong support, with the top rated being ways that incoming students can enter and explore the new building.
 
 ![New School Welcome Support](assets/kingsley_survey/welcome_support.png)
-<!-- <img src="assets/kingsley_survey/welcome_support.png" alt="New School Welcome Support" width="500"> -->
-<!-- <iframe src="assets/kingsley_survey/welcome_support.png" width="100%" height="650" frameborder="0"></iframe> -->
 
 ### Intent to Stay
 
