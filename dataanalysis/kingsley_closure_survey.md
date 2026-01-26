@@ -29,7 +29,7 @@ The complete analysis can be found in this [Jupyter notebook](kingsley_closure_s
 
 ### Data Preparation
 
-The dataset was checked for duplicate emails and none were found. Respondents who answered "no" at the informed consent statement were not included in the survey.
+The dataset was checked for duplicate emails and none were found. Respondents who answered "no" at the informed consent statement were not included in the analysis.
 
 Many questions offered an "Other - specify" response. These texts provided nuance and insight, but to facilitate analysis these responses were recoded into existing or common topics where possible. The recoding details are available in the [Jupyter notebook](kingsley_closure_survey.ipynb).
 
@@ -45,7 +45,7 @@ Lincolnwood emerged consistently as the most preferred receiving school.
 
 ![Preferred School](assets/kingsley_survey/preferred_school.png)
 
-69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27. 
+69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27, but many respondents would prefer the flexibility to choose the school that is right for them.
 
 <iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0"></iframe>
 
