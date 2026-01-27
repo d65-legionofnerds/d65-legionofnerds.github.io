@@ -119,7 +119,7 @@ All grade levels were represented with 4th grade parents being the most common r
 
 Finally, respondents were asked to provide any other commentary or feedback on the SDRP process that they would like the Board of Education, district administration, Invest in Neighborhood Schools (IINS), or Legion of Data Nerds to consider.
 
-Generally parents expressed anger and frustration about the process. Parents reported distrust of the district and its leadership, although some parents specifically recognized newly elected board members for questioning the process and challenging assumptions. They want problem-solving and creative solutions. They viewed the process as flawed, and are fearful of further financial mismanagement and closures. They appreciate the support that other schools and families have provided.  
+Generally parents expressed anger and frustration about the process. Parents reported distrust of the district and its leadership, although some parents specifically recognized newly elected board members for questioning the process and challenging assumptions. They want problem-solving and creative solutions. They viewed the process as flawed, and are fearful of further financial mismanagement and closures. They appreciate the support that other schools and families have provided. They are also worried about Kingsley teachers and staff and want them to be considered.
 
 “I don't trust the board or our district admin, but I do trust our community. The approach the administration took fostered a big divide in our community and enforced that divide by allowing community members to disparage each other.”
 
