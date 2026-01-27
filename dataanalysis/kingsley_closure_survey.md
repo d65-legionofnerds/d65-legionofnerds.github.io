@@ -99,7 +99,7 @@ Among respondents not likely to stay in District 65, the most common school alte
 
 ![Attend Not D65 (Not Likely to Stay)](assets/kingsley_survey/no_stay_attend_not_d65.png)
 
-Respondents were presented with a number of factors that may cause dissatisfaction with District 65 and asked to select all that may contribue to a choice to leave the district. The most commonly cited reasons were lack of trust in district administration (63%), lack of transparency and accountability in district decision-making (58%), and lack of trust in the board of education (55%).
+Respondents were presented with a number of factors that may cause dissatisfaction with District 65 and asked to select all that may contribute to a choice to leave the district. The most commonly cited reasons were lack of trust in district administration (63%), lack of transparency and accountability in district decision-making (58%), and lack of trust in the board of education (55%).
 
 ![Reason to Leave District 65](assets/kingsley_survey/reason_leave_d65.png)
 
@@ -119,7 +119,7 @@ All grade levels were represented with 4th grade parents being the most common r
 
 Finally, respondents were asked to provide any other commentary or feedback on the SDRP process that they would like the Board of Education, district administration, Invest in Neighborhood Schools (IINS), or Legion of Data Nerds to consider.
 
-Generally parents expressed anger and frustration about the process. Parents reported distrust of the district and its leadership, although some parents specifically recognized newly elected board members for questioning the process and challenging assumptions. They want problem-solving and creative solutions. They viewed the process as flawed, and are fearful of further financial mismanagement and closures. The appreciate the support that other schools and families have provided.  
+Generally parents expressed anger and frustration about the process. Parents reported distrust of the district and its leadership, although some parents specifically recognized newly elected board members for questioning the process and challenging assumptions. They want problem-solving and creative solutions. They viewed the process as flawed, and are fearful of further financial mismanagement and closures. They appreciate the support that other schools and families have provided.  
 
 “I don't trust the board or our district admin, but I do trust our community. The approach the administration took fostered a big divide in our community and enforced that divide by allowing community members to disparage each other.”
 
