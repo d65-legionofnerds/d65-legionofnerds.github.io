@@ -180,7 +180,7 @@ They also had logistical concerns related to transit to/from the school–partic
 
 Finally, families are worried about academic quality. They are concerned about increases in class size, reductions in education quality, or difficulty maintaining educational standards. They want reassurance that academic quality will not suffer, and concrete steps to protect quality.
 
-#### What questions* remain unanswered that you would like the Board or administration to address? [responses synthesized below]
+#### What questions remain unanswered that you would like the Board or administration to address? [responses synthesized below]
 
 How will the district support Kingsley families? 
 * Who on the board is supporting Kinglsey families? Will Kingsley have a liaison who meets with families? 
