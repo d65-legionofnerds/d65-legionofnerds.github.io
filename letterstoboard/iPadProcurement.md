@@ -88,14 +88,15 @@ We build on the prior cart model presented on 3/23 to showcase how savings can s
 
 | Category | Enrollment | Environment | iPads |
 |----------|-----------|-------------|--------|
+| K | 38 | Library only | 0 |
 | Grades 1 & 2 | 100 | Shared Carts | 55 |
 | Grades 3 & 4 | 100 | Shared Carts | 55 |
 | Grade 5 | 63 | 1:1 | 63 |
 | Specials (Library & CS) | — | Shared Carts | 46 |
-| **TOTAL** | **263** |  | **219** |
+| **TOTAL** | **300** |  | **219** |
 
 **Efficiency Note:**  
-Savings of **81 iPads per 263 students** compared to a 1:1 model.
+Savings of **81 iPads per 300 students** compared to a 1:1 model.
 
 ---
 
@@ -107,8 +108,8 @@ Savings of **81 iPads per 263 students** compared to a 1:1 model.
 | Pair B | 1st (20) / 2nd (19) + 2 | 22 |
 | Pair C | 1st (20) + 1 / 3rd (20) + 1 | 22 |
 | Pair D | 3rd (22) / 4th (19) + 1 | 23 |
-| Pair E | 3rd (20) / 4th (19) + 1 | 21 |
-| 5th Grade | 1:1 | 62 |
+| Pair E | 3rd (20) / 4th (19) + 1 | 20 |
+| 5th Grade | 1:1 | 63 |
 | Library | Max Section + 2 Buffer | 23 |
 | Computer Science | Max Section + 2 Buffer | 23 |
 |Building Total | | 219 iPads|
