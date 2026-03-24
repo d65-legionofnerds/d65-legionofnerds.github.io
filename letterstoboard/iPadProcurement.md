@@ -109,9 +109,9 @@ Savings of **81 iPads per 300 students** compared to a 1:1 model.
 | Pair C | 1st (20) + 1 / 3rd (20) + 1 | 22 |
 | Pair D | 3rd (22) / 4th (19) + 1 | 23 |
 | Pair E | 3rd (20) / 4th (19) + 1 | 20 |
-| 5th Grade | 1:1 | 63 |
-| Library | Max Section + 2 Buffer | 23 |
-| Computer Science | Max Section + 2 Buffer | 23 |
+| 5th Grade | 1:1 + 1 | 63 |
+| Library | Max Section + Buffer | 23 |
+| Computer Science | Max Section + Buffer | 23 |
 |Building Total | | 219 iPads|
 
 ---
