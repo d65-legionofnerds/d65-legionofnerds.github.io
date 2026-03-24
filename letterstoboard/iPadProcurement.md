@@ -8,7 +8,7 @@ nav_order: 2
 # iPad Procurement & Shared Cart Strategy (Option 2b)
 March 24, 2026
 
-This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards.
+This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. 
 
 ---
 
@@ -80,6 +80,7 @@ This document provides a comparative analysis between the original 1:1 procureme
 ---
 
 ## 4. Illustrative School Model (300 Students)
+We build on the prior cart model presented on 3/23 to showcase how savings can scale across larger models, reducing the per-student cost. 
 
 ### A. Total Device Footprint
 
