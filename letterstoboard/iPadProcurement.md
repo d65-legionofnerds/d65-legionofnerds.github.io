@@ -90,12 +90,12 @@ We build on the prior cart model presented on 3/23 to showcase how savings can s
 |----------|-----------|-------------|--------|
 | Grades 1 & 2 | 100 | Shared Carts | 55 |
 | Grades 3 & 4 | 100 | Shared Carts | 55 |
-| Grade 5 | 100 | 1:1 | 63 |
+| Grade 5 | 63 | 1:1 | 63 |
 | Specials (Library & CS) | — | Shared Carts | 46 |
-| **TOTAL** | **300** |  | **219** |
+| **TOTAL** | **263** |  | **219** |
 
 **Efficiency Note:**  
-Savings of **81 iPads per 300 students** compared to a 1:1 model.
+Savings of **81 iPads per 263 students** compared to a 1:1 model.
 
 ---
 
