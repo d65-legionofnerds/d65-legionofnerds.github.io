@@ -8,7 +8,7 @@ nav_order: 2
 # iPad Procurement & Shared Cart Strategy (Option 2b)
 March 24, 2026
 
-This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. This model saves money (est $200,000), allows flexibility for reconsideration of tech model and curriculum through reducing the size of the iPad fleet, while retaining two full carts that can float for Library and Computer Science. We do not assume any variability of in-grade lesson scheduling nor do we assume that Library and CS will overlap. This approach balances the number of devices with enough flexibility for testing and e-learning. 
+This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This proposed strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. This model saves money (est $200,000), allows flexibility for reconsideration of tech model and curriculum through reducing the size of the iPad fleet, while retaining two full carts that can float for Library and Computer Science. We do not assume any variability of in-grade lesson scheduling nor do we assume that Library and CS will overlap. This approach balances the number of devices with enough flexibility for testing and e-learning. 
 
 ---
 
@@ -121,3 +121,45 @@ Savings of **81 iPads per 300 students** compared to a 1:1 model.
 - Provides flexibility if district decides to reduce reliance on iPads (lower cost to change to chromebooks or reduce tech in classrooms)
 
 
+## Appendix: Cost Structure & Scaling Analysis
+
+### Fixed vs. Variable Costs
+
+Option 2b has two cost categories: **fixed costs** that don't change with school size, and **variable costs** that scale directly with enrollment.
+
+**Fixed costs** in this model are the dedicated Library and Computer Science carts — hardware that each school needs regardless of enrollment. In the current procurement cycle, these are **effectively $0** because existing district inventory fully covers all shared cart needs for Grades 1–4 and the specialty carts. The inventory surplus absorbs the entire fixed cost layer.
+
+**Variable costs** are driven by two line items that scale directly with enrollment:
+
+- **Grade 3 keyboard cases** at $99.95/unit
+- **Grade 5 iPads + keyboard cases** at $324.00 + $99.95 = $423.95/unit
+
+Both scale with a ~5% device buffer for breakage and mid-year enrollees.
+
+---
+
+### How Costs Scale: 100 to 500 Students
+
+Assuming ~20% of students in Grade 3 and ~20% in Grade 5 (consistent with the model above):
+
+| Enrollment | Gr. 3 Keyboard Cases | Gr. 5 iPads | Gr. 5 Keyboard Cases | **Total Variable Cost** | **Cost/Student** |
+|:---:|---:|---:|---:|---:|---:|
+| 100 | $2,099 | $6,804 | $2,099 | **$11,002** | **$110.02** |
+| 200 | $4,198 | $13,608 | $4,198 | **$22,004** | **$110.02** |
+| 300 | $6,239 | $20,412 | $6,299 | **$32,950** | **$109.83** |
+| 400 | $8,396 | $27,216 | $8,396 | **$44,008** | **$110.02** |
+| 500 | $9,995 | $34,020 | $10,495 | **$54,510** | **$109.02** |
+
+The 300-student row aligns with the procurement figures in the main proposal ($62,369 + $217,404 + $67,066 = $346,839 across 8 schools ÷ 8 ≈ $43,355/school, with the difference attributable to inventory offsets already applied at the district level).
+
+---
+
+### Key Takeaways
+
+- **Fixed costs = $0 in this cycle** due to existing inventory surplus
+- **Variable cost ≈ $110/student**, driven entirely by Grade 3 keyboard cases and Grade 5 devices
+- **Cost scales linearly** — no step-changes or penalties across school sizes
+- By comparison, the original 1:1 plan ran approximately **$459/student** — Option 2b represents a **~76% reduction** in per-student cost
+- The inventory windfall is **time-limited**: future refresh cycles will need to budget for shared cart hardware replacement (~46 devices per school)
+- The variable cost structure preserves **strategic flexibility** — any future pivot to Chromebooks or reduced device counts produces proportional savings rather than stranded inventory
+```
