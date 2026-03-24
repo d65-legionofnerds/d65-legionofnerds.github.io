@@ -1,4 +1,9 @@
-# iPad Procurement & Shared Cart Strategy (Option 2)
+---
+title: iPad Procurement & Shared Cart Strategy (Option 2b)
+parent: Letters to the Board
+layout: home
+nav_order: 2
+---
 
 This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards.
 
