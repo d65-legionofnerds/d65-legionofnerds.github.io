@@ -10,6 +10,8 @@ March 24, 2026
 
 This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This proposed strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. This model saves money (est $200,000), allows flexibility for reconsideration of tech model and curriculum through reducing the size of the iPad fleet, while retaining two full carts that can float for Library and Computer Science. We do not assume any variability of in-grade lesson scheduling nor do we assume that Library and CS will overlap. This approach balances the number of devices with enough flexibility for testing and e-learning. 
 
+We recognize that the [vote has happened](https://evanstonroundtable.com/2026/03/24/district-65-board-approves-ipad-purchase/). However, we bring forward this proposal to illustrate how there could have been a range of options presented with very real cost savings potential. It could be that the board would have opted for the 1:1 tech after deliberation, but we suggest that providing a menu of meaningful options allows for more productive conversation and ultimately better outcomes. 
+
 ---
 
 ## Overview
