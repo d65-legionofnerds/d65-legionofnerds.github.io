@@ -73,7 +73,7 @@ We recognize that the [vote has happened](https://evanstonroundtable.com/2026/03
 
 - **Specials Carts:**  
   - Library and Computer Science receive dedicated carts  
-  - Sized to max section + 2-device buffer  
+  - Sized to max section + device buffer  
 
 - **1:1 Programs:**   
   - Grade 5  
