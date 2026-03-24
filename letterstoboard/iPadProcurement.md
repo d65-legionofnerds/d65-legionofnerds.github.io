@@ -8,7 +8,7 @@ nav_order: 2
 # iPad Procurement & Shared Cart Strategy (Option 2b)
 March 24, 2026
 
-This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. 
+This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. This model saves money (est $200,000), allows flexibility for reconsideration of tech model and curriculum through reducing the size of the iPad fleet, while retaining two full carts that can float for Library and Computer Science. We do not assume any variability of in-grade lesson scheduling nor do we assume that Library and CS will overlap. This approach balances the number of devices with enough flexibility for testing and e-learning. 
 
 ---
 
@@ -117,6 +117,7 @@ Savings of **81 iPads per 300 students** compared to a 1:1 model.
 
 - Existing inventory fully covers shared cart needs for Grades 1–4  
 - Additional purchases focus primarily on Grades 3 and 5 accessories/devices  
-- Specialized programs remain fully 1:1  
+- Specialized programs remain fully 1:1
+- Provides flexibility if district decides to reduce reliance on iPads (lower cost to change to chromebooks or reduce tech in classrooms)
 
 
