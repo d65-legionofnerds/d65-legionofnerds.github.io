@@ -24,19 +24,29 @@ Overall, evanston is out-spending every peer district by at least $4,180. Below,
 
 Overall, District 65 is overspending relative to peers with limited exceptions: gifted programming, Board of Education Services, CTE training, Payments for Special Education Programs - Tuition, and building expansion (all lower than peer averages). 
 
+See [full analysis below](https://d65-legionofnerds.github.io/dataanalysis/budget_analysis.html#evanston-d65-budget-analysis) and [results as a pdf here.](assets/Evanston_D65_Budget_Analysis.pdf) 
+
 
 # Technical details and information
-
-## Methods
-The method of calculation is a simple average: each budget line by student enrollment. Initially, we had done this for each column of the spreadsheet, but we realized the `totals` column was the most helpful. The [raw data used are available in this spreadsheet](https://docs.google.com/spreadsheets/d/164TXxPV3pC4AHNtHoNGfHu4_6hQ-SvPHwNhjnSQkolM/edit?usp=sharing).
 
 ## Data
 The data are sourced from ISBE in their [online file database](https://cerberus.isbe.net/file/d/AFR/2024/School%20Districts/). All documents were sourced from the AFR folders in March of 2026 with an update in April of 2026 as more statements were available. To log in, the user name is `finread` and there is no password. 
 
 The Expenditures tab was collected from each of the districts and in cell x1, the current enrollment for that school year was obtained from illinois report card and linked. The added column reports expenditures per student. 
 
+### Peer groups
+We used a list of comparator districts from [Evanston Roundtable Reporting(https://evanstonroundtable.com/2024/03/26/sizing-up-district-65-compared-to-peers-around-cook-county/) and [FoiaGras comparisons](https://foiagras.com/p/district-65-test-results-long-way-to-go). There have also been conversations (informally) regarding Wheeling as a potential comparator. We are still working to gather additional data but the current (4/22/26) list of districts included are as follows: Park Ridge (AFR 2024), Wheeling (AFR 2024, AFR 2025), Glenview (AFR 2024), Oak Park (AFR 2024, AFR 2025), Northbrook (AFR 2024). In cases where we have multiple AFR statements, the most recent is used to ensure only one statement per school in the CLAUDE summary. We have both versions in the spreadsheet version (column P is all non-Evanston districts and column Q is most recent non-Evanston districts).
+
+## Methods
+The method of calculation is a simple average: each budget line by student enrollment. Initially, we had done this for each column of the spreadsheet, but we realized the `totals` column was the most helpful. The [raw data used are available in this spreadsheet](https://docs.google.com/spreadsheets/d/164TXxPV3pC4AHNtHoNGfHu4_6hQ-SvPHwNhjnSQkolM/edit?usp=sharing).
+
+We took each row divided by the enrollment and then compared these values to one another. Then, we had a selection of peer group districts and compared their average to Evanston's average to get a sense of how different D65 spending has been.
+
+
 ## Claude
 We additionally used Claude.ai to summarize the spreadsheet of information. We are presenting the full recommendation from Claude (unedited) here in the spirit of transparency.
+
+Note that Claude can make mistakes. Please verify (and let us know!) if everything is correct.
 
 # Evanston D65 Budget Analysis
 **Per-Pupil Expenditure Comparison vs. Peer Districts | April 2026**  
