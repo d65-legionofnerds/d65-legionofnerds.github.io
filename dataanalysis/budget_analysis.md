@@ -4,7 +4,7 @@ layout: default
 parent: Data Analysis
 ---
 
-# Buget analysis
+# Budget analysis
 
 Below we provide information on per-student per-budget-line spending across local districts. This is an incomplete look at districts and is intended to showcase an approach to the budget that can provide guidance for spending reduction. Because these budgets are aggregated, there will need to be additional work to dig in and find specific recommendations. The core of this report (produced with Claude) is [available as a pdf here.](assets/Evanston_D65_Budget_Analysis.pdf) 
 
