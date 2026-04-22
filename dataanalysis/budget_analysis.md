@@ -24,6 +24,8 @@ Overall, evanston is out-spending every peer district by at least $4,180. Below,
 
 Overall, District 65 is overspending relative to peers with limited exceptions: gifted programming, Board of Education Services, CTE training, Payments for Special Education Programs - Tuition, and building expansion (all lower than peer averages). 
 
+We (Nerds) are still exploring these items, such as community servies, and what they entail [see Claude's explanation here](#community-services). We are also pursuing additional [potential data sources](https://www.isbe.net/ebfspendingplan) to expand our data. 
+
 See [full analysis below](https://d65-legionofnerds.github.io/dataanalysis/budget_analysis.html#evanston-d65-budget-analysis) and [results as a pdf here.](assets/Evanston_D65_Budget_Analysis.pdf) 
 
 
@@ -146,5 +148,38 @@ Additionally, give me the following:
 * an infographic to illustrate the above
 
 
-### Reporting errors
+## Community services
+(results from Claude query regarding their definition)
+In Illinois school district accounting (which follows the ISBE chart of accounts), Community Services is Function 3000 in the Educational Fund. It is a catch-all for district activities that benefit the broader community rather than enrolled students directly. Typical line items include:
+
+### Most common: 
+* Before- and after-school programs (latchkey/extended care), especially when operated by the district rather than a third party
+* Community recreation programs run by the district
+* Parent education and family literacy programs
+* Preschool programs open to the general public (not just IEP-mandated placements)
+* Adult education and continuing education courses not captured elsewhere
+* Community use of school facilities coordination and staffing costs
+
+### Moderately common: 
+* Early childhood screening programs beyond what IDEA requires
+* Health and social services provided to the community through school facilities (clinics, mental health services open to non-students)
+* Civic and cultural programs hosted by the district
+* Summer programs open to non-enrolled community members
+  
+### Less common but present in some districts: 
+* Costs associated with community partnerships (staff time allocated to coordinating with parks districts, libraries, city agencies)
+* Non-student-facing communications and community engagement staff
+* Some districts park certain wraparound services here if they serve families broadly rather than just enrolled students
+
+### Why Evanston’s number is so large: 
+At $1,092 per pupil versus a peer average of $74, Evanston is almost certainly running significant district-operated early childhood or community programs, or has allocated costs here that peers classify differently. Two likely explanations worth investigating:
+
+First, Evanston has a well-known Early Childhood program. If the district is absorbing substantial early childhood program costs — staff salaries, benefits — and classifying them under Function 3000 rather than Pre-K instruction, that would inflate this line significantly relative to peers who either do not run such programs or classify them differently.
+
+Second, some districts use this function to capture costs related to community schools or wraparound services models, which Evanston has invested in more heavily than most suburban peers. If community school coordinators, family liaisons, and related social support staff are budgeted here, that could account for a large portion of the gap.
+
+The key question for the board is not just how much is spent here, but whether the object-code breakdown shows it is primarily salaries and benefits (suggesting ongoing staffing commitments) versus purchased services or supplies (more easily reduced). A line this far above peers almost always reflects deliberate programmatic choices, not accounting noise.
+
+
+# Reporting errors
 If you identify any errors or issues, please contact [d65.legionofnerds@gmail.com](mailto:d65.legionofnerds@gmail.com)
