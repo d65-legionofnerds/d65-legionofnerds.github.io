@@ -10,17 +10,17 @@ Below we provide information on per-student per-budget-line spending across loca
 
 ## Executive summary
 
-Overall, evanston is out-spending every peer district by at least $4,180. Below, the biggest areas to explore for spending reductions are highlighted. Many of these may be able to be reduced by the start of FY26. These deserve a closer look. 
+Overall, evanston is out-spending every peer district by at least $4,180. Below, the biggest areas to explore for spending reductions are highlighted. Many of these may be able to be reduced by the start of FY26. These deserve a closer look. We did our best to verify these results -- please reach out with any questions or concerns. 
 
 
 | Category | Evanston FY25 | Peer Avg | Gap | Severity | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Community services | **$1,092** | $74 | +$1,018 | **Critical** | 14x peer avg; no peer comes close [cite: 50] |
-| Sp. ed private tuition | **$645** | $55 | +$590 | **Critical** | 12x avg; Oak Park/Wilmette $0 [cite: 50] |
-| Special ed (direct) | **$3,487** | $2,311 | +$1,177 | **Critical** | Largest absolute gap; legally constrained [cite: 50] |
-| Support services — pupils | **$2,150** | $1,333 | +$817 | **High** | Att. & social work, psych, speech [cite: 50] |
-| Data processing | **$860** | $395 | +$465 | **High** | 2x avg; discretionary tech contracts [cite: 50] |
-| Special area admin | **$619** | $176 | +$443 | **High** | 3.5x avg; rose FY24 to FY25 [cite: 50] |
+| Community services | **$1,092** | $74 | +$1,018 | **Critical** | 14x peer avg; no peer comes close  |
+| Sp. ed private tuition | **$645** | $55 | +$590 | **Critical** | 12x avg; Oak Park/Wilmette $0  |
+| Special ed (direct) | **$3,487** | $2,311 | +$1,177 | **Critical** | Largest absolute gap; legally constrained  |
+| Support services — pupils | **$2,150** | $1,333 | +$817 | **High** | Att. & social work, psych, speech  |
+| Data processing | **$860** | $395 | +$465 | **High** | 2x avg; discretionary tech contracts  |
+| Special area admin | **$619** | $176 | +$443 | **High** | 3.5x avg; rose FY24 to FY25  |
 
 Overall, District 65 is overspending relative to peers with limited exceptions: gifted programming, Board of Education Services, CTE training, Payments for Special Education Programs - Tuition, and building expansion (all lower than peer averages). 
 
@@ -39,58 +39,58 @@ The Expenditures tab was collected from each of the districts and in cell x1, th
 We additionally used Claude.ai to summarize the spreadsheet of information. We are presenting the full recommendation from Claude (unedited) here in the spirit of transparency.
 
 # Evanston D65 Budget Analysis
-**Per-Pupil Expenditure Comparison vs. Peer Districts | April 2026** [cite: 2]
+**Per-Pupil Expenditure Comparison vs. Peer Districts | April 2026**  
 
 ---
 
 ## 1. Top-Level Snapshot
-All figures represent per-pupil expenditures from the **Educational Fund** unless otherwise noted[cite: 4]. Peer districts include Northbrook (G30), Park Ridge, Wheeling, Glenview, Oak Park, and Wilmette[cite: 5].
+All figures represent per-pupil expenditures from the **Educational Fund** unless otherwise noted . Peer districts include Northbrook (G30), Park Ridge, Wheeling, Glenview, Oak Park, and Wilmette .
 
 | Total Spending FY25 (per pupil) | Above Peer Average | Evanston FY24 to FY25 Change | ED Fund Deficit FY24 / FY25 |
 | :--- | :--- | :--- | :--- |
-| **$23,230** [cite: 6] | **+$5,382 (+30%)** [cite: 6] | **-$1,151 improvement** [cite: 6] | **-$1,548 (FY24) / +$675 (FY25)** [cite: 6] |
-| Peer average: $17,848 [cite: 6] | vs. all peers in dataset [cite: 6] | From $24,425 to $23,230 [cite: 6] | Swung to surplus in FY25 [cite: 6] |
+| **$23,230**  | **+$5,382 (+30%)**  | **-$1,151 improvement** | **-$1,548 (FY24) / +$675 (FY25)**  |
+| Peer average: $17,848   | vs. all peers in dataset   | From $24,425 to $23,230 | Swung to surplus in FY25 |
 
-* Evanston's FY25 total per-pupil spending of $23,230 is approximately 30% above the peer average of $17,848[cite: 9].
-* Evanston exceeds every peer by at least $4,180[cite: 8].
-* The district improved its fiscal position from FY24 to FY25, swinging the ED fund from a $1,548 per-pupil deficit to a $675 surplus[cite: 10].
+* Evanston's FY25 total per-pupil spending of $23,230 is approximately 30% above the peer average of $17,848.
+* Evanston exceeds every peer by at least $4,180.
+* The district improved its fiscal position from FY24 to FY25, swinging the ED fund from a $1,548 per-pupil deficit to a $675 surplus.
 
 ![Spending by pupil by district (averages)](assets/per_pupil_claude.png)
 ---
 
 ## 2. Evanston FY25 Spending Composition
-Instruction makes up the largest share of Evanston spending, but support services and the anomalously high community services line represent significant gaps[cite: 14].
+Instruction makes up the largest share of Evanston spending, but support services and the anomalously high community services line represent significant gaps.
 
-[Evanston spending](assets/d65_composition_claude.png)
+![Evanston spending](assets/evanston_comparison_claude.png)
 
-* **Instruction**: 59.9% [cite: 11]
-* **Support services**: 32.9% [cite: 11]
-* **Community services**: 4.7% [cite: 11]
-* **Payments to other govts**: 1.7% [cite: 11]
-* **Other**: 0.9% [cite: 11]
+* **Instruction**: 59.9% 
+* **Support services**: 32.9% 
+* **Community services**: 4.7% 
+* **Payments to other govts**: 1.7% 
+* **Other**: 0.9% 
 
 ---
 
 ## 3. Key Spending Categories: Evanston vs. Peer Average
-Evanston's per-pupil spending diverges most sharply from the peer average in several categories[cite: 19].
+Evanston's per-pupil spending diverges most sharply from the peer average in several categories.
 
-* **Special education (direct)**: $3,487 vs. $2,311 peer avg (Largest absolute dollar gap)[cite: 16, 21].
-* **Community services**: $1,092 vs. $74 peer avg (14 times the peer average)[cite: 16, 27].
-* **Sp. ed private tuition**: $645 vs. $55 peer avg (12 times the peer average)[cite: 16, 30].
-* **Data processing**: $860 vs. $395 peer avg (Double the peer average)[cite: 16, 35].
+* **Special education (direct)**: $3,487 vs. $2,311 peer avg (Largest absolute dollar gap).
+* **Community services**: $1,092 vs. $74 peer avg (14 times the peer average).
+* **Sp. ed private tuition**: $645 vs. $55 peer avg (12 times the peer average).
+* **Data processing**: $860 vs. $395 peer avg (Double the peer average).
 
 ![Spending by pupil by district (averages)](assets/evanston_comparison_claude.png)
 
 ---
 
 ## 4. Where Evanston Should Consider Cutting — and Why
-Several categories are substantially above peer levels and warrant discretionary review[cite: 23].
+Several categories are substantially above peer levels and warrant discretionary review.
 
-* **Community Services ($1,092/pupil)**: Evanston spends 14 times the peer average; the district should itemize exactly what this covers[cite: 25, 27, 28].
-* **Special Education Private Tuition ($645/pupil)**: At 12 times the peer average, this warrants a review of whether in-district programming can substitute for private placements[cite: 30, 32].
-* **Data Processing ($860/pupil)**: Technology spending is twice the peer average despite Evanston's enrollment size, which should favor economies of scale[cite: 34, 35, 36].
-* **Special Area Administration ($619/pupil)**: This category rose from FY24 to FY25 and sits at 3.5 times the peer average[cite: 38, 39].
-* **Pupil Support Services ($2,150/pupil)**: Attendance and social work alone ($597/pupil) is the highest of any peer in the dataset[cite: 41, 45].
+* **Community Services ($1,092/pupil)**: Evanston spends 14 times the peer average; the district should itemize exactly what this covers.
+* **Special Education Private Tuition ($645/pupil)**: At 12 times the peer average, this warrants a review of whether in-district programming can substitute for private placements.
+* **Data Processing ($860/pupil)**: Technology spending is twice the peer average despite Evanston's enrollment size, which should favor economies of scale.
+* **Special Area Administration ($619/pupil)**: This category rose from FY24 to FY25 and sits at 3.5 times the peer average.
+* **Pupil Support Services ($2,150/pupil)**: Attendance and social work alone ($597/pupil) is the highest of any peer in the dataset.
 
 ---
 
@@ -98,30 +98,30 @@ Several categories are substantially above peer levels and warrant discretionary
 
 | Category | Evanston FY25 | Peer Avg | Gap | Severity | Note |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Community services | **$1,092** | $74 | +$1,018 | **Critical** | 14x peer avg; no peer comes close [cite: 50] |
-| Sp. ed private tuition | **$645** | $55 | +$590 | **Critical** | 12x avg; Oak Park/Wilmette $0 [cite: 50] |
-| Special ed (direct) | **$3,487** | $2,311 | +$1,177 | **Critical** | Largest absolute gap; legally constrained [cite: 50] |
-| Support services — pupils | **$2,150** | $1,333 | +$817 | **High** | Att. & social work, psych, speech [cite: 50] |
-| Data processing | **$860** | $395 | +$465 | **High** | 2x avg; discretionary tech contracts [cite: 50] |
-| Special area admin | **$619** | $176 | +$443 | **High** | 3.5x avg; rose FY24 to FY25 [cite: 50] |
+| Community services | **$1,092** | $74 | +$1,018 | **Critical** | 14x peer avg; no peer comes close  |
+| Sp. ed private tuition | **$645** | $55 | +$590 | **Critical** | 12x avg; Oak Park/Wilmette $0  |
+| Special ed (direct) | **$3,487** | $2,311 | +$1,177 | **Critical** | Largest absolute gap; legally constrained  |
+| Support services — pupils | **$2,150** | $1,333 | +$817 | **High** | Att. & social work, psych, speech  |
+| Data processing | **$860** | $395 | +$465 | **High** | 2x avg; discretionary tech contracts  |
+| Special area admin | **$619** | $176 | +$443 | **High** | 3.5x avg; rose FY24 to FY25  |
 
 ---
 
 ## 6. Data Quality Issues and Inconsistencies
-The following issues should be resolved before using this analysis in formal presentations[cite: 82].
+The following issues should be resolved before using this analysis in formal presentations.
 
 | Type | Issue | Detail |
 | :--- | :--- | :--- |
-| **Error** | Wheeling FY25 O&M fund = $0 | Likely missing data; makes excess/deficiency rows meaningless for Wheeling FY25[cite: 83]. |
-| **Warning** | Average column mixes FY24/FY25 | Blends figures from different years rather than comparing a consistent year[cite: 83]. |
-| **Warning** | Northbrook labeled 'G30' | May be a K-8 or elementary district; including it may distort comparisons[cite: 83]. |
-| **Note** | Scientific notation | Values like 7.27E-3 indicate rounding artifacts and are functionally zero[cite: 83]. |
+| **Error** | Wheeling FY25 O&M fund = $0 | Likely missing data; makes excess/deficiency rows meaningless for Wheeling FY25. |
+| **Warning** | Average column mixes FY24/FY25 | Blends figures from different years rather than comparing a consistent year. |
+| **Warning** | Northbrook labeled 'G30' | May be a K-8 or elementary district; including it may distort comparisons. |
+| **Note** | Scientific notation | Values like 7.27E-3 indicate rounding artifacts and are functionally zero. |
 
 ![Spending by pupil Progress (Evanston)](assets/d65_spending_claude.png)
 
 ---
-**Prepared by:** Legion of Data Nerds [cite: 84]
-**Source:** Illinois Report Card district expenditure data [cite: 84]
+**Prepared by:** Legion of Data Nerds 
+**Source:** Illinois Report Card district expenditure data 
 
 ### Claude prompt
 This is a comparison of different school district spending. What areas should Evanston consider cutting in to improve their budget relative to peer districts and why? Highlight any errors, issues, or inconsistencies
