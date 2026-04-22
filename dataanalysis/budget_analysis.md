@@ -1,3 +1,9 @@
+---
+title: Budget analysis by pupil comparison
+layout: default
+parent: Data Analysis
+---
+
 # Buget analysis
 
 Below we provide information on per-student per-budget-line spending across local districts. This is an incomplete look at districts and is intended to showcase an approach to the budget that can provide guidance for spending reduction. Because these budgets are aggregated, there will need to be additional work. 
@@ -49,10 +55,13 @@ We additionally used Claude.ai to summarize the spreadsheet of information. We a
 * [cite_start]Evanston exceeds every peer by at least $4,180[cite: 8].
 * [cite_start]The district improved its fiscal position from FY24 to FY25, swinging the ED fund from a $1,548 per-pupil deficit to a $675 surplus[cite: 10].
 
+[Spending by pupil by district (averages)](assets/per_pupil_claude.png)
 ---
 
 ## 2. Evanston FY25 Spending Composition
 [cite_start]Instruction makes up the largest share of Evanston spending, but support services and the anomalously high community services line represent significant gaps[cite: 14].
+
+[Evanston spending](assets/d65_composition_claude.png)
 
 * [cite_start]**Instruction**: 59.9% [cite: 11]
 * [cite_start]**Support services**: 32.9% [cite: 11]
@@ -69,6 +78,8 @@ We additionally used Claude.ai to summarize the spreadsheet of information. We a
 * [cite_start]**Community services**: $1,092 vs. $74 peer avg (14 times the peer average)[cite: 16, 27].
 * [cite_start]**Sp. ed private tuition**: $645 vs. $55 peer avg (12 times the peer average)[cite: 16, 30].
 * [cite_start]**Data processing**: $860 vs. $395 peer avg (Double the peer average)[cite: 16, 35].
+
+[Spending by pupil by district (averages)](assets/evanston_comparison_claude.png)
 
 ---
 
@@ -105,6 +116,8 @@ We additionally used Claude.ai to summarize the spreadsheet of information. We a
 | **Warning** | Average column mixes FY24/FY25 | [cite_start]Blends figures from different years rather than comparing a consistent year[cite: 83]. |
 | **Warning** | Northbrook labeled 'G30' | [cite_start]May be a K-8 or elementary district; including it may distort comparisons[cite: 83]. |
 | **Note** | Scientific notation | [cite_start]Values like 7.27E-3 indicate rounding artifacts and are functionally zero[cite: 83]. |
+
+[Spending by pupil Progress (Evanston)](assets/d65_spending_claude.png)
 
 ---
 [cite_start]**Prepared by:** Legion of Data Nerds [cite: 84]
