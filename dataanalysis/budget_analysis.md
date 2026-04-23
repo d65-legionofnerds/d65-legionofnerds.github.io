@@ -13,10 +13,6 @@ Below we provide information on per-student per-budget-line spending across loca
 Overall, Evanston is out-spending every peer district by at least $4,180 per student. Below, the biggest areas to explore for spending reductions are highlighted. Many of these may be able to be reduced by the start of FY26. These deserve a closer look. We did our best to verify these results -- please reach out with any questions or concerns. 
 
 
-To include the dropdowns directly within the Markdown table, you can nest the `<details>` and `<summary>` HTML tags inside the table cells.
-
-Please note that while this works in **GitHub** and most modern Markdown renderers, the visual styling of the "arrow" might vary slightly depending on the platform's CSS.
-
 <table style="width: 100%; border-collapse: collapse; font-family: sans-serif;">
   <thead>
     <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ccc;">
