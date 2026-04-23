@@ -17,23 +17,96 @@ To include the dropdowns directly within the Markdown table, you can nest the `<
 
 Please note that while this works in **GitHub** and most modern Markdown renderers, the visual styling of the "arrow" might vary slightly depending on the platform's CSS.
 
-| Category (click title for budget details)| Evanston FY25 | Peer Avg | Gap | Severity | Note |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| <details><summary> **Community services** </summary><br>Function 3000 in ISBE accounting. This function is specifically designed for district activities that serve the broader community rather than enrolled students. Typical contents include district-operated before- and after-school care, community recreation, and staff time allocated to coordinating with municipal agencies.</details> | **$1,092** | $74 | +$1,018 | **Critical** | 14x peer avg; no peer comes close |
-| <details><summary> **Sp. ed private tuition** </summary><br>Tuition payments to place students in private special education schools when the district cannot provide an appropriate program internally. Legally mandatory once determined by an IEP team. Costs vary from $40k to over $200k annually depending on placement intensity.</details> | **$645** | $55 | +$590 | **Critical** | 12x avg; Oak Park/Wilmette $0 |
-| <details><summary> **Special ed (direct)** </summary><br>Function 1200. Covers in-house spending for students with disabilities: teachers, paraprofessionals, therapists, and supplies. Driven by identification rates, disability categories, and staffing ratios used for self-contained or resource rooms.</details> | **$3,487** | $2,311 | +$1,177 | **Critical** | Largest absolute gap; legally constrained |
-| <details><summary> **Support services — pupils** </summary><br>Function 2100. Staff and programs supporting wellbeing outside of instruction: social workers, counselors, nurses, psychologists, and speech pathologists. These are salary-driven lines based on staffing levels relative to enrollment.</details> | **$2,150** | $1,333 | +$817 | **High** | Att. & social work, psych, speech |
-| <details><summary> **Data processing** </summary><br>Function 2600. Technology infrastructure: SIS licensing (Skyward/PowerSchool), network hardware, IT salaries, cybersecurity, and EdTech subscriptions. Often grows due to redundant platforms or old vendor contracts.</details> | **$860** | $395 | +$465 | **High** | 2x avg; discretionary tech contracts |
-| <details><summary> **Special area admin** </summary><br>Administrative costs specifically tied to the oversight of specialized programs. This includes the salaries and office expenses for directors and coordinators of programs like Special Education or Bilingual Ed.</details> | **$619** | $176 | +$443 | **High** | 3.5x avg; rose FY24 to FY25 |
+<table style="width: 100%; border-collapse: collapse; font-family: sans-serif;">
+  <thead>
+    <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ccc;">
+      <th style="padding: 10px; text-align: left;">Category (click title for budget details)</th>
+      <th style="padding: 10px; text-align: left;">Evanston FY25</th>
+      <th style="padding: 10px; text-align: left;">Peer Avg</th>
+      <th style="padding: 10px; text-align: left;">Gap</th>
+      <th style="padding: 10px; text-align: left;">Severity</th>
+      <th style="padding: 10px; text-align: left;">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 10px;">
+        <details>
+          <summary><strong>Community services</strong></summary>
+          <p style="margin-top: 5px; font-size: 0.9em; color: #444;">
+            Function 3000 in ISBE accounting. This function is specifically designed for district activities that serve the broader community rather than enrolled students. Typical contents include district-operated before- and after-school care, community recreation, and staff time allocated to coordinating with municipal agencies.
+          </p>
+        </details>
+      </td>
+      <td style="padding: 10px;"><strong>$1,092</strong></td>
+      <td style="padding: 10px;">$74</td>
+      <td style="padding: 10px;">+$1,018</td>
+      <td style="padding: 10px;"><strong>Critical</strong></td>
+      <td style="padding: 10px;">14x peer avg; no peer comes close</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 10px;">
+        <details>
+          <summary><strong>Sp. ed private tuition</strong></summary>
+          <p style="margin-top: 5px; font-size: 0.9em; color: #444;">
+            Tuition payments to place students in private special education schools when the district cannot provide an appropriate program internally. Legally mandatory once determined by an IEP team. Costs vary from $40k to over $200k annually depending on placement intensity.
+          </p>
+        </details>
+      </td>
+      <td style="padding: 10px;"><strong>$645</strong></td>
+      <td style="padding: 10px;">$55</td>
+      <td style="padding: 10px;">+$590</td>
+      <td style="padding: 10px;"><strong>Critical</strong></td>
+      <td style="padding: 10px;">12x avg; Oak Park/Wilmette $0</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 10px;">
+        <details>
+          <summary><strong>Special ed (direct)</strong></summary>
+          <p style="margin-top: 5px; font-size: 0.9em; color: #444;">
+            Function 1200. Covers in-house spending for students with disabilities: teachers, paraprofessionals, therapists, and supplies. Driven by identification rates, disability categories, and staffing ratios used for self-contained or resource rooms.
+          </p>
+        </details>
+      </td>
+      <td style="padding: 10px;"><strong>$3,487</strong></td>
+      <td style="padding: 10px;">$2,311</td>
+      <td style="padding: 10px;">+$1,177</td>
+      <td style="padding: 10px;"><strong>Critical</strong></td>
+      <td style="padding: 10px;">Largest absolute gap; legally constrained</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 10px;">
+        <details>
+          <summary><strong>Support services — pupils</strong></summary>
+          <p style="margin-top: 5px; font-size: 0.9em; color: #444;">
+            Function 2100. Staff and programs supporting wellbeing outside of instruction: social workers, counselors, nurses, psychologists, and speech pathologists. These are salary-driven lines based on staffing levels relative to enrollment.
+          </p>
+        </details>
+      </td>
+      <td style="padding: 10px;"><strong>$2,150</strong></td>
+      <td style="padding: 10px;">$1,333</td>
+      <td style="padding: 10px;">+$817</td>
+      <td style="padding: 10px;"><strong>High</strong></td>
+      <td style="padding: 10px;">Att. & social work, psych, speech</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+      <td style="padding: 10px;">
+        <details>
+          <summary><strong>Data processing</strong></summary>
+          <p style="margin-top: 5px; font-size: 0.9em; color: #444;">
+            Function 2600. Technology infrastructure: SIS licensing (Skyward/PowerSchool), network hardware, IT salaries, cybersecurity, and EdTech subscriptions. Often grows due to redundant platforms or old vendor contracts.
+          </p>
+        </details>
+      </td>
+      <td style="padding: 10px;"><strong>$619</strong></td>
+      <td style="padding: 10px;">$176</td>
+      <td style="padding: 10px;">+$443</td>
+      <td style="padding: 10px;"><strong>High</strong></td>
+      <td style="padding: 10px;">3.5x avg; rose FY24 to FY25</td>
+    </tr>
+  </tbody>
+</table>
 
------
-
-### Key Adjustments Made:
-
-1.  **Nested HTML:** Placed the `<details>` block inside the first column of each row.
-2.  **Bold Titles:** Used `**` inside the `<summary>` tag to ensure the clickable titles remain bold.
-3.  **Line Breaks:** Added `<br>` tags inside the dropdowns. Standard Markdown double-spacing doesn't always render correctly inside HTML tags in some GitHub flavors, so `<br>` ensures the definition starts on a new line below the title.
-4.  **Formatting:** Cleaned up the "Note" column and aligned the text for better readability in the raw code.
 
 Overall, District 65 is overspending relative to peers with limited exceptions: gifted programming, Board of Education Services, CTE training, Payments for Special Education Programs - Tuition, and building expansion (all lower than peer averages). 
 
