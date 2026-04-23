@@ -13,6 +13,7 @@ Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | rel
 
 ## Latest from the Nerds
 **[Budget Comparison between D65 and other districts]({{ 'dataanalysis/budget_analysis.html' | relative_url }})** *04/22/2026*
+
 **[Kingsley Closure Survey]({{ 'dataanalysis/kingsley_closure_survey.html' | relative_url }})** *01/25/2026*
 
 **[Creative Ideas for City - D65 Collaboration]({{ 'assets/creative_ideas_menu.html' | relative_url }})** *01/14/2025*
