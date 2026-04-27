@@ -1,8 +1,4 @@
----
-title: Administrative Growth Over Time
-layout: default
-parent: Data Analysis
----
+
 
 # District 65 Administrative Growth Over Time
 
