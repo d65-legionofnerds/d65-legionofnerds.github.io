@@ -1,0 +1,15 @@
+{
+  "_comment": "Map of foiagras document_ids to school year (ending year). Source: Evanston/Skokie School District 65 board meeting documents on foiagras.",
+  "documents": [
+    {"year": 2017, "school_year": "SY2016-17", "category": "admin_principal", "doc_id": 6527, "filename": "sy16_17_admin.md"},
+    {"year": 2017, "school_year": "SY2016-17", "category": "imrf", "doc_id": 6528, "filename": "sy16_17_imrf.md"},
+    {"year": 2018, "school_year": "SY2017-18", "category": "admin_principal", "doc_id": 5620, "filename": "sy17_18_admin.md"},
+    {"year": 2018, "school_year": "SY2017-18", "category": "imrf", "doc_id": 5622, "filename": "sy17_18_imrf.md"},
+    {"year": 2019, "school_year": "SY2018-19", "category": "admin_principal", "doc_id": 5017, "filename": "sy18_19_admin.md"},
+    {"year": 2019, "school_year": "SY2018-19", "category": "imrf", "doc_id": 5019, "filename": "sy18_19_imrf.md"},
+    {"year": 2020, "school_year": "SY2019-20", "category": "admin_principal", "doc_id": 4433, "filename": "sy19_20_admin.md"},
+    {"year": 2020, "school_year": "SY2019-20", "category": "imrf", "doc_id": 4435, "filename": "sy19_20_imrf.md"},
+    {"year": 2021, "school_year": "SY2020-21", "category": "admin_principal", "doc_id": 3856, "filename": "sy20_21_admin.md"},
+    {"year": 2021, "school_year": "SY2020-21", "category": "imrf", "doc_id": 3857, "filename": "sy20_21_imrf.md"}
+  ]
+}
