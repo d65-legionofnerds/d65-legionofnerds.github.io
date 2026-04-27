@@ -89,21 +89,7 @@ This chart juxtaposes the year-over-year percentage change in three series: tota
 
 This chart shows how much total administrative compensation changed each year compared to the prior year. Red bars are increases, green bars are decreases. The starting and ending totals are annotated at the bottom corners. Total compensation roughly doubled over the decade.
 
----
 
-## Cabinet & Senior Leadership
-
-### Compensation Trajectories of Cabinet & Senior Staff
-
-<iframe src="assets/admin_growth_cabinet_trajectory.html" width="100%" height="750" frameborder="0"></iframe>
-
-The 10 most-frequently-appearing cabinet and senior leadership positions in the dataset, plotted across all years they appear. Hover over any line to see exact compensation by year.
-
-### Top 15 Highest-Paid Administrators in SY2025-26
-
-<iframe src="assets/admin_growth_top_paid.html" width="100%" height="800" frameborder="0"></iframe>
-
-The 15 highest-paid administrators in the most recent year (SY2025-26), sorted from highest to lowest. The diamond markers show what the same individuals were paid in SY2021-22 (4 years earlier), where they appear in that year's data, allowing you to see compensation growth at the individual level.
 
 ---
 
