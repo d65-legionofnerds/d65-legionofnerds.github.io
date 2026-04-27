@@ -13,7 +13,7 @@ sitemap: false
 
 Over the past decade, District 65 has dramatically expanded its administrative workforce while serving a shrinking student population. This page tracks the size and cost of the District 65 administration from school year 2015-16 through 2025-26 using compensation data from the District's annual public salary disclosures (Public Acts 96-0434 and 97-0609).
 
-The headline finding: between SY2015-16 and SY2025-26, **D65's administrative headcount roughly doubled (75 → 153)** while **K-8 enrollment fell from approximately 7,500 to 5,700 students (a 24% decline)**. Total administrative compensation rose from about $10M to $20M (nominal dollars).
+The headline finding: between SY2015-16 and SY2025-26, **D65's administrative headcount roughly doubled (75 → 153)** while **K-8 enrollment fell from approximately 7,500 to 5,625 students (a 25% decline)**. Total administrative compensation rose from about $10M to $20M (nominal dollars).
 
 ### Categories Used
 
@@ -116,7 +116,7 @@ The 15 highest-paid administrators in the most recent year (SY2025-26), sorted f
 - **Some staff appear to move between TRS Admin and IMRF Support Staff categories** across years as positions are reclassified for funding purposes. For year-over-year *category-level* comparisons, the total combined stack is more meaningful than individual category trends.
 - **Principals are tracked separately** from TRS Admin even though they appear in the same PA 96-0434 reports, because principals fill a distinctly different operational role from central-office administration.
 - **The SY2020-21 PDF** rendered the Health Insurance column as "#######" (an Excel column-too-narrow rendering artifact in the source PDF). This causes Total Comp to be slightly under-counted for that year only.
-- **Enrollment** for years not present in the website's existing enrollment dataset (SY2015-16, SY2016-17, SY2025-26) is sourced from the District's annual *Opening of Schools* reports on foiagras. The SY2025-26 enrollment is an extrapolation from the established declining trend (the official Opening of Schools report for SY2025-26 was not yet posted on foiagras as of April 2026).
+- **Enrollment** for years not present in the website's existing enrollment dataset (SY2015-16, SY2016-17, SY2025-26) is sourced from the District's annual *Opening of Schools* reports on foiagras. The SY2025-26 enrollment was taken from [D65's Data Dashboard](https://data.district65.net/).
 - All dollar figures are **nominal** (not inflation-adjusted).
 
 ---
