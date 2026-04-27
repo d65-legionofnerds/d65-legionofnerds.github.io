@@ -1,4 +1,11 @@
-
+---
+title: Admin Growth
+layout: default
+nav_exclude: true
+search_exclude: true
+noindex: true
+sitemap: false
+---
 
 # District 65 Administrative Growth Over Time
 
@@ -24,7 +31,7 @@ All compensation figures are **nominal dollars** (not adjusted for inflation) an
 
 <iframe src="assets/admin_growth_headcount_stacked.html" width="100%" height="600" frameborder="0"></iframe>
 
-The total number of administrators (across all three categories) has increased substantially since SY2015-16. Most of the growth has come from the IMRF Support Staff and TRS Admin categories. Note that some apparent year-over-year volatility between the TRS Admin and IMRF categories reflects positions being reclassified between the two funding sources rather than net hires or losses — focus on the total stack height for the underlying trend.
+The total number of administrators (across all three categories) has increased substantially since SY2015-16. Most of the growth has come from the IMRF Support Staff and TRS Admin categories. Note that some apparent year-over-year volatility between the TRS Admin and IMRF categories reflects positions being reclassified between the two funding sources rather than net hires or losses.
 
 ### Headcount Per 1,000 Students
 
@@ -80,7 +87,7 @@ This chart juxtaposes the year-over-year percentage change in three series: tota
 
 <iframe src="assets/admin_growth_waterfall.html" width="100%" height="650" frameborder="0"></iframe>
 
-This chart shows how much total administrative compensation changed each year compared to the prior year. Red bars are increases, green bars are decreases. The starting and ending totals are annotated at the bottom corners — total compensation roughly doubled over the decade.
+This chart shows how much total administrative compensation changed each year compared to the prior year. Red bars are increases, green bars are decreases. The starting and ending totals are annotated at the bottom corners. Total compensation roughly doubled over the decade.
 
 ---
 
