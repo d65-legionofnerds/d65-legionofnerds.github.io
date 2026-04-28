@@ -1,3 +1,7 @@
+title: Org Chart
+layout: default
+parent: Data Analysis
+
 # The Org Chart That Ate Our Budget
 
 **Legion of Data Nerds · Administrative Structure Series · April 2026**
