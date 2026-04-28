@@ -1,0 +1,12 @@
+year,cpi_u,note
+2016,240.007,"BLS CPI-U All Urban Consumers, US city average, annual avg (https://www.bls.gov/cpi/)"
+2017,245.120,"BLS annual avg"
+2018,251.107,"BLS annual avg"
+2019,255.657,"BLS annual avg"
+2020,258.811,"BLS annual avg"
+2021,270.970,"BLS annual avg"
+2022,292.655,"BLS annual avg"
+2023,304.702,"BLS annual avg"
+2024,313.689,"BLS annual avg"
+2025,322.350,"Estimated from monthly Jan-Nov 2025 BLS data"
+2026,329.500,"Forecast assuming 2.2% YoY (mid-range Fed projection)"

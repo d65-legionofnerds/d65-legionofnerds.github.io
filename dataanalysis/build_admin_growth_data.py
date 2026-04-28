@@ -345,7 +345,12 @@ def parse_excel_sy22_26_imrf(df: pd.DataFrame, year: int, school_year: str, shee
         last, first = _split_name(rec)
         if not last:
             continue
-        position = str(rec.get("Position", "") or rec.get("Title", "") or "").strip()
+        # SY23-IMRF stores the title in an unnamed column ("Unnamed: 2"); fall through
+        # to that if Position/Title are blank.
+        position = (str(rec.get("Position", "") or rec.get("Title", "") or
+                        rec.get("Unnamed: 2", "") or "").strip())
+        if position.lower() == "nan":
+            position = ""
         salary = money(rec.get("Contract Salary") or rec.get("Full Year Salary") or
                        rec.get("Total Salary"))
         total_comp = money(rec.get("Total Comp") or rec.get("Total Compensation"))
