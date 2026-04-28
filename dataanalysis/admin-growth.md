@@ -32,9 +32,11 @@ This page presents the data without prescribing a specific policy response, but 
 
 3. **The current cost-cutting focus is heavily on student-facing services** (counselors, librarians, school buildings) while the central-administration buildup of the past decade — which represents by far the largest available pool of savings — has received much less scrutiny.
 
-4. **The peer-comparison data on the [Salary Data](salary-data.html) page** shows that comparable K-8 districts operate with substantially leaner administrative structures, so this is not a "the work just requires this many people" problem.
+4. **The peer-comparison data on the [Salary Data](salary-data.html) page** shows that comparable K-8 districts operate with substantially leaner administrative structures, so this is not a "the work just requires this many people" problem. Larry Gavin's reporting in the *Evanston RoundTable* notes that D65's −25% enrollment decline since FY 2019 is the steepest among 21 nearby K-8 districts; the next-largest decline was 14.3%.
 
-The Legion of Data Nerds publishes this data to inform public discussion. We encourage residents, board members, and District leadership to consider it alongside other operational and educational priorities. Additional D65 source documents are available on the [D65 BoardBook archive](https://meetings.boardbook.org/Public/Organization/1247) and the [D65 Data Dashboard](https://data.district65.net/).
+5. **Achievement has not improved.** D65 math proficiency on the IAR went from 44.8% meeting benchmark in 2018 to 42.3% in 2024 (per Gavin's March 2026 *RoundTable* analysis). Whatever the administrative buildup has produced, it has not produced the academic outcomes its hiring case would have presumably promised.
+
+The Legion of Data Nerds publishes this data to inform public discussion. We encourage residents, board members, and District leadership to consider it alongside other operational and educational priorities. Additional D65 source documents are available on the [D65 BoardBook archive](https://meetings.boardbook.org/Public/Organization/1247) and the [D65 Data Dashboard](https://data.district65.net/). Independent journalism on this topic is available in the [Evanston RoundTable](https://evanstonroundtable.com/) — see the "External Validation" section below for specific citations.
 
 ---
 
@@ -201,10 +203,12 @@ On the IMRF side, the SY25-26 roster includes newer specialized roles such as Su
 
 ### Were these additions justified?
 
-This is the harder question. The Legion of Data Nerds doesn't have a definitive answer. Several questions would help the public — and the Board — evaluate whether these roles are essential, useful, or expendable:
+This is the harder question. The Legion of Data Nerds doesn't have a definitive answer. In his November 2025 *RoundTable* essay (cited in detail below), Larry Gavin flagged several specific role-clusters as candidates for review without endorsement: the **9 IES Coordinators**, multiple positions in the **Human Relations department**, a cluster of **director-level roles** created in recent years (Strategic Projects, Workforce Analytics, Communications), and **assistant principals in small elementary schools** with 300–370 students. We don't have an independent basis for naming specific positions, but we agree these clusters warrant scrutiny.
+
+Several questions would help the public — and the Board — evaluate whether these roles are essential, useful, or expendable:
 
 1. **Was each new role created with a documented business case** that included measurable outcomes the role was supposed to deliver?
-2. **Are those outcomes being measured today, and what do the results show?** For example, after creating an Executive Director of RAAD several years ago, has the District's research/assessment/accountability/data work measurably improved? Has student achievement responded?
+2. **Are those outcomes being measured today, and what do the results show?** For example, after creating an Executive Director of RAAD several years ago, has the District's research/assessment/accountability/data work measurably improved? Has student achievement responded? *(Note: Gavin documents in his March 2026 piece that D65 math proficiency went from 44.8% in 2018 to 42.3% in 2024 — a slight decline over the period when admin headcount more than doubled.)*
 3. **For roles created during a specific initiative** (e.g., Director of Multilingual Services, Director of MTSS & SEL), what is the evidence that the function would deteriorate if the role were eliminated and the work absorbed elsewhere?
 4. **For directors and coordinators** whose work is largely internal coordination, what concrete deliverables changed or new programs launched in the past year that would not have happened without them?
 5. **Which of these roles have been previously eliminated and re-created**, and what does that history tell us about whether the function is essential?
@@ -212,6 +216,79 @@ This is the harder question. The Legion of Data Nerds doesn't have a definitive 
 The District has not made comprehensive answers to these questions publicly available. The [board meeting archive on BoardBook](https://meetings.boardbook.org/Public/Organization/1247) contains some role-creation memos but no consolidated retrospective on outcomes.
 
 If the Board approached the central administration with the same scrutiny it has applied to school closures (formal scenarios with quantified savings, public hearings, equity analyses, etc.), the public would have a much clearer basis for judging which positions are essential and which are not.
+
+---
+
+## External Validation: The Evanston RoundTable's Independent Reporting
+
+The findings on this page are corroborated and extended by two pieces of independent journalism in the *Evanston RoundTable*, both written by veteran education reporter and RoundTable co-founder Larry Gavin. Both pieces work from the same underlying public-record sources we use here (PA 96-0434, PA 97-0256, PA 97-0609, ISBE enrollment, D65 budget documents, and FOIA responses) but apply a different cut: **total full-time-equivalent staff (FTE)**, not just administrators. The two analyses converge on the same structural picture from different directions.
+
+### Larry Gavin, *RoundTable*, March 22, 2026
+
+[**"Analysis and viewpoint: District 65 has 25% fewer students but 10% more staff. Why?"**](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/) (updated March 30, 2026)
+
+Gavin compares D65 staffing in fiscal year 2019 to fiscal year 2026 using the District's own budget reports:
+
+| | FY 2019 | FY 2026 | Change |
+|---|---|---|---|
+| Student enrollment | 7,943 | 5,941 | **−25%** (−2,002 students) |
+| Total FTEs | 1,251 | 1,381 | **+10.4%** (+130 FTE) |
+| Salaries / benefits (budgeted) | — | $133.3M | ~75–80% of operating budget |
+
+Three findings from Gavin's piece that strengthen the case on this page:
+
+1. **Total FTE grew about 10% while *administrative* headcount grew about 104%.** The two analyses are complementary: ours focuses on the PA 96-0434 and PA 97-0609 administrator/support reports (the same ones the District itself files annually); Gavin's looks at all-staff FTE from the budget. The fact that admin grew at roughly 10× the rate of total district FTE pinpoints *where* the structural growth has been concentrated.
+
+2. **Joseph E. Hill Administration Center has 200 employees**, of which Gavin identifies approximately 80 administrative/managerial positions (1 Superintendent, 4 Assistant Superintendents/Chiefs, 16 Principals, 12 Assistant Principals, 7 IES Coordinators, plus directors and managers across humanities, technology, finance, STEAM, MTSS/SEL, custodial, nutrition, HR operations, wellness, transportation, and other functions).
+
+3. **Achievement has not improved.** Gavin documents that D65 math proficiency on the IAR went from 44.8% meeting benchmark in 2018 to 42.3% in 2024 — a slight *decline* over the period when admin headcount more than doubled. The 2024 racial breakdown: 63.7% White, 27.7% Hispanic, 12.5% Black. **The administrative buildup did not produce the academic outcomes its hiring case would have presumably promised.**
+
+Gavin also cites several **direct statements from D65 officials** that are worth reproducing:
+
+> "While these (staff) reductions lowered staffing levels across the district, the overall impact on salary expenditures was offset by salary growth associated with collectively bargained agreements and Board-approved increases for non-represented employees."  
+> — *Superintendent's FY 2026 budget memo*, quoted by Gavin
+
+> "We need to cut $6 million next year. Even if we close Lincolnwood, we still have much more to do."  
+> — *Board Vice President Nichole Pinkard*, quoted by Gavin
+
+D65 Chief Communications Officer **Melissa Messinger**, asked about FTE-comparison discrepancies, told Gavin: *"the district changed its employee resource planning system and staffing information is organized, coded and reported differently. This makes drawing comparisons year-over-year particularly by employee category, especially difficult."* — confirming, from the District's own communications office, that **even the District acknowledges that its own internal reporting makes year-over-year staffing comparisons difficult**. The PA 96-0434 / PA 97-0609 reports we use on this page are the most consistently structured public datasets covering the same period.
+
+Gavin's hypothetical scenarios:
+- If FTEs had been reduced *proportionally to enrollment* (−25%): the District would need 940 FTEs (441 fewer than today's 1,381).
+- If FTEs had been reduced by even a modest 10%: 1,125 FTEs (250 fewer than today).
+
+These scale similarly to (and are consistent with) our admin-only right-sizing scenarios above.
+
+### Larry Gavin, *RoundTable*, November 2, 2025
+
+[**"Guest Essay: District 65 has more employees now than in 2018-19"**](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/)
+
+This earlier piece — published before the March 2026 article — was Gavin's first public laying-out of the FTE/enrollment divergence. Several findings are particularly relevant:
+
+1. **Peer-district benchmark.** Gavin: *"The enrollment at seven neighboring districts increased between FY'18 and FY'25. The next highest decline at the school districts considered was 14.3%."* D65's −25% enrollment decline is the largest of the 21 nearby K-8 districts Gavin examined — meaning **whatever pattern is causing the buildup, it's not a region-wide phenomenon**.
+
+2. **Counting reconciliation.** Gavin reconciles three different District staff counts and finds:
+   - **1,468** active staff (Sept 3, 2025)
+   - **1,462** excluding leaves
+   - **1,381** FTEs (Sept 2025) — the figure used in budget reporting
+   - **An 81-employee gap** between active-staff count and FTE count
+   - 119 new hires in FY'26; 14 terminations
+   
+   The fact that three official counts of D65's own workforce can differ by ~80 people is itself a transparency concern.
+
+3. **Specific role-cluster concerns.** Gavin's essay names categories of administrative positions he sees as candidates for review:
+   - **9 IES (Individualized Education Services) Coordinators** — a function whose growth has not been publicly justified
+   - **Multiple Human Relations department positions** (HR has expanded substantially)
+   - **A cluster of director-level positions** (Strategic Projects, Workforce Analytics, Communications) created during the Horton administration
+   - **Assistant principals at small elementary schools** with 300–370 students each
+
+4. **Call for an operational audit.** Gavin recommends the Board consider an independent operational audit of administrative staffing before approving additional school closures. *"If the district was able to serve 25% more students in FY'19 with 130 fewer FTEs than now and get better achievement results than now, doesn't that warrant taking a pause..."*
+
+### How the RoundTable's findings reinforce this page
+
+Independent journalism using a different methodological cut (total FTE rather than PA-reported administrators) reaches the same conclusion: **D65's staffing footprint is structurally misaligned with its student population**, and the misalignment is concentrated in administrative and central-office functions. The D65 Superintendent's own quoted explanation — that staff reductions were "offset by" contractual salary growth — confirms the dynamic shown in our YoY-change chart: **headcount goes up, comp goes up, enrollment goes down, and the structural deficit grows.**
+
+A reader who wants to verify our data has at least three convergent sources to cross-check: this page, the two Gavin pieces in the RoundTable, and the underlying D65 board documents on [foiagras](https://foiagras.com).
 
 ### IMRF Support Staff: who's actually in this category?
 
@@ -231,7 +308,7 @@ This chart breaks the IMRF Support Staff count down into broad role categories s
 - **Some staff appear to move between TRS Admin and IMRF Support Staff categories** across years as positions are reclassified for funding purposes. For year-over-year *category-level* comparisons, the total combined stack is more meaningful than individual category trends. The SY22-23 → SY23-24 transition is the most prominent example.
 - **Principals are tracked separately** from TRS Admin even though they appear in the same PA 96-0434 reports.
 - **The SY2020-21 PDF** rendered the Health Insurance column as "#######" (an Excel column-too-narrow rendering artifact in the source PDF). This causes Total Comp to be slightly under-counted for that year only.
-- **Enrollment** for years not present in the website's existing enrollment dataset (SY2015-16, SY2016-17, SY2025-26) is sourced from the District's annual *Opening of Schools* reports on foiagras. The SY2025-26 enrollment is from [D65's Data Dashboard](https://data.district65.net/).
+- **Enrollment** for years not present in the website's existing enrollment dataset (SY2015-16, SY2016-17, SY2025-26) is sourced from the District's annual *Opening of Schools* reports on foiagras. The SY2025-26 enrollment is from [D65's Data Dashboard](https://data.district65.net/). **Note on enrollment-counting differences**: This page uses the K-8 + PreK-with-IEP figure (5,625 for SY25-26) consistent with how D65's *Opening of Schools* reports count students in grade-bearing schools. Larry Gavin's *RoundTable* analyses use ISBE's "total served" figure (5,941 for SY25-26), which adds students in early-childhood programs, Park School, Rice Center, and JEH that are not in graded K-8 classrooms. Both figures are correct under their respective methodologies; the −25% decline is identical under either count, and the qualitative story (admin growing while enrollment declines) does not depend on the choice.
 - **Right-sizing scenarios** in the comparison chart use the SY25-26 average total compensation per administrator (~$131K) multiplied by the headcount difference. They are first-order estimates and would be refined by which specific positions are eliminated, severance considerations, and any associated facility/operating cost reductions.
 - **Recent-cuts data** in the comparison chart is in [data/d65_recent_cuts.csv](data/d65_recent_cuts.csv) with full sourcing per row.
 - **A District 202 (ETHS) comparison** would be useful — same student feeder community, same boundaries — but ETHS does not have its PA 96-0434 / PA 97-0609 administrator compensation reports indexed in foiagras, and pulling the equivalent data directly from ISBE for D202 across the same 11 years was beyond the scope of this analysis. We've flagged this as a future-work item.
