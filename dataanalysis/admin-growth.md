@@ -125,7 +125,7 @@ Normalized by enrollment, the picture is more dramatic: per-student administrati
 
 This chart plots each role-class's average compensation in 2026 dollars against a dotted horizontal line showing the 2016 average compensation expressed in those same 2026 dollars. **The solid lines stay close to the dotted horizontal baselines**, meaning per-person compensation has, broadly, just kept pace with inflation. **Administrators are not, on average, getting big raises that outstrip the cost of living.**
 
-This is an important framing: when total real admin compensation has grown 44%, but average real compensation per administrator has stayed roughly flat, the math forces the conclusion that **the cost growth is driven almost entirely by adding more administrators**, not by paying existing administrators more.
+This is an important framing: when total real admin compensation has grown 44%, but average real compensation per administrator has stayed roughly flat, the math forces the conclusion that **the cost growth is driven almost entirely by adding more administrators**, not by paying existing administrators more. If anything, it's adding a large number of comparatively lower-paid administrators that is driving the trend. 
 
 ### What's Driving TRS Admin Cost Growth?
 
@@ -134,24 +134,6 @@ This is an important framing: when total real admin compensation has grown 44%, 
 Breaking the central-office TRS Admin total into its components — base salary, retirement (TRS) contribution, and benefits (health, dental, life, vision, car, annuities) — shows that growth is roughly proportional across components rather than concentrated in any single category like benefits or retirement.
 
 > **Why does the TRS bar nearly double in SY23-24?** This jump was *not* due to large raises or a benefits explosion. Comparing the underlying records, **27 new administrators appear in the TRS Admin category in SY23-24 that were not there in SY22-23**. About 11 of those were existing IMRF Support Staff who were *reclassified* into TRS Admin (their roles include Director of College and Career, Director of Science, Diverse Learning Supervisor/Coordinator, Talent Development Coordinator, Executive Director of Technology, etc.) — they didn't disappear, they moved categories. The remaining ~16 were fresh hires. A symmetric movement is visible in the IMRF Support Staff line during the same year.
-
----
-
-## Decoupling: Costs vs. Enrollment
-
-### Year-over-Year % Change
-
-<iframe src="assets/admin_growth_yoy_decoupling.html" width="100%" height="600" frameborder="0"></iframe>
-
-This chart juxtaposes the year-over-year percentage change in three series: total administrative compensation in real (2026) dollars (red), administrative headcount (purple), and student enrollment (green). The compensation series is computed on inflation-adjusted totals so that pure inflation does not register as cost growth. In a financially stable district, you would expect these lines to roughly track each other — when enrollment grows, costs grow proportionally; when enrollment shrinks, costs decline. Instead, D65's enrollment line has been consistently negative since 2019 while real-cost and headcount lines have remained positive, often by double digits.
-
-### Annual Change in Administrative Compensation
-
-<iframe src="assets/admin_growth_waterfall.html" width="100%" height="650" frameborder="0"></iframe>
-
-This chart shows how much total administrative compensation changed each year compared to the prior year. Red bars are increases, green bars are decreases. The starting and ending totals plus the net change appear in the chart subtitle.
-
-> **Why the unusually large +$4.7M jump in SY22-23 (in 2026 dollars)?** This is the biggest single-year real increase in the dataset. Underlying the jump: **37 new IMRF Support Staff appear in the SY22-23 reports that were not in SY21-22** (the IMRF Support Staff count went from 48 to 74). High-paid additions in that year include positions later reclassified as administrators in SY23-24 (see breakdown explanation above), as well as roles like Diverse Learning Supervisor, Director of Science, Diverse Learning Coordinator, Talent Development Coordinator, Executive Director of Technology, Family Center Managing Director, and several specialized coordinator positions. SY22-23 was the District's first full year under Superintendent Devon Horton; the staffing buildup was concentrated in central-office support functions.
 
 ---
 
@@ -166,7 +148,7 @@ In recent months, the District has enacted or proposed a series of reductions ta
 The school-closure savings figures below use the District's **Dec 1, 2025 revised SDRP III financial model** (foiagras doc 12033), not the higher Sept 29 2025 numbers. See the "Note on the District's revised savings estimates" callout below for the diff.
 
 - **Layoff of 2 middle-school counselors (April 2026)** — On April 9, 2026, the Superintendent informed nine middle-school counselors they would lose their jobs at the end of the school year. After public outcry, on April 14, 2026 the Board curtailed the action and approved layoffs of only 2 of the 9 positions. Estimated annual savings: ~$200K. *(Source: FOIA Gras post 264, April 18 2026; D65 Board action April 14 2026.)*
-- **Reassignment of middle-school librarians (April 2026)** — The Superintendent announced "reassignment" of the middle-school librarians at all three middle schools (Chute, Haven, Nichols). Because the staff are being reassigned to classroom positions rather than terminated, **the direct salary savings are approximately zero**; the action eliminates the librarian function from the middle schools. Did not require a Board vote. *(Source: FOIA Gras posts 264 and 267, April 2026; D65 Superintendent memo April 2026.)*
+- **Reassignment of middle-school librarians (April 2026)** — The Superintendent announced "reassignment" of the middle-school librarians at all three middle schools (Chute, Haven, Nichols). Because the staff are being reassigned to classroom positions rather than terminated, **the direct salary savings are approximately zero unless coupled with firing additional teachers**; the action eliminates the librarian function from the middle schools. Did not require a Board vote. *(Source: FOIA Gras posts 264 and 267, April 2026; D65 Superintendent memo April 2026.)*
 - **Bessie Rhodes K-8 closure** — Approved June 10, 2024 by a 5-2 Board vote. Two-Way Immersion (TWI) program consolidating to Foster for SY26-27. Modeled recurring annual savings ≈ **$1.66M** in revised model (down from $1.98M in Sept 2025). *(Source: D65 Board Resolution 6/10/2024; SDRP III Scenario Modeling Memo 12.1.25, foiagras doc 12033.)*
 - **Kingsley Elementary closure** — Resolution adopted January 9, 2026. Three statutorily-required public hearings underway; intended closure end of SY25-26. Modeled recurring annual savings ≈ **$1.83M** in revised model (down from $2.12M in Sept 2025). *(Source: D65 Resolution of Closure 1/9/2026, foiagras doc 13846; SDRP III revised model 12.1.25, foiagras doc 12033.)*
 - **Lincolnwood Elementary (conditional trigger)** — The January 2026 resolution states: "If by October 2026 the District has not achieved financial sustainability and the district-wide average K-5 building utilization rate is below 75%, the Board will recognize the need to propose the closure of Lincolnwood Elementary School." Not yet voted; estimated incremental savings ~$1.4–1.6M (the 2-school scenario 2D total of $3.24M minus Kingsley alone).
