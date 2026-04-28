@@ -108,7 +108,7 @@ for role in ROLE_ORDER:
         hovertemplate="<b>%{x}</b><br>" + role + ": %{y} staff<extra></extra>",
     ))
 fig1.update_layout(barmode="stack", **base_layout(
-    "D65 Administrator Headcount Over Time (Stacked by Category)",
+    "D65 Admin Headcount Over Time (Stacked by Category)",
     yt="Number of Administrative Staff"))
 write(fig1, "headcount_stacked")
 
@@ -136,7 +136,7 @@ fig2.add_trace(go.Scatter(
     hovertemplate="<b>%{x}</b><br>Total: %{y:.2f} per 1k students<extra></extra>",
 ))
 fig2.update_layout(**base_layout(
-    "D65 Administrators per 1,000 Students Over Time",
+    "D65 Admin per 1,000 Students Over Time",
     yt="Administrators per 1,000 Students"))
 write(fig2, "headcount_per_1000")
 
@@ -162,12 +162,12 @@ for role in ROLE_ORDER:
         hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} (2026 $)<extra></extra>",
     ))
 fig3.update_layout(barmode="stack", **base_layout(
-    "D65 Total Administrative Compensation Over Time (Nominal $)",
+    "D65 Total Admin Comp Over Time (Nominal $)",
     yt="Total Compensation ($)"))
 fig3.update_yaxes(tickprefix="$", tickformat=",.0f")
 add_nominal_real_buttons(fig3, 3, 3,
-    "D65 Total Administrative Compensation Over Time (Nominal $)",
-    "D65 Total Administrative Compensation Over Time (Inflation-Adjusted to 2026 $)")
+    "D65 Total Admin Comp Over Time (Nominal $)",
+    "D65 Total Admin Comp Over Time (Inflation-Adjusted to 2026 $)")
 write(fig3, "comp_stacked")
 
 
@@ -212,12 +212,12 @@ fig4.add_trace(go.Scatter(
     hovertemplate="<b>%{x}</b><br>Total: $%{y:,.0f} per 1k students (2026 $)<extra></extra>",
 ))
 fig4.update_layout(**base_layout(
-    "D65 Administrative Compensation per 1,000 Students Over Time (Nominal $)",
+    "Admin Comp per 1,000 Students Over Time (Nominal $)",
     yt="Total Comp per 1,000 Students ($)"))
 fig4.update_yaxes(tickprefix="$", tickformat=",.0f")
 add_nominal_real_buttons(fig4, 4, 4,
-    "D65 Administrative Compensation per 1,000 Students Over Time (Nominal $)",
-    "D65 Administrative Compensation per 1,000 Students Over Time (Inflation-Adjusted to 2026 $)")
+    "D65 Admin Comp per 1,000 Students Over Time (Nominal $)",
+    "D65 Admin Comp per 1,000 Students Over Time (Inflation-Adjusted to 2026 $)")
 write(fig4, "comp_per_1000")
 
 
@@ -464,24 +464,41 @@ measures.append({
 })
 
 mdf = pd.DataFrame(measures).sort_values("savings", ascending=True).reset_index(drop=True)
+# Format dollar labels in millions for readability and use textposition="auto"
+# so labels render inside large bars and outside small ones — keeps everything
+# inside the plot area regardless of bar size.
+mdf["label_fmt"] = mdf["savings"].apply(lambda v: f"${v/1e6:,.2f}M" if v >= 1e6
+                                         else (f"${v/1e3:,.0f}K" if v > 0 else "$0"))
 
 fig10 = go.Figure()
 fig10.add_trace(go.Bar(
     y=mdf["label"], x=mdf["savings"],
     orientation="h",
     marker_color=mdf["color"],
-    text=[f"${v:,.0f}" for v in mdf["savings"]],
-    textposition="outside",
+    text=mdf["label_fmt"],
+    textposition="auto",
+    insidetextanchor="end",
+    textfont=dict(size=13, color="white"),
+    cliponaxis=False,
     hovertemplate="<b>%{y}</b><br>Estimated annual savings: $%{x:,.0f}<extra></extra>",
     showlegend=False,
 ))
+# Add a thin caption-style annotation under the chart instead of cramming it
+# into the axis title. This keeps the title short and avoids bottom-edge clipping.
 fig10.update_layout(**base_layout(
-    "Estimated Annual Savings: Recent D65 Cuts vs. Admin Right-Sizing Scenarios",
-    xt="Estimated Annual Savings ($) — using District's revised Dec 2025 SDRP figures",
+    "Annual Savings: Recent Cuts vs. Admin Right-Sizing",
+    xt="",
     yt="",
     height=600))
-fig10.update_xaxes(tickprefix="$", tickformat=",.0f")
-fig10.update_layout(margin=dict(l=380, r=120, t=70, b=80))
+fig10.update_xaxes(tickprefix="$", tickformat="$,.1s")
+fig10.add_annotation(
+    text=("<i>Dark grey bars use the District's revised Dec 2025 SDRP figures. "
+          "Red bars are right-sizing scenarios.</i>"),
+    xref="paper", yref="paper", x=0, y=-0.10,
+    showarrow=False, xanchor="left", yanchor="top",
+    font=dict(size=11, color="#666"),
+)
+fig10.update_layout(margin=dict(l=320, r=80, t=70, b=70))
 write(fig10, "right_sizing_comparison")
 
 
@@ -498,7 +515,7 @@ for role in ROLE_ORDER:
         hovertemplate="<b>%{x}</b><br>" + role + ": %{y} staff<extra></extra>",
     ))
 fig_bonus.update_layout(**base_layout(
-    "D65 Administrator Headcount by Category (Lines for Direct Comparison)",
+    "D65 Admin Headcount by Category (Lines for Direct Comparison)",
     yt="Number of Administrative Staff"))
 write(fig_bonus, "headcount_lines")
 
