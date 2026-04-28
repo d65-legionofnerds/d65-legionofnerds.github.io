@@ -142,37 +142,25 @@ write(fig2, "headcount_per_1000")
 
 
 # ============================================================
-# Chart 3 — Total compensation over time, stacked (nominal & real toggle)
+# Chart 3 — Total compensation over time, stacked (inflation-adjusted to 2026 $)
 # ============================================================
 fig3 = go.Figure()
-# Nominal traces first
-for role in ROLE_ORDER:
-    sub = agg[agg["role_class"] == role].sort_values("year")
-    fig3.add_trace(go.Bar(
-        x=sub["year"], y=sub["total_comp"], name=role,
-        marker_color=COLORS[role], visible=True,
-        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} (nominal)<extra></extra>",
-    ))
-# Real traces after
 for role in ROLE_ORDER:
     sub = agg[agg["role_class"] == role].sort_values("year")
     fig3.add_trace(go.Bar(
         x=sub["year"], y=sub["total_comp_real"], name=role,
-        marker_color=COLORS[role], visible=False,
-        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} (2026 $)<extra></extra>",
+        marker_color=COLORS[role],
+        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f}<extra></extra>",
     ))
 fig3.update_layout(barmode="stack", **base_layout(
-    "D65 Total Admin Comp Over Time (Nominal $)",
-    yt="Total Compensation ($)"))
+    "D65 Total Admin Comp Over Time (Inflation-Adjusted to 2026 $)",
+    yt="Total Compensation (2026 $)"))
 fig3.update_yaxes(tickprefix="$", tickformat=",.0f")
-add_nominal_real_buttons(fig3, 3, 3,
-    "D65 Total Admin Comp Over Time (Nominal $)",
-    "D65 Total Admin Comp Over Time (Inflation-Adjusted to 2026 $)")
 write(fig3, "comp_stacked")
 
 
 # ============================================================
-# Chart 4 — Total compensation per 1,000 students (nominal & real toggle)
+# Chart 4 — Total compensation per 1,000 students (inflation-adjusted to 2026 $)
 # ============================================================
 fig4 = go.Figure()
 total_comp_per_1k = (agg.groupby("year")
@@ -183,85 +171,65 @@ total_comp_per_1k = (agg.groupby("year")
 total_comp_per_1k["per1k"]      = total_comp_per_1k["c"] / total_comp_per_1k["e"] * 1000
 total_comp_per_1k["per1k_real"] = total_comp_per_1k["per1k"] * total_comp_per_1k["adj"]
 
-# Nominal traces
 for role in ROLE_ORDER:
     sub = agg[agg["role_class"] == role].sort_values("year")
     fig4.add_trace(go.Scatter(
-        x=sub["year"], y=sub["comp_per_1000"], name=role, visible=True,
+        x=sub["year"], y=sub["comp_per_1000_real"], name=role,
         mode="lines+markers", line=dict(color=COLORS[role], width=3), marker=dict(size=9),
         hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} per 1k students<extra></extra>",
     ))
 fig4.add_trace(go.Scatter(
-    x=total_comp_per_1k["year"], y=total_comp_per_1k["per1k"],
-    name="<b>All Categories Combined</b>", visible=True, mode="lines+markers",
+    x=total_comp_per_1k["year"], y=total_comp_per_1k["per1k_real"],
+    name="<b>All Categories Combined</b>", mode="lines+markers",
     line=dict(color="black", width=4, dash="dash"), marker=dict(size=11, symbol="diamond"),
     hovertemplate="<b>%{x}</b><br>Total: $%{y:,.0f} per 1k students<extra></extra>",
 ))
-# Real traces
-for role in ROLE_ORDER:
-    sub = agg[agg["role_class"] == role].sort_values("year")
-    fig4.add_trace(go.Scatter(
-        x=sub["year"], y=sub["comp_per_1000_real"], name=role, visible=False,
-        mode="lines+markers", line=dict(color=COLORS[role], width=3), marker=dict(size=9),
-        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} per 1k students (2026 $)<extra></extra>",
-    ))
-fig4.add_trace(go.Scatter(
-    x=total_comp_per_1k["year"], y=total_comp_per_1k["per1k_real"],
-    name="<b>All Categories Combined</b>", visible=False, mode="lines+markers",
-    line=dict(color="black", width=4, dash="dash"), marker=dict(size=11, symbol="diamond"),
-    hovertemplate="<b>%{x}</b><br>Total: $%{y:,.0f} per 1k students (2026 $)<extra></extra>",
-))
 fig4.update_layout(**base_layout(
-    "Admin Comp per 1,000 Students Over Time (Nominal $)",
-    yt="Total Comp per 1,000 Students ($)"))
+    "D65 Admin Comp per 1,000 Students Over Time (Inflation-Adjusted to 2026 $)",
+    yt="Total Comp per 1,000 Students (2026 $)"))
 fig4.update_yaxes(tickprefix="$", tickformat=",.0f")
-add_nominal_real_buttons(fig4, 4, 4,
-    "D65 Admin Comp per 1,000 Students Over Time (Nominal $)",
-    "D65 Admin Comp per 1,000 Students Over Time (Inflation-Adjusted to 2026 $)")
 write(fig4, "comp_per_1000")
 
 
 # ============================================================
-# Chart 5 — Average comp per administrator (with CPI overlay so reader sees
-# whether per-person comp kept up with inflation)
+# Chart 5 — Average comp per administrator, in real (2026) dollars.
+# A flat real-dollar line means comp tracked inflation; a rising line means
+# real raises; a falling line means lost ground to inflation. The 2016 real
+# baseline is shown as a dotted horizontal reference per role.
 # ============================================================
 fig5 = go.Figure()
-# For each role, plot nominal avg comp
+years = sorted(agg["year"].unique())
+baseline_2016_real = (agg[agg["year"] == 2016]
+                      .assign(avg_comp_real=lambda d: d["avg_comp"] * d["adj_to_2026"])
+                      .set_index("role_class")["avg_comp_real"])
 for role in ROLE_ORDER:
     sub = agg[agg["role_class"] == role].sort_values("year")
     fig5.add_trace(go.Scatter(
-        x=sub["year"], y=sub["avg_comp"], name=f"{role} (nominal $)",
+        x=sub["year"], y=sub["avg_comp_real"], name=f"{role}",
         mode="lines+markers", line=dict(color=COLORS[role], width=3), marker=dict(size=9),
-        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} avg (nominal)<extra></extra>",
+        hovertemplate="<b>%{x}</b><br>" + role + ": $%{y:,.0f} avg (2026 $)<extra></extra>",
     ))
-# CPI-adjusted "what 2016 avg would be if it just kept up with inflation"
-# baseline: each role's 2016 avg comp, then * CPI factor
-baseline_2016 = agg[agg["year"] == 2016].set_index("role_class")["avg_comp"]
-years = sorted(agg["year"].unique())
 for role in ROLE_ORDER:
-    if role not in baseline_2016.index:
+    if role not in baseline_2016_real.index:
         continue
-    baseline = baseline_2016[role]
-    cpi_line = []
-    for y in years:
-        adj = cpi.loc[cpi["year"] == y, "cpi_u"].iloc[0] / cpi.loc[cpi["year"] == 2016, "cpi_u"].iloc[0]
-        cpi_line.append(baseline * adj)
+    baseline = baseline_2016_real[role]
     fig5.add_trace(go.Scatter(
-        x=years, y=cpi_line, name=f"{role} — if it tracked CPI from 2016",
+        x=years, y=[baseline] * len(years),
+        name=f"{role} — 2016 real baseline",
         mode="lines",
         line=dict(color=COLORS[role], width=2, dash="dot"),
         opacity=0.55,
-        hovertemplate="<b>%{x}</b><br>" + role + " CPI-adjusted baseline: $%{y:,.0f}<extra></extra>",
+        hovertemplate="<b>%{x}</b><br>" + role + " 2016 real baseline: $%{y:,.0f}<extra></extra>",
     ))
 fig5.update_layout(**base_layout(
-    "Average Comp per Administrator vs. Inflation Baseline",
-    yt="Average Total Comp per Person ($)"))
+    "Average Comp per Administrator vs. 2016 Real Baseline (2026 $)",
+    yt="Average Total Comp per Person (2026 $)"))
 fig5.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(fig5, "avg_comp")
 
 
 # ============================================================
-# Chart 6 — TRS Admin breakdown
+# Chart 6 — TRS Admin breakdown (inflation-adjusted to 2026 $)
 # ============================================================
 trs_detail = (df[df["role_class"] == "TRS Admin"]
                 .groupby("year", as_index=False)
@@ -270,6 +238,9 @@ trs_detail = (df[df["role_class"] == "TRS Admin"]
                      total_comp=("total_comp", "sum")))
 trs_detail["trs_contribution"] = trs_detail["total_salary"] - trs_detail["base"]
 trs_detail["benefits"]         = trs_detail["total_comp"]   - trs_detail["total_salary"]
+trs_detail = trs_detail.merge(cpi[["year", "adj_to_2026"]], on="year")
+for col in ["base", "trs_contribution", "benefits"]:
+    trs_detail[col] = trs_detail[col] * trs_detail["adj_to_2026"]
 fig6 = go.Figure()
 fig6.add_trace(go.Bar(x=trs_detail["year"], y=trs_detail["base"],
                       name="Base Salary", marker_color="#34495e",
@@ -282,29 +253,32 @@ fig6.add_trace(go.Bar(x=trs_detail["year"], y=trs_detail["benefits"],
                       marker_color="#16a085",
                       hovertemplate="<b>%{x}</b><br>Benefits: $%{y:,.0f}<extra></extra>"))
 fig6.update_layout(barmode="stack", **base_layout(
-    "TRS Admin Compensation Breakdown — What's Driving the Cost?",
-    yt="Total Cost (Nominal $)"))
+    "TRS Admin Compensation Breakdown — What's Driving the Cost? (2026 $)",
+    yt="Total Cost (2026 $)"))
 fig6.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(fig6, "comp_breakdown")
 
 
 # ============================================================
 # Chart 7 — YoY % change: cost vs enrollment vs headcount (decoupling)
+# Comp YoY is computed on inflation-adjusted (2026 $) totals so that the
+# series shows real cost growth, not inflation.
 # ============================================================
 year_total = (agg.groupby("year")
                  .agg(total_comp=("total_comp", "sum"),
+                      total_comp_real=("total_comp_real", "sum"),
                       headcount=("headcount", "sum"),
                       enrollment=("enrollment", "first"))
                  .reset_index().sort_values("year"))
-year_total["comp_yoy_pct"]   = year_total["total_comp"].pct_change() * 100
+year_total["comp_yoy_pct"]   = year_total["total_comp_real"].pct_change() * 100
 year_total["hc_yoy_pct"]     = year_total["headcount"].pct_change()  * 100
 year_total["enroll_yoy_pct"] = year_total["enrollment"].pct_change() * 100
 
 fig7 = go.Figure()
 fig7.add_trace(go.Scatter(x=year_total["year"], y=year_total["comp_yoy_pct"],
-    name="Admin Total Comp", mode="lines+markers",
+    name="Admin Total Comp (real)", mode="lines+markers",
     line=dict(color="#c0392b", width=3), marker=dict(size=10),
-    hovertemplate="<b>%{x}</b><br>Comp YoY: %{y:+.1f}%<extra></extra>"))
+    hovertemplate="<b>%{x}</b><br>Real comp YoY: %{y:+.1f}%<extra></extra>"))
 fig7.add_trace(go.Scatter(x=year_total["year"], y=year_total["hc_yoy_pct"],
     name="Admin Headcount", mode="lines+markers",
     line=dict(color="#8e44ad", width=3), marker=dict(size=10),
@@ -322,16 +296,16 @@ write(fig7, "yoy_decoupling")
 
 
 # ============================================================
-# Chart 8 — Year-over-year change in admin comp (delta-only bar chart)
+# Chart 8 — Year-over-year change in admin comp (delta-only bar chart, 2026 $)
 #   Annotations moved out of plot area into title subtitle to avoid x-axis overlap.
 # ============================================================
-yt = year_total[["year", "total_comp"]].sort_values("year").reset_index(drop=True)
-yt["delta"] = yt["total_comp"].diff()
+yt = year_total[["year", "total_comp_real"]].sort_values("year").reset_index(drop=True)
+yt["delta"] = yt["total_comp_real"].diff()
 deltas = yt.dropna(subset=["delta"]).copy()
 deltas["color"] = deltas["delta"].apply(lambda v: "#c0392b" if v >= 0 else "#27ae60")
 
-start_val = yt["total_comp"].iloc[0]
-end_val   = yt["total_comp"].iloc[-1]
+start_val = yt["total_comp_real"].iloc[0]
+end_val   = yt["total_comp_real"].iloc[-1]
 net       = end_val - start_val
 start_year_label = f"SY{int(yt['year'].iloc[0])-1}-{str(int(yt['year'].iloc[0]))[-2:]}"
 end_year_label   = f"SY{int(yt['year'].iloc[-1])-1}-{str(int(yt['year'].iloc[-1]))[-2:]}"
@@ -342,22 +316,22 @@ fig8.add_trace(go.Bar(
     marker_color=deltas["color"],
     text=[f"${v:+,.0f}" for v in deltas["delta"]],
     textposition="outside",
-    hovertemplate="<b>SY%{x}</b><br>YoY change: $%{y:+,.0f}<extra></extra>",
+    hovertemplate="<b>SY%{x}</b><br>YoY change: $%{y:+,.0f} (2026 $)<extra></extra>",
     showlegend=False,
 ))
 fig8.add_hline(y=0, line=dict(color="black", width=1))
 
 # Subtitle below main title (in the plot area top), away from x-axis
 subtitle = (f"<span style='font-size:13px;color:#444'>"
-            f"{start_year_label} starting total: ${start_val:,.0f}"
-            f"  •  {end_year_label} ending total: ${end_val:,.0f}"
+            f"{start_year_label} starting total: ${start_val:,.0f} (2026 $)"
+            f"  •  {end_year_label} ending total: ${end_val:,.0f} (2026 $)"
             f"  •  Net change: ${net:+,.0f} ({net/start_val*100:+.1f}%)"
             f"</span>")
 
 fig8.update_layout(**base_layout(
-    f"Annual Change in Total Administrative Compensation<br>{subtitle}",
+    f"Annual Change in Total Administrative Compensation (2026 $)<br>{subtitle}",
     xt="School Year (ending)",
-    yt="Year-over-Year Change ($)",
+    yt="Year-over-Year Change (2026 $)",
     height=600))
 fig8.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(fig8, "waterfall")
@@ -518,6 +492,71 @@ fig_bonus.update_layout(**base_layout(
     "D65 Admin Headcount by Category (Lines for Direct Comparison)",
     yt="Number of Administrative Staff"))
 write(fig_bonus, "headcount_lines")
+
+
+# ============================================================
+# Chart 12 — Inflation-adjusted headcount (PA 97-0609 threshold robustness)
+# Toggle between nominal headcount ($75K fixed reporting threshold) and
+# inflation-adjusted headcount ($75K-equivalent indexed to CPI from 2016).
+# Only IMRF Support Staff are clipped at $75K in the source data, but we
+# apply the threshold uniformly across role classes for transparency.
+# ============================================================
+CPI_ANCHOR_YEAR = 2016
+cpi_anchor = cpi.loc[cpi["year"] == CPI_ANCHOR_YEAR, "cpi_u"].iloc[0]
+cpi["threshold_indexed"] = 75000 * cpi["cpi_u"] / cpi_anchor
+
+df_thr = df.merge(cpi[["year", "threshold_indexed"]], on="year")
+df_thr_adj = df_thr[df_thr["total_comp"] >= df_thr["threshold_indexed"]]
+
+agg_adj = (df_thr_adj.groupby(["year", "role_class"], as_index=False)
+                     .agg(headcount=("last_name", "count")))
+
+fig12 = go.Figure()
+# Nominal traces (visible by default)
+for role in ROLE_ORDER:
+    sub = agg[agg["role_class"] == role].sort_values("year")
+    fig12.add_trace(go.Bar(
+        x=sub["year"], y=sub["headcount"], name=role,
+        marker_color=COLORS[role], visible=True,
+        hovertemplate="<b>%{x}</b><br>" + role + ": %{y} (nominal $75K threshold)<extra></extra>",
+    ))
+# Inflation-adjusted traces (hidden by default)
+for role in ROLE_ORDER:
+    sub = agg_adj[agg_adj["role_class"] == role].sort_values("year")
+    # Reindex to ensure all years present (fill missing with 0)
+    sub = sub.set_index("year").reindex(sorted(agg["year"].unique()), fill_value=0).reset_index()
+    fig12.add_trace(go.Bar(
+        x=sub["year"], y=sub["headcount"], name=role,
+        marker_color=COLORS[role], visible=False,
+        hovertemplate="<b>%{x}</b><br>" + role + ": %{y} (CPI-indexed threshold)<extra></extra>",
+    ))
+fig12.update_layout(barmode="stack", **base_layout(
+    "D65 Admin Headcount — Fixed $75K Reporting Threshold",
+    yt="Number of Administrative Staff"))
+title_fixed = "D65 Admin Headcount — Fixed $75K Reporting Threshold"
+title_indexed = (f"D65 Admin Headcount — CPI-Indexed Threshold "
+                 f"(anchored at $75K in {CPI_ANCHOR_YEAR}, ≈$103K in 2026)")
+fig12.update_layout(updatemenus=[dict(
+    type="buttons", direction="left",
+    x=0.5, xanchor="center", y=1.16, yanchor="top",
+    showactive=True, bgcolor="#f4f4f4",
+    buttons=[
+        dict(label="Fixed $75K threshold", method="update",
+             args=[{"visible": [True]*3 + [False]*3}, {"title.text": f"<b>{title_fixed}</b>"}]),
+        dict(label="CPI-indexed threshold", method="update",
+             args=[{"visible": [False]*3 + [True]*3}, {"title.text": f"<b>{title_indexed}</b>"}]),
+    ],
+)])
+fig12.add_annotation(
+    text=("<i>Robustness check: PA 97-0609's $75K reporting threshold has not been "
+          "indexed to inflation. Toggle to see headcount only counting employees whose "
+          "compensation exceeds the year-specific CPI-indexed equivalent of $75K in 2016.</i>"),
+    xref="paper", yref="paper", x=0, y=-0.22,
+    showarrow=False, xanchor="left", yanchor="top",
+    font=dict(size=11, color="#666"), align="left",
+)
+fig12.update_layout(margin=dict(l=70, r=30, t=110, b=120))
+write(fig12, "headcount_inflation_adjusted")
 
 
 # ============================================================

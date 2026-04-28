@@ -16,9 +16,10 @@ Over the past decade, District 65 has dramatically expanded its administrative w
 The headline findings: between SY2015-16 and SY2025-26, while K-8 enrollment fell from approximately 7,500 to 5,625 students (a 25% decline):
 
 - **Administrative headcount roughly doubled (75 → 153, +104%)**
-- **Total administrative compensation rose from about $10M to $20M in nominal dollars (+98%)**
-- **Even after adjusting for inflation, total compensation rose from $13.9M (in 2026 dollars) to $20.0M — a 44% real increase**
-- **Per-student admin spending nearly tripled in nominal dollars and roughly doubled in inflation-adjusted dollars**
+- **Total administrative compensation rose from $13.9M to $20.0M in inflation-adjusted 2026 dollars — a 44% real increase**
+- **Per-student admin spending roughly doubled in inflation-adjusted dollars**
+
+*All dollar figures on this page are inflation-adjusted to 2026 dollars (BLS CPI-U, US city average) so that real cost growth is visible without inflation drift muddying the trend.*
 
 ---
 
@@ -46,7 +47,7 @@ D65 reports administrative staff under two state public-disclosure laws, plus a 
 
 - **TRS Admin** *(red)* — Certificated administrators reported under PA 96-0434: superintendent, assistant superintendents, executive directors, directors (Curriculum & Instruction, MTSS & SEL, STEAM, Multilingual Services, Climate & Safety, Programs & Partnerships, etc.), and supervisors. Salaried under the Teachers' Retirement System.
 
-- **IMRF Support Staff** *(blue)* — Non-certificated administrative and support staff earning over $75,000, reported under PA 97-0609. This category bundles a wide range of jobs:
+- **IMRF Support Staff** *(blue)* — Non-certificated, IMRF-participating administrative and support staff whose compensation package (salary plus benefits) exceeds $75,000, reported under PA 97-0609. This category bundles a wide range of jobs:
   - **Directors / managers / coordinators**: directors of human relations, finance, technology, strategic projects; chiefs of communications and HR; cabinet-tier coordinators
   - **Buildings & maintenance**: head custodians, maintenance technicians, infrastructure managers, electricians
   - **IT / technology**: technology specialists, network and cybersecurity managers, systems engineers, database administrators
@@ -56,11 +57,11 @@ D65 reports administrative staff under two state public-disclosure laws, plus a 
   - **Nutrition services**: nutrition services managers
   - **Administrative support**: school board secretary, executive assistants
 
-  Note that PA 97-0609 only requires reporting of IMRF employees earning **over $75,000**, so this category systematically *under-counts* lower-paid staff (entry-level coordinators, assistants, etc.).
+  Note that PA 97-0609 only requires reporting compensation data for IMRF-participating employees whose **compensation package (salary plus benefits) exceeds $75,000**, so this category systematically *under-counts* lower-paid staff (entry-level coordinators, assistants, etc.).
 
 - **Principals** *(green)* — Principals and assistant principals (extracted from the same PA 96-0434 reports as TRS Admin but tracked separately because they fill a distinctly school-level operational role).
 
-All compensation figures default to **nominal dollars** (not adjusted for inflation), with **inflation-adjusted (2026 dollars) toggles on the major dollar charts**. Total Compensation includes base salary, retirement (TRS) contribution, bonus, health/dental/life/vision insurance, car allowance, retirement annuities, and sick/vacation payouts.
+All compensation figures on this page are **inflation-adjusted to 2026 dollars** using the BLS CPI-U All Urban Consumers index (US city average). Total Compensation includes base salary, retirement (TRS) contribution, bonus, health/dental/life/vision insurance, car allowance, retirement annuities, and sick/vacation payouts.
 
 ---
 
@@ -84,6 +85,24 @@ This is the most important headcount chart. Because student enrollment has been 
 
 The same data shown as separate lines (rather than stacked) makes it easier to see the trajectory of each category individually.
 
+### Robustness Check: Inflation-Indexed Reporting Threshold
+
+<iframe src="assets/admin_growth_headcount_inflation_adjusted.html" width="100%" height="650" frameborder="0"></iframe>
+
+*Use the buttons above the chart to toggle between the fixed $75K reporting threshold and a CPI-indexed threshold anchored at $75K in 2016 (≈$103K in 2026).*
+
+A reasonable critique of the headcount figures shown above is that PA 97-0609's $75,000 reporting threshold has not been indexed to inflation since the statute took effect. As compensation packages rise with inflation, more employees mechanically cross a fixed threshold each year — inflating the apparent administrative headcount without any actual hiring. This chart shows what the headcount trajectory looks like when the threshold is indexed to BLS CPI-U from a 2016 baseline ($75,000 → ≈$103,000 in 2026). For each year, the inflation-adjusted view filters the underlying compensation roster on `total_comp ≥ that year's CPI-indexed threshold`. Because the source disclosures only report employees above $75K to begin with, this adjustment can only trim employees from the count — so the inflation-adjusted bars represent a strict lower bound on the true headcount above each year's indexed line.
+
+**What the toggle reveals:**
+
+- **Total administrative headcount, 2016 → 2026:** 75 → 153 under the fixed $75K threshold (+104%) becomes 75 → 94 under the CPI-indexed threshold (+25%). Threshold drift accounts for roughly three-quarters of the headline growth.
+- **IMRF Support Staff, 2016 → 2026:** 30 → 101 under the fixed threshold (+237%) becomes 30 → 42 under the CPI-indexed threshold (+40%). About four-fifths of the apparent growth in this category is explained by inflation-driven threshold creep rather than new hiring.
+- **TRS Admin and Principal counts are unchanged under the adjustment** because those classifications are reported in full regardless of compensation level — the threshold issue does not apply to them. The TRS Admin doubling from 11 to 24 between 2016 and 2026 is therefore a clean signal of administrative expansion that survives any threshold critique.
+- **The SY22-23 single-year IMRF surge survives the test:** 48 → 74 under the fixed threshold becomes 31 → 51 under the CPI-indexed threshold — still a +20-staff jump in one fiscal year, far too abrupt to be explained by inflation drift alone.
+- **Per-pupil density still rose substantially.** Even with the threshold indexed to inflation, the +25% headcount growth occurred over a period when student enrollment fell roughly 25%, implying per-pupil administrative density rose by roughly two-thirds after stripping out the threshold-drift effect.
+
+The bottom line: adjusting for the unindexed reporting threshold reduces the headline growth figures meaningfully, but does not change the underlying conclusion that D65 added administrative capacity faster than its student population could justify.
+
 ---
 
 ## Compensation Growth
@@ -92,25 +111,21 @@ The same data shown as separate lines (rather than stacked) makes it easier to s
 
 <iframe src="assets/admin_growth_comp_stacked.html" width="100%" height="600" frameborder="0"></iframe>
 
-*Use the buttons above the chart to toggle between nominal dollars and inflation-adjusted (2026) dollars.*
-
-In **nominal dollars**, total annual compensation paid to D65 administrators has roughly doubled since SY2015-16, growing from about $10M to $20M. In **inflation-adjusted (2026) dollars**, the increase is from $13.9M to $20.0M — about 44% real growth.
+In inflation-adjusted (2026) dollars, total annual compensation paid to D65 administrators rose from $13.9M in SY2015-16 to $20.0M in SY2025-26 — a real increase of about 44%. Almost all of that growth shows up in the TRS Admin and IMRF Support Staff bars; the Principal slice is essentially flat in real terms.
 
 ### Compensation per 1,000 Students
 
 <iframe src="assets/admin_growth_comp_per_1000.html" width="100%" height="600" frameborder="0"></iframe>
 
-*Toggle between nominal and inflation-adjusted views above.*
+Normalized by enrollment, the picture is more dramatic: per-student administrative compensation roughly doubled in real terms over the same period, because enrollment fell while real cost rose.
 
-Normalized by enrollment, the picture is even more dramatic. In **nominal dollars**, administrative compensation per 1,000 students has grown from roughly $1.3M to $3.5M — an increase of more than 160%. In **inflation-adjusted dollars**, per-student admin spending nearly doubled in real terms.
-
-### Average Compensation per Administrator vs. Inflation Baseline
+### Average Compensation per Administrator vs. 2016 Real Baseline
 
 <iframe src="assets/admin_growth_avg_comp.html" width="100%" height="600" frameborder="0"></iframe>
 
-This chart plots each role-class's actual nominal average compensation against a dotted line showing what 2016 average compensation would be if it had simply tracked CPI inflation. **The dotted lines and solid lines for each color stay roughly close to each other** — meaning per-person compensation has, broadly, just kept pace with inflation. **Administrators are not, on average, getting big raises that outstrip the cost of living.**
+This chart plots each role-class's average compensation in 2026 dollars against a dotted horizontal line showing the 2016 average compensation expressed in those same 2026 dollars. **The solid lines stay close to the dotted horizontal baselines**, meaning per-person compensation has, broadly, just kept pace with inflation. **Administrators are not, on average, getting big raises that outstrip the cost of living.**
 
-This is an important framing: when total admin compensation has roughly doubled, but average comp per administrator has only kept up with inflation, the math forces the conclusion that **the cost growth is driven almost entirely by adding more administrators**, not by paying existing administrators more.
+This is an important framing: when total real admin compensation has grown 44%, but average real compensation per administrator has stayed roughly flat, the math forces the conclusion that **the cost growth is driven almost entirely by adding more administrators**, not by paying existing administrators more.
 
 ### What's Driving TRS Admin Cost Growth?
 
@@ -128,7 +143,7 @@ Breaking the central-office TRS Admin total into its components — base salary,
 
 <iframe src="assets/admin_growth_yoy_decoupling.html" width="100%" height="600" frameborder="0"></iframe>
 
-This chart juxtaposes the year-over-year percentage change in three series: total administrative compensation (red), administrative headcount (purple), and student enrollment (green). In a financially stable district, you would expect these lines to roughly track each other — when enrollment grows, costs grow proportionally; when enrollment shrinks, costs decline. Instead, D65's enrollment line has been consistently negative since 2019 while admin cost and headcount lines have remained positive, often by double digits.
+This chart juxtaposes the year-over-year percentage change in three series: total administrative compensation in real (2026) dollars (red), administrative headcount (purple), and student enrollment (green). The compensation series is computed on inflation-adjusted totals so that pure inflation does not register as cost growth. In a financially stable district, you would expect these lines to roughly track each other — when enrollment grows, costs grow proportionally; when enrollment shrinks, costs decline. Instead, D65's enrollment line has been consistently negative since 2019 while real-cost and headcount lines have remained positive, often by double digits.
 
 ### Annual Change in Administrative Compensation
 
@@ -136,7 +151,7 @@ This chart juxtaposes the year-over-year percentage change in three series: tota
 
 This chart shows how much total administrative compensation changed each year compared to the prior year. Red bars are increases, green bars are decreases. The starting and ending totals plus the net change appear in the chart subtitle.
 
-> **Why the unusually large +$4.9M jump in SY22-23?** This is the biggest single-year increase in the dataset. Underlying the jump: **37 new IMRF Support Staff appear in the SY22-23 reports that were not in SY21-22** (the IMRF Support Staff count went from 48 to 74). High-paid additions in that year include positions later reclassified as administrators in SY23-24 (see breakdown explanation above), as well as roles like Diverse Learning Supervisor, Director of Science, Diverse Learning Coordinator, Talent Development Coordinator, Executive Director of Technology, Family Center Managing Director, and several specialized coordinator positions. SY22-23 was the District's first full year under Superintendent Devon Horton; the staffing buildup was concentrated in central-office support functions.
+> **Why the unusually large +$4.7M jump in SY22-23 (in 2026 dollars)?** This is the biggest single-year real increase in the dataset. Underlying the jump: **37 new IMRF Support Staff appear in the SY22-23 reports that were not in SY21-22** (the IMRF Support Staff count went from 48 to 74). High-paid additions in that year include positions later reclassified as administrators in SY23-24 (see breakdown explanation above), as well as roles like Diverse Learning Supervisor, Director of Science, Diverse Learning Coordinator, Talent Development Coordinator, Executive Director of Technology, Family Center Managing Director, and several specialized coordinator positions. SY22-23 was the District's first full year under Superintendent Devon Horton; the staffing buildup was concentrated in central-office support functions.
 
 ---
 
@@ -304,7 +319,7 @@ This chart breaks the IMRF Support Staff count down into broad role categories s
 - **Year labels** show the *ending* school year (e.g., 2026 = SY2025-26).
 - **Total Compensation** = Base Salary + TRS/Retirement contribution + Bonus + Health Insurance + Dental Insurance + Life Insurance + Vision Insurance (where reported) + Car Allowance + Retirement Annuity + Sick/Vacation Payout.
 - **Inflation adjustment** uses the Bureau of Labor Statistics CPI-U (All Urban Consumers, US city average) annual averages, with 2026 as the base year. CPI values are stored in [data/cpi_history.csv](data/cpi_history.csv); the SY25-26 value is estimated from monthly Jan–Nov 2025 BLS data and the SY26-27 (forecast) was not used. *(Inflation adjustment is one specific methodology among several reasonable choices; we picked CPI-U because it is widely understood. Alternatives like the GDP deflator or the BLS Education-services price index would give modestly different real-growth numbers but the qualitative story would not change.)*
-- **PA 097-0609 (IMRF) reports include only employees earning $75,000 or more**, so the IMRF Support Staff totals systematically *under-count* lower-paid administrative staff. Year-over-year comparisons are valid because the same threshold applies in every year.
+- **PA 097-0609 (IMRF) reports include only IMRF-participating employees whose compensation package (salary plus benefits) exceeds $75,000**, so the IMRF Support Staff totals systematically *under-count* lower-paid administrative staff. Year-over-year comparisons all share the fixed $75K threshold; the inflation-indexed robustness check above adjusts for the fact that this threshold has not been updated since the statute took effect.
 - **Some staff appear to move between TRS Admin and IMRF Support Staff categories** across years as positions are reclassified for funding purposes. For year-over-year *category-level* comparisons, the total combined stack is more meaningful than individual category trends. The SY22-23 → SY23-24 transition is the most prominent example.
 - **Principals are tracked separately** from TRS Admin even though they appear in the same PA 96-0434 reports.
 - **The SY2020-21 PDF** rendered the Health Insurance column as "#######" (an Excel column-too-narrow rendering artifact in the source PDF). This causes Total Comp to be slightly under-counted for that year only.
@@ -312,7 +327,7 @@ This chart breaks the IMRF Support Staff count down into broad role categories s
 - **Right-sizing scenarios** in the comparison chart use the SY25-26 average total compensation per administrator (~$131K) multiplied by the headcount difference. They are first-order estimates and would be refined by which specific positions are eliminated, severance considerations, and any associated facility/operating cost reductions.
 - **Recent-cuts data** in the comparison chart is in [data/d65_recent_cuts.csv](data/d65_recent_cuts.csv) with full sourcing per row.
 - **A District 202 (ETHS) comparison** would be useful — same student feeder community, same boundaries — but ETHS does not have its PA 96-0434 / PA 97-0609 administrator compensation reports indexed in foiagras, and pulling the equivalent data directly from ISBE for D202 across the same 11 years was beyond the scope of this analysis. We've flagged this as a future-work item.
-- All dollar figures default to **nominal**; charts with a Nominal/Inflation-Adjusted toggle clearly indicate which view is active.
+- All dollar figures on this page are **inflation-adjusted to 2026 dollars** using BLS CPI-U (US city average). Underlying CSVs retain the nominal values per year for anyone who wants to recompute under a different price index.
 
 ---
 

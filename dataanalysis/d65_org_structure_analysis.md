@@ -14,7 +14,7 @@ parent: Data Analysis
 
 District 65 is in a budget crisis. Enrollment has fallen. Counselors and librarians have been cut. Schools have been closed. And yet for years, the fastest-growing part of the district's budget wasn't classrooms or special education or transportation. It was the central office. Between fiscal years 2019 and 2026, student enrollment fell by 25% — from 7,943 students to 5,941 — while total district FTEs increased by at least 130, or roughly 10%. [[17][18]]
 
-The headline numbers are stark. Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline, the steepest among 21 nearby K-8 districts per Evanston RoundTable analysis. [RT1] Over that same period, administrative headcount roughly doubled, from 75 to 153 positions — a 104% increase. Total administrative compensation rose from about $10M to $20M in nominal dollars, and from $13.9M to $20.0M in inflation-adjusted 2026 dollars — a 44% real increase. Per-student administrative spending nearly tripled in nominal terms. [ADM] Perhaps most telling: per-administrator compensation has only kept pace with inflation over this period. The cost explosion was driven almost entirely by adding more administrators, not by paying existing ones more.
+The headline numbers are stark. Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline, the steepest among 21 nearby K-8 districts per Evanston RoundTable analysis. [RT1] Over that same period, administrative headcount roughly doubled, from 75 to 153 positions — a 104% increase. Total administrative compensation rose from $13.9M to $20.0M — a 44% real increase. Per-student administrative spending roughly doubled in real terms. [ADM] Perhaps most telling: per-administrator compensation has only kept pace with inflation over this period. The cost explosion was driven almost entirely by adding more administrators, not by paying existing ones more. *(All dollar figures in this report are inflation-adjusted to 2026 dollars using BLS CPI-U.)*
 
 This analysis traces what happened to D65's administrative structure between 2016 and today — who was hired, why, at what cost, and what remains. The data comes from board-approved org charts [1,2,3], state compensation reports obtained through FOIA [7,8,9], SDRP board presentations [4,5], and the Legion's own staffing and budget analyses [ADM][16]. The picture is not flattering.
 
@@ -61,9 +61,11 @@ The expansion was broad-based. A Deputy Superintendent position was created for 
 
 Critically, many of these additions were presented to the board as "budget neutral" — offset by eliminating other positions or reducing contracted services. [12] But the district was already projecting structural deficits starting in FY22. [13] The expansion happened anyway, justified by the MIRACLES framework and the superintendent's stated vision for organizational transformation.
 
-> **From the Record:** Devon Horton told the Finance Committee in August 2020 that "as a new leader to the district, he made some hiring decisions to steer the vision." [14] Positions added during this period included an Equity Coach at $110,000, two Deans of Culture and Climate at a combined $196,858, and a Diversity Hiring Specialist at $95,500 [12] — all in a year when the district was already aware of an emerging structural deficit. [13]
+> **From the Record:** Devon Horton told the Finance Committee in August 2020 that "as a new leader to the district, he made some hiring decisions to steer the vision." [14] Positions added during this period included an Equity Coach at approximately $140,000, two Deans of Culture and Climate at a combined $251,000, and a Diversity Hiring Specialist at approximately $122,000 [12] — all in a year when the district was already aware of an emerging structural deficit. [13]
 
-The expansion accelerated further in SY2022-23 — Horton's first full year as superintendent. The IMRF support staff count jumped from 48 to 74 in a single year, accounting for the largest single-year increase in administrative compensation in the dataset: +$4.9M. New additions that year included a Family Center Managing Director, Director of Science, Diverse Learning Coordinator, Talent Development Coordinator, Executive Director of Technology, and multiple specialized coordinator positions. [ADM] Meanwhile, student enrollment was already trending downward. The ratio of administrators to students was climbing fast — and the academic results were not following. D65 math proficiency on the IAR stood at 44.8% in 2018 and had fallen to 42.3% by 2024. [RT1]
+The expansion accelerated further in SY2022-23 — Horton's first full year as superintendent. The count of IMRF Support Staff — D65 employees who participate in the Illinois Municipal Retirement Fund and whose compensation package (salary plus benefits) exceeds the $75,000 PA 97-0609 reporting threshold — jumped from 48 to 74 in a single year, accounting for the largest single-year real increase in administrative compensation in the dataset: +$4.7M. New additions that year included a Family Center Managing Director, Director of Science, Diverse Learning Coordinator, Talent Development Coordinator, Executive Director of Technology, and multiple specialized coordinator positions. [ADM] Meanwhile, student enrollment was already trending downward. The ratio of administrators to students was climbing fast — and the academic results were not following. D65 math proficiency on the IAR stood at 44.8% in 2018 and had fallen to 42.3% by 2024. [RT1]
+
+> **Two clarifying notes on the IMRF Support Staff metric.** *First*, the FY26 PA 97-0609 list contains zero paraprofessionals. Per the district's Special Education report, D65 employs roughly 200 paraprofessionals (excluding Park School) at salaries around $30,000 — well below the $75,000 reporting threshold. The substantial FY24 expansion in paraprofessional headcount therefore cannot account for the growth in IMRF Support Staff documented here; the increase reflects growth in administrative, managerial, and specialist roles, not in classroom support staff. *Second*, the $75,000 reporting threshold has not been indexed to inflation since PA 97-0609 took effect. Because compensation packages tend to rise with inflation, more employees mechanically cross the threshold each year even if the underlying workforce composition is unchanged. A CPI-indexed robustness check (anchoring at $75K in 2016, equivalent to roughly $103K in 2026) is reported in §04, and confirms that the SY22-23 single-year jump from 48 to 74 IMRF Support Staff (31 to 51 on the inflation-adjusted basis) is far too large and abrupt to be explained by threshold drift alone.
 
 **Timeline of Events:**
 
@@ -125,7 +127,7 @@ The four top administrative positions — even after the cuts — carry combined
 
 ### 2. Administrative Support Positions Stay Above $75K
 
-The IMRF compensation report — which captures non-TRS administrative and support staff earning over $75,000 — shows a substantial layer of positions below the senior leadership team that the SDRP largely left intact. Communications Manager at $108,145. Infrastructure Manager at $135,345. Multiple administrative assistants and specialists above $75,000. [8]
+The IMRF compensation report — which captures compensation data for non-TRS, IMRF-participating staff whose compensation package (salary plus benefits) exceeds $75,000 — shows a substantial layer of positions below the senior leadership team that the SDRP largely left intact. Communications Manager at $108,145. Infrastructure Manager at $135,345. Multiple administrative assistants and specialists above $75,000. [8]
 
 This is not inherently wrong — some of these are specialized technical roles. But it is the layer of the organization that received the least scrutiny under the SDRP, and it is where comparison to peer districts would be most revealing.
 
@@ -146,6 +148,23 @@ Community Services (Function 3000) remains a separate concern. Our peer analysis
 The contrast between what was cut and what was protected is sharpest when you put the numbers side by side. The April 2026 layoff of two middle-school counselors is projected to save approximately $200,000 annually. The reassignment of all three middle-school librarians — eliminating the librarian function from Chute, Haven, and Nichols — saved approximately zero in direct salary costs, since the staff were reassigned rather than terminated. Combined, these were the most publicly visible and contested cuts of the 2025-26 cycle. [ADM]
 
 By contrast, returning D65's administrative headcount to its 2015-16 level of 75 positions would represent a reduction of roughly 78 positions from the current 153 — with savings that would dwarf the counselor and librarian actions many times over. Even a more modest scenario — trimming to a headcount consistent with peer-district ratios — would free up resources at a scale the district has not yet pursued. [ADM] The board has direct leverage here through the superintendent evaluation and organizational structure decisions. That lever has not been pulled to its full extent.
+
+### 5. Robustness Check: Does the Buildup Hold Up Under Inflation Indexing?
+
+A fair critique of the headcount figures cited throughout this report is that PA 97-0609's $75,000 reporting threshold has not been indexed to inflation since the statute took effect. As compensation packages rise with inflation, more employees mechanically cross a fixed threshold each year — inflating the apparent administrative headcount without any actual hiring. To test how much of the documented growth reflects genuine expansion versus threshold drift, we re-ran the headcount analysis using a CPI-indexed threshold anchored at $75,000 in 2016 (BLS CPI-U, US city average), which equates to approximately $103,000 in 2026. For each year and each role class, we filtered the underlying compensation roster on the criterion that total compensation (salary plus benefits) meets or exceeds that year's inflation-adjusted threshold. Because the source disclosures only report employees above $75,000 to begin with, this approach can only trim employees from the count — so the inflation-adjusted figures represent a strict lower bound on the true headcount above the indexed line. [ADM]
+
+**2016 → 2026 comparison:**
+
+| Category | Fixed $75K threshold | CPI-indexed threshold |
+|----------|----------------------|------------------------|
+| Total administrators | 75 → 153 (+104%) | 75 → 94 (+25%) |
+| IMRF Support Staff | 30 → 101 (+237%) | 30 → 42 (+40%) |
+| TRS Admin | 11 → 24 (+118%) | 11 → 24 (+118%) |
+| Principals | 34 → 28 (-18%) | 34 → 28 (-18%) |
+
+The threshold-drift critique has substantial purchase on the IMRF Support Staff numbers: roughly four-fifths of the apparent headcount growth in that category is explained by inflation pushing existing salaries above an unchanging $75,000 line. TRS Admin and Principal counts are unchanged under the adjustment because those classifications are reported in full regardless of compensation level — the threshold issue does not apply to them. (Note: the TRS Admin classification spiked to 45 in the SY23-24 disclosure, capturing the late-Horton peak before SDRP Phase I cuts brought it back to 23 in SY24-25. The +118% endpoint comparison from 2016 to 2026 understates the peak buildup.)
+
+But the broader buildup narrative survives the test. Total administrative headcount still grew approximately 25% over a period when student enrollment fell roughly 25%, implying per-pupil administrative density rose by approximately two-thirds even after stripping out the threshold-drift effect. The single-year SY22-23 IMRF surge — 31 to 51 under the CPI-indexed threshold, a +20 jump in one fiscal year — is large under any specification. And the TRS Admin doubling from 11 to 24 over the period is unaffected by the threshold question and represents a clean signal of administrative expansion. Adjusting for the unindexed reporting threshold reduces the headline growth figures meaningfully, but does not change the underlying conclusion that D65 added administrative capacity faster than its student population could justify.
 
 ---
 
@@ -183,7 +202,7 @@ Administrative staffing and compensation trends are documented in detail at [d65
 
 ## Appendix: Source Documents
 
-All primary documents were obtained via FOIA requests to District 65 or retrieved from the district's public board portal. Compensation disclosures are filed annually with the Illinois State Board of Education under PA 96-0434 (TRS administrators) and PA 97-0609 (IMRF employees earning over $75,000). Inline citation numbers in the article body correspond to sources below.
+All primary documents were obtained via FOIA requests to District 65 or retrieved from the district's public board portal. Compensation disclosures are filed annually with the Illinois State Board of Education under PA 96-0434 (TRS administrators) and PA 97-0609 (which requires reporting of compensation data for IMRF-participating employees whose compensation package — salary plus benefits — exceeds $75,000). Inline citation numbers in the article body correspond to sources below.
 
 ### Organizational Charts
 
@@ -218,7 +237,7 @@ Committee of the Whole Minutes, May 5, 2025 — Meeting minutes confirming Phase
 **[7]** PA 96-0434 TRS Administrator Salary Report, FY26 — State-required annual disclosure for TRS-enrolled administrators. Source for all senior administrator compensation figures in this post: Turner ($285,714), Mitchell ($238,417), Beardsley ($206,092), Speth ($194,285), Director of Humanities ($150,417), Director of STEAM ($142,857).
 [ig.foiagras.com → doc 4133](https://ig.foiagras.com/api/public/chat/documents/4133/view)
 
-**[8]** PA 97-0609 IMRF Compensation Report (employees over $75,000), FY26 — State-required disclosure for non-TRS employees. Source for Communications Manager ($108,145) and Infrastructure Manager ($135,345) figures.
+**[8]** PA 97-0609 IMRF Compensation Report, FY26 — State-required disclosure of compensation data for IMRF-participating employees whose compensation package (salary plus benefits) exceeds $75,000. Source for Communications Manager ($108,145) and Infrastructure Manager ($135,345) figures.
 [ig.foiagras.com → doc 4135](https://ig.foiagras.com/api/public/chat/documents/4135/view)
 
 **[9]** Compensation Report, 2020–21 — Documents peak Horton-era administrative compensation levels. Deputy Superintendent at $194,008–$213,196; multiple assistant superintendents at $150,000–$184,000.
