@@ -13,15 +13,30 @@ sitemap: false
 
 Over the past decade, District 65 has dramatically expanded its administrative workforce while serving a shrinking student population. This page tracks the size and cost of the District 65 administration from school year 2015-16 through 2025-26 using compensation data from the District's annual public salary disclosures (Public Acts 96-0434 and 97-0609).
 
-The headline findings, between SY2015-16 and SY2025-26:
+The headline findings: between SY2015-16 and SY2025-26, while K-8 enrollment fell from approximately 7,500 to 5,625 students (a 25% decline):
 
 - **Administrative headcount roughly doubled (75 → 153, +104%)**
-- **K-8 enrollment fell from approximately 7,500 to 5,625 students (a 25% decline)**
 - **Total administrative compensation rose from about $10M to $20M in nominal dollars (+98%)**
 - **Even after adjusting for inflation, total compensation rose from $13.9M (in 2026 dollars) to $20.0M — a 44% real increase**
 - **Per-student admin spending nearly tripled in nominal dollars and roughly doubled in inflation-adjusted dollars**
 
-A key implication: average compensation per administrator has only modestly outpaced inflation, which means the cost growth is overwhelmingly driven by **adding more administrators**, not by paying existing ones more. We dig into this throughout the page.
+---
+
+## Implications
+
+This page presents the data without prescribing a specific policy response, but a few observations follow naturally:
+
+1. **The administrative headcount-to-student ratio in D65 has grown to levels that are difficult to justify by ordinary cost-of-doing-business pressures.** Per-person compensation has only kept pace with inflation, so the cost growth is overwhelmingly a function of *more positions*, not *more pay per position*.
+
+2. **The continued addition of administrative positions during a period of significant enrollment decline** suggests that hiring decisions have not been responsive to the underlying scale of operations.
+
+3. **The current cost-cutting focus is heavily on student-facing services** (counselors, librarians, school buildings) while the central-administration buildup of the past decade — which represents by far the largest available pool of savings — has received much less scrutiny.
+
+4. **The peer-comparison data on the [Salary Data](salary-data.html) page** shows that comparable K-8 districts operate with substantially leaner administrative structures, so this is not a "the work just requires this many people" problem.
+
+The Legion of Data Nerds publishes this data to inform public discussion. We encourage residents, board members, and District leadership to consider it alongside other operational and educational priorities. Additional D65 source documents are available on the [D65 BoardBook archive](https://meetings.boardbook.org/Public/Organization/1247) and the [D65 Data Dashboard](https://data.district65.net/).
+
+---
 
 ### Categories Used
 
@@ -224,21 +239,6 @@ This chart breaks the IMRF Support Staff count down into broad role categories s
 
 ---
 
-## Implications
-
-This page presents the data without prescribing a specific policy response, but a few observations follow naturally:
-
-1. **The administrative headcount-to-student ratio in D65 has grown to levels that are difficult to justify by ordinary cost-of-doing-business pressures.** Per-person compensation has only kept pace with inflation, so the cost growth is overwhelmingly a function of *more positions*, not *more pay per position*.
-
-2. **The continued addition of administrative positions during a period of significant enrollment decline** suggests that hiring decisions have not been responsive to the underlying scale of operations.
-
-3. **The current cost-cutting focus is heavily on student-facing services** (counselors, librarians, school buildings) while the central-administration buildup of the past decade — which represents by far the largest available pool of savings — has received much less scrutiny.
-
-4. **The peer-comparison data on the [Salary Data](salary-data.html) page** shows that comparable K-8 districts operate with substantially leaner administrative structures, so this is not a "the work just requires this many people" problem.
-
-The Legion of Data Nerds publishes this data to inform public discussion. We encourage residents, board members, and District leadership to consider it alongside other operational and educational priorities. Additional D65 source documents are available on the [D65 BoardBook archive](https://meetings.boardbook.org/Public/Organization/1247) and the [D65 Data Dashboard](https://data.district65.net/).
-
----
 
 ## Acknowledgements
 
