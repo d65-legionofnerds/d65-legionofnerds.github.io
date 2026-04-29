@@ -47,7 +47,7 @@ D65 reports administrative staff under two state public-disclosure laws, plus a 
 
 - **TRS Admin** *(red)* — Certificated administrators reported under PA 96-0434: superintendent, assistant superintendents, executive directors, directors (Curriculum & Instruction, MTSS & SEL, STEAM, Multilingual Services, Climate & Safety, Programs & Partnerships, etc.), and supervisors. Salaried under the Teachers' Retirement System.
 
-- **IMRF Support Staff** *(blue)* — Non-certificated, IMRF-participating administrative and support staff whose compensation package (salary plus benefits) exceeds $75,000, reported under PA 97-0609. This category bundles a wide range of jobs:
+- **IMRF Support Staff** *(blue)* — IMRF Support Staff are D65 employees who participate in the Illinois Municipal Retirement Fund, This is non-certificated, IMRF-participating administrative and support staff whose compensation package (salary plus benefits) exceeds $75,000, reported under PA 97-0609. This category bundles a wide range of jobs:
   - **Directors / managers / coordinators**: directors of human relations, finance, technology, strategic projects; chiefs of communications and HR; cabinet-tier coordinators
   - **Buildings & maintenance**: head custodians, maintenance technicians, infrastructure managers, electricians
   - **IT / technology**: technology specialists, network and cybersecurity managers, systems engineers, database administrators
@@ -60,6 +60,7 @@ D65 reports administrative staff under two state public-disclosure laws, plus a 
   Note that PA 97-0609 only requires reporting compensation data for IMRF-participating employees whose **compensation package (salary plus benefits) exceeds $75,000**, so this category systematically *under-counts* lower-paid staff (entry-level coordinators, assistants, etc.).
 
 - **Principals** *(green)* — Principals and assistant principals (extracted from the same PA 96-0434 reports as TRS Admin but tracked separately because they fill a distinctly school-level operational role).
+- **Not included** Note that these data do not include paraprofessionals, school counselors, or librarians. 
 
 All compensation figures on this page are **inflation-adjusted to 2026 dollars** using the BLS CPI-U All Urban Consumers index (US city average). Total Compensation includes base salary, retirement (TRS) contribution, bonus, health/dental/life/vision insurance, car allowance, retirement annuities, and sick/vacation payouts.
 
