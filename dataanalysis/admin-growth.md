@@ -5,6 +5,7 @@ nav_exclude: true
 search_exclude: true
 noindex: true
 sitemap: false
+has_toc: true
 ---
 
 # District 65 Administrative Growth Over Time
@@ -20,6 +21,10 @@ The headline findings: between SY2015-16 and SY2025-26, while K-8 enrollment fel
 - **Per-student admin spending roughly doubled in inflation-adjusted dollars**
 
 *All dollar figures on this page are inflation-adjusted to 2026 dollars (BLS CPI-U, US city average) so that real cost growth is visible without inflation drift muddying the trend.*
+
+We detail the administrative growth below, but want to emphasize the savings opportunty presented by right-sizing our administration to our previously lean-levels. The amount of savings afforded by this is more than the proposal to close two schools and more than the proposal to close three schools. 
+
+<iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="650" frameborder="0"></iframe>
 
 ---
 
@@ -149,7 +154,7 @@ In recent months, the District has enacted or proposed a series of reductions ta
 The school-closure savings figures below use the District's **Dec 1, 2025 revised SDRP III financial model** (foiagras doc 12033), not the higher Sept 29 2025 numbers. See the "Note on the District's revised savings estimates" callout below for the diff.
 
 - **Layoff of 2 middle-school counselors (April 2026)** — On April 9, 2026, the Superintendent informed nine middle-school counselors they would lose their jobs at the end of the school year. After public outcry, on April 14, 2026 the Board curtailed the action and approved layoffs of only 2 of the 9 positions. Estimated annual savings: ~$200K. *(Source: FOIA Gras post 264, April 18 2026; D65 Board action April 14 2026.)*
-- **Reassignment of middle-school librarians (April 2026)** — The Superintendent announced "reassignment" of the middle-school librarians at all three middle schools (Chute, Haven, Nichols). Because the staff are being reassigned to classroom positions rather than terminated, **the direct salary savings are approximately zero unless coupled with firing additional teachers**; the action eliminates the librarian function from the middle schools. Did not require a Board vote. *(Source: FOIA Gras posts 264 and 267, April 2026; D65 Superintendent memo April 2026.)*
+- **Reassignment of middle-school librarians (April 2026)** — The Superintendent announced "reassignment" of the middle-school librarians at all three middle schools (Chute, Haven, Nichols). Because the staff are being reassigned to classroom positions rather than terminated, **the direct salary savings are up to approximately $270,000. On their own, the savings are zero unless coupled with firing additional teachers**; the action eliminates the librarian function from the middle schools. Did not require a Board vote. *(Source: FOIA Gras posts 264 and 267, April 2026; D65 Superintendent memo April 2026.)*
 - **Bessie Rhodes K-8 closure** — Approved June 10, 2024 by a 5-2 Board vote. Two-Way Immersion (TWI) program consolidating to Foster for SY26-27. Modeled recurring annual savings ≈ **$1.66M** in revised model (down from $1.98M in Sept 2025). *(Source: D65 Board Resolution 6/10/2024; SDRP III Scenario Modeling Memo 12.1.25, foiagras doc 12033.)*
 - **Kingsley Elementary closure** — Resolution adopted January 9, 2026. Three statutorily-required public hearings underway; intended closure end of SY25-26. Modeled recurring annual savings ≈ **$1.83M** in revised model (down from $2.12M in Sept 2025). *(Source: D65 Resolution of Closure 1/9/2026, foiagras doc 13846; SDRP III revised model 12.1.25, foiagras doc 12033.)*
 - **Lincolnwood Elementary (conditional trigger)** — The January 2026 resolution states: "If by October 2026 the District has not achieved financial sustainability and the district-wide average K-5 building utilization rate is below 75%, the Board will recognize the need to propose the closure of Lincolnwood Elementary School." Not yet voted; estimated incremental savings ~$1.4–1.6M (the 2-school scenario 2D total of $3.24M minus Kingsley alone).
