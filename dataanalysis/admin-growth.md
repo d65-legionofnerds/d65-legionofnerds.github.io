@@ -88,7 +88,7 @@ The same data shown as separate lines (rather than stacked) makes it easier to s
 
 ### Robustness Check: Inflation-Indexed Reporting Threshold
 
-<iframe src="assets/admin_growth_headcount_inflation_adjusted.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_headcount_inflation_adjusted.html" width="100%" height="690" frameborder="0"></iframe>
 
 *Use the buttons above the chart to toggle between the fixed $75K reporting threshold and a CPI-indexed threshold anchored at $75K in 2016 (≈$103K in 2026).*
 
@@ -292,7 +292,7 @@ A reader who wants to verify our data has at least three convergent sources to c
 
 <iframe src="assets/admin_growth_imrf_categories.html" width="100%" height="650" frameborder="0"></iframe>
 
-This chart breaks the IMRF Support Staff count down into broad role categories so readers can see what kinds of positions sit in this bucket. Note that older years have many "(no title)" entries because earlier IMRF reports did not include a Position column — those records still count toward the total but cannot be assigned to a category here. The "Directors / Managers / Coordinators" bucket is the most administrative-feeling subset of IMRF; the rest are operational support functions like custodians, IT, nurses, payroll, and SACC.
+This chart breaks the IMRF Support Staff count down into broad role categories for the two most recent reporting years (SY24-25 and SY25-26), so readers can see what kinds of positions sit in this bucket. Earlier years are excluded because their IMRF reports either did not include Position strings or used inconsistent terminology that resists reliable bucketing. The "Directors / Managers / Coordinators" bucket is the most administrative-feeling subset of IMRF; the rest are operational support functions like custodians, IT, nurses, payroll, and SACC.
 
 ---
 

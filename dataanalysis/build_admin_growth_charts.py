@@ -185,7 +185,7 @@ fig4.add_trace(go.Scatter(
     hovertemplate="<b>%{x}</b><br>Total: $%{y:,.0f} per 1k students<extra></extra>",
 ))
 fig4.update_layout(**base_layout(
-    "D65 Admin Comp per 1,000 Students Over Time (Inflation-Adjusted to 2026 $)",
+    "D65 Admin Comp per 1,000 Students Over Time (Inflation-Adjusted)",
     yt="Total Comp per 1,000 Students (2026 $)"))
 fig4.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(fig4, "comp_per_1000")
@@ -253,7 +253,7 @@ fig6.add_trace(go.Bar(x=trs_detail["year"], y=trs_detail["benefits"],
                       marker_color="#16a085",
                       hovertemplate="<b>%{x}</b><br>Benefits: $%{y:,.0f}<extra></extra>"))
 fig6.update_layout(barmode="stack", **base_layout(
-    "TRS Admin Compensation Breakdown — What's Driving the Cost? (2026 $)",
+    "TRS Admin Comp Breakdown (2026 $)",
     yt="Total Cost (2026 $)"))
 fig6.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(fig6, "comp_breakdown")
@@ -359,8 +359,13 @@ def bucket(p):
 
 imrf_roles["bucket"] = imrf_roles["pos_clean"].apply(bucket)
 
-# For each year, count IMRF staff per bucket
-imrf_by_yr = imrf_roles.groupby(["year", "bucket"], as_index=False).size().rename(columns={"size": "n"})
+# For each year, count IMRF staff per bucket. Restrict to the most recent
+# two reporting years (SY24-25 and SY25-26) — earlier years' position
+# strings were too inconsistent across PDFs to bucket reliably.
+IMRF_CATEGORIES_YEARS = [2025, 2026]
+imrf_by_yr = (imrf_roles[imrf_roles["year"].isin(IMRF_CATEGORIES_YEARS)]
+              .groupby(["year", "bucket"], as_index=False)
+              .size().rename(columns={"size": "n"}))
 
 fig9 = go.Figure()
 bucket_order = ["Directors / Managers / Coordinators", "Buildings & Maintenance",
@@ -379,9 +384,10 @@ for i, b in enumerate(bucket_order):
         hovertemplate="<b>%{x}</b><br>" + b + ": %{y}<extra></extra>",
     ))
 fig9.update_layout(barmode="stack", **base_layout(
-    "IMRF Support Staff by Role Category Over Time",
+    "IMRF Support Staff by Role Category (SY24-25 and SY25-26)",
     yt="Number of Staff", height=600,
     legend_y=-0.30))
+fig9.update_xaxes(type="category")
 write(fig9, "imrf_categories")
 
 
@@ -457,22 +463,23 @@ fig10.add_trace(go.Bar(
     hovertemplate="<b>%{y}</b><br>Estimated annual savings: $%{x:,.0f}<extra></extra>",
     showlegend=False,
 ))
-# Add a thin caption-style annotation under the chart instead of cramming it
-# into the axis title. This keeps the title short and avoids bottom-edge clipping.
+# Bar values are already labeled inside/outside each bar, so we hide the
+# x-axis ticks (they were overlapping at small bar sizes) and use the
+# bottom margin for a single-line caption that won't clip.
 fig10.update_layout(**base_layout(
     "Annual Savings: Recent Cuts vs. Admin Right-Sizing",
     xt="",
     yt="",
-    height=600))
-fig10.update_xaxes(tickprefix="$", tickformat="$,.1s")
+    height=620))
+fig10.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 fig10.add_annotation(
-    text=("<i>Dark grey bars use the District's revised Dec 2025 SDRP figures. "
-          "Red bars are right-sizing scenarios.</i>"),
-    xref="paper", yref="paper", x=0, y=-0.10,
+    text=("<i>Dark grey bars: District's revised Dec 2025 SDRP figures. "
+          "Red bars: right-sizing scenarios.</i>"),
+    xref="paper", yref="paper", x=0, y=-0.04,
     showarrow=False, xanchor="left", yanchor="top",
     font=dict(size=11, color="#666"),
 )
-fig10.update_layout(margin=dict(l=320, r=80, t=70, b=70))
+fig10.update_layout(margin=dict(l=320, r=80, t=70, b=60))
 write(fig10, "right_sizing_comparison")
 
 
@@ -530,32 +537,47 @@ for role in ROLE_ORDER:
         marker_color=COLORS[role], visible=False,
         hovertemplate="<b>%{x}</b><br>" + role + ": %{y} (CPI-indexed threshold)<extra></extra>",
     ))
+title_fixed_main = "D65 Admin Headcount"
+title_fixed_sub = "Fixed $75K reporting threshold (PA 97-0609)"
+title_indexed_main = "D65 Admin Headcount"
+title_indexed_sub = (f"CPI-indexed threshold — anchored at $75K in {CPI_ANCHOR_YEAR}, "
+                     f"≈$103K in 2026")
+
+def _title_html(main, sub):
+    return (f"<b>{main}</b><br>"
+            f"<span style='font-size:13px;color:#444;font-weight:normal'>{sub}</span>")
+
 fig12.update_layout(barmode="stack", **base_layout(
-    "D65 Admin Headcount — Fixed $75K Reporting Threshold",
-    yt="Number of Administrative Staff"))
-title_fixed = "D65 Admin Headcount — Fixed $75K Reporting Threshold"
-title_indexed = (f"D65 Admin Headcount — CPI-Indexed Threshold "
-                 f"(anchored at $75K in {CPI_ANCHOR_YEAR}, ≈$103K in 2026)")
+    _title_html(title_fixed_main, title_fixed_sub),
+    yt="Number of Administrative Staff",
+    height=660,
+    legend_y=-0.16))
+# Stack the toggle buttons ABOVE the title so they don't overlap the subtitle.
+# Title sits at the top of the plot area; buttons go above it in the margin.
+fig12.update_layout(title=dict(text=_title_html(title_fixed_main, title_fixed_sub),
+                                x=0.5, xanchor="center", y=0.93,
+                                yanchor="top", font=dict(size=18)))
 fig12.update_layout(updatemenus=[dict(
     type="buttons", direction="left",
-    x=0.5, xanchor="center", y=1.16, yanchor="top",
+    x=0.5, xanchor="center", y=1.13, yanchor="top",
     showactive=True, bgcolor="#f4f4f4",
     buttons=[
         dict(label="Fixed $75K threshold", method="update",
-             args=[{"visible": [True]*3 + [False]*3}, {"title.text": f"<b>{title_fixed}</b>"}]),
+             args=[{"visible": [True]*3 + [False]*3},
+                   {"title.text": _title_html(title_fixed_main, title_fixed_sub)}]),
         dict(label="CPI-indexed threshold", method="update",
-             args=[{"visible": [False]*3 + [True]*3}, {"title.text": f"<b>{title_indexed}</b>"}]),
+             args=[{"visible": [False]*3 + [True]*3},
+                   {"title.text": _title_html(title_indexed_main, title_indexed_sub)}]),
     ],
 )])
 fig12.add_annotation(
-    text=("<i>Robustness check: PA 97-0609's $75K reporting threshold has not been "
-          "indexed to inflation. Toggle to see headcount only counting employees whose "
-          "compensation exceeds the year-specific CPI-indexed equivalent of $75K in 2016.</i>"),
-    xref="paper", yref="paper", x=0, y=-0.22,
-    showarrow=False, xanchor="left", yanchor="top",
-    font=dict(size=11, color="#666"), align="left",
+    text=("<i>Robustness check: PA 97-0609's $75K reporting threshold has not been indexed to inflation since the<br>"
+          "statute took effect. Toggle to see headcount counting only employees above the CPI-indexed equivalent.</i>"),
+    xref="paper", yref="paper", x=0.5, y=-0.30,
+    showarrow=False, xanchor="center", yanchor="top",
+    font=dict(size=11, color="#666"), align="center",
 )
-fig12.update_layout(margin=dict(l=70, r=30, t=110, b=120))
+fig12.update_layout(margin=dict(l=70, r=30, t=160, b=140))
 write(fig12, "headcount_inflation_adjusted")
 
 
