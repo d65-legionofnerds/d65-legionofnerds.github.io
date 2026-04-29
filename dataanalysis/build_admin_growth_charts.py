@@ -482,7 +482,7 @@ fig10.update_layout(**base_layout(
     "Annual Savings: Recent Cuts vs. Admin Right-Sizing",
     xt="",
     yt="",
-    height=680))
+    height=760))
 fig10.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 fig10.add_annotation(
     text=("<i>Dark grey: District's revised Dec 2025 SDRP figures.<br>"

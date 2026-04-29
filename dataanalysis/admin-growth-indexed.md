@@ -29,7 +29,7 @@ The headline findings between SY2015-16 and SY2025-26, while K-8 enrollment fell
 
 We detail the administrative growth below, but first we want to emphasize the savings opportunity presented by right-sizing administration to D65's previously lean levels. The orange bar shows the District's own April 20, 2026 admin-cut proposal — $8.3M in identified savings from 22 administrators and 42 non-union support positions, presented 19 days after the deadline that would have made it actionable for FY27. The red bars show three Legion right-sizing scenarios computed under the indexed framework. The District's proposal sits *above* all three Legion scenarios because the District's math is sized on actual workforce average, including the sub-indexed admin we exclude here.
 
-<iframe src="assets/admin_growth_indexed_right_sizing_comparison.html" width="100%" height="780" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_indexed_right_sizing_comparison.html" width="100%" height="860" frameborder="0"></iframe>
 
 ---
 
@@ -164,7 +164,7 @@ This chart breaks the indexed-eligible IMRF Support Staff count down into broad 
 
 ## Comparing Right-Sizing the Admin to the District's Other Cost-Cutting Measures
 
-<iframe src="assets/admin_growth_indexed_right_sizing_comparison.html" width="100%" height="780" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_indexed_right_sizing_comparison.html" width="100%" height="860" frameborder="0"></iframe>
 
 The chart above shows the same recently-enacted and proposed cuts that appear on the [unindexed page](admin-growth.html), recomputed against a set of right-sizing scenarios derived from the indexed framework.
 
@@ -178,6 +178,8 @@ The school-closure savings figures below use the District's **Dec 1, 2025 revise
 - **Kingsley Elementary closure** — Modeled annual savings ≈ $1.83M.
 - **Lincolnwood Elementary (conditional trigger)** — Estimated incremental savings ~$1.4–1.6M.
 - **2-school closure scenario (revised)** — Total recurring annual savings ~$3.24–3.37M.
+- **Decline iPad/keyboard purchase (March 2026, one-time)** — On March 23, 2026 the Board approved a **$528,279 purchase of 1,231 iPads and 1,295 keyboard cases** for SY26-27, ignoring a Screen Sense Evanston petition with 1,200+ signatures urging less screen time. Declining the purchase would have produced a one-time $528,279 savings (shown on the chart at full value, not annual recurring). The District's parallel four-year operational lease (approved Dec 2024) runs $750,966 / 4 years = ~$200K/year on a separate stream. *(Source: [FOIA Gras post 249](https://foiagras.com/p/d65-it-department-spend), [post 255](https://foiagras.com/p/d65-tech-hard-to-unwind), [post 262](https://foiagras.com/p/d65-board-preview-march-23-2026), [post 264](https://foiagras.com/p/d65-firing-librarians); D65 Board action March 23, 2026.)*
+- **Choose lowest bidder for special ed transport (KalaJu over BriteLift)** — On December 15, 2025 the Board awarded the special ed transportation contract to BriteLift in a 6-1 vote (Opdycke opposed) at $2.04M annual for 55 routes. KalaJu Elite Fleet's headline bid was approximately $1M lower at $1.04M but **only priced 30 of the 55 routes needed**. CFO Tamara Mitchell stated KalaJu's bid reflected their existing fleet capacity, not the 55 routes required; Tom Hayden's analysis notes nothing in the KalaJu bid explicitly stated this limitation. The chart shows the headline $1M figure; **defensible savings range is ~$143K (linear extrapolation of per-route cost across 55 routes) to ~$1M (headline bid difference)**. *(Source: [FOIA Gras post 253](https://foiagras.com/p/kalaju-protest-letter); D65 Board action December 15, 2025.)*
 
 > **The District's own April 20, 2026 admin-cut proposal — and the missed deadline.** At the April 20, 2026 SDRP Phase III board meeting, the administration's deck identified an additional **$8,287,312 in potential annual savings from eliminating 22 administrators and 42 non-union support positions** (slide 13: *"Items for Analysis – Potential Additional Personnel Reduction Considerations"*). The same slide explicitly notes a contractual deadline of "April 1, 2026 for admin to go into effect for FY27." The proposal was presented **19 days after the deadline that would have made it actionable for FY27**; as a result, these cuts are deferred to FY28 at the earliest. **The District's $8.3M is the largest right-sizing bar in the chart above** because the District sized its proposal at the actual workforce average compensation ($129K/position × 64 positions), implicitly including the sub-indexed admin that this page's apples-to-apples analysis excludes. *(Source: D65 Expenditure Reduction Plan: SDRP Phase 3 Reductions, presented April 20, 2026, slide 13.)*
 
