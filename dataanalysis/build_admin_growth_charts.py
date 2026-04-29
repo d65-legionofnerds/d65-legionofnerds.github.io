@@ -485,14 +485,14 @@ fig10.update_layout(**base_layout(
     height=680))
 fig10.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 fig10.add_annotation(
-    text=("<i>Dark grey: District's revised Dec 2025 SDRP figures. "
-          "Orange: District's April 20, 2026 admin-cut proposal (deferred to FY28). "
+    text=("<i>Dark grey: District's revised Dec 2025 SDRP figures.<br>"
+          "Orange: District's April 20, 2026 admin-cut proposal (deferred to FY28).<br>"
           "Red: Legion right-sizing scenarios.</i>"),
-    xref="paper", yref="paper", x=0, y=-0.04,
+    xref="paper", yref="paper", x=0, y=-0.02,
     showarrow=False, xanchor="left", yanchor="top",
-    font=dict(size=11, color="#666"),
+    font=dict(size=11, color="#666"), align="left",
 )
-fig10.update_layout(margin=dict(l=320, r=80, t=70, b=60))
+fig10.update_layout(margin=dict(l=320, r=80, t=70, b=90))
 write(fig10, "right_sizing_comparison")
 
 
