@@ -5,7 +5,6 @@ nav_exclude: true
 search_exclude: true
 noindex: true
 sitemap: false
-has_toc: true
 ---
 
 # District 65 Administrative Growth Over Time
@@ -16,13 +15,14 @@ Over the past decade, District 65 has dramatically expanded its administrative w
 
 The headline findings: between SY2015-16 and SY2025-26, while K-8 enrollment fell from approximately 7,500 to 5,625 students (a 25% decline):
 
+- **Administrator: student ratios changed from 10 per 1k students (2015) to 27 per 1k students (2025)** 
 - **Administrative headcount roughly doubled (75 → 153, +104%)**
 - **Total administrative compensation rose from $13.9M to $20.0M in inflation-adjusted 2026 dollars — a 44% real increase**
 - **Per-student admin spending roughly doubled in inflation-adjusted dollars**
 
 *All dollar figures on this page are inflation-adjusted to 2026 dollars (BLS CPI-U, US city average) so that real cost growth is visible without inflation drift muddying the trend.*
 
-We detail the administrative growth below, but want to emphasize the savings opportunty presented by right-sizing our administration to our previously lean-levels. The amount of savings afforded by this is more than the proposal to close two schools and more than the proposal to close three schools. 
+We detail the administrative growth below, but want to emphasize the savings opportunty presented by right-sizing our administration to our previously lean levels. The amount of savings afforded by this is more than the proposal to close two schools and more than the proposal to close three schools. 
 
 <iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="650" frameborder="0"></iframe>
 
