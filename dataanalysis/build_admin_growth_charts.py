@@ -431,6 +431,18 @@ for _, r in cuts.iterrows():
         "savings": r["annual_savings_estimate"],
         "color": "#34495e",
     })
+# District's own April 20, 2026 admin-cut proposal (Phase III deck, slide 13).
+# 22 administrators + 42 non-union support, $8,287,312 estimated savings.
+# Presented 19 days after the April 1, 2026 contractual deadline that would
+# have made it actionable for FY27, so deferred to FY28 at the earliest.
+DISTRICT_ADMIN_PROPOSAL_SAVINGS = 8_287_312
+measures.append({
+    "label": ("District's April 20, 2026 admin-cut proposal<br>"
+              "(22 admins + 42 non-union support, missed FY27 deadline)"),
+    "savings": DISTRICT_ADMIN_PROPOSAL_SAVINGS,
+    "color": "#e67e22",
+})
+
 # Right-sizing scenarios — separate color so they pop visually
 measures.append({
     "label": "Right-size admin to D65's own 2016 ratio<br>(~10/1k students, ~96 cuts)",
@@ -470,11 +482,12 @@ fig10.update_layout(**base_layout(
     "Annual Savings: Recent Cuts vs. Admin Right-Sizing",
     xt="",
     yt="",
-    height=620))
+    height=680))
 fig10.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 fig10.add_annotation(
-    text=("<i>Dark grey bars: District's revised Dec 2025 SDRP figures. "
-          "Red bars: right-sizing scenarios.</i>"),
+    text=("<i>Dark grey: District's revised Dec 2025 SDRP figures. "
+          "Orange: District's April 20, 2026 admin-cut proposal (deferred to FY28). "
+          "Red: Legion right-sizing scenarios.</i>"),
     xref="paper", yref="paper", x=0, y=-0.04,
     showarrow=False, xanchor="left", yanchor="top",
     font=dict(size=11, color="#666"),

@@ -22,9 +22,9 @@ The headline findings: between SY2015-16 and SY2025-26, while K-8 enrollment fel
 
 *All dollar figures on this page are inflation-adjusted to 2026 dollars (BLS CPI-U, US city average) so that real cost growth is visible without inflation drift muddying the trend.*
 
-We detail the administrative growth below, but want to emphasize the savings opportunty presented by right-sizing our administration to our previously lean levels. The amount of savings afforded by this is more than the proposal to close two schools and more than the proposal to close three schools. 
+We detail the administrative growth below, but want to emphasize the savings opportunty presented by right-sizing our administration to our previously lean levels. The amount of savings afforded by this is more than the proposal to close two schools and more than the proposal to close three schools. The orange bar shows the District's own April 20, 2026 admin-cut proposal — $8.3M in identified savings from 22 administrators and 42 non-union support positions — which the administration presented 19 days after the deadline that would have made it actionable for FY27, deferring the cuts to FY28 at the earliest.
 
-<iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="710" frameborder="0"></iframe>
 
 ---
 
@@ -147,7 +147,7 @@ Breaking the central-office TRS Admin total into its components — base salary,
 
 In recent months, the District has enacted or proposed a series of reductions targeting **student-facing services**: middle-school counselors, middle-school librarians, and school closures. The chart below puts the estimated annual savings of these measures next to two scenarios for **right-sizing the central administration** instead. All figures are in 2026 dollars.
 
-<iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_right_sizing_comparison.html" width="100%" height="710" frameborder="0"></iframe>
 
 ### What's actually happened or been proposed (with sources)
 
@@ -160,6 +160,8 @@ The school-closure savings figures below use the District's **Dec 1, 2025 revise
 - **Lincolnwood Elementary (conditional trigger)** — The January 2026 resolution states: "If by October 2026 the District has not achieved financial sustainability and the district-wide average K-5 building utilization rate is below 75%, the Board will recognize the need to propose the closure of Lincolnwood Elementary School." Not yet voted; estimated incremental savings ~$1.4–1.6M (the 2-school scenario 2D total of $3.24M minus Kingsley alone).
 - **2-school closure scenario (revised)** — Total recurring annual savings of the revised 2-school scenario (Kingsley + a second Haven-feeder school): **~$3.24–3.37M**.
 - **3- and 4-school scenarios** — These were modeled in September 2025 ($6.29–6.39M for 3-school, $9.18M for 4-school) but **dropped from active consideration** after the Board narrowed focus to 0–2 school closures during November 2025 discussions. The September 2025 figures also included lease income and avoided capital cost assumptions that were subsequently removed from the headline financial impact (see callout below).
+
+> **The District's own April 20, 2026 admin-cut proposal — and the missed deadline.** At the April 20, 2026 SDRP Phase III board meeting, the administration's deck identified an additional **$8,287,312 in potential annual savings from eliminating 22 administrators and 42 non-union support positions** (slide 13: *"Items for Analysis – Potential Additional Personnel Reduction Considerations"*). The same slide explicitly notes a contractual deadline of "April 1, 2026 for admin to go into effect for FY27." The proposal was presented **19 days after the deadline that would have made it actionable for FY27**; as a result, these cuts are deferred to FY28 at the earliest, and the FY27 budget continues to fund all 64 of those positions for one more year. Two things make this slide especially significant: first, the dollar figure is the **District's own** — sized at $129,489 per position, essentially the FY26 average admin compensation, the same `avg_comp × headcount` methodology used in the right-sizing scenarios on this page. Second, $8.3M is meaningfully larger than the entire board-approved FY27 reduction package ($5.66M) and 41× the savings from the two-counselor layoff (~$200K). The District has effectively conceded that admin cuts of this scale are achievable; the question is one of timing and political will, not feasibility. The orange bar in the chart above shows where this proposal sits relative to the school-closure measures and the Legion's right-sizing scenarios. *(Source: D65 Expenditure Reduction Plan: SDRP Phase 3 Reductions, presented April 20, 2026, slide 13.)*
 
 > **Note on the District's revised savings estimates.** The District presented an initial set of school-closure savings figures on **September 29, 2025** (foiagras doc 4119) and then **revised the model downward on December 1, 2025** (foiagras doc 12033). The biggest changes were: (1) **lease-of-closed-facilities income was removed** from the headline financial impact ($245K–$971K depending on scenario — judged too speculative); (2) **section savings were halved** from $300K to $150K per closed school; (3) **avoided capital cost was removed** as a headline line item; and (4) **transportation flipped from a $50K cost increase to a $150–500K savings**. Net effect on the 1-school scenarios: Bessie Rhodes alone went from $1.98M to $1.66M (−17%); Kingsley alone went from $2.12M to $1.83M (−14%). The Board also narrowed active modeling from 0–4 school scenarios to 0–2 school scenarios. The figures shown in the chart above use the **revised Dec 2025** numbers; see [data/d65_recent_cuts.csv](data/d65_recent_cuts.csv) for full per-row sourcing including both the original and revised figures.
 
@@ -174,7 +176,9 @@ Two reference scenarios:
 
 The two-counselor layoff saves roughly the cost of a single mid-level administrator position. The librarian reassignments save effectively nothing in dollars. **Closing Bessie Rhodes and Kingsley together (the active 2026 plan) saves about $3.5M annually, less than one-third of what right-sizing the admin to the District's own 2016 ratio would save.** Even the District's revised 2-school maximum is well under what an admin right-sizing approach would yield.
 
-This isn't an argument that the school closures are wrong — there are legitimate facility-utilization and capital-cost reasons to close under-utilized buildings. **It is an argument that the District's current cost-cutting efforts focus heavily on student-facing services while the largest available source of savings — the central administrative buildup of the past decade — receives much less attention.**
+**The District itself acknowledges this.** The April 20, 2026 SDRP Phase III deck (slide 13) identifies $8.3M in admin cuts — 22 administrators plus 42 non-union support positions — as available, but the proposal was presented 19 days after the deadline that would have made it actionable for FY27. That single proposal alone is larger than every closure measure combined and dwarfs the student-facing cuts by nearly two orders of magnitude. It is the District's own number, sized using the same `avg_comp × headcount` math the Legion uses on this page.
+
+This isn't an argument that the school closures are wrong — there are legitimate facility-utilization and capital-cost reasons to close under-utilized buildings. **It is an argument that the District's current cost-cutting efforts focus heavily on student-facing services while the largest available source of savings — the central administrative buildup of the past decade — receives much less attention. And when the administration does identify admin cuts of this scale, the proposal arrives too late to take effect.**
 
 ---
 
