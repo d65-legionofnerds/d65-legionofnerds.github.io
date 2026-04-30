@@ -9,7 +9,7 @@ sitemap: false
 
 # District 65 Administrative Growth Over Time — Inflation-Indexed Threshold
 
-*This page is a parallel analysis to [Admin Growth](admin-growth.html). It applies the same source data but uses an **inflation-indexed reporting threshold** instead of the unchanging $75,000 PA-97-0609 threshold. The result is a stricter apples-to-apples comparison of higher-paid administrative staffing levels over the past decade. The two pages are companion drafts; the Legion is using them to evaluate which framework most accurately tells the story to the public.*
+*This page is the **strict apples-to-apples academic version** of the Legion's admin growth analysis. It applies a CPI-indexed threshold throughout, using only PA public-disclosure data. For the publication-candidate version that combines this CPI-indexed PA analysis with AFR (Annual Financial Report) data to capture admin compensation below $75K, see [Admin Growth (publication candidate)](admin-growth-final.html). For the original analysis using the unindexed $75,000 PA threshold, see [Admin Growth (unindexed)](admin-growth.html).*
 
 ## Overview
 
@@ -201,6 +201,68 @@ This isn't an argument that the school closures are wrong — there are legitima
 
 ---
 
+## What Roles Have Been Added?
+
+The TRS Admin roster in SY25-26 includes a number of senior positions that did not exist in the SY15-16 organization, among them:
+
+- Executive Chief of Communications
+- Executive Chief of Human Relations
+- Executive Director of RAAD (Research, Assessment, Accountability, and Data)
+- Executive Director of Technology
+- Director of MTSS & SEL (Multi-Tiered System of Supports & Social-Emotional Learning)
+- Director of STEAM (formerly Director of STEM)
+- Director of Multilingual Services (formerly Bilingual Coordinator)
+- Director of Climate & Safety
+- Director of Strategic Projects
+- Director of Programs & Partnerships
+- Director of Schools Management
+- Director of Humanities
+- Director of College and Career
+- Director of Science
+- Asst Director of Teaching & Learning
+- Diverse Learning Supervisor / Coordinator
+- Talent Development Coordinator
+- Special Assistant to Cabinet
+- Manager of Student Specialized Services
+
+On the IMRF side, the SY25-26 roster includes newer specialized roles such as Sustainability Coordinator, Wellness Coordinator, Network & Cybersecurity Manager, Substitute Staffing Specialist, Family Center Managing Director, Senior Manager of HR Operations, Culture and Climate Manager, and a Science & Sustainability Education Coordinator.
+
+### Were these additions justified?
+
+This is the harder question. The Legion of Data Nerds doesn't have a definitive answer. In his November 2025 *RoundTable* essay, Larry Gavin flagged several specific role-clusters as candidates for review without endorsement: the **9 IES Coordinators**, multiple positions in the **Human Relations department**, a cluster of **director-level roles** created in recent years (Strategic Projects, Workforce Analytics, Communications), and **assistant principals in small elementary schools** with 300–370 students. We don't have an independent basis for naming specific positions, but we agree these clusters warrant scrutiny.
+
+Several questions would help the public — and the Board — evaluate whether these roles are essential, useful, or expendable:
+
+1. **Was each new role created with a documented business case** that included measurable outcomes the role was supposed to deliver?
+2. **Are those outcomes being measured today, and what do the results show?** For example, after creating an Executive Director of RAAD several years ago, has the District's research/assessment/accountability/data work measurably improved? Has student achievement responded?
+3. **For roles created during a specific initiative** (e.g., Director of Multilingual Services, Director of MTSS & SEL), what is the evidence that the function would deteriorate if the role were eliminated and the work absorbed elsewhere?
+4. **For directors and coordinators** whose work is largely internal coordination, what concrete deliverables changed or new programs launched in the past year that would not have happened without them?
+5. **Which of these roles have been previously eliminated and re-created**, and what does that history tell us about whether the function is essential?
+
+The District has not made comprehensive answers to these questions publicly available.
+
+---
+
+## External Validation
+
+Two pieces of independent journalism by Larry Gavin in the *Evanston RoundTable* corroborate the trends documented on this page:
+
+- **Gavin, Larry. "Analysis and Viewpoint: District 65 Has 25% Fewer Students but 10% More Staff. Why?"** *Evanston RoundTable*, March 22, 2026. ([paywall](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/))
+  - D65's −25% enrollment decline since FY 2019 is the steepest among 21 nearby K-8 districts; next-largest decline 14.3%
+  - Total district FTEs *increased* by approximately 130 (+10%) over the same period
+  - Math IAR proficiency declined from 44.8% (2018) to 42.3% (2024) despite the staffing buildup
+  - Cross-referencing all three state disclosure lists yields 62 administrators for FY26 — 10 higher than the 52 the District reported under PA 96-0434 alone — raising the question of how many employees are performing administrative functions without being formally classified as administrators
+
+- **Gavin, Larry. "Guest Essay: District 65 Employees and Enrollment."** *Evanston RoundTable*, November 2, 2025. ([paywall](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/))
+  - Earlier independent analysis of the staff-to-enrollment ratio problem
+  - Identified specific role-clusters (9 IES Coordinators, Human Relations layers, recent director-level positions, assistant principals in small schools) as candidates for review
+
+The District has separately conceded the magnitude of the available admin savings: the April 20, 2026 SDRP Phase III deck identified $8,287,312 in additional admin/support cuts as available — but presented the proposal 19 days after the contractual deadline that would have made it actionable for FY27.
+
+A reader who wants to verify our data has at least three convergent sources to cross-check: this page, Gavin's RoundTable analyses, and the District's own April 20 admission, all backed by underlying D65 board documents on [foiagras](https://foiagras.com).
+
+---
+
 ## Methodology Notes
 
 This page uses identical source data to the [unindexed page](admin-growth.html). The differences are:
@@ -226,4 +288,15 @@ For a workforce snapshot that does not depend on the comp threshold at all, the 
 
 ---
 
-*This page was prepared by the Legion of Data Nerds. Underlying data is in [data/d65_admin_comp_combined.csv](data/d65_admin_comp_combined.csv) and the build script for the indexed-framework charts is in [build_admin_growth_indexed_charts.py](build_admin_growth_indexed_charts.py). For the companion analysis using the unindexed PA-97-0609 threshold see [Admin Growth (unindexed)](admin-growth.html).*
+### Companion analyses
+
+- **[Admin Growth (publication candidate)](admin-growth-final.html)** — combines this page's CPI-indexed PA headcount analysis with AFR (Annual Financial Report) data to capture every employee in admin functions regardless of salary, including those below $75K. Right-sizing scenarios use the AFR pool as denominator and the District's own per-cut average ($129K) for direct comparability with the District's $8.3M proposal.
+- **[Admin Growth (unindexed)](admin-growth.html)** — original analysis using the unindexed $75,000 PA threshold. Larger headline numbers (153 admin, +104% headcount, $11.2M / $12.7M right-sizing) but more vulnerable to the inflation-drift critique that this page addresses.
+
+---
+
+## Acknowledgements
+
+This analysis was prepared by the Legion of Data Nerds with the assistance of [Claude.ai](https://claude.ai) (Anthropic), which helped with extracting and reconciling data across the multi-year compensation reports, building the visualization pipeline, and drafting this page. All source data is from public District 65 board meeting documents indexed on [foiagras](https://foiagras.com); all editorial decisions, methodology choices, and conclusions are the authors'.
+
+*Underlying CSV data is available at [data/d65_admin_comp_combined.csv](data/d65_admin_comp_combined.csv). Source PDFs are saved to [data/d65_admin_comp_pdfs/](data/d65_admin_comp_pdfs/). The build script for the indexed-framework charts is in [build_admin_growth_indexed_charts.py](build_admin_growth_indexed_charts.py).*

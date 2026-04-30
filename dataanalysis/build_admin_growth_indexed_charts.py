@@ -422,7 +422,7 @@ target_moderate = round(hc_2016_19_indexed)
 cuts_moderate = max(current_total_hc - target_moderate, 0)
 scenarios.append({
     "label": ("Moderate: bring indexed-eligible admin to 2016–19 average"
-              "<br>(~81 admin, ~13 cuts)"),
+              "<br>(~13 cuts)"),
     "savings": cuts_moderate * avg_comp_2026_indexed,
     "color": "#e74c3c",   # lighter red
 })
@@ -433,7 +433,7 @@ target_peer = PEER_RATIO * current_enroll / 1000
 cuts_peer = max(current_total_hc - target_peer, 0)
 scenarios.append({
     "label": ("Right-size to peer K-8 median (~12/1k students)"
-              "<br>(~68 admin, ~26 cuts)"),
+              "<br>(~26 cuts)"),
     "savings": cuts_peer * avg_comp_2026_indexed,
     "color": "#c0392b",   # red
 })
@@ -443,7 +443,7 @@ target_2016 = ratio_2016 * current_enroll / 1000
 cuts_2016 = max(current_total_hc - target_2016, 0)
 scenarios.append({
     "label": (f"Right-size to D65's own 2016 indexed ratio (~{ratio_2016:.0f}/1k students)"
-              f"<br>(~{int(round(target_2016))} admin, ~{int(round(cuts_2016))} cuts)"),
+              f"<br>(~{int(round(cuts_2016))} cuts)"),
     "savings": cuts_2016 * avg_comp_2026_indexed,
     "color": "#922b21",   # darker red
 })

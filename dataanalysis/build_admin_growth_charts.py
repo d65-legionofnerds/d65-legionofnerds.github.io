@@ -438,7 +438,7 @@ for _, r in cuts.iterrows():
 DISTRICT_ADMIN_PROPOSAL_SAVINGS = 8_287_312
 measures.append({
     "label": ("District's April 20, 2026 admin-cut proposal<br>"
-              "(22 admins + 42 non-union support, missed FY27 deadline)"),
+              "(22 admins + 42 non-union support)"),
     "savings": DISTRICT_ADMIN_PROPOSAL_SAVINGS,
     "color": "#e67e22",
 })
