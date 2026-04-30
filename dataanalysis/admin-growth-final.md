@@ -1,10 +1,7 @@
 ---
 title: Admin Growth
 layout: default
-nav_exclude: true
-search_exclude: true
-noindex: true
-sitemap: false
+parent: Data Analysis
 ---
 
 # District 65 Administrative Growth Over Time
