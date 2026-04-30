@@ -61,7 +61,7 @@ Even on the most conservative basis the Legion can construct, several million do
 
 This page presents the data without prescribing a specific policy response, but a few observations follow naturally:
 
-1. **The buildup is real on every defensible measure.** Two independent data sources — AFR official ISBE filings and PA public-disclosure reports — both show substantial real-dollar growth in admin spending and headcount over a period of significant enrollment decline. The trend is not an artifact of the unindexed $75,000 PA threshold; it survives every methodological adjustment we have applied.
+1. **The buildup is real on every defensible measure.** Two independent data sources — AFR official ISBE filings and PA public-disclosure reports — both show substantial real-dollar growth in admin spending and headcount over a period of significant enrollment decline. The trend is not an artifact of the $75,000 PA threshold (all admin salaries above 75K need reported -- see more below); it survives every methodological adjustment we have applied.
 
 2. **General Administration (function 2300) is the most concentrated growth area.** It more than doubled in real terms over the decade. This function captures the superintendent, assistant superintendents, executive directors, curriculum directors, and content-area coordinators.
 
