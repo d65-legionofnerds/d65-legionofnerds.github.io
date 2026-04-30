@@ -44,7 +44,7 @@ Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to
 - **Higher-paid admin headcount grew 25%** (75 to 94), and per-1,000-student admin density **rose 67%** (10.0 to 16.7).
 - **Certificated central-office administrators (TRS Admin) more than doubled**, from 11 to 24.
 - **Per-person compensation has roughly tracked inflation.** The cost growth is driven by adding more positions, not paying existing administrators more.
-- **Right-sizing the administration could save $8M annually.** The Legion has identified cuts that can be scaffolded to get to the Administration's proposed $8m savings. 
+- **Right-sizing the administration could save $8.3M+ annually** based on the District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"}. The cuts can be phased, with $1.7M to $4.9M in immediate annual savings under three Legion scenarios.
 
 All dollar figures on this page are in **2026 dollars** (inflation-adjusted using BLS CPI-U). The analysis uses two independent public data sources — the District's Annual Financial Report (AFR) and state public-disclosure reports — detailed in the [methodology sections below](#why-two-data-sources).
 
@@ -91,8 +91,8 @@ This chart shows D65's total compensation paid to administrators across all four
 The trend is unambiguous:
 
 - **The pool grew from $15.36M (FY12) to $19.99M (FY25)**, a +30% real increase over a period when enrollment fell roughly 25%.
-- **General Administration (2300) more than doubled in real terms**, from $1.98M to $4.88M (+147%). This function code captures the superintendent's office, assistant superintendents, executive directors, and curriculum directors / coordinators — the categories that expanded fastest under the MIRACLES framework starting in 2020.
-- **The biggest single-year jumps are visible in FY17 (early Strategic Plan / new initiatives) and FY23** — both represent moments when the administrative buildup accelerated.
+- **General Administration (2300) more than doubled in real terms**, from $1.98M to $4.88M (+147%). This function code captures the superintendent's office, assistant superintendents, executive directors, and curriculum directors / coordinators.
+- **The biggest single-year jumps are visible in FY17 (early Strategic Plan / new initiatives) and FY23 (Devon Horton's first full year as superintendent)** — both represent moments when the administrative buildup accelerated.
 - School Administration (2400) and Business Services (2500) have been roughly flat in real terms over the decade. Central Support (2600) — which includes IT, planning, and data processing — grew about 28% in real terms, partly reflecting the technology buildup discussed below.
 
 ### Per-Pupil Admin Spending
@@ -102,12 +102,6 @@ Normalized by enrollment, the picture is more dramatic. As enrollment fell, per-
 <iframe src="assets/admin_growth_final_afr_per_pupil.html" width="100%" height="600" frameborder="0"></iframe>
 
 Real per-pupil admin spending grew from approximately **$2,201 to $3,401 (+55%)** between FY16 and FY25. Excluding principals (which are largely school-level operations), per-pupil central-office and support spending grew from approximately **$1,246 to $2,125 (+71%)** over the same period.
-
-### Annual Change in the AFR Admin Pool (Waterfall)
-
-<iframe src="assets/admin_growth_final_afr_waterfall.html" width="100%" height="650" frameborder="0"></iframe>
-
-This chart shows year-over-year changes in the total AFR admin pool in 2026 dollars. Red bars are increases; green bars are decreases. The largest single-year jump is **FY23, with the pool growing $1.91M in real terms — a +9.8% real increase in one year.** SDRP Phase I cuts in FY24 and Phase II cuts in FY25 have brought the pool back down toward FY22 levels, but the FY25 pool ($19.99M) is still 21% larger in real terms than the FY16 pool ($16.56M).
 
 ### Higher-Paid Admin Headcount Over Time (CPI-Indexed)
 
@@ -128,12 +122,6 @@ This is the most consequential headcount chart on the page. Even under the stric
 <iframe src="assets/admin_growth_final_avg_comp.html" width="100%" height="600" frameborder="0"></iframe>
 
 This chart plots each role-class's average compensation in 2026 dollars against a dotted horizontal line at the 2016 real-dollar baseline. **Most lines stay near or below their 2016 baseline** — meaning per-person compensation has, on average, kept pace with inflation or slightly lost ground. Administrators are not, on average, getting big raises that outstrip the cost of living. Combined with the AFR pool growth, the math is forcing: total real cost grew because D65 added more administrators, not because it paid existing administrators more.
-
-### Decoupling: Costs and Headcount vs. Enrollment
-
-<iframe src="assets/admin_growth_final_yoy_decoupling.html" width="100%" height="600" frameborder="0"></iframe>
-
-This chart juxtaposes the year-over-year percentage change in three series: AFR admin pool real spending (red), CPI-indexed PA admin headcount (purple), and student enrollment (green). In a financially stable district, you would expect these lines to roughly track each other — when enrollment grows, costs grow proportionally; when enrollment shrinks, costs decline. **D65's enrollment line has been consistently negative since 2019 while real-cost and headcount lines have remained positive in many years**, with notable single-year jumps in FY17 and FY23.
 
 ---
 

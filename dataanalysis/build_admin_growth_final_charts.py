@@ -179,8 +179,8 @@ for role in ROLE_ORDER:
         hovertemplate="<b>%{x}</b><br>" + role + ": %{y} staff<extra></extra>",
     ))
 figC.update_layout(barmode="stack", **base_layout(
-    "Higher-Paid Admin/Support Headcount Over Time (PA, CPI-Indexed)",
-    yt="Number of Admin/Support Above CPI-Indexed Threshold"))
+    "Higher-Paid Admin/Support Headcount (CPI-Indexed)",
+    yt="Staff Above CPI-Indexed Threshold"))
 write(figC, "indexed_headcount_stacked")
 
 
@@ -240,7 +240,7 @@ for role in ROLE_ORDER:
         hovertemplate="<b>%{x}</b><br>" + role + " 2016 real baseline: $%{y:,.0f}<extra></extra>",
     ))
 figE.update_layout(**base_layout(
-    "Average Compensation per Administrator vs. 2016 Real Baseline (2026 $)",
+    "Average Comp per Administrator vs. 2016 Baseline (2026 $)",
     yt="Average Total Comp per Person (2026 $)"))
 figE.update_yaxes(tickprefix="$", tickformat=",.0f")
 write(figE, "avg_comp")
@@ -305,9 +305,8 @@ figG.add_trace(go.Bar(
 ))
 figG.add_hline(y=0, line=dict(color="black", width=1))
 subtitle = (f"<span style='font-size:13px;color:#444'>"
-            f"{start_year_label} starting total: ${start_val:,.0f} (2026 $)"
-            f"  •  {end_year_label} ending total: ${end_val:,.0f} (2026 $)"
-            f"  •  Net change: ${net:+,.0f} ({net/start_val*100:+.1f}%)"
+            f"{start_year_label}: ${start_val/1e6:,.1f}M → {end_year_label}: ${end_val/1e6:,.1f}M"
+            f" (net ${net/1e6:+,.1f}M, {net/start_val*100:+.1f}%)"
             f"</span>")
 figG.update_layout(**base_layout(
     f"Annual Change in AFR Admin Pool (2026 $)<br>{subtitle}",
@@ -358,7 +357,7 @@ for i, b in enumerate(bucket_order):
         hovertemplate="<b>%{x}</b><br>" + b + ": %{y}<extra></extra>",
     ))
 figH.update_layout(barmode="stack", **base_layout(
-    "Indexed-Eligible IMRF Support Staff by Role Category (SY24-25 and SY25-26)",
+    "IMRF Support Staff by Role Category<br><span style='font-size:13px;color:#444'>Indexed-eligible, SY24-25 and SY25-26</span>",
     yt="Number of Staff", height=600,
     legend_y=-0.30))
 figH.update_xaxes(type="category")
@@ -472,17 +471,16 @@ figI.add_trace(go.Bar(
 figI.update_layout(**base_layout(
     f"Annual Savings: Recent Cuts vs. Admin Right-Sizing<br>"
     f"<span style='font-size:13px;color:#444'>"
-    f"Denominator: FY25 AFR admin compensation pool = ${AFR_POOL_TOTAL/1e6:,.2f}M "
-    f"(functions 2300+2400+2500+2600 in 2026 $)</span>",
+    f"% of pool = FY25 AFR admin comp pool (${AFR_POOL_TOTAL/1e6:,.2f}M, 2026 $)</span>",
     xt="",
     yt="",
     height=820))
 figI.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 figI.add_annotation(
-    text=("<i>Dark grey: District's revised Dec 2025 SDRP figures.<br>"
-          "Orange: District's April 20, 2026 admin-cut proposal "
-          "(sized at workforce avg $129K/position).<br>"
-          "Red shades: Legion right-sizing scenarios at the same $129K/position avg.</i>"),
+    text=("<i>Dark grey: District SDRP figures. "
+          "Orange: District's April 2026 admin-cut proposal. "
+          "Red: Legion right-sizing scenarios.<br>"
+          "All admin scenarios sized at $129K/position (District's own avg).</i>"),
     xref="paper", yref="paper", x=0, y=-0.02,
     showarrow=False, xanchor="left", yanchor="top",
     font=dict(size=11, color="#666"), align="left",
