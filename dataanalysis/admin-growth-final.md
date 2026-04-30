@@ -33,6 +33,7 @@ sitemap: false
 <td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
 </tr>
 </table>
+
 ## Key Findings
 
 Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline. Over the same period:
