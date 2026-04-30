@@ -9,7 +9,7 @@ sitemap: false
 
 # District 65 Administrative Growth Over Time
 
-**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and what right-sizing it could save.**
+**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and how right sizing can save $8M.**
 
 ## Key Findings
 
@@ -21,7 +21,7 @@ Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to
 - **Higher-paid admin headcount grew 25%** (75 to 94), and per-1,000-student admin density **rose 67%** (10.0 to 16.7).
 - **Certificated central-office administrators (TRS Admin) more than doubled**, from 11 to 24.
 - **Per-person compensation has roughly tracked inflation.** The cost growth is driven by adding more positions, not paying existing administrators more.
-- **Right-sizing the administration could save $1.7M to $4.9M annually** under three Legion scenarios and the District itself identified $8.3M in potential admin cuts in its April 2026 proposal.
+- **Right-sizing the administration could save $8M annually.** The Legion has identified cuts that can be scaffolded to get to the Administration's proposed $8m savings. 
 
 All dollar figures on this page are in **2026 dollars** (inflation-adjusted using BLS CPI-U). The analysis uses two independent public data sources — the District's Annual Financial Report (AFR) and state public-disclosure reports — detailed in the [methodology sections below](#why-two-data-sources).
 
@@ -29,11 +29,11 @@ All dollar figures on this page are in **2026 dollars** (inflation-adjusted usin
 
 ## What Could Right-Sizing Save?
 
-The chart below puts recent enacted and proposed cuts (dark grey) next to the District's own admin-cut proposal (orange) and three Legion right-sizing scenarios (red shades) — all expressed both in dollars and as a percentage of the FY25 AFR admin compensation pool.
+The chart below puts recent enacted and proposed cuts (dark grey) next to the District's own admin-cut proposal (orange) and three Legion right-sizing scenarios (red shades) — all expressed both in dollars and as a percentage of the FY25 AFR admin compensation pool. These proposals can be used to gradually move the district to the Admin's proposed $8m in cuts. 
 
 <iframe src="assets/admin_growth_final_right_sizing_comparison.html" width="100%" height="900" frameborder="0"></iframe>
 
-Even on the most conservative basis the Legion can construct, several million dollars in annual admin savings are accessible — and the District itself has identified $8.3M. The [detailed comparison below](#right-sizing-vs-the-districts-other-cost-cutting-measures) documents the source and methodology behind each bar.
+Even on the most conservative basis the Legion can construct, several million dollars in annual admin savings are accessible — and the District itself has identified $8.3M. The [detailed comparison below](#right-sizing-vs-the-districts-other-cost-cutting-measures) documents the source and methodology behind each bar. 
 
 ---
 
@@ -43,7 +43,7 @@ This page presents the data without prescribing a specific policy response, but 
 
 1. **The buildup is real on every defensible measure.** Two independent data sources — AFR official ISBE filings and PA public-disclosure reports — both show substantial real-dollar growth in admin spending and headcount over a period of significant enrollment decline. The trend is not an artifact of the unindexed $75,000 PA threshold; it survives every methodological adjustment we have applied.
 
-2. **General Administration (function 2300) is the most concentrated growth area.** It more than doubled in real terms over the decade. This function captures the superintendent, assistant superintendents, executive directors, curriculum directors, and content-area coordinators — exactly the categories that expanded under Devon Horton's MIRACLES framework in 2020.
+2. **General Administration (function 2300) is the most concentrated growth area.** It more than doubled in real terms over the decade. This function captures the superintendent, assistant superintendents, executive directors, curriculum directors, and content-area coordinators.
 
 3. **Per-person compensation has tracked or slightly lagged inflation.** When total real comp is up 21%–33% but per-person real comp is roughly flat, the math forces the conclusion that **the cost growth is overwhelmingly driven by adding more positions, not by paying existing administrators more**.
 
@@ -69,7 +69,7 @@ The trend is unambiguous:
 
 - **The pool grew from $15.36M (FY12) to $19.99M (FY25)**, a +30% real increase over a period when enrollment fell roughly 25%.
 - **General Administration (2300) more than doubled in real terms**, from $1.98M to $4.88M (+147%). This function code captures the superintendent's office, assistant superintendents, executive directors, and curriculum directors / coordinators — the categories that expanded fastest under the MIRACLES framework starting in 2020.
-- **The biggest single-year jumps are visible in FY17 (early Strategic Plan / new initiatives) and FY23 (Devon Horton's first full year as superintendent)** — both represent moments when the administrative buildup accelerated.
+- **The biggest single-year jumps are visible in FY17 (early Strategic Plan / new initiatives) and FY23** — both represent moments when the administrative buildup accelerated.
 - School Administration (2400) and Business Services (2500) have been roughly flat in real terms over the decade. Central Support (2600) — which includes IT, planning, and data processing — grew about 28% in real terms, partly reflecting the technology buildup discussed below.
 
 ### Per-Pupil Admin Spending
@@ -84,7 +84,7 @@ Real per-pupil admin spending grew from approximately **$2,201 to $3,401 (+55%)*
 
 <iframe src="assets/admin_growth_final_afr_waterfall.html" width="100%" height="650" frameborder="0"></iframe>
 
-This chart shows year-over-year changes in the total AFR admin pool in 2026 dollars. Red bars are increases; green bars are decreases. The largest single-year jump is **FY23 (Devon Horton's first full year as superintendent), with the pool growing $1.91M in real terms — a +9.8% real increase in one year.** SDRP Phase I cuts in FY24 and Phase II cuts in FY25 have brought the pool back down toward FY22 levels, but the FY25 pool ($19.99M) is still 21% larger in real terms than the FY16 pool ($16.56M).
+This chart shows year-over-year changes in the total AFR admin pool in 2026 dollars. Red bars are increases; green bars are decreases. The largest single-year jump is **FY23, with the pool growing $1.91M in real terms — a +9.8% real increase in one year.** SDRP Phase I cuts in FY24 and Phase II cuts in FY25 have brought the pool back down toward FY22 levels, but the FY25 pool ($19.99M) is still 21% larger in real terms than the FY16 pool ($16.56M).
 
 ### Higher-Paid Admin Headcount Over Time (CPI-Indexed)
 
