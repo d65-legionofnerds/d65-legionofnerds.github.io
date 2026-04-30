@@ -9,7 +9,7 @@ sitemap: false
 
 # District 65 Administrative Growth Over Time
 
-**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and how right sizing can save $8M.**
+**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and** **<big><span style="color:red">how right sizing can save $8M.</span></big>**
 
 <table width="100%">
 <tr>
