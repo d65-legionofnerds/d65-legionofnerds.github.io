@@ -12,6 +12,8 @@ Nerds or Data Nerds, our underlying purpose is the same: **data-driven, methodol
 Check out our [Financial Levers Memo]({{ '/assets/FinancialLeversMemo.pdf' | relative_url }}){:target="_blank"}, where we propose levers to reach district utilization above 70% in each middle school feeder pattern while prioritizing students, Title I schools, and programming.
 
 ## Latest from the Nerds
+**[Admin growth over time within D65]({{ 'dataanalysis/admin-growth-final.html' | relative_url }})** *04/30/2026*
+
 **[Budget Comparison between D65 and other districts]({{ 'dataanalysis/budget_analysis.html' | relative_url }})** *04/22/2026*
 
 **[Kingsley Closure Survey]({{ 'dataanalysis/kingsley_closure_survey.html' | relative_url }})** *01/25/2026*
