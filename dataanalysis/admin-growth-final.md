@@ -14,22 +14,22 @@ sitemap: false
 <table width="100%">
 <tr>
 <td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+67%</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">+21%</span></td>
+<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">2×</span></td>
 <td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">+55%</span></td>
 </tr>
 <tr>
 <td align="center">Admin-to-student ratio increase</td>
-<td align="center">Real admin compensation pool growth</td>
+<td align="center">Certificated central-office admins (TRS)</td>
 <td align="center">Per-pupil admin spending rise</td>
 </tr>
 <tr>
 <td align="center">10.0 → 16.7 per 1,000 students</td>
-<td align="center">$16.56M → $19.99M</td>
+<td align="center">11 → 24 administrators</td>
 <td align="center">$2,201 → $3,401</td>
 </tr>
 <tr>
 <td align="center"><small>SY2015–16 to SY2025–26</small></td>
-<td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
+<td align="center"><small>SY2015–16 to SY2025–26</small></td>
 <td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
 </tr>
 </table>
