@@ -11,6 +11,28 @@ sitemap: false
 
 **A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and how right sizing can save $8M.**
 
+<table width="100%">
+<tr>
+<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">−25%</span></td>
+<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">+21%</span></td>
+<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">+55%</span></td>
+</tr>
+<tr>
+<td align="center">K-8 enrollment decline</td>
+<td align="center">Real admin compensation pool growth</td>
+<td align="center">Per-pupil admin spending rise</td>
+</tr>
+<tr>
+<td align="center">7,500 → 5,625 students</td>
+<td align="center">$16.56M → $19.99M</td>
+<td align="center">$2,201 → $3,401</td>
+</tr>
+<tr>
+<td align="center"><small>SY2015–16 to SY2025–26</small></td>
+<td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
+<td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
+</tr>
+</table>
 ## Key Findings
 
 Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline. Over the same period:
