@@ -21,6 +21,7 @@ Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to
 - **Higher-paid admin headcount grew 25%** (75 to 94), and per-1,000-student admin density **rose 67%** (10.0 to 16.7).
 - **Certificated central-office administrators (TRS Admin) more than doubled**, from 11 to 24.
 - **Per-person compensation has roughly tracked inflation.** The cost growth is driven by adding more positions, not paying existing administrators more.
+- **Right-sizing the administration could save $1.7M to $4.9M annually** under three Legion scenarios and the District itself identified $8.3M in potential admin cuts in its April 2026 proposal.
 
 All dollar figures on this page are in **2026 dollars** (inflation-adjusted using BLS CPI-U). The analysis uses two independent public data sources — the District's Annual Financial Report (AFR) and state public-disclosure reports — detailed in the [methodology sections below](#why-two-data-sources).
 
