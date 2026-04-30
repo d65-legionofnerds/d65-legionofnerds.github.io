@@ -397,8 +397,7 @@ scenarios = []
 target_moderate = round(hc_2016_19_indexed)
 cuts_moderate = max(indexed_hc_2026 - target_moderate, 0)
 scenarios.append({
-    "label": (f"Moderate — return higher-paid admin/support to 2016–19 average"
-              f"<br>(target ~{target_moderate}, ~{int(cuts_moderate)} cuts at $129K avg)"),
+    "label": f"Moderate — return to 2016–19 baseline (~{int(cuts_moderate)} cuts)",
     "savings": cuts_moderate * DISTRICT_PER_CUT,
     "color": "#e74c3c",
 })
@@ -408,8 +407,7 @@ PEER_RATIO = 12.0
 target_peer = PEER_RATIO * indexed_enroll_2026 / 1000
 cuts_peer = max(indexed_hc_2026 - target_peer, 0)
 scenarios.append({
-    "label": (f"Right-size to peer K-8 median (~12/1k students)"
-              f"<br>(target ~{int(round(target_peer))}, ~{int(round(cuts_peer))} cuts at $129K avg)"),
+    "label": f"Right-size to peer K-8 median (~{int(round(cuts_peer))} cuts)",
     "savings": cuts_peer * DISTRICT_PER_CUT,
     "color": "#c0392b",
 })
@@ -418,8 +416,7 @@ scenarios.append({
 target_2016 = ratio_2016_indexed * indexed_enroll_2026 / 1000
 cuts_2016 = max(indexed_hc_2026 - target_2016, 0)
 scenarios.append({
-    "label": (f"Right-size to D65's own 2016 ratio (~{ratio_2016_indexed:.0f}/1k students)"
-              f"<br>(target ~{int(round(target_2016))}, ~{int(round(cuts_2016))} cuts at $129K avg)"),
+    "label": f"Right-size to D65's 2016 ratio (~{int(round(cuts_2016))} cuts)",
     "savings": cuts_2016 * DISTRICT_PER_CUT,
     "color": "#922b21",
 })
@@ -462,7 +459,9 @@ figI.add_trace(go.Bar(
     text=mdf["label_fmt"],
     textposition="auto",
     insidetextanchor="end",
-    textfont=dict(size=12, color="white"),
+    insidetextfont=dict(size=12, color="white"),
+    outsidetextfont=dict(size=12, color="#333"),
+    constraintext="none",
     cliponaxis=False,
     hovertemplate="<b>%{y}</b><br>Annual savings: $%{x:,.0f}<br>"
                   + f"% of AFR admin pool ($19.99M FY25): "
