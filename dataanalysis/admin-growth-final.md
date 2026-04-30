@@ -32,6 +32,7 @@ sitemap: false
 <td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
 <td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
 </tr>
+</table>
 
 ## Key Findings
 
