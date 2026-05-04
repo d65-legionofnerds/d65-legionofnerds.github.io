@@ -8,6 +8,8 @@ parent: Data Analysis
 
 **A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and** **<big><span style="color:red">how right sizing can save $8M.</span></big>**
 
+**[Frequently Asked Questions](admin-growth-faq)** — answers to common questions about how administrators are counted, what data sources are used, and what the numbers mean.
+
 <table width="100%">
 <tr>
 <td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+67%</span></td>
