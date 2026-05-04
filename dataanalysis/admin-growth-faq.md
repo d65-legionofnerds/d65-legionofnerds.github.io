@@ -21,7 +21,7 @@ It depends on which data source you use and how you define "administrator." The 
 | TRS Admin (certificated administrators) | 24 | Superintendent, assistant superintendents, executive directors, directors, supervisors — reported in full under PA 96-0434 regardless of salary |
 | Principals & Assistant Principals | 28 | School-level building leaders — from the same PA 96-0434 reports but tracked separately |
 | IMRF Support Staff (above threshold) | 101 | Non-certificated admin and support staff whose compensation exceeds the $75K statutory threshold — reported under PA 97-0609 |
-| **Total unique individuals** | **147** | 6 people appear in both TRS Admin and IMRF reports (see [below](#why-do-some-people-appear-in-both-trs-admin-and-imrf-reports)) |
+| **Total unique individuals** | **147** | 6 people appear in both TRS Admin and IMRF reports and these duplicates have been removed |
 
 **CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **94**. This is the number used in the admin density and right-sizing analysis.
 
