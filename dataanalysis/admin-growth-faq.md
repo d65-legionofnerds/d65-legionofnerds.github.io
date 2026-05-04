@@ -56,7 +56,7 @@ It depends on which data source you use and how you define "administrator." The 
 
 **D65 Staff Directory (SY2025-26)** — The District's own public website lists **1,448 total staff** across all roles. Of those, **86 are based at the JEH Administrative Center** (central office), including 22 senior leaders (directors and above) and 19 mid-level administrators (managers, coordinators, supervisors). The remaining ~45 JEH staff are support roles (IT specialists, payroll, HR, nutrition services, custodial, etc.). See the staff directory question below for more detail.
 
-**Cross-referencing all three state disclosure lists** — Larry Gavin's March 2026 *RoundTable* analysis cross-referenced all three state disclosure lists (PA 96-0434 TRS Administrators, PA 96-0434 Principals, and PA 97-0609 IMRF) and identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 reported under PA 96-0434 alone. The D65 staff directory independently confirms at least 41–49 central-office admin titles (excluding principals). This ~62-person figure is the best available public estimate of the District's total central administrator headcount.
+**Cross-referencing all three state disclosure lists** — [Larry Gavin's March 2026 *RoundTable* analysis](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"} cross-referenced all three state disclosure lists (PA 96-0434 TRS Administrators, PA 96-0434 Principals, and PA 97-0609 IMRF) and identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 reported under PA 96-0434 alone. The D65 staff directory independently confirms at least 41–49 central-office admin titles (excluding principals). This ~62-person figure is the best available public estimate of the District's total central administrator headcount.
 
 **AFR (Annual Financial Report)** — The AFR doesn't break out individual headcount, but it captures the total dollar pool for every employee in admin function codes 2300–2600 regardless of salary. The FY25 AFR admin compensation pool was **$19.99M** (in 2026 dollars).
 
@@ -85,13 +85,13 @@ Within the 86 JEH central-office staff, 22 hold senior leadership titles (superi
 <details markdown="1">
 <summary>The District proposes cutting 22 admins and 42 non-union support. What is that in percentages?</summary>
 
-The District's April 20, 2026 SDRP Phase III deck proposed eliminating **64 total positions** (22 administrators + 42 non-union support staff) for an estimated **$8.29M** in annual savings.
+The District's [April 20, 2026 SDRP Phase III deck](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} proposed eliminating **64 total positions** (22 administrators + 42 non-union support staff) for an estimated **$8.29M** in annual savings.
 
 #### How many "central administrators" are there?
 
 The District's use of "administrator" encompasses a broader group than the 24 certificated TRS administrators in the PA 96-0434 filings. Multiple independent public sources point to a central-admin pool of roughly 62:
 
-- **Larry Gavin's March 2026 *RoundTable* analysis**, cross-referencing all three state disclosure lists, identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 the District reported under PA 96-0434 alone. The additional 10 are people whose roles are administrative in practice but who are classified under different reporting categories.
+- **[Larry Gavin's March 2026 *RoundTable* analysis](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"}**, cross-referencing all three state disclosure lists, identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 the District reported under PA 96-0434 alone. The additional 10 are people whose roles are administrative in practice but who are classified under different reporting categories.
 - **The D65 staff directory** independently confirms at least **41–49 central-office admin titles** (superintendent through coordinator level, excluding principals and school-level operational roles). This is a floor — the directory won't capture every admin because some titles don't contain obvious keywords like "director" or "coordinator."
 
 #### What the proposed cuts represent
@@ -145,14 +145,14 @@ Principal headcount is driven by the number of school buildings, which has been 
 
 This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $1,246 to $2,125 (+71%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
 
-**In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own April 2026 proposal implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
+**In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
 
 </details>
 
 <details markdown="1">
 <summary>How does D65 compare to peer districts?</summary>
 
-According to Larry Gavin's March 2026 *Evanston RoundTable* analysis:
+According to [Larry Gavin's March 2026 *Evanston RoundTable* analysis](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"}:
 
 - D65's **-25% enrollment decline** since FY2019 is the steepest among 21 nearby K-8 districts; the next-largest decline was 14.3%.
 - Despite this decline, D65's total FTEs **increased by approximately 130 (+10%)** over the same period.
@@ -165,7 +165,7 @@ The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~26 cuts,
 <details markdown="1">
 <summary>Has student achievement improved alongside the administrative buildup?</summary>
 
-No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from **44.8% meeting benchmark in 2018 to 42.3% in 2024**, per Larry Gavin's March 2026 *RoundTable* analysis. Whatever the additional administrator hires have produced, they have not produced measurable improvements in the District's primary academic outcomes.
+No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from **44.8% meeting benchmark in 2018 to 42.3% in 2024**, per [Larry Gavin's March 2026 *RoundTable* analysis](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"}. Whatever the additional administrator hires have produced, they have not produced measurable improvements in the District's primary academic outcomes.
 
 </details>
 
@@ -217,7 +217,7 @@ The District's public website lists all current staff with name, title, location
 <details markdown="1">
 <summary>What is the $129K per-position figure used in the right-sizing scenarios?</summary>
 
-The per-cut figure of **$129,489** comes directly from the District's own April 20, 2026 SDRP Phase III proposal: **$8,287,312 in savings ÷ 64 proposed position eliminations = $129,489 per position**. This represents the District's implicit average compensation for the admin and non-union support positions they proposed cutting.
+The per-cut figure of **$129,489** comes directly from the District's own [April 20, 2026 SDRP Phase III proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"}: **$8,287,312 in savings ÷ 64 proposed position eliminations = $129,489 per position**. This represents the District's implicit average compensation for the admin and non-union support positions they proposed cutting.
 
 The Legion uses this same figure for all three of its right-sizing scenarios so that every number on the comparison chart is directly comparable to the District's own proposal. The Legion did not choose this number — the District did.
 
@@ -234,17 +234,6 @@ On the IMRF side, newer roles include Sustainability Coordinator, Wellness Coord
 
 </details>
 
-<details markdown="1">
-<summary>Why do some people appear in both TRS Admin and IMRF reports?</summary>
-
-Six individuals in SY2025-26 appear in both the PA 96-0434 (TRS Admin) report and the PA 97-0609 (IMRF) report. This happens because some positions straddle the line between the two retirement/funding systems, or because the District reports them on both disclosure forms.
-
-The six dual-listed individuals are: Kirby Callam (Director of Strategic Projects), Sabine Champagne (Director of Human Relations), Bryon Harris (Director of Climate & Safety), Melissa Messinger (Executive Chief of Communications), Tiffany Taylor (Executive Chief of Human Relations), and Omar Whyte (Director of Buildings, Grounds & Transportation).
-
-This is why the 2026 PA data has 153 total rows (24 TRS Admin + 101 IMRF + 28 Principal) but only **147 unique individuals**. The analysis accounts for this — when computing unique headcount, duplicates are removed.
-
-</details>
-
 ---
 
 ## Pushback & Context
@@ -254,9 +243,9 @@ This is why the 2026 PA data has 153 total rows (24 TRS Admin + 101 IMRF + 28 Pr
 
 Maybe — and the Legion isn't opposed to right-sizing facilities where the data supports it. But school closures and admin right-sizing are not either/or choices. They're both levers, and the data shows the admin lever has been largely untouched while the student-facing lever has been pulled repeatedly.
 
-Consider: closing Kingsley saves an estimated $1.66M annually. Adding Lincolnwood brings it to ~$3.24M. Meanwhile, the District's *own* April 2026 proposal identified $8.3M in admin cuts — more than double the two-school closure scenario. Even the Legion's most conservative right-sizing scenario ($1.68M) saves as much as a school closure without displacing a single student.
+Consider: closing Kingsley saves an estimated $1.66M annually. Adding Lincolnwood brings it to ~$3.24M. Meanwhile, the District's *own* [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin cuts — more than double the two-school closure scenario. Even the Legion's most conservative right-sizing scenario ($1.68M) saves as much as a school closure without displacing a single student.
 
-There's also a practical question worth asking: **with one fewer school next year (Kingsley closes after SY25-26), does the District need the same number of administrators it had when it operated more buildings?** If anything, fewer schools should mean less central coordination, not more. The District added administrators during a period of enrollment growth and new initiatives — but neither enrollment nor the number of schools has grown.
+There's also a practical question worth asking: **with one fewer school next year (Kingsley and Bessie Rhodes close, Foster opens after SY25-26), does the District need the same number of administrators it had when it operated more buildings?** If anything, fewer schools should mean less central coordination, not more.
 
 Both conversations should happen. The Legion's position is simply that the admin conversation has been conspicuously absent from the public debate while student-facing cuts have dominated it.
 
@@ -271,7 +260,7 @@ What we are is **transparent about the data and honest about what we don't know*
 
 In fact, the [main analysis](admin-growth-final#were-these-additions-justified) explicitly asks the questions that would need to be answered before making specific cuts: Was each new role created with a documented business case? Are measurable outcomes being tracked? What evidence exists that a function would deteriorate if a role were eliminated? The District has not made answers to these questions publicly available.
 
-There is a meaningful difference between saying *"the data shows the administrative footprint has grown substantially while enrollment has declined, and the District should explain why"* and saying *"fire everyone."* The Legion is doing the former. The District's own April 2026 proposal identified $8.3M in admin cuts — larger than anything the Legion has proposed. We are asking the same questions the District itself is asking; we're just asking them in public.
+There is a meaningful difference between saying *"the data shows the administrative footprint has grown substantially while enrollment has declined, and the District should explain why"* and saying *"fire everyone."* The Legion is doing the former. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin cuts — larger than anything the Legion has proposed. We are asking the same questions the District itself is asking; we're just asking them in public.
 
 </details>
 
@@ -282,7 +271,7 @@ Yes — and nothing in this analysis argues otherwise. The question isn't whethe
 
 Effective administration matters enormously. But effectiveness is not measured by headcount. A district with 25% fewer students that has added positions like Director of Strategic Projects, Special Assistant to Cabinet, and Executive Chief of Communications needs to demonstrate that those roles are producing outcomes that justify their cost.
 
-The District's own leadership appears to agree with this framing: the April 2026 SDRP Phase III proposal identified $8.3M in admin and non-union support cuts as available. That proposal came from the Superintendent and CFO, not from the Legion.
+The District's own leadership appears to agree with this framing: the [April 2026 SDRP Phase III proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin and non-union support cuts as available. That proposal came from the Superintendent and CFO, not from the Legion.
 
 </details>
 
@@ -296,12 +285,12 @@ The District's own leadership appears to agree with this framing: the April 2026
 All source data is public:
 
 - **PA disclosure reports** (individual admin compensation): Filed annually with ISBE, indexed and searchable on [FOIA Gras](https://foiagras.com){:target="_blank"}
-- **Annual Financial Reports (AFR)**: Filed by D65 with ISBE, available on [DistrictVitals](https://ccsd65.districtvitals.com/data#sec-afr-excel){:target="_blank"} and in the Legion's [data/afr/ archive](data/afr/)
+- **Annual Financial Reports (AFR)**: Filed by D65 with ISBE, available on [DistrictVitals](https://ccsd65.districtvitals.com/data#sec-afr-excel){:target="_blank"} and in the Legion's [data/afr/ archive](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data/afr){:target="_blank"}
 - **D65 Board documents**: [BoardBook archive](https://meetings.boardbook.org/Public/Organization/1247){:target="_blank"}
 - **D65 Data Dashboard**: [data.district65.net](https://data.district65.net/){:target="_blank"}
 - **Independent journalism**: Larry Gavin's analyses in the [Evanston RoundTable](https://evanstonroundtable.com/){:target="_blank"}
 - **Legion's underlying CSV data**: [d65_admin_comp_combined.csv](data/d65_admin_comp_combined.csv) (PA disclosures) and [afr_admin_pool_summary.csv](data/afr_admin_pool_summary.csv) (AFR pool)
 
-Three convergent sources — this page, Gavin's RoundTable analyses, and the District's own April 20, 2026 admission — all arrive at similar conclusions using independent methodologies.
+Three convergent sources — this page, [Gavin's RoundTable analyses](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"}, and the District's own [April 20, 2026 admission](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} — all arrive at similar conclusions using independent methodologies.
 
 </details>
