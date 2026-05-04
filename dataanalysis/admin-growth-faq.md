@@ -6,13 +6,42 @@ parent: Data Analysis
 
 # Admin Growth Analysis — Frequently Asked Questions
 
-This page answers common questions about the [Admin Growth analysis](admin-growth-final). If you have a question not covered here, reach out to the [Legion of Data Nerds](mailto:d65.legionofnerds@gmail.com).
+This page answers common questions about the [Admin Growth analysis](admin-growth-final). Click any question to expand the answer. If you have a question not covered here, reach out to the [Legion of Data Nerds](mailto:d65.legionofnerds@gmail.com).
+
+<style>
+details {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5em;
+}
+details summary {
+  cursor: pointer;
+  font-size: 1.15em;
+  font-weight: 700;
+  padding: 0.4em 0;
+  list-style: none;
+}
+details summary::before {
+  content: "▶ ";
+  font-size: 0.8em;
+  color: #888;
+}
+details[open] summary::before {
+  content: "▼ ";
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+</style>
 
 ---
 
-## How many administrators does D65 have?
+## The Numbers
 
-It depends on which data source you use and how you define "administrator." The three public data sources each capture a different slice:
+<details markdown="1">
+<summary>How many administrators does D65 have?</summary>
+
+It depends on which data source you use and how you define "administrator." The public data sources each capture a different slice:
 
 **PA Public-Disclosure Reports (SY2025-26)** — These are the state-mandated individual-level reports. In SY2025-26 they show:
 
@@ -25,15 +54,16 @@ It depends on which data source you use and how you define "administrator." The 
 
 **CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **94**. This is the number used in the admin density and right-sizing analysis.
 
-**D65 Staff Directory (SY2025-26)** — The District's own public website lists **1,448 total staff** across all roles. Of those, **86 are based at the JEH Administrative Center** (central office), including 22 senior leaders (directors and above) and 19 mid-level administrators (managers, coordinators, supervisors). The remaining ~45 JEH staff are support roles (IT specialists, payroll, HR, nutrition services, custodial, etc.). See [What does the staff directory show?](#what-does-the-staff-directory-show) below for more detail.
+**D65 Staff Directory (SY2025-26)** — The District's own public website lists **1,448 total staff** across all roles. Of those, **86 are based at the JEH Administrative Center** (central office), including 22 senior leaders (directors and above) and 19 mid-level administrators (managers, coordinators, supervisors). The remaining ~45 JEH staff are support roles (IT specialists, payroll, HR, nutrition services, custodial, etc.). See the staff directory question below for more detail.
 
 **Cross-referencing all three state disclosure lists** — Larry Gavin's March 2026 *RoundTable* analysis cross-referenced all three state disclosure lists (PA 96-0434 TRS Administrators, PA 96-0434 Principals, and PA 97-0609 IMRF) and identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 reported under PA 96-0434 alone. The D65 staff directory independently confirms at least 41–49 central-office admin titles (excluding principals). This ~62-person figure is the best available public estimate of the District's total central administrator headcount.
 
 **AFR (Annual Financial Report)** — The AFR doesn't break out individual headcount, but it captures the total dollar pool for every employee in admin function codes 2300–2600 regardless of salary. The FY25 AFR admin compensation pool was **$19.99M** (in 2026 dollars).
 
----
+</details>
 
-## What does the staff directory show?
+<details markdown="1">
+<summary>What does the staff directory show?</summary>
 
 The District's public staff directory lists 1,448 employees. The largest categories are:
 
@@ -50,20 +80,21 @@ Within the 86 JEH central-office staff, 22 hold senior leadership titles (superi
 
 **Cross-referencing with PA data:** Nearly every individual in the PA disclosure (147 unique people) also appears in the staff directory. Only 1–2 people in the PA data could not be matched (likely due to name discrepancies or recent departures). Conversely, about 21 JEH staff do not appear in the PA reports — most because their compensation falls below the $75K reporting threshold (e.g., food transporters, floaters, lower-salaried assistants). This confirms the PA data captures the vast majority of higher-compensated admin staff.
 
----
+</details>
 
-## The District proposes cutting 22 admins and 42 non-union support. What is that in percentages?
+<details markdown="1">
+<summary>The District proposes cutting 22 admins and 42 non-union support. What is that in percentages?</summary>
 
 The District's April 20, 2026 SDRP Phase III deck proposed eliminating **64 total positions** (22 administrators + 42 non-union support staff) for an estimated **$8.29M** in annual savings.
 
-### How many "central administrators" are there?
+#### How many "central administrators" are there?
 
 The District's use of "administrator" encompasses a broader group than the 24 certificated TRS administrators in the PA 96-0434 filings. Multiple independent public sources point to a central-admin pool of roughly 62:
 
 - **Larry Gavin's March 2026 *RoundTable* analysis**, cross-referencing all three state disclosure lists, identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 the District reported under PA 96-0434 alone. The additional 10 are people whose roles are administrative in practice but who are classified under different reporting categories.
 - **The D65 staff directory** independently confirms at least **41–49 central-office admin titles** (superintendent through coordinator level, excluding principals and school-level operational roles). This is a floor — the directory won't capture every admin because some titles don't contain obvious keywords like "director" or "coordinator."
 
-### What the proposed cuts represent
+#### What the proposed cuts represent
 
 | Measure | Calculation | Percentage |
 |---------|-------------|-----------|
@@ -77,52 +108,28 @@ Note that "22 administrators" does **not** mean 22 of the 24 TRS Admin reported 
 
 The District's proposal is larger than all three Legion right-sizing scenarios. Even the most aggressive Legion scenario (return to D65's own SY2015-16 admin-to-student ratio) calls for only 38 cuts ($4.91M). The District identified more than double that amount.
 
----
+</details>
 
-## Why does the Legion analysis only look at staff with compensation over $103K in the headcount trend?
+<details markdown="1">
+<summary>Did admin spending increase over time even after adjusting for inflation?</summary>
 
-**Why the threshold exists:** Illinois law (PA 97-0609) requires districts to publicly report IMRF employees with compensation packages over $75,000. But $75,000 in 2016 is not the same as $75,000 in 2026 — inflation alone means the raw $75K threshold captures more people each year, creating an artificial appearance of headcount growth. To make the comparison apples-to-apples, the analysis anchors the threshold at $75K in 2016 dollars and inflates it each year using the BLS CPI-U index. In 2026, that equals approximately $103,000.
+Yes — substantially. All dollar figures in the analysis are inflation-adjusted to 2026 dollars using the BLS CPI-U (Consumer Price Index for All Urban Consumers).
 
-**What it does NOT affect:**
-- **TRS Admin counts are unaffected.** TRS administrators are reported in full under PA 96-0434 regardless of salary. The "11 to 24" TRS Admin trend is a clean count — no threshold is involved.
-- **The AFR dollar pool is unaffected.** The AFR captures every employee in admin function codes regardless of compensation level — including admin assistants, school secretaries, and support staff earning well below $75K.
-- **The right-sizing scenarios are unaffected.** All three Legion scenarios (and the District's own $8.3M proposal) use the District's per-cut average of $129K per position, anchored to the full AFR admin pool of $19.99M — not to the $103K-threshold subset.
+| Measure | FY16 (2026 $) | FY25 (2026 $) | Change |
+|---------|--------------|--------------|--------|
+| Total admin compensation pool | $16.56M | $19.99M | **+21%** |
+| General Administration (function 2300) | $2.40M | $4.88M | **+103%** |
+| Per-pupil admin spending | $2,201 | $3,401 | **+55%** |
+| Per-pupil central-office spending (excl. principals) | $1,246 | $2,125 | **+71%** |
 
-**What it DOES affect:** The headcount trend chart showing "75 to 94 higher-paid administrators" uses the CPI-indexed threshold to ensure each year's count includes only employees whose compensation meets the inflation-adjusted equivalent of $75K-2016. This is conservative — anchoring at an earlier year would yield a higher threshold and make growth appear even larger.
+Meanwhile, K-8 enrollment fell from approximately 7,500 to 5,625 students — a **25% decline**.
 
----
+The growth is driven by **adding more positions, not by paying existing staff more**. Average per-person compensation has roughly tracked inflation (i.e., stayed flat in real terms). When total real spending grows 21%+ but per-person real spending is flat, the math forces the conclusion: D65 hired more administrators.
 
-## Where does this data come from? Did you have inside access?
+</details>
 
-**No.** Every data point in this analysis comes from publicly available sources — state-mandated filings, the District's own annual financial reports, and the District's public staff directory. No FOIA requests were needed. No insider sources were used. Anyone with an internet connection can verify every number on this page.
-
-Three independent public data sources are used:
-
-### 1. PA 96-0434 — TRS Administrators & Principals
-Illinois law requires annual disclosure of all certificated administrators in the Teachers' Retirement System. Every individual is reported with their name, position title, and full compensation breakdown (salary, retirement contributions, insurance, bonuses, etc.).
-
-**Classification:** Positions are classified as "Principal" if the title contains principal-related keywords (Principal, Assistant Principal, Interim Principal, etc.). All other PA 96-0434 positions are classified as "TRS Admin" — these include superintendent, assistant superintendents, executive directors, directors, coordinators, and supervisors.
-
-### 2. PA 97-0609 — IMRF Support Staff
-Illinois law requires annual disclosure of IMRF-participating employees with compensation packages above $75,000. These are non-certificated administrative and support staff.
-
-**Classification:** All PA 97-0609 employees are classified as "IMRF Support Staff." This is a broad category that includes senior administrators (e.g., Executive Chief of Human Relations), mid-level managers (e.g., Infrastructure Manager), and operational support (e.g., Head Custodian, Nutrition Services Manager).
-
-### 3. AFR (Annual Financial Report)
-The District files an AFR annually with ISBE reporting total expenditures by function code. Admin function codes include:
-- **2300 — General Administration:** Superintendent, assistant superintendents, executive admin, curriculum directors and coordinators
-- **2400 — School Administration:** Principals, assistant principals, school office staff (secretaries, attendance clerks)
-- **2500 — Business Services:** CFO, fiscal services, payroll, business (excludes O&M and Pupil Transport)
-- **2600 — Central Support Services:** Planning/research, IT, staff services, data processing
-
-The AFR captures every employee in these functions regardless of compensation level.
-
-### 4. D65 Staff Directory (supplementary)
-The District's public website lists all current staff with name, title, location, and department. This provides a complete (non-salary) headcount picture. Cross-referencing confirms that nearly 100% of PA-disclosed individuals appear in the directory, and identifies roughly 21 central-office staff below the PA reporting threshold.
-
----
-
-## Are principals and assistant principals counted as admin? Are they in the Legion proposals?
+<details markdown="1">
+<summary>Are principals and assistant principals counted as admin? Are they in the Legion proposals?</summary>
 
 **Principals are deliberately tracked separately because they are not where the growth is.** The entire point of separating them is to show that the administrative buildup is concentrated in central-office and district-level roles — not in school buildings.
 
@@ -140,44 +147,10 @@ This is also why the AFR analysis reports per-pupil spending both with and witho
 
 **In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own April 2026 proposal implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
 
----
+</details>
 
-## Did admin spending increase over time even after adjusting for inflation?
-
-Yes — substantially. All dollar figures in the analysis are inflation-adjusted to 2026 dollars using the BLS CPI-U (Consumer Price Index for All Urban Consumers).
-
-| Measure | FY16 (2026 $) | FY25 (2026 $) | Change |
-|---------|--------------|--------------|--------|
-| Total admin compensation pool | $16.56M | $19.99M | **+21%** |
-| General Administration (function 2300) | $2.40M | $4.88M | **+103%** |
-| Per-pupil admin spending | $2,201 | $3,401 | **+55%** |
-| Per-pupil central-office spending (excl. principals) | $1,246 | $2,125 | **+71%** |
-
-Meanwhile, K-8 enrollment fell from approximately 7,500 to 5,625 students — a **25% decline**.
-
-The growth is driven by **adding more positions, not by paying existing staff more**. Average per-person compensation has roughly tracked inflation (i.e., stayed flat in real terms). When total real spending grows 21%+ but per-person real spending is flat, the math forces the conclusion: D65 hired more administrators.
-
----
-
-## What is the $129K per-position figure used in the right-sizing scenarios?
-
-The per-cut figure of **$129,489** comes directly from the District's own April 20, 2026 SDRP Phase III proposal: **$8,287,312 in savings ÷ 64 proposed position eliminations = $129,489 per position**. This represents the District's implicit average compensation for the admin and non-union support positions they proposed cutting.
-
-The Legion uses this same figure for all three of its right-sizing scenarios so that every number on the comparison chart is directly comparable to the District's own proposal. The Legion did not choose this number — the District did.
-
----
-
-## What roles have been added since SY2015-16?
-
-The TRS Admin roster grew from 11 to 24 between SY2015-16 and SY2025-26. Among the positions in the current SY2025-26 roster that did not exist in SY2015-16:
-
-Executive Chief of Communications, Executive Chief of Human Relations, Executive Director of RAAD, Executive Director of Technology, Director of MTSS & SEL, Director of STEAM, Director of Multilingual Services, Director of Climate & Safety, Director of Strategic Projects, Director of Programs & Partnerships, Director of Schools Management, Director of Humanities, Director of College and Career, Director of Science, Asst Director of Teaching & Learning, Diverse Learning Supervisor/Coordinator, Talent Development Coordinator, Special Assistant to Cabinet, and Manager of Student Specialized Services.
-
-On the IMRF side, newer roles include Sustainability Coordinator, Wellness Coordinator, Network & Cybersecurity Manager, Substitute Staffing Specialist, Family Center Managing Director, Senior Manager of HR Operations, Culture and Climate Manager, and a Science & Sustainability Education Coordinator.
-
----
-
-## How does D65 compare to peer districts?
+<details markdown="1">
+<summary>How does D65 compare to peer districts?</summary>
 
 According to Larry Gavin's March 2026 *Evanston RoundTable* analysis:
 
@@ -187,9 +160,97 @@ According to Larry Gavin's March 2026 *Evanston RoundTable* analysis:
 
 The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~26 cuts, $3.43M savings) is based on bringing D65 in line with that ~12 per 1,000 peer benchmark.
 
+</details>
+
+<details markdown="1">
+<summary>Has student achievement improved alongside the administrative buildup?</summary>
+
+No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from **44.8% meeting benchmark in 2018 to 42.3% in 2024**, per Larry Gavin's March 2026 *RoundTable* analysis. Whatever the additional administrator hires have produced, they have not produced measurable improvements in the District's primary academic outcomes.
+
+</details>
+
 ---
 
-## Don't we still need to close more schools? Isn't that the real issue?
+## Methodology
+
+<details markdown="1">
+<summary>Why does the Legion analysis only look at staff with compensation over $103K in the headcount trend?</summary>
+
+**Why the threshold exists:** Illinois law (PA 97-0609) requires districts to publicly report IMRF employees with compensation packages over $75,000. But $75,000 in 2016 is not the same as $75,000 in 2026 — inflation alone means the raw $75K threshold captures more people each year, creating an artificial appearance of headcount growth. To make the comparison apples-to-apples, the analysis anchors the threshold at $75K in 2016 dollars and inflates it each year using the BLS CPI-U index. In 2026, that equals approximately $103,000.
+
+**What it does NOT affect:**
+- **TRS Admin counts are unaffected.** TRS administrators are reported in full under PA 96-0434 regardless of salary. The "11 to 24" TRS Admin trend is a clean count — no threshold is involved.
+- **The AFR dollar pool is unaffected.** The AFR captures every employee in admin function codes regardless of compensation level — including admin assistants, school secretaries, and support staff earning well below $75K.
+- **The right-sizing scenarios are unaffected.** All three Legion scenarios (and the District's own $8.3M proposal) use the District's per-cut average of $129K per position, anchored to the full AFR admin pool of $19.99M — not to the $103K-threshold subset.
+
+**What it DOES affect:** The headcount trend chart showing "75 to 94 higher-paid administrators" uses the CPI-indexed threshold to ensure each year's count includes only employees whose compensation meets the inflation-adjusted equivalent of $75K-2016. This is conservative — anchoring at an earlier year would yield a higher threshold and make growth appear even larger.
+
+</details>
+
+<details markdown="1">
+<summary>Where does this data come from? Did you have inside access?</summary>
+
+**No.** Every data point in this analysis comes from publicly available sources — state-mandated filings, the District's own annual financial reports, and the District's public staff directory. No FOIA requests were needed. No insider sources were used. Anyone with an internet connection can verify every number on this page.
+
+Three independent public data sources are used:
+
+**1. PA 96-0434 — TRS Administrators & Principals.**
+Illinois law requires annual disclosure of all certificated administrators in the Teachers' Retirement System. Every individual is reported with their name, position title, and full compensation breakdown (salary, retirement contributions, insurance, bonuses, etc.). Positions are classified as "Principal" if the title contains principal-related keywords; all other PA 96-0434 positions are classified as "TRS Admin."
+
+**2. PA 97-0609 — IMRF Support Staff.**
+Illinois law requires annual disclosure of IMRF-participating employees with compensation packages above $75,000. These are non-certificated administrative and support staff. This is a broad category that includes senior administrators, mid-level managers, and operational support.
+
+**3. AFR (Annual Financial Report).**
+The District files an AFR annually with ISBE reporting total expenditures by function code. Admin function codes include:
+- **2300 — General Administration:** Superintendent, assistant superintendents, executive admin, curriculum directors and coordinators
+- **2400 — School Administration:** Principals, assistant principals, school office staff (secretaries, attendance clerks)
+- **2500 — Business Services:** CFO, fiscal services, payroll, business (excludes O&M and Pupil Transport)
+- **2600 — Central Support Services:** Planning/research, IT, staff services, data processing
+
+The AFR captures every employee in these functions regardless of compensation level.
+
+**4. D65 Staff Directory (supplementary).**
+The District's public website lists all current staff with name, title, location, and department. This provides a complete (non-salary) headcount picture. Cross-referencing confirms that nearly 100% of PA-disclosed individuals appear in the directory, and identifies roughly 21 central-office staff below the PA reporting threshold.
+
+</details>
+
+<details markdown="1">
+<summary>What is the $129K per-position figure used in the right-sizing scenarios?</summary>
+
+The per-cut figure of **$129,489** comes directly from the District's own April 20, 2026 SDRP Phase III proposal: **$8,287,312 in savings ÷ 64 proposed position eliminations = $129,489 per position**. This represents the District's implicit average compensation for the admin and non-union support positions they proposed cutting.
+
+The Legion uses this same figure for all three of its right-sizing scenarios so that every number on the comparison chart is directly comparable to the District's own proposal. The Legion did not choose this number — the District did.
+
+</details>
+
+<details markdown="1">
+<summary>What roles have been added since SY2015-16?</summary>
+
+The TRS Admin roster grew from 11 to 24 between SY2015-16 and SY2025-26. Among the positions in the current SY2025-26 roster that did not exist in SY2015-16:
+
+Executive Chief of Communications, Executive Chief of Human Relations, Executive Director of RAAD, Executive Director of Technology, Director of MTSS & SEL, Director of STEAM, Director of Multilingual Services, Director of Climate & Safety, Director of Strategic Projects, Director of Programs & Partnerships, Director of Schools Management, Director of Humanities, Director of College and Career, Director of Science, Asst Director of Teaching & Learning, Diverse Learning Supervisor/Coordinator, Talent Development Coordinator, Special Assistant to Cabinet, and Manager of Student Specialized Services.
+
+On the IMRF side, newer roles include Sustainability Coordinator, Wellness Coordinator, Network & Cybersecurity Manager, Substitute Staffing Specialist, Family Center Managing Director, Senior Manager of HR Operations, Culture and Climate Manager, and a Science & Sustainability Education Coordinator.
+
+</details>
+
+<details markdown="1">
+<summary>Why do some people appear in both TRS Admin and IMRF reports?</summary>
+
+Six individuals in SY2025-26 appear in both the PA 96-0434 (TRS Admin) report and the PA 97-0609 (IMRF) report. This happens because some positions straddle the line between the two retirement/funding systems, or because the District reports them on both disclosure forms.
+
+The six dual-listed individuals are: Kirby Callam (Director of Strategic Projects), Sabine Champagne (Director of Human Relations), Bryon Harris (Director of Climate & Safety), Melissa Messinger (Executive Chief of Communications), Tiffany Taylor (Executive Chief of Human Relations), and Omar Whyte (Director of Buildings, Grounds & Transportation).
+
+This is why the 2026 PA data has 153 total rows (24 TRS Admin + 101 IMRF + 28 Principal) but only **147 unique individuals**. The analysis accounts for this — when computing unique headcount, duplicates are removed.
+
+</details>
+
+---
+
+## Pushback & Context
+
+<details markdown="1">
+<summary>Don't we still need to close more schools? Isn't that the real issue?</summary>
 
 Maybe — and the Legion isn't opposed to right-sizing facilities where the data supports it. But school closures and admin right-sizing are not either/or choices. They're both levers, and the data shows the admin lever has been largely untouched while the student-facing lever has been pulled repeatedly.
 
@@ -199,9 +260,10 @@ There's also a practical question worth asking: **with one fewer school next yea
 
 Both conversations should happen. The Legion's position is simply that the admin conversation has been conspicuously absent from the public debate while student-facing cuts have dominated it.
 
----
+</details>
 
-## Is this analysis just DOGE for school districts? Are you suggesting cuts without understanding what these people do?
+<details markdown="1">
+<summary>Is this analysis just DOGE for school districts? Are you suggesting cuts without understanding what these people do?</summary>
 
 No. The Legion of Data Nerds is a group of D65 parents — not political operatives, not outside consultants, and not people who think government is inherently wasteful. We have kids in these schools. We want the District to succeed.
 
@@ -211,9 +273,10 @@ In fact, the [main analysis](admin-growth-final#were-these-additions-justified) 
 
 There is a meaningful difference between saying *"the data shows the administrative footprint has grown substantially while enrollment has declined, and the District should explain why"* and saying *"fire everyone."* The Legion is doing the former. The District's own April 2026 proposal identified $8.3M in admin cuts — larger than anything the Legion has proposed. We are asking the same questions the District itself is asking; we're just asking them in public.
 
----
+</details>
 
-## Don't strong administrators make a school district successful? Doesn't the District need experienced leaders to manage the deficit?
+<details markdown="1">
+<summary>Don't strong administrators make a school district successful? Doesn't the District need experienced leaders to manage the deficit?</summary>
 
 Yes — and nothing in this analysis argues otherwise. The question isn't whether D65 needs administrators. It's whether D65 needs **67% more administrators per student** than it did a decade ago, and **40% more per student than peer K-8 districts** in the surrounding area.
 
@@ -221,15 +284,14 @@ Effective administration matters enormously. But effectiveness is not measured b
 
 The District's own leadership appears to agree with this framing: the April 2026 SDRP Phase III proposal identified $8.3M in admin and non-union support cuts as available. That proposal came from the Superintendent and CFO, not from the Legion.
 
----
-
-## Has student achievement improved alongside the administrative buildup?
-
-No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from **44.8% meeting benchmark in 2018 to 42.3% in 2024**, per Larry Gavin's March 2026 *RoundTable* analysis. Whatever the additional administrator hires have produced, they have not produced measurable improvements in the District's primary academic outcomes.
+</details>
 
 ---
 
-## Where can I verify this data myself?
+## Verify It Yourself
+
+<details markdown="1">
+<summary>Where can I verify this data myself?</summary>
 
 All source data is public:
 
@@ -241,3 +303,5 @@ All source data is public:
 - **Legion's underlying CSV data**: [d65_admin_comp_combined.csv](data/d65_admin_comp_combined.csv) (PA disclosures) and [afr_admin_pool_summary.csv](data/afr_admin_pool_summary.csv) (AFR pool)
 
 Three convergent sources — this page, Gavin's RoundTable analyses, and the District's own April 20, 2026 admission — all arrive at similar conclusions using independent methodologies.
+
+</details>
