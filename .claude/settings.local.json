@@ -1,7 +1,25 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:foiagras.com)"
+      "WebFetch(domain:foiagras.com)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\\\\dataanalysis\\\\data\\\\afr\" -Recurse)",
+      "Bash(Select-Object FullName, Length)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(python3 *)",
+      "Bash(sed 's/.*AFR//')",
+      "Bash(sed 's/ .*//')",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\\\\dataanalysis\" -Recurse -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -First 50)",
+      "Bash(python build_budget_explorer.py)",
+      "Bash(python -c ' *)",
+      "Bash(powershell *)",
+      "Bash(start *)",
+      "Bash(findstr /C:\"Wrote\" /C:\"Years:\")",
+      "Bash(python -c \"import pdfplumber; print\\('pdfplumber available'\\)\")",
+      "Bash(python -c \"import tabula; print\\('tabula available'\\)\")",
+      "Bash(python convert_budget_pdf.py)",
+      "Bash(findstr \"Wrote Years:\")"
     ]
   }
 }

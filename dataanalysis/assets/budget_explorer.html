@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D65 Budget Explorer</title>
+<script src="https://cdn.plot.ly/plotly-3.3.0.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333; background: #fff; padding: 16px; max-width: 1100px; margin: 0 auto;
+}
+h1 { font-size: 1.5em; font-weight: 700; margin-bottom: 2px; }
+.subtitle { font-size: 0.95em; color: #666; margin-bottom: 14px; }
+
+.controls { margin-bottom: 12px; }
+.controls-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; }
+.controls-label { font-size: 0.82em; font-weight: 600; color: #555; margin-right: 4px; white-space: nowrap; }
+
+.preset-btn {
+  display: inline-block; padding: 5px 12px; font-size: 0.82em; font-weight: 500;
+  border: 1px solid #ccc; border-radius: 4px; background: #f8f8f8; color: #333;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.preset-btn:hover { background: #e8e8f8; border-color: #99a; }
+.preset-btn.active { background: #5e5eb5; color: #fff; border-color: #5e5eb5; }
+
+.toggle-group { display: inline-flex; border: 1px solid #ccc; border-radius: 4px; overflow: hidden; }
+.toggle-btn {
+  padding: 4px 12px; font-size: 0.82em; font-weight: 500; border: none;
+  background: #f8f8f8; color: #555; cursor: pointer; transition: all 0.15s;
+  border-right: 1px solid #ccc;
+}
+.toggle-btn:last-child { border-right: none; }
+.toggle-btn:hover { background: #e8e8f8; }
+.toggle-btn.active { background: #5e5eb5; color: #fff; }
+
+#chart { width: 100%; height: 500px; margin-bottom: 16px; }
+
+.tree-header {
+  font-size: 0.95em; font-weight: 600; margin-bottom: 8px; color: #333;
+  display: flex; align-items: center; gap: 12px;
+}
+.tree-actions { display: flex; gap: 6px; }
+.tree-action-btn {
+  font-size: 0.78em; padding: 2px 8px; border: 1px solid #ccc; border-radius: 3px;
+  background: #f8f8f8; color: #555; cursor: pointer;
+}
+.tree-action-btn:hover { background: #e8e8f8; }
+
+.tree-container {
+  border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 14px;
+  max-height: 420px; overflow-y: auto; background: #fafafa;
+}
+
+.tree-group { margin-bottom: 2px; }
+.tree-group-header {
+  display: flex; align-items: center; gap: 4px; padding: 3px 0; cursor: pointer;
+  font-weight: 600; font-size: 0.88em;
+}
+.tree-toggle {
+  width: 16px; text-align: center; font-size: 0.7em; color: #888;
+  cursor: pointer; user-select: none; flex-shrink: 0;
+}
+.tree-subgroup { margin-left: 20px; margin-bottom: 1px; }
+.tree-subgroup-header {
+  display: flex; align-items: center; gap: 4px; padding: 2px 0; cursor: pointer;
+  font-weight: 500; font-size: 0.85em; color: #444;
+}
+.tree-leaf {
+  display: flex; align-items: center; gap: 4px; padding: 1px 0 1px 20px;
+  font-size: 0.83em; color: #555;
+}
+.tree-leaf .code { color: #999; font-size: 0.9em; }
+.tree-children { overflow: hidden; }
+.tree-children.collapsed { display: none; }
+
+input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0; }
+
+.color-swatch {
+  display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+  flex-shrink: 0; border: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer {
+  margin-top: 16px; padding-top: 10px; border-top: 1px solid #e0e0e0;
+  font-size: 0.78em; color: #888; line-height: 1.5;
+}
+
+.grouping-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  body { padding: 10px; }
+  h1 { font-size: 1.2em; }
+  #chart { height: 350px; }
+  .tree-container { max-height: 300px; }
+}
+</style>
+</head>
+<body>
+
+<h1>D65 Budget Explorer</h1>
+<p class="subtitle">Educational Fund Expenditures FY2012–FY2026 (on-behalf/pension payments excluded; FY2026 is adopted budget)</p>
+
+<div class="controls">
+  <div class="controls-row">
+    <span class="controls-label">Presets:</span>
+    <button class="preset-btn active" data-preset="where-money-goes">Where the Money Goes</button>
+    <button class="preset-btn" data-preset="instruction">Instruction Breakdown</button>
+    <button class="preset-btn" data-preset="classroom-vs-non">Classroom vs Non-Classroom</button>
+    <button class="preset-btn" data-preset="admin">All Administration</button>
+    <button class="preset-btn" data-preset="special-ed">Special Ed Total</button>
+    <button class="preset-btn" data-preset="student-support">Student Support</button>
+    <button class="preset-btn" data-preset="community-payments">Community & Payments</button>
+  </div>
+  <div class="controls-row">
+    <div class="grouping-row">
+      <span class="controls-label">Chart:</span>
+      <div class="toggle-group" id="chart-type-toggle">
+        <button class="toggle-btn active" data-type="area">Area</button>
+        <button class="toggle-btn" data-type="line">Line</button>
+        <button class="toggle-btn" data-type="bar">Bar</button>
+      </div>
+    </div>
+    <div class="grouping-row">
+      <span class="controls-label">Y-Axis:</span>
+      <div class="toggle-group" id="yaxis-toggle">
+        <button class="toggle-btn active" data-yaxis="percent">% of Budget</button>
+        <button class="toggle-btn" data-yaxis="dollars">Dollars</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="chart"></div>
+
+<div class="tree-header">
+  <span>Category Selection</span>
+  <div class="tree-actions">
+    <button class="tree-action-btn" id="select-all-btn">Select All</button>
+    <button class="tree-action-btn" id="clear-all-btn">Clear All</button>
+  </div>
+</div>
+<div class="tree-container" id="tree"></div>
+
+<div class="footer">
+  <strong>Source:</strong> District 65 ISBE Annual Financial Reports (FY2012–FY2025) and Adopted Budget (FY2026).<br>
+  Educational Fund only. On-behalf/pension payments excluded.
+  Category codes follow the Illinois State Board of Education function code structure.
+</div>
+
+<script>
+const DATA = {"years": ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"], "categories": {"1100": {"label": "Regular Programs K-12", "group": "Instruction", "subgroup": "Regular Programs", "values": {"2012": 41934356.0, "2013": 41876955.0, "2014": 42313940.0, "2015": 42765321.0, "2016": 43990390.0, "2017": 44430378.0, "2018": 45045420.0, "2019": 46297570.0, "2020": 48083807.0, "2021": 49305913.0, "2022": 51031420.0, "2023": 53633166.0, "2024": 53745048.0, "2025": 50565365.0, "2026": 50859622.0}}, "1115": {"label": "Charter Schools", "group": "Instruction", "subgroup": "Regular Programs", "values": {"2012": null, "2013": null, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1125": {"label": "Pre-K Programs", "group": "Instruction", "subgroup": "Pre-K Programs", "values": {"2012": 471394.0, "2013": 484683.0, "2014": 539207.0, "2015": 585812.0, "2016": 617882.0, "2017": 670842.0, "2018": 805226.0, "2019": 833770.0, "2020": 1042774.0, "2021": 980181.0, "2022": 1013740.0, "2023": 1102027.0, "2024": 1296399.0, "2025": 1108236.0, "2026": 1259934.0}}, "1200": {"label": "Special Ed K-12", "group": "Instruction", "subgroup": "Special Education", "values": {"2012": 10139862.0, "2013": 10401089.0, "2014": 10428822.0, "2015": 11347727.0, "2016": 11704289.0, "2017": 12130030.0, "2018": 12912772.0, "2019": 13446531.0, "2020": 12805686.0, "2021": 14033679.0, "2022": 14379041.0, "2023": 16553964.0, "2024": 21475069.0, "2025": 21087844.0, "2026": 23803392.0}}, "1225": {"label": "Special Ed Pre-K", "group": "Instruction", "subgroup": "Special Education", "values": {"2012": 1142394.0, "2013": 1169620.0, "2014": 1093635.0, "2015": 1161661.0, "2016": 1147614.0, "2017": 915372.0, "2018": 962808.0, "2019": 1002923.0, "2020": 1124553.0, "2021": 1051327.0, "2022": 1028344.0, "2023": 1038966.0, "2024": 1390565.0, "2025": 1456036.0, "2026": 1542530.0}}, "1250": {"label": "Remedial & Supplemental K-12", "group": "Instruction", "subgroup": "Remedial/Supplemental", "values": {"2012": 845514.0, "2013": 972434.0, "2014": 746911.0, "2015": 890775.0, "2016": 1017279.0, "2017": 1052878.0, "2018": 1274476.0, "2019": 828303.0, "2020": 954995.0, "2021": 852378.0, "2022": 711907.0, "2023": 540656.0, "2024": 749996.0, "2025": 867904.0, "2026": 598828.0}}, "1275": {"label": "Remedial & Supplemental Pre-K", "group": "Instruction", "subgroup": "Remedial/Supplemental", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 556656.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 249.0, "2024": 45.0, "2025": 0.0, "2026": 0.0}}, "1300": {"label": "Adult/Continuing Ed", "group": "Instruction", "subgroup": "Other Instruction", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1400": {"label": "CTE Programs", "group": "Instruction", "subgroup": "Other Instruction", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1500": {"label": "Interscholastic Programs", "group": "Instruction", "subgroup": "Co-Curricular", "values": {"2012": 118596.0, "2013": 148637.0, "2014": 150821.0, "2015": 137367.0, "2016": 136630.0, "2017": 135134.0, "2018": 179210.0, "2019": 181790.0, "2020": 160360.0, "2021": 14067.0, "2022": 175692.0, "2023": 409709.0, "2024": 429149.0, "2025": 202829.0, "2026": 224790.0}}, "1600": {"label": "Summer School", "group": "Instruction", "subgroup": "Summer & Extended", "values": {"2012": 732286.0, "2013": 497834.0, "2014": 537117.0, "2015": 739608.0, "2016": 486842.0, "2017": 462888.0, "2018": 406751.0, "2019": 466940.0, "2020": 507148.0, "2021": 332682.0, "2022": 980429.0, "2023": 1018619.0, "2024": 2023282.0, "2025": 768318.0, "2026": 1305676.0}}, "1650": {"label": "Gifted Programs", "group": "Instruction", "subgroup": "Gifted", "values": {"2012": 134070.0, "2013": 133591.0, "2014": 140837.0, "2015": 169725.0, "2016": 127863.0, "2017": 133729.0, "2018": 118774.0, "2019": 36008.0, "2020": 41901.0, "2021": 20600.0, "2022": 8039.0, "2023": 245.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1700": {"label": "Driver's Education", "group": "Instruction", "subgroup": "Other Instruction", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1800": {"label": "Bilingual Programs", "group": "Instruction", "subgroup": "Bilingual", "values": {"2012": 1744499.0, "2013": 1728162.0, "2014": 1734680.0, "2015": 1837513.0, "2016": 2032686.0, "2017": 2224564.0, "2018": 2315565.0, "2019": 2814233.0, "2020": 3008853.0, "2021": 3344377.0, "2022": 3530316.0, "2023": 3980951.0, "2024": 5087606.0, "2025": 4571757.0, "2026": 5334093.0}}, "1900": {"label": "Truant Alt & Optional Programs", "group": "Instruction", "subgroup": "Other Instruction", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1910": {"label": "Private Tuition - Regular Programs", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1911": {"label": "Private Tuition - Special Ed", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1912": {"label": "Private Tuition - CTE", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 2882752.0, "2021": 2521873.0, "2022": 2168012.0, "2023": 2588699.0, "2024": 4229452.0, "2025": 3897941.0, "2026": 4014880.0}}, "1913": {"label": "Private Tuition - Other", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1914": {"label": "Private Tuition - Interscholastic", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1915": {"label": "Private Tuition - Summer School", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1916": {"label": "Private Tuition - Gifted", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1917": {"label": "Private Tuition - Driver's Ed", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1918": {"label": "Private Tuition - Bilingual", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1919": {"label": "Private Tuition - Truant Alt", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1920": {"label": "Private Tuition - Pre-K", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1921": {"label": "Private Tuition - Remedial", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1922": {"label": "Private Tuition - Spec Ed Pre-K", "group": "Instruction", "subgroup": "Private Tuition", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "1999": {"label": "Student Activity Fund", "group": "Instruction", "subgroup": "Other Instruction", "values": {"2012": null, "2013": null, "2014": null, "2015": null, "2016": null, "2017": null, "2018": null, "2019": null, "2020": null, "2021": 241800.0, "2022": 316086.0, "2023": 406119.0, "2024": 814577.0, "2025": 524579.0, "2026": 575000.0}}, "2110": {"label": "Attendance & Social Work", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 2102617.0, "2013": 2040020.0, "2014": 1948600.0, "2015": 2148898.0, "2016": 2473958.0, "2017": 2441830.0, "2018": 2841909.0, "2019": 2916030.0, "2020": 3236199.0, "2021": 3320435.0, "2022": 3120719.0, "2023": 2947689.0, "2024": 3471023.0, "2025": 3609824.0, "2026": 3755960.0}}, "2120": {"label": "Guidance Services", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 546180.0, "2023": 822755.0, "2024": 893659.0, "2025": 941073.0, "2026": 952600.0}}, "2130": {"label": "Health Services", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 841750.0, "2013": 857118.0, "2014": 928253.0, "2015": 1029275.0, "2016": 1119474.0, "2017": 1117414.0, "2018": 983050.0, "2019": 1037261.0, "2020": 1044771.0, "2021": 1003542.0, "2022": 1124085.0, "2023": 1626696.0, "2024": 2033370.0, "2025": 1561890.0, "2026": 1869362.0}}, "2140": {"label": "Psychological Services", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 1141708.0, "2013": 1103021.0, "2014": 1124937.0, "2015": 1147424.0, "2016": 1166190.0, "2017": 1285744.0, "2018": 1334126.0, "2019": 1319516.0, "2020": 1312680.0, "2021": 1470841.0, "2022": 1598925.0, "2023": 1809787.0, "2024": 2019454.0, "2025": 1977448.0, "2026": 2331230.0}}, "2150": {"label": "Speech Pathology & Audiology", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 1645433.0, "2013": 1619446.0, "2014": 1637545.0, "2015": 1697325.0, "2016": 1773729.0, "2017": 1742333.0, "2018": 1694452.0, "2019": 1743666.0, "2020": 1799388.0, "2021": 1977953.0, "2022": 2037362.0, "2023": 2098034.0, "2024": 2573229.0, "2025": 2862947.0, "2026": 3086570.0}}, "2190": {"label": "Other Student Support", "group": "Student Support", "subgroup": "Student Support", "values": {"2012": 1203692.0, "2013": 1297784.0, "2014": 1324369.0, "2015": 1379784.0, "2016": 1407952.0, "2017": 1495310.0, "2018": 1551578.0, "2019": 1659371.0, "2020": 1534279.0, "2021": 2194728.0, "2022": 1737260.0, "2023": 2201812.0, "2024": 2424864.0, "2025": 2049196.0, "2026": 2206923.0}}, "2210": {"label": "Improvement of Instruction", "group": "Instructional Staff Support", "subgroup": "Instructional Staff Support", "values": {"2012": 2783971.0, "2013": 2232178.0, "2014": 2475745.0, "2015": 2561092.0, "2016": 2866811.0, "2017": 2873630.0, "2018": 2916625.0, "2019": 3637391.0, "2020": 4588664.0, "2021": 4373881.0, "2022": 5559016.0, "2023": 6752680.0, "2024": 6871316.0, "2025": 5230318.0, "2026": 5185845.0}}, "2220": {"label": "Educational Media", "group": "Instructional Staff Support", "subgroup": "Instructional Staff Support", "values": {"2012": 1349681.0, "2013": 1371987.0, "2014": 1357850.0, "2015": 1359907.0, "2016": 1347064.0, "2017": 1366549.0, "2018": 1416945.0, "2019": 1506514.0, "2020": 1568422.0, "2021": 1643441.0, "2022": 1698993.0, "2023": 1776585.0, "2024": 1768624.0, "2025": 1929975.0, "2026": 2045094.0}}, "2230": {"label": "Assessment & Testing", "group": "Instructional Staff Support", "subgroup": "Instructional Staff Support", "values": {"2012": 146539.0, "2013": 109798.0, "2014": 134782.0, "2015": 91461.0, "2016": 103251.0, "2017": 197853.0, "2018": 182350.0, "2019": 214334.0, "2020": 119741.0, "2021": 227836.0, "2022": 334607.0, "2023": 312719.0, "2024": 372055.0, "2025": 296271.0, "2026": 302220.0}}, "2310": {"label": "Board of Education", "group": "General Administration", "subgroup": "General Administration", "values": {"2012": 217310.0, "2013": 208906.0, "2014": 288298.0, "2015": 213053.0, "2016": 224665.0, "2017": 264175.0, "2018": 199038.0, "2019": 218629.0, "2020": 201239.0, "2021": 239130.0, "2022": 253016.0, "2023": 360054.0, "2024": 439577.0, "2025": 319576.0, "2026": 408190.0}}, "2320": {"label": "Executive Administration", "group": "General Administration", "subgroup": "General Administration", "values": {"2012": 419924.0, "2013": 411436.0, "2014": 446966.0, "2015": 385959.0, "2016": 469671.0, "2017": 433102.0, "2018": 454369.0, "2019": 484710.0, "2020": 445281.0, "2021": 626062.0, "2022": 805161.0, "2023": 1052871.0, "2024": 653786.0, "2025": 693471.0, "2026": 419400.0}}, "2330": {"label": "Special Area Administration", "group": "General Administration", "subgroup": "General Administration", "values": {"2012": 842121.0, "2013": 799307.0, "2014": 820479.0, "2015": 1008902.0, "2016": 1162068.0, "2017": 2174213.0, "2018": 2481757.0, "2019": 2279483.0, "2020": 2554355.0, "2021": 2736684.0, "2022": 2790392.0, "2023": 3891249.0, "2024": 3667353.0, "2025": 3745381.0, "2026": 3284588.0}}, "2361": {"label": "Tort Immunity", "group": "General Administration", "subgroup": "General Administration", "values": {"2012": null, "2013": null, "2014": null, "2015": null, "2016": null, "2017": null, "2018": null, "2019": null, "2020": null, "2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": 548500.0}}, "2365": {"label": "Tort/Worker's Comp", "group": "General Administration", "subgroup": "General Administration", "values": {"2012": null, "2013": null, "2014": null, "2015": null, "2016": null, "2017": null, "2018": null, "2019": null, "2020": null, "2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": null}}, "2410": {"label": "Office of the Principal", "group": "School Administration", "subgroup": "School Administration", "values": {"2012": 4247337.0, "2013": 4235893.0, "2014": 4919477.0, "2015": 5136068.0, "2016": 5063245.0, "2017": 5066909.0, "2018": 5047352.0, "2019": 5230191.0, "2020": 5175858.0, "2021": 6589657.0, "2022": 6452918.0, "2023": 6884508.0, "2024": 7176378.0, "2025": 7127003.0, "2026": 6519070.0}}, "2490": {"label": "Other School Admin", "group": "School Administration", "subgroup": "School Administration", "values": {"2012": 76525.0, "2013": 76220.0, "2014": 67093.0, "2015": 66416.0, "2016": 55218.0, "2017": 51609.0, "2018": 81543.0, "2019": 67632.0, "2020": 51356.0, "2021": 41730.0, "2022": 45227.0, "2023": 62948.0, "2024": 63461.0, "2025": 84727.0, "2026": 85800.0}}, "2510": {"label": "Direction of Business Support", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 425382.0, "2013": 476122.0, "2014": 533281.0, "2015": 515700.0, "2016": 523186.0, "2017": 490900.0, "2018": 430419.0, "2019": 416237.0, "2020": 427942.0, "2021": 431282.0, "2022": 535005.0, "2023": 776125.0, "2024": 638772.0, "2025": 757976.0, "2026": 692200.0}}, "2520": {"label": "Fiscal Services", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 444629.0, "2013": 500060.0, "2014": 542614.0, "2015": 542904.0, "2016": 529844.0, "2017": 510479.0, "2018": 522930.0, "2019": 544026.0, "2020": 550514.0, "2021": 551908.0, "2022": 655491.0, "2023": 601011.0, "2024": 619791.0, "2025": 790461.0, "2026": 799700.0}}, "2540": {"label": "Operation & Maintenance of Plant", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 45000.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "2550": {"label": "Pupil Transportation", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "2560": {"label": "Food Services", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 2176143.0, "2013": 2107043.0, "2014": 2155349.0, "2015": 2134677.0, "2016": 2166999.0, "2017": 2126147.0, "2018": 2133798.0, "2019": 2169619.0, "2020": 2084898.0, "2021": 1786684.0, "2022": 2579771.0, "2023": 2679941.0, "2024": 2785889.0, "2025": 2747235.0, "2026": 2764675.0}}, "2570": {"label": "Internal Services", "group": "Business Services", "subgroup": "Business Services", "values": {"2012": 1172754.0, "2013": 63013.0, "2014": 88026.0, "2015": 510934.0, "2016": 411350.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "2610": {"label": "Direction of Central Support", "group": "Central Support", "subgroup": "Central Support", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "2620": {"label": "Planning, Research & Development", "group": "Central Support", "subgroup": "Central Support", "values": {"2012": 692296.0, "2013": 694279.0, "2014": 724400.0, "2015": 781035.0, "2016": 721540.0, "2017": 750204.0, "2018": 672273.0, "2019": 633509.0, "2020": 734634.0, "2021": 481196.0, "2022": 502182.0, "2023": 596340.0, "2024": 460314.0, "2025": 428188.0, "2026": 448000.0}}, "2630": {"label": "Information Services", "group": "Central Support", "subgroup": "Central Support", "values": {"2012": 240951.0, "2013": 251225.0, "2014": 260001.0, "2015": 204177.0, "2016": 146073.0, "2017": 146154.0, "2018": 167830.0, "2019": 135950.0, "2020": 137483.0, "2021": 250365.0, "2022": 398250.0, "2023": 443260.0, "2024": 417100.0, "2025": 476688.0, "2026": 445540.0}}, "2640": {"label": "Staff Services", "group": "Central Support", "subgroup": "Central Support", "values": {"2012": 807669.0, "2013": 816726.0, "2014": 870307.0, "2015": 852972.0, "2016": 914170.0, "2017": 844568.0, "2018": 826138.0, "2019": 892096.0, "2020": 948854.0, "2021": 927359.0, "2022": 2615357.0, "2023": 1909663.0, "2024": 2295885.0, "2025": 1566992.0, "2026": 1858850.0}}, "2660": {"label": "Data Processing / IT", "group": "Central Support", "subgroup": "Central Support", "values": {"2012": 1413550.0, "2013": 1206606.0, "2014": 919783.0, "2015": 2002575.0, "2016": 951466.0, "2017": 2383321.0, "2018": 5233350.0, "2019": 5127539.0, "2020": 5440895.0, "2021": 5853990.0, "2022": 6609607.0, "2023": 12489349.0, "2024": 6953640.0, "2025": 5201110.0, "2026": 5466677.0}}, "2900": {"label": "Other Support Services", "group": "Other Support", "subgroup": "Other Support", "values": {"2012": 4538396.0, "2013": 3376869.0, "2014": 4247259.0, "2015": 1374393.0, "2016": 2799084.0, "2017": 855071.0, "2018": 1615202.0, "2019": 1880498.0, "2020": 1866752.0, "2021": 2485832.0, "2022": 2064391.0, "2023": 2068177.0, "2024": 814057.0, "2025": 1565535.0, "2026": 1914100.0}}, "3000": {"label": "Community Services", "group": "Community Services", "subgroup": "Community Services", "values": {"2012": 3148481.0, "2013": 3265506.0, "2014": 3417654.0, "2015": 3415272.0, "2016": 4601473.0, "2017": 5048402.0, "2018": 5309462.0, "2019": 5693362.0, "2020": 5577453.0, "2021": 5627871.0, "2022": 5582540.0, "2023": 5973825.0, "2024": 6569838.0, "2025": 6603410.0, "2026": 6985503.0}}, "4110": {"label": "Payments - Regular Programs", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 83576.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 4698.0, "2025": 2485.0, "2026": 0.0}}, "4120": {"label": "Payments - Special Ed", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 1617965.0, "2013": 1304812.0, "2014": 75775.0, "2015": 1685297.0, "2016": 95189.0, "2017": 1589815.0, "2018": 2831056.0, "2019": 2551081.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 1265000.0, "2026": 2019519.0}}, "4130": {"label": "Payments - Adult/Continuing Ed", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4140": {"label": "Payments - CTE", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4170": {"label": "Payments - Community College", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4190": {"label": "Other In-State Payments", "group": "Payments to Other Districts", "subgroup": "In-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 267250.0, "2025": 0.0, "2026": 0.0}}, "4210": {"label": "Tuition - Regular Programs", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4220": {"label": "Tuition - Special Ed", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 1737058.0, "2015": 0.0, "2016": 1989429.0, "2017": 1026161.0, "2018": 242138.0, "2019": 248913.0, "2020": 1595831.0, "2021": 1810957.0, "2022": 1538216.0, "2023": 2227034.0, "2024": 3150763.0, "2025": 1072894.0, "2026": 1150000.0}}, "4230": {"label": "Tuition - Adult/Continuing Ed", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4240": {"label": "Tuition - CTE", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4270": {"label": "Tuition - Community College", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4280": {"label": "Tuition - Other Programs", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4290": {"label": "Other Tuition Payments", "group": "Payments to Other Districts", "subgroup": "Tuition Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4310": {"label": "Transfers - Regular Programs", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4320": {"label": "Transfers - Special Ed", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4330": {"label": "Transfers - Adult/Continuing Ed", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4340": {"label": "Transfers - CTE", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4370": {"label": "Transfers - Community College", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4380": {"label": "Transfers - Other Programs", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4390": {"label": "Other Transfer Payments", "group": "Payments to Other Districts", "subgroup": "Transfer Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "4400": {"label": "Payments to Out-of-State", "group": "Payments to Other Districts", "subgroup": "Out-of-State Payments", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5110": {"label": "Interest - Tax Anticipation Warrants", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5120": {"label": "Interest - Tax Anticipation Notes", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5130": {"label": "Interest - CPPRT Anticipation Notes", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5140": {"label": "Interest - Other Short-Term", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5150": {"label": "Other Interest on Short-Term Debt", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5200": {"label": "Interest on Long-Term Debt", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}, "5300": {"label": "Principal on Long-Term Debt", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": null, "2013": null, "2014": null, "2015": null, "2016": null, "2017": null, "2018": null, "2019": null, "2020": null, "2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": null}}, "5400": {"label": "Debt Service - Other", "group": "Debt Service", "subgroup": "Debt Service", "values": {"2012": null, "2013": null, "2014": null, "2015": null, "2016": null, "2017": null, "2018": null, "2019": null, "2020": null, "2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": null}}, "6000": {"label": "Provisions for Contingencies", "group": "Contingencies", "subgroup": "Contingencies", "values": {"2012": 0.0, "2013": 0.0, "2014": 0.0, "2015": 0.0, "2016": 0.0, "2017": 0.0, "2018": 0.0, "2019": 0.0, "2020": 0.0, "2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025": 0.0, "2026": 0.0}}}, "totals": {"2012": 91004795.0, "2013": 87838380.0, "2014": 90731871.0, "2015": 91964585.0, "2016": 96344574.0, "2017": 98437708.0, "2018": 105190692.0, "2019": 109072282.0, "2020": 113610318.0, "2021": 119352241.0, "2022": 126527697.0, "2023": 143638482.0, "2024": 150647334.0, "2025": 139957883.0, "2026": 147064861.0}, "hierarchy": {"Instruction": {"Regular Programs": ["1100", "1115"], "Pre-K Programs": ["1125"], "Special Education": ["1200", "1225"], "Remedial/Supplemental": ["1250", "1275"], "Other Instruction": ["1300", "1400", "1700", "1900", "1999"], "Co-Curricular": ["1500"], "Summer & Extended": ["1600"], "Gifted": ["1650"], "Bilingual": ["1800"], "Private Tuition": ["1910", "1911", "1912", "1913", "1914", "1915", "1916", "1917", "1918", "1919", "1920", "1921", "1922"]}, "Student Support": {"Student Support": ["2110", "2120", "2130", "2140", "2150", "2190"]}, "Instructional Staff Support": {"Instructional Staff Support": ["2210", "2220", "2230"]}, "General Administration": {"General Administration": ["2310", "2320", "2330", "2361", "2365"]}, "School Administration": {"School Administration": ["2410", "2490"]}, "Business Services": {"Business Services": ["2510", "2520", "2540", "2550", "2560", "2570"]}, "Central Support": {"Central Support": ["2610", "2620", "2630", "2640", "2660"]}, "Other Support": {"Other Support": ["2900"]}, "Community Services": {"Community Services": ["3000"]}, "Payments to Other Districts": {"In-State Payments": ["4110", "4120", "4130", "4140", "4170", "4190"], "Tuition Payments": ["4210", "4220", "4230", "4240", "4270", "4280", "4290"], "Transfer Payments": ["4310", "4320", "4330", "4340", "4370", "4380", "4390"], "Out-of-State Payments": ["4400"]}, "Debt Service": {"Debt Service": ["5110", "5120", "5130", "5140", "5150", "5200", "5300", "5400"]}, "Contingencies": {"Contingencies": ["6000"]}}};
+
+const GROUP_ORDER = [
+  "Instruction", "Student Support", "Instructional Staff Support",
+  "General Administration", "School Administration", "Business Services",
+  "Central Support", "Other Support", "Community Services",
+  "Payments to Other Districts", "Debt Service", "Contingencies", "Other"
+];
+
+const COLORS = [
+  "#636EFA", "#EF553B", "#00CC96", "#AB63FA", "#FFA15A",
+  "#19D3F3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52",
+  "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD",
+  "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF",
+  "#AEC7E8", "#FFBB78", "#98DF8A", "#FF9896", "#C5B0D5"
+];
+
+const GROUP_COLORS = {};
+GROUP_ORDER.forEach((g, i) => { GROUP_COLORS[g] = COLORS[i % COLORS.length]; });
+
+const state = {
+  chartType: "area",
+  yAxis: "percent",
+  activePreset: "where-money-goes",
+  customTraces: null,
+};
+
+function getCodesForGroup(group) {
+  const subs = DATA.hierarchy[group] || {};
+  const codes = [];
+  for (const sg in subs) codes.push(...subs[sg]);
+  return codes;
+}
+
+function getAllLeafCodes() {
+  return Object.keys(DATA.categories);
+}
+
+function getCheckedCodes() {
+  const codes = [];
+  document.querySelectorAll('.leaf-cb:checked').forEach(cb => codes.push(cb.dataset.code));
+  return codes;
+}
+
+// --- Presets ---
+
+const PRESETS = {
+  "where-money-goes": {
+    label: "Where the Money Goes",
+    mode: "grouped",
+    groups: function() {
+      const g = {};
+      GROUP_ORDER.forEach(grp => {
+        const codes = getCodesForGroup(grp);
+        if (codes.length > 0) g[grp] = codes;
+      });
+      return g;
+    }
+  },
+  "instruction": {
+    label: "Instruction Breakdown",
+    mode: "grouped",
+    groups: function() {
+      const subs = DATA.hierarchy["Instruction"] || {};
+      const g = {};
+      for (const sg in subs) g[sg] = subs[sg];
+      return g;
+    }
+  },
+  "classroom-vs-non": {
+    label: "Classroom vs Non-Classroom",
+    mode: "grouped",
+    groups: function() {
+      const classroomGroups = ["Instruction", "Instructional Staff Support"];
+      const classroom = [];
+      const nonClassroom = [];
+      GROUP_ORDER.forEach(grp => {
+        const codes = getCodesForGroup(grp);
+        if (classroomGroups.includes(grp)) classroom.push(...codes);
+        else nonClassroom.push(...codes);
+      });
+      return { "Classroom (Instruction + Instructional Staff)": classroom, "Non-Classroom": nonClassroom };
+    }
+  },
+  "admin": {
+    label: "All Administration",
+    mode: "grouped",
+    groups: function() {
+      const g = {};
+      ["General Administration", "School Administration", "Business Services", "Central Support"].forEach(grp => {
+        const subs = DATA.hierarchy[grp] || {};
+        for (const sg in subs) g[sg] = subs[sg];
+      });
+      return g;
+    }
+  },
+  "special-ed": {
+    label: "Special Ed Total",
+    mode: "individual",
+    codes: function() { return ["1200", "1225", "1911", "1922", "4120", "4220", "4320"].filter(c => c in DATA.categories); }
+  },
+  "student-support": {
+    label: "Student Support",
+    mode: "individual",
+    codes: function() { return getCodesForGroup("Student Support"); }
+  },
+  "community-payments": {
+    label: "Community & Payments",
+    mode: "individual",
+    codes: function() {
+      return [...getCodesForGroup("Community Services"), ...getCodesForGroup("Payments to Other Districts")];
+    }
+  },
+};
+
+function applyPreset(name) {
+  state.activePreset = name;
+  document.querySelectorAll('.preset-btn').forEach(b => b.classList.toggle('active', b.dataset.preset === name));
+
+  const preset = PRESETS[name];
+  const allLeaf = getAllLeafCodes();
+
+  if (preset.mode === "grouped") {
+    const groups = preset.groups();
+    const codesInPreset = new Set();
+    for (const g in groups) groups[g].forEach(c => codesInPreset.add(c));
+    allLeaf.forEach(code => {
+      const cb = document.querySelector(`.leaf-cb[data-code="${code}"]`);
+      if (cb) cb.checked = codesInPreset.has(code);
+    });
+    updateParentCheckboxes();
+    state.customTraces = buildGroupedTraces(groups);
+  } else {
+    const activeCodes = new Set(preset.codes());
+    allLeaf.forEach(code => {
+      const cb = document.querySelector(`.leaf-cb[data-code="${code}"]`);
+      if (cb) cb.checked = activeCodes.has(code);
+    });
+    updateParentCheckboxes();
+    state.customTraces = null;
+  }
+  updateChart();
+}
+
+// --- Trace building ---
+
+function buildGroupedTraces(groups) {
+  const years = DATA.years;
+  const traces = [];
+  const groupNames = Object.keys(groups);
+  groupNames.forEach((name, i) => {
+    const codes = groups[name];
+    const vals = years.map(yr => {
+      let sum = 0;
+      let hasData = false;
+      codes.forEach(c => {
+        const v = (DATA.categories[c] || {values:{}}).values[yr];
+        if (v !== null && v !== undefined) { sum += v; hasData = true; }
+      });
+      return hasData ? sum : null;
+    });
+    traces.push({ name, values: vals, color: COLORS[i % COLORS.length] });
+  });
+  return traces;
+}
+
+function buildIndividualTraces(codes) {
+  const years = DATA.years;
+  const traces = [];
+  let colorIdx = 0;
+  codes.forEach(code => {
+    const cat = DATA.categories[code];
+    if (!cat) return;
+    const vals = years.map(yr => {
+      const v = cat.values[yr];
+      return (v !== null && v !== undefined) ? v : null;
+    });
+    const hasAnyData = vals.some(v => v !== null && v > 0);
+    if (!hasAnyData) return;
+    traces.push({
+      name: cat.label + " (" + code + ")",
+      values: vals,
+      color: GROUP_COLORS[cat.group] || COLORS[colorIdx % COLORS.length],
+    });
+    colorIdx++;
+  });
+  return traces;
+}
+
+function updateChart() {
+  const years = DATA.years;
+  const yearLabels = years.map(y => "FY" + y);
+  let traces;
+
+  if (state.customTraces) {
+    traces = state.customTraces;
+  } else {
+    const checked = getCheckedCodes();
+    traces = buildIndividualTraces(checked);
+  }
+
+  if (traces.length === 0) {
+    Plotly.react("chart", [], {
+      annotations: [{
+        text: "Select categories below to display data",
+        xref: "paper", yref: "paper", x: 0.5, y: 0.5,
+        showarrow: false, font: { size: 16, color: "#999" }
+      }],
+      xaxis: { visible: false }, yaxis: { visible: false },
+      plot_bgcolor: "white", paper_bgcolor: "white", height: 500,
+    });
+    return;
+  }
+
+  const plotTraces = traces.map((t, i) => {
+    let yvals;
+    if (state.yAxis === "percent") {
+      yvals = t.values.map((v, j) => {
+        if (v === null) return null;
+        const total = DATA.totals[years[j]];
+        return total > 0 ? (v / total * 100) : 0;
+      });
+    } else {
+      yvals = t.values;
+    }
+
+    const base = {
+      x: yearLabels,
+      y: yvals,
+      name: t.name,
+      marker: { color: t.color },
+      line: { color: t.color },
+    };
+
+    const dollarVals = t.values;
+    const pctVals = t.values.map((v, j) => {
+      if (v === null) return null;
+      const total = DATA.totals[years[j]];
+      return total > 0 ? (v / total * 100) : 0;
+    });
+
+    base.customdata = years.map((yr, j) => ({
+      dollars: dollarVals[j],
+      pct: pctVals[j],
+      year: yr,
+    }));
+
+    if (state.chartType === "area") {
+      base.type = "scatter";
+      base.mode = "lines";
+      base.stackgroup = "one";
+      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
+        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
+    } else if (state.chartType === "line") {
+      base.type = "scatter";
+      base.mode = "lines+markers";
+      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
+        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
+    } else {
+      base.type = "bar";
+      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
+        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
+    }
+    return base;
+  });
+
+  const layout = {
+    plot_bgcolor: "white",
+    paper_bgcolor: "white",
+    height: 500,
+    margin: { l: 70, r: 30, t: 30, b: 80 },
+    xaxis: {
+      showgrid: true, gridcolor: "#eee",
+      tickangle: -45,
+    },
+    yaxis: {
+      showgrid: true, gridcolor: "#eee",
+      title: state.yAxis === "percent" ? "% of Total Budget" : "Dollars ($)",
+      tickformat: state.yAxis === "percent" ? ".1f" : "$,.0f",
+    },
+    legend: {
+      orientation: "h", y: -0.25, x: 0.5, xanchor: "center",
+      font: { size: 11 },
+    },
+    hovermode: "x unified",
+  };
+
+  if (state.chartType === "bar") {
+    layout.barmode = "stack";
+  }
+
+  Plotly.react("chart", plotTraces, layout, { responsive: true });
+}
+
+// --- Checkbox tree ---
+
+function buildTree() {
+  const container = document.getElementById("tree");
+  container.innerHTML = "";
+
+  GROUP_ORDER.forEach(group => {
+    const subs = DATA.hierarchy[group];
+    if (!subs) return;
+
+    const allGroupCodes = getCodesForGroup(group);
+    if (allGroupCodes.length === 0) return;
+
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "tree-group";
+
+    const header = document.createElement("div");
+    header.className = "tree-group-header";
+    const toggle = document.createElement("span");
+    toggle.className = "tree-toggle";
+    toggle.textContent = "▼";
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.className = "group-cb";
+    cb.dataset.group = group;
+    const label = document.createElement("span");
+    label.textContent = group;
+
+    header.appendChild(toggle);
+    header.appendChild(cb);
+    header.appendChild(label);
+    groupDiv.appendChild(header);
+
+    const childrenDiv = document.createElement("div");
+    childrenDiv.className = "tree-children";
+
+    const subNames = Object.keys(subs);
+    const hasMidLevel = subNames.length > 1 || (subNames.length === 1 && subNames[0] !== group);
+
+    if (hasMidLevel) {
+      subNames.forEach(sg => {
+        const codes = subs[sg];
+        if (codes.length === 1 && !hasMidLevel) {
+          appendLeaf(childrenDiv, codes[0]);
+        } else if (codes.length === 1 && sg === codes[0]) {
+          appendLeaf(childrenDiv, codes[0]);
+        } else {
+          const subDiv = document.createElement("div");
+          subDiv.className = "tree-subgroup";
+
+          if (codes.length === 1) {
+            appendLeaf(subDiv, codes[0]);
+          } else {
+            const subHeader = document.createElement("div");
+            subHeader.className = "tree-subgroup-header";
+            const subToggle = document.createElement("span");
+            subToggle.className = "tree-toggle";
+            subToggle.textContent = "▼";
+            const subCb = document.createElement("input");
+            subCb.type = "checkbox";
+            subCb.className = "subgroup-cb";
+            subCb.dataset.group = group;
+            subCb.dataset.subgroup = sg;
+            const subLabel = document.createElement("span");
+            subLabel.textContent = sg;
+
+            subHeader.appendChild(subToggle);
+            subHeader.appendChild(subCb);
+            subHeader.appendChild(subLabel);
+            subDiv.appendChild(subHeader);
+
+            const subChildren = document.createElement("div");
+            subChildren.className = "tree-children collapsed";
+            codes.forEach(code => appendLeaf(subChildren, code));
+            subDiv.appendChild(subChildren);
+
+            subToggle.addEventListener("click", () => {
+              subChildren.classList.toggle("collapsed");
+              subToggle.textContent = subChildren.classList.contains("collapsed") ? "▶" : "▼";
+            });
+          }
+          childrenDiv.appendChild(subDiv);
+        }
+      });
+    } else {
+      const sg = subNames[0];
+      subs[sg].forEach(code => appendLeaf(childrenDiv, code));
+    }
+
+    groupDiv.appendChild(childrenDiv);
+    container.appendChild(groupDiv);
+
+    toggle.addEventListener("click", () => {
+      childrenDiv.classList.toggle("collapsed");
+      toggle.textContent = childrenDiv.classList.contains("collapsed") ? "▶" : "▼";
+    });
+
+    cb.addEventListener("change", () => {
+      const checked = cb.checked;
+      groupDiv.querySelectorAll(".leaf-cb").forEach(lcb => { lcb.checked = checked; });
+      groupDiv.querySelectorAll(".subgroup-cb").forEach(scb => { scb.checked = checked; scb.indeterminate = false; });
+      onManualChange();
+    });
+  });
+
+  document.querySelectorAll(".subgroup-cb").forEach(scb => {
+    scb.addEventListener("change", () => {
+      const group = scb.dataset.group;
+      const subgroup = scb.dataset.subgroup;
+      const checked = scb.checked;
+      const parent = scb.closest(".tree-subgroup");
+      parent.querySelectorAll(".leaf-cb").forEach(lcb => { lcb.checked = checked; });
+      updateParentCheckboxes();
+      onManualChange();
+    });
+  });
+
+  document.querySelectorAll(".leaf-cb").forEach(lcb => {
+    lcb.addEventListener("change", () => {
+      updateParentCheckboxes();
+      onManualChange();
+    });
+  });
+}
+
+function appendLeaf(container, code) {
+  const cat = DATA.categories[code];
+  if (!cat) return;
+  const div = document.createElement("div");
+  div.className = "tree-leaf";
+  const cb = document.createElement("input");
+  cb.type = "checkbox";
+  cb.className = "leaf-cb";
+  cb.dataset.code = code;
+  const lbl = document.createElement("span");
+  lbl.textContent = cat.label;
+  const codeSpan = document.createElement("span");
+  codeSpan.className = "code";
+  codeSpan.textContent = " (" + code + ")";
+  div.appendChild(cb);
+  div.appendChild(lbl);
+  div.appendChild(codeSpan);
+  container.appendChild(div);
+}
+
+function updateParentCheckboxes() {
+  document.querySelectorAll(".subgroup-cb").forEach(scb => {
+    const parent = scb.closest(".tree-subgroup");
+    const leaves = parent.querySelectorAll(".leaf-cb");
+    const checked = parent.querySelectorAll(".leaf-cb:checked");
+    scb.checked = checked.length === leaves.length && leaves.length > 0;
+    scb.indeterminate = checked.length > 0 && checked.length < leaves.length;
+  });
+
+  document.querySelectorAll(".group-cb").forEach(gcb => {
+    const group = gcb.closest(".tree-group");
+    const leaves = group.querySelectorAll(".leaf-cb");
+    const checked = group.querySelectorAll(".leaf-cb:checked");
+    gcb.checked = checked.length === leaves.length && leaves.length > 0;
+    gcb.indeterminate = checked.length > 0 && checked.length < leaves.length;
+  });
+}
+
+let debounceTimer = null;
+function onManualChange() {
+  state.activePreset = null;
+  state.customTraces = null;
+  document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+  if (debounceTimer) clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(updateChart, 100);
+}
+
+// --- Toggle handlers ---
+
+document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.chartType = btn.dataset.type;
+    updateChart();
+  });
+});
+
+document.querySelectorAll('#yaxis-toggle .toggle-btn').forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll('#yaxis-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.yAxis = btn.dataset.yaxis;
+    updateChart();
+  });
+});
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener("click", () => applyPreset(btn.dataset.preset));
+});
+
+document.getElementById("select-all-btn").addEventListener("click", () => {
+  document.querySelectorAll(".leaf-cb").forEach(cb => { cb.checked = true; });
+  updateParentCheckboxes();
+  onManualChange();
+});
+
+document.getElementById("clear-all-btn").addEventListener("click", () => {
+  document.querySelectorAll(".leaf-cb").forEach(cb => { cb.checked = false; });
+  updateParentCheckboxes();
+  onManualChange();
+});
+
+// --- Init ---
+buildTree();
+applyPreset("where-money-goes");
+</script>
+</body>
+</html>
