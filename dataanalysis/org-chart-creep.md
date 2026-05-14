@@ -145,7 +145,7 @@ Curriculum and instruction was managed by four directors — covering STEM, Lite
 
 A note on what we are *not* arguing: the 2016–17 structure is a reference point, not a target. Education has changed since then — multilingual services, social-emotional learning, early childhood programs, and equity-focused support have all grown, and some of that investment is legitimate. (SPED costs also rose dramatically — but driven by transportation and contracted services, not by central office positions.) The question is narrower: was the scale of sub-cabinet growth proportionate to enrollment and to demonstrated need? Did it produce better outcomes for students? The evidence available to us does not support a yes on either count.
 
-![D65 Org Chart — 2016–17 School Year (Goren)](assets/org-chart-creep/image1.png)
+![D65 Org Chart — 2016–17 School Year (Goren)](assets/image1.png)
 *The Goren-era structure: eight senior positions, four curriculum directors, operations consolidated under business services. Compare this to what follows.* — [FOIA Gras doc 6510](https://ig.foiagras.com/api/public/chat/documents/6510/view){:target="_blank"}
 
 This baseline matters because it anchors the question the rest of this analysis tries to answer: how much larger does a central office need to be to serve 25% fewer students — and is the answer D65 has been living with defensible? The next section documents what the Horton era built on top of this foundation.
@@ -167,7 +167,7 @@ The expansion was broad-based. A Deputy Superintendent position was created for 
 | Student Services / SPED | 1 asst. superintendent | 3+ directors under 1 asst. supt. |
 | Technology / IT | — embedded roles | 3+ dedicated positions |
 
-![D65 Org Chart — 2021–22 School Year (Horton Peak)](assets/org-chart-creep/image2.png)
+![D65 Org Chart — 2021–22 School Year (Horton Peak)](assets/image2.png)
 *The full expansion: Deputy Superintendent LaTarsha Green, seven assistant superintendents, specialized directors across every curriculum area. This is the structure the SDRP was built to dismantle. The chart also shows one structural anomaly: the Bessie Rhodes and King Arts principals reported directly to the Deputy Superintendent rather than through the Assistant Superintendent of Schools like every other building principal. No public document explains the rationale.* — [FOIA Gras doc 3180](https://ig.foiagras.com/api/public/chat/documents/3180/view){:target="_blank"}
 
 The 2022–23 expansion also surfaced a transparency problem that goes beyond headcount. A January 2023 consulting contract — obtained via FOIA by Evanston resident Tom Hayden — was signed by Markisha Mitchell with the title **Chief of Staff**. The board-facing org chart circulated during the same period listed her role only as "Special Assistant to the Cabinet." The discrepancy is not a clerical error — it is a governance failure.
@@ -178,7 +178,7 @@ That culture had consequences beyond the balance sheet: Devon Horton and two ass
 
 Many of these hires were presented to the board as "budget neutral" — offset by eliminating other positions or cutting contracted services. But the district was already projecting structural deficits starting in FY22. The expansion happened anyway. The fiscal warning signs were visible. The administrative build-up continued regardless.
 
-![D65 Org Chart — Summer 2019 (Beardsley Interim)](assets/org-chart-creep/image3.png)
+![D65 Org Chart — Summer 2019 (Beardsley Interim)](assets/image3.png)
 *The bridge year: Beardsley as Interim Superintendent. LaTarsha Green already elevated to Executive Director for Black Student Success. A Director of Equity and Family/Community Engagement added. The groundwork for what follows is visible here.* — [FOIA Gras doc 4479](https://ig.foiagras.com/api/public/chat/documents/4479/view){:target="_blank"}
 
 Why does this expansion matter now? Because the district is asking families to accept school closures, partially cut counselors, and librarians whose status remains unresolved — while a central office built during a period of fiscal warnings and flat academic outcomes remains largely intact.
@@ -187,7 +187,7 @@ Why does this expansion matter now? Because the district is asking families to a
 
 The expansion accelerated further in SY2022–23. The largest single-year jump in the dataset came partly from reclassifying support staff into administrator categories — a change that obscured the true scale of the build-up in standard reporting. New additions included a Family Center Managing Director, Director of Science, Diverse Learning Coordinator, Executive Director of Technology, and multiple coordinator positions. All while student enrollment was falling and academic results were not improving.
 
-![D65 Org Chart — 2022–23 School Year (Horton Peak)](assets/org-chart-creep/image4.jpg)
+![D65 Org Chart — 2022–23 School Year (Horton Peak)](assets/image4.jpg)
 *The true structural peak. By 2022–23 the cabinet had grown to 12 members plus Deputy Superintendent Green — larger than the prior year. A new Chief of Staff position (Dr. Markisha Mitchell) had been added at cabinet level with a DEIB and equity portfolio. This position had no parallel in any prior org chart and did not survive Horton's departure.* — D65 Board Documents
 
 ### Timeline of the Build-Up and Pull-Back
@@ -232,10 +232,10 @@ The eliminated positions read like a reversal of the Horton-era expansion: Deput
 
 In curriculum and instruction, the eight-plus director structure was collapsed into two consolidated roles: Director of Humanities and Director of STEAM. That is genuine organizational change, not just shuffling titles.
 
-![D65 Cabinet Structure — 2025–26 (Turner)](assets/org-chart-creep/image5.png)
+![D65 Cabinet Structure — 2025–26 (Turner)](assets/image5.png)
 *The post-SDRP cabinet: five senior positions replacing what had been fifteen-plus. The district's own framing called this "shifting from a top-down approach." **Important:** this slide shows the cabinet only. Seventeen additional central office administrators report through this structure — directors, executive directors, and coordinators whose positions and compensation are not visible here.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
 
-![D65 Restructuring Rationale Slide — June 2025](assets/org-chart-creep/image6.png)
+![D65 Restructuring Rationale Slide — June 2025](assets/image6.png)
 *The district's stated rationale for the restructuring. Note the acknowledgment that "District staff increased to support schools after pandemic" — a concession that the expansion was real.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
 
 The SDRP corrected the most visible part of the problem — the bloated cabinet. What it did not correct is the underlying structural condition: a central office still calibrated to a larger district than D65 is today, with a second administrative tier that has barely been touched.
@@ -443,7 +443,7 @@ The board and public currently cannot see what they are governing. The district 
 
 The district should publish a complete, annually updated administrative roster — covering all positions across TRS Admin, IMRF administrative, and certificated administrative disclosures, not just the subset that appears on the cabinet org chart. Each position should include its reporting line and a plain-language description of its role. This is standard practice in well-governed public institutions.
 
-![2025–26 Academics: Teaching & Learning detail](assets/org-chart-creep/image7.png)
+![2025–26 Academics: Teaching & Learning detail](assets/image7.png)
 *The second tier under Dr. Katie Speth (Asst. Superintendent of Academics) — the layer invisible in the cabinet slide above. Directors of Humanities, STEAM, Multilingual Services, Programs and Partnerships, Student Specialized Services, and nine IES Coordinators all report through this structure. These are the positions that represent the real ongoing administrative footprint below the cabinet level.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
 
 ### 4. Build a board accountability framework that makes governance structural, not episodic
