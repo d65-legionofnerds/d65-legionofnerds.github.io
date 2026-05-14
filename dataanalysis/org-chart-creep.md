@@ -59,46 +59,46 @@ parent: Data Analysis
   </g>
 </svg>
 
-<table width="100%">
+<table width="100%" cellspacing="12" cellpadding="0" style="border-collapse:separate;border-spacing:12px;">
 <tr>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+118%</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">7×</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">+67%</span></td>
+<td width="33%" align="center" valign="top" style="background:#fdecec;border-top:5px solid #e84040;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e84040;line-height:1;letter-spacing:-0.02em;">+118%</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Certificated central admins (TRS)</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">11 → 24 administrators</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">SY2015–16 → SY2025–26 · peaked at 60 in 2022–23</div>
+</td>
+<td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">7×</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Sub-cabinet growth</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">6 → 42 positions (700% of baseline)</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">Cabinet cut 50% · Sub-cabinet cut only 13%</div>
+</td>
+<td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+67%</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admin-to-student ratio</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.0 → 16.7 per 1,000 students</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">peer K-8 average ~12 per 1,000</div>
+</td>
 </tr>
 <tr>
-<td align="center">Certificated central admins (TRS)</td>
-<td align="center">Sub-cabinet growth</td>
-<td align="center">Admin-to-student ratio increase</td>
-</tr>
-<tr>
-<td align="center">11 → 24 administrators</td>
-<td align="center">6 → 42 positions (700% of baseline)</td>
-<td align="center">10.0 → 16.7 per 1,000 students</td>
-</tr>
-<tr>
-<td align="center"><small>SY2015–16 to SY2025–26 · peaked at 60 in 2022–23</small></td>
-<td align="center"><small>Cabinet cut 50% · Sub-cabinet cut only 13%</small></td>
-<td align="center"><small>peer K-8 average ~12 per 1,000</small></td>
-</tr>
-<tr>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">10+</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">+55%</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">−25%</span></td>
-</tr>
-<tr>
-<td align="center">Admins missing from official count</td>
-<td align="center">Per-student admin spending (real $)</td>
-<td align="center">Student enrollment</td>
-</tr>
-<tr>
-<td align="center">District reports 52 · public data shows 64</td>
-<td align="center">$2,201 → $3,401 per pupil</td>
-<td align="center">7,500 → 5,625 students</td>
-</tr>
-<tr>
-<td align="center"><small>No FOIA request required to find the gap</small></td>
-<td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
-<td align="center"><small>steepest among 21 peer districts</small></td>
+<td width="33%" align="center" valign="top" style="background:#fdecec;border-top:5px solid #e84040;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e84040;line-height:1;letter-spacing:-0.02em;">10+</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admins missing from official count</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">District reports 52 · public data shows 64</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">No FOIA request required to find the gap</div>
+</td>
+<td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">+55%</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Per-student admin spending (real $)</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$2,201 → $3,401 per pupil</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">FY16 → FY25 · inflation-adjusted</div>
+</td>
+<td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
+<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">−25%</div>
+<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Student enrollment</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">7,500 → 5,625 students</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">steepest among 21 peer districts</div>
+</td>
 </tr>
 </table>
 
