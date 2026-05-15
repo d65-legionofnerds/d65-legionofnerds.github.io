@@ -2,6 +2,8 @@
 title: Org Chart Creep
 layout: default
 parent: Data Analysis
+description: "How District 65's central office doubled while enrollment fell 25% — the org chart history from 2016 through 2026, what the SDRP cut, and what right-sizing the sub-cabinet would actually save."
+last_modified_date: 2026-05-07
 ---
 
 # The Org Chart That Ate Our Budget
@@ -65,7 +67,7 @@ parent: Data Analysis
 <div style="font-size:3em;font-weight:900;color:#e84040;line-height:1;letter-spacing:-0.02em;">+118%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Certificated central admins (TRS)</div>
 <div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">11 → 24 administrators</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">SY2015–16 → SY2025–26 · peaked at 60 in 2022–23</div>
+<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">SY2015–16 → SY2025–26 · combined cabinet + sub-cabinet peaked at 60 in 2022–23</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
 <div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">7×</div>
@@ -112,10 +114,10 @@ Between SY2015–16 and SY2025–26, K-8 enrollment fell from approximately 7,50
 - **It didn't happen all at once — it was org chart creep.** Positions were added one at a time, each justified on its own terms, none examined in the aggregate. No single hire looked unreasonable. The cumulative result did.
 - **The peak was 2022–23 — the same year the district ran a $10 million deficit.** Central office administrators had grown 118% since 2016. Many hires were presented to the board as "budget neutral" while structural deficits were already being projected.
 - **The real story is the second tier — the sub-cabinet.** Below the cabinet sits a layer of directors, coordinators, and managers that grew 7× its 2016 size — 700% of baseline — and has barely been touched by the SDRP. The cabinet was cut 50%. The sub-cabinet was cut only 13%. The visible layer shrank. The expensive layer didn't.
-- **The SDRP made real cuts — but didn't finish the job.** 90 position reductions still produced a $700,000 increase in total salary costs. Fewer people, higher total cost. The sub-cabinet's 42 positions — averaging $140,000 each — remain largely intact. D65 still spends $619 per pupil on Special Area Administration against a peer average of $176.
+- **The SDRP made real cuts — but didn't finish the job.** 90 position reductions still produced a $700,000 increase in total salary costs. Fewer people, higher total cost. The sub-cabinet's 42 positions — each averaging $129,000 in total compensation — remain largely intact. D65 still spends $619 per pupil on Special Area Administration against a peer average of $176.
 - **You can't govern what you can't see.** The district officially reports 52 central administrators. Cross-referencing public state disclosure lists — no FOIA required — yields at least 64. The 10+ missing positions aren't a data entry error; they reflect a pattern of incomplete reporting that leaves the board making decisions based on an incomplete count.
 - **The governance failures go deeper than the org chart.** A cabinet-level "Chief of Staff" signed contracts under that title while board org charts listed her as "Special Assistant to the Cabinet." Salary increases were made without board approval. Two Horton-era associates are awaiting trial on fraud-related charges.
-- **Four things need to change — now.** The ongoing HR audit is the opening. The Legion of Data Nerds calls on the board and administration to act on each of the following: **(1) Right-size the sub-cabinet** — a conservative reduction to 20 positions saves $3–4M annually without touching a teacher, counselor, or librarian. **(2) Stop future creep** — require board approval for any new administrative position above a salary threshold. **(3) Publish the full roster** — every administrative position, title, reporting line, function, and cost in one publicly accessible document. **(4) Build a real accountability framework** — the board, not the superintendent, sets the size and cost of the administrative structure.
+- **Four things need to change — now.** The ongoing HR audit is the opening. The Legion of Data Nerds calls on the board and administration to act on each of the following: **(1) Right-size the sub-cabinet** — a conservative reduction to 20 positions saves $2.8–3.8M annually without touching a teacher, counselor, or librarian. **(2) Stop future creep** — require board approval for any new administrative position above a salary threshold. **(3) Publish the full roster** — every administrative position, title, reporting line, function, and cost in one publicly accessible document. **(4) Build a real accountability framework** — the board, not the superintendent, sets the size and cost of the administrative structure.
 
 The +118% headline figure measures TRS-enrolled certificated administrators specifically (PA 96-0434), which went from 11 to 24 between SY2015–16 and SY2025–26. This is a narrow, clean measure — every TRS administrator is reported in full regardless of salary, making it the most apples-to-apples count across years. Larry Gavin's broader "Central Office Administration" category shows growth from 17 (2015–16) to 30 (2022–23), a +76% increase; the District's own FOIA response (May 7, 2024) documents Central Office Adm rising from 22 in FY19 to 30 in FY23. All three counts use different definitions and scopes; all three show the same directional trend. For full methodology see the [Admin Growth FAQ](admin-growth-faq).
 
@@ -156,13 +158,13 @@ This baseline matters because it anchors the question the rest of this analysis 
 
 Devon Horton arrived as superintendent in June 2020 with the MIRACLES framework — an eight-component reform agenda that required, by its own design logic, significant new administrative infrastructure. The pandemic added further justification for expanded coordination capacity.
 
-What followed was one of the most rapid expansions of central office administration in the district's recent history — and it happened on both tiers simultaneously. The cabinet grew, but so did the sub-cabinet layer of directors, coordinators, and managers below it. It did not peak in 2021–22. The cabinet kept growing, reaching 12 members by 2022–23, the same fiscal year the district reported a $10 million operating deficit.
+What followed was one of the most rapid expansions of central office administration in the district's recent history — and it happened on both tiers simultaneously. The cabinet grew, but so did the sub-cabinet layer of directors, coordinators, and managers below it. It did not peak in 2021–22. The cabinet kept growing, reaching 12 members by 2022–23 (including the Deputy Superintendent position), the same fiscal year the district reported a $10 million operating deficit.
 
 The expansion was broad-based. A Deputy Superintendent position was created for Dr. LaTarsha Green. Seven assistant superintendents replaced the prior four or five. The curriculum and instruction division gained dedicated directors for MTSS (Multi-Tiered System of Supports — a framework for identifying struggling students before special education referral) & SEL, STEM, EvanSTEM, Literacy, and Social Sciences — plus four Content Facilitator positions. New administrative units appeared for equity and family engagement, culture and climate, diversity hiring, and instructional technology.
 
 | Function | 2016–17 | 2022–23 Peak |
 | --- | --- | --- |
-| Central Admin | 8 positions | 12+ cabinet + Deputy Supt. |
+| Central Admin | 8 positions | 12 cabinet (incl. Deputy Supt.) |
 | Curriculum & Instruction | 4 directors + 1 exec | 7 directors + facilitators |
 | Student Services / SPED | 1 asst. superintendent | 3+ directors under 1 asst. supt. |
 | Technology / IT | — embedded roles | 3+ dedicated positions |
@@ -188,17 +190,17 @@ Why does this expansion matter now? Because the district is asking families to a
 The expansion accelerated further in SY2022–23. The largest single-year jump in the dataset came partly from reclassifying support staff into administrator categories — a change that obscured the true scale of the build-up in standard reporting. New additions included a Family Center Managing Director, Director of Science, Diverse Learning Coordinator, Executive Director of Technology, and multiple coordinator positions. All while student enrollment was falling and academic results were not improving.
 
 ![D65 Org Chart — 2022–23 School Year (Horton Peak)](assets/image4.jpg)
-*The true structural peak. By 2022–23 the cabinet had grown to 12 members plus Deputy Superintendent Green — larger than the prior year. A new Chief of Staff position (Dr. Markisha Mitchell) had been added at cabinet level with a DEIB and equity portfolio. This position had no parallel in any prior org chart and did not survive Horton's departure.* — D65 Board Documents
+*The true structural peak. By 2022–23 the cabinet stood at 12 members — including Deputy Superintendent Green and a newly created Chief of Staff position (Dr. Markisha Mitchell) with a DEIB and equity portfolio. The Chief of Staff role had no parallel in any prior org chart and did not survive Horton's departure.* — D65 Board Documents
 
 ### Timeline of the Build-Up and Pull-Back
 
 - **June 2020 — Horton arrives.** MIRACLES framework announced. Deputy Superintendent created; assistant superintendent count grows; new equity, culture, and diversity roles added.
 - **2020–2022 — Administrative expansion continues.** Eight-plus curriculum directors; dedicated coordinators for technology, multilingual services, SEL, MTSS; four content facilitators added. Cabinet reaches 10 members.
-- **2022–2023 — True peak; transparency failure documented.** Chief of Staff (Dr. Markisha Mitchell) added at cabinet level with DEIB and equity portfolio. Curriculum directors expand to 7. Cabinet reaches 12 members plus Deputy Superintendent. The district runs a $10 million operating deficit. A FOIA request later reveals Mitchell's contract was signed as "Chief of Staff" while board-facing org charts listed her only as "Special Assistant to the Cabinet." Salary increases made without board approval.
+- **2022–2023 — True peak; transparency failure documented.** Chief of Staff (Dr. Markisha Mitchell) added at cabinet level with DEIB and equity portfolio. Curriculum directors expand to 7. Cabinet reaches 12 members (inclusive of the Deputy Superintendent). The district runs a $10 million operating deficit. A FOIA request later reveals Mitchell's contract was signed as "Chief of Staff" while board-facing org charts listed her only as "Special Assistant to the Cabinet." Salary increases made without board approval.
 - **FY22 — Structural deficit projections emerge.** District projects ongoing structural imbalance — the same fiscal year the expanded administrative structure reaches full cost.
 - **2024–2025 — SDRP Phase I: 22 central office FTEs eliminated.** Deputy Superintendent, two Chiefs of Academics, multiple directors and facilitators removed.
 - **2025–2026 — SDRP Phase II: additional 21–26 FTEs proposed.** Further consolidation; specialized director positions collapsed into Humanities and STEAM roles.
-- **Today — Current structure: leaner, but questions remain.** Five senior leaders, two consolidated director positions — smaller than the 2016–17 baseline on paper, but per-pupil peer benchmarks still show D65 above peers on administrative spend.
+- **Today — Current structure: leaner, but questions remain.** Five senior leaders plus the Superintendent, two consolidated director positions — smaller than the 2016–17 baseline on paper, but per-pupil peer benchmarks still show D65 above peers on administrative spend. The post-SDRP cabinet retains an Executive Chief of Human Relations and an Executive Chief of Communications — Horton-era additions that survived the cuts.
 
 ---
 
@@ -233,7 +235,7 @@ The eliminated positions read like a reversal of the Horton-era expansion: Deput
 In curriculum and instruction, the eight-plus director structure was collapsed into two consolidated roles: Director of Humanities and Director of STEAM. That is genuine organizational change, not just shuffling titles.
 
 ![D65 Cabinet Structure — 2025–26 (Turner)](assets/image5.png)
-*The post-SDRP cabinet: five senior positions replacing what had been fifteen-plus. The district's own framing called this "shifting from a top-down approach." **Important:** this slide shows the cabinet only. Seventeen additional central office administrators report through this structure — directors, executive directors, and coordinators whose positions and compensation are not visible here.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
+*The post-SDRP cabinet: five senior positions replacing what had been twelve plus a deputy-level executive director tier. The district's own framing called this "shifting from a top-down approach." **Important:** this slide shows the cabinet only. Seventeen additional central office administrators report through this structure — directors, executive directors, and coordinators whose positions and compensation are not visible here.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
 
 ![D65 Restructuring Rationale Slide — June 2025](assets/image6.png)
 *The district's stated rationale for the restructuring. Note the acknowledgment that "District staff increased to support schools after pandemic" — a concession that the expansion was real.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
@@ -252,12 +254,13 @@ The 20 TRS-enrolled administrators carry combined total compensation of approxim
 
 The full FY26 senior administrator compensation roster (PA 96-0434, TRS-disclosed):
 
-| Cabinet | Total Compensation |
+| Cabinet (TRS disclosed) | Total Compensation |
 | --- | ---: |
 | Superintendent | $286,378 |
 | Chief Financial Officer | $259,525 |
 | Asst. Supt. of Accountability | $239,474 |
 | Asst. Supt. of Academics | $195,427 |
+
 
 | Directors & Managers | Total Compensation |
 | --- | ---: |
@@ -267,7 +270,7 @@ The full FY26 senior administrator compensation roster (PA 96-0434, TRS-disclose
 | Director of Finance | $192,453 |
 | Manager of Student Specialized Services | $186,904 |
 | Director of Humanities | $182,363 |
-| Exec. Director of RAAD | $177,066 |
+| Exec. Director of RAAD (Research, Assessment, Accountability, and Data)| $177,066 |
 | Director of Student Specialized Services | $175,971 |
 | Director of STEAM | $173,684 |
 | Exec. Director of Technology | $170,188 |
@@ -280,7 +283,15 @@ The full FY26 senior administrator compensation roster (PA 96-0434, TRS-disclose
 
 Base salary average: $152,234. Total comp average: $187,193.
 
-> **Beyond the Cabinet** — The roster above shows all 20 TRS-disclosed administrator positions — the complete picture the board-facing org chart does not show. The 16 directors and managers below the cabinet account for $2.76 million in total compensation annually. This is the layer where right-sizing work most directly remains, and where peer-norm benchmarking should focus first.
+
+There are two additional cabinet positions that appear in the IMRF disclosure (salaries over $75,000):
+
+| Cabinet (IMRF-disclosed) | Total Compensation | 
+| --- | ---: |
+| Executive Chief of Human Relations | $200,181 |
+| Executive Chief of Communications | $182,439  | 
+
+> **Beyond the Cabinet** — The roster above shows all 20 TRS-disclosed administrator positions and two additional Executive Chief cabinet positions — the complete picture the board-facing org chart does not show. The 16 directors and managers below the cabinet account for $2.76 million in total compensation annually. This is the layer where right-sizing work most directly remains, and where peer-norm benchmarking should focus first.
 
 ### 2. Administrative Support Positions Stay Above $75K
 
@@ -335,7 +346,9 @@ This matters for right-sizing in a concrete way: per-pupil peer benchmarks refle
 
 > **"Cut to the Bone"** — District administration has described the SDRP cuts as having already "cut to the bone." The two-tier table above puts that claim to the test. The cabinet — the visible, board-facing layer — was indeed cut dramatically, finishing below its 2016–17 starting point. But the sub-cabinet layer, where most of the day-to-day administrative cost actually lives, contracted by roughly 13% while remaining seven times its original size. That asymmetry demands an explanation the district has not provided: why does D65 need seven times as many directors, coordinators, and program managers today as it did in 2016, to serve 25% fewer students? Each hire was individually plausible; none was examined in aggregate.
 >
-> The sub-cabinet is where the real right-sizing opportunity remains — and it is an opportunity that would not touch a single classroom. The 13 sub-cabinet positions that appear in the district's FY2025–26 PA 96-0434 compensation report carry average total compensation of approximately $140,000. With the full sub-cabinet estimated at 42 positions and the district's 2016–17 baseline at just 6, even a conservative reduction to 20 positions would eliminate roughly 22 roles — generating an estimated **$3 to $4 million in annual savings** without cutting a teacher, a counselor, or a librarian. A more substantial right-sizing would approach $5 to $6 million.
+> The sub-cabinet is where the real right-sizing opportunity remains — and it is an opportunity that would not touch a single classroom. The 16 directors and managers that appear in the district's FY2025–26 PA 96-0434 compensation report carry average total compensation of **approximately $173,000, totaling $2.76M across that disclosed slice alone**. The full sub-cabinet — including IMRF-disclosed directors and managers not in the TRS report — is estimated at 42 positions against an SY2016–17 baseline of just 6. Even a conservative reduction to 20 positions would eliminate roughly 22 roles. Using the same district-implicit average compensation the SDRP Phase III deck applied ($129K per position cut), that is **roughly $2.8M in annual savings**; valued at the higher TRS-disclosed sub-cabinet average ($173K), it approaches $3.8M — without cutting a teacher, a counselor, or a librarian. A more substantial right-sizing to ~10 positions would **approach $4 to $5.5 million** on the same two yardsticks.
+
+
 
 ### Enrollment vs. Central Office Positions
 
@@ -349,6 +362,8 @@ A second lens: how did positions move relative to enrollment? If staffing had tr
 | 2021–22 | 6,116 | 10 | 38 | 48 |
 | 2022–23 | 6,019 | 12 | 48 | 60 |
 | 2025–26 | 5,567 | 6 | 42 | 48 |
+
+*Table uses District 65's K-8 graded-classroom count (5,567 in 2025–26); ISBE 'total served' adds early-childhood, Park, Rice, and JEH students for a figure of 5,941. Headline figure (5,625) is the K-8 + PreK-with-IEP count consistent with the District's Opening of Schools report.*
 
 Enrollment fell 19% from 2016–17 to 2022–23; total central office positions grew from 14 to 60. The SDRP pulled the lines back from their peak, but the 2025–26 points remain dramatically above where they started when enrollment was 25% higher.
 
@@ -419,9 +434,9 @@ The ongoing HR audit is the right starting point. The Legion of Data Nerds has f
 
 The cabinet was cut dramatically under the SDRP, finishing below its 2016–17 starting point. The sub-cabinet — where most of the day-to-day administrative cost actually lives — contracted by roughly 13% while remaining seven times its original size. A district that cuts its top positions while leaving dozens of directors, coordinators, and program managers in place has not right-sized; it has decapitated. The real opportunity is in the second tier.
 
-The math is straightforward. The district's own state-required salary disclosures show average total compensation of approximately $140,000 for the 13 sub-cabinet positions that are publicly listed. With the full sub-cabinet estimated at 42 positions, a conservative reduction to 20 — still more than three times the 2016 baseline — would save an estimated $3 to $4 million annually, without touching a single teacher, counselor, or librarian. A more substantial reduction would approach $5 to $6 million.
+The math is straightforward. The 16 sub-cabinet positions disclosed in the district's FY2025–26 PA 96-0434 report average approximately $173,000 in total compensation; the district's own April 20, 2026 SDRP Phase III deck implicitly values an admin/support cut at $129,489 per position (the FY26 workforce average). With the full sub-cabinet estimated at 42 positions, a conservative reduction to 20 — still more than three times the 2016 baseline — would eliminate roughly 22 roles and save an estimated **$2.8 to $3.8 million annually**, without touching a single teacher, counselor, or librarian. A reduction to ~10 positions would approach **$4 to $5.5 million**.
 
-D65 still spends $619 per pupil on Special Area Administration against a peer average of $176. The district cannot claim to have right-sized while that gap remains unexplained. And the district cannot have it both ways on enrollment decline: the same enrollment math that justified closing four school buildings over two years should apply to the central office staffing model with equal urgency. School closures happened immediately. The $8.29M Phase III administrative cut proposal was presented 19 days after the contractual deadline that would have made it actionable for FY27, deferring those cuts to FY28 at the earliest. The asymmetry is the argument.
+D65 still spends $619 per pupil on Special Area Administration against a peer average of $176. The district cannot claim to have right-sized while that gap remains unexplained. And the district cannot have it both ways on enrollment decline: the same enrollment math that justified the initial proposal to close four school buildings over two years should apply to the central office staffing model with equal urgency. School closures happened immediately. The $8.29M Phase III administrative cut proposal was presented 19 days after the contractual deadline that would have made it actionable for FY27, deferring those cuts to FY28 at the earliest. The asymmetry is the argument.
 
 > The district eliminated administrators and student-facing staff in the same sweep. Those are not equivalent choices, and they should not be discussed as if they are.
 
@@ -444,7 +459,7 @@ The board and public currently cannot see what they are governing. The district 
 The district should publish a complete, annually updated administrative roster — covering all positions across TRS Admin, IMRF administrative, and certificated administrative disclosures, not just the subset that appears on the cabinet org chart. Each position should include its reporting line and a plain-language description of its role. This is standard practice in well-governed public institutions.
 
 ![2025–26 Academics: Teaching & Learning detail](assets/image7.png)
-*The second tier under Dr. Katie Speth (Asst. Superintendent of Academics) — the layer invisible in the cabinet slide above. Directors of Humanities, STEAM, Multilingual Services, Programs and Partnerships, Student Specialized Services, and nine IES Coordinators all report through this structure. These are the positions that represent the real ongoing administrative footprint below the cabinet level.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
+*The second tier under Dr. Katie Speth (Asst. Superintendent of Academics) — the layer invisible in the cabinet slide above. Directors of Humanities, STEAM, Multilingual Services, Programs and Partnerships, Student Specialized Services, and nine IES Coordinators (Instructional Equity Specialists) all report through this structure. These are the positions that represent the real ongoing administrative footprint below the cabinet level.* — [FOIA Gras doc 4162](https://ig.foiagras.com/api/public/chat/documents/4162/view){:target="_blank"}
 
 ### 4. Build a board accountability framework that makes governance structural, not episodic
 
@@ -535,3 +550,7 @@ All primary documents were obtained via FOIA requests to District 65 or retrieve
 This analysis was prepared by the Legion of Data Nerds with the assistance of [Claude.ai](https://claude.ai){:target="_blank"} (Anthropic), which helped extract patterns across compensation reports, org charts, and board presentations, and helped draft this page. All source data is from public District 65 board meeting documents indexed on [FOIA Gras](https://foiagras.com){:target="_blank"}. All editorial decisions, methodology choices, and conclusions are the authors'.
 
 *Independent parent analysis of District 65 budget and governance · Evanston, Illinois · May 7, 2026. This analysis reflects the views of the Legion of Data Nerds, not any individual board member, staff member, or official body.*
+
+### Updates and revisions: May 15, 2026
+
+This version reconciles the post-SDRP cabinet count to six, reframes the sub-cabinet savings math using the district's own $129,489 per-cut benchmark from the April 20, 2026 Phase III deck, and adds source notes for the three different 2025–26 enrollment figures used by the district, ISBE, and Larry Gavin's RoundTable analysis. Editorial passes also clarified the Deputy Superintendent's inclusion in the 12-member peak cabinet, expanded acronyms on first use, and tightened repeated language in the opening sections. 
