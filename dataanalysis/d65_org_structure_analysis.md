@@ -6,6 +6,76 @@ description: "How District 65's central office doubled while enrollment fell 25%
 last_modified_date: 2026-05-07
 ---
 
+<style>
+.viz-wrap {
+  margin: 40px 0;
+  background: white;
+  border: 1px solid #c8bfaf;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.viz-header {
+  background: #1a1a1a;
+  color: #f5f0e8;
+  padding: 16px 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.viz-body { padding: 28px 24px; }
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.bar-year {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  width: 60px;
+  flex-shrink: 0;
+  color: #6b6458;
+}
+.bar-track {
+  flex: 1;
+  background: #ede8dc;
+  height: 36px;
+  border-radius: 2px;
+  position: relative;
+  overflow: visible;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  min-width: 48px;
+}
+.bar-fill.baseline { background: #6b6458; }
+.bar-fill.peak { background: #c0392b; }
+.bar-fill.current { background: #2d6a4f; }
+.bar-label {
+  font-size: 13px;
+  color: #1a1a1a;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
 # The Org Chart That Ate Our Budget
 
 **A Legion of Data Nerds structural history of District 65's administrative organization — how org chart creep doubled the central office, what the SDRP dismantled, and** **<big><span style="color:red">what still needs to go.</span></big>**
@@ -145,6 +215,36 @@ Under Superintendent Paul Goren, District 65 operated with a relatively streamli
 
 Curriculum and instruction was managed by four directors — covering STEM, Literacy, ELL, and Social Studies. Operations were consolidated under business services. This was a functional structure for a district of D65's size and complexity.
 
+<div class="viz-wrap">
+  <div class="viz-header">Central Administration — 2016–17 Baseline (Goren Era)</div>
+  <div class="viz-body">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-year">2016–17</div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:32%">8 positions</div>
+        </div>
+        <div class="bar-label">Central admin headcount</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year"></div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:16%">4</div>
+        </div>
+        <div class="bar-label">Curriculum &amp; Instruction directors</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year"></div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:8%">1</div>
+        </div>
+        <div class="bar-label">Asst. Superintendent covering Student Services</div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:#6b6458;font-family:'IBM Plex Mono',monospace;">Roles: Superintendent · Asst. Supt. of Business Services · Chief Strategy Officer · Asst. Supt. of Schools · Asst. Supt. of HR · Asst. Supt. of Special Services · Chief Officer of Research &amp; Data · Executive Director of Curriculum &amp; Instruction</p>
+  </div>
+</div>
+
 A note on what we are *not* arguing: the 2016–17 structure is a reference point, not a target. Education has changed since then — multilingual services, social-emotional learning, early childhood programs, and equity-focused support have all grown, and some of that investment is legitimate. (SPED costs also rose dramatically — but driven by transportation and contracted services, not by central office positions.) The question is narrower: was the scale of sub-cabinet growth proportionate to enrollment and to demonstrated need? Did it produce better outcomes for students? The evidence available to us does not support a yes on either count.
 
 ![D65 Org Chart — 2016–17 School Year (Goren)](assets/image1.png)
@@ -168,6 +268,42 @@ The expansion was broad-based. A Deputy Superintendent position was created for 
 | Curriculum & Instruction | 4 directors + 1 exec | 7 directors + facilitators |
 | Student Services / SPED | 1 asst. superintendent | 3+ directors under 1 asst. supt. |
 | Technology / IT | — embedded roles | 3+ dedicated positions |
+
+<div class="viz-wrap">
+  <div class="viz-header">Administrative Growth: 2016–17 Baseline vs. 2022–23 Peak vs. 2025–26 Current</div>
+  <div class="viz-body">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-year">2016–17</div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:32%">8</div>
+        </div>
+        <div class="bar-label">Central admin positions</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year">2022–23</div>
+        <div class="bar-track">
+          <div class="bar-fill peak" style="width:65%">12 cabinet + Deputy</div>
+        </div>
+        <div class="bar-label">Central admin positions (peak, cabinet only)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year">2016–17</div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:16%">4</div>
+        </div>
+        <div class="bar-label">Curriculum directors</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year">2022–23</div>
+        <div class="bar-track">
+          <div class="bar-fill peak" style="width:36%">7 dirs + facilitators</div>
+        </div>
+        <div class="bar-label">Curriculum directors (7 by 2022-23, peak)</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ![D65 Org Chart — 2021–22 School Year (Horton Peak)](assets/image2.png)
 *The full expansion: Deputy Superintendent LaTarsha Green, seven assistant superintendents, specialized directors across every curriculum area. This is the structure the SDRP was built to dismantle. The chart also shows one structural anomaly: the Bessie Rhodes and King Arts principals reported directly to the Deputy Superintendent rather than through the Assistant Superintendent of Schools like every other building principal. No public document explains the rationale.* — [FOIA Gras doc 3180](https://ig.foiagras.com/api/public/chat/documents/3180/view){:target="_blank"}
@@ -228,6 +364,35 @@ The SDRP achieved meaningful reductions in headcount. Across Phases I and II, th
 </tr>
 </table>
 
+<div class="viz-wrap">
+  <div class="viz-header">Before &amp; After: Central Admin Senior Positions</div>
+  <div class="viz-body">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-year">2016–17</div>
+        <div class="bar-track">
+          <div class="bar-fill baseline" style="width:32%">8</div>
+        </div>
+        <div class="bar-label">Goren baseline</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year">2022–23</div>
+        <div class="bar-track">
+          <div class="bar-fill peak" style="width:65%">12+ cabinet</div>
+        </div>
+        <div class="bar-label">True peak (2022–23)</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-year">2025–26</div>
+        <div class="bar-track">
+          <div class="bar-fill current" style="width:20%">5</div>
+        </div>
+        <div class="bar-label">Post-SDRP current</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 The *RoundTable* documented a striking paradox in the FY26 numbers: the board approved 90 position reductions, yet total salary and benefit costs actually rose by about $700,000 — from $132.6 million to $133.3 million. Fewer people, higher total cost. That is what happens when restructuring eliminates lower-paid positions while preserving high-compensation ones.
 
 The eliminated positions read like a reversal of the Horton-era expansion: Deputy Superintendent, two Chiefs of Academics & School Management, Assistant Superintendent of Safety & Climate, Assistant Superintendent of Student Specialized Services, Director of Math, Director of Science, Director of Social Studies, Director of Training & Development, Director of Culture & Climate, four Content Facilitators.
@@ -254,35 +419,175 @@ The 20 TRS-enrolled administrators carry combined total compensation of approxim
 
 The full FY26 senior administrator compensation roster (PA 96-0434, TRS-disclosed):
 
-| Cabinet (TRS disclosed) | Total Compensation |
-| --- | ---: |
-| Superintendent | $286,378 |
-| Chief Financial Officer | $259,525 |
-| Asst. Supt. of Accountability | $239,474 |
-| Asst. Supt. of Academics | $195,427 |
+<div class="viz-wrap">
+  <div class="viz-header">FY26 Senior Administrator Total Compensation</div>
+  <div class="viz-body">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 0 8px;border-bottom:2px solid #c8bfaf;margin-bottom:4px;">
+      <div style="width:230px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.05em;text-transform:uppercase;">Position</div>
+      <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;">
+        <span style="display:inline-block;width:12px;height:10px;background:#185FA5;border-radius:1px;vertical-align:middle;margin-right:4px;"></span>Total compensation
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;text-align:right;">Total comp</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin:4px 0 6px;">
+      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Cabinet</div>
+      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Superintendent</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:100%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$286,378</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Chief Financial Officer</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:90.62%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$259,525</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Supt. of Accountability</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:83.62%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$239,474</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Supt. of Academics</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:68.24%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$195,427</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin:12px 0 6px;">
+      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Directors &amp; Managers</div>
+      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Schools Management</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:74.51%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$213,371</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of MTSS &amp; SEL</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:70.17%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$200,952</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Early Childhood Programs</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:68.02%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$194,807</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Finance</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:67.20%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$192,453</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Manager of Student Specialized Svcs</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:65.26%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$186,904</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Humanities</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:63.68%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$182,363</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Exec. Director of RAAD</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:61.83%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$177,066</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Student Specialized Svcs</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:61.45%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$175,971</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of STEAM</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:60.65%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$173,684</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Exec. Director of Technology</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:59.43%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$170,188</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Multilingual Services</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:56.80%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$162,675</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Buildings, Grounds &amp; T</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:51.87%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$148,542</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Programs &amp; Partnerships</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:51.49%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$147,452</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Director of Teaching &amp; Learning</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:51.13%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$146,415</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Climate &amp; Safety</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:51.12%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$146,407</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;">
+      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Health Services Director</div>
+      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
+        <div style="width:50.22%;background:#185FA5;height:100%;"></div>
+      </div>
+      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$143,809</div>
+    </div>
+    <div style="margin-top:14px;padding:10px 12px;background:#f8f6f2;border-left:3px solid #c8bfaf;border-radius:2px;">
+      <p style="font-size:11px;color:#6b6458;font-family:'IBM Plex Mono',monospace;margin:0;">
+        <strong style="color:#1a1a1a;">Note:</strong> Total compensation includes base salary plus benefits. Base salary avg: $152,234. Total comp avg: $187,193. Bar width scaled to highest total compensation ($286,378). Source: PA 96-0434 TRS Administrator Salary Report, FY2025–26.
+      </p>
+    </div>
+  </div>
+</div>
 
-
-| Directors & Managers | Total Compensation |
-| --- | ---: |
-| Director of Schools Management | $213,371 |
-| Director of MTSS & SEL | $200,952 |
-| Director of Early Childhood Programs | $194,807 |
-| Director of Finance | $192,453 |
-| Manager of Student Specialized Services | $186,904 |
-| Director of Humanities | $182,363 |
-| Exec. Director of RAAD (Research, Assessment, Accountability, and Data)| $177,066 |
-| Director of Student Specialized Services | $175,971 |
-| Director of STEAM | $173,684 |
-| Exec. Director of Technology | $170,188 |
-| Director of Multilingual Services | $162,675 |
-| Director of Buildings, Grounds & Transportation | $148,542 |
-| Director of Programs & Partnerships | $147,452 |
-| Asst. Director of Teaching & Learning | $146,415 |
-| Director of Climate & Safety | $146,407 |
-| Health Services Director | $143,809 |
-
-Base salary average: $152,234. Total comp average: $187,193.
-
+> **Beyond the Cabinet** — The roster above shows all 20 TRS-disclosed administrator positions and two additional Executive Chief cabinet positions — the complete picture the board-facing org chart does not show. The 16 directors and managers below the cabinet account for $2.76 million in total compensation annually. This is the layer where right-sizing work most directly remains, and where peer-norm benchmarking should focus first.
 
 There are two additional cabinet positions that appear in the IMRF disclosure (salaries over $75,000):
 
@@ -290,8 +595,6 @@ There are two additional cabinet positions that appear in the IMRF disclosure (s
 | --- | ---: |
 | Executive Chief of Human Relations | $200,181 |
 | Executive Chief of Communications | $182,439  | 
-
-> **Beyond the Cabinet** — The roster above shows all 20 TRS-disclosed administrator positions and two additional Executive Chief cabinet positions — the complete picture the board-facing org chart does not show. The 16 directors and managers below the cabinet account for $2.76 million in total compensation annually. This is the layer where right-sizing work most directly remains, and where peer-norm benchmarking should focus first.
 
 ### 2. Administrative Support Positions Stay Above $75K
 
@@ -331,14 +634,140 @@ The SDRP cut the cabinet from 12 to 6 — a **50%** reduction. The sub-cabinet c
 
 The asymmetry is visible in the year-by-year count of named central office positions:
 
-| School Year | Cabinet | Sub-cabinet | Total |
-| --- | ---: | ---: | ---: |
-| 2016–17 (Goren) | 8 | 6 | 14 |
-| Summer 2019 (Beardsley interim) | 8 | 9 | 17 |
-| 2020–21 (Horton year 1) | 9 | 20 | 29 |
-| 2021–22 (Horton year 2) | 10 | 38 | 48 |
-| 2022–23 (Horton peak) | 12 | 48 | 60 |
-| 2025–26 (Turner, post-SDRP) | 6 | 42 | 48 |
+<div class="viz-wrap">
+  <div class="viz-header">Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026</div>
+  <div class="viz-body" style="padding:24px 24px 16px;">
+    <div style="position:relative;width:100%;height:460px;">
+      <canvas id="twoTierChart" role="img" aria-label="Stacked bar chart showing cabinet and sub-cabinet administrative positions at D65 from 2016-17 through 2025-26.">Cabinet: 8, 8, 9, 10, 12, 6. Sub-cabinet: 6, 9, 20, 38, 48, 42.</canvas>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 8px;font-size:13px;color:#6b6458;">
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:#c0392b;display:inline-block;"></span>Cabinet (asst. superintendents, chiefs, deputy superintendent)</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:#f09595;display:inline-block;"></span>Sub-cabinet (directors, coordinators, managers)</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;border:1.5px dashed #c0392b;display:inline-block;"></span>Post-SDRP (2025–26)</span>
+    </div>
+    <p style="font-size:12px;color:#6b6458;margin:6px 0 2px;font-family:'IBM Plex Mono',monospace;">* 2020–21 sub-cabinet figure (~20) is a partial estimate.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var labels = [
+    ['2016–17', '(Goren)'],
+    '',
+    ['2019 Summer', '(Beardsley, Interim)'],
+    ['2020–21*', '(Horton yr1)'],
+    ['2021–22', '(Horton yr2)'],
+    ['2022–23', '(Horton, Peak)'],
+    '',
+    ['2025–26', '(Turner, Post-SDRP)']
+  ];
+  var nullIdx = [1, 6];
+  var cabinet    = [8, null, 8,  9,  10, 12, null, 6];
+  var subcabinet = [6, null, 9,  20, 38, 48, null, 42];
+  var narrowGapPlugin = {
+    id: 'narrowGap',
+    beforeDatasetsDraw: function(chart) {
+      var scale = chart.scales.x;
+      var slotWidth = scale.width / labels.length;
+      [0, 1].forEach(function(dsIdx) {
+        var meta = chart.getDatasetMeta(dsIdx);
+        nullIdx.forEach(function(i) {
+          if (meta.data[i]) meta.data[i].width = slotWidth * 0.005;
+        });
+      });
+    }
+  };
+  var hortonShadePlugin = {
+    id: 'hortonShade',
+    beforeDatasetsDraw: function(chart) {
+      var ctx = chart.ctx;
+      var xScale = chart.scales.x;
+      var yScale = chart.scales.y;
+      if (!xScale || !yScale || !xScale.width) return;
+      var sw = xScale.width / labels.length;
+      var x1 = xScale.getPixelForValue(2) - sw * 0.5;
+      var x2 = xScale.getPixelForValue(5) + sw * 0.5;
+      var top = yScale.top;
+      var bottom = yScale.bottom;
+      ctx.save();
+      ctx.fillStyle = 'rgba(0,0,0,0.07)';
+      ctx.fillRect(x1, top, x2 - x1, bottom - top);
+      ctx.strokeStyle = 'rgba(80,80,80,0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([4, 3]);
+      ctx.beginPath(); ctx.moveTo(x1, top); ctx.lineTo(x1, bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x2, top); ctx.lineTo(x2, bottom); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = 'rgba(80,80,80,0.55)';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('← Horton era →', (x1 + x2) / 2, top - 6);
+      ctx.restore();
+    }
+  };
+  new Chart(document.getElementById('twoTierChart'), {
+    type: 'bar',
+    plugins: [narrowGapPlugin, hortonShadePlugin],
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Cabinet',
+          data: cabinet,
+          backgroundColor: ['#c0392b','transparent','#c0392b','#c0392b','#c0392b','#c0392b','transparent','#a32d2d'],
+          borderWidth: [0,0,0,0,0,0,0,2],
+          borderColor: '#501313',
+          categoryPercentage: 0.85,
+          barPercentage: 0.92,
+        },
+        {
+          label: 'Sub-cabinet',
+          data: subcabinet,
+          backgroundColor: ['#f09595','transparent','#f09595','#f8d7d7','#f09595','#f09595','transparent','#f7c1c1'],
+          borderWidth: [0,0,0,1,0,0,0,2],
+          borderColor: ['transparent','transparent','transparent','#c0392b','transparent','transparent','transparent','#c0392b'],
+          categoryPercentage: 0.85,
+          barPercentage: 0.92,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          filter: function(item) { return item.raw !== null; },
+          callbacks: {
+            afterBody: function(items) {
+              var idx = items[0].dataIndex;
+              var c = cabinet[idx], s = subcabinet[idx];
+              if (!c && !s) return [];
+              return ['Total: ' + ((c||0)+(s||0)) + ' central office positions'];
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: { font: { size: 10, family: 'monospace' }, color: '#6b6458', autoSkip: false, maxRotation: 45, minRotation: 30 },
+          grid: { display: false },
+          offset: true
+        },
+        y: {
+          stacked: true,
+          max: 65,
+          ticks: { font: { size: 11 }, color: '#6b6458', stepSize: 10 },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+          title: { display: true, text: 'Named central office positions', font: { size: 11, family: 'monospace' }, color: '#6b6458' }
+        }
+      },
+      layout: { padding: { bottom: 10, top: 22 } }
+    }
+  });
+})();
+</script>
 
 The cabinet bars collapse dramatically in the post-SDRP column. The sub-cabinet bars barely move. This is the structural reality that a cabinet-only org chart — the kind presented to the board and published on the district website — cannot show.
 
@@ -354,22 +783,270 @@ This matters for right-sizing in a concrete way: per-pupil peer benchmarks refle
 
 A second lens: how did positions move relative to enrollment? If staffing had tracked enrollment, both lines would slope downward. Instead, as D65 lost nearly 1,500 students between 2016–17 and 2022–23, central office positions more than quadrupled:
 
-| School Year | Enrollment | Cabinet | Sub-cabinet | Total |
-| --- | ---: | ---: | ---: | ---: |
-| 2016–17 | 7,422 | 8 | 6 | 14 |
-| Summer 2019 | 6,977 | 8 | 9 | 17 |
-| 2020–21 | 6,497 | 9 | 20 | 29 |
-| 2021–22 | 6,116 | 10 | 38 | 48 |
-| 2022–23 | 6,019 | 12 | 48 | 60 |
-| 2025–26 | 5,567 | 6 | 42 | 48 |
+<div class="viz-wrap">
+  <div class="viz-header">Enrollment vs. Central Office Positions, 2016–2026</div>
+  <div class="viz-body" style="padding:24px 24px 16px;">
+    <div style="position:relative;width:100%;height:440px;">
+      <canvas id="scatterEmbed" role="img" aria-label="Connected scatter plot showing cabinet, sub-cabinet, and total administrative positions against student enrollment at D65 from 2016-17 to 2025-26."></canvas>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px;font-size:13px;color:#6b6458;">
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#185FA5;display:inline-block;"></span>Cabinet</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#85B7EB;display:inline-block;"></span>Sub-cabinet</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#534AB7;display:inline-block;"></span>Total central office admin</span>
+    </div>
+    <p style="font-size:12px;color:#6b6458;margin:4px 0 0;font-family:'IBM Plex Mono',monospace;">Each point = one school year, moving left to right as enrollment declines chronologically.</p>
+  </div>
+</div>
 
-*Table uses District 65's K-8 graded-classroom count (5,567 in 2025–26); ISBE 'total served' adds early-childhood, Park, Rice, and JEH students for a figure of 5,941. Headline figure (5,625) is the K-8 + PreK-with-IEP count consistent with the District's Opening of Schools report.*
+<script>
+(function() {
+  var pts = [
+    { year: '2016–17', enrollment: 7422, cab: 8,  sub: 6  },
+    { year: '2019 S',   enrollment: 6977, cab: 8,  sub: 9  },
+    { year: '2020–21', enrollment: 6497, cab: 9,  sub: 20 },
+    { year: '2021–22', enrollment: 6116, cab: 10, sub: 38 },
+    { year: '2022–23', enrollment: 6019, cab: 12, sub: 48 },
+    { year: '2025–26', enrollment: 5567, cab: 6,  sub: 42 },
+  ];
+  var cabData = pts.map(function(p){ return { x: p.enrollment, y: p.cab, label: p.year }; });
+  var subData = pts.map(function(p){ return { x: p.enrollment, y: p.sub, label: p.year }; });
+  var totData = pts.map(function(p){ return { x: p.enrollment, y: p.cab + p.sub, label: p.year }; });
+  var scatterHortonShade = {
+    id: 'scatterHortonShade',
+    beforeDatasetsDraw: function(chart) {
+      var ctx = chart.ctx;
+      var xScale = chart.scales.x;
+      var yScale = chart.scales.y;
+      if (!xScale || !yScale) return;
+      var x1 = xScale.getPixelForValue(6977);
+      var x2 = xScale.getPixelForValue(6019);
+      var top = yScale.top;
+      var bottom = yScale.bottom;
+      ctx.save();
+      ctx.fillStyle = 'rgba(0,0,0,0.07)';
+      ctx.fillRect(x1, top, x2 - x1, bottom - top);
+      ctx.strokeStyle = 'rgba(100,100,100,0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([5, 4]);
+      ctx.beginPath(); ctx.moveTo(x1, top); ctx.lineTo(x1, bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(x2, top); ctx.lineTo(x2, bottom); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#555';
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'left';
+      ctx.fillText('Horton arrives', x1 + 4, top - 6);
+      ctx.textAlign = 'right';
+      ctx.fillText('Horton departs', x2 - 4, top - 6);
+      ctx.restore();
+    }
+  };
+  var labelPlugin = {
+    id: 'yearLabelsEmbed',
+    afterDatasetsDraw: function(chart) {
+      var ctx = chart.ctx;
+      ctx.save();
+      ctx.font = '10px monospace';
+      ctx.fillStyle = '#6b6458';
+      [
+        { idx: 0, data: cabData, yOff: -9  },
+        { idx: 1, data: subData, yOff: 13  },
+        { idx: 2, data: totData, yOff: -9  },
+      ].forEach(function(ds) {
+        var meta = chart.getDatasetMeta(ds.idx);
+        ds.data.forEach(function(d, i) {
+          var pt = meta.data[i];
+          ctx.textAlign = 'left';
+          ctx.fillText(d.label, pt.x + 7, pt.y + ds.yOff);
+        });
+      });
+      ctx.restore();
+    }
+  };
+  new Chart(document.getElementById('scatterEmbed'), {
+    type: 'line',
+    plugins: [scatterHortonShade, labelPlugin],
+    data: {
+      datasets: [
+        {
+          label: 'Cabinet',
+          data: cabData,
+          borderColor: '#185FA5', backgroundColor: '#185FA5',
+          pointRadius: 6, pointHoverRadius: 8, borderWidth: 2.5, tension: 0.3,
+          parsing: { xAxisKey: 'x', yAxisKey: 'y' },
+        },
+        {
+          label: 'Sub-cabinet',
+          data: subData,
+          borderColor: '#85B7EB', backgroundColor: '#85B7EB',
+          pointRadius: 6, pointHoverRadius: 8, borderWidth: 2.5, tension: 0.3,
+          parsing: { xAxisKey: 'x', yAxisKey: 'y' },
+        },
+        {
+          label: 'Total',
+          data: totData,
+          borderColor: '#534AB7', backgroundColor: '#534AB7',
+          pointRadius: 6, pointHoverRadius: 8, pointStyle: 'rectRot',
+          borderWidth: 2.5, tension: 0.3,
+          parsing: { xAxisKey: 'x', yAxisKey: 'y' },
+        },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: function(items) { return items[0].raw.label || ''; },
+            label: function(item) { return item.dataset.label + ': ' + item.raw.y + ' positions · Enrollment: ' + item.raw.x.toLocaleString(); }
+          }
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear', reverse: true, min: 5400, max: 7500,
+          ticks: { font: { size: 11, family: 'monospace' }, color: '#6b6458', callback: function(v){ return v.toLocaleString(); }, stepSize: 500 },
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          title: { display: true, text: '← Earlier years (higher enrollment)          Recent years (lower enrollment) →', font: { size: 11, family: 'monospace' }, color: '#6b6458' }
+        },
+        y: {
+          min: 0, max: 65,
+          ticks: { font: { size: 11 }, color: '#6b6458', stepSize: 10 },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+          title: { display: true, text: 'Named central office positions', font: { size: 11, family: 'monospace' }, color: '#6b6458' }
+        }
+      },
+      layout: { padding: { right: 80, top: 20, left: 10 } }
+    }
+  });
+})();
+</script>
+
+*Chart uses District 65's K-8 graded-classroom count (5,567 in 2025–26); ISBE 'total served' adds early-childhood, Park, Rice, and JEH students for a figure of 5,941. Headline figure (5,625) is the K-8 + PreK-with-IEP count consistent with the District's Opening of Schools report.*
 
 Enrollment fell 19% from 2016–17 to 2022–23; total central office positions grew from 14 to 60. The SDRP pulled the lines back from their peak, but the 2025–26 points remain dramatically above where they started when enrollment was 25% higher.
 
 Indexed to 2016–17 = 100%, enrollment fell to 75% of baseline — a loss of about 1,900 students. The cabinet grew to 150% at peak, then the SDRP cut it back to 75% — below where it started. The cabinet, at least, was eventually restrained.
 
 The sub-cabinet tells a different story entirely. It grew from 100% to **800%** of baseline by the 2022–23 peak — eight times its 2016–17 level — while enrollment was still falling. Post-SDRP, it sits at **700%**. For every percentage point enrollment fell from baseline, sub-cabinet grew roughly 35 percentage points in the other direction.
+
+<div class="viz-wrap">
+  <div class="viz-header">Indexed Change: Enrollment vs. Sub-Cabinet Growth, 2016–2026 (2016–17 = 100%)</div>
+  <div class="viz-body" style="padding:24px 24px 16px;">
+    <div style="font-family:'IBM Plex Mono',monospace;display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;font-size:11px;color:#6b6458;">
+      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:rgba(24,95,165,0.82);"></span>Enrollment</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:#E03A1E;"></span>Sub-cabinet</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:#F4A940;"></span>Cabinet</span>
+    </div>
+    <div style="position:relative;width:100%;height:360px;">
+      <canvas id="fig3indexed" role="img" aria-label="Indexed horizontal bar chart. Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP. Enrollment fell to 80% by 2025-26.">Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP.</canvas>
+    </div>
+    <p style="font-size:11px;color:#6b6458;margin-top:10px;font-family:'IBM Plex Mono',monospace;"><strong>How to read:</strong> Bars share the same centerline. Sub-cabinet bars exceeding 200% are truncated; actual values shown at right. The solid black vertical line marks the 100% baseline (2016–17).</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var fullYrs=['2016–17 (Goren)','2019 S (Beardsley, interim)','2020–21 (Horton yr 1)','2021–22 (Horton yr 2)','2022–23 (Horton, peak)','2025–26 (Turner, post-SDRP)'];
+  var enrollment=[7422,6977,6497,6116,6019,5567];
+  var cabinet=[8,8,9,10,12,6];
+  var subcab=[6,9,20,38,48,42];
+  var bE=7422,bC=8,bSC=6,MAX=200;
+  var idxE=enrollment.map(function(v){return Math.round(v/bE*100);});
+  var idxC=cabinet.map(function(v){return Math.round(v/bC*100);});
+  var idxSC=subcab.map(function(v){return Math.round(v/bSC*100);});
+  var capE=idxE.map(function(v){return Math.min(v,MAX);});
+  var capC=idxC.map(function(v){return Math.min(v,MAX);});
+  var capSC=idxSC.map(function(v){return Math.min(v,MAX);});
+  var CP=0.68,BP=0.82;
+  var COL_SC='#E03A1E',COL_C='#F4A940',COL_E='rgba(24,95,165,0.82)';
+
+  function makeStripe(){
+    var pc=document.createElement('canvas');pc.width=8;pc.height=8;
+    var px=pc.getContext('2d');px.clearRect(0,0,8,8);
+    px.strokeStyle='rgba(255,255,255,0.45)';px.lineWidth=2;
+    px.beginPath();px.moveTo(0,8);px.lineTo(8,0);px.stroke();
+    return pc;
+  }
+  var stripeCanvas=makeStripe();
+
+  var plugin={
+    id:'fig3plugin',
+    beforeDatasetsDraw:function(chart){
+      var ctx=chart.ctx,y=chart.scales.y,x=chart.scales.x;
+      if(!y||!x)return;
+      var left=x.left,right=x.right,top=y.top,bot=y.bottom;
+      var rowH=(bot-top)/fullYrs.length;
+      var bTop=y.getPixelForValue(1)-rowH*0.5,bBot=y.getPixelForValue(4)+rowH*0.5;
+      ctx.save();
+      ctx.fillStyle='rgba(0,0,0,0.07)';ctx.fillRect(left,bTop,right-left,bBot-bTop);
+      var x100=x.getPixelForValue(100);
+      ctx.strokeStyle='#000000';ctx.lineWidth=1.5;
+      ctx.beginPath();ctx.moveTo(x100,top);ctx.lineTo(x100,bot);ctx.stroke();
+      ctx.fillStyle='#000000';ctx.font='9px monospace';ctx.textAlign='center';ctx.fillText('100%',x100,top-3);
+      ctx.strokeStyle='rgba(80,80,80,0.45)';ctx.lineWidth=1.4;ctx.setLineDash([4,3]);
+      ctx.beginPath();ctx.moveTo(left,bTop);ctx.lineTo(right,bTop);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(left,bBot);ctx.lineTo(right,bBot);ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.restore();
+    },
+    afterDatasetsDraw:function(chart){
+      var ctx=chart.ctx,y=chart.scales.y,x=chart.scales.x;
+      if(!y||!x)return;
+      var right=x.right,x0=x.getPixelForValue(0);
+      var rowH=(y.bottom-y.top)/fullYrs.length,barH=CP*BP*rowH,chev=barH*0.42;
+      var LX=right+13;
+      var scMeta=chart.getDatasetMeta(1);
+      scMeta.data.forEach(function(bar,i){
+        if(!bar)return;
+        var cy=bar.y,bh=bar.height/2,tipX=bar.x,barW=tipX-x0;
+        if(barW<=0||bh<=0)return;
+        ctx.save();
+        ctx.beginPath();ctx.rect(x0,cy-bh,barW,bh*2);ctx.clip();
+        var pat=ctx.createPattern(stripeCanvas,'repeat');
+        ctx.fillStyle=pat;ctx.globalAlpha=0.45;ctx.fillRect(x0,cy-bh,barW,bh*2);
+        ctx.restore();
+      });
+      idxSC.forEach(function(tv,i){
+        if(tv<=MAX)return;
+        var bar=chart.getDatasetMeta(1).data[i];if(!bar)return;
+        var cy=bar.y;
+        ctx.save();
+        ctx.beginPath();ctx.moveTo(right,cy-chev);ctx.lineTo(right+10,cy);ctx.lineTo(right,cy+chev);
+        ctx.closePath();ctx.fillStyle=COL_SC;ctx.fill();
+        ctx.fillStyle='#8B1A08';ctx.font='600 10px monospace';ctx.textAlign='left';
+        ctx.fillText(tv+'%',LX,cy+4);
+        ctx.restore();
+      });
+    }
+  };
+
+  new Chart(document.getElementById('fig3indexed'),{
+    type:'bar',plugins:[plugin],
+    data:{labels:fullYrs,datasets:[
+      {label:'Cabinet',    data:capC, backgroundColor:COL_C, borderWidth:0,categoryPercentage:CP,barPercentage:BP,order:4},
+      {label:'Sub-cabinet',data:capSC,backgroundColor:COL_SC,borderWidth:0,categoryPercentage:CP,barPercentage:BP,order:2},
+      {label:'Enrollment', data:capE, backgroundColor:COL_E, borderWidth:0,categoryPercentage:CP,barPercentage:BP,order:1}
+    ]},
+    options:{
+      indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false,callbacks:{
+        title:function(items){return fullYrs[items[0].dataIndex];},
+        label:function(i){var di=i.dataIndex;return[
+          ' Cabinet: '+idxC[di]+'%  ('+cabinet[di]+' positions)',
+          ' Sub-cabinet: '+idxSC[di]+'%  ('+subcab[di]+' positions)',
+          ' Enrollment: '+idxE[di]+'%  ('+enrollment[di].toLocaleString()+' students)'
+        ][i.datasetIndex];}
+      }}},
+      scales:{
+        x:{min:0,max:200,ticks:{font:{size:11,family:'monospace'},color:'#6b6458',callback:function(v){return v+'%';},stepSize:50},grid:{color:'rgba(0,0,0,0.06)'},title:{display:true,text:'% of 2016–17 baseline  |  sub-cabinet bars > 200% truncated; values shown at right',font:{size:10,family:'monospace'},color:'#6b6458'}},
+        y:{ticks:{font:{size:10,family:'monospace'},color:'#6b6458'},grid:{display:false},offset:true}
+      },
+      layout:{padding:{right:90,top:16,bottom:4}}
+    }
+  });
+})();
+</script>
 
 That divergence is the central finding of this section. The sub-cabinet — the directors, executive directors, coordinators, and managers below the superintendent tier — grew by 700% relative to its 2016–17 baseline while the district lost roughly one in four of its students. It expanded during enrollment growth, continued as enrollment fell, and contracted only modestly under the SDRP.
 
@@ -554,3 +1231,74 @@ This analysis was prepared by the Legion of Data Nerds with the assistance of [C
 ### Updates and revisions: May 15, 2026
 
 This version reconciles the post-SDRP cabinet count to six, reframes the sub-cabinet savings math using the district's own $129,489 per-cut benchmark from the April 20, 2026 Phase III deck, and adds source notes for the three different 2025–26 enrollment figures used by the district, ISBE, and Larry Gavin's RoundTable analysis. Editorial passes also clarified the Deputy Superintendent's inclusion in the 12-member peak cabinet, expanded acronyms on first use, and tightened repeated language in the opening sections. 
+
+---
+
+## Appendix: Alternative Figure
+
+<div class="viz-wrap">
+  <div class="viz-header">Alternative Figure: Two-Tier Growth as Bone Chart</div>
+  <div class="viz-body">
+    <p style="font-size:13px;color:#6b6458;margin-bottom:16px;font-family:'IBM Plex Mono',monospace;">An alternative rendering of the two-tier administrative growth figure using bone iconography, in keeping with the "cut to the bone" framing. Cabinet shown as bottom knob; sub-cabinet as upper shaft. The fractured bone represents the post-SDRP structure.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;font-size:11px;color:#6b6458;font-family:'IBM Plex Mono',monospace;">
+      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:#c0392b;"></span>Cabinet</span>
+      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:#f09595;"></span>Sub-cabinet</span>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:6px;height:280px;padding:0 8px;" id="boneAppendix"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var bdata = [
+    { label: '2016-17\n(Goren)',               cab: 8,  sub: 6,  gap: false, fracture: false },
+    { label: '',                                cab: null,sub:null,gap:true,  fracture: false },
+    { label: '2019 Summer\n(Beardsley,\nInterim)',cab:8,sub:9,   gap: false, fracture: false },
+    { label: '2020-21*\n(Horton yr1)',           cab: 9,  sub: 20, gap: false, fracture: false },
+    { label: '2021-22\n(Horton yr2)',            cab: 10, sub: 38, gap: false, fracture: false },
+    { label: '2022-23\n(Horton, Peak)',          cab: 12, sub: 48, gap: false, fracture: false },
+    { label: '',                                cab: null,sub:null,gap:true,  fracture: false },
+    { label: '2025-26\n(Turner,\nPost-SDRP)',  cab: 6,  sub: 42, gap: false, fracture: true  },
+  ];
+  var maxVal=65, chartH=240, colW=40;
+  var wrap2 = document.getElementById('boneAppendix');
+  if (!wrap2) return;
+
+  function topBone(w,h,color,fracture){
+    var r=Math.min(w*0.38,10),stem=w*0.55,sx=(w-stem)/2;
+    if(fracture){
+      var pts=[];pts.push([0,0]);
+      for(var i=1;i<=8;i++) pts.push([i*(w/8),(i%2===0)?-5:5]);
+      var zigD=pts.map(function(p,i){return(i===0?'M':'L')+p[0]+','+p[1];}).join(' ');
+      var clipPoly=pts.map(function(p){return p[0]+','+p[1];}).join(' ')+' '+w+','+(h+20)+' 0,'+(h+20);
+      var uid='fa'+Math.random().toString(36).slice(2,7);
+      return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" overflow="visible" style="display:block;"><defs><clipPath id="'+uid+'"><polygon points="'+clipPoly+'"/></clipPath></defs><g clip-path="url(#'+uid+')"><rect x="'+sx+'" y="0" width="'+stem+'" height="'+h+'" fill="'+color+'"/></g><path d="'+zigD+'" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="'+zigD+'" fill="none" stroke="#7a1010" stroke-width="1" stroke-linejoin="round" stroke-dasharray="3,2"/></svg>';
+    } else {
+      return '<svg width="'+w+'" height="'+(h+r)+'" viewBox="0 0 '+w+' '+(h+r)+'" overflow="visible" style="display:block;"><rect x="'+sx+'" y="'+r+'" width="'+stem+'" height="'+h+'" fill="'+color+'"/><circle cx="'+r+'" cy="'+r+'" r="'+r+'" fill="'+color+'"/><circle cx="'+(w-r)+'" cy="'+r+'" r="'+r+'" fill="'+color+'"/></svg>';
+    }
+  }
+
+  function botBone(w,h,color){
+    var r=Math.min(w*0.38,10),stem=w*0.55,sx=(w-stem)/2;
+    return '<svg width="'+w+'" height="'+(h+r)+'" viewBox="0 0 '+w+' '+(h+r)+'" overflow="visible" style="display:block;"><rect x="'+sx+'" y="0" width="'+stem+'" height="'+h+'" fill="'+color+'"/><circle cx="'+r+'" cy="'+h+'" r="'+r+'" fill="'+color+'"/><circle cx="'+(w-r)+'" cy="'+h+'" r="'+r+'" fill="'+color+'"/></svg>';
+  }
+
+  bdata.forEach(function(d){
+    var col=document.createElement('div');
+    if(d.gap){col.style.cssText='flex:0 0 10px;';wrap2.appendChild(col);return;}
+    col.style.cssText='display:flex;flex-direction:column;align-items:center;flex:1;';
+    var cabH=((d.cab||0)/maxVal)*chartH;
+    var subH=((d.sub||0)/maxVal)*chartH;
+    var isPost=d.fracture;
+    var cabColor=isPost?'#a32d2d':'#c0392b';
+    var subColor=isPost?'#f7c1c1':(d.label.indexOf('yr1')>-1?'#f8d7d7':'#f09595');
+    var sw=document.createElement('div');
+    sw.style.cssText='height:'+chartH+'px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;';
+    sw.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;"><div style="margin-bottom:-1px;">'+topBone(colW,subH,subColor,d.fracture)+'</div><div>'+botBone(colW,cabH,cabColor)+'</div></div>';
+    var lbl=document.createElement('div');
+    lbl.style.cssText='font-size:9px;color:#6b6458;text-align:center;margin-top:8px;line-height:1.3;white-space:pre-line;font-family:monospace;';
+    lbl.textContent=d.label;
+    col.appendChild(sw);col.appendChild(lbl);wrap2.appendChild(col);
+  });
+})();
+</script>

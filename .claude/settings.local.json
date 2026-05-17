@@ -19,7 +19,16 @@
       "Bash(python -c \"import pdfplumber; print\\('pdfplumber available'\\)\")",
       "Bash(python -c \"import tabula; print\\('tabula available'\\)\")",
       "Bash(python convert_budget_pdf.py)",
-      "Bash(findstr \"Wrote Years:\")"
+      "Bash(findstr \"Wrote Years:\")",
+      "Bash(findstr /i \"chart svg canvas plotly Chart graph fig\")",
+      "Bash(findstr /i \"chart svg canvas plotly figure script\")",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; $content.Count)",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match '<script>|<canvas|new Chart'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'viz-header|fig-title|BASELINE|BEFORE|AFTER|COMPENSATION|BONE|ALTERNATIVE|CENTRAL ADMIN'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'class=\"viz-header\"'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'BONE|ALTERNATIVE|appendix'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 2280; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'BONE|bone|appendix|ALTERNATIVE|alternative'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\).Substring\\(0, [Math]::Min\\(150, $content[$i].Trim\\(\\).Length\\)\\)\\)\" } })",
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; \\(Get-Content \"dataanalysis\\\\d65_org_structure_analysis.md\"\\).Count)"
     ]
   }
 }
