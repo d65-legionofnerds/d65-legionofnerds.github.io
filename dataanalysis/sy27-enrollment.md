@@ -68,6 +68,47 @@ Of 268 confirmed permissive transfers, Foster accounted for 100 outgoing (37%). 
 
 Kindergarten registrations are down 34% from the same point last year (157 vs. 238 in May 2025). Every school is below projections. The district attributes this to delayed registration opening (February 1 vs. the typical December 1), the complexity of the new school assignment process, and staff reductions. TWI kindergarten placements are not yet finalized -- 87 applicants are pending language screening.
 
+## Expectations vs reality:
+
+Using Scenario 1A from SDRP (closing Kingsley only), comparison of enrollment. Nearly all schools are under projected enrollment, even if counting the 87 yet-unassigned TWI students. 
+
+### Elementary Schools
+
+| School | SY25 Actual | SY27 Projected | SY27 Registered | vs. Projection |
+|---|---:|---:|---:|---:|
+| Dawes Elementary | 294 | 337 | 260 | −77 |
+| Dewey Elementary | 316 | 372 | 285 | −87 |
+| Lincoln Elementary | 334 | 328 | 301 | −27 |
+| Lincolnwood Elementary | 283 | 280 | 310 | +30 |
+| Oakton Elementary | 361 | 403 | 327 | −76 |
+| Orrington Elementary | 218 | 226 | 234 | +8 |
+| Walker Elementary | 345 | 304 | 287 | −17 |
+| Washington Elementary | 403 | 441 | 348 | −93 |
+| Willard Elementary | 345 | 261 | 246 | −15 |
+
+### New / Closing Schools
+
+| School | SY25 Actual | SY27 Projected | SY27 Registered | vs. Projection |
+|---|---:|---:|---:|---:|
+| Foster School *(new)* | — | 452 | ~316 * | ~−136 * |
+| Kingsley Elementary *(closing)* | 326 | — | — | — |
+| Dr. Bessie Rhodes *(closing)* | 251 | — | — | — |
+
+### Magnet / Choice Schools
+
+| School | SY25 Actual | SY27 Projected | SY27 Registered | vs. Projection |
+|---|---:|---:|---:|---:|
+| Dr. MLK Jr. Literary & Fine Arts | 415 | 415 | 428 | +13 |
+
+### Middle Schools
+
+| School | SY25 Actual | SY27 Projected | SY27 Registered | vs. Projection |
+|---|---:|---:|---:|---:|
+| Chute Middle School | 567 | 551 | 591 | +40 |
+| Haven Middle School | 642 | 664 | 603 | −61 |
+| Nichols Middle School | 609 | 656 | 572 | −84 |
+
+
 ---
 
 *Data from District 65 SY 2026-27 Projected Enrollment Update memo, May 18, 2026. Values reported as "<10" in the original document were back-calculated from row totals where possible. [Raw data (CSV files)](data/sy27_enrollment/).*
