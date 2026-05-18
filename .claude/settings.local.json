@@ -28,7 +28,14 @@
       "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'class=\"viz-header\"'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
       "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 0; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'BONE|ALTERNATIVE|appendix'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\)\\)\" } })",
       "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; $content = git show \"89b7bd9:dataanalysis/d65_org_structure_analysis.html\"; for \\($i = 2280; $i -lt $content.Count; $i++\\) { if \\($content[$i] -match 'BONE|bone|appendix|ALTERNATIVE|alternative'\\) { Write-Output \"$\\($i+1\\): $\\($content[$i].Trim\\(\\).Substring\\(0, [Math]::Min\\(150, $content[$i].Trim\\(\\).Length\\)\\)\\)\" } })",
-      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; \\(Get-Content \"dataanalysis\\\\d65_org_structure_analysis.md\"\\).Count)"
+      "PowerShell(cd \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\"; \\(Get-Content \"dataanalysis\\\\d65_org_structure_analysis.md\"\\).Count)",
+      "Bash(python -c \"import plotly; import pandas; print\\('plotly', plotly.__version__\\); print\\('pandas', pandas.__version__\\)\")",
+      "Bash(python dataanalysis/generate_sy27_charts.py)",
+      "PowerShell(bundle exec *)",
+      "WebFetch(domain:127.0.0.1)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:4000/dataanalysis/sy27-enrollment.html\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\)\"; \"Length: $\\($r.Content.Length\\)\"; $r.Content.Substring\\(0, [Math]::Min\\(2000, $r.Content.Length\\)\\) } catch { $_.Exception.Message })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:4000/dataanalysis/assets/sy27_building_utilization.html\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\), Length: $\\($r.Content.Length\\)\" } catch { $_.Exception.Message })",
+      "Bash(python *)"
     ]
   }
 }
