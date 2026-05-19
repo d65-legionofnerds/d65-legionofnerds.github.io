@@ -4,6 +4,7 @@ layout: default
 parent: Data Analysis
 nav_exclude: true
 search_exclude: true 
+has_toc: false
 ---
 
 # SY 2026-27 Enrollment Analysis
