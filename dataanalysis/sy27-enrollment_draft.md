@@ -2,6 +2,8 @@
 title: SY27 Enrollment
 layout: default
 parent: Data Analysis
+nav_exclude: true
+search_exclude: true 
 ---
 
 # SY 2026-27 Enrollment Analysis
