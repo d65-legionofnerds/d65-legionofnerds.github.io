@@ -1,3 +1,8 @@
+---
+layout: post
+title: "What Happens When Parents Get Serious About Public Records"
+---
+
 # What Happens When Parents Get Serious About Public Records
 
 ## A guest post by the Legion of Data Nerds
