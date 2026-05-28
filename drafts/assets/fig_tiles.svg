@@ -1,0 +1,33 @@
+<svg width="720" height="130" viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="720" height="130" fill="white"/>
+  <!-- Tile 1 -->
+  <rect x="0"   y="0" width="136" height="130" rx="4" fill="#c0392b"/>
+  <text x="68"  y="52" font-size="36" font-weight="700" text-anchor="middle" fill="white" font-family="'Courier New', monospace">-25%</text>
+  <text x="68"  y="76" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Enrollment decline</text>
+  <text x="68"  y="92" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">steepest among</text>
+  <text x="68" y="108" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">21 peer districts</text>
+  <!-- Tile 2 -->
+  <rect x="146" y="0" width="136" height="130" rx="4" fill="#d4550a"/>
+  <text x="214"  y="52" font-size="36" font-weight="700" text-anchor="middle" fill="white" font-family="'Courier New', monospace">7×</text>
+  <text x="214"  y="76" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Sub-cabinet growth</text>
+  <text x="214"  y="92" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">since 2016</text>
+  <text x="214" y="108" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">barely touched by SDRP</text>
+  <!-- Tile 3 -->
+  <rect x="292" y="0" width="136" height="130" rx="4" fill="#e07b1a"/>
+  <text x="360"  y="52" font-size="36" font-weight="700" text-anchor="middle" fill="white" font-family="'Courier New', monospace">+55%</text>
+  <text x="360"  y="76" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Per-pupil admin</text>
+  <text x="360"  y="92" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">spending</text>
+  <text x="360" y="108" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">inflation-adjusted</text>
+  <!-- Tile 4 -->
+  <rect x="438" y="0" width="136" height="130" rx="4" fill="#c8922a"/>
+  <text x="506"  y="52" font-size="30" font-weight="700" text-anchor="middle" fill="white" font-family="'Courier New', monospace">52→64+</text>
+  <text x="506"  y="76" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Official vs. actual</text>
+  <text x="506"  y="92" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">admin count</text>
+  <text x="506" y="108" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">cross-referencing public lists</text>
+  <!-- Tile 5 -->
+  <rect x="584" y="0" width="136" height="130" rx="4" fill="#b8860b"/>
+  <text x="652"  y="52" font-size="36" font-weight="700" text-anchor="middle" fill="white" font-family="'Courier New', monospace">$619</text>
+  <text x="652"  y="76" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Per-pupil Special</text>
+  <text x="652"  y="92" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">Area Admin</text>
+  <text x="652" y="108" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.85)">vs. peer avg $176</text>
+</svg>
