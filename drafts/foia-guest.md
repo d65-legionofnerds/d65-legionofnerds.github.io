@@ -92,7 +92,7 @@ We highlight this information to show another area for potential savings. We are
 
 ---
 
-div style="background-color: #EEF4FB; border: 2px solid #2356A8; border-radius: 4px; padding: 16px 20px; margin: 24px 0;" markdown="1">
+<div style="background-color: #EEF4FB; border: 2px solid #2356A8; border-radius: 4px; padding: 16px 20px; margin: 24px 0;" markdown="1">
 
 ## Replication and FOIA Gras
 
