@@ -32,7 +32,7 @@ District 65 undertook a [Structural Deficit Reduction Plan (SDRP)](https://www.d
 
 **Student-facing staff:** Principals, educators, specialists, and support professionals who work in school buildings. Their primary job is teaching, supporting, or serving children, not managing district operations (e.g., Teachers, Counselors, Paraprofessionals, School Psychologists, Speech Therapists, Principals, etc.)
 
-![Visual of the Administration Structure of D65](assets/d65_blue_house_final)
+![Visual of the Administration Structure of D65](assets/d65_blue_house_final.svg)
 
 With those distinctions in mind, here's what the data show:
 **[The Org Chart That Ate Our Budget](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis.html)** traces D65's administrative growth from 2016 to today using board org charts, state salary disclosures, and [financial data submitted by D65 to the Illinois State Board of Education (ISBE)](https://www.isbe.net/Pages/Annual-Financial-Report.aspx). The headline findings:
