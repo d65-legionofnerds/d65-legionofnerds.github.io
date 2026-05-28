@@ -20,6 +20,8 @@ The [Legion of Data Nerds](https://d65-legionofnerds.github.io/) is a group of D
 
 Over the past month, we [published](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis) two analyses of D65's [administrative structure](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html). In our analyses, we focus on administration in the district, excluding principals and assistant principals, referring to central office administrators (as the bulk of administrators in our analyses are located at Joseph E. Hill (JEH), District 65’s central administration office). Together, our analyses tell a single story: over the past decade, D65's central office more than tripled in size, increasing costs while student enrollment declined 25%.
 
+![Overall findings](assets/fig_tiles.svg)
+
 Before presenting our analysis in detail, we present a visual of staff structures within the district. There are central office administrators (in the two leftmost boxes) and additional positions in the school buildings (such as principals, teachers, counselors, etc.). Our analyses focus on central office administrators.
 
 Much of the public debate has focused on "the cabinet," the senior leaders who sit at the dais at board meetings. But the layer beneath the cabinet, the "sub-cabinet," has received far less scrutiny and remained largely intact after the District's cost-cutting.
@@ -55,7 +57,7 @@ With those distinctions in mind, here's what the data show:
 
 The figure below shows how D65's central office grew during the tenure of former Superintendent Devon Horton.
 
-![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](assets/chart-two-tier-growth.jpg)
+![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](assets/fig1_two_tier.svg)
 
 *Stacked bar chart showing cabinet and sub-cabinet administrative positions at D65 from 2016–17 through 2025–26. The SDRP dramatically cut the cabinet but left the sub-cabinet largely intact. Cabinet: 8, 8, 9, 10, 12, 6. Sub-cabinet: 6, 9, 20, 38, 48, 42.*
 
@@ -74,7 +76,7 @@ The chart below shows the administrative compensation pool growing in inflation-
 
 *From [District 65 Administrative Growth Over Time](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html)*
 
-![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](assets/chart-admin-compensation-pool.jpg)
+![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](assets/fig3_afr_pool.svg)
 
 *Source: [ISBE Annual Financial Reports](https://www.isbe.net/Pages/Annual-Financial-Report.aspx) (AFR), inflation-adjusted to 2026 dollars using [BLS CPI-U](https://www.bls.gov/cpi/). Categories: General Administration, School Administration, Business, Operations. Full methodology: [admin-growth-final.html](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html#methodology-notes)*
 
