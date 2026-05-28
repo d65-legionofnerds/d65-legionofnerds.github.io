@@ -1,5 +1,6 @@
 ---
 title: What Happens When Parents Get Serious About Public Records
+description: A data-driven analysis of District 65's administrative growth and what right-sizing could save.
 layout: default
 nav_exclude: true
 search_exclude: true
@@ -37,6 +38,7 @@ District 65 undertook a [Structural Deficit Reduction Plan (SDRP)](https://www.d
 ![Visual of the Administration Structure of D65](assets/d65_blue_house_final.svg)
 
 With those distinctions in mind, here's what the data show:
+
 **[The Org Chart That Ate Our Budget](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis.html)** traces D65's administrative growth from 2016 to today using board org charts, state salary disclosures, and [financial data submitted by D65 to the Illinois State Board of Education (ISBE)](https://www.isbe.net/Pages/Annual-Financial-Report.aspx). The headline findings:
 
 - Enrollment fell **25%** — the steepest decline among [21 peer K-8 districts](https://d65-legionofnerds.github.io/dataanalysis/enrollment-data.html) that cannot be explained by demographic shifts alone
@@ -94,8 +96,7 @@ We highlight this information to show another area for potential savings. We are
 
 ---
 
-<div style="background-color: #EEF4FB; border: 2px solid #2356A8; border-radius: 4px; padding: 16px 20px; margin: 24px 0;" markdown="1">
-
+<div style="background-color: #BDD7EE; border: 2px solid #2356A8; border-radius: 4px; padding: 16px 20px; margin: 24px 0;" markdown="1">
 ## Replication and FOIA Gras
 
 This analysis drew on multiple public data sources, which we combined into comprehensive datasets and published in full so anyone can replicate or challenge our findings. FOIA Gras was instrumental in collecting this information.
