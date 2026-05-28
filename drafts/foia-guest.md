@@ -1,6 +1,9 @@
 ---
-layout: post
-title: "What Happens When Parents Get Serious About Public Records"
+title: What Happens When Parents Get Serious About Public Records
+layout: default
+nav_exclude: true
+search_exclude: true
+
 ---
 
 # What Happens When Parents Get Serious About Public Records
@@ -52,7 +55,7 @@ With those distinctions in mind, here's what the data show:
 
 The figure below shows how D65's central office grew during the tenure of former Superintendent Devon Horton.
 
-![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](../dataanalysis/assets/chart-two-tier-growth.jpg)
+![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](assets/chart-two-tier-growth.jpg)
 
 *Stacked bar chart showing cabinet and sub-cabinet administrative positions at D65 from 2016–17 through 2025–26. The SDRP dramatically cut the cabinet but left the sub-cabinet largely intact. Cabinet: 8, 8, 9, 10, 12, 6. Sub-cabinet: 6, 9, 20, 38, 48, 42.*
 
@@ -71,7 +74,7 @@ The chart below shows the administrative compensation pool growing in inflation-
 
 *From [District 65 Administrative Growth Over Time](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html)*
 
-![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](../dataanalysis/assets/chart-admin-compensation-pool.jpg)
+![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](assets/chart-admin-compensation-pool.jpg)
 
 *Source: [ISBE Annual Financial Reports](https://www.isbe.net/Pages/Annual-Financial-Report.aspx) (AFR), inflation-adjusted to 2026 dollars using [BLS CPI-U](https://www.bls.gov/cpi/). Categories: General Administration, School Administration, Business, Operations. Full methodology: [admin-growth-final.html](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html#methodology-notes)*
 
