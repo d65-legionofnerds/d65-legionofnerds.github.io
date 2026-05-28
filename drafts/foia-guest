@@ -24,6 +24,7 @@ District 65 undertook a [Structural Deficit Reduction Plan (SDRP)](https://www.d
 
 **Student-facing staff:** Principals, educators, specialists, and support professionals who work in school buildings. Their primary job is teaching, supporting, or serving children, not managing district operations (e.g., Teachers, Counselors, Paraprofessionals, School Psychologists, Speech Therapists, Principals, etc.)
 
+![Visual of the Administration Structure of D65](assets/d65_blue_house_final)
 
 With those distinctions in mind, here's what the data show:
 **[The Org Chart That Ate Our Budget](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis.html)** traces D65's administrative growth from 2016 to today using board org charts, state salary disclosures, and [financial data submitted by D65 to the Illinois State Board of Education (ISBE)](https://www.isbe.net/Pages/Annual-Financial-Report.aspx). The headline findings:
@@ -46,7 +47,7 @@ With those distinctions in mind, here's what the data show:
 
 The figure below shows how D65's central office grew during the tenure of former Superintendent Devon Horton.
 
-![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](chart-two-tier-growth.jpg)
+![Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026](../dataanalysis/assets/chart-two-tier-growth.jpg)
 
 *Stacked bar chart showing cabinet and sub-cabinet administrative positions at D65 from 2016–17 through 2025–26. The SDRP dramatically cut the cabinet but left the sub-cabinet largely intact. Cabinet: 8, 8, 9, 10, 12, 6. Sub-cabinet: 6, 9, 20, 38, 48, 42.*
 
@@ -65,7 +66,7 @@ The chart below shows the administrative compensation pool growing in inflation-
 
 *From [District 65 Administrative Growth Over Time](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html)*
 
-![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](chart-admin-compensation-pool.jpg)
+![D65 Total Admin Compensation Pool — Real 2026 Dollars (FY2012–FY2025)](../dataanalysis/assets/chart-admin-compensation-pool.jpg)
 
 *Source: [ISBE Annual Financial Reports](https://www.isbe.net/Pages/Annual-Financial-Report.aspx) (AFR), inflation-adjusted to 2026 dollars using [BLS CPI-U](https://www.bls.gov/cpi/). Categories: General Administration, School Administration, Business, Operations. Full methodology: [admin-growth-final.html](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html#methodology-notes)*
 
