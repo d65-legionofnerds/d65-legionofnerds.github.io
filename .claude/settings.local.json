@@ -35,7 +35,21 @@
       "WebFetch(domain:127.0.0.1)",
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:4000/dataanalysis/sy27-enrollment.html\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\)\"; \"Length: $\\($r.Content.Length\\)\"; $r.Content.Substring\\(0, [Math]::Min\\(2000, $r.Content.Length\\)\\) } catch { $_.Exception.Message })",
       "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://127.0.0.1:4000/dataanalysis/assets/sy27_building_utilization.html\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\), Length: $\\($r.Content.Length\\)\" } catch { $_.Exception.Message })",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Read(//c/c/Users/jkarlin/Documents/Code/nerds_site/d65-legionofnerds.github.io/**)",
+      "Read(//c/c/Users/jkarlin/Documents/Code/nerds_site/d65-legionofnerds.github.io/dataanalysis/**)",
+      "WebFetch(domain:ccsd65.districtvitals.com)",
+      "Read(//c/tmp/**)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0 Safari/537.36\" \"https://ccsd65.districtvitals.com/data\" -o d65_data.html -w \"HTTP %{http_code} size=%{size_download}\\\\n\")",
+      "WebSearch",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://districtvitals.com/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ccsd65.districtvitals.com/peers\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ccsd65.districtvitals.com/peers\" -o peers.html -w \"size=%{size_download}\\\\n\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://districtvitals.com/sitemap.xml\")",
+      "Bash(node --check \"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\\\\dataanalysis\\\\_app_check.js\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --window-size=1100,1400 --virtual-time-budget=8000 --screenshot=\"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\\\\dataanalysis\\\\_render_default.png\" \"file:///C:/Users/jkarlin/Documents/Code/nerds_site/d65-legionofnerds.github.io/dataanalysis/assets/budget_explorer.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --window-size=1100,900 --virtual-time-budget=9000 --screenshot=\"C:\\\\Users\\\\jkarlin\\\\Documents\\\\Code\\\\nerds_site\\\\d65-legionofnerds.github.io\\\\dataanalysis\\\\_render_compare.png\" \"file:///C:/Users/jkarlin/Documents/Code/nerds_site/d65-legionofnerds.github.io/dataanalysis/assets/_test_compare.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --no-sandbox --virtual-time-budget=9000 --dump-dom \"file:///C:/Users/jkarlin/Documents/Code/nerds_site/d65-legionofnerds.github.io/dataanalysis/assets/_test_flow.html\")"
     ]
   }
 }

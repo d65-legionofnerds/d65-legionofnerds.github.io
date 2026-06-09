@@ -1,9 +1,16 @@
 """
-Parse all D65 AFR files to extract Educational Fund expenditures by ISBE
-function code, then generate a standalone interactive HTML budget explorer.
+Parse D65 AND comparable peer-district AFR files to extract Educational Fund
+expenditures by ISBE function code, then generate a standalone interactive HTML
+budget explorer that lets the user compare D65 against peer districts.
 
-Adapted from build_afr_admin_pool.py — reuses its proven Excel parsing logic
-but captures ALL function codes in the Educational Fund (not just admin).
+Peers are the same comparable districts used in the enrollment analysis
+(enrollment-data.md / calculations.ipynb target_districts). Their AFRs are
+downloaded by download_peer_afrs.py into data/afr/peers/{slug}/.
+
+For each district and year we capture:
+  - every Educational Fund function-code expenditure total
+  - the district's total Ed Fund spend (denominator for "% of budget")
+  - the official 9-month ADA from the PCTC-OEPP sheet (denominator for per-pupil)
 
 On-behalf / pension payments are excluded.
 
@@ -11,6 +18,7 @@ Output:
   assets/budget_explorer.html — standalone interactive Plotly app
 
 Run:
+  python download_peer_afrs.py     # one-time, to fetch peer AFRs
   python build_budget_explorer.py
 """
 
@@ -27,7 +35,34 @@ warnings.filterwarnings("ignore")
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 AFR_DIR = os.path.join(ROOT, "data", "afr")
+PEER_DIR = os.path.join(AFR_DIR, "peers")
 ASSETS_DIR = os.path.join(ROOT, "assets")
+
+# D65 first, then peers. slug -> display name. Peer slugs are the
+# districtvitals subdomains / folder names under data/afr/peers/.
+D65_KEY = "d65"
+D65_NAME = "Evanston CCSD 65"
+
+PEER_NAMES = {
+    "eastmained63": "East Maine SD 63",
+    "winnetkad36": "Winnetka SD 36",
+    "sd28": "Northbrook SD 28",
+    "sd35": "Glencoe SD 35",
+    "ccsd62": "CCSD 62 (Des Plaines)",
+    "ccsd64": "Park Ridge CCSD 64",
+    "lincolnwoodd74": "Lincolnwood SD 74",
+    "arlingtonheightsd25": "Arlington Heights SD 25",
+    "skokied68": "Skokie SD 68",
+    "skokied69": "Skokie SD 69",
+    "sd735": "Skokie SD 73-5",
+    "esd97": "Oak Park ESD 97",
+    "northbrookglenviewd30": "Northbrook/Glenview SD 30",
+    "glenviewd34": "Glenview CCSD 34",
+    "sd39": "Wilmette SD 39",
+    "ccsd21": "Wheeling CCSD 21",
+    "palatined15": "Palatine CCSD 15",
+    "sd112": "North Shore SD 112",
+}
 
 FUNCTION_HIERARCHY = {
     "1100": ("Instruction", "Regular Programs", "Regular Programs K-12"),
@@ -135,8 +170,20 @@ EXCLUDE_SECTION_KEYWORDS = [
 
 
 # ---------------------------------------------------------------------------
-# Excel parsing (reused from build_afr_admin_pool.py)
+# Excel parsing — robust to mislabeled extensions (some ISBE files have a .xls
+# extension but xlsx content, or vice versa). Detect by magic bytes.
 # ---------------------------------------------------------------------------
+
+def detect_format(fp):
+    with open(fp, "rb") as fh:
+        head = fh.read(8)
+    if head[:4] == b"PK\x03\x04":
+        return "xlsx"
+    if head[:4] == b"\xd0\xcf\x11\xe0":
+        return "xls"
+    # Fall back to extension.
+    return "xlsx" if os.path.splitext(fp)[1].lower() in (".xlsx", ".xlsm") else "xls"
+
 
 def fy_from_filename(filename):
     m = re.search(r"AFR\s*(\d{2})", filename, re.IGNORECASE)
@@ -148,41 +195,59 @@ def fy_from_filename(filename):
     return None
 
 
-def parse_xlsx(fp):
-    wb = openpyxl.load_workbook(fp, data_only=True)
-    expsheet = None
+def _sheet_rows_xlsx(fp, name_pred, ncols=12):
+    wb = openpyxl.load_workbook(fp, data_only=True, read_only=True)
+    sheet = None
     for n in wb.sheetnames:
-        if "Expenditures" in n:
-            expsheet = wb[n]
+        if name_pred(n):
+            sheet = wb[n]
             break
-    if expsheet is None:
+    if sheet is None:
+        wb.close()
         return None
     rows = []
-    for r in range(1, expsheet.max_row + 1):
-        rowvals = [expsheet.cell(row=r, column=c).value for c in range(1, 12)]
-        rows.append(rowvals)
+    for r in sheet.iter_rows(min_col=1, max_col=ncols, values_only=True):
+        rows.append(list(r))
+    wb.close()
     return rows
 
 
-def parse_xls(fp):
+def _sheet_rows_xls(fp, name_pred, ncols=12):
     wb = xlrd.open_workbook(fp)
-    expsheet = None
+    sheet = None
     for n in wb.sheet_names():
-        if "Expenditures" in n:
-            expsheet = wb.sheet_by_name(n)
+        if name_pred(n):
+            sheet = wb.sheet_by_name(n)
             break
-    if expsheet is None:
+    if sheet is None:
         return None
     rows = []
-    for r in range(expsheet.nrows):
+    for r in range(sheet.nrows):
         rowvals = []
-        for c in range(min(11, expsheet.ncols)):
-            v = expsheet.cell_value(r, c)
+        for c in range(min(ncols, sheet.ncols)):
+            v = sheet.cell_value(r, c)
             if v == "":
                 v = None
             rowvals.append(v)
         rows.append(rowvals)
     return rows
+
+
+def read_sheet(fp, name_pred, ncols=12):
+    """Return list-of-rows for the first sheet whose name matches name_pred."""
+    fmt = detect_format(fp)
+    try:
+        if fmt == "xlsx":
+            return _sheet_rows_xlsx(fp, name_pred, ncols)
+        return _sheet_rows_xls(fp, name_pred, ncols)
+    except Exception:
+        # Try the other engine if the magic-byte guess was wrong.
+        try:
+            if fmt == "xlsx":
+                return _sheet_rows_xls(fp, name_pred, ncols)
+            return _sheet_rows_xlsx(fp, name_pred, ncols)
+        except Exception:
+            return None
 
 
 def normalize_func(v):
@@ -213,7 +278,7 @@ def num(v):
 
 
 # ---------------------------------------------------------------------------
-# AFR parsing — all Ed Fund function codes
+# AFR parsing — all Ed Fund function codes + 9-month ADA
 # ---------------------------------------------------------------------------
 
 def is_ed_section(section):
@@ -236,16 +301,12 @@ FUND_MARKERS = re.compile(
     r"\((ED|O&M|MR/SS|TORT|TR|DS|CP|FP&S|TF)\)", re.IGNORECASE
 )
 
+ADA_RE = re.compile(r"\bADA\b", re.IGNORECASE)
+ADA_9MO_RE = re.compile(r"9\s*-?\s*MO|9\s*MONTH|NINE\s*MONTH", re.IGNORECASE)
+
 
 def parse_afr_all(filepath, year):
-    ext = os.path.splitext(filepath)[1].lower()
-    if ext in (".xlsx", ".xlsm"):
-        rows = parse_xlsx(filepath)
-    elif ext == ".xls":
-        rows = parse_xls(filepath)
-    else:
-        return [], {}
-
+    rows = read_sheet(filepath, lambda n: "Expenditures" in n)
     if rows is None:
         return [], {}
 
@@ -291,6 +352,30 @@ def parse_afr_all(filepath, year):
     return records, rollups
 
 
+def extract_ada(filepath):
+    """Pull the official 9-month ADA from the PCTC-OEPP sheet (per-pupil
+    denominator). Returns a float or None."""
+    rows = read_sheet(
+        filepath,
+        lambda n: ("PCTC" in n.upper() or "OEPP" in n.upper()),
+        ncols=13,
+    )
+    if rows is None:
+        return None
+    for row in rows:
+        label = None
+        for v in row:
+            if isinstance(v, str) and ADA_RE.search(v) and ADA_9MO_RE.search(v):
+                label = v
+                break
+        if label is None:
+            continue
+        for v in row:
+            if isinstance(v, (int, float)) and 50 < v < 100000:
+                return float(v)
+    return None
+
+
 def bucket_unknown_code(code):
     prefix = code[0]
     if prefix == "1":
@@ -323,139 +408,177 @@ def bucket_unknown_code(code):
 
 
 # ---------------------------------------------------------------------------
+# Per-district parsing
+# ---------------------------------------------------------------------------
+
+def parse_district(folder, name_filter=None):
+    """Parse every AFR file in `folder`. Returns:
+       year_totals: {fy: {code: total}}, year_ada: {fy: ada}, codes_seen: set
+    """
+    year_totals = {}
+    year_ada = {}
+    codes_seen = set()
+
+    for f in sorted(os.listdir(folder)):
+        if not f.lower().endswith((".xls", ".xlsx", ".xlsm")):
+            continue
+        fy = fy_from_filename(f)
+        if fy is None:
+            continue
+        if "Budget" in f:           # FY26 budget arrives as an "AFR26" file
+            continue
+        if name_filter and name_filter not in f:
+            continue
+
+        fp = os.path.join(folder, f)
+        records, _ = parse_afr_all(fp, fy)
+        if not records:
+            continue
+
+        yd = year_totals.setdefault(fy, {})
+        for rec in records:
+            code = rec["func"]
+            codes_seen.add(code)
+            yd[code] = yd.get(code, 0.0) + rec["total"]
+
+        ada = extract_ada(fp)
+        if ada:
+            year_ada[fy] = round(ada, 2)
+
+    return year_totals, year_ada, codes_seen
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main():
-    files = sorted(os.listdir(AFR_DIR))
-    all_data = {}
-    all_rollups = {}
+    districts = {}        # key -> {"name", "totals": {fy:{code:val}}, "ada": {fy:ada}}
     all_codes_seen = set()
+    all_years = set()
 
-    for f in files:
-        fy = fy_from_filename(f)
-        if fy is None:
+    # D65 (top-level files in data/afr/). All D65 AFRs share the RCDTS prefix
+    # 05-016-0650-04_ ; this excludes the AFR25_d65.xlsx duplicate and the
+    # peers/ subfolder while keeping the year-13 file (named "...No. 65.XLS").
+    print("Parsing D65 ...")
+    d65_totals, d65_ada, d65_codes = parse_district(AFR_DIR, name_filter="05-016-0650-04_")
+    districts[D65_KEY] = {"name": D65_NAME, "totals": d65_totals, "ada": d65_ada}
+    all_codes_seen |= d65_codes
+    all_years |= set(d65_totals.keys())
+    print(f"  {D65_NAME}: years {sorted(d65_totals)}  ADA years {sorted(d65_ada)}")
+
+    # Peers
+    for slug, name in PEER_NAMES.items():
+        folder = os.path.join(PEER_DIR, slug)
+        if not os.path.isdir(folder):
+            print(f"!! missing peer folder: {folder}")
             continue
-        if f == "AFR25_d65.xlsx":
-            continue
-        if "Budget" in f:
-            continue
+        ptot, pada, pcodes = parse_district(folder)
+        districts[slug] = {"name": name, "totals": ptot, "ada": pada}
+        all_codes_seen |= pcodes
+        all_years |= set(ptot.keys())
+        print(f"  {name:28s} years {min(ptot, default='-')}-{max(ptot, default='-')}  "
+              f"{len(ptot)} yrs, {len(pada)} ADA yrs")
 
-        fp = os.path.join(AFR_DIR, f)
-        records, rollups = parse_afr_all(fp, fy)
-        print(f"{f:80s}  FY{fy}  {len(records):3d} Ed Fund rows")
-
-        year_data = {}
-        for rec in records:
-            code = rec["func"]
-            all_codes_seen.add(code)
-            if code in year_data:
-                year_data[code]["total"] += rec["total"]
-                year_data[code]["salaries"] += rec["salaries"]
-                year_data[code]["benefits"] += rec["benefits"]
-            else:
-                year_data[code] = {
-                    "total": rec["total"],
-                    "salaries": rec["salaries"],
-                    "benefits": rec["benefits"],
-                }
-        all_data[fy] = year_data
-        all_rollups[fy] = rollups
-
-    years = sorted(all_data.keys())
+    years = sorted(all_years)
+    year_strs = [str(y) for y in years]
     print(f"\nYears: {years}")
-    print(f"Unique function codes seen: {sorted(all_codes_seen)}")
 
+    # Union hierarchy / category metadata
     full_hierarchy = dict(FUNCTION_HIERARCHY)
     for code in all_codes_seen:
         if code not in full_hierarchy and code not in ROLLUP_CODES:
             full_hierarchy[code] = bucket_unknown_code(code)
-            print(f"  Unknown code {code} -> bucketed as {full_hierarchy[code]}")
+            print(f"  Unknown code {code} -> {full_hierarchy[code]}")
 
     categories = {}
     for code in sorted(full_hierarchy.keys()):
         group, subgroup, label = full_hierarchy[code]
-        values = {}
-        for yr in years:
-            yd = all_data.get(yr, {})
-            if code in yd:
-                values[str(yr)] = round(yd[code]["total"], 2)
-            else:
-                values[str(yr)] = None
-        categories[code] = {
-            "label": label,
-            "group": group,
-            "subgroup": subgroup,
-            "values": values,
-        }
-
-    totals = {}
-    for yr in years:
-        t = sum(
-            yd["total"]
-            for code, yd in all_data.get(yr, {}).items()
-            if code in full_hierarchy
-        )
-        totals[str(yr)] = round(t, 2)
+        categories[code] = {"label": label, "group": group, "subgroup": subgroup}
 
     hierarchy = {}
     for code, (group, subgroup, _label) in full_hierarchy.items():
-        if group not in hierarchy:
-            hierarchy[group] = {}
-        if subgroup not in hierarchy[group]:
-            hierarchy[group][subgroup] = []
+        hierarchy.setdefault(group, {}).setdefault(subgroup, [])
         if code not in hierarchy[group][subgroup]:
             hierarchy[group][subgroup].append(code)
-
     for group in hierarchy:
         for subgroup in hierarchy[group]:
             hierarchy[group][subgroup].sort()
 
-    # --- Validation ---
-    print("\n=== Validation ===")
+    # Build per-district numeric payload (arrays aligned to `years`).
+    # Only emit codes that have a non-zero value in some year (keeps file small);
+    # absent codes read as null in the UI.
+    district_order = [D65_KEY] + [s for s in PEER_NAMES if s in districts and s != D65_KEY]
+    district_names = {k: districts[k]["name"] for k in district_order}
 
-    admin_csv = os.path.join(ROOT, "data", "afr_admin_pool_summary.csv")
-    if os.path.exists(admin_csv):
-        admin = pd.read_csv(admin_csv)
-        admin_group_prefixes = {"2300": "23", "2400": "24", "2500": "25", "2600": "26"}
-        print("\nAdmin pool cross-check (our total col vs admin sal+ben; expect ours >= admin):")
-        for _, row in admin.iterrows():
-            yr = int(row["year"])
-            if yr not in all_data:
-                continue
-            for func, prefix in admin_group_prefixes.items():
-                admin_val = row.get(func, 0)
-                our_val = sum(
-                    rec["total"] for code, rec in all_data[yr].items()
-                    if code.startswith(prefix) and code not in ROLLUP_CODES
-                )
-                ratio = our_val / admin_val if admin_val > 0 else 0
-                flag = "" if 0.8 < ratio < 2.0 else " *** CHECK"
-                if flag:
-                    print(f"  FY{yr} {func}: ours={our_val:>12,.0f}  admin(sal+ben)={admin_val:>12,.0f}  ratio={ratio:.2f}{flag}")
-        print("  (only suspicious ratios shown)")
-
-    print("\nPer-year totals:")
-    for yr in years:
-        leaf_sum = totals[str(yr)]
-        print(f"  FY{yr}: ${leaf_sum:>14,.0f}")
+    values = {}
+    totals = {}
+    ada = {}
+    for key in district_order:
+        dt = districts[key]["totals"]
+        da = districts[key]["ada"]
+        dvals = {}
+        for code in full_hierarchy:
+            arr = []
+            any_nonzero = False
+            for y in years:
+                if y in dt and code in dt[y]:
+                    v = round(dt[y][code], 2)
+                    arr.append(v)
+                    if v:
+                        any_nonzero = True
+                else:
+                    arr.append(None)
+            if any_nonzero:
+                dvals[code] = arr
+        values[key] = dvals
+        totals[key] = [
+            round(sum(v for c, v in dt[y].items() if c in full_hierarchy), 2)
+            if y in dt else None
+            for y in years
+        ]
+        ada[key] = [da.get(y) for y in years]
 
     json_data = {
-        "years": [str(y) for y in years],
+        "years": year_strs,
+        "districtOrder": district_order,
+        "districtNames": district_names,
+        "d65Key": D65_KEY,
         "categories": categories,
-        "totals": totals,
         "hierarchy": hierarchy,
+        "values": values,
+        "totals": totals,
+        "ada": ada,
     }
+
+    # --- Validation / summary ---
+    print("\n=== Per-district total Ed Fund + ADA (latest common year) ===")
+    for key in district_order:
+        t = totals[key]
+        a = ada[key]
+        # latest year that has BOTH a total and an ADA (so per-pupil is shown)
+        last = max((i for i in range(len(t)) if t[i] is not None and a[i]), default=None)
+        if last is None:
+            print(f"  {district_names[key]:28s}  NO DATA")
+            continue
+        tv = t[last]
+        av = a[last]
+        pp = (tv / av) if (av and tv) else None
+        ada_s = f"{av:,.1f}" if av else "—"
+        pp_s = f"${pp:,.0f}" if pp else "—"
+        print(f"  {district_names[key]:28s}  FY{year_strs[last]}  "
+              f"Ed Fund ${tv:>13,.0f}  ADA {ada_s:>9}  per-pupil {pp_s}")
 
     html = build_html(json_data)
     out_path = os.path.join(ASSETS_DIR, "budget_explorer.html")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"\nWrote {out_path}")
+    size = os.path.getsize(out_path)
+    print(f"\nWrote {out_path}  ({size:,} bytes)")
 
 
 def build_html(json_data):
-    data_json = json.dumps(json_data, indent=None)
+    data_json = json.dumps(json_data, indent=None, separators=(",", ":"))
     return HTML_TEMPLATE.replace("__BUDGET_DATA__", data_json)
 
 
@@ -496,8 +619,30 @@ h1 { font-size: 1.5em; font-weight: 700; margin-bottom: 2px; }
 .toggle-btn:last-child { border-right: none; }
 .toggle-btn:hover { background: #e8e8f8; }
 .toggle-btn.active { background: #5e5eb5; color: #fff; }
+.toggle-btn:disabled { opacity: 0.4; cursor: not-allowed; background: #f0f0f0; }
 
-#chart { width: 100%; height: 500px; margin-bottom: 16px; }
+#chart { width: 100%; height: 500px; margin-bottom: 8px; }
+
+.mode-banner {
+  font-size: 0.82em; padding: 6px 10px; border-radius: 4px; margin-bottom: 12px;
+  background: #eef0fb; color: #44488a; border: 1px solid #d4d8f5;
+}
+.mode-banner b { font-weight: 700; }
+
+/* District selector */
+.district-box {
+  border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 12px;
+  margin-bottom: 14px; background: #fafafa;
+}
+.district-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2px 14px;
+}
+.district-item {
+  display: flex; align-items: center; gap: 6px; padding: 2px 0; font-size: 0.84em;
+}
+.district-item.d65 { font-weight: 700; }
+.district-item label { cursor: pointer; }
 
 .tree-header {
   font-size: 0.95em; font-weight: 600; margin-bottom: 8px; color: #333;
@@ -539,10 +684,7 @@ h1 { font-size: 1.5em; font-weight: 700; margin-bottom: 2px; }
 
 input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0; }
 
-.color-swatch {
-  display: inline-block; width: 10px; height: 10px; border-radius: 2px;
-  flex-shrink: 0; border: 1px solid rgba(0,0,0,0.1);
-}
+.section-label { font-size: 0.95em; font-weight: 600; margin-bottom: 6px; color: #333; }
 
 .footer {
   margin-top: 16px; padding-top: 10px; border-top: 1px solid #e0e0e0;
@@ -554,7 +696,7 @@ input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0;
 @media (max-width: 768px) {
   body { padding: 10px; }
   h1 { font-size: 1.2em; }
-  #chart { height: 350px; }
+  #chart { height: 380px; }
   .tree-container { max-height: 300px; }
 }
 </style>
@@ -562,7 +704,7 @@ input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0;
 <body>
 
 <h1>D65 Budget Explorer</h1>
-<p class="subtitle">Educational Fund Expenditures FY2012–FY2026 (on-behalf/pension payments excluded; FY2026 is adopted budget)</p>
+<p class="subtitle">Educational Fund Expenditures FY2012–FY2026 (on-behalf/pension payments excluded; D65 FY2026 is adopted budget). Add peer districts to compare.</p>
 
 <div class="controls">
   <div class="controls-row">
@@ -586,15 +728,28 @@ input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0;
     </div>
     <div class="grouping-row">
       <span class="controls-label">Y-Axis:</span>
-      <div class="toggle-group" id="yaxis-toggle">
-        <button class="toggle-btn active" data-yaxis="percent">% of Budget</button>
-        <button class="toggle-btn" data-yaxis="dollars">Dollars</button>
+      <div class="toggle-group" id="metric-toggle">
+        <button class="toggle-btn active" data-metric="percent">% of Budget</button>
+        <button class="toggle-btn" data-metric="perpupil">Per-Pupil $</button>
+        <button class="toggle-btn" data-metric="dollars">Dollars</button>
       </div>
     </div>
   </div>
 </div>
 
 <div id="chart"></div>
+<div class="mode-banner" id="mode-banner"></div>
+
+<div class="district-box">
+  <div class="tree-header" style="margin-bottom:6px;">
+    <span>Districts</span>
+    <div class="tree-actions">
+      <button class="tree-action-btn" id="d65-only-btn">D65 only</button>
+      <button class="tree-action-btn" id="all-peers-btn">Select all peers</button>
+    </div>
+  </div>
+  <div class="district-grid" id="district-grid"></div>
+</div>
 
 <div class="tree-header">
   <span>Category Selection</span>
@@ -606,9 +761,10 @@ input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0;
 <div class="tree-container" id="tree"></div>
 
 <div class="footer">
-  <strong>Source:</strong> District 65 ISBE Annual Financial Reports (FY2012–FY2025) and Adopted Budget (FY2026).<br>
-  Educational Fund only. On-behalf/pension payments excluded.
-  Category codes follow the Illinois State Board of Education function code structure.
+  <strong>Source:</strong> ISBE Annual Financial Reports (FY2012–FY2025) for each district, and D65's Adopted Budget (FY2026), via districtvitals.com.<br>
+  Educational Fund only. On-behalf/pension payments excluded. Category codes follow the ISBE function-code structure.
+  <strong>Per-pupil</strong> uses each district's official 9-month ADA from its AFR (the ISBE OEPP denominator).<br>
+  <em>Caveat:</em> this is Educational-Fund spending only; districts allocate costs across the Education, Operations &amp; Maintenance, and Transportation funds differently, so cross-district <em>levels</em> are not perfectly apples-to-apples. Comparing the <em>share of budget</em> or trends over time is more robust.
 </div>
 
 <script>
@@ -632,12 +788,16 @@ const COLORS = [
 const GROUP_COLORS = {};
 GROUP_ORDER.forEach((g, i) => { GROUP_COLORS[g] = COLORS[i % COLORS.length]; });
 
+const D65 = DATA.d65Key;
+
 const state = {
   chartType: "area",
-  yAxis: "percent",
+  metric: "percent",
   activePreset: "where-money-goes",
-  customTraces: null,
+  selectedDistricts: new Set([D65]),
 };
+
+// --- helpers ---
 
 function getCodesForGroup(group) {
   const subs = DATA.hierarchy[group] || {};
@@ -656,11 +816,53 @@ function getCheckedCodes() {
   return codes;
 }
 
+// value of one code for a district at year-index j (null if absent)
+function codeVal(dk, code, j) {
+  const arr = (DATA.values[dk] || {})[code];
+  if (!arr) return null;
+  const v = arr[j];
+  return (v === null || v === undefined) ? null : v;
+}
+
+// sum a set of codes for a district at year-index j; null if no data at all
+function sumCodes(dk, codes, j) {
+  let sum = 0, has = false;
+  for (const c of codes) {
+    const v = codeVal(dk, c, j);
+    if (v !== null) { sum += v; has = true; }
+  }
+  return has ? sum : null;
+}
+
+// transform a raw dollar value to the active metric for district dk, year j
+function applyMetric(dk, dollars, j) {
+  if (dollars === null || dollars === undefined) return null;
+  if (state.metric === "dollars") return dollars;
+  if (state.metric === "percent") {
+    const t = (DATA.totals[dk] || [])[j];
+    return (t && t > 0) ? (dollars / t * 100) : null;
+  }
+  if (state.metric === "perpupil") {
+    const a = (DATA.ada[dk] || [])[j];
+    return (a && a > 0) ? (dollars / a) : null;
+  }
+  return dollars;
+}
+
+function metricAxisTitle() {
+  if (state.metric === "percent") return "% of District Ed Fund";
+  if (state.metric === "perpupil") return "Per-Pupil Spending ($ / ADA)";
+  return "Dollars ($)";
+}
+
+function isCompare() {
+  return state.selectedDistricts.size >= 2;
+}
+
 // --- Presets ---
 
 const PRESETS = {
   "where-money-goes": {
-    label: "Where the Money Goes",
     mode: "grouped",
     groups: function() {
       const g = {};
@@ -672,7 +874,6 @@ const PRESETS = {
     }
   },
   "instruction": {
-    label: "Instruction Breakdown",
     mode: "grouped",
     groups: function() {
       const subs = DATA.hierarchy["Instruction"] || {};
@@ -682,12 +883,10 @@ const PRESETS = {
     }
   },
   "classroom-vs-non": {
-    label: "Classroom vs Non-Classroom",
     mode: "grouped",
     groups: function() {
       const classroomGroups = ["Instruction", "Instructional Staff Support"];
-      const classroom = [];
-      const nonClassroom = [];
+      const classroom = [], nonClassroom = [];
       GROUP_ORDER.forEach(grp => {
         const codes = getCodesForGroup(grp);
         if (classroomGroups.includes(grp)) classroom.push(...codes);
@@ -697,7 +896,6 @@ const PRESETS = {
     }
   },
   "admin": {
-    label: "All Administration",
     mode: "grouped",
     groups: function() {
       const g = {};
@@ -709,17 +907,14 @@ const PRESETS = {
     }
   },
   "special-ed": {
-    label: "Special Ed Total",
     mode: "individual",
     codes: function() { return ["1200", "1225", "1911", "1922", "4120", "4220", "4320"].filter(c => c in DATA.categories); }
   },
   "student-support": {
-    label: "Student Support",
     mode: "individual",
     codes: function() { return getCodesForGroup("Student Support"); }
   },
   "community-payments": {
-    label: "Community & Payments",
     mode: "individual",
     codes: function() {
       return [...getCodesForGroup("Community Services"), ...getCodesForGroup("Payments to Other Districts")];
@@ -727,70 +922,60 @@ const PRESETS = {
   },
 };
 
+function presetCodes(name) {
+  const preset = PRESETS[name];
+  if (!preset) return [];
+  if (preset.mode === "grouped") {
+    const groups = preset.groups();
+    const s = new Set();
+    for (const g in groups) groups[g].forEach(c => s.add(c));
+    return [...s];
+  }
+  return preset.codes();
+}
+
 function applyPreset(name) {
   state.activePreset = name;
   document.querySelectorAll('.preset-btn').forEach(b => b.classList.toggle('active', b.dataset.preset === name));
 
-  const preset = PRESETS[name];
-  const allLeaf = getAllLeafCodes();
-
-  if (preset.mode === "grouped") {
-    const groups = preset.groups();
-    const codesInPreset = new Set();
-    for (const g in groups) groups[g].forEach(c => codesInPreset.add(c));
-    allLeaf.forEach(code => {
-      const cb = document.querySelector(`.leaf-cb[data-code="${code}"]`);
-      if (cb) cb.checked = codesInPreset.has(code);
-    });
-    updateParentCheckboxes();
-    state.customTraces = buildGroupedTraces(groups);
-  } else {
-    const activeCodes = new Set(preset.codes());
-    allLeaf.forEach(code => {
-      const cb = document.querySelector(`.leaf-cb[data-code="${code}"]`);
-      if (cb) cb.checked = activeCodes.has(code);
-    });
-    updateParentCheckboxes();
-    state.customTraces = null;
-  }
+  const codesInPreset = new Set(presetCodes(name));
+  getAllLeafCodes().forEach(code => {
+    const cb = document.querySelector(`.leaf-cb[data-code="${code}"]`);
+    if (cb) cb.checked = codesInPreset.has(code);
+  });
+  updateParentCheckboxes();
   updateChart();
 }
 
 // --- Trace building ---
 
-function buildGroupedTraces(groups) {
+// Single-district mode: break the selected district down by category.
+function buildSingleTraces(dk) {
   const years = DATA.years;
+  const preset = state.activePreset ? PRESETS[state.activePreset] : null;
   const traces = [];
-  const groupNames = Object.keys(groups);
-  groupNames.forEach((name, i) => {
-    const codes = groups[name];
-    const vals = years.map(yr => {
-      let sum = 0;
-      let hasData = false;
-      codes.forEach(c => {
-        const v = (DATA.categories[c] || {values:{}}).values[yr];
-        if (v !== null && v !== undefined) { sum += v; hasData = true; }
-      });
-      return hasData ? sum : null;
-    });
-    traces.push({ name, values: vals, color: COLORS[i % COLORS.length] });
-  });
-  return traces;
-}
 
-function buildIndividualTraces(codes) {
-  const years = DATA.years;
-  const traces = [];
+  if (preset && preset.mode === "grouped") {
+    const groups = preset.groups();
+    // only keep codes the user still has checked
+    const checked = new Set(getCheckedCodes());
+    Object.keys(groups).forEach((gname, i) => {
+      const codes = groups[gname].filter(c => checked.has(c));
+      if (!codes.length) return;
+      const vals = years.map((_, j) => sumCodes(dk, codes, j));
+      if (vals.some(v => v !== null && v > 0))
+        traces.push({ name: gname, values: vals, color: COLORS[i % COLORS.length] });
+    });
+    return traces;
+  }
+
+  // individual checked codes
   let colorIdx = 0;
-  codes.forEach(code => {
+  getCheckedCodes().forEach(code => {
     const cat = DATA.categories[code];
     if (!cat) return;
-    const vals = years.map(yr => {
-      const v = cat.values[yr];
-      return (v !== null && v !== undefined) ? v : null;
-    });
-    const hasAnyData = vals.some(v => v !== null && v > 0);
-    if (!hasAnyData) return;
+    const vals = years.map((_, j) => codeVal(dk, code, j));
+    if (!vals.some(v => v !== null && v > 0)) return;
     traces.push({
       name: cat.label + " (" + code + ")",
       values: vals,
@@ -801,22 +986,66 @@ function buildIndividualTraces(codes) {
   return traces;
 }
 
+// Compare mode: sum the checked categories, one trace per selected district.
+function buildCompareTraces() {
+  const years = DATA.years;
+  const codes = getCheckedCodes();
+  const order = DATA.districtOrder.filter(dk => state.selectedDistricts.has(dk));
+  const traces = [];
+  order.forEach((dk, i) => {
+    const vals = years.map((_, j) => sumCodes(dk, codes, j));
+    traces.push({
+      name: DATA.districtNames[dk] + (dk === D65 ? " ★" : ""),
+      values: vals,
+      color: dk === D65 ? "#111" : COLORS[i % COLORS.length],
+      isD65: dk === D65,
+      district: dk,
+    });
+  });
+  return traces;
+}
+
+function updateModeBanner() {
+  const el = document.getElementById("mode-banner");
+  if (isCompare()) {
+    const n = state.selectedDistricts.size;
+    el.innerHTML = `<b>Compare mode</b> — ${n} districts. Each line is the sum of the checked categories for that district. ` +
+      (state.metric === "dollars"
+        ? "Showing raw dollars; switch to <b>% of Budget</b> or <b>Per-Pupil $</b> for a fair comparison across district sizes."
+        : (state.metric === "percent"
+          ? "Showing each category sum as a share of that district's own Educational Fund."
+          : "Showing per-pupil spending (category sum ÷ that district's 9-month ADA)."));
+  } else {
+    const dk = state.selectedDistricts.size ? [...state.selectedDistricts][0] : D65;
+    el.innerHTML = `<b>Single-district mode</b> — ${DATA.districtNames[dk]}. ` +
+      `Category breakdown. Check additional districts below to compare a category total across districts.`;
+  }
+}
+
 function updateChart() {
   const years = DATA.years;
   const yearLabels = years.map(y => "FY" + y);
-  let traces;
+  const compare = isCompare();
 
-  if (state.customTraces) {
-    traces = state.customTraces;
+  updateModeBanner();
+
+  // In compare mode, stacked area across districts is meaningless -> render as lines.
+  let effType = state.chartType;
+  if (compare && effType === "area") effType = "line";
+
+  let traces;
+  if (compare) {
+    traces = buildCompareTraces();
   } else {
-    const checked = getCheckedCodes();
-    traces = buildIndividualTraces(checked);
+    const dk = state.selectedDistricts.size ? [...state.selectedDistricts][0] : D65;
+    traces = buildSingleTraces(dk);
   }
 
-  if (traces.length === 0) {
+  if (traces.length === 0 || traces.every(t => t.values.every(v => v === null))) {
     Plotly.react("chart", [], {
       annotations: [{
-        text: "Select categories below to display data",
+        text: compare ? "Select categories to compare across districts"
+                      : "Select categories below to display data",
         xref: "paper", yref: "paper", x: 0.5, y: 0.5,
         showarrow: false, font: { size: 16, color: "#999" }
       }],
@@ -826,55 +1055,44 @@ function updateChart() {
     return;
   }
 
-  const plotTraces = traces.map((t, i) => {
-    let yvals;
-    if (state.yAxis === "percent") {
-      yvals = t.values.map((v, j) => {
-        if (v === null) return null;
-        const total = DATA.totals[years[j]];
-        return total > 0 ? (v / total * 100) : 0;
-      });
-    } else {
-      yvals = t.values;
-    }
+  const plotTraces = traces.map((t) => {
+    const dk = t.district || (state.selectedDistricts.size ? [...state.selectedDistricts][0] : D65);
+    const yvals = t.values.map((v, j) => applyMetric(dk, v, j));
 
     const base = {
       x: yearLabels,
       y: yvals,
       name: t.name,
       marker: { color: t.color },
-      line: { color: t.color },
+      line: { color: t.color, width: t.isD65 ? 4 : 2 },
     };
 
-    const dollarVals = t.values;
-    const pctVals = t.values.map((v, j) => {
-      if (v === null) return null;
-      const total = DATA.totals[years[j]];
-      return total > 0 ? (v / total * 100) : 0;
+    base.customdata = years.map((yr, j) => {
+      const dollars = t.values[j];
+      const tot = (DATA.totals[dk] || [])[j];
+      const a = (DATA.ada[dk] || [])[j];
+      return {
+        year: yr,
+        dollars: dollars,
+        pct: (dollars !== null && tot) ? (dollars / tot * 100) : null,
+        pp: (dollars !== null && a) ? (dollars / a) : null,
+      };
     });
 
-    base.customdata = years.map((yr, j) => ({
-      dollars: dollarVals[j],
-      pct: pctVals[j],
-      year: yr,
-    }));
+    const hover = "<b>FY%{customdata.year}</b><br>%{data.name}<br>"
+      + "$%{customdata.dollars:,.0f}"
+      + " &nbsp;|&nbsp; %{customdata.pct:.1f}% of Ed Fund"
+      + " &nbsp;|&nbsp; $%{customdata.pp:,.0f}/pupil<extra></extra>";
 
-    if (state.chartType === "area") {
-      base.type = "scatter";
-      base.mode = "lines";
-      base.stackgroup = "one";
-      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
-        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
-    } else if (state.chartType === "line") {
-      base.type = "scatter";
-      base.mode = "lines+markers";
-      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
-        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
+    if (effType === "area") {
+      base.type = "scatter"; base.mode = "lines"; base.stackgroup = "one";
+    } else if (effType === "line") {
+      base.type = "scatter"; base.mode = "lines+markers";
     } else {
       base.type = "bar";
-      base.hovertemplate = "<b>FY%{customdata.year}</b><br>%{data.name}<br>" +
-        "%{customdata.pct:.1f}% ($%{customdata.dollars:,.0f})<extra></extra>";
     }
+    base.hovertemplate = hover;
+    base.connectgaps = false;
     return base;
   });
 
@@ -882,28 +1100,69 @@ function updateChart() {
     plot_bgcolor: "white",
     paper_bgcolor: "white",
     height: 500,
-    margin: { l: 70, r: 30, t: 30, b: 80 },
-    xaxis: {
-      showgrid: true, gridcolor: "#eee",
-      tickangle: -45,
-    },
+    margin: { l: 75, r: 30, t: 30, b: 80 },
+    xaxis: { showgrid: true, gridcolor: "#eee", tickangle: -45 },
     yaxis: {
       showgrid: true, gridcolor: "#eee",
-      title: state.yAxis === "percent" ? "% of Total Budget" : "Dollars ($)",
-      tickformat: state.yAxis === "percent" ? ".1f" : "$,.0f",
+      title: metricAxisTitle(),
+      tickformat: state.metric === "percent" ? ".1f" : "$,.0f",
+      rangemode: "tozero",
     },
-    legend: {
-      orientation: "h", y: -0.25, x: 0.5, xanchor: "center",
-      font: { size: 11 },
-    },
-    hovermode: "x unified",
+    legend: { orientation: "h", y: -0.25, x: 0.5, xanchor: "center", font: { size: 11 } },
+    hovermode: compare ? "closest" : "x unified",
   };
 
-  if (state.chartType === "bar") {
-    layout.barmode = "stack";
-  }
+  if (effType === "bar") layout.barmode = compare ? "group" : "stack";
 
   Plotly.react("chart", plotTraces, layout, { responsive: true });
+}
+
+// --- District selector ---
+
+function buildDistrictSelector() {
+  const grid = document.getElementById("district-grid");
+  grid.innerHTML = "";
+  DATA.districtOrder.forEach(dk => {
+    const item = document.createElement("div");
+    item.className = "district-item" + (dk === D65 ? " d65" : "");
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.id = "dist-" + dk;
+    cb.dataset.district = dk;
+    cb.checked = state.selectedDistricts.has(dk);
+    const lbl = document.createElement("label");
+    lbl.htmlFor = cb.id;
+    lbl.textContent = DATA.districtNames[dk] + (dk === D65 ? " ★" : "");
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.selectedDistricts.add(dk);
+      else state.selectedDistricts.delete(dk);
+      if (state.selectedDistricts.size === 0) {
+        // never allow an empty selection — fall back to D65
+        state.selectedDistricts.add(D65);
+        document.getElementById("dist-" + D65).checked = true;
+      }
+      syncChartToggleForMode();
+      updateChart();
+    });
+    item.appendChild(cb);
+    item.appendChild(lbl);
+    grid.appendChild(item);
+  });
+}
+
+function syncChartToggleForMode() {
+  // Disable the Area button in compare mode (stacking districts is meaningless).
+  const areaBtn = document.querySelector('#chart-type-toggle .toggle-btn[data-type="area"]');
+  if (isCompare()) {
+    areaBtn.disabled = true;
+    if (state.chartType === "area") {
+      document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector('#chart-type-toggle .toggle-btn[data-type="line"]').classList.add('active');
+      state.chartType = "line";
+    }
+  } else {
+    areaBtn.disabled = false;
+  }
 }
 
 // --- Checkbox tree ---
@@ -915,7 +1174,6 @@ function buildTree() {
   GROUP_ORDER.forEach(group => {
     const subs = DATA.hierarchy[group];
     if (!subs) return;
-
     const allGroupCodes = getCodesForGroup(group);
     if (allGroupCodes.length === 0) return;
 
@@ -925,18 +1183,11 @@ function buildTree() {
     const header = document.createElement("div");
     header.className = "tree-group-header";
     const toggle = document.createElement("span");
-    toggle.className = "tree-toggle";
-    toggle.textContent = "▼";
+    toggle.className = "tree-toggle"; toggle.textContent = "▼";
     const cb = document.createElement("input");
-    cb.type = "checkbox";
-    cb.className = "group-cb";
-    cb.dataset.group = group;
-    const label = document.createElement("span");
-    label.textContent = group;
-
-    header.appendChild(toggle);
-    header.appendChild(cb);
-    header.appendChild(label);
+    cb.type = "checkbox"; cb.className = "group-cb"; cb.dataset.group = group;
+    const label = document.createElement("span"); label.textContent = group;
+    header.appendChild(toggle); header.appendChild(cb); header.appendChild(label);
     groupDiv.appendChild(header);
 
     const childrenDiv = document.createElement("div");
@@ -948,33 +1199,23 @@ function buildTree() {
     if (hasMidLevel) {
       subNames.forEach(sg => {
         const codes = subs[sg];
-        if (codes.length === 1 && !hasMidLevel) {
-          appendLeaf(childrenDiv, codes[0]);
-        } else if (codes.length === 1 && sg === codes[0]) {
+        if (codes.length === 1 && sg === codes[0]) {
           appendLeaf(childrenDiv, codes[0]);
         } else {
           const subDiv = document.createElement("div");
           subDiv.className = "tree-subgroup";
-
           if (codes.length === 1) {
             appendLeaf(subDiv, codes[0]);
           } else {
             const subHeader = document.createElement("div");
             subHeader.className = "tree-subgroup-header";
             const subToggle = document.createElement("span");
-            subToggle.className = "tree-toggle";
-            subToggle.textContent = "▼";
+            subToggle.className = "tree-toggle"; subToggle.textContent = "▼";
             const subCb = document.createElement("input");
-            subCb.type = "checkbox";
-            subCb.className = "subgroup-cb";
-            subCb.dataset.group = group;
-            subCb.dataset.subgroup = sg;
-            const subLabel = document.createElement("span");
-            subLabel.textContent = sg;
-
-            subHeader.appendChild(subToggle);
-            subHeader.appendChild(subCb);
-            subHeader.appendChild(subLabel);
+            subCb.type = "checkbox"; subCb.className = "subgroup-cb";
+            subCb.dataset.group = group; subCb.dataset.subgroup = sg;
+            const subLabel = document.createElement("span"); subLabel.textContent = sg;
+            subHeader.appendChild(subToggle); subHeader.appendChild(subCb); subHeader.appendChild(subLabel);
             subDiv.appendChild(subHeader);
 
             const subChildren = document.createElement("div");
@@ -1013,8 +1254,6 @@ function buildTree() {
 
   document.querySelectorAll(".subgroup-cb").forEach(scb => {
     scb.addEventListener("change", () => {
-      const group = scb.dataset.group;
-      const subgroup = scb.dataset.subgroup;
       const checked = scb.checked;
       const parent = scb.closest(".tree-subgroup");
       parent.querySelectorAll(".leaf-cb").forEach(lcb => { lcb.checked = checked; });
@@ -1024,10 +1263,7 @@ function buildTree() {
   });
 
   document.querySelectorAll(".leaf-cb").forEach(lcb => {
-    lcb.addEventListener("change", () => {
-      updateParentCheckboxes();
-      onManualChange();
-    });
+    lcb.addEventListener("change", () => { updateParentCheckboxes(); onManualChange(); });
   });
 }
 
@@ -1037,17 +1273,11 @@ function appendLeaf(container, code) {
   const div = document.createElement("div");
   div.className = "tree-leaf";
   const cb = document.createElement("input");
-  cb.type = "checkbox";
-  cb.className = "leaf-cb";
-  cb.dataset.code = code;
-  const lbl = document.createElement("span");
-  lbl.textContent = cat.label;
+  cb.type = "checkbox"; cb.className = "leaf-cb"; cb.dataset.code = code;
+  const lbl = document.createElement("span"); lbl.textContent = cat.label;
   const codeSpan = document.createElement("span");
-  codeSpan.className = "code";
-  codeSpan.textContent = " (" + code + ")";
-  div.appendChild(cb);
-  div.appendChild(lbl);
-  div.appendChild(codeSpan);
+  codeSpan.className = "code"; codeSpan.textContent = " (" + code + ")";
+  div.appendChild(cb); div.appendChild(lbl); div.appendChild(codeSpan);
   container.appendChild(div);
 }
 
@@ -1059,7 +1289,6 @@ function updateParentCheckboxes() {
     scb.checked = checked.length === leaves.length && leaves.length > 0;
     scb.indeterminate = checked.length > 0 && checked.length < leaves.length;
   });
-
   document.querySelectorAll(".group-cb").forEach(gcb => {
     const group = gcb.closest(".tree-group");
     const leaves = group.querySelectorAll(".leaf-cb");
@@ -1072,7 +1301,6 @@ function updateParentCheckboxes() {
 let debounceTimer = null;
 function onManualChange() {
   state.activePreset = null;
-  state.customTraces = null;
   document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
   if (debounceTimer) clearTimeout(debounceTimer);
   debounceTimer = setTimeout(updateChart, 100);
@@ -1082,6 +1310,7 @@ function onManualChange() {
 
 document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(btn => {
   btn.addEventListener("click", () => {
+    if (btn.disabled) return;
     document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     state.chartType = btn.dataset.type;
@@ -1089,11 +1318,11 @@ document.querySelectorAll('#chart-type-toggle .toggle-btn').forEach(btn => {
   });
 });
 
-document.querySelectorAll('#yaxis-toggle .toggle-btn').forEach(btn => {
+document.querySelectorAll('#metric-toggle .toggle-btn').forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll('#yaxis-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#metric-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    state.yAxis = btn.dataset.yaxis;
+    state.metric = btn.dataset.metric;
     updateChart();
   });
 });
@@ -1104,17 +1333,26 @@ document.querySelectorAll('.preset-btn').forEach(btn => {
 
 document.getElementById("select-all-btn").addEventListener("click", () => {
   document.querySelectorAll(".leaf-cb").forEach(cb => { cb.checked = true; });
-  updateParentCheckboxes();
-  onManualChange();
+  updateParentCheckboxes(); onManualChange();
 });
-
 document.getElementById("clear-all-btn").addEventListener("click", () => {
   document.querySelectorAll(".leaf-cb").forEach(cb => { cb.checked = false; });
-  updateParentCheckboxes();
-  onManualChange();
+  updateParentCheckboxes(); onManualChange();
+});
+
+document.getElementById("d65-only-btn").addEventListener("click", () => {
+  state.selectedDistricts = new Set([D65]);
+  document.querySelectorAll('.district-item input').forEach(cb => { cb.checked = (cb.dataset.district === D65); });
+  syncChartToggleForMode(); updateChart();
+});
+document.getElementById("all-peers-btn").addEventListener("click", () => {
+  DATA.districtOrder.forEach(dk => state.selectedDistricts.add(dk));
+  document.querySelectorAll('.district-item input').forEach(cb => { cb.checked = true; });
+  syncChartToggleForMode(); updateChart();
 });
 
 // --- Init ---
+buildDistrictSelector();
 buildTree();
 applyPreset("where-money-goes");
 </script>
