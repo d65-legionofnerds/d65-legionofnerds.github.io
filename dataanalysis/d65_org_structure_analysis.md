@@ -2,7 +2,7 @@
 title: Org Chart Creep
 layout: default
 parent: Data Analysis
-description: "How District 65's central office doubled while enrollment fell 25% — the org chart history from 2016 through 2026, what the SDRP cut, and what right-sizing the sub-cabinet would actually save."
+description: "How District 65's central office doubled while enrollment fell 24% — the org chart history from 2016 through 2026, what the SDRP cut, and what right-sizing the sub-cabinet would actually save."
 last_modified_date: 2026-05-07
 ---
 
@@ -146,9 +146,9 @@ last_modified_date: 2026-05-07
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">Cabinet cut 50% · Sub-cabinet cut only 13%</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+67%</div>
+<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+64%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admin-to-student ratio</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.0 → 16.7 per 1,000 students</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.2 → 16.7 per 1,000 students</div>
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">peer K-8 average ~12 per 1,000</div>
 </td>
 </tr>
@@ -162,25 +162,27 @@ last_modified_date: 2026-05-07
 <td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
 <div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">+55%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Per-student admin spending (real $)</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$2,201 → $3,401 per pupil</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$2,247 → $3,478 per pupil</div>
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">FY16 → FY25 · inflation-adjusted</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">−25%</div>
+<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">−24%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Student enrollment</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">7,500 → 5,625 students</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">7,371 → 5,630 students</div>
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">steepest among 21 peer districts</div>
 </td>
 </tr>
 </table>
 
-*Legion of Data Nerds · May 7, 2026 · ~40 min read · Based on FOIA documents, compensation reports, and board presentations*
+*Legion of Data Nerds · May 7, 2026 · Updated August 2, 2026 · ~40 min read · Based on FOIA documents, compensation reports, and board presentations*
+
+> **Correction (August 2, 2026).** An earlier version of this analysis reported a **25%** enrollment decline. That figure mixed two different student populations, and the enrollment series has been rebuilt on a single consistent measure — the corrected figure is **24%**. Enrollment values in the charts below were updated accordingly. See [A note on the enrollment decline figure](#a-note-on-the-enrollment-decline-figure) and the [full correction note](admin-growth-final#correction-the-enrollment-series) on the companion Admin Growth page.
 
 ## What You Need to Know
 
-Between SY2015–16 and SY2025–26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline, the steepest among 21 nearby K-8 districts. Over the same period:
+Between SY2015–16 and SY2025–26, K-8 enrollment fell from 7,371 to 5,630 students — a 24% decline, the steepest among 21 nearby K-8 districts. Over the same period:
 
-- **Enrollment fell 25%. Administrative cost per student rose 55%.** Those two lines moved in opposite directions for a decade. The community is paying the price in closed schools, partially cut counselors, and librarians whose roles remain unresolved.
+- **Enrollment fell 24%. Administrative cost per student rose 55%.** Those two lines moved in opposite directions for a decade. The community is paying the price in closed schools, partially cut counselors, and librarians whose roles remain unresolved.
 - **It didn't happen all at once — it was org chart creep.** Positions were added one at a time, each justified on its own terms, none examined in the aggregate. No single hire looked unreasonable. The cumulative result did.
 - **The peak was 2022–23 — the same year the district ran a $10 million deficit.** Central office administrators had grown 118% since 2016. Many hires were presented to the board as "budget neutral" while structural deficits were already being projected.
 - **The real story is the second tier — the sub-cabinet.** Below the cabinet sits a layer of directors, coordinators, and managers that grew 7× its 2016 size — 700% of baseline — and has barely been touched by the SDRP. The cabinet was cut 50%. The sub-cabinet was cut only 13%. The visible layer shrank. The expensive layer didn't.
@@ -197,9 +199,9 @@ The +118% headline figure measures TRS-enrolled certificated administrators spec
 
 District 65 is in a budget crisis. Enrollment has fallen. Counselors were partially cut and librarians reprieved — but both remain in limbo. Schools have been closed. And yet for years, one of the fastest-growing parts of the district wasn't classrooms or teacher compensation. It was the central office.
 
-This analysis documents what happened to D65's central office between 2016 and today — a textbook case of what we call **org chart creep**. Positions multiplied one at a time, each justified on its own terms, none examined in the aggregate. The cumulative result: a central office that more than doubled while enrollment fell by a quarter. That is **administrative bloat** — a structure whose size and cost became disconnected from the student population it serves.
+This analysis documents what happened to D65's central office between 2016 and today — a textbook case of what we call **org chart creep**. Positions multiplied one at a time, each justified on its own terms, none examined in the aggregate. The cumulative result: a central office that more than doubled while enrollment fell by nearly a quarter. That is **administrative bloat** — a structure whose size and cost became disconnected from the student population it serves.
 
-The numbers are stark. Enrollment fell 25% — the steepest decline among 21 nearby K-8 districts. Over the same period, higher-paid administrative headcount grew 25%, and central office administrators specifically doubled. Total administrative pay rose 21% in real (inflation-adjusted) dollars. Per-student administrative spending rose 55% in real terms. The cost driver was not higher salaries — individual administrator pay only kept pace with inflation. The cost driver was adding more administrators.
+The numbers are stark. Enrollment fell 24% — the steepest decline among 21 nearby K-8 districts. Over the same period, higher-paid administrative headcount grew 25%, and central office administrators specifically doubled. Total administrative pay rose 21% in real (inflation-adjusted) dollars. Per-student administrative spending rose 55% in real terms. The cost driver was not higher salaries — individual administrator pay only kept pace with inflation. The cost driver was adding more administrators.
 
 > **Companion Piece** — This deep dive traces the *structural history* of D65's administrative organization: the org charts, the governance failures, the titles and reporting lines. For the full *quantitative and financial* analysis — inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios — see [District 65 Administrative Growth Over Time →](admin-growth-final). For answers to common methodological questions, see the [Admin Growth FAQ →](admin-growth-faq).
 
@@ -250,7 +252,7 @@ A note on what we are *not* arguing: the 2016–17 structure is a reference poin
 ![D65 Org Chart — 2016–17 School Year (Goren)](assets/image1.png)
 *The Goren-era structure: eight senior positions, four curriculum directors, operations consolidated under business services. Compare this to what follows.* — [FOIA Gras doc 6510](https://ig.foiagras.com/api/public/chat/documents/6510/view){:target="_blank"}
 
-This baseline matters because it anchors the question the rest of this analysis tries to answer: how much larger does a central office need to be to serve 25% fewer students — and is the answer D65 has been living with defensible? The next section documents what the Horton era built on top of this foundation.
+This baseline matters because it anchors the question the rest of this analysis tries to answer: how much larger does a central office need to be to serve 24% fewer students — and is the answer D65 has been living with defensible? The next section documents what the Horton era built on top of this foundation.
 
 ---
 
@@ -773,7 +775,7 @@ The cabinet bars collapse dramatically in the post-SDRP column. The sub-cabinet 
 
 This matters for right-sizing in a concrete way: per-pupil peer benchmarks reflect the full cost of both tiers. A district that cuts its top 6 positions while leaving 42 sub-cabinet positions in place has not right-sized — it has decapitated. And the board cannot govern what it cannot see: when the public org chart shows only the cabinet, the sub-cabinet operates outside public view.
 
-> **"Cut to the Bone"** — District administration has described the SDRP cuts as having already "cut to the bone." The two-tier table above puts that claim to the test. The cabinet — the visible, board-facing layer — was indeed cut dramatically, finishing below its 2016–17 starting point. But the sub-cabinet layer, where most of the day-to-day administrative cost actually lives, contracted by roughly 13% while remaining seven times its original size. That asymmetry demands an explanation the district has not provided: why does D65 need seven times as many directors, coordinators, and program managers today as it did in 2016, to serve 25% fewer students? Each hire was individually plausible; none was examined in aggregate.
+> **"Cut to the Bone"** — District administration has described the SDRP cuts as having already "cut to the bone." The two-tier table above puts that claim to the test. The cabinet — the visible, board-facing layer — was indeed cut dramatically, finishing below its 2016–17 starting point. But the sub-cabinet layer, where most of the day-to-day administrative cost actually lives, contracted by roughly 13% while remaining seven times its original size. That asymmetry demands an explanation the district has not provided: why does D65 need seven times as many directors, coordinators, and program managers today as it did in 2016, to serve 24% fewer students? Each hire was individually plausible; none was examined in aggregate.
 >
 > The sub-cabinet is where the real right-sizing opportunity remains — and it is an opportunity that would not touch a single classroom. The 16 directors and managers that appear in the district's FY2025–26 PA 96-0434 compensation report carry average total compensation of **approximately $173,000, totaling $2.76M across that disclosed slice alone**. The full sub-cabinet — including IMRF-disclosed directors and managers not in the TRS report — is estimated at 42 positions against an SY2016–17 baseline of just 6. Even a conservative reduction to 20 positions would eliminate roughly 22 roles. Using the same district-implicit average compensation the SDRP Phase III deck applied ($129K per position cut), that is **roughly $2.8M in annual savings**; valued at the higher TRS-disclosed sub-cabinet average ($173K), it approaches $3.8M — without cutting a teacher, a counselor, or a librarian. A more substantial right-sizing to ~10 positions would **approach $4 to $5.5 million** on the same two yardsticks.
 
@@ -801,12 +803,12 @@ A second lens: how did positions move relative to enrollment? If staffing had tr
 <script>
 (function() {
   var pts = [
-    { year: '2016–17', enrollment: 7422, cab: 8,  sub: 6  },
-    { year: '2019 S',   enrollment: 6977, cab: 8,  sub: 9  },
-    { year: '2020–21', enrollment: 6497, cab: 9,  sub: 20 },
-    { year: '2021–22', enrollment: 6116, cab: 10, sub: 38 },
-    { year: '2022–23', enrollment: 6019, cab: 12, sub: 48 },
-    { year: '2025–26', enrollment: 5567, cab: 6,  sub: 42 },
+    { year: '2016–17', enrollment: 7559, cab: 8,  sub: 6  },
+    { year: '2019 S',   enrollment: 7422, cab: 8,  sub: 9  },
+    { year: '2020–21', enrollment: 7060, cab: 9,  sub: 20 },
+    { year: '2021–22', enrollment: 6497, cab: 10, sub: 38 },
+    { year: '2022–23', enrollment: 6200, cab: 12, sub: 48 },
+    { year: '2025–26', enrollment: 5630, cab: 6,  sub: 42 },
   ];
   var cabData = pts.map(function(p){ return { x: p.enrollment, y: p.cab, label: p.year }; });
   var subData = pts.map(function(p){ return { x: p.enrollment, y: p.sub, label: p.year }; });
@@ -818,8 +820,8 @@ A second lens: how did positions move relative to enrollment? If staffing had tr
       var xScale = chart.scales.x;
       var yScale = chart.scales.y;
       if (!xScale || !yScale) return;
-      var x1 = xScale.getPixelForValue(6977);
-      var x2 = xScale.getPixelForValue(6019);
+      var x1 = xScale.getPixelForValue(7422);
+      var x2 = xScale.getPixelForValue(6200);
       var top = yScale.top;
       var bottom = yScale.bottom;
       ctx.save();
@@ -922,13 +924,13 @@ A second lens: how did positions move relative to enrollment? If staffing had tr
 })();
 </script>
 
-*Chart uses District 65's K-8 graded-classroom count (5,567 in 2025–26); ISBE 'total served' adds early-childhood, Park, Rice, and JEH students for a figure of 5,941. Headline figure (5,625) is the K-8 + PreK-with-IEP count consistent with the District's Opening of Schools report.*
+*Chart uses District 65's own K-8 count, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs (5,630 in 2025–26, from the District's [November 2025 enrollment memo](https://ig.foiagras.com/api/public/chat/documents/248/view){:target="_blank"}). ISBE's broader 'total served' figure, which adds those programs, is approximately 5,997. Full series and per-year sources: [d65_enrollment_history.csv](data/d65_enrollment_history.csv).*
 
-Enrollment fell 19% from 2016–17 to 2022–23; total central office positions grew from 14 to 60. The SDRP pulled the lines back from their peak, but the 2025–26 points remain dramatically above where they started when enrollment was 25% higher.
+Enrollment fell 18% from 2016–17 to 2022–23; total central office positions grew from 14 to 60. The SDRP pulled the lines back from their peak, but the 2025–26 points remain dramatically above where they started when enrollment was a third higher.
 
-Indexed to 2016–17 = 100%, enrollment fell to 75% of baseline — a loss of about 1,900 students. The cabinet grew to 150% at peak, then the SDRP cut it back to 75% — below where it started. The cabinet, at least, was eventually restrained.
+Indexed to 2016–17 = 100%, enrollment fell to 74% of baseline — a loss of about 1,900 students. The cabinet grew to 150% at peak, then the SDRP cut it back to 75% — below where it started. The cabinet, at least, was eventually restrained.
 
-The sub-cabinet tells a different story entirely. It grew from 100% to **800%** of baseline by the 2022–23 peak — eight times its 2016–17 level — while enrollment was still falling. Post-SDRP, it sits at **700%**. For every percentage point enrollment fell from baseline, sub-cabinet grew roughly 35 percentage points in the other direction.
+The sub-cabinet tells a different story entirely. It grew from 100% to **800%** of baseline by the 2022–23 peak — eight times its 2016–17 level — while enrollment was still falling. Post-SDRP, it sits at **700%**. At that 2022–23 peak, for every percentage point enrollment had fallen from baseline, sub-cabinet had grown roughly 39 percentage points in the other direction.
 
 <div class="viz-wrap">
   <div class="viz-header">Indexed Change: Enrollment vs. Sub-Cabinet Growth, 2016–2026 (2016–17 = 100%)</div>
@@ -939,7 +941,7 @@ The sub-cabinet tells a different story entirely. It grew from 100% to **800%** 
       <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:#F4A940;"></span>Cabinet</span>
     </div>
     <div style="position:relative;width:100%;height:360px;">
-      <canvas id="fig3indexed" role="img" aria-label="Indexed horizontal bar chart. Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP. Enrollment fell to 80% by 2025-26.">Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP.</canvas>
+      <canvas id="fig3indexed" role="img" aria-label="Indexed horizontal bar chart. Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP. Enrollment fell to 74% by 2025-26.">Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP.</canvas>
     </div>
     <p style="font-size:11px;color:#6b6458;margin-top:10px;font-family:'IBM Plex Mono',monospace;"><strong>How to read:</strong> Bars share the same centerline. Sub-cabinet bars exceeding 200% are truncated; actual values shown at right. The solid black vertical line marks the 100% baseline (2016–17).</p>
   </div>
@@ -948,10 +950,10 @@ The sub-cabinet tells a different story entirely. It grew from 100% to **800%** 
 <script>
 (function(){
   var fullYrs=['2016–17 (Goren)','2019 S (Beardsley, interim)','2020–21 (Horton yr 1)','2021–22 (Horton yr 2)','2022–23 (Horton, peak)','2025–26 (Turner, post-SDRP)'];
-  var enrollment=[7422,6977,6497,6116,6019,5567];
+  var enrollment=[7559,7422,7060,6497,6200,5630];
   var cabinet=[8,8,9,10,12,6];
   var subcab=[6,9,20,38,48,42];
-  var bE=7422,bC=8,bSC=6,MAX=200;
+  var bE=7559,bC=8,bSC=6,MAX=200;
   var idxE=enrollment.map(function(v){return Math.round(v/bE*100);});
   var idxC=cabinet.map(function(v){return Math.round(v/bC*100);});
   var idxSC=subcab.map(function(v){return Math.round(v/bSC*100);});
@@ -1095,7 +1097,7 @@ In grades 3–5, the gap between White and Black/Latinx students was 51 points b
 
 **The bottom line.** In the years when the sub-cabinet was at or near its peak — roughly SY2020 through SY2023 — the district spent heavily on equity-focused administrative infrastructure. The outcomes for Black students, the most explicitly targeted group, are largely unchanged on the metrics the district itself uses to measure equity progress. The Black-White achievement gap in math and Language Arts is no narrower today than it was at the start of the strategic plan period. The district's own report acknowledges this plainly: "opportunity gaps persist across race, socioeconomic status, and IEP status." These are not our words. They are the district's.
 
-We cannot know what outcomes would look like without these investments — it is possible gaps would be even wider. But we can assess the return on investment at the scale and cost incurred — and on that measure, the case for sustaining the current sub-cabinet is weak. Seven times as many sub-cabinet administrators as in 2016, serving 25% fewer students, with racial achievement gaps essentially unchanged and math growth indicators declining, does not describe a successful investment thesis.
+We cannot know what outcomes would look like without these investments — it is possible gaps would be even wider. But we can assess the return on investment at the scale and cost incurred — and on that measure, the case for sustaining the current sub-cabinet is weak. Seven times as many sub-cabinet administrators as in 2016, serving 24% fewer students, with racial achievement gaps essentially unchanged and math growth indicators declining, does not describe a successful investment thesis.
 
 This is not an argument for abandoning equity work — it is an argument for doing it differently, with more investment in direct instructional intervention and a smaller, more accountable administrative layer tied to measurable outcomes.
 
@@ -1158,7 +1160,15 @@ This analysis draws on board-approved organizational charts (2016–17, 2020–2
 
 Document analysis and thematic synthesis were supported by [Claude](https://claude.ai){:target="_blank"} (Anthropic), used to identify patterns across compensation reports, org charts, and board presentations, and to draft narrative text from the source material. All factual claims were verified against the underlying primary documents by Legion members before publication.
 
-**A note on the enrollment decline figure.** This analysis uses **−25%** as the consistent headline enrollment decline figure, sourced from Larry Gavin's March 2026 *Evanston RoundTable* peer-comparison analysis, which found D65's decline to be the steepest among 21 nearby K-8 districts. Where figures in this analysis refer to the sub-period from 2016–17 through 2022–23 (before the SDRP), the decline over that window was approximately 19%. ISBE enrollment data for 2016–17 through 2025–26 shows a decline of approximately 20% (7,422 → 5,941). The −25% figure reflects the broadest peer-validated timeframe used by the *RoundTable* and is applied consistently across all figures and prose in this piece.
+### A note on the enrollment decline figure
+
+*(Updated August 2, 2026 — an earlier version of this analysis used −25%; see below.)*
+
+This analysis uses **−24%** as the headline enrollment decline figure: **7,371 students in SY2015–16 → 5,630 in SY2025–26**. Every enrollment figure in this piece — headline, charts, and prose — now uses one consistent measure: **students in grades K-8 at District 65's regular schools, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs.** This is the District's own long-running internal count; the November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade." Sources for each year are documented in [d65_enrollment_history.csv](data/d65_enrollment_history.csv) and in the companion [Admin Growth analysis](admin-growth-final#correction-the-enrollment-series).
+
+**Why this changed.** The earlier −25% figure was taken from Larry Gavin's March 2026 *Evanston RoundTable* peer-comparison analysis, which measures from FY2019 and uses ISBE's broader "total served" population. Applying that headline to this analysis's SY2015–16 baseline mixed two different measures. Correcting to a single consistent series gives −24%. Gavin's −25% remains accurate on his own basis, as does his finding that D65's decline is the steepest among 21 nearby K-8 districts. ISBE's "total served" measure over this analysis's window gives 7,894 → approximately 5,997, a −24.0% decline — the same answer.
+
+**Sub-period figures.** From 2016–17 (the org-chart baseline year, 7,559 students) through 2022–23 (6,200), the decline was approximately **18%**. From 2016–17 through 2025–26 it was approximately **25.5%** — enrollment on this measure peaked in 2016–17, not SY2015–16.
 
 Peer comparison figures reference the cohort established in our prior budget analysis: Oak Park District 97, Wilmette District 39, Northbrook District 28, Glenview, Park Ridge, and Wheeling, among others. Per-pupil expenditure data are sourced from ISBE Annual Financial Reports (AFR), with enrollment figures from the Illinois Report Card. Full methodology for the peer comparison is available at [d65-legionofnerds.github.io/dataanalysis/budget_analysis.html](https://d65-legionofnerds.github.io/dataanalysis/budget_analysis.html){:target="_blank"}.
 

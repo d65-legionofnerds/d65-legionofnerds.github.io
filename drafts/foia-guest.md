@@ -19,7 +19,7 @@ The [Legion of Data Nerds](https://d65-legionofnerds.github.io/) is a group of D
 
 ## What We Found
 
-Over the past month, we [published](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis) two analyses of D65's [administrative structure](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html). In our analyses, we focus on administration in the district, excluding principals and assistant principals, referring to central office administrators (as the bulk of administrators in our analyses are located at Joseph E. Hill (JEH), District 65’s central administration office). Together, our analyses tell a single story: over the past decade, D65's central office more than tripled in size, increasing costs while student enrollment declined 25%.
+Over the past month, we [published](https://d65-legionofnerds.github.io/dataanalysis/d65_org_structure_analysis) two analyses of D65's [administrative structure](https://d65-legionofnerds.github.io/dataanalysis/admin-growth-final.html). In our analyses, we focus on administration in the district, excluding principals and assistant principals, referring to central office administrators (as the bulk of administrators in our analyses are located at Joseph E. Hill (JEH), District 65’s central administration office). Together, our analyses tell a single story: over the past decade, D65's central office more than tripled in size, increasing costs while student enrollment declined 24%.
 
 ![Overall findings](assets/fig_tiles.svg)
 

@@ -1,12 +1,12 @@
 year,enrollment,source,note
-2016,7523,Opening of Schools 2015-16 (foiagras doc 7213),"K-8 + PreK with IEP, Sept 30 2015"
-2017,7712,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 + PreK with IEP, Sept 30 2016"
-2018,7578,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 + PreK with IEP, Sept 30 2017"
-2019,7562,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 + PreK with IEP, Sept 30 2018"
-2020,7483,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 + PreK with IEP, Sept 30 2019"
-2021,6997,combined_enrollment_data.csv (ISBE state report cards),
-2022,6481,combined_enrollment_data.csv (ISBE state report cards),
-2023,6145,combined_enrollment_data.csv (ISBE state report cards),
-2024,6053,combined_enrollment_data.csv (ISBE state report cards),
-2025,5877,combined_enrollment_data.csv (ISBE state report cards),
-2026,5625,https://data.district65.net/,
+2016,7371,Opening of Schools 2015-16 (foiagras doc 7213),"K-8 excl. Park/Rice/JEH; K-5 4,991 + 6-8 2,380; Sept 30 2015"
+2017,7559,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 excl. Park/Rice/JEH; K-5 5,080 + 6-8 2,479; Sept 30 2016"
+2018,7496,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 excl. Park/Rice/JEH; K-5 5,054 + 6-8 2,442; Sept 30 2017"
+2019,7422,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 excl. Park/Rice/JEH; K-5 4,881 + 6-8 2,541; Sept 30 2018"
+2020,7325,Opening of Schools 2019-20 cross-year table (foiagras doc 4318),"K-8 excl. Park/Rice/JEH; K-5 4,791 + 6-8 2,534; Sept 30 2019"
+2021,7060,2020-21 Enrollment Update Memo (foiagras doc 3853),"K-8 excl. Park/Rice/JEH; K-5 4,531 + 6-8 2,529; Sept 14 2020 count date (earlier than the usual Sept 30/Oct 1 date)"
+2022,6497,(Final) Enrollment Projections Memo 11.3.2025 Table 1 (foiagras doc 248),"K-8 excl. Park/Rice/JEH/SEES; District actual row"
+2023,6200,(Final) Enrollment Projections Memo 11.3.2025 Table 1 (foiagras doc 248),"K-8 excl. Park/Rice/JEH/SEES; District actual row"
+2024,5799,(Final) Enrollment Projections Memo 11.3.2025 Table 1 (foiagras doc 248),"K-8 excl. Park/Rice/JEH/SEES; District actual row"
+2025,5748,(Final) Enrollment Projections Memo 11.3.2025 Table 1 (foiagras doc 248),"K-8 excl. Park/Rice/JEH/SEES; District actual row"
+2026,5630,(Final) Enrollment Projections Memo 11.3.2025 Table 1 (foiagras doc 248),"K-8 excl. Park/Rice/JEH/SEES; District actual row; Oct 1 2025 count date"

@@ -149,13 +149,13 @@ afr_per_pupil["pool_excl_prin_per_pupil_real"] = afr_per_pupil["pool_excl_princi
 figB = go.Figure()
 figB.add_trace(go.Scatter(
     x=afr_per_pupil["year"], y=afr_per_pupil["pool_per_pupil_real"],
-    name="Total admin pool ($19.56M FY25)", mode="lines+markers",
+    name="Total admin pool ($19.99M FY25, 2026 $)", mode="lines+markers",
     line=dict(color="black", width=4), marker=dict(size=10),
     hovertemplate="<b>FY%{x}</b><br>Total admin per pupil: $%{y:,.0f}<extra></extra>",
 ))
 figB.add_trace(go.Scatter(
     x=afr_per_pupil["year"], y=afr_per_pupil["pool_excl_prin_per_pupil_real"],
-    name="Admin excl. principals ($12.22M FY25)", mode="lines+markers",
+    name="Admin excl. principals ($12.49M FY25, 2026 $)", mode="lines+markers",
     line=dict(color="#c0392b", width=3, dash="dot"), marker=dict(size=9),
     hovertemplate="<b>FY%{x}</b><br>Admin excl principals per pupil: $%{y:,.0f}<extra></extra>",
 ))

@@ -10,9 +10,11 @@ parent: Data Analysis
 
 **[Frequently Asked Questions](admin-growth-faq)** — answers to common questions about how administrators are counted, what data sources are used, and what the numbers mean.
 
+> **Correction (August 2, 2026).** An earlier version of this page reported a **25%** enrollment decline. That figure paired two different student populations and has been corrected to **24%**, with the full enrollment series rebuilt on a single consistent measure. Details in [Correction: the enrollment series](#correction-the-enrollment-series) below.
+
 <table width="100%">
 <tr>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+67%</span></td>
+<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+64%</span></td>
 <td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">2×</span></td>
 <td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">+55%</span></td>
 </tr>
@@ -22,9 +24,9 @@ parent: Data Analysis
 <td align="center">Per-pupil admin spending rise</td>
 </tr>
 <tr>
-<td align="center">10.0 → 16.7 per 1,000 students</td>
+<td align="center">10.2 → 16.7 per 1,000 students</td>
 <td align="center">11 → 24 administrators</td>
-<td align="center">$2,201 → $3,401</td>
+<td align="center">$2,247 → $3,478</td>
 </tr>
 <tr>
 <td align="center"><small>SY2015–16 to SY2025–26</small></td>
@@ -35,15 +37,15 @@ parent: Data Analysis
 
 ## Key Findings
 
-Between SY2015-16 and SY2025-26, K-8 enrollment fell from approximately 7,500 to 5,625 students — a 25% decline. Over the same period:
+Between SY2015-16 and SY2025-26, K-8 enrollment fell from 7,371 to 5,630 students — a 24% decline. Over the same period:
 
 - **The total admin compensation pool grew 21% in real (inflation-adjusted) dollars**, from $16.56M to $19.99M.
 - **General Administration more than doubled (+103%)**, from $2.40M to $4.88M. This category includes the superintendent, assistant superintendents, and curriculum directors/coordinators.
-- **Per-student admin spending rose 55%** after inflation, from $2,201 to $3,401 per pupil.
-- **Higher-paid admin headcount grew 25%** (75 to 94), and per-1,000-student admin density **rose 67%** (10.0 to 16.7).
+- **Per-student admin spending rose 55%** after inflation, from $2,247 to $3,478 per pupil.
+- **Higher-paid admin headcount grew 25%** (75 to 94), and per-1,000-student admin density **rose 64%** (10.2 to 16.7).
 - **Certificated central-office administrators (TRS Admin) more than doubled**, from 11 to 24.
 - **Per-person compensation has roughly tracked inflation.** The cost growth is driven by adding more positions, not paying existing administrators more.
-- **Right-sizing the administration could save $8.3M+ annually** based on the District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"}. The cuts can be phased, with $1.7M to $4.9M in immediate annual savings under three Legion scenarios.
+- **Right-sizing the administration could save $8.3M+ annually** based on the District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"}. The cuts can be phased, with $1.7M to $4.8M in immediate annual savings under three Legion scenarios.
 
 All dollar figures on this page are in **2026 dollars** (inflation-adjusted using BLS CPI-U). The analysis uses two independent public data sources — the District's Annual Financial Report (AFR) and state public-disclosure reports — detailed in the [methodology sections below](#why-two-data-sources).
 
@@ -89,7 +91,7 @@ This chart shows D65's total compensation paid to administrators across all four
 
 The trend is unambiguous:
 
-- **The pool grew from $15.36M (FY12) to $19.99M (FY25)**, a +30% real increase over a period when enrollment fell roughly 25%.
+- **The pool grew from $15.36M (FY12) to $19.99M (FY25)**, a +30% real increase over a period when enrollment fell roughly 24% (SY2015-16 to SY2025-26).
 - **General Administration (2300) more than doubled in real terms**, from $1.98M to $4.88M (+147%). This function code captures the superintendent's office, assistant superintendents, executive directors, and curriculum directors / coordinators.
 - **The biggest single-year jumps are visible in FY17 (early Strategic Plan / new initiatives) and FY23 (Devon Horton's first full year as superintendent)** — both represent moments when the administrative buildup accelerated.
 - School Administration (2400) and Business Services (2500) have been roughly flat in real terms over the decade. Central Support (2600) — which includes IT, planning, and data processing — grew about 28% in real terms, partly reflecting the technology buildup discussed below.
@@ -100,7 +102,7 @@ Normalized by enrollment, the picture is more dramatic. As enrollment fell, per-
 
 <iframe src="assets/admin_growth_final_afr_per_pupil.html" width="100%" height="600" frameborder="0"></iframe>
 
-Real per-pupil admin spending grew from approximately **$2,201 to $3,401 (+55%)** between FY16 and FY25. Excluding principals (which are largely school-level operations), per-pupil central-office and support spending grew from approximately **$1,246 to $2,125 (+71%)** over the same period.
+Real per-pupil admin spending grew from approximately **$2,247 to $3,478 (+55%)** between FY16 and FY25. Excluding principals (which are largely school-level operations), per-pupil central-office and support spending grew from approximately **$1,272 to $2,173 (+71%)** over the same period.
 
 ### Higher-Paid Admin Headcount Over Time (CPI-Indexed)
 
@@ -108,13 +110,13 @@ The AFR gives us the dollar story but does not break out individual employees. F
 
 <iframe src="assets/admin_growth_final_indexed_headcount_stacked.html" width="100%" height="600" frameborder="0"></iframe>
 
-Higher-paid admin headcount rose from 75 in SY2015-16 to 94 in SY2025-26 — a 25% increase over a decade in which K-8 enrollment fell 25%. Most of the year-to-year volatility between TRS Admin and IMRF Support Staff reflects positions being reclassified between funding sources rather than net hires or losses (the SY22-23 → SY23-24 transition is the largest example: about 11 IMRF Support Staff were reclassified into TRS Admin that year). **TRS Admin doubled from 11 to 24 — a clean signal that doesn't depend on the threshold framework, because TRS Admin is reported in full under PA 96-0434 regardless of the $75K rule.**
+Higher-paid admin headcount rose from 75 in SY2015-16 to 94 in SY2025-26 — a 25% increase over a decade in which K-8 enrollment fell 24%. Most of the year-to-year volatility between TRS Admin and IMRF Support Staff reflects positions being reclassified between funding sources rather than net hires or losses (the SY22-23 → SY23-24 transition is the largest example: about 11 IMRF Support Staff were reclassified into TRS Admin that year). **TRS Admin doubled from 11 to 24 — a clean signal that doesn't depend on the threshold framework, because TRS Admin is reported in full under PA 96-0434 regardless of the $75K rule.**
 
 ### Higher-Paid Admin per 1,000 Students
 
 <iframe src="assets/admin_growth_final_indexed_per_1000.html" width="100%" height="600" frameborder="0"></iframe>
 
-This is the most consequential headcount chart on the page. Even under the strict CPI-indexed apples-to-apples comparison, **per-pupil admin density rose from 10.0 to 16.7 per 1,000 students between 2016 and 2026 — a 67% increase**. Peer K-8 districts in the surrounding area cluster around 12 per 1,000 students.
+This is the most consequential headcount chart on the page. Even under the strict CPI-indexed apples-to-apples comparison, **per-pupil admin density rose from 10.2 to 16.7 per 1,000 students between 2016 and 2026 — a 64% increase**. Peer K-8 districts in the surrounding area cluster around 12 per 1,000 students.
 
 ### Average Compensation per Administrator
 
@@ -155,8 +157,8 @@ The school-closure savings figures use the District's **Dec 1, 2025 revised SDRP
 Three reference scenarios, all computed using the **District's own per-cut average ($129K)** so the Legion and District proposals are directly comparable. Headcount targets are based on the CPI-indexed PA-disclosed roster (94 administrators in 2026):
 
 - **Moderate — return higher-paid admin/support to 2016–2019 baseline (~81 admin, ~13 cuts).** Estimated annual savings: **$1.68M = 8.4% of the FY25 AFR admin pool**. This is the lowest-controversy scenario and ties directly to D65's own pre-buildup baseline.
-- **Match peer K-8 median (~12/1k students; ~68 admin, ~26 cuts).** Estimated annual savings: **$3.43M = 17.2% of the FY25 AFR admin pool.**
-- **Match D65's own SY2015-16 ratio (~10/1k students; ~56 admin, ~38 cuts).** Estimated annual savings: **$4.91M = 24.6% of the FY25 AFR admin pool.**
+- **Match peer K-8 median (~12/1k students; ~68 admin, ~26 cuts).** Estimated annual savings: **$3.42M = 17.1% of the FY25 AFR admin pool.**
+- **Match D65's own SY2015-16 ratio (~10.2/1k students; ~57 admin, ~37 cuts).** Estimated annual savings: **$4.75M = 23.8% of the FY25 AFR admin pool.**
 - **District's own April 20, 2026 proposal: $8.29M = 41.5% of the FY25 AFR admin pool.**
 
 All three Legion scenarios are smaller than the District's own April 20 proposal. That is not a contradiction — the District is willing to propose a larger cut than the Legion is calling for. **The empirical takeaway**: even on the most conservative apples-to-apples basis the Legion can construct, several million dollars in annual admin savings remain accessible — and the District itself has identified $8.3M.
@@ -278,6 +280,41 @@ A reader who wants to verify our data has at least three convergent sources to c
 
 ---
 
+## Correction: the enrollment series
+
+**Updated August 2, 2026.** An earlier version of this page reported that K-8 enrollment fell **25%** between SY2015-16 and SY2025-26, from "approximately 7,500" to 5,625 students. That comparison paired two different student populations. The corrected figure is **24%** (7,371 → 5,630), and the entire enrollment series has been rebuilt on one consistent measure.
+
+**What was wrong.** The SY2015-16 endpoint came from the line in the District's *Opening of Schools* report labeled *"Pre-K (w/ IEP) – Gr. 8 (served, excludes JEH- w/out IEP and High School Age students)"* — 7,523 students. Despite the label, that population includes students at Park School, the Rice Children's Center, and pre-K students with IEPs at JEH, because the District is legally required to serve them. The SY2025-26 endpoint (5,625, taken from the District's Data Dashboard) excluded all of those groups. Comparing the broader 2016 count against the narrower 2026 count overstated the decline by roughly a point and a half.
+
+**Why the original number was chosen.** The *Opening of Schools* report is the District's authoritative annual enrollment publication, and the "Pre-K (w/ IEP) – Gr. 8" line is the figure it leads with — it is the number the District itself headlines. The report was the best available source for the pre-2021 years, since ISBE State Report Cards for those years were not indexed on FOIA Gras at the time. For SY2025-26 no ISBE Report Card had yet been published, so the Data Dashboard was used. The mismatch was not deliberate; it came from taking each year's number from whichever source was available without verifying that the underlying definitions matched.
+
+**Who caught it.** Hope Perry of the *Evanston RoundTable* raised the question while reviewing this analysis, and supplied the District's November 2025 final enrollment memo showing 5,630 K-8 students excluding Park, Rice and JEH. We are grateful for the check.
+
+**What changed.** Every year in the series now uses the same measure — K-8 students in regular District 65 schools, excluding Park, Rice and JEH — sourced entirely from District documents. This also replaced the SY2020-21 through SY2024-25 values, which had been drawn from ISBE State Report Cards and represented a third definition again. The full series and its per-year sources are in [data/d65_enrollment_history.csv](data/d65_enrollment_history.csv).
+
+| | SY15-16 | SY25-26 | Change |
+|---|---:|---:|---|
+| **K-8 excl. Park/Rice/JEH** (now used) | 7,371 | 5,630 | **−23.6%** |
+| Total Served / ISBE Fall Enrollment Counts | 7,894 | ~5,997 | −24.0% |
+| *Previous version (mismatched)* | *7,523* | *5,625* | *−25.2%* |
+
+**What it changed in the analysis — and what it didn't.** The corrected denominator moves the enrollment headline and the admin-density figure. It does not move the spending findings, because those are ratios of ratios and the definitional difference cancels out:
+
+| Measure | Previously published | Corrected |
+|---|---|---|
+| Enrollment decline | 25% | **24%** |
+| Admin per 1,000 students | 10.0 → 16.7 (+67%) | **10.2 → 16.7 (+64%)** |
+| Per-pupil admin spending | $2,201 → $3,401 (+55%) | **$2,247 → $3,478 (+55%)** |
+| Per-pupil excl. principals | $1,246 → $2,125 (+71%) | **$1,272 → $2,173 (+71%)** |
+| Total admin pool (real) | $16.56M → $19.99M (+21%) | unchanged |
+| TRS Admin headcount | 11 → 24 | unchanged |
+| "Match 2016 ratio" scenario | ~38 cuts, $4.91M | **~37 cuts, $4.75M** |
+| "Match peer median" scenario | ~26 cuts, $3.43M | **~26 cuts, $3.42M** |
+
+We chose the measure that produces the *smallest* decline and the *lowest* density growth of the available options. Note also that D65 enrollment on this measure peaked in SY2016-17 at 7,559, not in SY2015-16; measured from that peak the decline is 25.5%. We report from SY2015-16 because that is the first year of the compensation data this analysis rests on.
+
+---
+
 ## Methodology Notes
 
 - **Data sources.** Year-by-year admin headcount and individual-level compensation come from PA 96-0434 (TRS administrators) and PA 97-0609 (IMRF employees with comp packages over $75K), filed annually with ISBE and indexed in [FOIA Gras](https://foiagras.com){:target="_blank"}. Total admin compensation pool comes from the District's Annual Financial Report (AFR), which D65 also files annually with ISBE and which we obtained from [districtvitals.com](https://ccsd65.districtvitals.com/data#sec-afr-excel){:target="_blank"} and our local archive at [data/afr/](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data/afr){:target="_blank"}.
@@ -292,7 +329,8 @@ A reader who wants to verify our data has at least three convergent sources to c
 - **Some staff appear to move between TRS Admin and IMRF Support Staff categories** across years as positions are reclassified for funding purposes. The SY22-23 → SY23-24 transition is the most prominent example.
 - **Principals are tracked separately** from TRS Admin even though they appear in the same PA 96-0434 reports.
 - **The SY2020-21 PDF** rendered the Health Insurance column as "#######" (an Excel column-too-narrow rendering artifact in the source PDF). This causes Total Comp to be slightly under-counted for that year only.
-- **Enrollment** for years not present in the website's existing enrollment dataset (SY2015-16, SY2016-17, SY2025-26) is sourced from the District's annual *Opening of Schools* reports on [FOIA Gras](https://foiagras.com){:target="_blank"}. The SY2025-26 enrollment is from [D65's Data Dashboard](https://data.district65.net/){:target="_blank"}. **Note on enrollment-counting differences**: this page uses the K-8 + PreK-with-IEP figure (5,625 for SY25-26) consistent with how D65's *Opening of Schools* reports count students. Larry Gavin's *RoundTable* analyses use ISBE's "total served" figure (5,941 for SY25-26), which adds students in early-childhood programs, Park School, Rice Center, and JEH that are not in graded K-8 classrooms. Both figures are correct under their respective methodologies.
+- **Enrollment** uses a single measure for every year: **students in grades K-8 at District 65's regular schools, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs.** This is the District's own long-running internal count — the November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade." Every year comes from a District document indexed on [FOIA Gras](https://foiagras.com){:target="_blank"}: SY2015-16 from the *Opening of Schools 2015-16* report ([doc 7213](https://ig.foiagras.com/api/public/chat/documents/7213/view){:target="_blank"}); SY2016-17 through SY2019-20 from the *Opening of Schools 2019-20* cross-year table ([doc 4318](https://ig.foiagras.com/api/public/chat/documents/4318/view){:target="_blank"}); SY2020-21 from the *2020-21 Enrollment Update Memo* ([doc 3853](https://ig.foiagras.com/api/public/chat/documents/3853/view){:target="_blank"}); and SY2021-22 through SY2025-26 from Table 1 of the *(Final) Enrollment Projections Memo* presented November 3, 2025 ([doc 248](https://ig.foiagras.com/api/public/chat/documents/248/view){:target="_blank"}). The year-by-year series is in [data/d65_enrollment_history.csv](data/d65_enrollment_history.csv), with the component figures for each year in the `note` column. The SY2020-21 figure uses a September 14, 2020 count date rather than the usual September 30 / October 1 date, because that is what the District published that year.
+- **Other enrollment measures.** The same District documents report a broader **"Total Served" (ISBE Fall Enrollment Counts)** figure that adds Park, Rice, JEH and the early-childhood programs: **7,894 in SY2015-16** and approximately **5,997 in SY2025-26** (the November 2025 memo's 5,630 plus the 367 students it lists at Family Center/JEC, Park and Rice, which it describes as bringing enrollment "to just above 6,000"). That measure yields a 24.0% decline — effectively identical to the 23.6% on the K-8 measure used here. Larry Gavin's *RoundTable* analyses use the Total Served basis (he reports 5,941 for SY2025-26). Both measures are correct; this page uses the narrower one because it is the District's own continuously-maintained series and because it is the more conservative choice for every claim made here.
 
 ---
 

@@ -106,7 +106,7 @@ The District's use of "administrator" encompasses a broader group than the 24 ce
 
 Note that "22 administrators" does **not** mean 22 of the 24 TRS Admin reported under PA 96-0434. The District defines "administrator" more broadly to include management and supervisory positions that may be funded through different channels. Against the ~62-person central-admin pool that Gavin identified, the 22 proposed cuts represent roughly a third of central administrators — a substantial reduction, but not the near-total elimination that 22/24 would imply.
 
-The District's proposal is larger than all three Legion right-sizing scenarios. Even the most aggressive Legion scenario (return to D65's own SY2015-16 admin-to-student ratio) calls for only 38 cuts ($4.91M). The District identified more than double that amount.
+The District's proposal is larger than all three Legion right-sizing scenarios. Even the most aggressive Legion scenario (return to D65's own SY2015-16 admin-to-student ratio) calls for only 37 cuts ($4.75M). The District identified more than double that amount.
 
 </details>
 
@@ -119,10 +119,10 @@ Yes — substantially. All dollar figures in the analysis are inflation-adjusted
 |---------|--------------|--------------|--------|
 | Total admin compensation pool | $16.56M | $19.99M | **+21%** |
 | General Administration (function 2300) | $2.40M | $4.88M | **+103%** |
-| Per-pupil admin spending | $2,201 | $3,401 | **+55%** |
-| Per-pupil central-office spending (excl. principals) | $1,246 | $2,125 | **+71%** |
+| Per-pupil admin spending | $2,247 | $3,478 | **+55%** |
+| Per-pupil central-office spending (excl. principals) | $1,272 | $2,173 | **+71%** |
 
-Meanwhile, K-8 enrollment fell from approximately 7,500 to 5,625 students — a **25% decline**.
+Meanwhile, K-8 enrollment fell from 7,371 to 5,630 students — a **24% decline**.
 
 The growth is driven by **adding more positions, not by paying existing staff more**. Average per-person compensation has roughly tracked inflation (i.e., stayed flat in real terms). When total real spending grows 21%+ but per-person real spending is flat, the math forces the conclusion: D65 hired more administrators.
 
@@ -138,12 +138,15 @@ The numbers make this clear:
 | Role | SY2015-16 | SY2025-26 | Change |
 |------|----------:|----------:|--------|
 | TRS Admin (central-office certificated) | 11 | 24 | **+118%** (more than doubled) |
-| IMRF Support Staff (above CPI-indexed threshold) | 30 | 101 | **+237%** |
+| IMRF Support Staff (above CPI-indexed threshold) | 30 | 42 | **+40%** |
 | Principals & Assistant Principals | 34 | 28 | **-18%** (declined) |
+| **Total** | **75** | **94** | **+25%** |
+
+*(An earlier version of this table listed 101 in the IMRF row. That is the count above the raw $75,000 statutory threshold, not the CPI-indexed count used in this analysis — the indexed figure is 42. The 75 → 94 totals used throughout the analysis were always based on the indexed counts and are unchanged.)*
 
 Principal headcount is driven by the number of school buildings, which has been roughly stable (and will decrease by one with Kingsley's closure). The growth signal — the reason this analysis exists — is entirely in the non-principal categories: the central-office directors, executive directors, chiefs, coordinators, managers, and support staff that have been added over the past decade.
 
-This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $1,246 to $2,125 (+71%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
+This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $1,272 to $2,173 (+71%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
 
 **In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
 
@@ -156,7 +159,7 @@ According to [Larry Gavin's March 2026 *Evanston RoundTable* analysis](https://e
 
 - D65's **-25% enrollment decline** since FY2019 is the steepest among 21 nearby K-8 districts; the next-largest decline was 14.3%.
 - Despite this decline, D65's total FTEs **increased by approximately 130 (+10%)** over the same period.
-- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **16.7 per 1,000** — roughly 40% above the peer median.
+- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **16.7 per 1,000** — roughly 40% above the peer median. (Gavin's −25% figure is measured from FY2019 and uses ISBE's broader "total served" population; on this page's SY2015-16 baseline and K-8 measure the decline is 24%. See the [correction note](admin-growth-final#correction-the-enrollment-series).)
 
 The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~26 cuts, $3.43M savings) is based on bringing D65 in line with that ~12 per 1,000 peer benchmark.
 
@@ -172,6 +175,21 @@ No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from
 ---
 
 ## Methodology
+
+<details markdown="1">
+<summary>Which students are counted in the enrollment figures? Why 24% and not 25%?</summary>
+
+**The analysis counts students in grades K-8 at District 65's regular schools, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs.** On that measure enrollment fell from **7,371 in SY2015-16 to 5,630 in SY2025-26 — a 24% decline**.
+
+This is the District's own long-running internal count. The November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade," and every year in the series comes from a District document (*Opening of Schools* reports through SY2020-21, then the annual enrollment projections memos).
+
+**An earlier version of this page said 25%.** That figure compared a broader 2016 count (7,523, which included Park, Rice, and pre-K students with IEPs at JEH) against a narrower 2026 count (5,625, which excluded them). Two different populations. It has been corrected — see the [full correction note](admin-growth-final#correction-the-enrollment-series) for what changed and why.
+
+**Why exclude Park, Rice and JEH at all?** Because the District does, in the series it maintains itself, and because those programs are counted inconsistently across the decade's reports. The alternative — ISBE's broader **"Total Served"** count, which includes them — gives 7,894 → ~5,997, a **24.0% decline**. Essentially the same answer. Larry Gavin's *RoundTable* analyses use that broader basis.
+
+**Does the choice change the findings?** Barely. Per-pupil admin spending grows **55%** in real terms and per-pupil central-office spending grows **71%** under either measure — those are ratios of ratios, so the definition cancels out. Only admin-per-1,000-students shifts, from +67% to +64%. The right-sizing scenarios move by less than $200K.
+
+</details>
 
 <details markdown="1">
 <summary>Why does the Legion analysis only look at staff with compensation over $103K in the headcount trend?</summary>
@@ -267,7 +285,7 @@ There is a meaningful difference between saying *"the data shows the administrat
 <details markdown="1">
 <summary>Don't strong administrators make a school district successful? Doesn't the District need experienced leaders to manage the deficit?</summary>
 
-Yes — and nothing in this analysis argues otherwise. The question isn't whether D65 needs administrators. It's whether D65 needs **67% more administrators per student** than it did a decade ago, and **40% more per student than peer K-8 districts** in the surrounding area.
+Yes — and nothing in this analysis argues otherwise. The question isn't whether D65 needs administrators. It's whether D65 needs **64% more administrators per student** than it did a decade ago, and **40% more per student than peer K-8 districts** in the surrounding area.
 
 Effective administration matters enormously. But effectiveness is not measured by headcount. A district with 25% fewer students that has added positions like Director of Strategic Projects, Special Assistant to Cabinet, and Executive Chief of Communications needs to demonstrate that those roles are producing outcomes that justify their cost.
 
