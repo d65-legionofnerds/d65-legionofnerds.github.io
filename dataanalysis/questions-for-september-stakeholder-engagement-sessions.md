@@ -64,7 +64,7 @@ While contemplating the current D65 situation and in order to organize our thoug
 
 ## Future Property Usage
 
-- Are you thinking about the fact that once you sell a school it's gone - you may have sold it to someone promising to build affordable housing, but once purchaser owns the property, they can do anything. The district may insert stipulations in the contract, but the purchase could be flipped and sold to a third party with no restrictions.
+- Are you thinking about the fact that once you sell a school it's gone - you may have sold it to someone promising to build affordable housing, but once a purchaser owns the property, they can do anything. The district may insert stipulations in the contract, but the purchase could be flipped and sold to a third party with no restrictions.
 - Did you hear that an AI school (Alpha School) wants to buy Roycemore? Are we going to be offloading D65 buildings to turn them into D65 competitors for those privileged to take their kids out of public school?
 
 ## Transportation
