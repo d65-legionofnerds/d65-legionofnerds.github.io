@@ -19,7 +19,7 @@ While contemplating the current D65 situation and in order to organize our thoug
 - What is the goal of stakeholder engagement if you already have a plan to present 10/13? In what concrete way will these sessions affect your plan, or is your plan already finalized?
 - What is your strategy on community engagement? How will you know that you have received adequate community engagement and a representative sample of stakeholders? During SDRP, no representative from TWI was engaged in any of the subcommittees, what are your thoughts on that exclusion?
 - How will input gathered at these three sessions be synthesized and reported back to the Board? Will you provide raw notes, a themed summary, or something else?
-- Will engagement sessions take place after the plan is presented to collect feedback?
+- Will additional engagement sessions take place after the plan is presented to collect feedback?
 - The tradeoff listed for the comprehensive approach is "more significant and difficult decisions in a shorter period of time." What guardrails exist to make sure that compressed timeline doesn't shortchange community input relative to the phased approach?
 
 ## Financial
@@ -34,8 +34,8 @@ While contemplating the current D65 situation and in order to organize our thoug
 
 ## Educational Outcomes
 
-- How will closing schools impact classroom sizes?
 - How will closing schools improve educational outcomes, which are already quite poor?
+- How will closing schools impact classroom sizes?
 
 ## School Community
 
@@ -47,7 +47,7 @@ While contemplating the current D65 situation and in order to organize our thoug
 
 - Is a school closure a reduction in force (RIF) by another name? If so, why not say it?
 - The [September 14 presentation](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=14421838){:target="_blank"} cited compensation growth as a driver of the structural deficit. The District Educators Council Collective Bargaining Agreement (DEC CBA) is what governs the salary structure and was last ratified December 16, 2024. Is there an opportunity to renegotiate the CBA instead of closing schools and letting teachers go? Or are our teachers underpaid and it's better to let the current agreement stand?
-- Does your plan include administrative right-sizing and cuts? If not, why not?
+- Does your plan include cuts to administration staffing? If not, why not?
 
 ## Data
 
