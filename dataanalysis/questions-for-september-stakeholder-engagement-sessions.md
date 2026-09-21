@@ -52,7 +52,7 @@ While contemplating the current D65 situation and in order to organize our thoug
 ## Data
 
 - On what data will you base these school closure decisions? Will you reuse the disputed SDRP 3 school evaluations to determine which schools to close? If so, will they be updated to reflect current school populations and proximities? Will the SDRP 3 methodology be improved or is the plan to rely on the same context and approach?
-- King Arts and JEH were not considered in the last round of cuts; will these be considered as part of the two schools to close?
+- King Arts and JEH were not considered in the last round of cuts; will these be considered as part of the two schools to close? Why or why not?
 - You state you will realign expenses to peer districts. What are those districts, why were they selected as peers, and how will alignment happen?
 
 ## Enrollment
