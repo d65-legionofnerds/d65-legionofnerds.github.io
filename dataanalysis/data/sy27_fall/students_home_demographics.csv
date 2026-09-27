@@ -1,0 +1,327 @@
+school,chart_id,chart_title,series,category,value
+District,home-iep,IEP Status,,Has IEP,953.0
+District,home-iep,IEP Status,,No IEP,4509.0
+District,home-lep,EL Status,,EL,775.0
+District,home-lep,EL Status,,Not EL,4687.0
+District,home-race,Race/Ethnicity,,Asian,240.0
+District,home-race,Race/Ethnicity,,Black or African American,1238.0
+District,home-race,Race/Ethnicity,,Hispanic or Latino,1143.0
+District,home-race,Race/Ethnicity,,Middle Eastern or North African,18.0
+District,home-race,Race/Ethnicity,,Multi-racial,596.0
+District,home-race,Race/Ethnicity,,White,2220.0
+District,home-race,Race/Ethnicity,,Other*,6.0
+District,home-incidents,Incidents - SY27,,LVL1,507.0
+District,home-incidents,Incidents - SY27,,LVL2,261.0
+District,home-incidents,Incidents - SY27,,LVL3,197.0
+District,home-incidents,Incidents - SY27,,LVL4,3.0
+District,home-grade,Grade Level,,0,534.0
+District,home-grade,Grade Level,,1,564.0
+District,home-grade,Grade Level,,2,545.0
+District,home-grade,Grade Level,,3,606.0
+District,home-grade,Grade Level,,4,620.0
+District,home-grade,Grade Level,,5,645.0
+District,home-grade,Grade Level,,6,603.0
+District,home-grade,Grade Level,,7,659.0
+District,home-grade,Grade Level,,8,686.0
+District,home-twi,TWI Status,,TWE,290.0
+District,home-twi,TWI Status,,TWS,239.0
+District,home-twi,TWI Status,,TWX,157.0
+District,home-ada,ADA,,value,95.02
+District,home-enrollment,Enrollment,,value,5462.0
+Chute Middle School,home-iep,IEP Status,,Has IEP,94.0
+Chute Middle School,home-iep,IEP Status,,No IEP,497.0
+Chute Middle School,home-lep,EL Status,,EL,84.0
+Chute Middle School,home-lep,EL Status,,Not EL,507.0
+Chute Middle School,home-race,Race/Ethnicity,,Asian,43.0
+Chute Middle School,home-race,Race/Ethnicity,,Black or African American,175.0
+Chute Middle School,home-race,Race/Ethnicity,,Hispanic or Latino,156.0
+Chute Middle School,home-race,Race/Ethnicity,,Multi-racial,59.0
+Chute Middle School,home-race,Race/Ethnicity,,White,153.0
+Chute Middle School,home-race,Race/Ethnicity,,Other*,5.0
+Chute Middle School,home-incidents,Incidents - SY27,,LVL1,134.0
+Chute Middle School,home-incidents,Incidents - SY27,,LVL2,51.0
+Chute Middle School,home-incidents,Incidents - SY27,,LVL3,26.0
+Chute Middle School,home-grade,Grade Level,,6,184.0
+Chute Middle School,home-grade,Grade Level,,7,209.0
+Chute Middle School,home-grade,Grade Level,,8,198.0
+Chute Middle School,home-ada,ADA,,value,93.99
+Chute Middle School,home-enrollment,Enrollment,,value,591.0
+Dawes Elementary School,home-iep,IEP Status,,Has IEP,54.0
+Dawes Elementary School,home-iep,IEP Status,,No IEP,234.0
+Dawes Elementary School,home-lep,EL Status,,EL,65.0
+Dawes Elementary School,home-lep,EL Status,,Not EL,223.0
+Dawes Elementary School,home-race,Race/Ethnicity,,Asian,10.0
+Dawes Elementary School,home-race,Race/Ethnicity,,Black or African American,80.0
+Dawes Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,83.0
+Dawes Elementary School,home-race,Race/Ethnicity,,Multi-racial,32.0
+Dawes Elementary School,home-race,Race/Ethnicity,,White,81.0
+Dawes Elementary School,home-race,Race/Ethnicity,,Other*,2.0
+Dawes Elementary School,home-incidents,Incidents - SY27,,LVL1,30.0
+Dawes Elementary School,home-incidents,Incidents - SY27,,LVL2,8.0
+Dawes Elementary School,home-incidents,Incidents - SY27,,LVL3,24.0
+Dawes Elementary School,home-grade,Grade Level,,0,43.0
+Dawes Elementary School,home-grade,Grade Level,,1,45.0
+Dawes Elementary School,home-grade,Grade Level,,2,42.0
+Dawes Elementary School,home-grade,Grade Level,,3,48.0
+Dawes Elementary School,home-grade,Grade Level,,4,59.0
+Dawes Elementary School,home-grade,Grade Level,,5,51.0
+Dawes Elementary School,home-twi,TWI Status,,TWE,48.0
+Dawes Elementary School,home-twi,TWI Status,,TWS,50.0
+Dawes Elementary School,home-twi,TWI Status,,TWX,16.0
+Dawes Elementary School,home-ada,ADA,,value,95.53
+Dawes Elementary School,home-enrollment,Enrollment,,value,288.0
+Dewey Elementary School,home-iep,IEP Status,,Has IEP,50.0
+Dewey Elementary School,home-iep,IEP Status,,No IEP,265.0
+Dewey Elementary School,home-lep,EL Status,,EL,43.0
+Dewey Elementary School,home-lep,EL Status,,Not EL,272.0
+Dewey Elementary School,home-race,Race/Ethnicity,,Asian,18.0
+Dewey Elementary School,home-race,Race/Ethnicity,,Black or African American,47.0
+Dewey Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,70.0
+Dewey Elementary School,home-race,Race/Ethnicity,,Multi-racial,40.0
+Dewey Elementary School,home-race,Race/Ethnicity,,White,135.0
+Dewey Elementary School,home-race,Race/Ethnicity,,Other*,5.0
+Dewey Elementary School,home-incidents,Incidents - SY27,,LVL1,5.0
+Dewey Elementary School,home-incidents,Incidents - SY27,,LVL2,3.0
+Dewey Elementary School,home-incidents,Incidents - SY27,,LVL3,12.0
+Dewey Elementary School,home-grade,Grade Level,,0,48.0
+Dewey Elementary School,home-grade,Grade Level,,1,55.0
+Dewey Elementary School,home-grade,Grade Level,,2,45.0
+Dewey Elementary School,home-grade,Grade Level,,3,52.0
+Dewey Elementary School,home-grade,Grade Level,,4,64.0
+Dewey Elementary School,home-grade,Grade Level,,5,51.0
+Dewey Elementary School,home-twi,TWI Status,,TWE,49.0
+Dewey Elementary School,home-twi,TWI Status,,TWS,27.0
+Dewey Elementary School,home-twi,TWI Status,,TWX,26.0
+Dewey Elementary School,home-ada,ADA,,value,95.6
+Dewey Elementary School,home-enrollment,Enrollment,,value,315.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-iep,IEP Status,,Has IEP,123.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-iep,IEP Status,,No IEP,322.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-lep,EL Status,,EL,48.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-lep,EL Status,,Not EL,397.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-race,Race/Ethnicity,,Asian,17.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-race,Race/Ethnicity,,Black or African American,181.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-race,Race/Ethnicity,,Hispanic or Latino,76.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-race,Race/Ethnicity,,Multi-racial,56.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-race,Race/Ethnicity,,White,115.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-incidents,Incidents - SY27,,LVL1,46.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-incidents,Incidents - SY27,,LVL2,31.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-incidents,Incidents - SY27,,LVL3,12.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,0,41.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,1,40.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,2,37.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,3,56.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,4,54.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,5,46.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,6,43.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,7,67.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-grade,Grade Level,,8,61.0
+Dr Martin Luther King Jr Literary & Fine Arts School,home-ada,ADA,,value,93.69
+Dr Martin Luther King Jr Literary & Fine Arts School,home-enrollment,Enrollment,,value,445.0
+Foster School,home-iep,IEP Status,,Has IEP,73.0
+Foster School,home-iep,IEP Status,,No IEP,288.0
+Foster School,home-lep,EL Status,,EL,106.0
+Foster School,home-lep,EL Status,,Not EL,255.0
+Foster School,home-race,Race/Ethnicity,,Black or African American,128.0
+Foster School,home-race,Race/Ethnicity,,Hispanic or Latino,158.0
+Foster School,home-race,Race/Ethnicity,,Multi-racial,16.0
+Foster School,home-race,Race/Ethnicity,,White,54.0
+Foster School,home-race,Race/Ethnicity,,Other*,4.0
+Foster School,home-incidents,Incidents - SY27,,LVL1,11.0
+Foster School,home-incidents,Incidents - SY27,,LVL2,3.0
+Foster School,home-incidents,Incidents - SY27,,LVL3,12.0
+Foster School,home-grade,Grade Level,,0,46.0
+Foster School,home-grade,Grade Level,,1,42.0
+Foster School,home-grade,Grade Level,,2,65.0
+Foster School,home-grade,Grade Level,,3,79.0
+Foster School,home-grade,Grade Level,,4,57.0
+Foster School,home-grade,Grade Level,,5,72.0
+Foster School,home-twi,TWI Status,,TWE,69.0
+Foster School,home-twi,TWI Status,,TWS,75.0
+Foster School,home-twi,TWI Status,,TWX,56.0
+Foster School,home-ada,ADA,,value,92.95
+Foster School,home-enrollment,Enrollment,,value,361.0
+Haven Middle School,home-iep,IEP Status,,Has IEP,107.0
+Haven Middle School,home-iep,IEP Status,,No IEP,497.0
+Haven Middle School,home-lep,EL Status,,EL,56.0
+Haven Middle School,home-lep,EL Status,,Not EL,548.0
+Haven Middle School,home-race,Race/Ethnicity,,Asian,10.0
+Haven Middle School,home-race,Race/Ethnicity,,Black or African American,116.0
+Haven Middle School,home-race,Race/Ethnicity,,Hispanic or Latino,97.0
+Haven Middle School,home-race,Race/Ethnicity,,Multi-racial,61.0
+Haven Middle School,home-race,Race/Ethnicity,,White,320.0
+Haven Middle School,home-incidents,Incidents - SY27,,LVL1,99.0
+Haven Middle School,home-incidents,Incidents - SY27,,LVL2,44.0
+Haven Middle School,home-incidents,Incidents - SY27,,LVL3,13.0
+Haven Middle School,home-grade,Grade Level,,6,181.0
+Haven Middle School,home-grade,Grade Level,,7,211.0
+Haven Middle School,home-grade,Grade Level,,8,212.0
+Haven Middle School,home-ada,ADA,,value,95.14
+Haven Middle School,home-enrollment,Enrollment,,value,604.0
+Lincoln Elementary School,home-iep,IEP Status,,Has IEP,73.0
+Lincoln Elementary School,home-iep,IEP Status,,No IEP,277.0
+Lincoln Elementary School,home-lep,EL Status,,EL,58.0
+Lincoln Elementary School,home-lep,EL Status,,Not EL,292.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,Asian,23.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,Black or African American,60.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,40.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,Multi-racial,47.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,White,176.0
+Lincoln Elementary School,home-race,Race/Ethnicity,,Other*,4.0
+Lincoln Elementary School,home-incidents,Incidents - SY27,,LVL1,49.0
+Lincoln Elementary School,home-incidents,Incidents - SY27,,LVL2,60.0
+Lincoln Elementary School,home-incidents,Incidents - SY27,,LVL3,55.0
+Lincoln Elementary School,home-incidents,Incidents - SY27,,LVL4,1.0
+Lincoln Elementary School,home-grade,Grade Level,,0,57.0
+Lincoln Elementary School,home-grade,Grade Level,,1,73.0
+Lincoln Elementary School,home-grade,Grade Level,,2,53.0
+Lincoln Elementary School,home-grade,Grade Level,,3,43.0
+Lincoln Elementary School,home-grade,Grade Level,,4,68.0
+Lincoln Elementary School,home-grade,Grade Level,,5,56.0
+Lincoln Elementary School,home-ada,ADA,,value,93.99
+Lincoln Elementary School,home-enrollment,Enrollment,,value,350.0
+Lincolnwood Elementary School,home-iep,IEP Status,,Has IEP,62.0
+Lincolnwood Elementary School,home-iep,IEP Status,,No IEP,269.0
+Lincolnwood Elementary School,home-lep,EL Status,,EL,12.0
+Lincolnwood Elementary School,home-lep,EL Status,,Not EL,319.0
+Lincolnwood Elementary School,home-race,Race/Ethnicity,,Black or African American,61.0
+Lincolnwood Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,19.0
+Lincolnwood Elementary School,home-race,Race/Ethnicity,,Multi-racial,39.0
+Lincolnwood Elementary School,home-race,Race/Ethnicity,,White,206.0
+Lincolnwood Elementary School,home-race,Race/Ethnicity,,Other*,6.0
+Lincolnwood Elementary School,home-incidents,Incidents - SY27,,LVL3,5.0
+Lincolnwood Elementary School,home-grade,Grade Level,,0,48.0
+Lincolnwood Elementary School,home-grade,Grade Level,,1,60.0
+Lincolnwood Elementary School,home-grade,Grade Level,,2,54.0
+Lincolnwood Elementary School,home-grade,Grade Level,,3,42.0
+Lincolnwood Elementary School,home-grade,Grade Level,,4,48.0
+Lincolnwood Elementary School,home-grade,Grade Level,,5,79.0
+Lincolnwood Elementary School,home-ada,ADA,,value,97.33
+Lincolnwood Elementary School,home-enrollment,Enrollment,,value,331.0
+Nichols Middle School,home-iep,IEP Status,,Has IEP,74.0
+Nichols Middle School,home-iep,IEP Status,,No IEP,508.0
+Nichols Middle School,home-lep,EL Status,,EL,69.0
+Nichols Middle School,home-lep,EL Status,,Not EL,513.0
+Nichols Middle School,home-race,Race/Ethnicity,,Asian,25.0
+Nichols Middle School,home-race,Race/Ethnicity,,Black or African American,98.0
+Nichols Middle School,home-race,Race/Ethnicity,,Hispanic or Latino,141.0
+Nichols Middle School,home-race,Race/Ethnicity,,Multi-racial,68.0
+Nichols Middle School,home-race,Race/Ethnicity,,White,250.0
+Nichols Middle School,home-incidents,Incidents - SY27,,LVL1,20.0
+Nichols Middle School,home-incidents,Incidents - SY27,,LVL2,14.0
+Nichols Middle School,home-incidents,Incidents - SY27,,LVL3,12.0
+Nichols Middle School,home-incidents,Incidents - SY27,,LVL4,1.0
+Nichols Middle School,home-grade,Grade Level,,6,195.0
+Nichols Middle School,home-grade,Grade Level,,7,172.0
+Nichols Middle School,home-grade,Grade Level,,8,215.0
+Nichols Middle School,home-ada,ADA,,value,93.32
+Nichols Middle School,home-enrollment,Enrollment,,value,582.0
+Oakton Elementary School,home-iep,IEP Status,,Has IEP,48.0
+Oakton Elementary School,home-iep,IEP Status,,No IEP,319.0
+Oakton Elementary School,home-lep,EL Status,,EL,63.0
+Oakton Elementary School,home-lep,EL Status,,Not EL,304.0
+Oakton Elementary School,home-race,Race/Ethnicity,,Asian,14.0
+Oakton Elementary School,home-race,Race/Ethnicity,,Black or African American,145.0
+Oakton Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,68.0
+Oakton Elementary School,home-race,Race/Ethnicity,,Multi-racial,32.0
+Oakton Elementary School,home-race,Race/Ethnicity,,White,107.0
+Oakton Elementary School,home-race,Race/Ethnicity,,Other*,1.0
+Oakton Elementary School,home-incidents,Incidents - SY27,,LVL1,23.0
+Oakton Elementary School,home-incidents,Incidents - SY27,,LVL2,16.0
+Oakton Elementary School,home-incidents,Incidents - SY27,,LVL3,7.0
+Oakton Elementary School,home-grade,Grade Level,,0,68.0
+Oakton Elementary School,home-grade,Grade Level,,1,55.0
+Oakton Elementary School,home-grade,Grade Level,,2,58.0
+Oakton Elementary School,home-grade,Grade Level,,3,54.0
+Oakton Elementary School,home-grade,Grade Level,,4,69.0
+Oakton Elementary School,home-grade,Grade Level,,5,63.0
+Oakton Elementary School,home-twi,TWI Status,,TWE,34.0
+Oakton Elementary School,home-twi,TWI Status,,TWS,24.0
+Oakton Elementary School,home-twi,TWI Status,,TWX,17.0
+Oakton Elementary School,home-ada,ADA,,value,95.35
+Oakton Elementary School,home-enrollment,Enrollment,,value,367.0
+Orrington Elementary School,home-iep,IEP Status,,Has IEP,30.0
+Orrington Elementary School,home-iep,IEP Status,,No IEP,221.0
+Orrington Elementary School,home-lep,EL Status,,EL,24.0
+Orrington Elementary School,home-lep,EL Status,,Not EL,227.0
+Orrington Elementary School,home-race,Race/Ethnicity,,Asian,31.0
+Orrington Elementary School,home-race,Race/Ethnicity,,Black or African American,15.0
+Orrington Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,12.0
+Orrington Elementary School,home-race,Race/Ethnicity,,Multi-racial,38.0
+Orrington Elementary School,home-race,Race/Ethnicity,,White,154.0
+Orrington Elementary School,home-race,Race/Ethnicity,,Other*,1.0
+Orrington Elementary School,home-incidents,Incidents - SY27,,LVL1,5.0
+Orrington Elementary School,home-incidents,Incidents - SY27,,LVL2,2.0
+Orrington Elementary School,home-incidents,Incidents - SY27,,LVL3,1.0
+Orrington Elementary School,home-grade,Grade Level,,0,40.0
+Orrington Elementary School,home-grade,Grade Level,,1,35.0
+Orrington Elementary School,home-grade,Grade Level,,2,42.0
+Orrington Elementary School,home-grade,Grade Level,,3,52.0
+Orrington Elementary School,home-grade,Grade Level,,4,27.0
+Orrington Elementary School,home-grade,Grade Level,,5,55.0
+Orrington Elementary School,home-ada,ADA,,value,96.87
+Orrington Elementary School,home-enrollment,Enrollment,,value,251.0
+Walker Elementary School,home-iep,IEP Status,,Has IEP,55.0
+Walker Elementary School,home-iep,IEP Status,,No IEP,262.0
+Walker Elementary School,home-lep,EL Status,,EL,41.0
+Walker Elementary School,home-lep,EL Status,,Not EL,276.0
+Walker Elementary School,home-race,Race/Ethnicity,,Asian,28.0
+Walker Elementary School,home-race,Race/Ethnicity,,Black or African American,70.0
+Walker Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,37.0
+Walker Elementary School,home-race,Race/Ethnicity,,Multi-racial,49.0
+Walker Elementary School,home-race,Race/Ethnicity,,White,130.0
+Walker Elementary School,home-race,Race/Ethnicity,,Other*,3.0
+Walker Elementary School,home-incidents,Incidents - SY27,,LVL1,12.0
+Walker Elementary School,home-incidents,Incidents - SY27,,LVL2,1.0
+Walker Elementary School,home-incidents,Incidents - SY27,,LVL3,3.0
+Walker Elementary School,home-incidents,Incidents - SY27,,LVL4,1.0
+Walker Elementary School,home-grade,Grade Level,,0,45.0
+Walker Elementary School,home-grade,Grade Level,,1,57.0
+Walker Elementary School,home-grade,Grade Level,,2,42.0
+Walker Elementary School,home-grade,Grade Level,,3,63.0
+Walker Elementary School,home-grade,Grade Level,,4,66.0
+Walker Elementary School,home-grade,Grade Level,,5,44.0
+Walker Elementary School,home-ada,ADA,,value,97.32
+Walker Elementary School,home-enrollment,Enrollment,,value,317.0
+Washington Elementary School,home-iep,IEP Status,,Has IEP,80.0
+Washington Elementary School,home-iep,IEP Status,,No IEP,307.0
+Washington Elementary School,home-lep,EL Status,,EL,94.0
+Washington Elementary School,home-lep,EL Status,,Not EL,293.0
+Washington Elementary School,home-race,Race/Ethnicity,,Black or African American,47.0
+Washington Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,152.0
+Washington Elementary School,home-race,Race/Ethnicity,,Multi-racial,35.0
+Washington Elementary School,home-race,Race/Ethnicity,,White,143.0
+Washington Elementary School,home-race,Race/Ethnicity,,Other*,10.0
+Washington Elementary School,home-incidents,Incidents - SY27,,LVL1,24.0
+Washington Elementary School,home-incidents,Incidents - SY27,,LVL2,21.0
+Washington Elementary School,home-incidents,Incidents - SY27,,LVL3,2.0
+Washington Elementary School,home-grade,Grade Level,,0,58.0
+Washington Elementary School,home-grade,Grade Level,,1,59.0
+Washington Elementary School,home-grade,Grade Level,,2,63.0
+Washington Elementary School,home-grade,Grade Level,,3,64.0
+Washington Elementary School,home-grade,Grade Level,,4,62.0
+Washington Elementary School,home-grade,Grade Level,,5,81.0
+Washington Elementary School,home-twi,TWI Status,,TWE,90.0
+Washington Elementary School,home-twi,TWI Status,,TWS,63.0
+Washington Elementary School,home-twi,TWI Status,,TWX,42.0
+Washington Elementary School,home-ada,ADA,,value,95.72
+Washington Elementary School,home-enrollment,Enrollment,,value,387.0
+Willard Elementary School,home-iep,IEP Status,,Has IEP,30.0
+Willard Elementary School,home-iep,IEP Status,,No IEP,243.0
+Willard Elementary School,home-lep,EL Status,,EL,12.0
+Willard Elementary School,home-lep,EL Status,,Not EL,261.0
+Willard Elementary School,home-race,Race/Ethnicity,,Black or African American,15.0
+Willard Elementary School,home-race,Race/Ethnicity,,Hispanic or Latino,34.0
+Willard Elementary School,home-race,Race/Ethnicity,,Multi-racial,24.0
+Willard Elementary School,home-race,Race/Ethnicity,,White,196.0
+Willard Elementary School,home-race,Race/Ethnicity,,Other*,4.0
+Willard Elementary School,home-incidents,Incidents - SY27,,LVL1,49.0
+Willard Elementary School,home-incidents,Incidents - SY27,,LVL2,7.0
+Willard Elementary School,home-incidents,Incidents - SY27,,LVL3,13.0
+Willard Elementary School,home-grade,Grade Level,,0,40.0
+Willard Elementary School,home-grade,Grade Level,,1,43.0
+Willard Elementary School,home-grade,Grade Level,,2,44.0
+Willard Elementary School,home-grade,Grade Level,,3,53.0
+Willard Elementary School,home-grade,Grade Level,,4,46.0
+Willard Elementary School,home-grade,Grade Level,,5,47.0
+Willard Elementary School,home-ada,ADA,,value,96.95
+Willard Elementary School,home-enrollment,Enrollment,,value,273.0
