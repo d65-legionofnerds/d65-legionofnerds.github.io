@@ -2,7 +2,7 @@
 
 Two data sources:
   - Fall (data/sy27_fall/): the district dashboard pulled 2026-09-23, snapshot
-    of Jean's jmclip/enrollment_fall26 repo. Primary source for every chart it
+    of the jmclip/enrollment_fall26 repo. Primary source for every chart it
     covers.
   - May (data/sy27_enrollment/): the district's May 18, 2026 memo (registrations
     as of May 12). Used only where the fall dashboard has no equivalent: low
@@ -45,6 +45,10 @@ ELEM_SCHOOLS = ["Dawes", "Dewey", "Foster", "King Arts", "Lincoln", "Lincolnwood
                 "Oakton", "Orrington", "Walker", "Washington", "Willard"]
 MIDDLE_SCHOOLS = ["Chute MS", "Haven MS", "Nichols MS"]
 TWI_SCHOOLS = ["Dawes", "Dewey", "Foster", "Oakton", "Washington"]
+
+# Mainstream section counts known from parents, used instead of the DEC-limit
+# estimate: (school, grade) -> sections
+KNOWN_MAINSTREAM_SECTIONS = {("Lincolnwood", "K"): 2}
 
 FALL_LABEL = "Fall SY27 (dashboard, 9/23/26)"
 MAY_LABEL = "May memo (5/12/26 registrations)"
@@ -240,8 +244,9 @@ save_html(fig1b, "sy27_enrollment_vs_projection.html")
 
 print("Generating class size analysis chart...")
 
-# Jean's per-grade estimate of monolingual/mainstream students: grade total minus
-# TWI (even split of the school's TWI count) minus ACC (Oakton, 73 projected).
+# Per-grade estimate of monolingual/mainstream students from the fall snapshot:
+# grade total minus TWI (even split of the school's TWI count) minus ACC
+# (Oakton, 73 projected).
 rows = []
 for _, r in cs_detail[cs_detail["Short"].isin(ELEM_SCHOOLS)].iterrows():
     grade = r["grade_label"]
@@ -261,54 +266,69 @@ for _, r in cs_detail[cs_detail["Short"].isin(ELEM_SCHOOLS)].iterrows():
 cs_df = pd.DataFrame(rows)
 cs_df["Grade"] = pd.Categorical(cs_df["Grade"], categories=GRADE_ORDER, ordered=True)
 
+# One row per estimated class: TWI and ACC classes as estimated in the fall
+# snapshot, mainstream classes = fewest that keep each class within the DEC limit.
+class_rows = []
+for _, r in cs_detail[cs_detail["Short"].isin(ELEM_SCHOOLS)].iterrows():
+    grade = r["grade_label"]
+    for ctype, n_col, size_col in [("TWI", "twi_sections", "twi_class_size"),
+                                   ("ACC", "acc_sections", "acc_class_size")]:
+        for _ in range(int(r[n_col])):
+            class_rows.append({"School": r["Short"], "Grade": grade, "Type": ctype, "Size": r[size_col]})
+    mono = round(r["mainstream_students"])
+    if mono > 0:
+        n = KNOWN_MAINSTREAM_SECTIONS.get((r["Short"], grade), int(np.ceil(mono / DEC_LIMITS[grade])))
+        for _ in range(n):
+            class_rows.append({"School": r["Short"], "Grade": grade, "Type": "Mainstream", "Size": mono / n})
+classes = pd.DataFrame(class_rows)
+
 fig2 = make_subplots(
     rows=4, cols=3,
     subplot_titles=sorted(ELEM_SCHOOLS),
-    vertical_spacing=0.08, horizontal_spacing=0.06,
+    vertical_spacing=0.07, horizontal_spacing=0.05,
 )
 
+TYPE_COLORS = {"Mainstream": ["#1f77b4", "#4a93c9"], "TWI": ["#2ca02c", "#5cbf5c"], "ACC": ["#9467bd", "#b194d1"]}
+elem_grades = ["K", "1", "2", "3", "4", "5"]
+shown = set()
 for idx, school in enumerate(sorted(ELEM_SCHOOLS)):
     row_idx = idx // 3 + 1
     col_idx = idx % 3 + 1
-    sdf = cs_df[cs_df["School"] == school].copy()
-    sdf = sdf.sort_values("Grade")
-
-    bar_colors = []
-    for _, r in sdf.iterrows():
-        mono = r["MonoL"]
-        limit = r["DEC_Limit"]
-        if mono > limit:
-            bar_colors.append("#d62728")  # over limit
-        elif mono > limit * 0.85:
-            bar_colors.append("#ff7f0e")  # near limit
-        else:
-            bar_colors.append("#2ca02c")  # safe
-
-    fig2.add_trace(go.Bar(
-        x=sdf["Grade"].astype(str), y=sdf["MonoL"],
-        marker_color=bar_colors, showlegend=False,
-        text=sdf["MonoL"].astype(int), textposition="outside",
-        hovertemplate="Grade %{x}: ~%{y} mainstream students<extra></extra>",
+    sc = classes[(classes["School"] == school) & classes["Grade"].isin(elem_grades)]
+    for ctype in ["TWI", "ACC", "Mainstream"]:
+        tc = sc[sc["Type"] == ctype]
+        if tc.empty:
+            continue
+        max_n = tc.groupby("Grade").size().max()
+        # One stacked trace per class slot, so each class is its own block
+        for k in range(max_n):
+            sizes = []
+            for g in elem_grades:
+                gc = tc[tc["Grade"] == g]["Size"].tolist()
+                sizes.append(gc[k] if k < len(gc) else None)
+            fig2.add_trace(go.Bar(
+                x=elem_grades, y=sizes, name=f"{ctype} class",
+                legendgroup=ctype, showlegend=ctype not in shown,
+                marker=dict(color=TYPE_COLORS[ctype][k % 2], line=dict(color="white", width=1.5)),
+                text=[f"{s:.0f}" if s else "" for s in sizes], textposition="inside",
+                insidetextanchor="middle", textangle=0, textfont=dict(size=10, color="white"),
+                hovertemplate=f"Grade %{{x}}: {ctype} class of ~%{{y:.1f}}<extra>{school}</extra>",
+            ), row=row_idx, col=col_idx)
+            shown.add(ctype)
+    totals = sc.groupby("Grade")["Size"].agg(["sum", "size"]).reindex(elem_grades)
+    fig2.add_trace(go.Scatter(
+        x=elem_grades, y=totals["sum"] + 3, mode="text", showlegend=False, hoverinfo="skip",
+        text=[f"{t:.0f}" for t in totals["sum"]], textfont=dict(size=10),
     ), row=row_idx, col=col_idx)
-
-    # Add DEC limit lines
-    grades_in = sdf["Grade"].astype(str).tolist()
-    for g_idx, g in enumerate(grades_in):
-        lim = DEC_LIMITS[g]
-        fig2.add_shape(
-            type="line",
-            x0=g_idx - 0.4, x1=g_idx + 0.4, y0=lim, y1=lim,
-            line=dict(color="red", width=2, dash="dash"),
-            row=row_idx, col=col_idx,
-        )
-
-    fig2.update_yaxes(range=[0, max(sdf["MonoL"].max() * 1.3, 30)], row=row_idx, col=col_idx)
+    fig2.update_yaxes(range=[0, 95], row=row_idx, col=col_idx)
 
 fig2.update_layout(
-    title="Estimated Monolingual/Mainstream Students per Grade vs. DEC Contract Limits (dashed red line)<br><sup>Fall SY27. Red bars exceed the limit as 1 class; orange bars are within 15% of it. TWI/ACC students are subtracted using estimates.</sup>",
-    height=900,
-    showlegend=False,
-    margin=dict(l=60, r=40, t=100, b=40),
+    title="Estimated Classes per Grade, Fall SY27: Each Block Is One Class<br><sup>Bar height = students in the grade (number on top). Number in each block = estimated students<br>in that class. Mainstream classes = fewest that stay within the DEC limit.</sup>",
+    height=1000,
+    barmode="stack",
+    bargap=0.25,
+    legend=dict(orientation="h", yanchor="top", y=-0.04, xanchor="center", x=0.5),
+    margin=dict(l=50, r=20, t=150, b=60),
 )
 
 save_html(fig2, "sy27_class_size_elementary.html")
@@ -359,7 +379,7 @@ if not prob_df.empty:
         y=prob_df["1_Section"],
         name="1 Section (class size)",
         marker_color=colors_1,
-        text=prob_df["1_Section"], textposition="outside",
+        text=prob_df["1_Section"], textposition="outside", cliponaxis=False,
     ))
 
     fig2b.add_trace(go.Bar(
@@ -367,7 +387,7 @@ if not prob_df.empty:
         y=prob_df["Split_Size"],
         name="If split into required sections",
         marker_color="#1f77b4",
-        text=prob_df["Split_Size"], textposition="outside",
+        text=prob_df["Split_Size"], textposition="outside", cliponaxis=False,
     ))
 
     for i, (_, r) in enumerate(prob_df.iterrows()):
@@ -378,13 +398,14 @@ if not prob_df.empty:
         )
 
     fig2b.update_layout(
-        title="Class Size Dilemma: Where Splitting Creates Unsustainably Small Classes (Fall SY27, estimated)<br><sup>Red bars exceed DEC limit as 1 class; blue bars show the resulting class size if split. Dashed line = DEC max (K-2: 23, 3-5: 25).</sup>",
+        title="Class Size Dilemma: Where Splitting Creates Small Classes<br><sup>Fall SY27, estimated. Red bars exceed the DEC limit as 1 class; blue bars show the class size if split.<br>Dashed line = DEC max (K-2: 23, 3-5: 25). Orange = at the limit.</sup>",
         yaxis_title="Students per Class",
+        yaxis_range=[0, prob_df["1_Section"].max() * 1.15],
         barmode="group",
         height=500,
         xaxis_tickangle=-45,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=60, r=40, t=100, b=120),
+        margin=dict(l=60, r=40, t=130, b=120),
     )
 
     save_html(fig2b, "sy27_class_size_dilemma.html")
@@ -480,8 +501,8 @@ iep_fall = pd.DataFrame({"Short": iep_p.index, "IEP": iep_p["Has IEP"].values,
 
 fig5 = make_subplots(
     rows=1, cols=3,
-    subplot_titles=["English Learners (%) - Fall", "Students with IEPs (%) - Fall", "Low Income (%) - May memo"],
-    horizontal_spacing=0.08,
+    subplot_titles=["English learners", "Students with IEPs", "Low income (May)"],
+    horizontal_spacing=0.17,
 )
 
 for df_data, val_col, total_col, col_idx, color in [
@@ -495,16 +516,17 @@ for df_data, val_col, total_col, col_idx, color in [
     fig5.add_trace(go.Bar(
         y=df_data["Short"], x=df_data["Pct"],
         orientation="h", marker_color=color, showlegend=False,
-        text=[f"{p:.0f}%" for p in df_data["Pct"]], textposition="outside",
+        text=[f"{p:.0f}%" for p in df_data["Pct"]], textposition="outside", cliponaxis=False,
         hovertemplate="%{y}: %{x:.1f}%<extra></extra>",
     ), row=1, col=col_idx)
-    fig5.update_xaxes(range=[0, df_data["Pct"].max() * 1.2], row=1, col=col_idx)
+    fig5.update_xaxes(range=[0, df_data["Pct"].max() * 1.35], ticksuffix="%", nticks=4, row=1, col=col_idx)
 
 fig5.update_layout(
-    title="English Learners, IEPs, and Low Income by School (SY 2026-27)<br><sup>EL and IEP from the fall dashboard; the dashboard does not report low income, so that panel is the May memo</sup>",
-    height=500,
-    margin=dict(l=120, r=40, t=100, b=40),
+    title="English Learners, IEPs, and Low Income by School (SY 2026-27)<br><sup>Share of each school's students. EL and IEP: fall dashboard. Low income: May memo (not on the dashboard).</sup>",
+    height=520,
+    margin=dict(l=90, r=30, t=110, b=40),
 )
+fig5.update_annotations(font_size=13)
 
 save_html(fig5, "sy27_el_iep_lowincome.html")
 
@@ -631,13 +653,14 @@ fig7.add_trace(go.Bar(
 ))
 
 fig7.update_layout(
-    title=(f"Kindergarten: Projected vs. May Registrations vs. Fall Enrollment (SY 2026-27)<br><sup>Fall kindergarten: {k_fall} "
+    title=(f"Kindergarten: Projected vs. May Registrations vs.<br>Fall Enrollment (SY 2026-27)<br><sup>Fall kindergarten: {k_fall} "
            f"enrolled vs. {k_proj} projected ({k_fall - k_proj:+d}, {(k_fall - k_proj) / k_proj * 100:+.0f}%)</sup>"),
     yaxis_title="Students",
+    yaxis_range=[0, kinder_valid["Projected_Total_All_Programs"].max() * 1.15],
     barmode="group",
-    height=450,
+    height=470,
     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-    margin=dict(l=60, r=40, t=100, b=60),
+    margin=dict(l=60, r=40, t=130, b=60),
 )
 
 save_html(fig7, "sy27_kindergarten.html")
@@ -669,7 +692,7 @@ fig8.add_trace(go.Scatter(
 ))
 
 fig8.update_layout(
-    title="Total Enrollment by School and TWI Program (Fall SY27)<br><sup>The fall dashboard reports TWI by school only; ACC (Oakton), middle school Dual Language, RISE and STEP are not broken out</sup>",
+    title="Total Enrollment by School and TWI Program (Fall SY27)<br><sup>The fall dashboard reports TWI by school only. ACC (Oakton), middle school Dual Language,<br>RISE and STEP are not broken out.</sup>",
     xaxis_title="Students",
     barmode="stack",
     height=550,
@@ -701,13 +724,14 @@ for idx, school in enumerate(["Chute MS", "Haven MS", "Nichols MS"]):
     fig9.add_trace(go.Bar(
         x=sdf["Grade"], y=sdf["MonoL"], name="Monolingual",
         marker_color="#1f77b4", showlegend=(idx == 0),
-        text=sdf["MonoL"].astype(int), textposition="outside",
+        text=sdf["MonoL"].astype(int), textposition="outside", cliponaxis=False,
     ), row=1, col=col_idx)
+    fig9.update_yaxes(range=[0, 240], row=1, col=col_idx)
 
     if sdf["Middle_School_DL"].sum() > 0:
         fig9.add_trace(go.Bar(
             x=sdf["Grade"], y=sdf["Middle_School_DL"], name="Dual Language",
-            marker_color="#ff7f0e", showlegend=(idx == 0),
+            marker_color="#ff7f0e", showlegend=(school == "Haven MS"),
             text=sdf["Middle_School_DL"].astype(int), textposition="outside",
         ), row=1, col=col_idx)
 
@@ -720,13 +744,80 @@ for idx, school in enumerate(["Chute MS", "Haven MS", "Nichols MS"]):
         )
 
 fig9.update_layout(
-    title="Middle School Enrollment by Grade: Monolingual vs. Dual Language (May memo)<br><sup>Red dashed line = DEC contract max (28 students). Haven DL 7th grade has fewer than 10 students.</sup>",
-    height=400,
+    title="Middle School Enrollment by Grade:<br>Monolingual vs. Dual Language (May memo)<br><sup>Red dashed line = DEC contract max (28 students). Haven DL 7th grade has fewer than 10 students.</sup>",
+    height=440,
     barmode="group",
     legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5),
-    margin=dict(l=60, r=40, t=100, b=60),
+    margin=dict(l=60, r=40, t=130, b=60),
 )
 
 save_html(fig9, "sy27_middle_school_detail.html")
+
+# ── Chart 10: Utilization vs. class size (fall, elementary) ─────────────────
+
+print("Generating utilization vs. class size chart...")
+
+cap_tbl = pd.read_csv(os.path.join(FALL_DIR, "capacity_cordogan_clark.csv"))
+cap_tbl["Short"] = cap_tbl["school"].map(SHORT_NAMES)
+cc_report = pd.read_csv(os.path.join(FALL_DIR, "cordogan_clark_2022_report.csv"))
+cc_report["Short"] = cc_report["school"].map(SHORT_NAMES)
+
+K5 = ["K", "1", "2", "3", "4", "5"]
+uv_rows = []
+for school in ELEM_SCHOOLS:
+    sc = classes[classes["School"] == school]
+    k5 = sc[sc["Grade"].isin(K5)]
+    n_classes = len(sc)  # all grades: King Arts' 6-8 sections share its building
+    grades = fall_grade.set_index("Short").loc[school, [f"grade_{i}" for i in [0, 1, 2, 3, 4, 5]]]
+    min_sections = int(sum(KNOWN_MAINSTREAM_SECTIONS.get((school, k), np.ceil(g / DEC_LIMITS[k]))
+                           for g, k in zip(grades, K5)))
+    ct = cap_tbl[cap_tbl["Short"] == school].squeeze()
+    rooms = ct["floor_plan_classrooms"] if pd.notna(ct["floor_plan_classrooms"]) else ct["teaching_stations"]
+    rep = cc_report[cc_report["Short"] == school]
+    room_sf = (rep["core_classroom_sf"] / rep["core_stations"]).squeeze() if len(rep) else np.nan
+    fu = fall_util[fall_util["Short"] == school].squeeze()
+    uv_rows.append({
+        "School": school,
+        "Seat_Util": fu["dashboard_sy27"] / fu["capacity_used"] * 100,
+        "Rooms_In_Use": n_classes / rooms * 100,
+        "Class_Size": k5["Size"].sum() / len(k5),
+        "Extra_Sections": len(k5) - min_sections,
+        "Room_SF": room_sf,
+        "Strands": school in TWI_SCHOOLS,
+    })
+uv = pd.DataFrame(uv_rows).sort_values("Seat_Util", ascending=False)
+
+def spearman(a, b):
+    return a.rank().corr(b.rank())
+
+r_seat = uv["Seat_Util"].corr(uv["Class_Size"])
+print(uv.round(1).to_string(index=False))
+for a, b in [("Seat_Util", "Class_Size"), ("Seat_Util", "Rooms_In_Use"), ("Extra_Sections", "Class_Size"), ("Room_SF", "Class_Size")]:
+    x = uv[[a, b]].dropna()
+    print(f"  {a} vs {b}: pearson {x[a].corr(x[b]):+.2f}, spearman {spearman(x[a], x[b]):+.2f}, n={len(x)}")
+
+fig10 = go.Figure()
+for strands, name, color in [(True, "Runs TWI/ACC program strands", "#2ca02c"), (False, "No program strands", "#1f77b4")]:
+    d = uv[uv["Strands"] == strands]
+    fig10.add_trace(go.Scatter(
+        x=d["Seat_Util"], y=d["Class_Size"], mode="markers+text", name=name,
+        marker=dict(size=14, color=color, line=dict(color="white", width=1)),
+        text=d["School"], cliponaxis=False,
+        textposition=["bottom center" if s == "Dewey" else "top center" for s in d["School"]],
+        customdata=np.stack([d["Rooms_In_Use"], d["Extra_Sections"]], axis=-1),
+        hovertemplate=("%{text}<br>Utilization %{x:.0f}%<br>Est. class size %{y:.1f}"
+                       "<br>Rooms in use %{customdata[0]:.0f}%<br>Extra program sections %{customdata[1]}<extra></extra>"),
+    ))
+fig10.update_layout(
+    title=(f"Building Utilization vs. Estimated Class Size<br>Elementary Schools, Fall SY27"
+           f"<br><sup>Correlation {r_seat:+.2f}: higher utilization does not mean fuller classes</sup>"),
+    xaxis=dict(title="Building utilization (fall enrollment ÷ capacity)", ticksuffix="%", range=[45, 85]),
+    yaxis=dict(title="Estimated average class size, K-5", range=[14.5, 22.5], dtick=2, tick0=16),
+    height=520,
+    legend=dict(orientation="h", yanchor="top", y=-0.15, xanchor="center", x=0.5),
+    margin=dict(l=70, r=30, t=120, b=100),
+)
+
+save_html(fig10, "sy27_util_vs_class_size.html")
 
 print("\nAll charts generated successfully!")

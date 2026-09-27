@@ -1,0 +1,14 @@
+school,cap_total_baseline,calc_teaching_stations,enroll_total,util_total_pct_predicted,total_sf_core_classrooms_sped,teaching_stations,capacity_cordogan,delta_cordogan_minus_modelling,floor_plan_classrooms,small_group_rooms,offices,fapel,teachers_lounge,comment
+Dawes Elementary School,432,18,337,78,19398,19,501,69,20,0,11,5,1,"Cordogan missed CL RM 9, special ed room is over 650 and child care room counted into FAPEL."
+Dewey Elementary School,576,24,372,65,20248,24,537,-39,24,0,8,3,1,"Library, Art, Music (Drama on stage)"
+Kingsley Elementary School,432,18,167,39,16915,20,435,3,20,0,6,3,1,"Library, Art, Drama, Music on state"
+Lincoln Elementary School,576,24,328,57,25502,27,642,66,28,1,6,4,1,
+Lincolnwood Elementary School,432,18,181,42,19410,19,508,76,19,0,8,4,1,"Library, Drama, Art, (Music on Stage) Basement MP"
+Oakton Elementary School,576,24,403,70,18360,26,467,-109,25,2,10,4,1,"One classroom below 600 square feet - removed from count."
+Orrington Elementary School,432,18,226,52,18061,20,464,32,19,5,8,2,1,"Art, Music/Drama Share Stage, Library"
+Walker Elementary School,432,18,304,70,17312,18,467,35,18,0,6,2,1,"Art, Music/Drama Share Stage, Library"
+Washington Elementary School,530,22.08333333,441,83,23872,24,626,96,24,2,18,5,1,"Art, Music Drama Rooms, Multipurpose room (removes 2 classes for STEP)"
+Willard Elementary School,576,24,193,34,20098,24,533,-43,24,1,4,3,1,"Art, Music, Libraray, Drama on the Stage"
+Dr Bessie Rhodes School of Global Studies,,,,,,,,,,,,,,
+Foster School,576,,452,78,22800,24,600,24,,,,,,
+Dr Martin Luther King Jr Literary & Fine Arts School,651,,415,64,25402,30,653,2,27,7,7,6,1,
