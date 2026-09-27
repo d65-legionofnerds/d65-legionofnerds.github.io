@@ -149,7 +149,7 @@ afr_per_pupil["pool_excl_prin_per_pupil_real"] = afr_per_pupil["pool_excl_princi
 figB = go.Figure()
 figB.add_trace(go.Scatter(
     x=afr_per_pupil["year"], y=afr_per_pupil["pool_per_pupil_real"],
-    name="Total admin pool ($19.99M FY25, 2026 $)", mode="lines+markers",
+    name=f"Total admin pool (${afr.loc[afr['year'] == 2025, 'pool_total_real'].iloc[0]/1e6:.2f}M FY25, 2026 $)", mode="lines+markers",
     line=dict(color="black", width=4), marker=dict(size=10),
     hovertemplate="<b>FY%{x}</b><br>Total admin per pupil: $%{y:,.0f}<extra></extra>",
 ))
@@ -370,7 +370,7 @@ write(figH, "imrf_categories")
 # comparability with the District's $8.3M proposal.
 # ============================================================
 # AFR pool denominators (FY25 in 2026 $ - the most recent finalized AFR)
-AFR_POOL_TOTAL = afr.loc[afr["year"] == 2025, "pool_total_real"].iloc[0]   # $19.99M
+AFR_POOL_TOTAL = afr.loc[afr["year"] == 2025, "pool_total_real"].iloc[0]   # $17.48M (corrected)
 AFR_POOL_EXCL_PRIN = afr.loc[afr["year"] == 2025, "pool_excl_principals_real"].iloc[0]   # $12.49M
 
 # District's per-cut average (their math: $8,287,312 / 64 cuts)
@@ -463,7 +463,7 @@ figI.add_trace(go.Bar(
     constraintext="none",
     cliponaxis=False,
     hovertemplate="<b>%{y}</b><br>Annual savings: $%{x:,.0f}<br>"
-                  + f"% of AFR admin pool ($19.99M FY25): "
+                  + f"% of AFR admin pool (${AFR_POOL_TOTAL/1e6:.2f}M FY25): "
                   + "%{customdata:.1f}%<extra></extra>",
     customdata=mdf["pct_of_pool"],
     showlegend=False,

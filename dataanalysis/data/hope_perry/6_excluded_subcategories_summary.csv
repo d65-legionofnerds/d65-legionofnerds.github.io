@@ -1,0 +1,11 @@
+function_code,subcategory,status,fiscal_year,comp_real_2026,reason
+2540,Operation & Maintenance of Plant,EXCLUDED,FY2016,6034695.0,"Custodians, building operations & maintenance (O&M Fund + its MR/SS pension). Operations, not administration."
+2540,Operation & Maintenance of Plant,EXCLUDED,FY2025,6523653.0,"Custodians, building operations & maintenance (O&M Fund + its MR/SS pension). Operations, not administration."
+2550,Pupil Transportation,EXCLUDED,FY2016,695391.0,School bus / student transportation (Transportation Fund + small Ed-Fund + MR/SS pension). Operations.
+2550,Pupil Transportation,EXCLUDED,FY2025,455186.0,School bus / student transportation (Transportation Fund + small Ed-Fund + MR/SS pension). Operations.
+2560,Food Services,EXCLUDED,FY2016,1475378.0,"Nutrition / cafeteria staff (Ed-Fund salaries + MR/SS pension). Operations, not administration."
+2560,Food Services,EXCLUDED,FY2025,1694431.0,"Nutrition / cafeteria staff (Ed-Fund salaries + MR/SS pension). Operations, not administration."
+2570,Internal Services,EXCLUDED,FY2016,57267.0,Internal service funds (warehousing/printing); MR/SS pension only. Operational support.
+2570,Internal Services,EXCLUDED,FY2025,50742.0,Internal service funds (warehousing/printing); MR/SS pension only. Operational support.
+2300,General Administration - Tort Fund / risk-mgmt portion,EXCLUDED,FY2016,0.0,Risk-management / tort-immunity staff salaried from the Tort Fund plus their MR/SS pension. The admin 2310/2320/2330 pension is NOT here -- it stays in the pool.
+2300,General Administration - Tort Fund / risk-mgmt portion,EXCLUDED,FY2025,1160556.0,Risk-management / tort-immunity staff salaried from the Tort Fund plus their MR/SS pension. The admin 2310/2320/2330 pension is NOT here -- it stays in the pool.

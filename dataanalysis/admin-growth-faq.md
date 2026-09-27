@@ -58,7 +58,7 @@ It depends on which data source you use and how you define "administrator." The 
 
 **Cross-referencing all three state disclosure lists** — [Larry Gavin's March 2026 *RoundTable* analysis](https://evanstonroundtable.com/2026/03/22/analysis-and-viewpoint-district-65-has-25-fewer-students-but-10-more-staff-why/){:target="_blank"} cross-referenced all three state disclosure lists (PA 96-0434 TRS Administrators, PA 96-0434 Principals, and PA 97-0609 IMRF) and identified **62 individuals performing administrative functions** in FY26 — 10 more than the 52 reported under PA 96-0434 alone. The D65 staff directory independently confirms at least 41–49 central-office admin titles (excluding principals). This ~62-person figure is the best available public estimate of the District's total central administrator headcount.
 
-**AFR (Annual Financial Report)** — The AFR doesn't break out individual headcount, but it captures the total dollar pool for every employee in admin function codes 2300–2600 regardless of salary. The FY25 AFR admin compensation pool was **$19.99M** (in 2026 dollars).
+**AFR (Annual Financial Report)** — The AFR doesn't break out individual headcount, but it captures the total dollar pool for every employee in the administrative subfunctions of function codes 2300–2600 regardless of salary. The FY25 AFR admin compensation pool was **$17.48M** (in 2026 dollars). *(Corrected September 27, 2026 — an earlier version reported $19.99M using ISBE's rolled-up 2300/2500 totals, which include non-admin subfunctions like food services and custodial/transportation pension; see the correction note on the main page.)*
 
 </details>
 
@@ -102,7 +102,7 @@ The District's use of "administrator" encompasses a broader group than the 24 ce
 | 42 non-union support as % of 101 IMRF Support Staff | 42 ÷ 101 | **42%** |
 | 64 total cuts as % of 147 unique PA-disclosed staff | 64 ÷ 147 | **44%** |
 | 64 total cuts as % of 94 CPI-indexed higher-paid admin | 64 ÷ 94 | **68%** |
-| $8.29M savings as % of $19.99M FY25 AFR admin pool | $8.29M ÷ $19.99M | **41.5%** |
+| $8.29M savings as % of $17.48M FY25 AFR admin pool | $8.29M ÷ $17.48M | **47.4%** |
 
 Note that "22 administrators" does **not** mean 22 of the 24 TRS Admin reported under PA 96-0434. The District defines "administrator" more broadly to include management and supervisory positions that may be funded through different channels. Against the ~62-person central-admin pool that Gavin identified, the 22 proposed cuts represent roughly a third of central administrators — a substantial reduction, but not the near-total elimination that 22/24 would imply.
 
@@ -117,10 +117,10 @@ Yes — substantially. All dollar figures in the analysis are inflation-adjusted
 
 | Measure | FY16 (2026 $) | FY25 (2026 $) | Change |
 |---------|--------------|--------------|--------|
-| Total admin compensation pool | $16.56M | $19.99M | **+21%** |
-| General Administration (function 2300) | $2.40M | $4.88M | **+103%** |
-| Per-pupil admin spending | $2,247 | $3,478 | **+55%** |
-| Per-pupil central-office spending (excl. principals) | $1,272 | $2,173 | **+71%** |
+| Total admin compensation pool | $14.11M | $17.48M | **+24%** |
+| General Administration (function 2300) | $2.40M | $4.77M | **+99%** |
+| Per-pupil admin spending | $1,915 | $3,041 | **+59%** |
+| Per-pupil central-office spending (excl. principals) | $940 | $1,736 | **+85%** |
 
 Meanwhile, K-8 enrollment fell from 7,371 to 5,630 students — a **24% decline**.
 
@@ -146,7 +146,7 @@ The numbers make this clear:
 
 Principal headcount is driven by the number of school buildings, which has been roughly stable (and will decrease by one with Kingsley's closure). The growth signal — the reason this analysis exists — is entirely in the non-principal categories: the central-office directors, executive directors, chiefs, coordinators, managers, and support staff that have been added over the past decade.
 
-This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $1,272 to $2,173 (+71%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
+This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $940 to $1,736 (+85%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
 
 **In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
 
@@ -187,7 +187,7 @@ This is the District's own long-running internal count. The November 2025 enroll
 
 **Why exclude Park, Rice and JEH at all?** Because the District does, in the series it maintains itself, and because those programs are counted inconsistently across the decade's reports. The alternative — ISBE's broader **"Total Served"** count, which includes them — gives 7,894 → ~5,997, a **24.0% decline**. Essentially the same answer. Larry Gavin's *RoundTable* analyses use that broader basis.
 
-**Does the choice change the findings?** Barely. Per-pupil admin spending grows **55%** in real terms and per-pupil central-office spending grows **71%** under either measure — those are ratios of ratios, so the definition cancels out. Only admin-per-1,000-students shifts, from +67% to +64%. The right-sizing scenarios move by less than $200K.
+**Does the choice change the findings?** Barely. Per-pupil admin spending grows **59%** in real terms and per-pupil central-office spending grows **85%** under either measure — those are ratios of ratios, so the definition cancels out. Only admin-per-1,000-students shifts, from +67% to +64%. The right-sizing scenarios move by less than $200K.
 
 </details>
 
@@ -199,7 +199,7 @@ This is the District's own long-running internal count. The November 2025 enroll
 **What it does NOT affect:**
 - **TRS Admin counts are unaffected.** TRS administrators are reported in full under PA 96-0434 regardless of salary. The "11 to 24" TRS Admin trend is a clean count — no threshold is involved.
 - **The AFR dollar pool is unaffected.** The AFR captures every employee in admin function codes regardless of compensation level — including admin assistants, school secretaries, and support staff earning well below $75K.
-- **The right-sizing scenarios are unaffected.** All three Legion scenarios (and the District's own $8.3M proposal) use the District's per-cut average of $129K per position, anchored to the full AFR admin pool of $19.99M — not to the $103K-threshold subset.
+- **The right-sizing scenarios are unaffected.** All three Legion scenarios (and the District's own $8.3M proposal) use the District's per-cut average of $129K per position, anchored to the full AFR admin pool of $17.48M — not to the $103K-threshold subset.
 
 **What it DOES affect:** The headcount trend chart showing "75 to 94 higher-paid administrators" uses the CPI-indexed threshold to ensure each year's count includes only employees whose compensation meets the inflation-adjusted equivalent of $75K-2016. This is conservative — anchoring at an earlier year would yield a higher threshold and make growth appear even larger.
 

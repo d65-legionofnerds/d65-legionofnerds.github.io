@@ -1,0 +1,121 @@
+fiscal_year,fund_section,function_code,function_label,counted_in_admin_pool,salaries,benefits,comp_real_2026,note
+FY2016,SUPPORT SERVICES (ED),2310,Board of Education,INCLUDED,61202.0,21488.0,113523.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2320,Executive Administration,INCLUDED,390916.0,70937.0,634067.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2330,Special Area Administration,INCLUDED,965846.0,169802.0,1559105.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2300,General Administration (total),excluded,1417964.0,262227.0,2306695.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (ED),2410,Office of the Principal,INCLUDED,4481248.0,516431.0,6861197.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2490,Other School Administration,INCLUDED,53658.0,1560.0,75808.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2400,School Administration (total),excluded,4534906.0,517991.0,6937004.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (ED),2510,Direction of Business Support Services,INCLUDED,440554.0,60421.0,687777.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2520,Fiscal Services,INCLUDED,420649.0,67321.0,669923.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2540,Operation & Maintenance,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (ED),2550,Pupil Transportation,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (ED),2560,Food Services,excluded,837031.0,105964.0,1294616.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (ED),2570,Internal Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (ED),2500,Business Services (total),excluded,1698234.0,233706.0,2652315.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (ED),2610,Direction of Central Support Services,INCLUDED,0.0,0.0,0.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2620,"Planning, Research, Development, Evaluation",INCLUDED,486815.0,71762.0,766857.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2630,Information Services,INCLUDED,99712.0,5301.0,144170.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2640,Staff Services,INCLUDED,576684.0,160330.0,1011829.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2660,Data Processing,INCLUDED,514432.0,63725.0,793738.0,administrative subfunction
+FY2016,SUPPORT SERVICES (ED),2600,Central Support Services (total),excluded,1677643.0,301118.0,2716595.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (O&M),2510,Direction of Business Support Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2016,SUPPORT SERVICES (O&M),2540,Operation & Maintenance,excluded,3409594.0,438365.0,5282773.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (O&M),2550,Pupil Transportation,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (O&M),2560,Food Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (O&M),2500,Business Services (total),excluded,3409594.0,438365.0,5282773.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (TR),2550,Pupil Transportation,excluded,403292.0,19965.0,581080.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (MR/SS),2310,Board of Education,INCLUDED,0.0,10355.0,14216.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2320,Executive Administration,INCLUDED,0.0,27788.0,38149.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2330,Special Area Administration,INCLUDED,0.0,30240.0,41516.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2300,General Administration (total),excluded,0.0,68383.0,93881.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (MR/SS),2410,Office of the Principal,INCLUDED,0.0,181035.0,248539.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2490,Other School Administration,INCLUDED,0.0,749.0,1028.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2400,School Administration (total),excluded,0.0,181784.0,249567.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (MR/SS),2510,Direction of Business Support Services,INCLUDED,0.0,41880.0,57496.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2520,Fiscal Services,INCLUDED,0.0,50462.0,69278.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2540,Operation & Maintenance,excluded,0.0,547698.0,751922.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (MR/SS),2550,Pupil Transportation,excluded,0.0,83264.0,114311.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (MR/SS),2560,Food Services,excluded,0.0,131667.0,180763.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (MR/SS),2570,Internal Services,excluded,0.0,41713.0,57267.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (MR/SS),2500,Business Services (total),excluded,0.0,930132.0,1276956.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (MR/SS),2610,Direction of Central Support Services,INCLUDED,0.0,0.0,0.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2620,"Planning, Research, Development, Evaluation",INCLUDED,0.0,81890.0,112425.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2630,Information Services,INCLUDED,0.0,14808.0,20330.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2640,Staff Services,INCLUDED,0.0,65544.0,89984.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2660,Data Processing,INCLUDED,0.0,75411.0,103530.0,administrative subfunction
+FY2016,SUPPORT SERVICES (MR/SS),2600,Central Support Services (total),excluded,0.0,237653.0,326268.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2016,SUPPORT SERVICES (FP&S),2540,Operation & Maintenance,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2016,SUPPORT SERVICES (FP&S),2500,Business Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (ED),2310,Board of Education,INCLUDED,96082.0,29716.0,128588.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2320,Executive Administration,INCLUDED,567928.0,83492.0,665869.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2330,Special Area Administration,INCLUDED,3193906.0,536117.0,3812758.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2300,General Administration (total),excluded,3857916.0,649325.0,4607215.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (ED),2410,Office of the Principal,INCLUDED,6173322.0,872670.0,7202278.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2490,Other School Administration,INCLUDED,81190.0,3537.0,86606.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2400,School Administration (total),excluded,6254512.0,876207.0,7288884.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (ED),2510,Direction of Business Support Services,INCLUDED,646226.0,97591.0,760316.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2520,Fiscal Services,INCLUDED,372427.0,53932.0,435816.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2540,Operation & Maintenance,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (ED),2550,Pupil Transportation,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (ED),2560,Food Services,excluded,1314982.0,177726.0,1525818.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (ED),2570,Internal Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (ED),2500,Business Services (total),excluded,2333635.0,329249.0,2721949.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (ED),2610,Direction of Central Support Services,INCLUDED,0.0,0.0,0.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2620,"Planning, Research, Development, Evaluation",INCLUDED,342508.0,64379.0,415912.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2630,Information Services,INCLUDED,300879.0,63089.0,372041.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2640,Staff Services,INCLUDED,1102781.0,226868.0,1359142.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2660,Data Processing,INCLUDED,1178271.0,189254.0,1397858.0,administrative subfunction
+FY2025,SUPPORT SERVICES (ED),2600,Central Support Services (total),excluded,2924439.0,543590.0,3544953.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (O&M),2510,Direction of Business Support Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (O&M),2540,Operation & Maintenance,excluded,5109713.0,660446.0,5898146.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (O&M),2550,Pupil Transportation,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (O&M),2560,Food Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (O&M),2500,Business Services (total),excluded,5109713.0,660446.0,5898146.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TR),2550,Pupil Transportation,excluded,358026.0,52051.0,419173.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (MR/SS),2310,Board of Education,INCLUDED,0.0,12498.0,12775.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2320,Executive Administration,INCLUDED,0.0,19256.0,19683.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2330,Special Area Administration,INCLUDED,0.0,132011.0,134939.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2300,General Administration (total),excluded,0.0,268028.0,273973.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (MR/SS),2410,Office of the Principal,INCLUDED,0.0,205467.0,210024.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2490,Other School Administration,INCLUDED,0.0,1770.0,1809.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2400,School Administration (total),excluded,0.0,207237.0,211834.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (MR/SS),2510,Direction of Business Support Services,INCLUDED,0.0,57915.0,59200.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2520,Fiscal Services,INCLUDED,0.0,45497.0,46506.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2540,Operation & Maintenance,excluded,0.0,611934.0,625507.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (MR/SS),2550,Pupil Transportation,excluded,0.0,35232.0,36013.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (MR/SS),2560,Food Services,excluded,0.0,164955.0,168614.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (MR/SS),2570,Internal Services,excluded,0.0,49641.0,50742.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (MR/SS),2500,Business Services (total),excluded,0.0,965174.0,986582.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (MR/SS),2610,Direction of Central Support Services,INCLUDED,0.0,0.0,0.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2620,"Planning, Research, Development, Evaluation",INCLUDED,0.0,28122.0,28746.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2630,Information Services,INCLUDED,0.0,45100.0,46100.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2640,Staff Services,INCLUDED,0.0,121777.0,124478.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2660,Data Processing,INCLUDED,0.0,153733.0,157143.0,administrative subfunction
+FY2025,SUPPORT SERVICES (MR/SS),2600,Central Support Services (total),excluded,0.0,348732.0,356467.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2300,General Administration (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2310,Board of Education,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2320,Executive Administration,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2330,Special Area Administration,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2300,General Administration (total),excluded,888548.0,142561.0,1053980.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2400,School Administration (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2410,Office of the Principal,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2490,Other School Administration,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2400,School Administration (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2500,Business Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2510,Direction of Business Support Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2520,Fiscal Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2540,Operation & Maintenance,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (TF),2550,Pupil Transportation,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (TF),2560,Food Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (TF),2570,Internal Services,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (TF),2500,Business Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2600,Central Support Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (TF),2610,Direction of Central Support Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2620,"Planning, Research, Development, Evaluation",excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2630,Information Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2640,Staff Services,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2660,Data Processing,excluded,0.0,0.0,0.0,admin subfunction but non-Educational fund (operations)
+FY2025,SUPPORT SERVICES (TF),2600,Central Support Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)
+FY2025,SUPPORT SERVICES (FP&S),2540,Operation & Maintenance,excluded,0.0,0.0,0.0,non-administrative subfunction (operations / risk-mgmt) - excluded
+FY2025,SUPPORT SERVICES (FP&S),2500,Business Services (total),excluded,0.0,0.0,0.0,rolled-up ISBE total (NOT used; we sum the admin subfunctions instead)

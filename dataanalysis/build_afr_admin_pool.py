@@ -214,6 +214,11 @@ def main():
         # Skip the duplicate AFR25 (we have two: AFR25_d65.xlsx and the longer name).
         if f == "AFR25_d65.xlsx":
             continue
+        # FY26 is deferred to a separate data refresh: two files map to FY2026 (an
+        # actual AFR26 and a Budget26), which would double-count and mix an actual
+        # with a budget. Integrate + dedup those when advancing the series to FY26.
+        if fy >= 2026:
+            continue
         fp = os.path.join(AFR_DIR, f)
         recs = parse_afr(fp, fy)
         print(f"{f:80s}  FY{fy}  {len(recs):3d} admin function rows")
@@ -223,32 +228,47 @@ def main():
     df.to_csv(os.path.join(OUT_DIR, "afr_admin_pool.csv"), index=False)
     print(f"\nWrote afr_admin_pool.csv with {len(df)} rows")
 
-    # Build a summary: for each year, total comp (salaries+benefits) for each
-    # admin function group (2300, 2400, 2500, 2600). MR/SS pension contributions
-    # appear in the same function codes within the SUPPORT SERVICES (MR/SS)
-    # section, but only as "benefits". We sum those into mrss.
-    # Heuristic: rows where salaries==0 and section contains "MR/SS" are pension benefits.
+    # Build a summary: for each year, total comp (salaries + benefits + MR/SS
+    # pension) for each admin function GROUP (2300, 2400, 2500, 2600).
+    #
+    # We sum only the ADMIN SUBFUNCTIONS of each group -- deliberately NOT ISBE's
+    # rolled-up "2x00 total" rows. Those totals bundle in non-administrative
+    # subfunctions (custodial O&M, transportation, food services, internal
+    # services, facilities) and risk-management/tort-immunity, all of which
+    # inflated the pool in the original version of this script (2400 and 2600 were
+    # unaffected because they have no non-admin subfunctions; 2300 and 2500 did).
+    # Summing the admin subfunctions keeps only central-office / school admin.
+    #
+    # Excluded on purpose (not in ADMIN_SUBFUNCTIONS below):
+    #   2530 facilities, 2540 O&M, 2550 transportation, 2560 food services,
+    #   2570 internal services, and 2360/2365/2367 risk management / tort
+    #   immunity / loss prevention (salaried out of the Tort Fund, not the Ed Fund).
+    ADMIN_SUBFUNCTIONS = {
+        "2310": "2300", "2320": "2300", "2330": "2300",   # General Administration
+        "2410": "2400", "2490": "2400",                   # School Administration
+        "2510": "2500", "2520": "2500",                   # Business Services (Direction + Fiscal)
+        "2610": "2600", "2620": "2600", "2630": "2600",   # Central Support Services
+        "2640": "2600", "2660": "2600",
+    }
     df["is_mrss"] = df["section"].str.contains("MR/SS", na=False)
-    df["function_group"] = df["func"].str[0:2] + "00"
+    df["group"] = df["func"].map(ADMIN_SUBFUNCTIONS)
+    admin = df[df["group"].notna()].copy()
 
-    # For top-level function totals (2300, 2400, 2500, 2600), only use rows where
-    # func == group code (i.e., the row that says "Total Support Services - General Administration").
-    # This avoids double-counting subfunction rows.
-    top_level = df[df["func"].isin(["2300", "2400", "2500", "2600"])].copy()
-
-    # Education-fund admin (excluding MR/SS section): salaries+benefits
-    ed_admin = (top_level[~top_level["is_mrss"] & top_level["section"].str.contains("\\(ED\\)", na=False)]
-                .groupby(["year", "func"], as_index=False)
+    # Education-fund admin (excluding MR/SS section): salaries + benefits.
+    # The (ED) filter keeps admin subfunction salaries out of other funds
+    # (O&M / Transportation / Tort), where they are operations, not admin.
+    ed_admin = (admin[~admin["is_mrss"] & admin["section"].str.contains("\\(ED\\)", na=False)]
+                .groupby(["year", "group"], as_index=False)
                 .agg(salaries=("salaries", "sum"),
                      benefits=("benefits", "sum")))
-    # MR/SS pension benefits in admin functions
-    mrss_admin = (top_level[top_level["is_mrss"]]
-                  .groupby(["year", "func"], as_index=False)
+    # MR/SS pension benefits for the same admin subfunctions only
+    mrss_admin = (admin[admin["is_mrss"]]
+                  .groupby(["year", "group"], as_index=False)
                   .agg(mrss=("benefits", "sum")))
 
-    summary = ed_admin.merge(mrss_admin, on=["year", "func"], how="left").fillna(0.0)
+    summary = ed_admin.merge(mrss_admin, on=["year", "group"], how="left").fillna(0.0)
     summary["total_comp"] = summary["salaries"] + summary["benefits"] + summary["mrss"]
-    summary["function_label"] = summary["func"].map({
+    summary["function_label"] = summary["group"].map({
         "2300": "General Administration",
         "2400": "School Administration",
         "2500": "Business Services",
@@ -256,7 +276,7 @@ def main():
     })
 
     # Pivot for easy reading
-    pivot = summary.pivot_table(index="year", columns="func", values="total_comp", aggfunc="sum").reset_index()
+    pivot = summary.pivot_table(index="year", columns="group", values="total_comp", aggfunc="sum").reset_index()
     pivot.columns.name = None
     pivot["pool_total"] = pivot[["2300", "2400", "2500", "2600"]].sum(axis=1, numeric_only=True)
     pivot["pool_excl_principals"] = pivot[["2300", "2500", "2600"]].sum(axis=1, numeric_only=True)

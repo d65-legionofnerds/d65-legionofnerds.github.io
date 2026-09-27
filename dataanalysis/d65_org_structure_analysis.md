@@ -160,9 +160,9 @@ last_modified_date: 2026-05-07
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">No FOIA request required to find the gap</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">+55%</div>
+<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">+59%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Per-student admin spending (real $)</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$2,247 → $3,478 per pupil</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$1,915 → $3,041 per pupil</div>
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">FY16 → FY25 · inflation-adjusted</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
@@ -182,7 +182,7 @@ last_modified_date: 2026-05-07
 
 Between SY2015–16 and SY2025–26, K-8 enrollment fell from 7,371 to 5,630 students — a 24% decline, the steepest among 21 nearby K-8 districts. Over the same period:
 
-- **Enrollment fell 24%. Administrative cost per student rose 55%.** Those two lines moved in opposite directions for a decade. The community is paying the price in closed schools, partially cut counselors, and librarians whose roles remain unresolved.
+- **Enrollment fell 24%. Administrative cost per student rose 59%.** Those two lines moved in opposite directions for a decade. The community is paying the price in closed schools, partially cut counselors, and librarians whose roles remain unresolved.
 - **It didn't happen all at once — it was org chart creep.** Positions were added one at a time, each justified on its own terms, none examined in the aggregate. No single hire looked unreasonable. The cumulative result did.
 - **The peak was 2022–23 — the same year the district ran a $10 million deficit.** Central office administrators had grown 118% since 2016. Many hires were presented to the board as "budget neutral" while structural deficits were already being projected.
 - **The real story is the second tier — the sub-cabinet.** Below the cabinet sits a layer of directors, coordinators, and managers that grew 7× its 2016 size — 700% of baseline — and has barely been touched by the SDRP. The cabinet was cut 50%. The sub-cabinet was cut only 13%. The visible layer shrank. The expensive layer didn't.
@@ -201,7 +201,7 @@ District 65 is in a budget crisis. Enrollment has fallen. Counselors were partia
 
 This analysis documents what happened to D65's central office between 2016 and today — a textbook case of what we call **org chart creep**. Positions multiplied one at a time, each justified on its own terms, none examined in the aggregate. The cumulative result: a central office that more than doubled while enrollment fell by nearly a quarter. That is **administrative bloat** — a structure whose size and cost became disconnected from the student population it serves.
 
-The numbers are stark. Enrollment fell 24% — the steepest decline among 21 nearby K-8 districts. Over the same period, higher-paid administrative headcount grew 25%, and central office administrators specifically doubled. Total administrative pay rose 21% in real (inflation-adjusted) dollars. Per-student administrative spending rose 55% in real terms. The cost driver was not higher salaries — individual administrator pay only kept pace with inflation. The cost driver was adding more administrators.
+The numbers are stark. Enrollment fell 24% — the steepest decline among 21 nearby K-8 districts. Over the same period, higher-paid administrative headcount grew 25%, and central office administrators specifically doubled. Total administrative pay rose 24% in real (inflation-adjusted) dollars. Per-student administrative spending rose 59% in real terms. The cost driver was not higher salaries — individual administrator pay only kept pace with inflation. The cost driver was adding more administrators.
 
 > **Companion Piece** — This deep dive traces the *structural history* of D65's administrative organization: the org charts, the governance failures, the titles and reporting lines. For the full *quantitative and financial* analysis — inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios — see [District 65 Administrative Growth Over Time →](admin-growth-final). For answers to common methodological questions, see the [Admin Growth FAQ →](admin-growth-faq).
 
