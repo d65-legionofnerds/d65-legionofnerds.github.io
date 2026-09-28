@@ -5,7 +5,7 @@ Part 1: four charts (PNG) from the fall SY27 dashboard data, written to assets/:
   enrollment26_utilization_current.png         current utilization by school
   enrollment26_class_size_by_school.png        average class size by elementary school, TWI flagged
   enrollment26_class_size_heatmap.png          class size by school and grade, K-5
-Inputs (data/enrollment_26/), exported from the enrollment_fall26 notebook
+Inputs (data/sy27_fall/), exported from the enrollment_fall26 notebook
 (https://github.com/jmclip/enrollment_fall26), where classes are estimated:
   class_size_detail_by_school.csv, utilization_current_vs_predicted.csv,
   capacity_comparison.csv, twi_strands.csv
@@ -19,8 +19,8 @@ New general-education riders = Bus + Hazard + program placements (ACC, STEP, TWE
 Costs: District 65 Transportation Memo to the Board, Feb 9, 2026 (~$4.2M/yr; general-ed routes
 ~$2.4M; ~$80K per added single route). Building savings use FY26 salary disclosures; custodian and
 office pay are ASSUMED (no salary data) and marked below.
-Output: data/enrollment_26/closure_transportation_summary.csv (typical closure, low/high)
-Also: data/enrollment_26/class_size_vs_utilization_leave_one_out.csv (regression refit without each school)
+Output: data/sy27_fall/closure_transportation_summary.csv (typical closure, low/high)
+Also: data/sy27_fall/class_size_vs_utilization_leave_one_out.csv (regression refit without each school)
 
 Made with help from Claude (an AI model), which can make mistakes. Please verify.
 """
@@ -37,7 +37,7 @@ from scipy import stats
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(HERE, "data")
-IN_DIR = os.path.join(DATA_DIR, "enrollment_26")
+IN_DIR = os.path.join(DATA_DIR, "sy27_fall")
 ASSETS_DIR = os.path.join(HERE, "assets")
 
 # ── Chart style ───────────────────────────────────────────────────────────────
@@ -222,7 +222,7 @@ UTILITIES_2025 = [50_293, 62_350, 89_559]   # 2025 utility cost of each building
 CLOSURES = [
     ("1A_transportation_idot_d65.csv", "2FR_transportation_idot_d65.csv", []),
     ("1A_transportation_idot_d65.csv", "2DR_transportation_idot_d65.csv", []),
-    ("enrollment_26/0_transportation_d65.csv", "enrollment_26/3D_transportation_d65.csv",
+    ("0_transportation_d65.csv", "3D_transportation_d65.csv",
      ["Orrington", "Lincolnwood", "Willard"]),
 ]
 

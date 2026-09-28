@@ -36,6 +36,8 @@ The district may or may not need to close buildings, but its plan for savings ha
 5. **The impact on class size:** how many classes each affected grade would run before and after, and the resulting class sizes, not just building utilization.
 6. **A forward-looking case:** how the plan puts the district on sound financial footing for the long term, and how it will improve educational outcomes for all students, not just how it closes this year's gap.
 
+We need to work with the buildings and the district we have: chasing an artificially high utilization rate can lead to ballooning, persistent cost increases. We are excited by the direction things are heading, and we look forward to hearing the vision for D65's future.
+
 <details markdown="1">
 <summary><b>More on data: How District 65's buildings are used this fall: utilization, estimated class sizes, and what closing a school saves once added busing is counted. </b></summary> **Current data** is from the district's public dashboard, [data.district65.net](https://data.district65.net){:target="_blank"}, pulled September 23, 2026 (fall of school year 2026–27, "SY27"), and scraped by a Legion member ([source files](https://github.com/jmclip/enrollment_fall26){:target="_blank"}). **Planning data** is from the district's utilization and capacity tables and Cordogan Clark's February 2022 capacity study. 
 </details>
@@ -178,7 +180,7 @@ The high end adds a librarian ($133K), an assistant principal ($160K) and a heal
 - Families who leave the district, and changes in state funding.
 - Crossing guards or route changes that could remove a hazard designation and the busing that goes with it.
 
-Calculations: [`build_building_use_sy27.py`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/blob/main/dataanalysis/build_building_use_sy27.py){:target="_blank"}. Data: the district's SDRP transportation tables are in [`data/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data){:target="_blank"} and [`data/enrollment_26/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data/enrollment_26){:target="_blank"}, with the result in `closure_transportation_summary.csv`.
+Calculations: [`build_building_use_sy27.py`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/blob/main/dataanalysis/build_building_use_sy27.py){:target="_blank"}. Data: the district's SDRP transportation tables are in [`data/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data){:target="_blank"}, with the result in [`data/sy27_fall/closure_transportation_summary.csv`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/blob/main/dataanalysis/data/sy27_fall/closure_transportation_summary.csv){:target="_blank"}.
 
 ## Replication and technical details
 
@@ -197,7 +199,7 @@ Full replication details, the endpoints and the scraper are in **[`scraping/READ
 ### How to refresh
 
 1. In the [source repo](https://github.com/jmclip/enrollment_fall26): run `scraping/d65_scrape.py` to pull the dashboard again, then run `d65_enrollment_by_building.ipynb` top to bottom. The notebook estimates classes and writes the CSVs.
-2. Copy `class_size_detail_by_school.csv`, `utilization_current_vs_predicted.csv`, `capacity_comparison.csv` and `twi_strands.csv` into `dataanalysis/data/enrollment_26/` here.
+2. Copy `class_size_detail_by_school.csv`, `utilization_current_vs_predicted.csv`, `capacity_comparison.csv` and `twi_strands.csv` into `dataanalysis/data/sy27_fall/` here.
 3. Run `python3 dataanalysis/build_building_use_sy27.py` (needs pandas, matplotlib and scipy). It redraws the four charts in `assets/` and recomputes the busing tables.
 
 The dashboard stores filtered results in one shared spot on its server, so another visitor filtering at the same moment can mix up numbers. The scraper re-runs any school whose totals don't add up, and checks that schools sum to the district.
