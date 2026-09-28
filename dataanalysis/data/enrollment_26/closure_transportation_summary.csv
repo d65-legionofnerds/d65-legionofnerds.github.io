@@ -1,4 +1,4 @@
-scenario	added_riders	routes	transport_low	transport_high	building_low	building_high	net_low	net_high
-Close Lincolnwood (2FR)	84	1	90000	182609	453546	806536	270937	716536
-Close Willard (2DR)	153	2	180000	332609	465603	818593	132994	638593
-Close Lincolnwood + Washington (3D)	221	3	270000	480435	946358	1432209	465923	1162209
+scenario,added_riders,routes,transport_low,transport_high,building_low,building_high,net_low,net_high
+Close Lincolnwood (2FR),84,1,90000,182609.0,453546.0,806536.0,270937.0,716536.0
+Close Willard (2DR),153,2,180000,332609.0,465603.0,818593.0,132994.0,638593.0
+Close Lincolnwood + Washington (3D),221,3,270000,480435.0,946358.0,1432209.0,465923.0,1162209.0
