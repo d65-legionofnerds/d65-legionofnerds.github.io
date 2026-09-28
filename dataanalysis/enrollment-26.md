@@ -12,7 +12,7 @@ How District 65's buildings are used this fall: utilization, estimated class siz
 
 ## Key findings
 
-### 1. Higher utilization buildings don't have bigger classes: utilization and class size are unrelated
+### 1. High-utilization buildings don't have bigger classes: utilization and class size are unrelated
 
 ![Class size vs. utilization, elementary schools](assets/enrollment26_class_size_vs_utilization.png)
 
