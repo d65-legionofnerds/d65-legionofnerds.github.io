@@ -1,0 +1,20 @@
+scenario,school,change
+Close Lincolnwood (2FR),Lincoln,1
+Close Lincolnwood (2FR),Lincolnwood,-28
+Close Lincolnwood (2FR),Orrington,92
+Close Lincolnwood (2FR),Willard,19
+Close Willard (2DR),Dewey,-11
+Close Willard (2DR),Foster,3
+Close Willard (2DR),Lincoln,1
+Close Willard (2DR),Lincolnwood,55
+Close Willard (2DR),Orrington,135
+Close Willard (2DR),Washington,-2
+Close Willard (2DR),Willard,-28
+Close Lincolnwood + Washington (3D),Dawes,-35
+Close Lincolnwood + Washington (3D),Dewey,168
+Close Lincolnwood + Washington (3D),Foster,12
+Close Lincolnwood + Washington (3D),Lincolnwood,-2
+Close Lincolnwood + Washington (3D),Oakton,35
+Close Lincolnwood + Washington (3D),Orrington,88
+Close Lincolnwood + Washington (3D),Washington,-47
+Close Lincolnwood + Washington (3D),Willard,2
