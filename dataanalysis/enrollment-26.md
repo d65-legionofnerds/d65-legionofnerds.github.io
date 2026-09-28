@@ -92,7 +92,7 @@ Students in the grade ÷ estimated classes = average class size (fall SY27, elem
 
 Closing a school saves building costs, but some of its students then need a bus. **Added busing takes back roughly a fifth to two-fifths of the savings.** Closures still save money, but net savings are smaller than building costs alone suggest.
 
-This section uses the district's own transportation estimates from the [School Closure Hub](https://www.district65.net/about/budget-finance/structural-deficit-reduction-plan/phase-iii-school-closures-hub){:target="_blank"}. Each table counts students at every school by how they get there: bus, hazard route, program placement or walk. We compare each closure scenario with today's schools, using the same year and the same hazard definition.
+This section uses the district's own transportation estimates from the [School Closure Hub](https://www.district65.net/about/budget-finance/structural-deficit-reduction-plan/phase-iii-school-closures-hub){:target="_blank"}. Each table counts students at every school by how they get there: bus, hazard route, program placement or walk. We compare each closure scenario with today's schools, using the same year and the same hazard definition. Note that because we do not have current busing data, this is potentially more students bused than in SY 26-27
 
 ### Added bus riders
 
