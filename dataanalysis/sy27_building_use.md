@@ -8,20 +8,37 @@ parent: Data Analysis
 
 ## Summary: savings need to work with the district we have
 
-District 65 faces a financial crisis that is both immediate and far-reaching. A solution needs to account for the long time horizon while also producing savings in the short term.
+District 65 faces a financial crisis that is both immediate and far-reaching: the district is looking to cut about 10% of its budget, roughly $20 million. A solution needs to account for the long time horizon while also producing savings in the short term. The Nerds' goal is to provide insight and data analysis to inform decision making.
 
-- **School closures are being treated as the primary lever, but they won't produce immediate or mid-term savings on their own.** Other measures are needed alongside them.
-- **Closing too many schools can raise costs in both the short and long term,** through added transportation and moving costs, and potential renovations needed to accommodate programs. (See [Closing schools: busing costs vs. building savings](#closing-schools-busing-costs-vs-building-savings).)
+- **School closures are being treated as the primary lever, but each one saves less than it appears.** After added busing, closing one school nets roughly $0.2–0.7M a year, about 1–3.5% of the $20 million target. Closing two schools would still come to only about 2–7% of the target. Busing takes back 20–35% of the building savings ([details](#closing-schools-busing-costs-vs-building-savings)). That's before moving and renovation costs, which come first.
+- **Closing too many schools can raise costs in both the short and long term,** through added transportation and moving costs and potential renovations needed to accommodate programs. (See [Closing schools: busing costs vs. building savings](#closing-schools-busing-costs-vs-building-savings).)
 - **Staff time and labor are not being counted.** Much of the budget challenge comes from staffing. Closures focus administrators on problems whose gains are mostly long-term, and pull attention away from the larger short-term savings available through staffing.
 
-Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** Utilization and class size are unrelated (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
+Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** Across 11 elementary schools, utilization explains about 1% of the difference in class size (r = −0.11), and that holds when any one school is left out (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
 
 - **Some of the lowest utilization is in larger buildings.** Lincoln, for example, is at 61% of a 576-seat capacity. Instead of focusing only on the utilization rate, the district could look at other good uses for the space, such as partnering with a local preschool.
 - **The smallest classes are at the schools with dual-language (TWI) programs** (finding 3 below). Paradoxically, TWI programs are hard to get into, yet have smaller classes in the upper grades, through attrition and the design of the program. The district could allow more strands in K–2 and then consider consolidating strands in grades 4–5, as Oakton appears to have done in 5th grade this year.
 
+**Additional or alternative strategies that could be pursued at the same time.** Closures alone won't reach the $20 million target, so these could run alongside them:
+
+- **Creative building use:** lease or share underused space, for example with a preschool or community partner, instead of judging buildings on utilization alone.
+- **Voluntary retirement incentives, negotiated with the teachers' union:** encouraging eligible staff to retire, based on years of service, can reduce costs through attrition instead of layoffs, and help the district keep a stable, high-quality teaching staff going forward.
+- **Opening TWI to nearby communities for tuition, if possible:** filling open dual-language seats with tuition-paying students from outside the district would bring in revenue and fill small upper-grade classes.
+
 The district may or may not need to close buildings, but its plan for savings has to account for the unique nature of our district and its buildings. Otherwise the short- and medium-term savings, the ones we need most, can evaporate.
 
-How District 65's buildings are used this fall: utilization, estimated class sizes, and what closing a school saves once added busing is counted. **Current data** is from the district's public dashboard, [data.district65.net](https://data.district65.net){:target="_blank"}, pulled September 23, 2026 (fall of school year 2026–27, "SY27"), and scraped by a Legion member ([source files](https://github.com/jmclip/enrollment_fall26){:target="_blank"}). **Planning data** is from the district's utilization and capacity tables and Cordogan Clark's February 2022 capacity study.
+**What any savings plan should include:**
+
+1. **Itemized savings from the Kingsley and Bessie Rhodes closures:** what was actually saved, by category, net of the costs of opening Foster.
+2. **The full cost of closing and relocating a school:** direct costs (moving, packing, IT, closing the building), plus the staff and community time the process takes.
+3. **Expected renovation costs at receiving schools** to house the programs that move there, such as TWI, STEP and special education.
+4. **The specific position categories to be cut and the savings from each:** for example, administration, building staff, classroom teachers, specialists and support staff.
+5. **The impact on class size:** how many classes each affected grade would run before and after, and the resulting class sizes, not just building utilization.
+6. **A forward-looking case:** how the plan puts the district on sound financial footing for the long term, and how it will improve educational outcomes for all students, not just how it closes this year's gap.
+
+<details markdown="1">
+<summary><b>More on data: How District 65's buildings are used this fall: utilization, estimated class sizes, and what closing a school saves once added busing is counted. </b></summary> **Current data** is from the district's public dashboard, [data.district65.net](https://data.district65.net){:target="_blank"}, pulled September 23, 2026 (fall of school year 2026–27, "SY27"), and scraped by a Legion member ([source files](https://github.com/jmclip/enrollment_fall26){:target="_blank"}). **Planning data** is from the district's utilization and capacity tables and Cordogan Clark's February 2022 capacity study. 
+</details>
 
 **Help with accuracy:** if you know actual class sizes at your school, please add them through the [crowdsourcing form](https://docs.google.com/forms/d/e/1FAIpQLSepZPKRXOA8HTbEoWf8sUmXK_UlhWkK4_6y4cl9NQLNEYL1Bw/viewform?usp=dialog){:target="_blank"}.
 
@@ -36,6 +53,29 @@ Each dot is an elementary school: current utilization against estimated average 
 - **The line is flat.** Class size changes by about 0.02 students per point of utilization (r = −0.11, R² = 0.01, p = 0.75, 11 schools). Utilization explains about 1% of the difference in class size between schools.
 - **The two extremes point opposite ways.** Oakton has the highest utilization (79%) and the smallest classes (16.2). Willard has the lowest utilization (51%) and the largest classes (21.3).
 - **What drives class size instead:** how each grade divides into classes, and programs (TWI, ACC) that add classes. A building with low utilization can still have full classrooms, and a building with high utilization can have small ones.
+- **The result doesn't depend on any one school.** Leaving out each school in turn, the correlation stays between −0.33 and +0.20, and no version is statistically significant (every p ≥ 0.35).
+
+<details markdown="1">
+<summary><b>Show the leave-one-out check</b>: the correlation recomputed 11 times, each time without one school</summary>
+
+| School left out | Its utilization | Its class size | r | R² | Slope | p |
+|---|---:|---:|---:|---:|---:|---:|
+| *None (all 11)* | | | **−0.11** | 0.01 | −0.022 | 0.75 |
+| Dawes | 67% | 18.4 | −0.11 | 0.01 | −0.022 | 0.77 |
+| Dewey | 59% | 17.5 | −0.19 | 0.04 | −0.040 | 0.59 |
+| Foster | 63% | 17.1 | −0.16 | 0.03 | −0.032 | 0.66 |
+| King Arts | 68% | 19.8 | −0.12 | 0.01 | −0.025 | 0.74 |
+| Lincoln | 61% | 19.6 | −0.08 | 0.01 | −0.017 | 0.82 |
+| Lincolnwood | 77% | 21.1 | −0.33 | 0.11 | −0.068 | 0.35 |
+| Oakton | 79% | 16.2 | +0.18 | 0.03 | +0.036 | 0.63 |
+| Orrington | 58% | 17.9 | −0.17 | 0.03 | −0.038 | 0.63 |
+| Walker | 73% | 21.2 | −0.25 | 0.06 | −0.048 | 0.49 |
+| Washington | 73% | 17.8 | −0.06 | 0.00 | −0.013 | 0.87 |
+| Willard | 51% | 21.3 | +0.20 | 0.04 | +0.045 | 0.58 |
+
+*Slope = change in average class size per percentage point of utilization. Only dropping Oakton or Willard flips the sign, and only to about +0.2. A rank-based (Spearman) correlation gives the same picture: −0.28 to +0.14.*
+
+</details>
 
 ### 2. Utilization runs from 51% to 83%
 
@@ -138,7 +178,7 @@ The high end adds a librarian ($133K), an assistant principal ($160K) and a heal
 - Families who leave the district, and changes in state funding.
 - Crossing guards or route changes that could remove a hazard designation and the busing that goes with it.
 
-Calculations: [`build_enrollment_26.py`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/blob/main/dataanalysis/build_enrollment_26.py){:target="_blank"}. Data: the district's SDRP transportation tables are in [`data/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data){:target="_blank"} and [`data/enrollment_26/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data/enrollment_26){:target="_blank"}, with the result in `closure_transportation_summary.csv`.
+Calculations: [`build_building_use_sy27.py`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/blob/main/dataanalysis/build_building_use_sy27.py){:target="_blank"}. Data: the district's SDRP transportation tables are in [`data/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data){:target="_blank"} and [`data/enrollment_26/`](https://github.com/d65-legionofnerds/d65-legionofnerds.github.io/tree/main/dataanalysis/data/enrollment_26){:target="_blank"}, with the result in `closure_transportation_summary.csv`.
 
 ## Replication and technical details
 
@@ -158,7 +198,7 @@ Full replication details, the endpoints and the scraper are in **[`scraping/READ
 
 1. In the [source repo](https://github.com/jmclip/enrollment_fall26): run `scraping/d65_scrape.py` to pull the dashboard again, then run `d65_enrollment_by_building.ipynb` top to bottom. The notebook estimates classes and writes the CSVs.
 2. Copy `class_size_detail_by_school.csv`, `utilization_current_vs_predicted.csv`, `capacity_comparison.csv` and `twi_strands.csv` into `dataanalysis/data/enrollment_26/` here.
-3. Run `python3 dataanalysis/build_enrollment_26.py` (needs pandas, matplotlib and scipy). It redraws the four charts in `assets/` and recomputes the busing tables.
+3. Run `python3 dataanalysis/build_building_use_sy27.py` (needs pandas, matplotlib and scipy). It redraws the four charts in `assets/` and recomputes the busing tables.
 
 The dashboard stores filtered results in one shared spot on its server, so another visitor filtering at the same moment can mix up numbers. The scraper re-runs any school whose totals don't add up, and checks that schools sum to the district.
 
