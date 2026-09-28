@@ -53,11 +53,11 @@ Utilization is fall enrollment divided by capacity. For capacity we use the smal
 
 <iframe src="assets/sy27_util_vs_class_size.html" width="100%" height="560" frameborder="0"></iframe>
 
-The district's main lens for closures is building utilization: enrollment divided by capacity. Across the 11 elementary schools, **utilization has almost no relationship to class size** (correlation −0.18; −0.10 on ranks). Willard is the least-utilized school (51%) but has some of the largest classes, about 21 students. Oakton is among the most utilized (79%) and has the smallest, about 15.
+The district's main lens for closures is building utilization: enrollment divided by capacity. Across the 11 elementary schools, **utilization has almost no relationship to class size** (correlation −0.14; −0.10 on ranks). Willard is the least-utilized school (51%) but has some of the largest classes, about 21 students. Oakton is among the most utilized (79%) and has the smallest, about 16.
 
 | School | Utilization | Rooms in use | Est. class size (K-5) | Extra program sections | Avg classroom (sq ft) |
 |---|---:|---:|---:|---:|---:|
-| Oakton | 79% | 96% | 15.2 | 6 | 710 |
+| Oakton | 79% | 92% | 15.9 | 5 | 710 |
 | Lincolnwood | 77% | 84% | 20.7 | 0 | 1,030 |
 | Walker | 73% | 83% | 21.1 | 0 | 962 |
 | Washington | 73% | 92% | 17.6 | 3 | 995 |
@@ -71,9 +71,9 @@ The district's main lens for closures is building utilization: enrollment divide
 
 *Rooms in use = estimated classes ÷ floor-plan classrooms (Foster: teaching stations, since no floor-plan count is available; King Arts counts its K-8 classes). Extra program sections = estimated K-5 classes minus the fewest classes each grade's total would need under the DEC limits. Average classroom size is from Cordogan Clark's 2022 study, which didn't cover Foster. Class sizes and class counts are estimates (see Class Size Concerns below).*
 
-**Utilization mostly measures how many rooms are in use, not how full the classes are.** Utilization tracks rooms in use closely (correlation +0.84). A building fills up by running more classes, whether or not those classes are full.
+**Utilization mostly measures how many rooms are in use, not how full the classes are.** Utilization tracks rooms in use closely (correlation +0.82). A building fills up by running more classes, whether or not those classes are full.
 
-**Program strands, not buildings, drive the small classes.** Each TWI strand (and Oakton's ACC program) needs its own class in every grade, which splits a grade into several smaller classes. All 17 extra sections are at the five TWI schools; every other school runs the minimum. Schools with more extra sections have smaller classes (correlation −0.84). Part of that relationship comes from how the estimates are built, one class per strand per grade, but that is also how the programs run.
+**Program strands, not buildings, drive the small classes.** Each TWI strand (and Oakton's ACC program) needs its own class in every grade, which splits a grade into several smaller classes. All 16 extra sections are at the five TWI schools; every other school runs the minimum. Schools with more extra sections have smaller classes (correlation −0.82). Part of that relationship comes from how the estimates are built, one class per strand per grade, but that is also how the programs run.
 
 **Small classrooms explain Oakton, not the overall pattern.** Oakton's classrooms average 710 sq ft, compared with 835-1,035 sq ft elsewhere, and Cordogan Clark's area-based capacity gives it about 19 seats per room. On that capacity it reads 79% full; on the district's Cap Total (24 seats per room) it would be 64%. Across the other schools, classroom size has little relationship to class size.
 
@@ -89,7 +89,7 @@ The fall dashboard reports each school's grade enrollment and its TWI (Two Way I
 
 The District 65 teachers' union (DEC) contract sets maximum class sizes: **K-2: 23 students, 3-5: 25 students, 6-8: 28 students**. Several schools have monolingual grade enrollments that either exceed or sit just below these limits. That creates a difficult choice: one oversized class that violates the contract, or two undersized classes that strain staffing resources.
 
-**These are estimates.** The dashboard gives each grade's total and each school's TWI total, but not the TWI or monolingual count per grade. TWI students are assumed to be spread evenly across K-5 and are subtracted from each grade, and Oakton's 73 projected ACC students the same way. Washington and Lincolnwood kindergarten use the class counts parents reported; Lincolnwood's two kindergarten classes average 24, one over the K-2 limit. Mainstream classes are the fewest that keep each class within the DEC limit, so real classes may be smaller.
+**These are estimates.** The dashboard gives each grade's total and each school's TWI total, but not the TWI or monolingual count per grade. TWI students are assumed to be spread evenly across K-5 and are subtracted from each grade, and Oakton's 73 projected ACC students the same way. Washington, Oakton 5th grade and Lincolnwood kindergarten use the class counts parents reported; Lincolnwood's two kindergarten classes average 24, one over the K-2 limit. Mainstream classes are the fewest that keep each class within the DEC limit, so real classes may be smaller.
 
 <iframe src="assets/sy27_class_size_dilemma.html" width="100%" height="560" frameborder="0"></iframe>
 

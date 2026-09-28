@@ -1,6 +1,6 @@
 # SY27 fall enrollment data (snapshot)
 
-Scraped by a Legion member; copied from [jmclip/enrollment_fall26](https://github.com/jmclip/enrollment_fall26), at commit `af552dc` (2026-09-25). Refresh by re-copying these files from that repo, then rerun `../../generate_sy27_charts.py`.
+Scraped by a Legion member; copied from [jmclip/enrollment_fall26](https://github.com/jmclip/enrollment_fall26), at commit `af552dc` (2026-09-25); `class_size_detail_by_school.csv` refreshed at `465b491` (2026-09-28) for the reported Oakton 5th-grade class count. Refresh by re-copying these files from that repo, then rerun `../../generate_sy27_charts.py`.
 
 - **Source:** the district's public dashboard, [data.district65.net](https://data.district65.net), pulled 2026-09-23. Planning tables (1A utilization, Cordogan Clark capacity) were transcribed from district screenshots and checked against the February 2022 Cordogan Clark report. Full provenance is in that repo's `sources/sources.md`.
 - **Suppression:** the dashboard merges groups under 10 students into "Other*".
