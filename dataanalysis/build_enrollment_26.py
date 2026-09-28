@@ -92,7 +92,7 @@ ax.set_ylabel("Estimated average class size (students)")
 ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f"{v:.0f}%"))
 ax.grid(color="#e8e7e3")
 sign = "+" if fit.slope >= 0 else "−"
-ax.set_title("Fuller buildings don't have bigger classes", loc="left", fontsize=15, fontweight="bold", color=INK, pad=30)
+ax.set_title("Higher utilization buildings don't have bigger classes", loc="left", fontsize=15, fontweight="bold", color=INK, pad=30)
 ax.text(0, 1.02, f"Line: class size = {fit.intercept:.1f} {sign} {abs(fit.slope):.3f} × utilization.   "
         f"r = {fit.rvalue:.2f},  R² = {fit.rvalue**2:.2f},  p = {fit.pvalue:.2f},  n = {len(reg)} elementary schools",
         transform=ax.transAxes, fontsize=10.5, color=MUTED, parse_math=False)
