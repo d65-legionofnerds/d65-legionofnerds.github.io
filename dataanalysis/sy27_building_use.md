@@ -11,7 +11,7 @@ parent: Data Analysis
 District 65 faces a financial crisis that is both immediate and far-reaching. A solution needs to account for the long time horizon while also producing savings in the short term.
 
 - **School closures are being treated as the primary lever, but they won't produce immediate or mid-term savings on their own.** Other measures are needed alongside them.
-- **Closing too many schools can raise costs in both the short and long term,** through added transportation and moving costs. (See [Closing schools: busing costs vs. building savings](#closing-schools-busing-costs-vs-building-savings).)
+- **Closing too many schools can raise costs in both the short and long term,** through added transportation and moving costs, and potential renovations needed to accommodate programs. (See [Closing schools: busing costs vs. building savings](#closing-schools-busing-costs-vs-building-savings).)
 - **Staff time and labor are not being counted.** Much of the budget challenge comes from staffing. Closures focus administrators on problems whose gains are mostly long-term, and pull attention away from the larger short-term savings available through staffing.
 
 Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** Utilization and class size are unrelated (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
