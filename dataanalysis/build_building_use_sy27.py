@@ -1,4 +1,4 @@
-"""Charts and numbers for enrollment-26.md (fall SY27 building use, class size and closure costs).
+"""Charts and numbers for sy27_building_use.md (fall SY27 building use, class size and closure costs).
 
 Part 1: four charts (PNG) from the fall SY27 dashboard data, written to assets/:
   enrollment26_class_size_vs_utilization.png   regression: class size vs. utilization
@@ -20,6 +20,7 @@ Costs: District 65 Transportation Memo to the Board, Feb 9, 2026 (~$4.2M/yr; gen
 ~$2.4M; ~$80K per added single route). Building savings use FY26 salary disclosures; custodian and
 office pay are ASSUMED (no salary data) and marked below.
 Output: data/enrollment_26/closure_transportation_summary.csv (typical closure, low/high)
+Also: data/enrollment_26/class_size_vs_utilization_leave_one_out.csv (regression refit without each school)
 
 Made with help from Claude (an AI model), which can make mistakes. Please verify.
 """
@@ -186,6 +187,17 @@ fig.text(0.01, 0.01, "Estimate: schools may run more, smaller classes. TWI and O
 save(fig, "enrollment26_class_size_heatmap.png")
 
 print(f"Regression: slope {fit.slope:.3f}, r = {fit.rvalue:.2f}, R² = {fit.rvalue**2:.2f}, p = {fit.pvalue:.2f}, n = {len(reg)}")
+
+# Leave-one-out check: refit without each school in turn
+loo = []
+for sch in reg.index:
+    r_ = reg.drop(sch)
+    f_ = stats.linregress(r_["util_pct_current"], r_["avg_class_size"])
+    loo.append({"school_left_out": sch, "r": f_.rvalue, "r_squared": f_.rvalue ** 2, "slope": f_.slope, "p": f_.pvalue,
+                "spearman_rho": stats.spearmanr(r_["util_pct_current"], r_["avg_class_size"]).correlation})
+loo = pd.DataFrame(loo).round(3)
+loo.to_csv(os.path.join(IN_DIR, "class_size_vs_utilization_leave_one_out.csv"), index=False)
+print(f"Leave-one-out r: {loo['r'].min():+.2f} to {loo['r'].max():+.2f}; smallest p {loo['p'].min():.2f}")
 print(f"School-grades under 18: {(elem['avg_class_size'] < 18).sum()} of {len(elem)}")
 
 # ══ Part 2: typical closure, building savings vs. added busing ═════════════════
