@@ -5,8 +5,8 @@ Part 1: four charts (PNG) from the fall SY27 dashboard data, written to assets/:
   enrollment26_utilization_current.png         current utilization by school
   enrollment26_class_size_by_school.png        average class size by elementary school, TWI flagged
   enrollment26_class_size_heatmap.png          class size by school and grade, K-5
-Inputs (data/sy27_fall/), exported from the enrollment_fall26 notebook
-(https://github.com/jmclip/enrollment_fall26), where classes are estimated:
+Inputs (data/sy27_fall_v2/), v2 = data as of 10/1/2026: enrollment from data.district65.net
+(pulled 10/1/2026) and the district's FY27 K-5 section list (k5_sections_fy27.xlsx, emailed 10/1/2026):
   class_size_detail_by_school.csv, utilization_current_vs_predicted.csv,
   capacity_comparison.csv, twi_strands.csv
 
@@ -19,8 +19,8 @@ New general-education riders = Bus + Hazard + program placements (ACC, STEP, TWE
 Costs: District 65 Transportation Memo to the Board, Feb 9, 2026 (~$4.2M/yr; general-ed routes
 ~$2.4M; ~$80K per added single route). Building savings use FY26 salary disclosures; custodian and
 office pay are ASSUMED (no salary data) and marked below.
-Output: data/sy27_fall/closure_transportation_summary.csv (typical closure, low/high)
-Also: data/sy27_fall/class_size_vs_utilization_leave_one_out.csv (regression refit without each school)
+Output: data/sy27_fall_v2/closure_transportation_summary.csv (typical closure, low/high)
+Also: data/sy27_fall_v2/class_size_vs_utilization_leave_one_out.csv (regression refit without each school)
 
 Made with help from Claude (an AI model), which can make mistakes. Please verify.
 """
@@ -37,7 +37,7 @@ from scipy import stats
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(HERE, "data")
-IN_DIR = os.path.join(DATA_DIR, "sy27_fall")
+IN_DIR = os.path.join(DATA_DIR, "sy27_fall_v2")   # v2: actual fall 2026 section counts
 ASSETS_DIR = os.path.join(HERE, "assets")
 
 # ── Chart style ───────────────────────────────────────────────────────────────
@@ -60,6 +60,7 @@ def short(name):
 
 
 def save(fig, name):
+    name = name.replace(".png", "_v2.png")
     fig.savefig(os.path.join(ASSETS_DIR, name), dpi=200)
     plt.close(fig)
     print(f"  Saved assets/{name}")
@@ -87,7 +88,7 @@ ax.scatter(reg["util_pct_current"], reg["avg_class_size"], s=110, color=DARK_BLU
 for sch, r in reg.iterrows():
     ax.annotate(sch, (r["util_pct_current"], r["avg_class_size"]), xytext=(8, 4), textcoords="offset points", fontsize=11)
 ax.set_xlabel("Current utilization (% of capacity used)")
-ax.set_ylabel("Estimated average class size (students)")
+ax.set_ylabel("Average class size (students)")
 ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f"{v:.0f}%"))
 ax.grid(color="#e8e7e3")
 sign = "+" if fit.slope >= 0 else "−"
@@ -95,8 +96,8 @@ ax.set_title("High-utilization buildings don't have bigger classes", loc="left",
 ax.text(0, 1.02, f"Line: class size = {fit.intercept:.1f} {sign} {abs(fit.slope):.3f} × utilization.   "
         f"r = {fit.rvalue:.2f},  R² = {fit.rvalue**2:.2f},  p = {fit.pvalue:.2f},  n = {len(reg)} elementary schools",
         transform=ax.transAxes, fontsize=10.5, color=MUTED, parse_math=False)
-fig.text(0.01, 0.005, "Class sizes are estimates (Washington and Oakton 5th grade use reported class counts).\n"
-         "Utilization = fall SY27 enrollment ÷ smaller of Cap Total and Cordogan Clark capacity. King Arts utilization is K–8.",
+fig.text(0.01, 0.005, "Class counts: D65 FY27 K–5 section list (emailed Oct 1, 2026); students spread evenly within each grade.\n"
+         "Utilization = enrollment (data.district65.net, pulled Oct 1, 2026) ÷ smaller of Cap Total and Cordogan Clark capacity. King Arts utilization is K–8.",
          fontsize=9, color=MUTED, style="italic", parse_math=False)
 plt.tight_layout(rect=(0, 0.05, 1, 1))
 save(fig, "enrollment26_class_size_vs_utilization.png")
@@ -120,7 +121,7 @@ ax.set_xticks(range(0, 101, 20), [f"{t}%" for t in range(0, 101, 20)])
 ax.set_xlabel("Utilization (enrollment ÷ capacity)")
 ax.set_title(f"Utilization runs from {cur.min():.0f}% to {cur.max():.0f}%", loc="left", fontsize=15,
              fontweight="bold", color=INK, pad=28)
-ax.text(0, 1.015, "Fall SY27 enrollment ÷ the smaller of Cap Total and Cordogan Clark capacity.",
+ax.text(0, 1.015, "Enrollment pulled Oct 1, 2026 ÷ the smaller of Cap Total and Cordogan Clark capacity.",
         transform=ax.transAxes, fontsize=10, color=MUTED)
 plt.tight_layout(rect=(0, 0.05, 1, 1))
 fig.text(0.01, 0.01, "* STEP program use affects total capacity at these schools.\nClassrooms = floor-plan count "
@@ -142,11 +143,11 @@ ax.tick_params(axis="y", length=0)
 ax.set_xlim(0, 26.5)
 ax.set_xlabel("Average class size (average of K–5 grade averages)")
 ax.set_title("The smallest classes are at the dual-language schools", loc="left", fontsize=15, fontweight="bold", color=INK, pad=28)
-ax.text(0, 1.015, "Estimated average class size per elementary school, fall SY27 (every grade weighted equally).",
+ax.text(0, 1.015, "Average class size per elementary school: enrollment pulled Oct 1, 2026 ÷ sections emailed Oct 1, 2026 (grades weighted equally).",
         transform=ax.transAxes, fontsize=10, color=MUTED)
 plt.tight_layout(rect=(0, 0.05, 1, 1))
-fig.text(0.01, 0.01, "Estimate: fewest classes at 24 per class; dual-language strands and Oakton's ACC program count as their "
-         "own classes.\nKing Arts K–5 only.", fontsize=9, color=MUTED, style="italic", linespacing=1.3)
+fig.text(0.01, 0.01, "Class counts: D65 FY27 K–5 section list (emailed Oct 1, 2026), TWI and ACC included. Students spread evenly within each grade.\n"
+         "King Arts K–5 only.", fontsize=9, color=MUTED, style="italic", linespacing=1.3)
 save(fig, "enrollment26_class_size_by_school.png")
 
 # ── Chart 4: heatmap of class size by school and grade, sorted by school average ──
@@ -172,17 +173,17 @@ ax.set_xticks(np.arange(-.5, 7, 1), minor=True); ax.set_yticks(np.arange(-.5, le
 ax.grid(which="minor", color="#fcfcfb", linewidth=2); ax.tick_params(which="minor", length=0)
 ax.axvline(5.5, color="#fcfcfb", linewidth=7)
 ax.set_xlabel("Grade")
-ax.set_title("A third of elementary grades average under 18 students per class", loc="left", fontsize=15,
+n18 = int((H[K5] < 18).values.sum())
+ax.set_title(f"{n18} of 66 elementary grades average under 18 students per class", loc="left", fontsize=15,
              fontweight="bold", color=INK, pad=52)
-ax.text(0, 1.012, "Big number = students per class; small = estimated classes. School average = average of the six grade averages\n"
-        "(small number = total K–5 classes). Fewest classes at 24 per class; TWI and ACC classes counted separately,\n"
-        "except Washington (reported: 4 classes per grade, 3 in 1st and 2nd). King Arts: K–5 only.",
+ax.text(0, 1.012, "Big number = students per class; small = classes. School average = average of the six grade averages\n"
+        "(small number = total K–5 classes). Sections emailed by D65 Oct 1, 2026; enrollment pulled Oct 1, 2026. King Arts: K–5 only.",
         transform=ax.transAxes, fontsize=9.5, color=MUTED)
 cb = fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02); cb.outline.set_visible(False)
 cb.set_ticks([14, 16, 18, 20, 22, 23]); cb.set_label("Students per class (red = smaller, purple = 18, blue = larger)", color=MUTED)
 plt.tight_layout(rect=(0, 0.06, 1, 1))
-fig.text(0.01, 0.01, "Estimate: schools may run more, smaller classes. TWI and Oakton ACC students assumed evenly spread across K–5.\n"
-         "Cap = district capacity standard (24), not the contract limit. Willard and Washington 2nd grade checked against parent reports.",
+fig.text(0.01, 0.01, "Students per class are grade averages: the section list doesn't give students per class.\n"
+         "Cap = district capacity standard (24), not the contract limit.",
          fontsize=9, color=MUTED, style="italic")
 save(fig, "enrollment26_class_size_heatmap.png")
 
@@ -241,6 +242,17 @@ def load_transport(fname):
 def riders(d):
     return d[GEN_ED].sum(axis=1)
 
+
+_needed = {f for c in CLOSURES for f in c[:2]}
+_missing = [f for f in _needed if not os.path.exists(os.path.join(DATA_DIR, f))]
+if _missing:
+    # The SDRP 1A/2FR/2DR tables aren't in this folder. The busing estimate doesn't depend on
+    # enrollment or sections, so v2 reuses the v1 result (data/sy27_fall/) unchanged.
+    import shutil
+    for _f in ["closure_transportation_summary.csv", "closure_transportation_by_school.csv"]:
+        shutil.copy(os.path.join(DATA_DIR, "sy27_fall", _f), os.path.join(IN_DIR, _f))
+    print("Busing: transportation tables missing (" + ", ".join(sorted(_missing)) + "); copied v1 result.")
+    raise SystemExit(0)
 
 current_riders = riders(load_transport("1A_transportation_idot_d65.csv")).sum()
 cost_per_rider = GEN_ED_ROUTE_COST / current_riders
