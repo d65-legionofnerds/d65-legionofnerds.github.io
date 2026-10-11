@@ -23,7 +23,9 @@ District 65 faces a financial crisis that is both immediate and far-reaching: th
 Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** Across 11 elementary schools, utilization explains about 2% of the difference in class size (r = −0.14), and that holds when any one school is left out (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
 
 - **Some of the lowest utilization is in larger buildings.** Lincoln, for example, is at 59% of a 576-seat capacity (October 1). Instead of focusing only on the utilization rate, the district could look at other good uses for the space, such as partnering with a local preschool.
-- **The smallest classes are at the schools with dual-language (TWI) programs** (finding 3 below). Paradoxically, TWI programs are hard to get into, yet have smaller classes in the upper grades, through attrition and the design of the program. The district could allow more strands in K–2 and then consider consolidating strands in grades 4–5.
+- **The smallest classes are at the schools with dual-language (TWI) programs** (finding 3 below). Paradoxically, TWI programs are hard to get into, yet have smaller classes in the upper grades, through attrition and the design of the program. The district could allow more strands in K–2 and then consider consolidating strands in grades 4–5.[^twi]
+
+[^twi]: Note that there are restrictions on class sizes for TWI programs that limit the class size to 90% of mainstream class sizes. 
 
 **Additional or alternative strategies that could be pursued at the same time.** Closures alone won't reach the $20 million target, so these could run alongside them:
 
