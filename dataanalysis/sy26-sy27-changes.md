@@ -75,7 +75,7 @@ While the District owns the buildings and leaves them unused, **the likely build
 
 ## 2. What the staffing reports show
 
-![Staffing savings, predicted vs. actual. All SY2026-27 reductions: predicted $3.83M (55.5 positions), actual about $3.11M (45 positions). Closures only: predicted $2.02M, actual cuts beyond enrollment about $0.27M (about 4 positions).](assets/sy26_sy27_savings_dollars.svg)
+![Staffing savings, predicted vs. actual. All SY2026-27 reductions: predicted $3.83M (55.5 positions), actual about $3.11M (45 positions). Closures only: predicted $2.02M, actual cuts beyond enrollment about $0.27M (about 4 positions).](../assets/sy26_sy27_savings_dollars.svg)
 
 *Actual cuts are valued at the April plan's own average of $69,000 per position ($3.83M ÷ 55.5). At the $115,000 certified average, the cuts beyond enrollment are worth about $0.45 million.*
 
@@ -85,7 +85,7 @@ K-8 enrollment fell 3.0%. Staff fell by 45 positions, against about 41 that a 3.
 
 Teachers show the same pattern. On the state pay report, classroom, subject, special education and dual-language teachers went from 599 to 579, a cut of 20.
 
-![Where the 45 positions came from: teachers −22, educational support −8, teacher assistants −7, child care −6, food service −3, central-office admin −3, school administrators +3, Family Center +6, speech/OT/PT +5.2, everything else −10.3.](assets/sy26_sy27_where_cuts.svg)
+![Where the 45 positions came from: teachers −22, educational support −8, teacher assistants −7, child care −6, food service −3, central-office admin −3, school administrators +3, Family Center +6, speech/OT/PT +5.2, everything else −10.3.](../assets/sy26_sy27_where_cuts.svg)
 
 | Staff category (District FTE file) | Change, SY25-26 → SY26-27 |
 |---|---:|
@@ -105,11 +105,11 @@ Teachers show the same pattern. On the state pay report, classroom, subject, spe
 
 Closing an elementary school and moving its students into other schools' classrooms is where consolidation savings would come from. **K-5 classroom teachers held at exactly 147.** Most of the teacher cut came from middle school, subject and specials teachers (−13) and dual-language classrooms (−5).
 
-![Teachers by type, 599 to 579: K-5 classroom 0 (147 to 147), dual-language classroom −5, middle school, subject and specials −13, special education −2.](assets/sy26_sy27_teachers.svg)
+![Teachers by type, 599 to 579: K-5 classroom 0 (147 to 147), dual-language classroom −5, middle school, subject and specials −13, special education −2.](../assets/sy26_sy27_teachers.svg)
 
 **Why the K-5 count held flat.** 14 K-5 classroom teachers left the group (11 left the report and 3 moved to other roles). They were replaced by 6 new hires and 8 people who moved in from other roles. Six of those 8 came from roles that shrank this year: two dual-language classrooms (TWI kindergarten and TWI 2nd grade, each down one), a special education teacher, a social studies teacher, a bilingual math/science teacher (that title went from 2 to 0) and a pre-K teacher (pre-K PFA went from 7 to 5). One came from an interventionist job, and one is the same African-centered kindergarten classroom under a new title. So the teaching jobs that went away were mostly in other roles, and K-5 classrooms were refilled from them.
 
-![How certified staff moved from SY2025-26 to SY2026-27, by role, with net change: K-5 classroom 147 (0), dual-language 41 (−5), middle school, subject and specials 240 (−13), special education 151 (−2), interventionists and coaches 27 (−2), librarians 14 (−1), social workers, psychologists and counselors 114 (+8), nurse 1 (0), principals 16 (0), assistant principals 14 (+2), central office and other 32 (−5), on leave 3 (−3). 92 people are not on the 2026-27 report and 71 are new.](assets/sy26_sy27_staff_flow.svg)
+![How certified staff moved from SY2025-26 to SY2026-27, by role, with net change: K-5 classroom 147 (0), dual-language 41 (−5), middle school, subject and specials 240 (−13), special education 151 (−2), interventionists and coaches 27 (−2), librarians 14 (−1), social workers, psychologists and counselors 114 (+8), nurse 1 (0), principals 16 (0), assistant principals 14 (+2), central office and other 32 (−5), on leave 3 (−3). 92 people are not on the 2026-27 report and 71 are new.](../assets/sy26_sy27_staff_flow.svg)
 
 ### More principals and assistant principals
 
@@ -190,7 +190,7 @@ The deck adds "$200,000 in transportation savings" from the two closures, and st
 
 ## Staffing: what the District's own counts show
 
-<iframe src="assets/sy26_sy27_fte_change.html" width="100%" height="800" frameborder="0"></iframe>
+<iframe src="../assets/sy26_sy27_fte_change.html" width="100%" height="800" frameborder="0"></iframe>
 
 | Group | SY2025-26 | SY2026-27 | Change | % change |
 |---|---:|---:|---:|---:|
@@ -279,7 +279,7 @@ From the District's PA 97-0256 reports (all teachers, principals and other certi
 
 *Total compensation is salary plus retirement contribution, insurance, bonus and annuities. Built by [build_sy26_sy27_comparison.py](build_sy26_sy27_comparison.py); summary in [data/sy26_sy27_certified_payroll.csv](data/sy26_sy27_certified_payroll.csv). Role-by-role detail is on the [Salary Data](salary-data) page.*
 
-![Certified payroll: people on the report −2.6%, total compensation +2.6%.](assets/sy26_sy27_payroll.svg)
+![Certified payroll: people on the report −2.6%, total compensation +2.6%.](../assets/sy26_sy27_payroll.svg)
 
 Raises are not a reason to doubt closure savings, which are measured against what the District would otherwise have spent. But they explain why the budget does not shrink even when positions do. The April plan assumed "~5% annual salary growth, driven by bargained labor agreements," and that alone outweighs this year's position reductions in the certified payroll.
 
