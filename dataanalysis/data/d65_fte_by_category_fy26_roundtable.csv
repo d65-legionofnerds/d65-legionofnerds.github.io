@@ -1,0 +1,35 @@
+emp_category,description,count
+AA10,Admin Assistant 10 Month,12
+AA11,Admin Assistant 11 Month,2
+AA12,Admin Assistant 12 Month,18
+ADMIN,Central Office Administrator,17
+ADMIN SCHOOL,School Administrator,28
+BEH,Behavior Support Technicians,6
+CCTA,Child Care Teaching Assistants,12
+CERT,Other Certified Staff (DEC),7
+CERT COACH,Certified Staff - Academic Instructional Coach,9
+CERT GUIDE,Certified Staff - Guidance Counselors,9
+CERT NURSE,Certified Staff - Nurses (DEC),1
+CERT OTPT,Occupational/Physical Therapists,16
+CERT PSYCH,Certified Staff - Psychologists,19
+CERT SLP,Certified Staff - Speech Language Pathologist,28
+CERT SOCWKR,Certified Staff - Social Workers,37
+CERT TEACH,Certified Staff - Teachers,635
+COUNCIL,Central Office Cabinet,5
+CUST,Custodian (salary),64
+FACE,Family & Community Engagement (FACE) Liaisons,6
+FAMCTR,Family Center Staff (salary),6
+FOOD,Food Service (salary),32
+FOOD ECC,Food Service (salary) in HeadStart,3
+FOOD MGR,Food Service Managers (non union),4
+HEALTH,Health Clerk (DESC),6
+INTERN,Interns,6
+MISC,Educational Support Staff,50
+MISC ECC,Child Care Educational Support Staff,11
+MISC ECC 10,MISC ECC 10 Month Staff,1
+MISC EXAS,Executive Assistant,2
+NURREG,Nurse - Registered (DESC),15
+SACC,School Aged Child Care (salary),25
+SUPT,Superintendent,1
+TA,Teacher Assistant/Paraprofessional,282
+TECH,11 Month Techs,6

@@ -25,7 +25,18 @@ This data was scraped from the [D65 Staff Directory](https://www.district65.net/
 > | All other staff | 569 | 548 | −21 |
 > | **Total** | **1,381** | **1,335.93** | **−45.07** |
 >
-> *SY2025-26 from District data published in the* [Evanston RoundTable](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/){:target="_blank"} *(Nov. 2, 2025); SY2026-27 from the District's "FTEs by Employee Category" file (October 2026). The staff directory counts people, including part-time staff and staff listed at more than one location, so its totals are not directly comparable to FTE.* For how the administrator count compares with the District's new "36% fewer admins" claim, see the [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
+> *SY2025-26 from District data published in the* [Evanston RoundTable](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/){:target="_blank"} *(Nov. 2, 2025); SY2026-27 from the District's "FTEs by Employee Category" file (October 2026). The SY2025-26 figures are the District's **count of employees** by category, while SY2026-27 is a **sum of FTE**, so part-time staff count as 1 in the first year and as a fraction in the second; the true change in FTE may be somewhat smaller than 45. The staff directory counts people, including part-time staff and staff listed at more than one location, so its totals are not directly comparable to either.*
+>
+> **Which "administrators"?** The District's FTE file (used on the [Staff Data](staff-data) page) and the state salary report (used on the [Salary Data](salary-data) page) define the group differently:
+>
+> | | FTE file (Staff Data) | State report (Salary Data) |
+> |---|---|---|
+> | Central-office administrators | 23 → 20 | 24 → 21 |
+> | Principals and assistant principals | 28 → 31, counted as administrators | 28 → 30, counted separately |
+> | IES and other coordinators, union president | Not counted as administrators | 12 → 9, counted as administrators |
+> | **Headline** | **51 → 51** | **36 → 30** |
+>
+> Both show central office down 3. The FTE total holds at 51 because school administrators rose by 3. The salary count falls by 6 because it also includes 3 fewer coordinators and leaves principals out. For what changed in the year Kingsley and Bessie Rhodes closed, see [SY26 to SY27: What Changed](sy26-sy27-changes). For how the administrator count compares with the District's new "36% fewer admins" claim, see the [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
 
 ## Total Staff by Location
 

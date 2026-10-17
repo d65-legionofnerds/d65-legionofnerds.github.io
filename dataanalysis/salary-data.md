@@ -25,6 +25,17 @@ Analyzing administrative staffing and compensation patterns across comparable sc
 
 *Total compensation = salary plus retirement contribution, insurance, bonus and annuities. "Administrators" follows the charts' classification, which includes the IES coordinators (9 → 7) and the teachers' union president. Built by [build_salary_data_update.py](build_salary_data_update.py); totals in [data/d65_salary_fy26_fy27_summary.csv](data/d65_salary_fy26_fy27_summary.csv).*
 
+> **Which "administrators"?** The District's FTE file (used on the [Staff Data](staff-data) page) and the state salary report (used on the [Salary Data](salary-data) page) define the group differently:
+>
+> | | FTE file (Staff Data) | State report (Salary Data) |
+> |---|---|---|
+> | Central-office administrators | 23 → 20 | 24 → 21 |
+> | Principals and assistant principals | 28 → 31, counted as administrators | 28 → 30, counted separately |
+> | IES and other coordinators, union president | Not counted as administrators | 12 → 9, counted as administrators |
+> | **Headline** | **51 → 51** | **36 → 30** |
+>
+> Both show central office down 3. The FTE total holds at 51 because school administrators rose by 3. The salary count falls by 6 because it also includes 3 fewer coordinators and leaves principals out. For what changed in the year Kingsley and Bessie Rhodes closed, see [SY26 to SY27: What Changed](sy26-sy27-changes).
+
 - **Part of the drop in administrator pay is temporary.** The interim superintendent is a retired educator on a contract limited to 120 paid days, with a $138,000 base salary in this report, against $260,000 for the previous superintendent. A permanent superintendent is to be hired for July 2027.
 - **The rest of the drop is positions that are no longer on this report.** These are the Director of MTSS & SEL, the Executive Director of RAAD, the Manager of Student Specialized Services, the Assistant Director of Teaching & Learning, the Multilingual Coordinator and two IES coordinators. A new Assistant Director of Student Services partly offsets them. The report doesn't say whether these positions were eliminated or vacant on the reporting date. The [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan) tracks the certificated central-office list position by position and checks the District's new claim that administrators were cut 36%.
 - **Teacher compensation went up even though there are fewer teachers.** There are 14 fewer teachers and other certified staff, but their average total compensation rose about 6%, and the total rose $3.45M.

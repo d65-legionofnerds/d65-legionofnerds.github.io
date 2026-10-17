@@ -1,0 +1,37 @@
+emp_category,description,sy26_count,sy27_fte,change,group,label
+CERT TEACH,Certified Staff - Teachers,635.0,612.83,-22.17,Certified,Teachers
+TA,Teacher Assistant/Paraprofessional,282.0,268.0,-14.0,Classified / other,Teacher assistants
+MISC,Educational Support Staff,50.0,42.0,-8.0,Classified / other,Educational support staff
+SACC,School Aged Child Care (salary),25.0,19.0,-6.0,Classified / other,School-age child care
+CERT,Other Certified Staff (DEC),7.0,3.0,-4.0,Certified,Other certified staff
+ADMIN,Central Office Administrator,17.0,14.0,-3.0,Administrators,Central-office administrators
+CERT GUIDE,Certified Staff - Guidance Counselors,9.0,7.0,-2.0,Certified,Guidance counselors
+FOOD,Food Service (salary),32.0,30.0,-2.0,Classified / other,Food service
+MISC ECC,Child Care Educational Support Staff,11.0,9.0,-2.0,Classified / other,Child-care support staff
+AA12,Admin Assistant 12 Month,18.0,16.0,-2.0,Classified / other,Admin assistants (12-month)
+FOOD MGR,Food Service Managers (non union),4.0,3.0,-1.0,Classified / other,Food service managers
+CCTA,Child Care Teaching Assistants,12.0,11.0,-1.0,Classified / other,Child-care teaching assistants
+CERT COACH,Certified Staff - Academic Instructional Coach,9.0,8.0,-1.0,Certified,Instructional coaches
+FACE,Family & Community Engagement (FACE) Liaisons,6.0,5.0,-1.0,Classified / other,Family & community liaisons
+TECH,11 Month Techs,6.0,5.0,-1.0,Classified / other,11-month techs
+CERT SOCWKR,Certified Staff - Social Workers,37.0,36.9,-0.1,Certified,Social workers
+MISC ECC 10,MISC ECC 10 Month Staff,1.0,1.0,0.0,Classified / other,Child-care support staff (10-month)
+MISC EXAS,Executive Assistant,2.0,2.0,0.0,Classified / other,Executive assistants
+HEALTH,Health Clerk (DESC),6.0,6.0,0.0,Classified / other,Health clerks
+INTERN,Interns,6.0,6.0,0.0,Classified / other,Interns
+CABINET,Central Office Cabinet,5.0,5.0,0.0,Administrators,Cabinet
+BEH,Behavior Support Technicians,6.0,6.0,0.0,Classified / other,Behavior support technicians
+CERT PSYCH,Certified Staff - Psychologists,19.0,19.0,0.0,Certified,Psychologists
+FOOD ECC,Food Service (salary) in HeadStart,3.0,3.0,0.0,Classified / other,Food service (Head Start)
+NURREG,Nurse - Registered (DESC),15.0,15.0,0.0,Classified / other,Registered nurses
+SUPT,Superintendent,1.0,1.0,0.0,Administrators,Superintendent
+CERT NURSE,Certified Staff - Nurses (DEC),1.0,1.0,0.0,Certified,Certified nurse
+AA10,Admin Assistant 10 Month,12.0,12.0,0.0,Classified / other,Admin assistants (10-month)
+AA11,Admin Assistant 11 Month,2.0,3.0,1.0,Classified / other,Admin assistants (11-month)
+SIGN,(new code in SY2026-27),0.0,1.0,1.0,Classified / other,SIGN (new code)
+CUST,Custodian (salary),64.0,66.0,2.0,Classified / other,Custodians
+CERT OTPT,Occupational/Physical Therapists,16.0,18.6,2.6,Certified,Occupational / physical therapists
+CERT SLP,Certified Staff - Speech Language Pathologist,28.0,30.6,2.6,Certified,Speech-language pathologists
+ADMIN SCHOOL,School Administrator,28.0,31.0,3.0,Administrators,School administrators
+FAMCTR,Family Center Staff (salary),6.0,12.0,6.0,Classified / other,Family Center staff
+TA SIGN,(new code in SY2026-27),0.0,7.0,7.0,Classified / other,Teacher assistants (new TA SIGN code)
