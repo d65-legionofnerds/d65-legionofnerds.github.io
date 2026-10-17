@@ -14,7 +14,7 @@ Kingsley and Bessie Rhodes closed at the end of SY2025-26. In October 2026 the D
 
 **The savings the District presents appear to be the cost of operating each building, not savings already realized.** The per-school "staffing" figures line up with the cost of a building's own staff: its principal and assistant principal, interventionist, librarian, nurse and other site staff. Those costs become savings only if the positions are eliminated from the district. We emailed Chief Financial Officer Eric Miller on October 17, 2026, to ask how the figures were built, and will update this page when we hear back. On the data available so far, **the realized staffing savings appear to be a fraction of the $2.0 million stated: at most about $0.6 million.** (It is possible that more positions were cut than these data show; we will update this page as we gather more data.)
 
-![Savings claimed vs. likely realized per year, Kingsley and Bessie Rhodes combined: staffing claimed $2.02M, likely $0.3–0.6M; building costs claimed $0.98M, likely $0.3–0.5M; total claimed $3.00M, likely $0.6–1.1M.](assets/sy26_sy27_claimed_vs_realized.svg)
+![Savings claimed vs. likely realized per year, Kingsley and Bessie Rhodes combined: staffing claimed $2.02M, likely $0.3–0.6M; building costs claimed $0.98M, likely $0.3–0.5M; total claimed $3.00M, likely $0.6–1.1M.](../assets/sy26_sy27_claimed_vs_realized.svg)
 
 We analyzed the District's staffing reports for the last two years (SY2025-26 and SY2026-27) to see what changed. We found:
 
