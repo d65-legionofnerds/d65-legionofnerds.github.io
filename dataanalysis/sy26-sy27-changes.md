@@ -54,9 +54,9 @@ A staffing saving means positions that would otherwise exist and no longer do. M
 
 ![Teachers by type, 599 to 579: K-5 classroom 0 (147 to 147), dual-language classroom −5, middle school, subject and specials −13, special education −2.](assets/sy26_sy27_teachers.svg)
 
-**The closed schools' leaders and teachers are still employed.** All four of Kingsley's and Rhodes's principals and assistant principals hold the same kind of job this year. About 9 in 10 of each school's certified staff are still on the payroll, the same rate as the district as a whole.
+**The closed schools' leaders and teachers are still employed.** All four of Kingsley's and Rhodes's principals and assistant principals hold the same kind of job this year. 25 of Kingsley's 28 certified staff and 27 of Rhodes's 28 are still on the payroll, in line with or above the district as a whole (89%).
 
-![Kingsley: closed; principal still a principal, assistant principal still an assistant principal, 25 of 28 certified staff still employed. Bessie Rhodes: program moved to Foster; principal leads Foster, assistant principal still an assistant principal, 26 of 28 certified staff still employed.](assets/sy26_sy27_two_schools.svg)
+![Kingsley: closed; principal still a principal, assistant principal still an assistant principal, 25 of 28 certified staff still employed. Bessie Rhodes: program moved to Foster; principal leads Foster, assistant principal still an assistant principal, 27 of 28 certified staff still employed.](assets/sy26_sy27_two_schools.svg)
 
 Moving staff from a closed school into open jobs is normal and can be a real saving, because those jobs aren't filled by new hires. But that saving shows up only as fewer positions district-wide, and the drop beyond enrollment is about 4.
 
@@ -139,7 +139,7 @@ The deck adds "$200,000 in transportation savings" from the two closures, and st
 
 **Where the reductions landed:**
 
-- **Teachers: −22.** This is the largest single change and close to the plan's 24 certified reductions.
+- **Teachers: −22.17.** This is the District's "Certified Staff - Teachers" category alone (635 → 612.83) and the largest single change. All certified categories together fell 24.07, close to the plan's 24 DEC reductions. That total is teachers −22.17, other certified staff −4, guidance counselors −2, instructional coaches −1 and social workers −0.1, partly offset by speech-language pathologists +2.6 and occupational/physical therapists +2.6. Part of the teacher figure may reflect the change from a count of employees to FTE (see [How the counts were made](#how-the-counts-were-made)).
 - **Educational support staff (−8), teacher assistants (−7, net) and school-age child care (−6)** account for most of the rest.
 - **Some categories grew:** school administrators (+3), Family Center staff (+6, doubling), speech-language pathologists (+2.6) and occupational/physical therapists (+2.6).
 
@@ -192,7 +192,7 @@ Of the certified staff listed at each school in the December 2025 staff director
 | | Kingsley | Bessie Rhodes | District-wide |
 |---|---:|---:|---:|
 | Certified staff in SY2025-26 | 28 | 28 | 821 |
-| Still on the certified report in SY2026-27 | 25 (89%) | 26 (93%) | 729 (89%) |
+| Still on the certified report in SY2026-27 | 25 (89%) | 27 (96%) | 733 (89%) |
 
 *Matched by name between the December 2025 [staff directory](staff-data) and the PA 97-0256 reports for SY2025-26 and SY2026-27. Non-certified staff (17 at each school: paraprofessionals, lunchroom, child care, custodial) are not on a public roster with pay, so they can't be traced. Aggregate counts in [data/sy26_sy27_closed_school_staff.csv](data/sy26_sy27_closed_school_staff.csv).*
 
@@ -226,7 +226,7 @@ Raises are not a reason to doubt closure savings, which are measured against wha
 - **Staff by category.** SY2025-26 is the District's table of employees by category as published by Larry Gavin in the [Evanston RoundTable](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/){:target="_blank"} (Nov. 2, 2025, Table 2). That table is labeled **"COUNTA"**, a *count of employees*, and every value is a whole number. SY2026-27 is the District's "FTEs by Employee Category" file (October 2026), a **sum of FTE** with fractional values (for example, 612.83 teachers). A part-time employee counts as 1 in the first year and as a fraction in the second. Part of the 45-position drop may therefore come from the change in measure rather than from fewer people. The District should provide both years on the same basis. FY24–FY26 totals in Table 1 of the same article are whole numbers too, while FY19–FY23 have decimals. That suggests the District may have changed its counting method around FY24, which deserves a question of its own.
 - **Groups.** Certified = the CERT categories; administrators = ADMIN, ADMIN SCHOOL, CABINET (called COUNCIL in SY2025-26) and SUPT; all other categories are "all other staff." These reproduce the District's SY2025-26 group totals (761, 51, 569).
 - **Compensation reports** are the District's PA 97-0256 reports: [SY2025-26](../assets/Administrator%20and%20Teacher%20FY26.pdf){:target="_blank"} and [SY2026-27](../assets/Administrator%20and%20Teacher%20FY27.pdf){:target="_blank"}, converted by [convert_pa_pdfs.py](convert_pa_pdfs.py).
-- **Name matching** uses last name and first given name. A person who changed their name between years would show as having left; we found one such case (Bessie Rhodes's assistant principal, same title and pay under a new last name) and corrected it. That would lower both the closed-school and district-wide rates equally, so the comparison between them holds.
+- **Name matching** uses last name and first given name. It also links surname changes: same first name, a shared part of the surname (for example, a hyphenated name added or dropped), and no other match on either side. Four were found district-wide, all in the same job both years, including Bessie Rhodes's assistant principal. A complete surname change would still show as a departure. That would lower the closed-school and district-wide rates alike, so the comparison between them holds.
 - **Enrollment** is K-8 excluding Park, Rice and JEH, the measure used throughout this site. SY2026-27 is preliminary.
 - **Everything is rebuilt by** [build_sy26_sy27_comparison.py](build_sy26_sy27_comparison.py).
 

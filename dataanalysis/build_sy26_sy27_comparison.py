@@ -20,6 +20,7 @@ Writes:
   - data/sy26_sy27_closed_school_staff.csv        aggregate counts only (no names)
   - assets/sy26_sy27_fte_change.html
 """
+import re
 import statistics
 from pathlib import Path
 
@@ -115,20 +116,37 @@ p27 = pd.DataFrame({"key": [person(l, f) for l, f in zip(r27["last"], r27["first
                     "comp": r27[["total_salary", "dental", "health", "vision", "life", "bonus", "annuities"]].sum(axis=1)})
 
 k26, k27 = set(p26["key"]), set(p27["key"])
+
+
+def surname_parts(last):
+    return {t for t in re.split(r"[-\s]+", last) if len(t) > 1}
+
+
+# Link people whose surname changed between the two reports (e.g. a hyphenated
+# name added or dropped): same first name, a shared surname part, unmatched on
+# both sides, and exactly one candidate each way. Found 4 in SY27, all in the
+# same job (incl. the Bessie Rhodes assistant principal, ANTRIM-CAMBIUM -> ANTRIM GRAF).
+un26, un27 = k26 - k27, k27 - k26
+cands = {a: [b for b in un27 if b[1] == a[1] and surname_parts(a[0]) & surname_parts(b[0])] for a in un26}
+alias = {a: c[0] for a, c in cands.items()
+         if len(c) == 1 and sum(c[0] in other for other in cands.values()) == 1}
+to27 = {k: k for k in k26 & k27} | alias          # SY26 person -> their SY27 key
+print("Surname changes linked:", len(alias))
+
 b26, b27 = dict(zip(p26["key"], p26["base"])), dict(zip(p27["key"], p27["base"]))
-raises = [b27[k] / b26[k] - 1 for k in k26 & k27 if b26[k] > 0 and b27[k] > 0]
+raises = [b27[k27_] / b26[k] - 1 for k, k27_ in to27.items() if b26[k] > 0 and b27[k27_] > 0]
 payroll = pd.DataFrame([
     {"measure": "People on the PA 97-0256 report", "sy26": len(p26), "sy27": len(p27)},
     {"measure": "Total compensation ($)", "sy26": round(p26["comp"].sum(), 2), "sy27": round(p27["comp"].sum(), 2)},
     {"measure": "Base salary ($)", "sy26": round(p26["base"].sum(), 2), "sy27": round(p27["base"].sum(), 2)},
     {"measure": "Average base salary, excluding $0 rows ($)",
      "sy26": round(p26.loc[p26["base"] > 0, "base"].mean(), 2), "sy27": round(p27.loc[p27["base"] > 0, "base"].mean(), 2)},
-    {"measure": "SY26 people still on the report in SY27", "sy26": len(k26), "sy27": len(k26 & k27)},
+    {"measure": "SY26 people still on the report in SY27", "sy26": len(k26), "sy27": len(to27)},
     {"measure": "Median base-salary change, same person", "sy26": None, "sy27": round(statistics.median(raises), 4)},
 ])
 payroll.to_csv(DATA / "sy26_sy27_certified_payroll.csv", index=False)
 print("\n", payroll.to_string(index=False))
-district_retention = len(k26 & k27) / len(k26)
+district_retention = len(to27) / len(k26)
 
 # ------------------------------------------------------------------
 # 3. Staff of the two closed schools (Dec 2025 directory) — where are they in SY27?
@@ -141,7 +159,7 @@ rows = []
 for school, loc in CLOSED_SCHOOLS.items():
     x = d[d["location"] == loc]
     cert = x[x["key"].isin(k26)]                       # certified staff (on SY26 PA 97-0256)
-    still = cert[cert["key"].isin(k27)]
+    still = cert[cert["key"].isin(to27)]
     leaders = cert[cert["title"].str.contains("Principal", case=False)]
     rows.append({
         "school": school,
@@ -150,7 +168,7 @@ for school, loc in CLOSED_SCHOOLS.items():
         "certified_on_sy27_report": len(still),
         "certified_retention_pct": round(len(still) / len(cert) * 100, 1),
         "principals_aps_sy26": len(leaders),
-        "principals_aps_still_principal_or_ap_sy27": int(sum("PRINCIPAL" in pos27.get(k, "") for k in leaders["key"])),
+        "principals_aps_still_principal_or_ap_sy27": int(sum("PRINCIPAL" in pos27.get(to27.get(k), "") for k in leaders["key"])),
         "noncertified_staff_dec2025": len(x) - len(cert),   # paras, lunchroom, SACC, custodial: no public roster
     })
 closed = pd.DataFrame(rows)
