@@ -10,6 +10,9 @@
     {"year": 2020, "school_year": "SY2019-20", "category": "admin_principal", "doc_id": 4433, "filename": "sy19_20_admin.md"},
     {"year": 2020, "school_year": "SY2019-20", "category": "imrf", "doc_id": 4435, "filename": "sy19_20_imrf.md"},
     {"year": 2021, "school_year": "SY2020-21", "category": "admin_principal", "doc_id": 3856, "filename": "sy20_21_admin.md"},
-    {"year": 2021, "school_year": "SY2020-21", "category": "imrf", "doc_id": 3857, "filename": "sy20_21_imrf.md"}
+    {"year": 2021, "school_year": "SY2020-21", "category": "imrf", "doc_id": 3857, "filename": "sy20_21_imrf.md"},
+    {"year": 2027, "school_year": "SY2026-27", "category": "admin_principal", "doc_id": null, "pdf": "assets/TRS Administrator FY27.pdf", "filename": "sy26_27_admin.md"},
+    {"year": 2027, "school_year": "SY2026-27", "category": "imrf", "doc_id": null, "pdf": "assets/IMRF 75000+ FY27.pdf", "filename": "sy26_27_imrf.md"},
+    {"year": 2027, "school_year": "SY2026-27", "category": "admin_teacher", "doc_id": null, "pdf": "assets/Administrator and Teacher FY27.pdf", "filename": "sy26_27_admin_teacher.md"}
   ]
 }

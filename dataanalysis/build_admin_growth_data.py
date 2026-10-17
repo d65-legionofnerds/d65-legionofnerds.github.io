@@ -1,9 +1,13 @@
 """
 Builds a unified long-format CSV of D65 administrator compensation data
-spanning SY2015-16 through SY2025-26, reconciling:
+spanning SY2015-16 through SY2026-27, reconciling:
   - Excel workbook 'D65 Comp.xlsx' (provides SY15-16 and SY21-22..SY25-26)
-  - 10 markdown files in data/d65_admin_comp_pdfs/ (provide SY16-17..SY20-21,
-    extracted from foiagras PDFs of D65 board meeting compensation reports)
+  - markdown files in data/d65_admin_comp_pdfs/, listed in sources.json:
+      SY16-17..SY20-21 extracted from foiagras PDFs of D65 board meeting
+      compensation reports; SY26-27 converted from the District's FY27 PDFs
+      in /assets by convert_pa_pdfs.py (run that first when adding a year).
+    Entries with category 'admin_teacher' (PA 97-0256) are converted for the
+    Salary Data page and are not read here.
 
 Output: data/d65_admin_comp_combined.csv
 Columns: year, school_year, role_class, last_name, first_name, position,
@@ -183,7 +187,7 @@ def parse_admin_pdf(filepath: Path, year: int):
 
 def parse_imrf_pdf(filepath: Path, year: int):
     """Parser for *_imrf.md files (PA 097-0609 reports). Schema:
-    Last Name, First Name, Contract/Salary, Health, Dental, Car Allowance, Total Comp, Sick, Vacation"""
+    Last Name, First Name, [Position], Contract/Salary, Health, Dental, Car Allowance, Total Comp, Sick, Vacation"""
     text = filepath.read_text(encoding="utf-8")
     rows = parse_md_table(text)
     if not rows:
@@ -208,7 +212,7 @@ def parse_imrf_pdf(filepath: Path, year: int):
             "role_class": "IMRF Support Staff",
             "last_name": last,
             "first_name": first,
-            "position": "",  # IMRF reports often omit titles in old years
+            "position": rec.get("Position", "").strip(),  # older IMRF reports omit titles
             "base_salary": salary,
             "total_salary": salary,  # IMRF "Contract Salary" already excludes benefits
             "total_comp": total_comp,

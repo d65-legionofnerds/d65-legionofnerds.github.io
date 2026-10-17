@@ -52,7 +52,7 @@ It depends on which data source you use and how you define "administrator." The 
 | IMRF Support Staff (above threshold) | 101 | Non-certificated admin and support staff whose compensation exceeds the $75K statutory threshold — reported under PA 97-0609 |
 | **Total unique individuals** | **147** | 6 people appear in both TRS Admin and IMRF reports and these duplicates have been removed |
 
-**CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **94**. This is the number used in the admin density and right-sizing analysis.
+**CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **88**. This is the number used in the admin density and right-sizing analysis. *(Corrected October 16, 2026; an earlier version counted six people twice. See the [correction note](admin-growth-final#correction-people-listed-twice).)*
 
 **D65 Staff Directory (SY2025-26)** — The District's own public website lists **1,448 total staff** across all roles. Of those, **86 are based at the JEH Administrative Center** (central office), including 22 senior leaders (directors and above) and 19 mid-level administrators (managers, coordinators, supervisors). The remaining ~45 JEH staff are support roles (IT specialists, payroll, HR, nutrition services, custodial, etc.). See the staff directory question below for more detail.
 
@@ -101,12 +101,12 @@ The District's use of "administrator" encompasses a broader group than the 24 ce
 | 22 admin cuts as % of ~62 central administrators (Gavin) | 22 ÷ 62 | **~35%** of central administrators |
 | 42 non-union support as % of 101 IMRF Support Staff | 42 ÷ 101 | **42%** |
 | 64 total cuts as % of 147 unique PA-disclosed staff | 64 ÷ 147 | **44%** |
-| 64 total cuts as % of 94 CPI-indexed higher-paid admin | 64 ÷ 94 | **68%** |
+| 64 total cuts as % of 88 CPI-indexed higher-paid admin | 64 ÷ 88 | **73%** |
 | $8.29M savings as % of $17.48M FY25 AFR admin pool | $8.29M ÷ $17.48M | **47.4%** |
 
 Note that "22 administrators" does **not** mean 22 of the 24 TRS Admin reported under PA 96-0434. The District defines "administrator" more broadly to include management and supervisory positions that may be funded through different channels. Against the ~62-person central-admin pool that Gavin identified, the 22 proposed cuts represent roughly a third of central administrators — a substantial reduction, but not the near-total elimination that 22/24 would imply.
 
-The District's proposal is larger than all three Legion right-sizing scenarios. Even the most aggressive Legion scenario (return to D65's own SY2015-16 admin-to-student ratio) calls for only 37 cuts ($4.75M). The District identified more than double that amount.
+The District's proposal is larger than all three Legion right-sizing scenarios. Even the most aggressive Legion scenario (return to D65's own SY2015-16 admin-to-student ratio) calls for only 31 cuts ($3.98M). The District identified more than double that amount.
 
 </details>
 
@@ -138,17 +138,17 @@ The numbers make this clear:
 | Role | SY2015-16 | SY2025-26 | Change |
 |------|----------:|----------:|--------|
 | TRS Admin (central-office certificated) | 11 | 24 | **+118%** (more than doubled) |
-| IMRF Support Staff (above CPI-indexed threshold) | 30 | 42 | **+40%** |
+| IMRF Support Staff (above CPI-indexed threshold) | 30 | 36 | **+20%** |
 | Principals & Assistant Principals | 34 | 28 | **-18%** (declined) |
-| **Total** | **75** | **94** | **+25%** |
+| **Total** | **75** | **88** | **+17%** |
 
-*(An earlier version of this table listed 101 in the IMRF row. That is the count above the raw $75,000 statutory threshold, not the CPI-indexed count used in this analysis — the indexed figure is 42. The 75 → 94 totals used throughout the analysis were always based on the indexed counts and are unchanged.)*
+*(An earlier version of this table listed 101 in the IMRF row. That is the count above the raw $75,000 statutory threshold, not the CPI-indexed count used in this analysis — the indexed figure is 42. The 75 → 94 totals used throughout the analysis were always based on the indexed counts.) *(Corrected October 16, 2026: six people on both the administrator and IMRF reports in SY2025-26 were counted twice. Counting each once, the IMRF row is 36 and the total 88. See the [correction note](admin-growth-final#correction-people-listed-twice).)*
 
 Principal headcount is driven by the number of school buildings, which has been roughly stable (and will decrease by one with Kingsley's closure). The growth signal — the reason this analysis exists — is entirely in the non-principal categories: the central-office directors, executive directors, chiefs, coordinators, managers, and support staff that have been added over the past decade.
 
 This is also why the AFR analysis reports per-pupil spending both with and without principals. Function code 2400 (School Administration) captures principals and their school office staff; functions 2300 (General Administration) and 2600 (Central Support) capture central-office administrators. Excluding principals, **per-pupil central-office and support spending grew from $940 to $1,736 (+85%)** between FY16 and FY25 — an even steeper increase than the all-admin figure.
 
-**In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (94) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
+**In the right-sizing proposals:** The Legion's three scenarios use total higher-paid admin headcount (88) as the denominator because that's what the per-1,000-student density metric measures. But the practical expectation is that right-sizing would focus on central-office and district-level positions — not on pulling principals out of school buildings. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} implicitly reflects this: it targets administrators and non-union support staff, not building-level leadership.
 
 </details>
 
@@ -159,9 +159,9 @@ According to [Larry Gavin's March 2026 *Evanston RoundTable* analysis](https://e
 
 - D65's **-25% enrollment decline** since FY2019 is the steepest among 21 nearby K-8 districts; the next-largest decline was 14.3%.
 - Despite this decline, D65's total FTEs **increased by approximately 130 (+10%)** over the same period.
-- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **16.7 per 1,000** — roughly 40% above the peer median. (Gavin's −25% figure is measured from FY2019 and uses ISBE's broader "total served" population; on this page's SY2015-16 baseline and K-8 measure the decline is 24%. See the [correction note](admin-growth-final#correction-the-enrollment-series).)
+- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **15.6 per 1,000** — roughly 30% above the peer median (corrected October 16, 2026 from 16.7 and 40%). (Gavin's −25% figure is measured from FY2019 and uses ISBE's broader "total served" population; on this page's SY2015-16 baseline and K-8 measure the decline is 24%. See the [correction note](admin-growth-final#correction-the-enrollment-series).)
 
-The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~26 cuts, $3.43M savings) is based on bringing D65 in line with that ~12 per 1,000 peer benchmark.
+The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~20 cuts, $2.65M savings) is based on bringing D65 in line with that ~12 per 1,000 peer benchmark.
 
 </details>
 
@@ -201,7 +201,7 @@ This is the District's own long-running internal count. The November 2025 enroll
 - **The AFR dollar pool is unaffected.** The AFR captures every employee in admin function codes regardless of compensation level — including admin assistants, school secretaries, and support staff earning well below $75K.
 - **The right-sizing scenarios are unaffected.** All three Legion scenarios (and the District's own $8.3M proposal) use the District's per-cut average of $129K per position, anchored to the full AFR admin pool of $17.48M — not to the $103K-threshold subset.
 
-**What it DOES affect:** The headcount trend chart showing "75 to 94 higher-paid administrators" uses the CPI-indexed threshold to ensure each year's count includes only employees whose compensation meets the inflation-adjusted equivalent of $75K-2016. This is conservative — anchoring at an earlier year would yield a higher threshold and make growth appear even larger.
+**What it DOES affect:** The headcount trend chart showing "75 to 88 higher-paid administrators" uses the CPI-indexed threshold to ensure each year's count includes only employees whose compensation meets the inflation-adjusted equivalent of $75K-2016. This is conservative — anchoring at an earlier year would yield a higher threshold and make growth appear even larger.
 
 </details>
 
@@ -261,7 +261,7 @@ On the IMRF side, newer roles include Sustainability Coordinator, Wellness Coord
 
 Maybe — and the Legion isn't opposed to right-sizing facilities where the data supports it. But school closures and admin right-sizing are not either/or choices. They're both levers, and the data shows the admin lever has been largely untouched while the student-facing lever has been pulled repeatedly.
 
-Consider: closing Kingsley saves an estimated $1.66M annually. Adding Lincolnwood brings it to ~$3.24M. Meanwhile, the District's *own* [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin cuts — more than double the two-school closure scenario. Even the Legion's most conservative right-sizing scenario ($1.68M) saves as much as a school closure without displacing a single student.
+Consider: closing Kingsley saves an estimated $1.66M annually. Adding Lincolnwood brings it to ~$3.24M. Meanwhile, the District's *own* [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin cuts — more than double the two-school closure scenario. The Legion's peer-median right-sizing scenario ($2.65M) saves more than a school closure without displacing a single student.
 
 There's also a practical question worth asking: **with one fewer school next year (Kingsley and Bessie Rhodes close, Foster opens after SY25-26), does the District need the same number of administrators it had when it operated more buildings?** If anything, fewer schools should mean less central coordination, not more.
 
@@ -285,7 +285,7 @@ There is a meaningful difference between saying *"the data shows the administrat
 <details markdown="1">
 <summary>Don't strong administrators make a school district successful? Doesn't the District need experienced leaders to manage the deficit?</summary>
 
-Yes — and nothing in this analysis argues otherwise. The question isn't whether D65 needs administrators. It's whether D65 needs **64% more administrators per student** than it did a decade ago, and **40% more per student than peer K-8 districts** in the surrounding area.
+Yes — and nothing in this analysis argues otherwise. The question isn't whether D65 needs administrators. It's whether D65 needs **54% more administrators per student** than it did a decade ago, and **30% more per student than peer K-8 districts** in the surrounding area.
 
 Effective administration matters enormously. But effectiveness is not measured by headcount. A district with 25% fewer students that has added positions like Director of Strategic Projects, Special Assistant to Cabinet, and Executive Chief of Communications needs to demonstrate that those roles are producing outcomes that justify their cost.
 

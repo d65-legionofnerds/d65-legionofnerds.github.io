@@ -10,6 +10,25 @@ parent: Data Analysis
 
 Analyzing administrative staffing and compensation patterns across comparable school districts provides important context for understanding District 65's financial challenges. This analysis examines administrative headcount, total compensation, and per-student metrics to identify potential areas for cost optimization.
 
+## Update: SY2026-27 (October 2026)
+
+*Added October 16, 2026. The charts below are unchanged.* They compare District 65 with 18 peer districts using ISBE salary data through 2024. The final Evanston point, labeled 2025, comes from District 65's own [SY2025-26 PA 97-0256 report](../assets/Administrator%20and%20Teacher%20FY26.pdf){:target="_blank"}, because no peer data was available for that year. Peer data for SY2026-27 isn't available either, so we have not added a point to the charts. Instead, the table compares District 65's [SY2026-27 report](../assets/Administrator%20and%20Teacher%20FY27.pdf){:target="_blank"} with its SY2025-26 report, classifying positions the same way as the charts:
+
+| District 65, PA 97-0256 report | SY2025-26 | SY2026-27 | Change |
+|---|---:|---:|---:|
+| Administrators | 36 | 30 | −6 |
+| Administrator total compensation | $6.09M | $4.90M | −$1.19M (−20%) |
+| Principals and assistant principals | 28 | 30 | +2 |
+| Teachers and other certified staff | 751 | 737 | −14 |
+| Teacher average total compensation | $110,899 | $117,687 | +6.1% |
+| Teacher total compensation | $83.28M | $86.74M | +$3.45M (+4.1%) |
+
+*Total compensation = salary plus retirement contribution, insurance, bonus and annuities. "Administrators" follows the charts' classification, which includes the IES coordinators (9 → 7) and the teachers' union president. Built by [build_salary_data_update.py](build_salary_data_update.py); totals in [data/d65_salary_fy26_fy27_summary.csv](data/d65_salary_fy26_fy27_summary.csv).*
+
+- **Part of the drop in administrator pay is temporary.** The interim superintendent is a retired educator on a contract limited to 120 paid days, with a $138,000 base salary in this report, against $260,000 for the previous superintendent. A permanent superintendent is to be hired for July 2027.
+- **The rest of the drop is positions that are no longer on this report.** These are the Director of MTSS & SEL, the Executive Director of RAAD, the Manager of Student Specialized Services, the Assistant Director of Teaching & Learning, the Multilingual Coordinator and two IES coordinators. A new Assistant Director of Student Services partly offsets them. The report doesn't say whether these positions were eliminated or vacant on the reporting date. The [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan) tracks the certificated central-office list position by position and checks the District's new claim that administrators were cut 36%.
+- **Teacher compensation went up even though there are fewer teachers.** There are 14 fewer teachers and other certified staff, but their average total compensation rose about 6%, and the total rose $3.45M.
+
 ## Administrative Headcount Trends
 
 <iframe src="assets/fig_admin.html" width="100%" height="650" frameborder="0"></iframe>

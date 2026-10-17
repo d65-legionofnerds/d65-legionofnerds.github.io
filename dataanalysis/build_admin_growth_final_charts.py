@@ -58,11 +58,30 @@ AFR_ORDER = ["2300", "2400", "2500", "2600"]
 
 CPI_BASE_YEAR = 2026
 CPI_ANCHOR_YEAR = 2016
+# The published report covers SY2015-16 to SY2025-26. Later years (SY2026-27 onward)
+# are in the combined CSV but are discussed in the page's dated update sections,
+# not folded into the original charts.
+REPORT_END_YEAR = 2026
 
 # ------------------------------------------------------------
 # Load and prepare PA-disclosure data (CPI-indexed)
 # ------------------------------------------------------------
 df_all = pd.read_csv(DATA / "d65_admin_comp_combined.csv")
+df_all = df_all[df_all["year"] <= REPORT_END_YEAR]
+
+# Count people, not listings (correction of October 16, 2026). Some administrators
+# appear on both the PA 96-0434 report and the IMRF report in the same year
+# (7 people in SY2023-24, 6 in SY2025-26), with the same pay. Keep the
+# administrator-report listing and drop the IMRF duplicate.
+_person = (df_all["last_name"].str.upper().str.strip() + "|"
+           + df_all["first_name"].str.upper().str.strip().str.split().str[0])
+_on_admin_report = set(zip(df_all.loc[df_all["role_class"] != "IMRF Support Staff", "year"],
+                           _person[df_all["role_class"] != "IMRF Support Staff"]))
+_dup = (df_all["role_class"] == "IMRF Support Staff") & [
+    (y, p) in _on_admin_report for y, p in zip(df_all["year"], _person)]
+print(f"Dropping {int(_dup.sum())} duplicate IMRF listings:",
+      df_all.loc[_dup].groupby("year").size().to_dict())
+df_all = df_all[~_dup]
 enroll = pd.read_csv(DATA / "d65_enrollment_history.csv")[["year", "enrollment"]]
 cpi    = pd.read_csv(DATA / "cpi_history.csv")[["year", "cpi_u"]]
 cuts   = pd.read_csv(DATA / "d65_recent_cuts.csv")
@@ -428,6 +447,18 @@ scenarios.append({
     "color": "#e67e22",
 })
 
+# District's October 13, 2026 plan ("A Sustainable Path Forward", slide 28):
+# 8 administrator FTE (6 closures/consolidation + 2 non-mandated programs). The
+# deck does not price them; sized here at the District's own April per-position
+# figure so the bar is comparable to the April proposal.
+OCT_PLAN_ADMIN_FTE = 8
+scenarios.append({
+    "label": ("District's Oct 13, 2026 plan: 8 admin FTE"
+              "<br>(sized at the District's April $129K/position)"),
+    "savings": OCT_PLAN_ADMIN_FTE * DISTRICT_PER_CUT,
+    "color": "#f5b041",
+})
+
 # Recent enacted/proposed cuts from CSV; drop superseded scenarios
 measures = []
 for _, r in cuts.iterrows():
@@ -474,19 +505,67 @@ figI.update_layout(**base_layout(
     f"% of pool = FY25 AFR admin comp pool (${AFR_POOL_TOTAL/1e6:,.2f}M, 2026 $)</span>",
     xt="",
     yt="",
-    height=820))
+    height=1000))
 figI.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
 figI.add_annotation(
-    text=("<i>Dark grey: District SDRP figures. "
-          "Orange: District's April 2026 admin-cut proposal. "
-          "Red: Legion right-sizing scenarios.<br>"
-          "All admin scenarios sized at $129K/position (District's own avg).</i>"),
+    text=("<i>Dark grey: District figures for enacted and proposed cuts (closures: District's Oct 13, 2026 estimates).<br>"
+          "Orange: District's April 2026 admin-cut proposal. Light orange: admin FTE in the District's Oct 13, 2026 plan.<br>"
+          "Red: Legion right-sizing scenarios. All admin bars sized at $129K/position (District's own avg).</i>"),
     xref="paper", yref="paper", x=0, y=-0.02,
     showarrow=False, xanchor="left", yanchor="top",
     font=dict(size=11, color="#666"), align="left",
 )
 figI.update_layout(margin=dict(l=320, r=80, t=110, b=110))
 write(figI, "right_sizing_comparison")
+
+
+# ============================================================
+# Chart J — October 2026 update: the District's own administrator FTE
+# counts vs. the count implied by the Oct 13, 2026 deck's "140:1" ratio.
+# ============================================================
+admin_fte = pd.read_csv(DATA / "d65_admin_fte.csv")
+DECK_RATIO_FY27 = 140                       # slide 27, "2026*" projected students per admin
+FY27_ENROLL_RANGE = (5462, 5941)            # fall SY26-27 dashboard (Sept 23, 2026) .. SY25-26 total served
+implied_lo = FY27_ENROLL_RANGE[0] / DECK_RATIO_FY27
+implied_hi = FY27_ENROLL_RANGE[1] / DECK_RATIO_FY27
+
+implied_mid = (implied_lo + implied_hi) / 2
+DECK_LABEL = f"FY27 per deck<br>({DECK_RATIO_FY27}:1)"
+fte_labels = [f"FY{str(y)[-2:]}" for y in admin_fte["year"]]
+
+figJ = go.Figure()
+figJ.add_trace(go.Bar(
+    x=fte_labels, y=admin_fte["admin_fte"],
+    name="Administrator FTE (District's own counts)",
+    marker_color=["#c0392b" if y == 2027 else "#7f8c8d" for y in admin_fte["year"]],
+    text=admin_fte["admin_fte"], textposition="outside",
+    hovertemplate="<b>%{x}</b><br>Administrator FTE: %{y}<extra></extra>",
+))
+figJ.add_trace(go.Bar(
+    x=[DECK_LABEL], y=[implied_mid],
+    error_y=dict(type="data", symmetric=False,
+                 array=[implied_hi - implied_mid], arrayminus=[implied_mid - implied_lo],
+                 color="#7e5109", thickness=2, width=10),
+    marker=dict(color="rgba(230,126,34,0.35)", line=dict(color="#e67e22", width=2)),
+    text=[f"{implied_lo:.0f}–{implied_hi:.0f}"], textposition="inside",
+    insidetextanchor="middle", textfont=dict(color="#7e5109", size=13),
+    name=f"Administrators needed for the deck's {DECK_RATIO_FY27}:1 (at 5,462–5,941 students)",
+    hovertemplate=(f"<b>FY27, per the deck</b><br>Administrators needed for {DECK_RATIO_FY27}:1: "
+                   f"{implied_lo:.0f}–{implied_hi:.0f}<extra></extra>"),
+))
+figJ.update_layout(**base_layout(
+    "District 65 Administrator FTE, FY19–FY27 (District's Own Counts)<br>"
+    "<span style='font-size:13px;color:#444'>vs. the count needed for the Oct 2026 deck's projected 140 students per administrator</span>",
+    xt="Fiscal Year", yt="Administrator FTE", height=600, legend_y=-0.22))
+figJ.update_xaxes(type="category")
+figJ.update_yaxes(range=[0, 80])
+figJ.update_layout(bargap=0.25)
+figJ.add_annotation(
+    text="FY23→FY24: District changed its employee-category definitions",
+    x="FY24", y=68, ax=-60, ay=-45, showarrow=True, arrowhead=2,
+    font=dict(size=11, color="#555"),
+)
+write(figJ, "update_admin_fte")
 
 
 # ============================================================

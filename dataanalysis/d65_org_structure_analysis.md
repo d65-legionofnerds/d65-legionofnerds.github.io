@@ -3,7 +3,7 @@ title: Org Chart Creep
 layout: default
 parent: Data Analysis
 description: "How District 65's central office doubled while enrollment fell 24% — the org chart history from 2016 through 2026, what the SDRP cut, and what right-sizing the sub-cabinet would actually save."
-last_modified_date: 2026-05-07
+last_modified_date: 2026-10-16
 ---
 
 <style>
@@ -146,9 +146,9 @@ last_modified_date: 2026-05-07
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">Cabinet cut 50% · Sub-cabinet cut only 13%</div>
 </td>
 <td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+64%</div>
+<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+54%</div>
 <div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admin-to-student ratio</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.2 → 16.7 per 1,000 students</div>
+<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.2 → 15.6 per 1,000 students</div>
 <div style="font-size:0.8em;color:#6b6458;margin-top:6px;">peer K-8 average ~12 per 1,000</div>
 </td>
 </tr>
@@ -174,8 +174,10 @@ last_modified_date: 2026-05-07
 </tr>
 </table>
 
-*Legion of Data Nerds · May 7, 2026 · Updated August 2, 2026 · ~40 min read · Based on FOIA documents, compensation reports, and board presentations*
+*Legion of Data Nerds · May 7, 2026 · Updated October 16, 2026 · ~40 min read · Based on FOIA documents, compensation reports, and board presentations*
 
+> **Correction (October 16, 2026).** The admin-to-student ratio figure above previously read **+64% (10.2 → 16.7 per 1,000 students)**. It counted six administrators twice in SY2025-26, because they were listed on both the state administrator report and the IMRF report. Counting each person once, it is **+54% (10.2 → 15.6)**. See [Correction: people listed twice](admin-growth-final#correction-people-listed-twice) on the Admin Growth page.
+>
 > **Correction (August 2, 2026).** An earlier version of this analysis reported a **25%** enrollment decline. That figure mixed two different student populations, and the enrollment series has been rebuilt on a single consistent measure — the corrected figure is **24%**. Enrollment values in the charts below were updated accordingly. See [A note on the enrollment decline figure](#a-note-on-the-enrollment-decline-figure) and the [full correction note](admin-growth-final#correction-the-enrollment-series) on the companion Admin Growth page.
 
 ## What You Need to Know

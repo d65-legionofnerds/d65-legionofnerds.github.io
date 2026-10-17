@@ -1,0 +1,10 @@
+year,school_year,admin_fte,central_office_admin_fte,school_admin_fte,total_fte,source,note
+2019,SY2018-19,50,,,1251.2,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2020,SY2019-20,53,,,1226.05,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2021,SY2020-21,57,,,1235.75,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2022,SY2021-22,58,,,1264.55,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2023,SY2022-23,62,,,1285.85,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2024,SY2023-24,68,,,1426,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1","District changed its employee-category descriptions after FY23; total FTE +142 and 'Other FTEs' +103 in one year"
+2025,SY2024-25,64,,,1492,"District data in Larry Gavin, RoundTable, Nov 2 2025, Table 1",
+2026,SY2025-26,51,23,28,1381,"District data in Larry Gavin, RoundTable, Nov 2 2025, Tables 1 and 2","Table 2 categories: ADMIN 17 + COUNCIL (Central Office Cabinet) 5 + SUPT 1 = 23 central; ADMIN SCHOOL 28"
+2027,SY2026-27,51,20,31,1335.93,"District 65, FTEs by Employee Category (October 2026), provided to the Legion","ADMIN 14 + CABINET 5 + SUPT 1 = 20 central; ADMIN SCHOOL 31"

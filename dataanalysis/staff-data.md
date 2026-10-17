@@ -12,6 +12,21 @@ This analysis examines the distribution of current staff and teachers across Dis
 
 This data was scraped from the [D65 Staff Directory](https://www.district65.net/about/contact-us/staff-directory){:target="_blank"} on 12/19/2025. A previous version of these figures were posted on this website based on a scraping of the Staff Directory on 11/30/2025. The District updated the Staff Directory, so new figures were generated to reflect the new data. 
 
+> **Update (October 16, 2026).** The charts on this page describe **SY2025-26** and have not been redrawn. Since then:
+>
+> - **Kingsley and Dr. Bessie Rhodes closed** at the end of SY2025-26, and Foster School opened. Both closed schools still appear in the charts below.
+> - **The District has proposed closing Lincolnwood and Dewey** as part of its October 13, 2026 plan, "A Sustainable Path Forward" ([FOIA Gras doc 24535](https://ig.foiagras.com/api/public/chat/documents/24535/view){:target="_blank"}). That plan also proposes cutting 225.8 more FTE.
+> - **The District's staff count fell by 45 FTE this year.** It counted 1,381 FTE in SY2025-26 and 1,335.93 in SY2026-27:
+>
+> | District FTE count | SY2025-26 | SY2026-27 | Change |
+> |---|---:|---:|---:|
+> | Certified staff (teachers, specialists, counselors and others in the DEC union) | 761 | 736.93 | −24.07 |
+> | Administrators | 51 | 51 | 0 |
+> | All other staff | 569 | 548 | −21 |
+> | **Total** | **1,381** | **1,335.93** | **−45.07** |
+>
+> *SY2025-26 from District data published in the* [Evanston RoundTable](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/){:target="_blank"} *(Nov. 2, 2025); SY2026-27 from the District's "FTEs by Employee Category" file (October 2026). The staff directory counts people, including part-time staff and staff listed at more than one location, so its totals are not directly comparable to FTE.* For how the administrator count compares with the District's new "36% fewer admins" claim, see the [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
+
 ## Total Staff by Location
 
 <iframe src="assets/total_staff_by_location2.html" width="100%" height="850" frameborder="0"></iframe>
