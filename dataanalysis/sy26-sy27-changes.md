@@ -6,22 +6,21 @@ parent: Data Analysis
 
 # SY26 to SY27: What Changed After Kingsley and Bessie Rhodes Closed
 
-*Legion of Data Nerds · October 2026 · Preliminary: based on the District's October 2026 staffing file, the SY2026-27 state compensation reports, and fall 2026 enrollment.*
+Kingsley and Bessie Rhodes closed at the end of SY2025-26. In October 2026 the District credited the two closures with **$3.0 million a year** in savings, **$2.0 million of it from staffing**, and proposed closing **Lincolnwood and Dewey** on the same basis. SY2026-27 staffing data is now available and allows us to compare how the actual staffing data compares to these figures.
 
-Kingsley and Bessie Rhodes closed at the end of SY2025-26. In October 2026 the District credited the two closures with **$3.0 million a year** in savings, **$2.0 million of it from staffing**, and proposed closing **Lincolnwood and Dewey** on the same basis. SY2026-27 is the first year after the closures, so it is the first chance to compare those figures with how staffing changed this year.
 
 ## Summary
 
-**The savings the District presents appear to be the cost of operating each building, not savings already realized.** Those costs become savings only if the positions are eliminated from the district. We emailed Chief Financial Officer Eric Miller on October 17, 2026, to ask how the figures were built, and will update this page when we hear back. On the data available so far, **the realized staffing savings appear to be a fraction of the $2.0 million stated: somewhere between a net cost of about $0.5 million and a net saving of about $0.2 million.** Cuts in some roles are worth up to about $0.6 million, but the district added two assistant principals and two custodians. (It is possible that more positions were cut than these data show; we will update this page as we gather more data.)
+**The savings the District presents appear to be the cost of operating each building, not savings already realized.** The per-school "staffing" figures line up with the cost of a building's staff: its principal and assistant principal, interventionist, librarian, nurse and other site staff. Those costs become savings only if the positions are eliminated from the district. We emailed Chief Financial Officer Eric Miller on October 17, 2026, to ask how the figures were built, and will update this page when we hear back. On the data available so far, **the realized staffing savings appear to be a fraction of the $2.0 million stated: somewhere between a net cost of about $0.5 million and a net saving of about $0.2 million.** Cuts in some roles are worth up to about $0.6 million, but the district added two assistant principals and two custodians. (It is possible that more positions were cut than these data show; we will update this page as we gather more data.)
 
 ![Savings claimed vs. likely realized per year, Kingsley and Bessie Rhodes combined: staffing claimed $2.02M, likely between a net cost of $0.5M and a net saving of $0.2M; building costs claimed $0.98M, likely $0.3–0.5M; total claimed $3.00M, likely between a net cost of $0.2M and a net saving of $0.7M.](../assets/sy26_sy27_claimed_vs_realized.svg)
 
 We found:
 
-- **More principals and assistant principals, not fewer.** With one fewer building, state data (shared at the September 28, 2026 board meeting) show 30 principals and assistant principals, up from 28. Principals held at 16; assistant principals rose from 12 to 14, likely because more schools now have one. If more schools close, will these positions again be counted as savings and not eliminated?
-- **Possible double counting.** The October plan counts closure staffing savings per school and also lists 103 positions under "school closures/staffing consolidation" in a separate $11.3 million staffing line. It is unclear whether the per-school closure savings are separate from, or included in, those 103 positions.
-- **Cuts for the year appear minor.** Staff fell about 3%, in line with enrollment. The cuts don't move staffing toward the levels in Illinois's Evidence-Based Funding model. They also fell short of the District's own April plan: 45 of the 55.5 positions it planned to cut. This raises the question of whether the District's forecasts are accurate. (The state pay reports list non-certified staff only when they earn $75,000 or more, so cuts among lower-paid support staff, such as paraprofessionals, lunchroom and child-care staff, may not appear in them; the District's FTE file covers all staff.)
-- **No consolidation at K-5.** The district has exactly the same number of K-5 classroom teachers as last year: 147. Part of the case for closing schools was consolidating classes, which would reduce that number. That hasn't happened yet. We are disappointed to lose any teachers; the question here is only whether the plan to consolidate classes worked.
+- **More principals and assistant principals, not fewer.** With one fewer building, data reported to the state (shared at the September 28, 2026 board meeting) show 30 principals and assistant principals, up from 28. Principals held at 16, while assistant principals rose from 12 to 14. We believe this reflects more schools getting an assistant principal. That raises the question of how staffing plans will change if more schools close, especially if these positions are counted as savings and then not eliminated.
+- **Possible double counting.** The [October plan](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463) counts closure staffing savings per school and also lists 103 positions under "school closures/staffing consolidation" in a separate $11.3 million staffing line. It is unclear whether the per-school closure savings are separate from, or included in, those 103 positions.
+- **Cuts for the year appear minor.** Staff fell about 3%, in line with enrollment. The cuts don't move staffing toward the levels in Illinois's Evidence-Based Funding model. They also fell short of the District's own [April plan](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"}: 45 of the 55.5 positions it planned to cut. Certified staff came in on target (24 planned, 24 cut), but the 12 management and non-union cuts don't appear in the administrator counts, which held at 51. This raises the question of whether the District's forecasts are accurate. (The state pay reports list non-certified staff only when they earn $75,000 or more, so cuts among lower-paid support staff, such as paraprofessionals, lunchroom and child-care staff, may not appear in them; the District's FTE file covers all staff.)
+- **No consolidation at K-5.** The district has exactly the same number of K-5 classroom teachers as last year: 147. Part of the case for closing schools was consolidating classes, which would reduce that number. That hasn't happened yet. Teacher reductions came elsewhere: middle school, subject and specials teachers (−13), dual-language classroom teachers (−5) and special education teachers (−2), for 20 fewer teachers in all. We are disappointed to lose any teachers; the question here is only whether the plan to consolidate classes worked.
 
 This raises questions about **whether, and how soon,** the District can expect to realize the benefits it has attributed to these closures, and to the closures it has now proposed.
 
@@ -29,13 +28,13 @@ This raises questions about **whether, and how soon,** the District can expect t
 
 ---
 
-## 1. What the District says the closures save, and what staffing actually saved
+## 1. What did closing two schools actually save in dollars?
 
-The District's $3.0 million is the full cost of running each building for a year, itemized line by line in Table 6 of its [FY28 Public Financial Plan Summary](https://resources.finalsite.net/images/v1791591727/district65net/r4rpmppr8puk5ciupn1z/D65_FY28_Public_Financial_Plan_Summary2.pdf){:target="_blank"}, posted on the [D65 Data Hub](https://data.district65.net/){:target="_blank"}.
+The District's $3.0 million is the full cost of running each building for a year, itemized line by line in Table 6 of its [FY28 Public Financial Plan Summary](https://resources.finalsite.net/images/v1791591727/district65net/r4rpmppr8puk5ciupn1z/D65_FY28_Public_Financial_Plan_Summary2.pdf){:target="_blank"}, posted on the [D65 Data Hub](https://data.district65.net/){:target="_blank"}. The line items add up exactly to the [October deck's](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463) figures: $1,008,804 and $1,006,533 of staffing, and $552,021 and $428,533 of building costs.
 
 ### Staffing: $2.0 million claimed; net result from a $0.5M cost to a $0.2M saving
 
-The staffing figure is the cost of each building's own staff. For each role, the table below shows the District's figure and how the same role changed district-wide this year.
+The staffing figure is the cost of each building's staff. For each role, the table below shows the District's figure and how the same role changed district-wide this year.
 
 | Role | Kingsley | Bessie Rhodes | Combined | District-wide change | Visible saving |
 |---|---:|---:|---:|---|---:|
@@ -55,7 +54,7 @@ The staffing figure is the cost of each building's own staff. For each role, the
 
 ‡ Two more custodians in the District's FTE file. The pay reports list custodians only above $75,000, so this uses an estimated $65,000–80,000 each.
 
-*"Visible saving" credits every district-wide drop in a role to the closures and prices it at the District's own per-school figure, so it is an upper bound: some of those drops would have happened with falling enrollment anyway. Certified roles are from the state pay reports shared at the September 28, 2026 board meeting.*
+*"Visible saving" credits every district-wide drop in a role to the closures and prices it at the District's per-school figure, so it is an upper bound: some of those drops would have happened with falling enrollment anyway. Certified roles are from the state pay reports shared at the September 28, 2026 board meeting. Custodial, clerical and food-service changes are from the District's FTE file, because the pay reports list non-certified staff only above $75,000. Nurses are on that report only above $75,000 too, so their change can't be measured.*
 
 How the total range is built. Some roles shrank district-wide this year (interventionists, librarians, administrative assistants, nutrition and PE staff), but we can't tell whether those cuts came from the closures or would have happened anyway because enrollment fell. The **high end** (a net saving of about $0.2 million) assumes every one of those cuts came from the closures: about $622,000 in cuts, minus the roughly $459,000 cost of the added assistant principals and custodians. The **low end** (a net cost of about $0.5 million) assumes none of them did, so only the added assistant principals and custodians count, about $489,000 at the higher custodian estimate. The actual figure is likely somewhere in between.
 
@@ -73,11 +72,15 @@ How the total range is built. Some roles shrank district-wide this year (interve
 | Discretionary supplies | $21,000 | Ends |
 | **Total** | **$980,554** | **Likely saved: about $0.3–0.5 million** |
 
-While the District owns the buildings and leaves them unused, **the likely building saving is about $0.3–0.5 million a year**, not $980,554. The low end counts only the costs that end outright (supplies, copiers, waste removal and discretionary spending, $169,221) plus a quarter of the partly continuing costs; the high end counts three quarters of them. Unless the buildings are sold, leased or used for something else, that cost and part of the maintenance, utility and security costs stay on the books. The District hasn't said what will happen to the Kingsley and Bessie Rhodes buildings. We have asked the District specifically whether it still pays insurance on the closed buildings.
+While the District owns the buildings and leaves them unused, **the likely building saving is about $0.3–0.5 million a year**, not $980,554. The low end counts only the costs that end outright (supplies, copiers, waste removal and discretionary spending, $169,221) plus a quarter of the partly continuing costs; the high end counts three quarters of them. Insurance alone is $376,211 of the $980,554. Unless the buildings are sold, leased or used for something else, that cost and part of the maintenance, utility and security costs stay on the books. The District hasn't said what will happen to the Kingsley and Bessie Rhodes buildings. We have asked the District specifically whether it still pays insurance on the closed buildings.
 
-## 2. What the staffing reports show
+*The deck also cites $200,000 in transportation savings (["A Sustainable Path Forward," October 13, 2026](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"}).*
+
+## 2. What did closing two schools actually cut in positions?
 
 ![Staffing savings, predicted vs. actual. All SY2026-27 reductions: predicted $3.83M (55.5 positions), actual about $3.11M (45 positions). Closures only: predicted $2.02M, actual between a net cost of $0.5M and a net saving of $0.2M.](../assets/sy26_sy27_savings_dollars.svg)
+
+*All reductions are valued at the [April plan](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"}'s average of $69,000 per position ($3.83M ÷ 55.5). The closures' actual range is the role-by-role result from section 1: cuts at the two schools' roles minus the added assistant principals and custodians.*
 
 ### Cuts mirrored the enrollment drop
 
@@ -103,15 +106,27 @@ Moving staff from a closed school into open jobs is normal and can be a real sav
 
 ### Possible double counting
 
-The October plan's separate "Staffing and Compensation" section ($11.3 million) lists 103 positions under "school closures/staffing consolidation." If the positions behind the per-school closure estimates are also among those 103, the same savings are counted twice.
+The [October plan](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"} estimates staffing savings for each school it would close (slide 35: $894,783 at Lincolnwood, $926,104 at Dewey) and counts them in a $2.9 million “District Footprint” line. A separate staffing table (slide 28) lists 6 administrators, 56 certified and 41 classified FTE (103 total) under “School Closures/Staffing Consolidation,” and the summary (slide 38) shows a separate $11.3 million “Staffing and Compensation” line. The plan does not say whether the closure staffing savings are separate from those 103 FTE or included in them. If included, the same savings are counted twice.
 
-## 3. If, and when, the savings will show up
+![Potential savings by category from the October 2026 plan: Staffing and Compensation $11,300,000, Non-Mandated Programs $1,900,000, Other Purchased Services $2,370,000, District Footprint $2,900,000, Transportation $2,400,000, Subtotal Potential Savings $20,870,000; Additional Revenue $565,000, Implementation Costs $1,000,000, Annual Capital and Teach/Learn Investment $5,500,000; Net Total Potential Savings $14,935,000.](../assets/sy26_sy27_october_plan_savings_table.png)
 
-Building-based costs turn into savings in specific ways: a position is eliminated, a vacancy is left unfilled, or a building is sold, leased or stops costing money to maintain. None of these is itemized for Kingsley or Bessie Rhodes. Without that detail, the community can't tell whether the $3.0 million is a SY2026-27 saving, a saving that arrives as staff retire or leave, or a figure that depends on decisions not yet made.
+## 3. More evidence would create more confidence in these estimates
 
-The same method prices **Lincolnwood ($1.42 million) and Dewey ($1.48 million)**, with $0.89 million and $0.93 million of it from staffing.
+Building-based costs turn into savings if a position is eliminated, a vacancy is left unfilled, or a building is sold, leased or stops costing money to maintain. None of these is itemized for Kingsley or Bessie Rhodes. The district could present more data alongside the cost number showing how positions are reduced, or how insurance or maintenance costs go down when the building is empty. Without that detail, the community can't tell whether the $3.0 million is a SY2026-27 saving or an operational cost that still exists or moves with the students to another building.
 
-## 4. Data needed to answer these questions
+## 4. Where the District's numbers and the staffing data diverge
+
+| | District figure | What the data show |
+|---|---|---|
+| Staffing saved by the two closures | $2.02M | **Between a net cost of $0.5M and a net saving of $0.2M** (cuts worth up to $0.6M, minus two added assistant principals and two added custodians) |
+| Building costs saved | $0.98M | **$0.3–0.5M** (insurance, $0.38M, and part of maintenance, utilities and security continue while the buildings are owned) |
+| Principals and assistant principals | $679,030 a year saved at the two schools | **No savings; about $329,000 added** (28 → 30 district-wide; all four closed-school leaders still employed) |
+| K-5 consolidation | Two elementary schools closed | K-5 classroom teachers 147 → 147 |
+| All SY2026-27 reductions ([April plan](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"}) | 55.5 positions, $3.83M, including Kingsley | 45 positions |
+| Closure staffing vs. the separate staffing line | Per-school estimates | Possible overlap with 103 "consolidation" positions |
+| Bessie Rhodes savings | $1.44M | Program and staff largely moved to Foster |
+
+## 5. Data needed to answer these questions
 
 1. How the per-school closure savings were calculated, and whether they are building costs or positions eliminated (asked of the CFO on October 17, 2026).
 2. Whether insurance and other building costs continue for Kingsley and Bessie Rhodes while the District owns them (asked).
@@ -130,14 +145,37 @@ The same method prices **Lincolnwood ($1.42 million) and Dewey ($1.48 million)**
 |---|---|---|
 | June 10, 2024 | Board resolves to close Bessie Rhodes after SY2025-26 and move its K-5 TWI program to the new Fifth Ward school (Foster). The District later noted this decision was "not driven by" the deficit-reduction (SDRP) process. | [FOIA Gras doc 794](https://ig.foiagras.com/api/public/chat/documents/794/view){:target="_blank"}; [doc 21784](https://ig.foiagras.com/api/public/chat/documents/21784/view){:target="_blank"} |
 | January 9, 2026 | Board resolves to close Kingsley after SY2025-26. | [FOIA Gras doc 13846](https://ig.foiagras.com/api/public/chat/documents/13846/view){:target="_blank"} |
-| April 13, 2026 | SY2026-27 reduction plan: 55.5 net positions, $3.83M. "School-level reductions are reflective of declining student enrollment and the closure of Kingsley Elementary." | [FOIA Gras doc 21784](https://ig.foiagras.com/api/public/chat/documents/21784/view){:target="_blank"} |
+| April 13, 2026 | SY2026-27 reduction plan: 55.5 net positions, $3.83M. "School-level reductions are reflective of declining student enrollment and the closure of Kingsley Elementary." | [D65 Agendas & Minutes](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"} |
 | Fall 2026 | Kingsley and Bessie Rhodes closed; Foster School opens. Net change: one fewer elementary building. | |
 | September 28, 2026 | FY27 budget adopted; reflects "an estimated $6.3 million in expenditure reductions approved by the Board last spring, including staffing reductions, school closures, and other operational changes." | [FOIA Gras doc 24492](https://ig.foiagras.com/api/public/chat/documents/24492/view){:target="_blank"} |
-| October 13, 2026 | "A Sustainable Path Forward" deck: Kingsley and Bessie Rhodes closures estimated at $3.0M a year combined; proposes closing Lincolnwood and Dewey using the same method. | [FOIA Gras doc 24535](https://ig.foiagras.com/api/public/chat/documents/24535/view){:target="_blank"} |
+| October 13, 2026 | "A Sustainable Path Forward" deck: Kingsley and Bessie Rhodes closures estimated at $3.0M a year combined; proposes closing Lincolnwood and Dewey using the same method. | [D65 Agendas & Minutes](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"} |
+
+**What the District says the two closures save ([October 13, 2026 deck](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"}):**
+
+| | Kingsley | Bessie Rhodes | Combined |
+|---|---:|---:|---:|
+| Staffing | $1,008,804 | $1,006,533 | $2,015,337 |
+| Building and operating costs | $462,036 | $383,383 | $845,419 |
+| Utilities | $89,985 | $45,150 | $135,135 |
+| **Estimated gross annual savings** | **$1,560,825** | **$1,435,066** | **$2,995,891** |
+
+The [deck](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"} adds "$200,000 in transportation savings" from the two closures, and states that prior estimates were "$1.4M each."
 
 ---
 
-## Staffing: District counts
+## Enrollment
+
+| | SY2025-26 | SY2026-27 | Change |
+|---|---:|---:|---:|
+| K-8 students (excluding Park, Rice and JEH) | 5,630 | 5,462 | −168 (−3.0%) |
+
+*SY2025-26 from the District's November 2025 enrollment memo; SY2026-27 from the District's public dashboard, pulled September 23, 2026 (preliminary until the November memo). Building-by-building enrollment and utilization are on [SY27 Building Use and Closure Costs](sy27_building_use).*
+
+---
+
+## Staffing: what the District's counts show
+
+<iframe src="../assets/sy26_sy27_fte_change.html" width="100%" height="800" frameborder="0"></iframe>
 
 | Group | SY2025-26 | SY2026-27 | Change | % change |
 |---|---:|---:|---:|---:|
@@ -146,11 +184,17 @@ The same method prices **Lincolnwood ($1.42 million) and Dewey ($1.48 million)**
 | All other staff | 569 | 548 | −21 | −3.7% |
 | **Total** | **1,381** | **1,335.93** | **−45.07** | **−3.3%** |
 
-*Every category, with the District's own descriptions: [data/sy26_sy27_fte_by_category.csv](data/sy26_sy27_fte_by_category.csv). "TA" fell by 14 but 7 teacher assistants moved to a new "TA SIGN" code, so the net change is −7.*
+*Every category, with the District's descriptions: [data/sy26_sy27_fte_by_category.csv](data/sy26_sy27_fte_by_category.csv). "TA" fell by 14 but 7 teacher assistants moved to a new "TA SIGN" code, so the net change is −7.*
 
-**Compared with the District's April plan.** The April plan reported its 55.5 reductions by union, not by employee category, so the match is approximate:
+**Where the reductions landed:**
 
-| April 13, 2026 plan (by union) | Planned | Closest categories in the October 2026 file | Observed |
+- **Teachers: −22.17.** This is the District's "Certified Staff - Teachers" category alone (635 → 612.83) and the largest single change. All certified categories together fell 24.07, close to the plan's 24 DEC reductions. That total is teachers −22.17, other certified staff −4, guidance counselors −2, instructional coaches −1 and social workers −0.1, partly offset by speech-language pathologists +2.6 and occupational/physical therapists +2.6. Part of the teacher figure may reflect the change from a count of employees to FTE (see [How the counts were made](#how-the-counts-were-made)).
+- **Educational support staff (−8), teacher assistants (−7, net) and school-age child care (−6)** account for most of the rest.
+- **Some categories grew:** school administrators (+3), Family Center staff (+6, doubling), speech-language pathologists (+2.6) and occupational/physical therapists (+2.6).
+
+**Compared with the District's [April plan](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"}.** The April plan reported its 55.5 reductions by union, not by employee category, so the match is approximate:
+
+| [April 13, 2026 plan](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=6407279){:target="_blank"} (by union) | Planned | Closest categories in the October 2026 file | Observed |
 |---|---:|---|---:|
 | DEC (teachers and other certified staff) | −24 | All certified categories | −24.07 |
 | ETAA (teacher assistants) | −10 | TA + TA SIGN | −7 |
@@ -178,7 +222,7 @@ The same method prices **Lincolnwood ($1.42 million) and Dewey ($1.48 million)**
 
 Both show central office down 3. The FTE total holds at 51 because school administrators rose by 3. The salary count falls by 6 because it also includes 3 fewer coordinators and leaves principals out.
 
-**The [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan) covers the central-office side and the District's claim that administrators were cut 36%. That 36% is the change in a ratio, students per administrator going from 90 to 140, not a count of people, and the ratio also rises when enrollment falls. On the District's own counts, the cut is 20–25%, and none of it came this year.**
+Closing a school should remove one principal's job and, often, an assistant principal's. Instead, all four leaders are still school administrators, and the District's count of school administrators rose by 3. The [deck](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"} doesn't break down the roughly $1.0 million in staffing savings per closure. A closed school's principal and assistant principal would ordinarily be part of it, and those savings don't appear in the District's administrator counts. **The [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan) covers the central-office side and the District's claim that administrators were cut 36%. That 36% is the change in a ratio, students per administrator going from 90 to 140, not a count of people, and the ratio also rises when enrollment falls. By the District's counts, the cut is 20–25%, and none of it came this year.**
 
 ---
 
