@@ -11,7 +11,9 @@ Kingsley and Bessie Rhodes closed at the end of SY2025-26. In October 2026 the D
 
 ## Summary
 
-**The savings the District presents appear to be the cost of operating each building, not a demonstrated reduction in spending.** The per-school staffing figures line up with the cost of a building's staff: its principal and assistant principal, interventionist, librarian, nurse and other site staff. Those costs become savings only if the positions are eliminated from the district. 
+**The savings the District presents appear to be the cost of operating each building, not a demonstrated reduction in spending.** The board needs to use its financial oversight responsibilities to make sure school closure savings don't go the way of transportation savings - $3M that's not really there.
+
+The per-school staffing figures line up with the cost of a building's staff: its principal and assistant principal, interventionist, librarian, nurse and other site staff. Those costs become savings only if the positions are eliminated from the district. 
 
 We emailed Chief Financial Officer Eric Miller on October 17, 2026 to ask how the figures were built and will update this page when we hear back. 
 
