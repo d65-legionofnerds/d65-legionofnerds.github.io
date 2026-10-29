@@ -1,0 +1,460 @@
+category,fy,fiscal_month,month_expended
+Administrative assistant,25,1,54978.71
+Administrative assistant,25,2,73264.55
+Administrative assistant,25,3,94534.38
+Administrative assistant,25,4,92875.54
+Administrative assistant,25,5,92858.37
+Administrative assistant,25,6,109052.75
+Administrative assistant,25,7,91079.95
+Administrative assistant,25,8,88322.52
+Administrative assistant,25,9,92445.27
+Administrative assistant,25,10,91506.54
+Administrative assistant,25,11,93075.28000000012
+Administrative assistant,25,12,124727.72
+Copier and printing,25,1,9268.44
+Copier and printing,25,2,54230.7
+Copier and printing,25,3,0.0
+Copier and printing,25,4,16607.35
+Copier and printing,25,5,60948.12
+Copier and printing,25,6,24843.07
+Copier and printing,25,7,15897.97
+Copier and printing,25,8,59060.02
+Copier and printing,25,9,15625.1
+Copier and printing,25,10,17761.0
+Copier and printing,25,11,54110.02999999996
+Copier and printing,25,12,39210.18
+Custodial supplies,25,1,65063.0
+Custodial supplies,25,2,15646.3
+Custodial supplies,25,3,223.92
+Custodial supplies,25,4,36142.58
+Custodial supplies,25,5,19501.97
+Custodial supplies,25,6,13263.69
+Custodial supplies,25,7,342.95
+Custodial supplies,25,8,17448.59
+Custodial supplies,25,9,367.0
+Custodial supplies,25,10,0.0
+Custodial supplies,25,11,2835.189999999995
+Custodial supplies,25,12,17237.93
+Custodial support,25,1,307346.93
+Custodial support,25,2,423496.61
+Custodial support,25,3,336024.85
+Custodial support,25,4,286099.8
+Custodial support,25,5,272906.68
+Custodial support,25,6,303960.2
+Custodial support,25,7,276087.08999999997
+Custodial support,25,8,265252.18
+Custodial support,25,9,276305.41
+Custodial support,25,10,280186.93
+Custodial support,25,11,262021.34999999986
+Custodial support,25,12,341635.17
+Discretionary supplies,25,1,5694.29
+Discretionary supplies,25,2,40902.79
+Discretionary supplies,25,3,19216.12
+Discretionary supplies,25,4,38092.14
+Discretionary supplies,25,5,21103.43
+Discretionary supplies,25,6,15383.21
+Discretionary supplies,25,7,19310.84
+Discretionary supplies,25,8,22071.06
+Discretionary supplies,25,9,12056.69
+Discretionary supplies,25,10,22846.97
+Discretionary supplies,25,11,60392.25999999998
+Discretionary supplies,25,12,-63805.59
+Electricity,25,1,58541.93
+Electricity,25,2,53459.94
+Electricity,25,3,64549.3
+Electricity,25,4,72497.32
+Electricity,25,5,70520.72
+Electricity,25,6,66774.43
+Electricity,25,7,47309.28
+Electricity,25,8,65137.75
+Electricity,25,9,67139.64
+Electricity,25,10,70137.64
+Electricity,25,11,60786.38000000001
+Electricity,25,12,56152.26
+Insurance,25,1,557007.0
+Insurance,25,2,0.0
+Insurance,25,3,0.0
+Insurance,25,4,0.0
+Insurance,25,5,88416.0
+Insurance,25,6,0.0
+Insurance,25,7,0.0
+Insurance,25,8,0.0
+Insurance,25,9,0.0
+Insurance,25,10,0.0
+Insurance,25,11,0.0
+Insurance,25,12,0.0
+Interventionist,25,1,0.0
+Interventionist,25,2,0.0
+Interventionist,25,3,150210.49
+Interventionist,25,4,150546.17
+Interventionist,25,5,146313.71
+Interventionist,25,6,151305.04
+Interventionist,25,7,150860.5
+Interventionist,25,8,179184.93
+Interventionist,25,9,158121.81
+Interventionist,25,10,158950.14
+Interventionist,25,11,151850.91000000003
+Interventionist,25,12,366711.85
+Library media specialist,25,1,0.0
+Library media specialist,25,2,0.0
+Library media specialist,25,3,126298.51
+Library media specialist,25,4,126478.51
+Library media specialist,25,5,126388.51
+Library media specialist,25,6,128527.65
+Library media specialist,25,7,136335.51
+Library media specialist,25,8,168012.94
+Library media specialist,25,9,141001.1
+Library media specialist,25,10,149579.11
+Library media specialist,25,11,142073.36000000004
+Library media specialist,25,12,406453.91
+Natural gas,25,1,12603.95
+Natural gas,25,2,0.0
+Natural gas,25,3,0.0
+Natural gas,25,4,1293.85
+Natural gas,25,5,8580.3
+Natural gas,25,6,14460.99
+Natural gas,25,7,32363.71
+Natural gas,25,8,57569.83
+Natural gas,25,9,76027.58
+Natural gas,25,10,62060.6
+Natural gas,25,11,39406.62999999999
+Natural gas,25,12,30454.92
+Nurse,25,1,0.0
+Nurse,25,2,5548.05
+Nurse,25,3,20936.16
+Nurse,25,4,20936.16
+Nurse,25,5,20936.14
+Nurse,25,6,44494.99
+Nurse,25,7,26671.44
+Nurse,25,8,29170.53
+Nurse,25,9,26671.28
+Nurse,25,10,26671.28
+Nurse,25,11,69296.44999999998
+Nurse,25,12,54094.44
+Nutrition,25,1,0.0
+Nutrition,25,2,15047.35
+Nutrition,25,3,38024.81
+Nutrition,25,4,39901.71
+Nutrition,25,5,41960.8
+Nutrition,25,6,38681.0
+Nutrition,25,7,43319.86
+Nutrition,25,8,38362.53
+Nutrition,25,9,41714.19
+Nutrition,25,10,42359.98
+Nutrition,25,11,36820.96000000004
+Nutrition,25,12,73496.45
+"Phone/WAN, security, BAS",25,1,65193.729999999996
+"Phone/WAN, security, BAS",25,2,38847.990000000005
+"Phone/WAN, security, BAS",25,3,74314.17000000001
+"Phone/WAN, security, BAS",25,4,76950.83
+"Phone/WAN, security, BAS",25,5,34749.979999999996
+"Phone/WAN, security, BAS",25,6,19458.629999999997
+"Phone/WAN, security, BAS",25,7,69220.93
+"Phone/WAN, security, BAS",25,8,33145.770000000004
+"Phone/WAN, security, BAS",25,9,32393.43
+"Phone/WAN, security, BAS",25,10,27304.84
+"Phone/WAN, security, BAS",25,11,41049.90000000001
+"Phone/WAN, security, BAS",25,12,27927.53
+Principal / AP,25,1,400188.25
+Principal / AP,25,2,370750.18
+Principal / AP,25,3,366238.97
+Principal / AP,25,4,366238.97
+Principal / AP,25,5,366238.97
+Principal / AP,25,6,366238.97
+Principal / AP,25,7,366238.95999999996
+Principal / AP,25,8,430803.66000000003
+Principal / AP,25,9,366238.95
+Principal / AP,25,10,450882.91000000003
+Principal / AP,25,11,380046.85999999964
+Principal / AP,25,12,396765.99
+Repairs and maintenance,25,1,66735.03
+Repairs and maintenance,25,2,216189.65
+Repairs and maintenance,25,3,106826.95000000001
+Repairs and maintenance,25,4,107092.29
+Repairs and maintenance,25,5,28126.059999999998
+Repairs and maintenance,25,6,56791.29
+Repairs and maintenance,25,7,30502.71
+Repairs and maintenance,25,8,39558.76
+Repairs and maintenance,25,9,37579.3
+Repairs and maintenance,25,10,18659.64
+Repairs and maintenance,25,11,38103.63000000005
+Repairs and maintenance,25,12,83704.11
+Waste removal,25,1,9313.91
+Waste removal,25,2,11917.73
+Waste removal,25,3,11446.1
+Waste removal,25,4,19178.46
+Waste removal,25,5,16425.91
+Waste removal,25,6,15902.18
+Waste removal,25,7,14841.42
+Waste removal,25,8,15682.3
+Waste removal,25,9,14254.25
+Waste removal,25,10,13408.23
+Waste removal,25,11,17234.620000000014
+Waste removal,25,12,9750.52
+Water,25,1,16719.83
+Water,25,2,0.0
+Water,25,3,0.0
+Water,25,4,13419.79
+Water,25,5,16226.23
+Water,25,6,0.0
+Water,25,7,17064.91
+Water,25,8,0.0
+Water,25,9,15617.16
+Water,25,10,0.0
+Water,25,11,16957.770000000004
+Water,25,12,0.0
+Administrative assistant,26,1,59236.16
+Administrative assistant,26,2,82448.49
+Administrative assistant,26,3,101229.75
+Administrative assistant,26,4,100288.29
+Administrative assistant,26,5,96062.58
+Administrative assistant,26,6,111855.34
+Administrative assistant,26,7,101953.88
+Administrative assistant,26,8,97105.5
+Administrative assistant,26,9,95309.79
+Administrative assistant,26,10,97244.81
+Administrative assistant,26,11,96145.82
+Administrative assistant,26,12,139259.12
+Administrative assistant,27,1,54206.1
+Administrative assistant,27,2,79398.45
+Administrative assistant,27,3,101217.19
+Copier and printing,26,1,0.0
+Copier and printing,26,2,56065.03
+Copier and printing,26,3,0.0
+Copier and printing,26,4,70819.86
+Copier and printing,26,5,26428.13
+Copier and printing,26,6,25895.97
+Copier and printing,26,7,60626.37
+Copier and printing,26,8,15354.39
+Copier and printing,26,9,19530.13
+Copier and printing,26,10,17720.78
+Copier and printing,26,11,17637.98
+Copier and printing,26,12,77531.66
+Copier and printing,27,1,0.0
+Copier and printing,27,2,0.0
+Copier and printing,27,3,58830.53
+Custodial supplies,26,1,0.0
+Custodial supplies,26,2,67788.45
+Custodial supplies,26,3,29.68
+Custodial supplies,26,4,69664.14
+Custodial supplies,26,5,42438.52
+Custodial supplies,26,6,5534.59
+Custodial supplies,26,7,80582.12
+Custodial supplies,26,8,10776.5
+Custodial supplies,26,9,8641.9
+Custodial supplies,26,10,544.89
+Custodial supplies,26,11,4799.75
+Custodial supplies,26,12,117783.25
+Custodial supplies,27,1,0.0
+Custodial supplies,27,2,0.0
+Custodial supplies,27,3,1411.05
+Custodial support,26,1,280705.81
+Custodial support,26,2,353489.71
+Custodial support,26,3,340984.68
+Custodial support,26,4,299734.64
+Custodial support,26,5,280901.13
+Custodial support,26,6,335589.35
+Custodial support,26,7,282624.9
+Custodial support,26,8,301778.48
+Custodial support,26,9,301149.73
+Custodial support,26,10,297465.95
+Custodial support,26,11,294648.2
+Custodial support,26,12,366924.13
+Custodial support,27,1,254565.34999999998
+Custodial support,27,2,350968.05000000005
+Custodial support,27,3,373069.21
+Discretionary supplies,26,1,468.0
+Discretionary supplies,26,2,11457.1
+Discretionary supplies,26,3,8920.13
+Discretionary supplies,26,4,97244.99
+Discretionary supplies,26,5,26671.79
+Discretionary supplies,26,6,6119.94
+Discretionary supplies,26,7,13493.73
+Discretionary supplies,26,8,16750.96
+Discretionary supplies,26,9,16335.65
+Discretionary supplies,26,10,21176.61
+Discretionary supplies,26,11,39700.78
+Discretionary supplies,26,12,16608.94
+Discretionary supplies,27,1,0.0
+Discretionary supplies,27,2,0.0
+Discretionary supplies,27,3,50033.97
+Electricity,26,1,57637.04
+Electricity,26,2,73206.1
+Electricity,26,3,83807.17
+Electricity,26,4,78523.54
+Electricity,26,5,83119.49
+Electricity,26,6,70441.62
+Electricity,26,7,66530.68
+Electricity,26,8,63865.73
+Electricity,26,9,70485.49
+Electricity,26,10,73749.67
+Electricity,26,11,56393.76
+Electricity,26,12,42984.46
+Electricity,27,1,69244.07
+Electricity,27,2,71428.78
+Electricity,27,3,77656.4
+Insurance,26,1,0.0
+Insurance,26,2,707016.0
+Insurance,26,3,0.0
+Insurance,26,4,139900.0
+Insurance,26,5,0.0
+Insurance,26,6,0.0
+Insurance,26,7,0.0
+Insurance,26,8,0.0
+Insurance,26,9,0.0
+Insurance,26,10,0.0
+Insurance,26,11,0.0
+Insurance,26,12,0.0
+Insurance,27,1,796595.0
+Insurance,27,2,0.0
+Insurance,27,3,0.0
+Interventionist,26,1,2366.69
+Interventionist,26,2,158.92
+Interventionist,26,3,178449.91
+Interventionist,26,4,180217.89
+Interventionist,26,5,186876.7
+Interventionist,26,6,180317.22
+Interventionist,26,7,178996.19
+Interventionist,26,8,180967.5
+Interventionist,26,9,173410.47
+Interventionist,26,10,173976.62
+Interventionist,26,11,178209.62
+Interventionist,26,12,445105.11
+Interventionist,27,1,0.0
+Interventionist,27,2,0.0
+Interventionist,27,3,168936.77
+Library media specialist,26,1,0.0
+Library media specialist,26,2,0.0
+Library media specialist,26,3,148338.42
+Library media specialist,26,4,151221.42
+Library media specialist,26,5,154219.19
+Library media specialist,26,6,149779.92
+Library media specialist,26,7,149779.92
+Library media specialist,26,8,149779.92
+Library media specialist,26,9,149779.92
+Library media specialist,26,10,149779.92
+Library media specialist,26,11,149706.92
+Library media specialist,26,12,418860.72
+Library media specialist,27,1,0.0
+Library media specialist,27,2,0.0
+Library media specialist,27,3,145072.01
+Natural gas,26,1,19169.38
+Natural gas,26,2,9895.76
+Natural gas,26,3,9746.58
+Natural gas,26,4,0.0
+Natural gas,26,5,0.0
+Natural gas,26,6,9371.0
+Natural gas,26,7,36856.52
+Natural gas,26,8,68754.95
+Natural gas,26,9,87093.03
+Natural gas,26,10,74952.42
+Natural gas,26,11,46981.41
+Natural gas,26,12,26079.62
+Natural gas,27,1,17680.18
+Natural gas,27,2,23664.65
+Natural gas,27,3,10030.91
+Nurse,26,1,0.0
+Nurse,26,2,11225.43
+Nurse,26,3,33109.26
+Nurse,26,4,33109.26
+Nurse,26,5,33109.26
+Nurse,26,6,33109.26
+Nurse,26,7,33609.26
+Nurse,26,8,33109.26
+Nurse,26,9,26974.86
+Nurse,26,10,26974.86
+Nurse,26,11,27228.66
+Nurse,26,12,42776.15
+Nurse,27,1,0.0
+Nurse,27,2,7911.77
+Nurse,27,3,26867.14
+Nutrition,26,1,129.3
+Nutrition,26,2,15516.77
+Nutrition,26,3,41511.28
+Nutrition,26,4,43033.92
+Nutrition,26,5,40220.71
+Nutrition,26,6,41116.37
+Nutrition,26,7,42141.97
+Nutrition,26,8,39054.1
+Nutrition,26,9,39579.4
+Nutrition,26,10,40811.19
+Nutrition,26,11,42811.07
+Nutrition,26,12,65321.99
+Nutrition,27,1,0.0
+Nutrition,27,2,14656.8
+Nutrition,27,3,42014.39
+"Phone/WAN, security, BAS",26,1,3614.33
+"Phone/WAN, security, BAS",26,2,73932.85
+"Phone/WAN, security, BAS",26,3,15169.44
+"Phone/WAN, security, BAS",26,4,101248.01
+"Phone/WAN, security, BAS",26,5,55218.98
+"Phone/WAN, security, BAS",26,6,27483.87
+"Phone/WAN, security, BAS",26,7,50510.380000000005
+"Phone/WAN, security, BAS",26,8,27607.010000000002
+"Phone/WAN, security, BAS",26,9,50792.630000000005
+"Phone/WAN, security, BAS",26,10,27952.58
+"Phone/WAN, security, BAS",26,11,31679.84
+"Phone/WAN, security, BAS",26,12,69166.33
+"Phone/WAN, security, BAS",27,1,30810.39
+"Phone/WAN, security, BAS",27,2,15292.48
+"Phone/WAN, security, BAS",27,3,56146.71
+Principal / AP,26,1,350429.62
+Principal / AP,26,2,334184.22
+Principal / AP,26,3,329035.06
+Principal / AP,26,4,331547.56
+Principal / AP,26,5,335652.97
+Principal / AP,26,6,395137.14
+Principal / AP,26,7,342511.1
+Principal / AP,26,8,346986.1
+Principal / AP,26,9,333906.44
+Principal / AP,26,10,336018.94
+Principal / AP,26,11,343511.65
+Principal / AP,26,12,334957.36
+Principal / AP,27,1,329923.68
+Principal / AP,27,2,345468.45999999996
+Principal / AP,27,3,337419.99
+Repairs and maintenance,26,1,97.7
+Repairs and maintenance,26,2,117562.76999999999
+Repairs and maintenance,26,3,715.07
+Repairs and maintenance,26,4,182058.24
+Repairs and maintenance,26,5,36412.56
+Repairs and maintenance,26,6,44951.41
+Repairs and maintenance,26,7,77366.64
+Repairs and maintenance,26,8,112365.52
+Repairs and maintenance,26,9,54908.59
+Repairs and maintenance,26,10,51479.229999999996
+Repairs and maintenance,26,11,180365.49
+Repairs and maintenance,26,12,275748.21
+Repairs and maintenance,27,1,0.0
+Repairs and maintenance,27,2,412.4
+Repairs and maintenance,27,3,77023.72
+Waste removal,26,1,9097.61
+Waste removal,26,2,19594.34
+Waste removal,26,3,16618.74
+Waste removal,26,4,14322.73
+Waste removal,26,5,17915.04
+Waste removal,26,6,18960.25
+Waste removal,26,7,13699.31
+Waste removal,26,8,10035.72
+Waste removal,26,9,9642.55
+Waste removal,26,10,27740.68
+Waste removal,26,11,17600.69
+Waste removal,26,12,11941.76
+Waste removal,27,1,9429.1
+Waste removal,27,2,12984.22
+Waste removal,27,3,15720.9
+Water,26,1,15020.49
+Water,26,2,2165.23
+Water,26,3,10987.57
+Water,26,4,1364.27
+Water,26,5,17486.47
+Water,26,6,0.0
+Water,26,7,12119.57
+Water,26,8,2166.79
+Water,26,9,15028.18
+Water,26,10,0.0
+Water,26,11,18102.57
+Water,26,12,0.0
+Water,27,1,15436.61
+Water,27,2,3049.56
+Water,27,3,13802.95

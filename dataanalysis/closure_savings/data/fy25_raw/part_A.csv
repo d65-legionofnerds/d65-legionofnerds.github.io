@@ -1,0 +1,177 @@
+category,fund,obj,line_name,fy,fiscal_month,month_expended,ytd_expended,budget,source_doc_id,note
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,1,557007,557007,564905,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,2,0,557007,554095,670,
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,3,0,557007,488000,649,
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,4,0,557007,488000,554,
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,1,65063,65063,100000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,2,15646.3,80709.3,100000,670,
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,3,223.92,80933.22,145000,649,
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,4,36142.58,117075.8,145000,554,
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,1,0,0,,669,line absent from fund 20 list in all four months; treated as 0
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,2,0,0,,670,line absent from fund 20 list in all four months; treated as 0
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,3,0,0,,649,line absent from fund 20 list in all four months; treated as 0
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,4,0,0,,554,line absent from fund 20 list in all four months; treated as 0
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,1,14191.23,14191.23,125000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,2,10471.5,24662.73,125000,670,
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,3,10800,35462.73,145000,649,
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,4,15579.54,51042.27,145000,554,
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,1,0,0,50000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,2,0,0,50000,670,
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,3,0,0,55000,649,
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,4,0,0,55000,554,
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,1,1162,1162,75000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,2,6363.2,7525.2,75000,670,
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,3,0,7525.2,56000,649,
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,4,0,7525.2,56000,554,
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,1,0,0,20000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,2,20000,20000,20000,670,
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,3,0,20000,29000,649,
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,4,0,20000,29000,554,
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,1,36370,36370,40000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,2,0,36370,40000,670,
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,3,9630,46000,50000,649,
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,4,0,46000,50000,554,
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,1,1182,1182,50000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,2,7945,9127,50000,670,
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,3,67787.82,76914.82,90000,649,
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,4,3204.74,80119.56,90000,554,
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,1,0,0,12000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,2,0,0,12000,670,
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,3,0,0,10000,649,
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,4,0,0,10000,554,
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,1,0,0,15000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,2,0,0,15000,670,
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,3,0,0,12000,649,
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,4,0,0,12000,554,
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,1,0,0,12000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,2,0,0,12000,670,
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,3,0,0,12000,649,
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,4,0,0,12000,554,
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,1,1482.5,1482.5,15000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,2,0,1482.5,15000,670,
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,3,0,1482.5,96000,649,
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,4,0,1482.5,96000,554,
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,1,0,0,15000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,2,0,0,15000,670,
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,3,0,0,15000,649,
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,4,0,0,15000,554,
+Repairs and maintenance,20,3249,R/M-FENCES,25,1,0,0,30000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3249,R/M-FENCES,25,2,5851,5851,30000,670,
+Repairs and maintenance,20,3249,R/M-FENCES,25,3,0,5851,40000,649,
+Repairs and maintenance,20,3249,R/M-FENCES,25,4,9984,15835,40000,554,
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,1,0,0,35000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,2,0,0,35000,670,
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,3,0,0,25000,649,
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,4,38520,38520,25000,554,
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,1,0,0,20000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,2,0,0,20000,670,
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,3,0,0,11000,649,
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,4,0,0,11000,554,
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,1,0,0,15000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,2,0,0,15000,670,
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,3,0,0,28000,649,
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,4,574.56,574.56,28000,554,
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,1,0,0,85000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,2,0,0,85000,670,
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,3,0,0,93000,649,
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,4,1990,1990,93000,554,
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,1,0,0,20000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,2,8508,8508,20000,670,
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,3,2560,11068,31000,649,
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,4,17705,28773,31000,554,
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,1,9425.9,9425.9,120000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,2,132113.15,141539.05,120000,670,
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,3,16049.13,157588.18,220000,649,
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,4,14053.58,171641.76,220000,554,
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,1,2921.4,2921.4,30000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,2,24937.8,27859.2,30000,670,
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,3,0,27859.2,41000,649,
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,4,4600,32459.2,41000,554,
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,1,0,0,58357,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,2,0,0,58357,670,
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,3,0,0,87000,649,
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,4,880.87,880.87,87000,554,
+Waste removal,20,3221,RUBBISH REMOVAL,25,1,9313.91,9313.91,156000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Waste removal,20,3221,RUBBISH REMOVAL,25,2,11917.73,21231.64,156000,670,
+Waste removal,20,3221,RUBBISH REMOVAL,25,3,11446.1,32677.74,188400,649,
+Waste removal,20,3221,RUBBISH REMOVAL,25,4,19178.46,51856.2,188400,554,
+Electricity,20,4660,ELECTRICITY,25,1,58541.93,58541.93,588300,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Electricity,20,4660,ELECTRICITY,25,2,53459.94,112001.87,588300,670,
+Electricity,20,4660,ELECTRICITY,25,3,64549.3,176551.17,643800,649,
+Electricity,20,4660,ELECTRICITY,25,4,72497.32,249048.49,643800,554,
+Natural gas,20,4650,GAS HEAT,25,1,12603.95,12603.95,341650,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Natural gas,20,4650,GAS HEAT,25,2,0,12603.95,341650,670,
+Natural gas,20,4650,GAS HEAT,25,3,0,12603.95,336900,649,
+Natural gas,20,4650,GAS HEAT,25,4,1293.85,13897.8,336900,554,
+Water,20,3700,WATER,25,1,16719.83,16719.83,104200,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Water,20,3700,WATER,25,2,0,16719.83,104200,670,
+Water,20,3700,WATER,25,3,0,16719.83,96300,649,
+Water,20,3700,WATER,25,4,13419.79,30139.62,96300,554,
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,1,18021.84,18021.84,0,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,2,18023.54,36045.38,0,670,
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,3,17991.74,54037.12,263000,649,
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,4,17666.15,71703.27,203000,554,
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,1,13560.99,13560.99,0,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,2,13575.62,27136.61,0,670,
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,3,48078.62,75215.23,225000,649,
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,4,33573.42,108788.65,225000,554,
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,1,6943.48,6943.48,100000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,2,6938.83,13882.31,100000,670,
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,3,6137.86,20020.17,117000,649,
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,4,4329.63,24349.8,117000,554,
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,1,26667.42,26667.42,180000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,2,310,26977.42,180000,670,
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,3,2105.95,29083.37,170000,649,
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,4,21381.63,50465.0,170000,554,
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,1,9268.44,9268.44,410075.52,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,2,54230.7,63499.14,410075.52,670,
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,3,0,63499.14,397000,649,
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,4,16607.35,80106.49,397000,554,
+Custodial support,20,1510,CUSTODIAN,25,1,260781.43,260781.43,2705240.52,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Custodial support,20,1510,CUSTODIAN,25,2,258614.54,519395.97,2705240.52,670,
+Custodial support,20,1510,CUSTODIAN,25,3,252330.46,771726.43,2665869,649,
+Custodial support,20,1510,CUSTODIAN,25,4,254842.34,1026568.77,2665869,554,
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,1,2056.44,2056.44,21677.34,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,2,1806.44,3862.88,21677.34,670,
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,3,1806.44,5669.32,18600,649,
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,4,1806.44,7475.76,18600,554,
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,1,44509.06,44509.06,350000,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,2,163075.63,207584.69,350000,670,
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,3,81887.95,289472.64,523500,649,
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,4,29451.02,318923.66,523500,554,
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,1,54978.71,54978.71,1059904.49,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,2,73264.55,128243.26,1059904.49,670,
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,3,94534.38,222777.64,1112006,649,
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,4,92875.54,315653.18,1112006,554,
+Principal / AP,10,1110,PRINCIPAL,25,1,213519.25,213519.25,2141895.03,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Principal / AP,10,1110,PRINCIPAL,25,2,189089.72,402608.97,2141895.03,670,
+Principal / AP,10,1110,PRINCIPAL,25,3,189089.72,591698.69,2260800,649,
+Principal / AP,10,1110,PRINCIPAL,25,4,189089.72,780788.41,2240800,554,
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,1,186669.0,186669.0,2139616.29,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,2,181660.46,368329.46,2139616.29,670,
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,3,177149.25,545478.71,2502500,649,
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,4,177149.25,722627.96,2502500,554,
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,1,5694.29,5694.29,218155.01,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,2,40902.79,46597.08,218155.01,670,
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,3,19216.12,65813.2,437982,649,
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,4,38092.14,103905.34,437962,554,
+Interventionist,10,1188,INTERVENTIONIST,25,1,0,0,1990223.11,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Interventionist,10,1188,INTERVENTIONIST,25,2,0,0,1990223.11,670,
+Interventionist,10,1188,INTERVENTIONIST,25,3,150210.49,150210.49,1967692,649,
+Interventionist,10,1188,INTERVENTIONIST,25,4,150546.17,300756.66,1967692,554,
+Library media specialist,10,1250,LIBRARIANS,25,1,0,0,1480740.39,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Library media specialist,10,1250,LIBRARIANS,25,2,0,0,1480740.39,670,
+Library media specialist,10,1250,LIBRARIANS,25,3,126298.51,126298.51,1589000,649,
+Library media specialist,10,1250,LIBRARIANS,25,4,126478.51,252777.02,1589000,554,
+Nurse,10,1290,NURSES,25,1,0,0,462356.29,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Nurse,10,1290,NURSES,25,2,5548.05,5548.05,462356.29,670,
+Nurse,10,1290,NURSES,25,3,20936.16,26484.21,303800,649,
+Nurse,10,1290,NURSES,25,4,20936.16,47420.37,303800,554,
+Physical education,10,1150,TEACHERS-REGULAR,25,1,52497.08,52497.08,48296562.31,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Physical education,10,1150,TEACHERS-REGULAR,25,2,300,52797.08,48296562.31,670,
+Physical education,10,1150,TEACHERS-REGULAR,25,3,3685413.76,3738210.84,44452231,649,
+Physical education,10,1150,TEACHERS-REGULAR,25,4,3662160.01,7400370.85,44452231,554,
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,1,0,0,314271.71,669,Jul YTD = month; cross-checked against Aug YTD minus Aug month
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,2,15047.35,15047.35,314271.71,670,
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,3,38024.81,53072.16,415700,649,
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,4,39901.71,92973.87,415700,554,

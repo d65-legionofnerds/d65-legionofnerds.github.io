@@ -1,0 +1,177 @@
+category,fund,obj,line_name,fy,fiscal_month,month_expended,ytd_expended,budget,source_doc_id,note
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,9,0.00,645423.00,488000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,10,0.00,645423.00,488000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Insurance,80,3810,PROPERTY/LIABILITY INSUR,25,12,0.00,645423.00,647000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,9,367.00,168000.00,145000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,10,0.00,168000.00,145000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Custodial supplies,20,4171,CUSTODIAL SUPPLIES,25,12,17237.93,188073.12,145000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,9,0.00,0.00,0.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,10,0.00,0.00,0.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3231,R/M-EQUIPMENT,25,12,0.00,0.00,0.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget; line absent from Jun report fund 20 (0 recorded)
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,9,18540.78,90295.74,145000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,10,15975.66,106271.40,145000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3237,R/M-HEATING EQUIPMENT,25,12,34585.56,152739.88,145000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,9,4089.18,10769.26,55000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,10,0.00,10769.26,55000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3238,R/M-PLUMBING EQUIPMENT,25,12,5387.78,16157.04,55000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,9,0.00,11771.20,56000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,10,0.00,11771.20,56000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3239,R/M-ELECTRICAL EQUIPMENT,25,12,510.00,16025.70,56000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,9,3330.66,52616.81,29000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,10,0.00,52616.81,29000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3241,R/M-ROOFS & SHEET METAL,25,12,5946.56,61897.03,29000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,9,0.00,46000.00,50000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,10,0.00,46000.00,50000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3242,R/M-PAINTING SERVICES,25,12,0.00,46000.00,50000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,9,3096.68,89731.02,90000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,10,750.00,90481.02,90000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3243,R/M-CARPENTRY SERVICES,25,12,0.00,90481.02,90000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,9,0.00,0.00,10000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,10,0.00,0.00,10000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3244,R/M-GLAZING SERVICES,25,12,0.00,0.00,10000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,9,0.00,0.00,12000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,10,0.00,0.00,12000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3245,R/M-MASONRY-PLASTER,25,12,0.00,0.00,12000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,9,0.00,0.00,12000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,10,0.00,0.00,12000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3246,R/M - MISC MAINTENANCE,25,12,0.00,0.00,12000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,9,0.00,10555.00,96000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,10,0.00,10555.00,96000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3247,R/M-LAWN/SHRUBBERY,25,12,4160.00,14715.00,96000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,9,0.00,0.00,15000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,10,0.00,0.00,15000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3248,R/M-WALKS & DRIVES,25,12,0.00,0.00,15000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3249,R/M-FENCES,25,9,0.00,15835.00,40000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3249,R/M-FENCES,25,10,0.00,15835.00,40000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3249,R/M-FENCES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3249,R/M-FENCES,25,12,0.00,15835.00,40000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,9,0.00,38520.00,25000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,10,0.00,38520.00,25000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3252,R/M - PLAYGROUNDS,25,12,0.00,38520.00,25000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,9,0.00,0.00,11000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,10,0.00,0.00,11000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3261,R/M-EXTERIOR,25,12,0.00,0.00,11000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,9,0.00,574.56,28000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,10,0.00,574.56,28000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3262,R/M-MECHANICAL,25,12,665.37,1239.93,28000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,9,0.00,10686.47,93000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,10,0.00,10686.47,93000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3263,R/M-INTERIOR MAINT.,25,12,0.00,14952.89,93000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,9,0.00,28773.00,31000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,10,0.00,28773.00,31000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3264,R/M-GROUNDS MAINT.,25,12,0.00,28773.00,31000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,9,8522.00,245635.95,220000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,10,640.54,246276.49,220000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3265,R/M-FIRE ALARMS,25,12,10639.83,269795.21,220000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,9,0.00,36757.16,41000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,10,1293.44,38050.60,41000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3270,R/M-ELEVATORS,25,12,5002.76,45050.60,41000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,9,0.00,880.87,87000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,10,0.00,880.87,87000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Repairs and maintenance,20,3271,MAINTENANCE AGREEMENT,25,12,16806.25,17687.12,87000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Waste removal,20,3221,RUBBISH REMOVAL,25,9,14254.25,128962.26,188400.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Waste removal,20,3221,RUBBISH REMOVAL,25,10,13408.23,142370.49,188400.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Waste removal,20,3221,RUBBISH REMOVAL,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Waste removal,20,3221,RUBBISH REMOVAL,25,12,9750.52,169355.63,188400.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Electricity,20,4660,ELECTRICITY,25,9,67139.64,565930.31,643800.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Electricity,20,4660,ELECTRICITY,25,10,70137.64,636067.95,643800.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Electricity,20,4660,ELECTRICITY,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Electricity,20,4660,ELECTRICITY,25,12,56152.26,753006.59,643800.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Natural gas,20,4650,GAS HEAT,25,9,76027.58,202900.21,336900.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Natural gas,20,4650,GAS HEAT,25,10,62060.60,264960.81,336900.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Natural gas,20,4650,GAS HEAT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Natural gas,20,4650,GAS HEAT,25,12,30454.92,334822.36,336900.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Water,20,3700,WATER,25,9,15617.16,79047.92,96300.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Water,20,3700,WATER,25,10,0.00,79047.92,96300.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Water,20,3700,WATER,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Water,20,3700,WATER,25,12,0.00,96005.69,96300.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,9,18289.26,174178.71,203000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,10,14706.67,188885.38,203000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+"Phone/WAN, security, BAS",10,3401,TELEPHONE,25,12,9796.27,213378.72,203000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,9,12984.17,175099.60,225000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,10,11334.17,186433.77,225000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+"Phone/WAN, security, BAS",10,3403,DATA COMMUNICATIONS,25,12,17011.26,207070.03,225000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,9,1120.00,27632.64,117000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,10,1120.00,28752.64,117000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+"Phone/WAN, security, BAS",20,3401,TELEPHONE,25,12,1120.00,30992.64,117000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,9,0.00,67364.51,170000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,10,144.00,67508.51,170000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+"Phone/WAN, security, BAS",80,3273,R/M-SECURITY SYSTEM,25,12,0.00,89116.34,170000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,9,15625.10,256480.77,397000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,10,17761.00,274241.77,397000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Copier and printing,10,3236,R/M-OTHER PRINT/DUPL EQPT,25,12,39210.18,367561.98,397000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Custodial support,20,1510,CUSTODIAN,25,9,249283.22,2302623.24,2665869.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Custodial support,20,1510,CUSTODIAN,25,10,241942.72,2544565.96,2665869.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Custodial support,20,1510,CUSTODIAN,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Custodial support,20,1510,CUSTODIAN,25,12,261787.62,3048296.30,2665869.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,9,1806.44,16757.96,18600.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,10,1806.44,18564.40,18600.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Custodial support,20,1515,CUSTODIAL SUBSTITUTE,25,12,1806.50,22177.34,18600.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,9,25215.75,428098.55,523500.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,10,36437.77,464536.32,523500.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Custodial support,20,1520,CUSTODIAL OVERTIME,25,12,78041.05,560849.56,523500.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,9,92445.27,789412.04,1112006.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,10,91506.54,880918.58,1112006.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Administrative assistant,10,1140,SECRETARIES & CLERKS,25,12,124727.72,1098721.58,1112006.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Principal / AP,10,1110,PRINCIPAL,25,9,189089.72,1759192.47,2240800.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Principal / AP,10,1110,PRINCIPAL,25,10,227128.89,1986321.36,2240800.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Principal / AP,10,1110,PRINCIPAL,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Principal / AP,10,1110,PRINCIPAL,25,12,207456.03,2389470.09,2240800.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,9,177149.23,1639983.41,2502500.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,10,223754.02,1863737.43,2502500.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Principal / AP,10,1120,ASSISTANT PRINCIPAL,25,12,189309.96,2237401.55,2502500.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,9,12056.69,193830.57,437962.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,10,22846.97,216677.54,437962.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Discretionary supplies,10,4112,STUDENT BASED FUNDING (SBF),25,12,-63805.59,213264.21,437962.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Interventionist,10,1188,INTERVENTIONIST,25,9,158121.81,1086542.65,1967692.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Interventionist,10,1188,INTERVENTIONIST,25,10,158950.14,1245492.79,1967692.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Interventionist,10,1188,INTERVENTIONIST,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Interventionist,10,1188,INTERVENTIONIST,25,12,366711.85,1764055.55,1967692.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Library media specialist,10,1250,LIBRARIANS,25,9,141001.10,953042.73,1589000.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Library media specialist,10,1250,LIBRARIANS,25,10,149579.11,1102621.84,1589000.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Library media specialist,10,1250,LIBRARIANS,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Library media specialist,10,1250,LIBRARIANS,25,12,406453.91,1651149.11,1589000.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Nurse,10,1290,NURSES,25,9,26671.28,195364.75,303800.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Nurse,10,1290,NURSES,25,10,26671.28,222036.03,303800.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Nurse,10,1290,NURSES,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Nurse,10,1290,NURSES,25,12,54094.44,345426.92,303800.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Physical education,10,1150,TEACHERS-REGULAR,25,9,3784655.76,26779202.74,44452231.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Physical education,10,1150,TEACHERS-REGULAR,25,10,3713935.89,30493138.63,44452231.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Physical education,10,1150,TEACHERS-REGULAR,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Physical education,10,1150,TEACHERS-REGULAR,25,12,9622693.09,43868070.17,44452231.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,9,41714.19,297012.25,415700.00,358+435,DERIVED: Mar YTD = Apr YTD(doc 358) - Apr month; Mar month = Mar YTD - Feb YTD(doc 435); no standalone Mar line-item report (doc 434 is P-card only); budget = Apr report budget
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,10,42359.98,339372.23,415700.00,358,Apr 2025 Financial Report; Fund-level Treasurer expenditure summary
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,11,,,,4155,MISSING: May 2025 report (4155) has no expenditure line detail; 4157 is summary only; May cannot be separated from Jun
+Nutrition,10,1360,FOOD SERVICE ELEMENTARY,25,12,73496.45,449689.64,415700.00,304,June 2025 year-end Treasurer report (doc 304); month = June; ytd = full-year actual; budget = final budget

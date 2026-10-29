@@ -1,0 +1,64 @@
+{
+  "personnel": {
+    "_all_lines_fy26": {"group": "all classifications", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "FY26 budget assumption: salary increases of 4% to 6% depending on employee classification, per approved CBAs and salary schedules. Not split by group, not split step/lane vs base. No FY27 per-group rate found.", "source_doc_id": 4116, "quote": "Salary increases ranging from 4% to 6% depending on employee classification, in alignment with approved collective bargaining agreements and salary schedules."},
+    "Principal/AP (1110,1120)": {"group": "ECMA (likely; principals/APs - unconfirmed in FOIAgras text)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Only the blended FY26 4-6% range found; ECMA contract term/rate not found. FY24 memo (doc 1656) says ECMA CBA runs through FY26 (described as 'Custodial/Maintenance Association (ECMA)' in that memo) and exempt non-union admin got 2.5% in FY24.", "source_doc_id": 1656, "quote": "Custodial/Maintenance Association (ECMA) through FY26."},
+    "Administrative assistant (1140)": {"group": "DESC (secretaries/clerical) per D65_REFERENCE.md; DESC agreement valid through FY27 per FY24 memo", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Blended FY26 range only. DESC CBA valid through FY27 (doc 1656) but the rate was not found.", "source_doc_id": 1656, "quote": "Employee salary agreements for Evanston Association of Childcare Professionals (EACCP) and the District's Educational Secretarial and Clerical Association (DESC) are valid through FY27."},
+    "Interventionist (1188)": {"group": "DEC (assumed; not confirmed in text)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Blended FY26 range only. DEC CBA term/rate not found; FY24 memo said FY24 was the last year of the then DEC agreement, so a successor agreement exists but was not located.", "source_doc_id": 4116, "quote": null},
+    "Library media specialist (1250)": {"group": "DEC (assumed)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Same as Interventionist.", "source_doc_id": 4116, "quote": null},
+    "Nurse (1290)": {"group": "DEC (assumed)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Same as Interventionist.", "source_doc_id": 4116, "quote": null},
+    "Physical education (1150)": {"group": "DEC (teachers)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Same as Interventionist.", "source_doc_id": 4116, "quote": null},
+    "Nutrition (1360)": {"group": "DESC (food service per D65_REFERENCE.md sec 7)", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Blended FY26 range only.", "source_doc_id": 4116, "quote": null},
+    "Custodial support (1510,1515,1520)": {"group": "Not determined. FY24 memo labels ECMA as 'Custodial/Maintenance Association'; D65_REFERENCE.md says ECMA = management/admin (uncertain). Union for custodians unresolved.", "fy26_pct": null, "fy27_pct": null, "low_pct": 4.0, "high_pct": 6.0, "basis": "Blended FY26 range only.", "source_doc_id": 1656, "quote": null}
+  },
+  "benefits": {
+    "fy26_budget_assumption": {"fy26_pct": 5.2, "fy27_pct": null, "basis": "FY26: average 5.2% increase in employee benefits based on health insurance cost projections and other contractual obligations.", "source_doc_id": 4116, "quote": "An average 5.2% increase in employee benefits based on health insurance cost projections and other contractual obligations."},
+    "fy27_vs_fy26_budget_derived": {"fy27_pct": 5.06, "basis": "DERIVED, not stated: FY27 benefits $24,080,428 (doc 23995) vs FY26 budget $22,920,858 (doc 4116). FY27 memo gives no health-insurance rate, only 'latest available health-plan assumptions'.", "source_doc_id": 23995, "quote": "Employee benefit costs are based on current enrollment, contractual obligations, employer contribution requirements and the latest available health-plan assumptions."}
+  },
+  "nonpersonnel": {
+    "electricity": {"fy26_pct": 36, "fy27_pct": null, "low_pct": null, "high_pct": null, "basis": "FY26 forecast from energy purchasing cooperative; no FY27 rate found.", "source_doc_id": 4116, "quote": "electricity costs forecasted to increase by 36% and natural gas by 15%"},
+    "natural_gas": {"fy26_pct": 15, "fy27_pct": null, "low_pct": null, "high_pct": null, "basis": "Same as electricity.", "source_doc_id": 4116, "quote": "electricity costs forecasted to increase by 36% and natural gas by 15%"},
+    "water": null,
+    "rubbish_removal": null,
+    "property_liability_insurance": {"fy26_pct": null, "fy27_pct": null, "low_pct": null, "high_pct": null, "basis": "Only found: Tort Fund FY27 expenditures ~ $0.2M below FY26 unaudited actual (~$2.4M total). No premium change or reason stated.", "source_doc_id": 24492, "quote": "FY27 expenditures are approximately $0.2 million below FY26 unaudited actual expenditures."},
+    "telephone_data": null,
+    "copier": null,
+    "preliminary_memo_qualitative": {"fy27_pct": null, "basis": "June 1 memo only says market volatility/inflation may affect utilities, repairs, contracted services; fuel surcharges. No rates.", "source_doc_id": 21902, "quote": "market volatility and inflationary pressure may continue to affect utilities, repairs, maintenance, contracted services, and other non-salary operating costs."},
+    "transportation_fund": {"fy27_pct": 3.5, "basis": "FY27 Transportation Fund ~$10.31M, 3.5% above FY26 unaudited actual.", "source_doc_id": 23995, "quote": "FY27 Transportation Fund expenditures are approximately $10.31 million, 3.5% above FY26 unaudited actual expenditures."}
+  },
+  "closure_savings_in_budget": [
+    {"item": "Total expenditure reductions in FY27 budget (staffing, closures, other)", "amount": 6300000, "source_doc_id": 24492, "quote": "an estimated $6.3 million in expenditure reductions approved by the Board last spring, including staffing reductions, school closures, and other operational changes"},
+    {"item": "SDRP Phase III FY27 reductions (Apr 13 2026 plan): total", "amount": 5933275, "source_doc_id": 21784, "quote": "Total Estimated Budget Reductions $5,933,275"},
+    {"item": "Personnel by unit (net FTE -55.5): DEC -24 $2,258,346; DESC -5 $170,465; ECMA -8 $463,760; ETAA -10 $173,520; EACCP -4.5 $238,150; Non-Union -4 $529,217", "amount": 3833458, "source_doc_id": 21784, "quote": "School-level reductions are reflective of declining student enrollment and the closure of Kingsley Elementary."},
+    {"item": "Non-personnel: Other Purchased Services $1,100,331; Technology $203,000; SACC half-day/Flex $46,486; Out-of-district tuition+transport $750,000", "amount": 2099817, "source_doc_id": 21784, "quote": "Total $2,099,817"},
+    {"item": "Closure-specific split of the $6.3M by category (Kingsley/Rhodes): NOT in FY27 memos; D65_REFERENCE.md cites Oct 13 deck (doc 24535) Kingsley $1.56M, Rhodes $1.44M gross/yr, not verified here", "amount": null, "source_doc_id": 24535, "quote": null},
+    {"item": "Outplaced tuition + Park cost share budgeted ~$6.5M, ~$1.8M below FY26 actual (FY26 outplaced tuition exceeded budget by ~$1.5M)", "amount": 1800000, "source_doc_id": 24492, "quote": "a reduction of approximately $1.8 million from FY26 actual expenditures"}
+  ],
+  "foster_added_cost": [
+    {"item": "One-time Foster closeout in FY27 operating (Working Cash)", "amount": 3625000, "source_doc_id": 24492, "quote": "$3.625 million one-time Foster School closeout expenditure"},
+    {"item": "Foster recurring operating cost (staff, utilities, custodians): not found", "amount": null, "source_doc_id": null, "quote": null}
+  ],
+  "district_growth": {
+    "fy27_budget_operating_total": 184987185,
+    "fy27_salaries": 113815843,
+    "fy27_benefits": 24080428,
+    "fy27_purchased_services": 15340622,
+    "fy27_supplies_food_utilities": 6862714,
+    "fy26_budget_salaries": 110421850,
+    "fy26_budget_benefits": 22920858,
+    "salaries_fy27_vs_fy26_budget_pct_derived": 3.07,
+    "benefits_fy27_vs_fy26_budget_pct_derived": 5.06,
+    "note": "Derived from doc 23995 vs doc 4116; FY26 workbook figures may cover different fund scope than the FY27 operating-funds table, so treat as approximate. FY26 budget vs FY25 actual: salaries +0.80%, benefits -0.69% (doc 4116). Salaries+benefits ~75% of FY27 operating. No stated district-wide growth rate for purchased services or supplies.",
+    "source_doc_id": 23995
+  },
+  "not_found": [
+    "FY27 % raise by group (DEC, ECMA, DESC, custodial, food service); step/lane vs base split; contract terms/ratification docs",
+    "FY26 per-group rates (only blended 4-6%)",
+    "FY27 health insurance rate",
+    "FY27 electricity, gas, water, rubbish, property/liability insurance, telephone, copier rates/reasons",
+    "Foster recurring operating cost",
+    "Category split of $6.3M closure savings (FY27 memos give only total)",
+    "Custodial bargaining unit identity (ECMA label conflicts between doc 1656 and D65_REFERENCE.md)",
+    "Local PDF presentation file contains only one slide (p.2: $5.1M deficit, $3.625M Foster); no rates",
+    "FOIAgras rate limit (30/min) cut searches short; DEC contract, doc 24535 and FY26 budget workbook detail not exhausted"
+  ]
+}
