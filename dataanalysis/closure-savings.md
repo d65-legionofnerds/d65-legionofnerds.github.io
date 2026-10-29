@@ -15,7 +15,7 @@ sitemap: false
 
 **It is too early to prove the savings, and the budget shows only part of what was projected.** Across the 8 line items where the budget lines are clean enough to read, roughly **24%-52%** of the projected savings is visible in the FY27 budget once we account for raises and inflation. The other 9 lines are too noisy to judge: insurance, electricity, gas and water are driven by prices and by the new Foster School, and others rose for reasons the reports do not give.
 
-<iframe src="assets/closure_headline.html" width="100%" height="470" frameborder="0"></iframe>
+<iframe src="assets/closure_headline.html" width="100%" height="500" frameborder="0"></iframe>
 
 ## Line by line
 
@@ -31,7 +31,9 @@ Budgets are plans. Spending is the evidence. Only July-September 2026 has been r
 
 ## How the savings number has changed
 
-<iframe src="assets/closure_promise.html" width="100%" height="620" frameborder="0"></iframe>
+<iframe src="assets/closure_promise.html" width="100%" height="540" frameborder="0"></iframe>
+
+*Kingsley only. The 2025 scenarios were presented "in addition to the Board approved closure of Bessie Rhodes." The Oct 2026 file does not itemize the other levers, so part of the drop from $1.66M to $1.56M is missing detail, not a lower estimate. Staff figures in the 2025 models include benefits; the tracker's staff lines are salary objects only.*
 
 ## How we corrected for raises and inflation
 

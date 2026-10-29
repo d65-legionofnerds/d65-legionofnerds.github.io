@@ -138,10 +138,10 @@ fig.update_xaxes(title_text="$ thousands per year  (right of zero = savings, lef
                  title_font=dict(size=12, color=INK2), row=2, col=1)
 fig.update_yaxes(autorange="reversed", showgrid=False, linecolor=AXIS, tickfont=dict(color=INK, size=13))
 fig.update_layout(**base_layout(
-    "Kingsley + Bessie Rhodes closures: what the FY27 budget shows for each promised saving",
-    "Per line item, per year. The colored bar is a range because FY27 raises are not published by group; "
+    "Kingsley + Rhodes closures: what the FY27 budget shows, line by line",
+    "Per line item, per year. The colored bar is a range because FY27 raises are not published by group;<br>"
     "it assumes spending would have grown with raises/inflation had the schools stayed open.",
-    1010, margin=dict(l=20, r=235, t=125, b=90),
+    1010, margin=dict(l=20, r=235, t=135, b=90),
     legend=dict(orientation="h", x=0, y=-0.085, xanchor="left", font=dict(size=12, color=INK2),
                 bgcolor="rgba(0,0,0,0)"),
     bargap=0.25, hovermode="closest"))
@@ -176,12 +176,11 @@ for i, (label, kind, lo, hi) in enumerate(rows):
                              showlegend=False))
 share_lo = clean.norm_savings_lo.sum() / clean.projected.sum()
 share_hi = clean.norm_savings_hi.sum() / clean.projected.sum()
-fig.add_annotation(xref="paper", yref="paper", x=0, y=-0.62, xanchor="left", showarrow=False, align="left",
+fig.add_annotation(xref="paper", yref="paper", x=0, y=-0.78, xanchor="left", showarrow=False, align="left",
                    font=dict(size=12, color=INK2),
-                   text=(f"On the {len(clean)} items with cleaner budget lines, {share_lo:.0%}–{share_hi:.0%} of the "
-                         "projected savings is visible in the FY27 budget.<br>"
-                         "These are budgets, not spending: only "
-                         f"{N27} summer months of FY27 spending have been reported."))
+                   text=(f"On the {len(clean)} items with cleaner budget lines,<br>"
+                         f"{share_lo:.0%}–{share_hi:.0%} of the projected savings is visible in the FY27 budget.<br>"
+                         f"These are budgets, not spending: only {N27} summer months<br>of FY27 spending have been reported."))
 fig.add_vline(x=0, line=dict(color=INK2, width=1.2))
 fig.update_xaxes(range=[-0.6, 3.6], tickvals=[-0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5],
                  ticktext=["−$0.5M", "$0", "$0.5M", "$1M", "$1.5M", "$2M", "$2.5M", "$3M", "$3.5M"], gridcolor=GRID, linecolor=AXIS,
@@ -190,7 +189,7 @@ fig.update_yaxes(autorange="reversed", tickfont=dict(color=INK, size=13), showgr
 fig.update_layout(**base_layout(
     "Of $2.9M in projected savings, how much can we see?",
     "Annual savings projected by the district for the two closures vs. what the FY27 budget implies.",
-    470, margin=dict(l=20, r=40, t=100, b=170), bargap=0.45))
+    500, margin=dict(l=20, r=40, t=100, b=200), bargap=0.45))
 save(fig, "headline")
 
 # =============================================================================================
@@ -222,7 +221,7 @@ for a in fig.layout.annotations[:len(PANELS)]:
     a.update(font=dict(size=13, color=INK))
 fig.update_layout(**base_layout(
     "Year to date: is spending running lower than in the years the schools were open?",
-    f"Cumulative dollars spent since July 1, each fiscal year. The blue line fills in as monthly reports are "
+    f"Cumulative dollars spent since July 1, each fiscal year.<br>The blue line fills in as monthly reports are "
     f"published ({N27} of 12 months so far).",
     700, margin=dict(l=20, r=20, t=120, b=60),
     legend=dict(orientation="h", x=0, y=-0.08, xanchor="left", font=dict(size=12, color=INK2),
@@ -243,8 +242,8 @@ SNAP = [  # label, staff, non-staff, other levers, source
     ("Oct 7, 2026<br>District closure file", staff_k, ops_k, 0,
      "District closure projections slide 6B, as loaded in the Legion savings tracker"),
 ]
-LEVERS = ["Staff salaries (& benefits in the 2025 models)", "Non-staff operating costs",
-          "Other levers: transportation, class sections, leases, avoided capital, Foster"]
+LEVERS = ["Staff salaries (and benefits, in the 2025 models)", "Non-staff operating costs",
+          "Other levers (transportation, sections, leases, Foster)"]
 COLS = [BLUE, ORANGE, "#b9b8ae"]
 fig = go.Figure()
 for j, (name, color) in enumerate(zip(LEVERS, COLS)):
@@ -258,18 +257,13 @@ for s in SNAP:
     tot = (s[1] + s[2] + s[3]) / 1e6
     fig.add_annotation(x=s[0], y=max(tot, (s[1] + s[2]) / 1e6) + 0.04, text=f"<b>${tot:,.2f}M</b>", showarrow=False,
                        yanchor="bottom", font=dict(size=15, color=INK))
-fig.add_annotation(xref="paper", yref="paper", x=0, y=-0.36, xanchor="left", showarrow=False, align="left",
-                   font=dict(size=12, color=INK2),
-                   text=("Kingsley only. The 2025 scenarios were presented “in addition to the Board approved closure of Bessie Rhodes.” "
-                         "The Oct 2026 file does not itemize the other levers.<br>"
-                         "Staff figures in the 2025 models include benefits; the tracker's staff lines are salary objects only."))
 fig.update_yaxes(range=[0, 2.35], tickprefix="$", ticksuffix="M", gridcolor=GRID, linecolor=AXIS,
                  tickfont=dict(color=MUTED), title_text="$ millions per year", title_font=dict(size=12, color=INK2))
 fig.update_xaxes(tickfont=dict(color=INK, size=13), linecolor=AXIS)
 fig.update_layout(**base_layout(
     "The Kingsley savings figure, as presented over time",
     "Annual savings from closing Kingsley, as presented to the Board and the public.",
-    600, margin=dict(l=20, r=20, t=100, b=190), barmode="relative", bargap=0.45,
-    legend=dict(orientation="h", x=0, y=-0.17, xanchor="left", font=dict(size=12, color=INK2),
+    520, margin=dict(l=20, r=20, t=100, b=130), barmode="relative", bargap=0.45,
+    legend=dict(orientation="v", x=0, y=-0.14, xanchor="left", yanchor="top", font=dict(size=12, color=INK2),
                 bgcolor="rgba(0,0,0,0)")))
 save(fig, "promise")
