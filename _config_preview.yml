@@ -1,5 +1,7 @@
-# Settings for a preview copy of the site published somewhere other than the live address.
-# Build with:  bundle exec jekyll build --config _config.yml,_config_preview.yml --baseurl /<repo-name> -d <folder>
+# Settings for a preview copy of the site, published somewhere other than the live address
+# (currently https://jmkarlin.github.io/legionofnerds-preview/).
+# Build with:  bundle exec jekyll build --config _config.yml,_config_preview.yml -d <folder>
 # then run Pagefind on <folder>. The preview shows a yellow banner and asks search engines not to index it.
 preview: true
 url: https://jmkarlin.github.io
+baseurl: /legionofnerds-preview
