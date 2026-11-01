@@ -1,8 +1,6 @@
 ---
 title: SY27 Enrollment
-layout: default
-nav_exclude: true
-search_exclude: true 
+published: false
 ---
 
 # SY 2026-27 Enrollment Analysis

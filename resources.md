@@ -1,10 +1,10 @@
 ---
 title: D65 Resources
-layout: home
-nav_order: 6
+layout: page
+kicker: Resources
+intro: District documents we’ve saved, salary and staffing disclosures, District 65 sources and independent research.
+description: District 65 documents, salary disclosures and research the Legion of Data Nerds draws on.
 ---
-
-# D65 Resources
 
 ## Materials Presented at Board Meetings
 

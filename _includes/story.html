@@ -1,0 +1,7 @@
+{%- comment -%} One entry in a story list. Pass s (story hash); no_topic=true on a section page. {%- endcomment -%}
+<article class="story" data-topic="{{ include.s.topic }}" data-group="{{ include.s.type_group }}">
+  {% include kicker.html s=include.s no_topic=include.no_topic %}
+  <h3>{% include story-link.html s=include.s %}</h3>
+  <p>{{ include.s.summary }}</p>
+  <div class="when"><time datetime="{{ include.s.date | date: '%Y-%m-%d' }}">{{ include.s.date | date: "%B %-d, %Y" }}</time>{% if include.s.updated %} · Updated {{ include.s.updated | date: "%b %-d, %Y" }}{% endif %}</div>
+</article>

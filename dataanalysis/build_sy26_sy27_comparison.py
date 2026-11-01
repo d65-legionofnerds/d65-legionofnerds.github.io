@@ -22,6 +22,8 @@ Writes:
 """
 import re
 import statistics
+import sys
+import textwrap
 from pathlib import Path
 
 import pandas as pd
@@ -30,6 +32,10 @@ import plotly.graph_objects as go
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 ASSETS = ROOT / "assets"
+
+# write_html adds the phone layout (layout.meta.narrow); see tools/patch_plotly_layout.py.
+sys.path.insert(0, str(ROOT.parent / "tools"))
+from patch_plotly_layout import write_html as write_chart_html  # noqa: E402
 
 CLOSED_SCHOOLS = {
     "Kingsley": "Kingsley Elementary School",
@@ -199,23 +205,50 @@ for g, color in GROUP_COLORS.items():
         hovertemplate="<b>%{y}</b> (%{customdata[2]})<br>SY25-26: %{customdata[0]}<br>"
                       "SY26-27: %{customdata[1]}<br>Change: %{x:+g}<extra></extra>",
     ))
+def wrap(text, width):
+    return "<br>".join(textwrap.wrap(text, width))
+
+
+TITLE = "District 65 Staff by Category: SY2025-26 to SY2026-27"
+SUBTITLE = (f"Categories that changed by at least 0.5. "
+            f"Total: {cat.sy26_count.sum():,.0f} → {cat.sy27_fte.sum():,.2f} ({cat.change.sum():+.2f})")
+NOTE = ("SY2025-26 is the District's count of employees by category (published by the Evanston RoundTable); "
+        "SY2026-27 is the District's sum of FTE. Part-time staff count as 1 in the first and as a fraction in the second.")
+SUB_STYLE = "font-size:13px;color:#444"
 fig.update_layout(
-    title=dict(text="<b>District 65 Staff by Category: SY2025-26 to SY2026-27</b><br>"
-                    "<span style='font-size:13px;color:#444'>Categories that changed by at least 0.5. "
-                    f"Total: {cat.sy26_count.sum():,.0f} → {cat.sy27_fte.sum():,.2f} ({cat.change.sum():+.2f})</span>",
+    title=dict(text=f"<b>{TITLE}</b><br><span style='{SUB_STYLE}'>{SUBTITLE}</span>",
                x=0.5, xanchor="center", font=dict(size=18)),
     height=760, plot_bgcolor="white", bargap=0.25,
     yaxis=dict(categoryorder="array", categoryarray=chg["label"].tolist()[::-1], automargin=True),
     xaxis=dict(title="Change (SY2026-27 FTE minus SY2025-26 count)", showgrid=True, gridcolor="#eee", range=[-27, 10],
                zeroline=True, zerolinecolor="#333"),
-    legend=dict(orientation="h", y=-0.13, x=0.5, xanchor="center"),
+    # legend at the bottom of the figure, under the axis title; the note sits above it
+    legend=dict(orientation="h", x=0.5, xanchor="center", yref="container", y=0, yanchor="bottom"),
     margin=dict(l=40, r=40, t=90, b=150),
 )
 fig.add_annotation(
-    text="<i>SY2025-26 is the District's count of employees by category (published by the Evanston RoundTable);<br>"
-         "SY2026-27 is the District's sum of FTE. Part-time staff count as 1 in the first and as a fraction in the second.</i>",
-    xref="paper", yref="paper", x=0, y=-0.25, showarrow=False, xanchor="left", align="left",
+    text="<i>" + wrap(NOTE, 72) + "</i>",
+    xref="paper", yref="paper", x=0, y=-0.11, yanchor="top", showarrow=False, xanchor="left", align="left",
     font=dict(size=11, color="#666"),
 )
-fig.write_html(ASSETS / "sy26_sy27_fte_change.html", include_plotlyjs="cdn", div_id="sy26_sy27_fte_change")
+# Phone layout: smaller title, wrapped labels and note, fewer x ticks, and the x range widened on the
+# left so the "-22.17" label stays inside the plot next to the narrower label column.
+write_chart_html(fig, ASSETS / "sy26_sy27_fte_change.html", include_plotlyjs="cdn", div_id="sy26_sy27_fte_change",
+                 narrow={
+                     "title.text": f"<b>{wrap(TITLE, 32)}</b><br><span style='{SUB_STYLE}'>{wrap(SUBTITLE, 44)}</span>",
+                     "title.font.size": 15,
+                     "height": 950,   # taller on phones: wrapped labels need the room
+                     "title.yref": "container", "title.y": 1 - 24 / 950, "title.yanchor": "top",
+                     "margin.t": 125, "margin.l": 4, "margin.r": 10, "margin.b": 190,
+                     "yaxis.tickvals": chg["label"].tolist(),
+                     "yaxis.ticktext": [wrap(lab, 30) for lab in chg["label"]],
+                     "yaxis.tickfont.size": 9,
+                     "xaxis.range": [-35, 10], "xaxis.dtick": 10, "xaxis.tickangle": 0,
+                     "xaxis.title.text": "Change (SY2026-27 FTE<br>minus SY2025-26 count)",
+                     "xaxis.title.font.size": 11,
+                     "annotations[0].text": "<i>" + wrap(NOTE, 56) + "</i>",
+                     "annotations[0].font.size": 9, "annotations[0].x": 1, "annotations[0].xanchor": "right",
+                     "annotations[0].y": -0.14,
+                     "legend.font.size": 11,
+                 })
 print("Wrote", ASSETS / "sy26_sy27_fte_change.html")

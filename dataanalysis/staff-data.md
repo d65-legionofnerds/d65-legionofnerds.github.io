@@ -1,16 +1,27 @@
 ---
-title: Staff Data
-layout: default
-parent: Data Analysis
+title: "Staff Directory Analysis"
+date: 2025-12-01
+updated: 2026-10-17
+topic: admin
+type: analysis
+summary: "Staff and teachers by school, and per 100 students, from the District’s staff directory."
+image: /assets/img/lead/staff-data.png
+image_alt: "Horizontal bar chart of staff per 100 students at each District 65 general education elementary school in SY2025-26, from 13.8 at Kingsley and 14.8 at Willard to 25.8 at King Arts and Lincolnwood."
+image_source: dataanalysis/assets/elementary_staff_per_100_students_by_school2.html
+takeaways:
+  - "The District’s staff count fell by 45 this year, from 1,381 in SY2025-26 to 1,335.93 in SY2026-27. The SY2025-26 figure is a count of employees and the SY2026-27 figure a sum of FTE, so the true change in FTE may be somewhat smaller than 45."
+  - "Administrators held at 51 in the District’s FTE file: central office fell by 3, and school administrators rose by 3."
 ---
-
-# Staff Data Analysis
 
 ## District 65 Staff and Teacher Distribution
 
 This analysis examines the distribution of current staff and teachers across District 65. Understanding staffing levels and ratios helps contextualize resource allocation and supports informed discussion about district operations. Some staff are located at multiple locations. For simplicity, staff assigned to multiple locations are excluded. SY 2025 enrollment data is taken from the baseline utilization data table on the D65 School Closure Hub.
 
-This data was scraped from the [D65 Staff Directory](https://www.district65.net/about/contact-us/staff-directory){:target="_blank"} on 12/19/2025. A previous version of these figures were posted on this website based on a scraping of the Staff Directory on 11/30/2025. The District updated the Staff Directory, so new figures were generated to reflect the new data. 
+This data was scraped from the [D65 Staff Directory](https://www.district65.net/about/contact-us/staff-directory){:target="_blank"} on 12/19/2025.
+
+> **Update · Dec 19, 2025**
+> A previous version of these figures were posted on this website based on a scraping of the Staff Directory on 11/30/2025. The District updated the Staff Directory, so new figures were generated to reflect the new data.
+{: .note}
 
 > **Update (October 16, 2026).** The charts on this page describe **SY2025-26** and have not been redrawn. Since then:
 >
@@ -27,7 +38,7 @@ This data was scraped from the [D65 Staff Directory](https://www.district65.net/
 >
 > *SY2025-26 from District data published in the* [Evanston RoundTable](https://evanstonroundtable.com/2025/11/02/guest-essay-district-65-employees-enrollment/){:target="_blank"} *(Nov. 2, 2025); SY2026-27 from the District's "FTEs by Employee Category" file (October 2026). The SY2025-26 figures are the District's **count of employees** by category, while SY2026-27 is a **sum of FTE**, so part-time staff count as 1 in the first year and as a fraction in the second; the true change in FTE may be somewhat smaller than 45. The staff directory counts people, including part-time staff and staff listed at more than one location, so its totals are not directly comparable to either.*
 >
-> **Which "administrators"?** The District's FTE file (used on the [Staff Data](staff-data) page) and the state salary report (used on the [Salary Data](salary-data) page) define the group differently:
+> **Which "administrators"?** The District's FTE file (used on the [Staff Data](staff-data.html) page) and the state salary report (used on the [Salary Data](salary-data.html) page) define the group differently:
 >
 > | | FTE file (Staff Data) | State report (Salary Data) |
 > |---|---|---|
@@ -36,54 +47,54 @@ This data was scraped from the [D65 Staff Directory](https://www.district65.net/
 > | IES and other coordinators, union president | Not counted as administrators | 12 → 9, counted as administrators |
 > | **Headline** | **51 → 51** | **36 → 30** |
 >
-> Both show central office down 3. The FTE total holds at 51 because school administrators rose by 3. The salary count falls by 6 because it also includes 3 fewer coordinators and leaves principals out. For what changed in the year Kingsley and Bessie Rhodes closed, see [SY26 to SY27: What Changed](sy26-sy27-changes). For how the administrator count compares with the District's new "36% fewer admins" claim, see the [Admin Growth update](admin-growth-final#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
+> Both show central office down 3. <mark>The FTE total holds at 51 because school administrators rose by 3.</mark> The salary count falls by 6 because it also includes 3 fewer coordinators and leaves principals out. For what changed in the year Kingsley and Bessie Rhodes closed, see [SY26 to SY27: What Changed](sy26-sy27-changes.html). For how the administrator count compares with the District's new "36% fewer admins" claim, see the [Admin Growth update](admin-growth-final.html#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
 
 ## Total Staff by Location
 
-<iframe src="assets/total_staff_by_location2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/total_staff_by_location2.html" width="100%" height="850" frameborder="0" title="Total staff at each District 65 location, SY2025-26 staff directory"></iframe>
 
 This chart shows the total number of staff members at each District 65 location, including elementary schools, middle schools, and administrative facilities.
 
 ## Total Enrollment by Location
 
-<iframe src="assets/total_enrollment_by_location2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/total_enrollment_by_location2.html" width="100%" height="850" frameborder="0" title="Student enrollment at each District 65 location, SY 2025"></iframe>
 
 This visualization displays student enrollment numbers for each school location in SY 2025, providing context for understanding staffing ratios.
 
 ## Elementary School Enrollment
 
-<iframe src="assets/elementary_enrollment_by_school2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/elementary_enrollment_by_school2.html" width="100%" height="850" frameborder="0" title="Enrollment at each general education elementary school, SY 2025"></iframe>
 
 Enrollment figures for general education elementary schools in District 65 for SY 2025.
 
 ## Elementary School Staff
 
-<iframe src="assets/elementary_staff_by_school2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/elementary_staff_by_school2.html" width="100%" height="850" frameborder="0" title="Total staff at each general education elementary school"></iframe>
 
 Total number of staff members at each general education elementary school, including teachers, administrators, support staff, and specialists.
 
 ## Elementary School Teachers
 
-<iframe src="assets/elementary_teachers_by_school2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/elementary_teachers_by_school2.html" width="100%" height="850" frameborder="0" title="Teachers at each general education elementary school"></iframe>
 
 Number of teachers at each general education elementary school. This represents the subset of total staff with teaching positions.
 
 ## Staff per 100 Students by Elementary School
 
-<iframe src="assets/elementary_staff_per_100_students_by_school2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/elementary_staff_per_100_students_by_school2.html" width="100%" height="850" frameborder="0" title="Staff per 100 students at each general education elementary school"></iframe>
 
 This metric normalizes staffing levels by enrollment, showing how many staff members each school has per 100 students. This allows for comparison across schools of different sizes.
 
 ## Teachers per 100 Students by Elementary School
 
-<iframe src="assets/elementary_teachers_per_100_students_by_school2.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/elementary_teachers_per_100_students_by_school2.html" width="100%" height="850" frameborder="0" title="Teachers per 100 students at each general education elementary school"></iframe>
 
 Similar to the staff ratio above, this shows the number of teachers per 100 students at each elementary school, providing insight into classroom teacher availability relative to student population.
 
 ## Average Class Size by Elementary School
 
-<iframe src="assets/avg_class_size_fig.html" width="100%" height="850" frameborder="0"></iframe>
+<iframe src="assets/avg_class_size_fig.html" width="100%" height="850" frameborder="0" title="Average class size by elementary school, ISBE Report Card SY25"></iframe>
 
 This data is taken from the latest [Illinois State Board of Education Report Card Data Set (SY25)](https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx){:target="_blank"}
 
-Calculations for these figures can be viewed in the [interactive Jupyter notebook](dataanalysis/staff_directory_calculations.html).
+Calculations for these figures can be viewed in the [interactive Jupyter notebook](assets/staff_directory_calculations.html).

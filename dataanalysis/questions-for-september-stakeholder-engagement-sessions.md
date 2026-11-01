@@ -1,10 +1,14 @@
 ---
-title: Questions for September Stakeholder Engagement Sessions
-layout: default
-parent: Data Analysis
+title: "Questions for the September Stakeholder Engagement Sessions"
+date: 2026-09-20
+topic: closures
+type: explainer
+summary: "Questions to bring to the District’s Sept. 22–24 sessions on its plan to cut $20M and close at least two schools."
+takeaways:
+  - "The District announced it intends to present a plan to the Board on October 13th recommending cutting $20M (10% of the budget) and closing at least two schools in the coming year."
+  - "It is hosting three public engagement sessions at 6pm: Tuesday, 9/22 at Chute; Wednesday, 9/23 at Haven; and Thursday, 9/24 at Nichols."
+  - "Our questions include how much money closing Kingsley and Bessie Rhodes saved, what changed between the $10-15M Phase III estimate and the ~$20M target, and what data the closure decisions will be based on."
 ---
-
-# Questions for September Stakeholder Engagement Sessions
 
 The district (D65 administration/Superintendent Witherspoon) [announced](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=14421838){:target="_blank"} it intends to present a plan to the Board on October 13th, to recommend cutting $20M (10% of the budget) and closing at least two schools in the coming year. The administration is hosting three public engagement sessions related to these cuts at 6pm each night:
 
@@ -12,7 +16,7 @@ The district (D65 administration/Superintendent Witherspoon) [announced](https:/
 - Wednesday, 9/23 at Haven
 - Thursday, 9/24 at Nichols
 
-While contemplating the current D65 situation and in order to organize our thoughts, we developed this list of questions to discuss at the upcoming engagement sessions. As data nerds we can confirm that asking questions is a great way to collect data, and we believe that the questions merit serious consideration before crucial decisions affecting the future of our children's education are made.
+While contemplating the current D65 situation and in order to organize our thoughts, we developed this list of questions to discuss at the upcoming engagement sessions. As data nerds we can confirm that asking questions is a great way to collect data, and <mark>we believe that the questions merit serious consideration before crucial decisions affecting the future of our children's education are made.</mark>
 
 ## Community Engagement
 

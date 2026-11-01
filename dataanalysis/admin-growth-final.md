@@ -1,45 +1,46 @@
 ---
-title: Admin Growth
-layout: default
-parent: Data Analysis
+title: "District 65 Administrative Growth Over Time"
+date: 2026-04-30
+updated: 2026-10-16
+topic: admin
+type: analysis
+featured: true
+summary: "Per-student admin spending rose 59% after inflation while enrollment fell 24%. The District’s own April list of admin cuts came to $8.3M."
+image: /assets/img/lead/admin-growth-final.png
+image_alt: "Line chart of D65 admin spending per pupil in 2026 dollars, FY2016 to FY2025: the total admin pool rises from about $1,915 to a peak near $3,160 in 2024 and $3,041 in 2025; excluding principals it rises from about $940 to $1,736."
+image_source: dataanalysis/assets/admin_growth_final_afr_per_pupil.html
+takeaways:
+  - "Between SY2015-16 and SY2025-26, K-8 enrollment fell 24%, while per-student admin spending rose 59% after inflation, from $1,915 to $3,041 per pupil (FY16 to FY25). The total admin compensation pool grew 24% in real dollars."
+  - "Higher-paid admin headcount grew 17% (75 to 88), admin density rose 54% (10.2 to 15.6 per 1,000 students), and certificated central-office administrators (TRS Admin) more than doubled, from 11 to 24."
+  - "Per-person compensation has roughly tracked inflation. The cost growth is driven by adding more positions, not paying existing administrators more."
+  - "In April 2026 the District listed 22 administrators and 42 non-union support positions worth $8.3M. Its October 13 plan cuts 8 administrator positions, about $1.0M at the District’s own per-position figure."
 ---
 
-# District 65 Administrative Growth Over Time
+**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and <mark>how right sizing can save $8M.</mark>**
 
-**A Legion of Data Nerds analysis of how D65's administrative footprint has evolved, what it costs today, and** **<big><span style="color:red">how right sizing can save $8M.</span></big>**
+**[Frequently Asked Questions](admin-growth-faq.html)** — answers to common questions about how administrators are counted, what data sources are used, and what the numbers mean.
 
-**[Frequently Asked Questions](admin-growth-faq)** — answers to common questions about how administrators are counted, what data sources are used, and what the numbers mean.
+> **Update · Oct 16, 2026**
+> The District has published its SY2026-27 compensation reports, provided an updated staffing count, and proposed a new budget plan that says administrators have been cut 36%. We have added an [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan) that checks that claim against the District's own counts and compares the new plan with the District's April list of admin cuts. Apart from the correction below, the original analysis (SY2015-16 through SY2025-26) is unchanged; the [savings comparison chart](#what-could-right-sizing-save) also now includes the District's October 2026 figures.
+{: .note .inline}
 
-> **Update (October 16, 2026).** The District has published its SY2026-27 compensation reports, provided an updated staffing count, and proposed a new budget plan that says administrators have been cut 36%. We have added an [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan) that checks that claim against the District's own counts and compares the new plan with the District's April list of admin cuts. Apart from the correction below, the original analysis (SY2015-16 through SY2025-26) is unchanged; the [savings comparison chart](#what-could-right-sizing-save) also now includes the District's October 2026 figures.
+> **Correction · Oct 16, 2026**
+> An earlier version of this page counted six administrators twice in SY2025-26 (and seven in SY2023-24), because they were listed on both the state administrator report and the IMRF report. Counting each person once, higher-paid admin headcount grew from 75 to **88** (**+17%**, not +25%), and admin density rose from 10.2 to **15.6** per 1,000 students (**+54%**, not +64%). The Legion right-sizing scenarios shrink accordingly (now $0.9M–$4.0M a year). The TRS Admin trend (11 → 24), the AFR dollar pool and every per-pupil spending figure are unaffected. Details in [Correction: people listed twice](#correction-people-listed-twice) below.
+{: .note .inline}
 
-> **Correction (October 16, 2026).** An earlier version of this page counted six administrators twice in SY2025-26 (and seven in SY2023-24), because they were listed on both the state administrator report and the IMRF report. Counting each person once, higher-paid admin headcount grew from 75 to **88** (**+17%**, not +25%), and admin density rose from 10.2 to **15.6** per 1,000 students (**+54%**, not +64%). The Legion right-sizing scenarios shrink accordingly (now $0.9M–$4.0M a year). The TRS Admin trend (11 → 24), the AFR dollar pool and every per-pupil spending figure are unaffected. Details in [Correction: people listed twice](#correction-people-listed-twice) below.
+> **Correction · Sep 27, 2026**
+> An earlier version of this page overstated the AFR admin compensation pool. The build script summed ISBE's rolled-up function totals for General Administration (2300) and Business Services (2500), which bundle in non-administrative subfunctions — food services, and the pension contributions for custodial/O&M, transportation and internal-services staff, plus risk-management/tort. The corrected script sums only the administrative subfunctions. This lowers the FY25 pool from $19.99M to **$17.48M** but, because the excluded base was roughly flat over time, *raises* the real growth rate (total pool +21% → **+24%**; per-pupil +55% → **+59%**). Headcount findings are unaffected. Details in [Correction: the admin pool subcategories](#correction-the-admin-pool-subcategories) below.
+{: .note .inline}
 
-> **Correction (September 27, 2026).** An earlier version of this page overstated the AFR admin compensation pool. The build script summed ISBE's rolled-up function totals for General Administration (2300) and Business Services (2500), which bundle in non-administrative subfunctions — food services, and the pension contributions for custodial/O&M, transportation and internal-services staff, plus risk-management/tort. The corrected script sums only the administrative subfunctions. This lowers the FY25 pool from $19.99M to **$17.48M** but, because the excluded base was roughly flat over time, *raises* the real growth rate (total pool +21% → **+24%**; per-pupil +55% → **+59%**). Headcount findings are unaffected. Details in [Correction: the admin pool subcategories](#correction-the-admin-pool-subcategories) below.
->
-> **Correction (August 2, 2026).** An earlier version of this page reported a **25%** enrollment decline. That figure paired two different student populations and has been corrected to **24%**, with the full enrollment series rebuilt on a single consistent measure. Details in [Correction: the enrollment series](#correction-the-enrollment-series) below.
+> **Correction · Aug 2, 2026**
+> An earlier version of this page reported a **25%** enrollment decline. That figure paired two different student populations and has been corrected to **24%**, with the full enrollment series rebuilt on a single consistent measure. Details in [Correction: the enrollment series](#correction-the-enrollment-series) below.
+{: .note .inline}
 
-<table width="100%">
-<tr>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e84040;">+54%</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e87d20;">2×</span></td>
-<td align="center"><span style="font-size:2.5em;font-weight:900;color:#e8b820;">+59%</span></td>
-</tr>
-<tr>
-<td align="center">Admin-to-student ratio increase</td>
-<td align="center">Certificated central-office admins (TRS)</td>
-<td align="center">Per-pupil admin spending rise</td>
-</tr>
-<tr>
-<td align="center">10.2 → 15.6 per 1,000 students</td>
-<td align="center">11 → 24 administrators</td>
-<td align="center">$1,915 → $3,041</td>
-</tr>
-<tr>
-<td align="center"><small>SY2015–16 to SY2025–26</small></td>
-<td align="center"><small>SY2015–16 to SY2025–26</small></td>
-<td align="center"><small>FY16 to FY25 · inflation-adjusted</small></td>
-</tr>
-</table>
+<div class="stats">
+  <div class="stat"><b>+54%</b><p>Admin-to-student ratio increase<br>10.2 → 15.6 per 1,000 students<br><small>SY2015–16 to SY2025–26</small></p></div>
+  <div class="stat"><b>2×</b><p>Certificated central-office admins (TRS)<br>11 → 24 administrators<br><small>SY2015–16 to SY2025–26</small></p></div>
+  <div class="stat"><b><span class="hl">+59%</span></b><p>Per-pupil admin spending rise<br>$1,915 → $3,041<br><small>FY16 to FY25 · inflation-adjusted</small></p></div>
+</div>
 
 ## Key Findings
 
@@ -47,7 +48,7 @@ Between SY2015-16 and SY2025-26, K-8 enrollment fell from 7,371 to 5,630 student
 
 - **The total admin compensation pool grew 24% in real (inflation-adjusted) dollars**, from $14.11M to $17.48M.
 - **General Administration nearly doubled (+99%)**, from $2.40M to $4.77M. This category includes the superintendent, assistant superintendents, and curriculum directors/coordinators.
-- **Per-student admin spending rose 59%** after inflation, from $1,915 to $3,041 per pupil.
+- <mark><strong>Per-student admin spending rose 59%</strong> after inflation, from $1,915 to $3,041 per pupil.</mark>
 - **Higher-paid admin headcount grew 17%** (75 to 88), and per-1,000-student admin density **rose 54%** (10.2 to 15.6). *(Corrected October 16, 2026; previously 94, +25% and 16.7, +64%. See [the correction](#correction-people-listed-twice).)*
 - **Certificated central-office administrators (TRS Admin) more than doubled**, from 11 to 24.
 - **Per-person compensation has roughly tracked inflation.** The cost growth is driven by adding more positions, not paying existing administrators more.
@@ -61,17 +62,21 @@ All dollar figures on this page are in **2026 dollars** (inflation-adjusted usin
 
 The chart below puts recent enacted and proposed cuts (dark grey) next to the District's own admin-cut proposal (orange) and three Legion right-sizing scenarios (red shades) — all expressed both in dollars and as a percentage of the FY25 AFR admin compensation pool. These proposals can be used to gradually move the district to the Admin's proposed $8m in cuts. 
 
-<iframe src="assets/admin_growth_final_right_sizing_comparison.html" width="100%" height="1080" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_right_sizing_comparison.html" width="100%" height="1020" frameborder="0" title="Annual savings from enacted and proposed cuts, the District's April admin-cut proposal and three Legion right-sizing scenarios"></iframe>
 
 Even on the most conservative basis the Legion can construct, several million dollars in annual admin savings are accessible — and the District itself has identified $8.3M. The [detailed comparison below](#right-sizing-vs-the-districts-other-cost-cutting-measures) documents the source and methodology behind each bar. 
 
-*Chart updated October 16, 2026: closure bars now use the District's October 13, 2026 estimates; Bessie Rhodes (closed), Dewey and Lincolnwood (proposed) and the proposed child-care and Head Start changes are added; and the light-orange bar shows the administrator positions in the District's October 13 plan. See the [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan).*
+> **Chart updated · Oct 16, 2026**
+> Closure bars now use the District's October 13, 2026 estimates; Bessie Rhodes (closed), Dewey and Lincolnwood (proposed) and the proposed child-care and Head Start changes are added; and the light-orange bar shows the administrator positions in the District's October 13 plan. See the [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan).
+{: .note}
 
 ---
 
 ## October 2026 Update: SY2026-27 Data and the District's New Plan
 
-*Added October 16, 2026. The rest of this page is the original analysis (with its dated corrections), covering SY2015-16 through SY2025-26. This section adds three new sources and says where each fits: the District's SY2026-27 compensation reports, its October 2026 count of staff by employee category, and its October 13, 2026 budget plan, "A Sustainable Path Forward."*
+> **Added · Oct 16, 2026**
+> The rest of this page is the original analysis (with its dated corrections), covering SY2015-16 through SY2025-26. This section adds three new sources and says where each fits: the District's SY2026-27 compensation reports, its October 2026 count of staff by employee category, and its October 13, 2026 budget plan, "A Sustainable Path Forward."
+{: .note}
 
 **In brief**
 
@@ -100,7 +105,7 @@ Even on the most conservative basis the Legion can construct, several million do
 > - **The 37% central-office figure can't be checked.** "JEH second floor administrators and staff" matches no category the District reports. In the one year where categories are published, central-office administrators went from **23 to 20 (−13%)**. The state certificated-administrator list tells a similar story: about **24 to 21** positions (see below).
 > - **The starting year inflates any decline.** FY24 is the year the District changed its employee-category definitions: total FTE jumped by 142 and "other" staff by 103 in one year. On the state lists, certificated central-office administrators went 23 → 45 → 23 over FY23–FY25, which this page has treated as a reclassification since it was first published. A three-year comparison that starts in FY24 starts from that peak.
 
-<iframe src="assets/admin_growth_final_update_admin_fte.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_update_admin_fte.html" width="100%" height="650" frameborder="0" title="District 65 administrator FTE by year, FY24 to FY27, from the District's own counts"></iframe>
 
 None of this changes the long-run picture above. District administrator FTE in SY2026-27 (51) is about where it was in SY2018-19 (50), while enrollment is down about a quarter.
 
@@ -207,7 +212,7 @@ The Legion of Data Nerds publishes this data to inform public discussion. We enc
 
 This chart shows D65's total compensation paid to administrators across all four major admin function codes, in real (2026) dollars, from FY2012 through FY2025. **No salary threshold is applied** — every employee whose salary or benefits hit these function codes is counted.
 
-<iframe src="assets/admin_growth_final_afr_pool_stacked.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_afr_pool_stacked.html" width="100%" height="650" frameborder="0" title="D65 admin compensation pool by AFR function, FY2012 to FY2025, in 2026 dollars"></iframe>
 
 The trend is unambiguous:
 
@@ -220,7 +225,7 @@ The trend is unambiguous:
 
 Normalized by enrollment, the picture is more dramatic. As enrollment fell, per-student admin spending rose substantially even after adjusting for inflation.
 
-<iframe src="assets/admin_growth_final_afr_per_pupil.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_afr_per_pupil.html" width="100%" height="600" frameborder="0" title="D65 admin spending per pupil, FY2016 to FY2025, in 2026 dollars"></iframe>
 
 Real per-pupil admin spending grew from approximately **$1,915 to $3,041 (+59%)** between FY16 and FY25. Excluding principals (which are largely school-level operations), per-pupil central-office and support spending grew from approximately **$940 to $1,736 (+85%)** over the same period.
 
@@ -228,19 +233,19 @@ Real per-pupil admin spending grew from approximately **$1,915 to $3,041 (+59%)*
 
 The AFR gives us the dollar story but does not break out individual employees. For year-by-year **headcount** trends we use the PA disclosures, applying a CPI-indexed threshold so the comparison is apples-to-apples across years.
 
-<iframe src="assets/admin_growth_final_indexed_headcount_stacked.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_indexed_headcount_stacked.html" width="100%" height="600" frameborder="0" title="Higher-paid admin headcount by category, CPI-indexed threshold, SY2015-16 to SY2025-26"></iframe>
 
 Higher-paid admin headcount rose from 75 in SY2015-16 to 88 in SY2025-26 — a 17% increase over a decade in which K-8 enrollment fell 24%. *(Corrected October 16, 2026: an earlier version said 94 and 25%, counting six people twice. See [the correction](#correction-people-listed-twice).)* Most of the year-to-year volatility between TRS Admin and IMRF Support Staff reflects positions being reclassified between funding sources rather than net hires or losses (the SY22-23 → SY23-24 transition is the largest example: about 11 IMRF Support Staff were reclassified into TRS Admin that year). **TRS Admin doubled from 11 to 24 — a clean signal that doesn't depend on the threshold framework, because TRS Admin is reported in full under PA 96-0434 regardless of the $75K rule.**
 
 ### Higher-Paid Admin per 1,000 Students
 
-<iframe src="assets/admin_growth_final_indexed_per_1000.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_indexed_per_1000.html" width="100%" height="600" frameborder="0" title="Higher-paid admin and support staff per 1,000 students, SY2015-16 to SY2025-26"></iframe>
 
 This is the most consequential headcount chart on the page. Even under the strict CPI-indexed apples-to-apples comparison, **per-pupil admin density rose from 10.2 to 15.6 per 1,000 students between 2016 and 2026 — a 54% increase** *(corrected October 16, 2026; previously 16.7 and 64%)*. Peer K-8 districts in the surrounding area cluster around 12 per 1,000 students.
 
 ### Average Compensation per Administrator
 
-<iframe src="assets/admin_growth_final_avg_comp.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_avg_comp.html" width="100%" height="600" frameborder="0" title="Average compensation per administrator by role class, in 2026 dollars, against the 2016 baseline"></iframe>
 
 This chart plots each role-class's average compensation in 2026 dollars against a dotted horizontal line at the 2016 real-dollar baseline. **Most lines stay near or below their 2016 baseline** — meaning per-person compensation has, on average, kept pace with inflation or slightly lost ground. Administrators are not, on average, getting big raises that outstrip the cost of living. Combined with the AFR pool growth, the math is forcing: total real cost grew because D65 added more administrators, not because it paid existing administrators more.
 
@@ -250,9 +255,11 @@ This chart plots each role-class's average compensation in 2026 dollars against 
 
 In recent months, the District has enacted or proposed a series of reductions targeting **student-facing services**: middle-school counselors, middle-school librarians, and school closures. The chart below (reproduced from the summary at the top of this page) puts the estimated annual savings of these measures next to two scenarios for **right-sizing the central administration** instead, plus the District's own April 20, 2026 admin-cut proposal.
 
-> **Updated October 16, 2026.** The chart now uses the District's October 13, 2026 estimates. Kingsley (closed) is $1.56M, down from $1.66M; Lincolnwood is now proposed, at $1.42M. It also adds Bessie Rhodes (closed, $1.44M), Dewey (proposed, $1.48M), ending District-run SACC ($400K), relinquishing Head Start and Early Head Start ($1.5M), and the 8 administrator FTE in the October 13 plan. The notes below describe the chart as originally published; see the [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan) for what changed.
+<iframe src="assets/admin_growth_final_right_sizing_comparison.html" width="100%" height="1020" frameborder="0" title="Annual savings from enacted and proposed cuts compared with admin right-sizing scenarios"></iframe>
 
-<iframe src="assets/admin_growth_final_right_sizing_comparison.html" width="100%" height="1080" frameborder="0"></iframe>
+> **Update · Oct 16, 2026**
+> The chart now uses the District's October 13, 2026 estimates. Kingsley (closed) is $1.56M, down from $1.66M; Lincolnwood is now proposed, at $1.42M. It also adds Bessie Rhodes (closed, $1.44M), Dewey (proposed, $1.48M), ending District-run SACC ($400K), relinquishing Head Start and Early Head Start ($1.5M), and the 8 administrator FTE in the October 13 plan. The notes below describe the chart as originally published; see the [October 2026 update](#october-2026-update-sy2026-27-data-and-the-districts-new-plan) for what changed.
+{: .note .inline}
 
 ### What's actually happened or been proposed (with sources)
 
@@ -295,7 +302,7 @@ This isn't an argument that the school closures are wrong — there are legitima
 
 ## IMRF Support Staff: Who's in This Category?
 
-<iframe src="assets/admin_growth_final_imrf_categories.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/admin_growth_final_imrf_categories.html" width="100%" height="650" frameborder="0" title="IMRF support staff above the indexed threshold by role category, SY24-25 and SY25-26"></iframe>
 
 The chart breaks the indexed-eligible IMRF Support Staff count down into broad role categories for the two most recent reporting years (SY24-25 and SY25-26). Earlier years are excluded because their IMRF reports either lacked Position strings or used inconsistent terminology that resists reliable bucketing. The "Directors / Managers / Coordinators" bucket is the most administrative-feeling subset of IMRF; the rest are operational support functions like custodians, IT, nurses, and SACC.
 
@@ -409,7 +416,7 @@ A reader who wants to verify our data has at least three convergent sources to c
 - **SY2025-26 (6 people):** the Executive Chief of Human Relations, the Executive Chief of Communications, and the Directors of Strategic Projects, Human Relations, Buildings & Grounds, and Climate & Safety.
 - **SY2023-24 (7 people):** the Executive Director of HR, the Chief Communications Officer, the Chief Human Resources Officer, and the Directors of College and Career, Buildings & Grounds, and Student Assignments, plus the Multilingual Coordinator.
 
-No other year has a duplicate, including the SY2015-16 baseline. The [FAQ](admin-growth-faq) already reported 147 *unique* people for SY2025-26 with these six removed, but the 94 headline and the charts did not apply the same step.
+No other year has a duplicate, including the SY2015-16 baseline. The [FAQ](admin-growth-faq.html) already reported 147 *unique* people for SY2025-26 with these six removed, but the 94 headline and the charts did not apply the same step.
 
 **How we found it.** Adding the SY2026-27 reports, we noticed that the same six people now appear only on the IMRF report. Checking every year for people listed twice turned up the two years above.
 
@@ -491,7 +498,9 @@ The headcount findings (higher-paid admin 75 → 94, since corrected to 75 → 8
 | "Match 2016 ratio" scenario | ~38 cuts, $4.91M | **~37 cuts, $4.75M** |
 | "Match peer median" scenario | ~26 cuts, $3.43M | **~26 cuts, $3.42M** |
 
-*Note: the "Corrected" dollar figures in this table (per-pupil spending and the total admin pool) reflect only the enrollment correction. They were revised again on September 27, 2026 — see [Correction: the admin pool subcategories](#correction-the-admin-pool-subcategories) above for the current figures ($1,915 → $3,041 per pupil; $14.11M → $17.48M pool). The headcount figures in this table (admin per 1,000 students and the two scenarios) were revised again on October 16, 2026 — see [Correction: people listed twice](#correction-people-listed-twice) for the current figures (10.2 → 15.6, +54%; ~20 cuts, $2.65M; ~31 cuts, $3.98M).*
+> **About this table**
+> The "Corrected" dollar figures in this table (per-pupil spending and the total admin pool) reflect only the enrollment correction. They were revised again on September 27, 2026 — see [Correction: the admin pool subcategories](#correction-the-admin-pool-subcategories) above for the current figures ($1,915 → $3,041 per pupil; $14.11M → $17.48M pool). The headcount figures in this table (admin per 1,000 students and the two scenarios) were revised again on October 16, 2026 — see [Correction: people listed twice](#correction-people-listed-twice) for the current figures (10.2 → 15.6, +54%; ~20 cuts, $2.65M; ~31 cuts, $3.98M).
+{: .note .inline}
 
 We chose the measure that produces the *smallest* decline and the *lowest* density growth of the available options. Note also that D65 enrollment on this measure peaked in SY2016-17 at 7,559, not in SY2015-16; measured from that peak the decline is 25.5%. We report from SY2015-16 because that is the first year of the compensation data this analysis rests on.
 

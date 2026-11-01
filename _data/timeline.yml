@@ -1,0 +1,24 @@
+# "How we got here" on the School Closures section page. Oldest first.
+# Mark a future date with `upcoming: true`; it turns red and the page hides the flag once it has passed.
+- date: 2024-06-10
+  label: "Jun 10, 2024"
+  text: "Board resolves to close Bessie Rhodes after SY2025-26 and move its TWI program to the new Foster School."
+- date: 2025-10-14
+  label: "Oct–Nov 2025"
+  text: "SDRP Phase III closure scenarios go to the Board. We begin publishing."
+- date: 2026-01-22
+  label: "Jan 22, 2026"
+  text: "Board votes 6-0 to close Kingsley after SY2025-26."
+- date: 2026-04-20
+  label: "Apr 20, 2026"
+  text: "District lists $8.3M of potential admin and support cuts (64 positions)."
+- date: 2026-08-25
+  label: "Fall 2026"
+  text: "First school year without Kingsley and Bessie Rhodes; Foster School opens."
+- date: 2026-10-13
+  label: "Oct 13, 2026"
+  text: "“A Sustainable Path Forward” plan proposes closing Lincolnwood and Dewey."
+- date: 2026-11-09
+  label: "Nov 9, 2026"
+  text: "Board scheduled to act on the October plan."
+  upcoming: true

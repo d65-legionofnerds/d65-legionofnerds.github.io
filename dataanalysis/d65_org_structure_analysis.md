@@ -1,112 +1,105 @@
 ---
-title: Org Chart Creep
-layout: default
-parent: Data Analysis
-description: "How District 65's central office doubled while enrollment fell 24% — the org chart history from 2016 through 2026, what the SDRP cut, and what right-sizing the sub-cabinet would actually save."
-last_modified_date: 2026-10-16
+title: "Org Chart Creep: The Org Chart That Ate Our Budget"
+date: 2026-05-14
+updated: 2026-10-16
+topic: admin
+type: analysis
+featured: true
+summary: "How District 65’s central office doubled while enrollment fell 24%, what the SDRP cut, and what right-sizing the sub-cabinet would save."
+image: /assets/img/lead/d65_org_structure_analysis.png
+image_alt: "Stacked bar chart of named central office positions at D65: cabinet 8 and sub-cabinet 6 in 2016–17, rising to 12 and 48 (60 in all) at the 2022–23 peak; after the SDRP in 2025–26 the cabinet is 6 but the sub-cabinet is still 42."
+image_source: dataanalysis/d65_org_structure_analysis.md#twoTierChart   # Chart.js chart on the page (no Plotly file); screenshot of its block
+takeaways:
+  - "Enrollment fell 24%. Administrative cost per student rose 59%."
+  - "Below the cabinet, a sub-cabinet layer of directors, coordinators, and managers grew 7× its 2016 size. The SDRP cut the cabinet 50% but the sub-cabinet only about 13%, from roughly 48 to 42 positions."
+  - "The SDRP made real cuts, but 90 position reductions still produced a $700,000 increase in total salary costs."
+  - "A conservative reduction of the sub-cabinet to 20 positions would save an estimated $2.8 to $3.8 million a year without touching a teacher, counselor, or librarian."
 ---
 
 <style>
-.viz-wrap {
-  margin: 40px 0;
-  background: white;
-  border: 1px solid #c8bfaf;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.viz-header {
-  background: #1a1a1a;
-  color: #f5f0e8;
-  padding: 16px 24px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.viz-body { padding: 28px 24px; }
-.bar-chart {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.bar-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.bar-year {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  width: 60px;
-  flex-shrink: 0;
-  color: #6b6458;
-}
-.bar-track {
-  flex: 1;
-  background: #ede8dc;
-  height: 36px;
-  border-radius: 2px;
-  position: relative;
-  overflow: visible;
-}
-.bar-fill {
-  height: 100%;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-  position: relative;
-  min-width: 48px;
-}
-.bar-fill.baseline { background: #6b6458; }
-.bar-fill.peak { background: #c0392b; }
-.bar-fill.current { background: #2d6a4f; }
-.bar-label {
-  font-size: 13px;
-  color: #1a1a1a;
-  white-space: nowrap;
-  margin-left: 8px;
+/* Legacy charts on this page only. Every rule is scoped to .org-legacy, so nothing reaches the rest of the site. */
+.org-legacy{font-family:var(--label)}
+.org-legacy.viz-wrap{margin:36px 0;background:#fff;border:1px solid var(--hair);overflow:hidden}
+.org-legacy .viz-header{background:var(--ink);color:#fff;padding:12px 20px;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:.08em;text-transform:uppercase}
+.org-legacy .viz-body{padding:24px 20px 18px}
+.org-legacy .viz-note{font-size:13px;line-height:1.45;color:var(--ink-2);margin:14px 0 0}
+.org-legacy .viz-note.intro{margin:0 0 14px}
+.org-legacy .bar-chart{display:flex;flex-direction:column;gap:20px}
+.org-legacy .bar-row{display:flex;align-items:center;gap:16px}
+.org-legacy .bar-year{font-size:12px;font-weight:600;width:60px;flex-shrink:0;color:var(--ink-2)}
+.org-legacy .bar-track{flex:1;min-width:0;background:var(--wash);height:36px;position:relative}
+.org-legacy .bar-fill{height:100%;display:flex;align-items:center;padding-left:12px;font-size:12px;font-weight:600;color:#fff;min-width:48px;white-space:nowrap}
+.org-legacy .bar-fill.baseline{background:#6b6458}
+.org-legacy .bar-fill.peak{background:#c0392b}
+.org-legacy .bar-fill.current{background:#2d6a4f}
+.org-legacy .bar-label{font-size:13px;line-height:1.35;color:var(--ink);white-space:nowrap}
+.org-legacy .chart-box{position:relative;width:100%;height:440px}
+.org-legacy .chart-box.h460{height:460px}
+.org-legacy .chart-box.h360{height:360px}
+.org-legacy .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 0 4px;font-size:13px;line-height:1.35;color:var(--ink-2)}
+.org-legacy .legend > span{display:flex;align-items:center;gap:6px}
+.org-legacy .legend.above{margin:0 0 14px}
+.org-legacy .sw{display:inline-block;flex-shrink:0;width:12px;height:12px}
+.org-legacy .sw.sw-bar{width:24px;height:10px}
+.org-legacy .sw.line{width:28px;height:3px}
+.org-legacy .comp-head,.org-legacy .comp-row{display:flex;align-items:center;gap:10px}
+.org-legacy .comp-head{padding:0 0 8px;border-bottom:2px solid var(--ink);margin-bottom:4px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2)}
+.org-legacy .comp-head .comp-key{flex:1}
+.org-legacy .comp-head .sw{width:12px;height:10px;margin-right:4px;vertical-align:middle}
+.org-legacy .comp-row{padding:4px 0;border-bottom:1px solid var(--hair)}
+.org-legacy .comp-row.last{border-bottom:0}
+.org-legacy .comp-name{width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:var(--ink)}
+.org-legacy .comp-track{flex:1;min-width:0;height:22px;background:var(--wash);overflow:hidden}
+.org-legacy .comp-bar{height:100%;background:#185FA5}
+.org-legacy .comp-val{width:100px;flex-shrink:0;font-size:11px;font-weight:600;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.org-legacy .comp-head .comp-val{font-weight:400;color:var(--ink-2)}
+.org-legacy .comp-group{display:flex;align-items:center;gap:8px;margin:12px 0 6px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:var(--ink-2)}
+.org-legacy .comp-group.first{margin-top:4px}
+.org-legacy .comp-group::before,.org-legacy .comp-group::after{content:"";flex:1;height:1px;background:var(--hair)}
+.org-legacy .comp-foot{margin-top:14px;padding:10px 12px;background:var(--wash);border-left:3px solid var(--hair)}
+.org-legacy .comp-foot p{font-size:11px;line-height:1.45;color:var(--ink-2);margin:0}
+.org-legacy .comp-foot strong{color:var(--ink)}
+.org-legacy .bone-box{display:flex;align-items:flex-end;gap:6px;height:280px;padding:0 8px}
+/* the Pac-Man illustration */
+.org-legacy .dollar{font-size:28px;font-weight:700;fill:#2d6a4f;transform-box:fill-box;transform-origin:center}
+.org-legacy #pacman{animation:org-move-pac 3.4s linear infinite}
+@keyframes org-move-pac{0%{transform:translateX(0px)}100%{transform:translateX(510px)}}
+.org-legacy .d1{animation:org-eat 3.4s 0.00s linear infinite}
+.org-legacy .d2{animation:org-eat 3.4s 0.40s linear infinite}
+.org-legacy .d3{animation:org-eat 3.4s 0.80s linear infinite}
+.org-legacy .d4{animation:org-eat 3.4s 1.20s linear infinite}
+.org-legacy .d5{animation:org-eat 3.4s 1.60s linear infinite}
+.org-legacy .d6{animation:org-eat 3.4s 2.00s linear infinite}
+.org-legacy .d7{animation:org-eat 3.4s 2.40s linear infinite}
+@keyframes org-eat{0%,22%{opacity:1;transform:scale(1)}30%{opacity:0;transform:scale(0.1)}100%{opacity:0;transform:scale(0.1)}}
+.org-legacy .crumb{fill:#c0392b}
+.org-legacy .c1{animation:org-pop 3.4s 0.65s linear infinite}
+.org-legacy .c2{animation:org-pop 3.4s 1.05s linear infinite}
+.org-legacy .c3{animation:org-pop 3.4s 1.45s linear infinite}
+.org-legacy .c4{animation:org-pop 3.4s 1.85s linear infinite}
+.org-legacy .c5{animation:org-pop 3.4s 2.25s linear infinite}
+.org-legacy .c6{animation:org-pop 3.4s 2.65s linear infinite}
+@keyframes org-pop{0%,3%{opacity:0;r:2}8%{opacity:1;r:4}40%{opacity:0.4;r:3}60%,100%{opacity:0;r:2}}
+@media (max-width:640px){
+  .org-legacy .viz-body{padding:18px 14px 14px}
+  .org-legacy .bar-row{flex-wrap:wrap;gap:6px 10px}
+  .org-legacy .bar-year{width:52px}
+  .org-legacy .bar-label{flex-basis:100%;white-space:normal;padding-left:62px}
+  .org-legacy .comp-name{width:118px}
+  .org-legacy .comp-val{width:62px}
 }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 
-# The Org Chart That Ate Our Budget
+**A Legion of Data Nerds structural history of District 65's administrative organization — how org chart creep doubled the central office, what the SDRP dismantled, and what still needs to go.**
 
-**A Legion of Data Nerds structural history of District 65's administrative organization — how org chart creep doubled the central office, what the SDRP dismantled, and** **<big><span style="color:red">what still needs to go.</span></big>**
+**[District 65 Administrative Growth Over Time](admin-growth-final.html)** — the companion analysis covering inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios in dollar terms.
 
-**[District 65 Administrative Growth Over Time](admin-growth-final)** — the companion analysis covering inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios in dollar terms.
-
-<svg viewBox="0 0 680 180" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg class="org-legacy" viewBox="0 0 680 180" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
   <title>Pac-Man chomping through dollar signs</title>
   <desc>Animated D65-blue Pac-Man eating dollar signs representing budget consumption</desc>
-  <style>
-    .dollar { font-size: 28px; font-family: monospace; font-weight: 700; fill: #2d6a4f; }
-    #pacman { animation: movePac 3.4s linear infinite; }
-    @keyframes movePac { 0% { transform: translateX(0px); } 100% { transform: translateX(510px); } }
-    .d1 { animation: eat 3.4s 0.00s linear infinite; }
-    .d2 { animation: eat 3.4s 0.40s linear infinite; }
-    .d3 { animation: eat 3.4s 0.80s linear infinite; }
-    .d4 { animation: eat 3.4s 1.20s linear infinite; }
-    .d5 { animation: eat 3.4s 1.60s linear infinite; }
-    .d6 { animation: eat 3.4s 2.00s linear infinite; }
-    .d7 { animation: eat 3.4s 2.40s linear infinite; }
-    @keyframes eat { 0%,22% { opacity:1; transform:scale(1); } 30% { opacity:0; transform:scale(0.1); } 100% { opacity:0; transform:scale(0.1); } }
-    .crumb { fill: #c0392b; }
-    .c1 { animation: pop 3.4s 0.65s linear infinite; }
-    .c2 { animation: pop 3.4s 1.05s linear infinite; }
-    .c3 { animation: pop 3.4s 1.45s linear infinite; }
-    .c4 { animation: pop 3.4s 1.85s linear infinite; }
-    .c5 { animation: pop 3.4s 2.25s linear infinite; }
-    .c6 { animation: pop 3.4s 2.65s linear infinite; }
-    @keyframes pop { 0%,3% { opacity:0; r:2; } 8% { opacity:1; r:4; } 40% { opacity:0.4; r:3; } 60%,100% { opacity:0; r:2; } }
-  </style>
-  <rect x="20" y="40" width="640" height="100" rx="12" fill="#f5f0e8" stroke="#a89f92" stroke-width="1"/>
+  <rect x="20" y="40" width="640" height="100" rx="12" fill="#f3f5f7" stroke="#d8dde2" stroke-width="1"/>
   <g style="transform-origin:142px 100px"><text class="dollar d1" x="128" y="102">$</text></g>
   <g style="transform-origin:222px 100px"><text class="dollar d2" x="208" y="102">$</text></g>
   <g style="transform-origin:302px 100px"><text class="dollar d3" x="288" y="102">$</text></g>
@@ -131,54 +124,27 @@ last_modified_date: 2026-10-16
   </g>
 </svg>
 
-<table width="100%" cellspacing="12" cellpadding="0" style="border-collapse:separate;border-spacing:12px;">
-<tr>
-<td width="33%" align="center" valign="top" style="background:#fdecec;border-top:5px solid #e84040;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e84040;line-height:1;letter-spacing:-0.02em;">+118%</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Certificated central admins (TRS)</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">11 → 24 administrators</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">SY2015–16 → SY2025–26 · combined cabinet + sub-cabinet peaked at 60 in 2022–23</div>
-</td>
-<td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">7×</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Sub-cabinet growth</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">6 → 42 positions (700% of baseline)</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">Cabinet cut 50% · Sub-cabinet cut only 13%</div>
-</td>
-<td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">+54%</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admin-to-student ratio</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">10.2 → 15.6 per 1,000 students</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">peer K-8 average ~12 per 1,000</div>
-</td>
-</tr>
-<tr>
-<td width="33%" align="center" valign="top" style="background:#fdecec;border-top:5px solid #e84040;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e84040;line-height:1;letter-spacing:-0.02em;">10+</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Admins missing from official count</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">District reports 52 · public data shows 64</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">No FOIA request required to find the gap</div>
-</td>
-<td width="33%" align="center" valign="top" style="background:#fdf1e7;border-top:5px solid #e87d20;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e87d20;line-height:1;letter-spacing:-0.02em;">+59%</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Per-student admin spending (real $)</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">$1,915 → $3,041 per pupil</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">FY16 → FY25 · inflation-adjusted</div>
-</td>
-<td width="33%" align="center" valign="top" style="background:#fdf6e3;border-top:5px solid #e8b820;border-radius:6px;padding:20px 14px;">
-<div style="font-size:3em;font-weight:900;color:#e8b820;line-height:1;letter-spacing:-0.02em;">−24%</div>
-<div style="font-size:0.78em;letter-spacing:0.12em;text-transform:uppercase;color:#6b6458;font-weight:600;margin:10px 0 6px;">Student enrollment</div>
-<div style="font-size:1.05em;color:#1a1a1a;font-weight:500;">7,371 → 5,630 students</div>
-<div style="font-size:0.8em;color:#6b6458;margin-top:6px;">steepest among 21 peer districts</div>
-</td>
-</tr>
-</table>
+<div class="stats">
+  <div class="stat"><b>+118%</b><p>Certificated central admins (TRS)<br>11 → 24 administrators<br><small>SY2015–16 → SY2025–26 · combined cabinet + sub-cabinet peaked at 60 in 2022–23</small></p></div>
+  <div class="stat"><b><span class="hl">7×</span></b><p>Sub-cabinet growth<br>6 → 42 positions (700% of baseline)<br><small>Cabinet cut 50% · Sub-cabinet cut only 13%</small></p></div>
+  <div class="stat"><b>+54%</b><p>Admin-to-student ratio<br>10.2 → 15.6 per 1,000 students<br><small>peer K-8 average ~12 per 1,000</small></p></div>
+</div>
 
-*Legion of Data Nerds · May 7, 2026 · Updated October 16, 2026 · ~40 min read · Based on FOIA documents, compensation reports, and board presentations*
+<div class="stats">
+  <div class="stat"><b>10+</b><p>Admins missing from official count<br>District reports 52 · public data shows 64<br><small>No FOIA request required to find the gap</small></p></div>
+  <div class="stat"><b>+59%</b><p>Per-student admin spending (real $)<br>$1,915 → $3,041 per pupil<br><small>FY16 → FY25 · inflation-adjusted</small></p></div>
+  <div class="stat"><b>−24%</b><p>Student enrollment<br>7,371 → 5,630 students<br><small>steepest among 21 peer districts</small></p></div>
+</div>
 
-> **Correction (October 16, 2026).** The admin-to-student ratio figure above previously read **+64% (10.2 → 16.7 per 1,000 students)**. It counted six administrators twice in SY2025-26, because they were listed on both the state administrator report and the IMRF report. Counting each person once, it is **+54% (10.2 → 15.6)**. See [Correction: people listed twice](admin-growth-final#correction-people-listed-twice) on the Admin Growth page.
->
-> **Correction (August 2, 2026).** An earlier version of this analysis reported a **25%** enrollment decline. That figure mixed two different student populations, and the enrollment series has been rebuilt on a single consistent measure — the corrected figure is **24%**. Enrollment values in the charts below were updated accordingly. See [A note on the enrollment decline figure](#a-note-on-the-enrollment-decline-figure) and the [full correction note](admin-growth-final#correction-the-enrollment-series) on the companion Admin Growth page.
+*Based on FOIA documents, compensation reports, and board presentations.*
+
+> **Correction · Oct 16, 2026**
+> The admin-to-student ratio figure above previously read **+64% (10.2 → 16.7 per 1,000 students)**. It counted six administrators twice in SY2025-26, because they were listed on both the state administrator report and the IMRF report. Counting each person once, it is **+54% (10.2 → 15.6)**. See [Correction: people listed twice](admin-growth-final.html#correction-people-listed-twice) on the Admin Growth page.
+{: .note}
+
+> **Correction · Aug 2, 2026**
+> An earlier version of this analysis reported a **25%** enrollment decline. That figure mixed two different student populations, and the enrollment series has been rebuilt on a single consistent measure — the corrected figure is **24%**. Enrollment values in the charts below were updated accordingly. See [A note on the enrollment decline figure](#a-note-on-the-enrollment-decline-figure) and the [full correction note](admin-growth-final.html#correction-the-enrollment-series) on the companion Admin Growth page.
+{: .note}
 
 ## What You Need to Know
 
@@ -187,13 +153,13 @@ Between SY2015–16 and SY2025–26, K-8 enrollment fell from 7,371 to 5,630 stu
 - **Enrollment fell 24%. Administrative cost per student rose 59%.** Those two lines moved in opposite directions for a decade. The community is paying the price in closed schools, partially cut counselors, and librarians whose roles remain unresolved.
 - **It didn't happen all at once — it was org chart creep.** Positions were added one at a time, each justified on its own terms, none examined in the aggregate. No single hire looked unreasonable. The cumulative result did.
 - **The peak was 2022–23 — the same year the district ran a $10 million deficit.** Central office administrators had grown 118% since 2016. Many hires were presented to the board as "budget neutral" while structural deficits were already being projected.
-- **The real story is the second tier — the sub-cabinet.** Below the cabinet sits a layer of directors, coordinators, and managers that grew 7× its 2016 size — 700% of baseline — and has barely been touched by the SDRP. The cabinet was cut 50%. The sub-cabinet was cut only 13%. The visible layer shrank. The expensive layer didn't.
+- **The real story is the second tier — the sub-cabinet.** <mark>Below the cabinet sits a layer of directors, coordinators, and managers that grew 7× its 2016 size — 700% of baseline — and has barely been touched by the SDRP.</mark> The cabinet was cut 50%. The sub-cabinet was cut only 13%. The visible layer shrank. The expensive layer didn't.
 - **The SDRP made real cuts — but didn't finish the job.** 90 position reductions still produced a $700,000 increase in total salary costs. Fewer people, higher total cost. The sub-cabinet's 42 positions — each averaging $129,000 in total compensation — remain largely intact. D65 still spends $619 per pupil on Special Area Administration against a peer average of $176.
 - **You can't govern what you can't see.** The district officially reports 52 central administrators. Cross-referencing public state disclosure lists — no FOIA required — yields at least 64. The 10+ missing positions aren't a data entry error; they reflect a pattern of incomplete reporting that leaves the board making decisions based on an incomplete count.
 - **The governance failures go deeper than the org chart.** A cabinet-level "Chief of Staff" signed contracts under that title while board org charts listed her as "Special Assistant to the Cabinet." Salary increases were made without board approval. Two Horton-era associates are awaiting trial on fraud-related charges.
 - **Four things need to change — now.** The ongoing HR audit is the opening. The Legion of Data Nerds calls on the board and administration to act on each of the following: **(1) Right-size the sub-cabinet** — a conservative reduction to 20 positions saves $2.8–3.8M annually without touching a teacher, counselor, or librarian. **(2) Stop future creep** — require board approval for any new administrative position above a salary threshold. **(3) Publish the full roster** — every administrative position, title, reporting line, function, and cost in one publicly accessible document. **(4) Build a real accountability framework** — the board, not the superintendent, sets the size and cost of the administrative structure.
 
-The +118% headline figure measures TRS-enrolled certificated administrators specifically (PA 96-0434), which went from 11 to 24 between SY2015–16 and SY2025–26. This is a narrow, clean measure — every TRS administrator is reported in full regardless of salary, making it the most apples-to-apples count across years. Larry Gavin's broader "Central Office Administration" category shows growth from 17 (2015–16) to 30 (2022–23), a +76% increase; the District's own FOIA response (May 7, 2024) documents Central Office Adm rising from 22 in FY19 to 30 in FY23. All three counts use different definitions and scopes; all three show the same directional trend. For full methodology see the [Admin Growth FAQ](admin-growth-faq).
+The +118% headline figure measures TRS-enrolled certificated administrators specifically (PA 96-0434), which went from 11 to 24 between SY2015–16 and SY2025–26. This is a narrow, clean measure — every TRS administrator is reported in full regardless of salary, making it the most apples-to-apples count across years. Larry Gavin's broader "Central Office Administration" category shows growth from 17 (2015–16) to 30 (2022–23), a +76% increase; the District's own FOIA response (May 7, 2024) documents Central Office Adm rising from 22 in FY19 to 30 in FY23. All three counts use different definitions and scopes; all three show the same directional trend. For full methodology see the [Admin Growth FAQ](admin-growth-faq.html).
 
 ---
 
@@ -205,7 +171,7 @@ This analysis documents what happened to D65's central office between 2016 and t
 
 The numbers are stark. Enrollment fell 24% — the steepest decline among 21 nearby K-8 districts. Over the same period, higher-paid administrative headcount grew 25%, and central office administrators specifically doubled. Total administrative pay rose 24% in real (inflation-adjusted) dollars. Per-student administrative spending rose 59% in real terms. The cost driver was not higher salaries — individual administrator pay only kept pace with inflation. The cost driver was adding more administrators.
 
-> **Companion Piece** — This deep dive traces the *structural history* of D65's administrative organization: the org charts, the governance failures, the titles and reporting lines. For the full *quantitative and financial* analysis — inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios — see [District 65 Administrative Growth Over Time →](admin-growth-final). For answers to common methodological questions, see the [Admin Growth FAQ →](admin-growth-faq).
+> **Companion Piece** — This deep dive traces the *structural history* of D65's administrative organization: the org charts, the governance failures, the titles and reporting lines. For the full *quantitative and financial* analysis — inflation-adjusted compensation trends, headcount data, peer comparisons, and right-sizing scenarios — see [District 65 Administrative Growth Over Time →](admin-growth-final.html). For answers to common methodological questions, see the [Admin Growth FAQ →](admin-growth-faq.html).
 
 This piece traces who was hired, why, at what cost, and what remains. The data comes from board-approved org charts, state compensation reports, SDRP (Structural Deficit Reduction Plan — the district's 2025 cost-cutting initiative) board presentations, and the Legion's own analyses. The picture is not flattering.
 
@@ -219,7 +185,7 @@ Under Superintendent Paul Goren, District 65 operated with a relatively streamli
 
 Curriculum and instruction was managed by four directors — covering STEM, Literacy, ELL, and Social Studies. Operations were consolidated under business services. This was a functional structure for a district of D65's size and complexity.
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Central Administration — 2016–17 Baseline (Goren Era)</div>
   <div class="viz-body">
     <div class="bar-chart">
@@ -245,7 +211,7 @@ Curriculum and instruction was managed by four directors — covering STEM, Lite
         <div class="bar-label">Asst. Superintendent covering Student Services</div>
       </div>
     </div>
-    <p style="margin-top:20px;font-size:13px;color:#6b6458;font-family:'IBM Plex Mono',monospace;">Roles: Superintendent · Asst. Supt. of Business Services · Chief Strategy Officer · Asst. Supt. of Schools · Asst. Supt. of HR · Asst. Supt. of Special Services · Chief Officer of Research &amp; Data · Executive Director of Curriculum &amp; Instruction</p>
+    <p class="viz-note">Roles: Superintendent · Asst. Supt. of Business Services · Chief Strategy Officer · Asst. Supt. of Schools · Asst. Supt. of HR · Asst. Supt. of Special Services · Chief Officer of Research &amp; Data · Executive Director of Curriculum &amp; Instruction</p>
   </div>
 </div>
 
@@ -273,7 +239,7 @@ The expansion was broad-based. A Deputy Superintendent position was created for 
 | Student Services / SPED | 1 asst. superintendent | 3+ directors under 1 asst. supt. |
 | Technology / IT | — embedded roles | 3+ dedicated positions |
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Administrative Growth: 2016–17 Baseline vs. 2022–23 Peak vs. 2025–26 Current</div>
   <div class="viz-body">
     <div class="bar-chart">
@@ -348,27 +314,15 @@ The expansion accelerated further in SY2022–23. The largest single-year jump i
 
 Before looking at the cuts, one important context: some of the staffing increase in FY22–23 was funded by federal COVID-recovery grants (ESSER funds), which were temporary by design. These included 19 Teacher Residents, 8 Guidance Counselors, 2 Mental Health Practitioners, and 4 Diverse Learning Coordinators — roughly 33 positions that were always going to expire. Their elimination is not really a "cut" — it was a scheduled end. The more durable concern is the permanent central office administrative build-up: directors, coordinators, and support roles that were not tied to temporary grants.
 
-The SDRP achieved meaningful reductions in headcount. Across Phases I and II, the district eliminated at least 43–48 central office and administrative FTE positions, generating roughly $3.07 million in direct central office savings from 25 net FTE reductions in Phase II alone. For a full financial breakdown of what the SDRP savings represent relative to the decade-long administrative cost buildup, see our companion piece [District 65 Administrative Growth Over Time](admin-growth-final).
+The SDRP achieved meaningful reductions in headcount. Across Phases I and II, the district eliminated at least 43–48 central office and administrative FTE positions, generating roughly $3.07 million in direct central office savings from 25 net FTE reductions in Phase II alone. For a full financial breakdown of what the SDRP savings represent relative to the decade-long administrative cost buildup, see our companion piece [District 65 Administrative Growth Over Time](admin-growth-final.html).
 
-<table width="100%">
-<tr>
-<td align="center"><span style="font-size:2em;font-weight:900;color:#c0392b;">22</span></td>
-<td align="center"><span style="font-size:2em;font-weight:900;color:#c0392b;">21–26</span></td>
-<td align="center"><span style="font-size:2em;font-weight:900;color:#c0392b;">$3.07M</span></td>
-</tr>
-<tr>
-<td align="center">Central office FTEs eliminated</td>
-<td align="center">Additional FTEs reduced</td>
-<td align="center">Central office savings</td>
-</tr>
-<tr>
-<td align="center"><small>SDRP Phase I (FY25)</small></td>
-<td align="center"><small>SDRP Phase II (FY26)</small></td>
-<td align="center"><small>from Phase II alone</small></td>
-</tr>
-</table>
+<div class="stats">
+  <div class="stat"><b>22</b><p>Central office FTEs eliminated<br><small>SDRP Phase I (FY25)</small></p></div>
+  <div class="stat"><b>21–26</b><p>Additional FTEs reduced<br><small>SDRP Phase II (FY26)</small></p></div>
+  <div class="stat"><b>$3.07M</b><p>Central office savings<br><small>from Phase II alone</small></p></div>
+</div>
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Before &amp; After: Central Admin Senior Positions</div>
   <div class="viz-body">
     <div class="bar-chart">
@@ -423,171 +377,33 @@ The 20 TRS-enrolled administrators carry combined total compensation of approxim
 
 The full FY26 senior administrator compensation roster (PA 96-0434, TRS-disclosed):
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">FY26 Senior Administrator Total Compensation</div>
   <div class="viz-body">
-    <div style="display:flex;align-items:center;gap:10px;padding:0 0 8px;border-bottom:2px solid #c8bfaf;margin-bottom:4px;">
-      <div style="width:230px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.05em;text-transform:uppercase;">Position</div>
-      <div style="flex:1;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;">
-        <span style="display:inline-block;width:12px;height:10px;background:#185FA5;border-radius:1px;vertical-align:middle;margin-right:4px;"></span>Total compensation
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;text-align:right;">Total comp</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:8px;margin:4px 0 6px;">
-      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Cabinet</div>
-      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Superintendent</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:100%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$286,378</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Chief Financial Officer</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:90.62%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$259,525</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Supt. of Accountability</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:83.62%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$239,474</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Supt. of Academics</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:68.24%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$195,427</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:8px;margin:12px 0 6px;">
-      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6458;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Directors &amp; Managers</div>
-      <div style="flex:1;height:1px;background:#c8bfaf;"></div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Schools Management</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:74.51%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$213,371</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of MTSS &amp; SEL</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:70.17%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$200,952</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Early Childhood Programs</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:68.02%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$194,807</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Finance</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:67.20%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$192,453</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Manager of Student Specialized Svcs</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:65.26%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$186,904</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Humanities</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:63.68%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$182,363</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Exec. Director of RAAD</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:61.83%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$177,066</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Student Specialized Svcs</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:61.45%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$175,971</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of STEAM</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:60.65%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$173,684</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Exec. Director of Technology</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:59.43%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$170,188</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Multilingual Services</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:56.80%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$162,675</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Buildings, Grounds &amp; T</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:51.87%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$148,542</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Programs &amp; Partnerships</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:51.49%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$147,452</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Asst. Director of Teaching &amp; Learning</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:51.13%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$146,415</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;border-bottom:1px solid #ede8dc;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Director of Climate &amp; Safety</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:51.12%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$146,407</div>
-    </div>
-    <div style="display:flex;align-items:center;gap:10px;padding:4px 0;">
-      <div style="width:230px;flex-shrink:0;font-size:12px;line-height:1.3;color:#1a1a1a;">Health Services Director</div>
-      <div style="flex:1;height:22px;background:#ede8dc;border-radius:2px;overflow:hidden;">
-        <div style="width:50.22%;background:#185FA5;height:100%;"></div>
-      </div>
-      <div style="width:100px;flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#1a1a1a;font-weight:600;text-align:right;">$143,809</div>
-    </div>
-    <div style="margin-top:14px;padding:10px 12px;background:#f8f6f2;border-left:3px solid #c8bfaf;border-radius:2px;">
-      <p style="font-size:11px;color:#6b6458;font-family:'IBM Plex Mono',monospace;margin:0;">
-        <strong style="color:#1a1a1a;">Note:</strong> Total compensation includes base salary plus benefits. Base salary avg: $152,234. Total comp avg: $187,193. Bar width scaled to highest total compensation ($286,378). Source: PA 96-0434 TRS Administrator Salary Report, FY2025–26.
-      </p>
-    </div>
+    <div class="comp-head"><div class="comp-name">Position</div><div class="comp-key"><span class="sw" style="background:#185FA5"></span>Total compensation</div><div class="comp-val">Total comp</div></div>
+    <div class="comp-group first">Cabinet</div>
+    <div class="comp-row"><div class="comp-name">Superintendent</div><div class="comp-track"><div class="comp-bar" style="width:100%"></div></div><div class="comp-val">$286,378</div></div>
+    <div class="comp-row"><div class="comp-name">Chief Financial Officer</div><div class="comp-track"><div class="comp-bar" style="width:90.62%"></div></div><div class="comp-val">$259,525</div></div>
+    <div class="comp-row"><div class="comp-name">Asst. Supt. of Accountability</div><div class="comp-track"><div class="comp-bar" style="width:83.62%"></div></div><div class="comp-val">$239,474</div></div>
+    <div class="comp-row"><div class="comp-name">Asst. Supt. of Academics</div><div class="comp-track"><div class="comp-bar" style="width:68.24%"></div></div><div class="comp-val">$195,427</div></div>
+    <div class="comp-group">Directors &amp; Managers</div>
+    <div class="comp-row"><div class="comp-name">Director of Schools Management</div><div class="comp-track"><div class="comp-bar" style="width:74.51%"></div></div><div class="comp-val">$213,371</div></div>
+    <div class="comp-row"><div class="comp-name">Director of MTSS &amp; SEL</div><div class="comp-track"><div class="comp-bar" style="width:70.17%"></div></div><div class="comp-val">$200,952</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Early Childhood Programs</div><div class="comp-track"><div class="comp-bar" style="width:68.02%"></div></div><div class="comp-val">$194,807</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Finance</div><div class="comp-track"><div class="comp-bar" style="width:67.20%"></div></div><div class="comp-val">$192,453</div></div>
+    <div class="comp-row"><div class="comp-name">Manager of Student Specialized Svcs</div><div class="comp-track"><div class="comp-bar" style="width:65.26%"></div></div><div class="comp-val">$186,904</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Humanities</div><div class="comp-track"><div class="comp-bar" style="width:63.68%"></div></div><div class="comp-val">$182,363</div></div>
+    <div class="comp-row"><div class="comp-name">Exec. Director of RAAD</div><div class="comp-track"><div class="comp-bar" style="width:61.83%"></div></div><div class="comp-val">$177,066</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Student Specialized Svcs</div><div class="comp-track"><div class="comp-bar" style="width:61.45%"></div></div><div class="comp-val">$175,971</div></div>
+    <div class="comp-row"><div class="comp-name">Director of STEAM</div><div class="comp-track"><div class="comp-bar" style="width:60.65%"></div></div><div class="comp-val">$173,684</div></div>
+    <div class="comp-row"><div class="comp-name">Exec. Director of Technology</div><div class="comp-track"><div class="comp-bar" style="width:59.43%"></div></div><div class="comp-val">$170,188</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Multilingual Services</div><div class="comp-track"><div class="comp-bar" style="width:56.80%"></div></div><div class="comp-val">$162,675</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Buildings, Grounds &amp; T</div><div class="comp-track"><div class="comp-bar" style="width:51.87%"></div></div><div class="comp-val">$148,542</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Programs &amp; Partnerships</div><div class="comp-track"><div class="comp-bar" style="width:51.49%"></div></div><div class="comp-val">$147,452</div></div>
+    <div class="comp-row"><div class="comp-name">Asst. Director of Teaching &amp; Learning</div><div class="comp-track"><div class="comp-bar" style="width:51.13%"></div></div><div class="comp-val">$146,415</div></div>
+    <div class="comp-row"><div class="comp-name">Director of Climate &amp; Safety</div><div class="comp-track"><div class="comp-bar" style="width:51.12%"></div></div><div class="comp-val">$146,407</div></div>
+    <div class="comp-row last"><div class="comp-name">Health Services Director</div><div class="comp-track"><div class="comp-bar" style="width:50.22%"></div></div><div class="comp-val">$143,809</div></div>
+    <div class="comp-foot"><p><strong>Note:</strong> Total compensation includes base salary plus benefits. Base salary avg: $152,234. Total comp avg: $187,193. Bar width scaled to highest total compensation ($286,378). Source: PA 96-0434 TRS Administrator Salary Report, FY2025–26.</p></div>
   </div>
 </div>
 
@@ -638,18 +454,18 @@ The SDRP cut the cabinet from 12 to 6 — a **50%** reduction. The sub-cabinet c
 
 The asymmetry is visible in the year-by-year count of named central office positions:
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Two-Tier Administrative Growth: Cabinet vs. Sub-Cabinet, 2016–2026</div>
-  <div class="viz-body" style="padding:24px 24px 16px;">
-    <div style="position:relative;width:100%;height:460px;">
+  <div class="viz-body">
+    <div class="chart-box h460">
       <canvas id="twoTierChart" role="img" aria-label="Stacked bar chart showing cabinet and sub-cabinet administrative positions at D65 from 2016-17 through 2025-26.">Cabinet: 8, 8, 9, 10, 12, 6. Sub-cabinet: 6, 9, 20, 38, 48, 42.</canvas>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 8px;font-size:13px;color:#6b6458;">
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:#c0392b;display:inline-block;"></span>Cabinet (asst. superintendents, chiefs, deputy superintendent)</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:#f09595;display:inline-block;"></span>Sub-cabinet (directors, coordinators, managers)</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;border:1.5px dashed #c0392b;display:inline-block;"></span>Post-SDRP (2025–26)</span>
+    <div class="legend">
+      <span><span class="sw" style="background:#c0392b"></span>Cabinet (asst. superintendents, chiefs, deputy superintendent)</span>
+      <span><span class="sw" style="background:#f09595"></span>Sub-cabinet (directors, coordinators, managers)</span>
+      <span><span class="sw" style="border:1.5px dashed #c0392b"></span>Post-SDRP (2025–26)</span>
     </div>
-    <p style="font-size:12px;color:#6b6458;margin:6px 0 2px;font-family:'IBM Plex Mono',monospace;">* 2020–21 sub-cabinet figure (~20) is a partial estimate.</p>
+    <p class="viz-note">* 2020–21 sub-cabinet figure (~20) is a partial estimate.</p>
   </div>
 </div>
 
@@ -787,18 +603,18 @@ This matters for right-sizing in a concrete way: per-pupil peer benchmarks refle
 
 A second lens: how did positions move relative to enrollment? If staffing had tracked enrollment, both lines would slope downward. Instead, as D65 lost nearly 1,500 students between 2016–17 and 2022–23, central office positions more than quadrupled:
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Enrollment vs. Central Office Positions, 2016–2026</div>
-  <div class="viz-body" style="padding:24px 24px 16px;">
-    <div style="position:relative;width:100%;height:440px;">
+  <div class="viz-body">
+    <div class="chart-box">
       <canvas id="scatterEmbed" role="img" aria-label="Connected scatter plot showing cabinet, sub-cabinet, and total administrative positions against student enrollment at D65 from 2016-17 to 2025-26."></canvas>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 4px;font-size:13px;color:#6b6458;">
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#185FA5;display:inline-block;"></span>Cabinet</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#85B7EB;display:inline-block;"></span>Sub-cabinet</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:28px;height:3px;background:#534AB7;display:inline-block;"></span>Total central office admin</span>
+    <div class="legend">
+      <span><span class="sw line" style="background:#185FA5"></span>Cabinet</span>
+      <span><span class="sw line" style="background:#85B7EB"></span>Sub-cabinet</span>
+      <span><span class="sw line" style="background:#534AB7"></span>Total central office admin</span>
     </div>
-    <p style="font-size:12px;color:#6b6458;margin:4px 0 0;font-family:'IBM Plex Mono',monospace;">Each point = one school year, moving left to right as enrollment declines chronologically.</p>
+    <p class="viz-note">Each point = one school year, moving left to right as enrollment declines chronologically.</p>
   </div>
 </div>
 
@@ -926,7 +742,9 @@ A second lens: how did positions move relative to enrollment? If staffing had tr
 })();
 </script>
 
-*Chart uses District 65's own K-8 count, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs (5,630 in 2025–26, from the District's [November 2025 enrollment memo](https://ig.foiagras.com/api/public/chat/documents/248/view){:target="_blank"}). ISBE's broader 'total served' figure, which adds those programs, is approximately 5,997. Full series and per-year sources: [d65_enrollment_history.csv](data/d65_enrollment_history.csv).*
+> **About this chart**
+> Chart uses District 65's own K-8 count, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs (5,630 in 2025–26, from the District's [November 2025 enrollment memo](https://ig.foiagras.com/api/public/chat/documents/248/view){:target="_blank"}). ISBE's broader 'total served' figure, which adds those programs, is approximately 5,997. Full series and per-year sources: [d65_enrollment_history.csv](data/d65_enrollment_history.csv).
+{: .note}
 
 Enrollment fell 18% from 2016–17 to 2022–23; total central office positions grew from 14 to 60. The SDRP pulled the lines back from their peak, but the 2025–26 points remain dramatically above where they started when enrollment was a third higher.
 
@@ -934,20 +752,23 @@ Indexed to 2016–17 = 100%, enrollment fell to 74% of baseline — a loss of ab
 
 The sub-cabinet tells a different story entirely. It grew from 100% to **800%** of baseline by the 2022–23 peak — eight times its 2016–17 level — while enrollment was still falling. Post-SDRP, it sits at **700%**. At that 2022–23 peak, for every percentage point enrollment had fallen from baseline, sub-cabinet had grown roughly 39 percentage points in the other direction.
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Indexed Change: Enrollment vs. Sub-Cabinet Growth, 2016–2026 (2016–17 = 100%)</div>
-  <div class="viz-body" style="padding:24px 24px 16px;">
-    <div style="font-family:'IBM Plex Mono',monospace;display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;font-size:11px;color:#6b6458;">
-      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:rgba(24,95,165,0.82);"></span>Enrollment</span>
-      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:#E03A1E;"></span>Sub-cabinet</span>
-      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:24px;height:10px;border-radius:2px;background:#F4A940;"></span>Cabinet</span>
+  <div class="viz-body">
+    <div class="legend above">
+      <span><span class="sw sw-bar" style="background:rgba(24,95,165,0.82)"></span>Enrollment</span>
+      <span><span class="sw sw-bar" style="background:#E03A1E"></span>Sub-cabinet</span>
+      <span><span class="sw sw-bar" style="background:#F4A940"></span>Cabinet</span>
     </div>
-    <div style="position:relative;width:100%;height:360px;">
+    <div class="chart-box h360">
       <canvas id="fig3indexed" role="img" aria-label="Indexed horizontal bar chart. Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP. Enrollment fell to 74% by 2025-26.">Sub-cabinet peaked at 800% in 2022-23 and remains at 700% post-SDRP.</canvas>
     </div>
-    <p style="font-size:11px;color:#6b6458;margin-top:10px;font-family:'IBM Plex Mono',monospace;"><strong>How to read:</strong> Bars share the same centerline. Sub-cabinet bars exceeding 200% are truncated; actual values shown at right. The solid black vertical line marks the 100% baseline (2016–17).</p>
   </div>
 </div>
+
+> **How to read this chart**
+> Bars share the same centerline. Sub-cabinet bars exceeding 200% are truncated; actual values shown at right. The solid black vertical line marks the 100% baseline (2016–17).
+{: .note}
 
 <script>
 (function(){
@@ -1115,7 +936,7 @@ The ongoing HR audit is the right starting point. The Legion of Data Nerds has f
 
 The cabinet was cut dramatically under the SDRP, finishing below its 2016–17 starting point. The sub-cabinet — where most of the day-to-day administrative cost actually lives — contracted by roughly 13% while remaining seven times its original size. A district that cuts its top positions while leaving dozens of directors, coordinators, and program managers in place has not right-sized; it has decapitated. The real opportunity is in the second tier.
 
-The math is straightforward. The 16 sub-cabinet positions disclosed in the district's FY2025–26 PA 96-0434 report average approximately $173,000 in total compensation; the district's own April 20, 2026 SDRP Phase III deck implicitly values an admin/support cut at $129,489 per position (the FY26 workforce average). With the full sub-cabinet estimated at 42 positions, a conservative reduction to 20 — still more than three times the 2016 baseline — would eliminate roughly 22 roles and save an estimated **$2.8 to $3.8 million annually**, without touching a single teacher, counselor, or librarian. A reduction to ~10 positions would approach **$4 to $5.5 million**.
+The math is straightforward. The 16 sub-cabinet positions disclosed in the district's FY2025–26 PA 96-0434 report average approximately $173,000 in total compensation; the district's own April 20, 2026 SDRP Phase III deck implicitly values an admin/support cut at $129,489 per position (the FY26 workforce average). <mark>With the full sub-cabinet estimated at 42 positions, a conservative reduction to 20 — still more than three times the 2016 baseline — would eliminate roughly 22 roles and save an estimated <strong>$2.8 to $3.8 million annually</strong>, without touching a single teacher, counselor, or librarian.</mark> A reduction to ~10 positions would approach **$4 to $5.5 million**.
 
 D65 still spends $619 per pupil on Special Area Administration against a peer average of $176. The district cannot claim to have right-sized while that gap remains unexplained. And the district cannot have it both ways on enrollment decline: the same enrollment math that justified the initial proposal to close four school buildings over two years should apply to the central office staffing model with equal urgency. School closures happened immediately. The $8.29M Phase III administrative cut proposal was presented 19 days after the contractual deadline that would have made it actionable for FY27, deferring those cuts to FY28 at the earliest. The asymmetry is the argument.
 
@@ -1166,7 +987,7 @@ Document analysis and thematic synthesis were supported by [Claude](https://clau
 
 *(Updated August 2, 2026 — an earlier version of this analysis used −25%; see below.)*
 
-This analysis uses **−24%** as the headline enrollment decline figure: **7,371 students in SY2015–16 → 5,630 in SY2025–26**. Every enrollment figure in this piece — headline, charts, and prose — now uses one consistent measure: **students in grades K-8 at District 65's regular schools, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs.** This is the District's own long-running internal count; the November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade." Sources for each year are documented in [d65_enrollment_history.csv](data/d65_enrollment_history.csv) and in the companion [Admin Growth analysis](admin-growth-final#correction-the-enrollment-series).
+This analysis uses **−24%** as the headline enrollment decline figure: **7,371 students in SY2015–16 → 5,630 in SY2025–26**. Every enrollment figure in this piece — headline, charts, and prose — now uses one consistent measure: **students in grades K-8 at District 65's regular schools, excluding Park School, the Rice Children's Center, and the JEH/Family Center early-childhood programs.** This is the District's own long-running internal count; the November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade." Sources for each year are documented in [d65_enrollment_history.csv](data/d65_enrollment_history.csv) and in the companion [Admin Growth analysis](admin-growth-final.html#correction-the-enrollment-series).
 
 **Why this changed.** The earlier −25% figure was taken from Larry Gavin's March 2026 *Evanston RoundTable* peer-comparison analysis, which measures from FY2019 and uses ISBE's broader "total served" population. Applying that headline to this analysis's SY2015–16 baseline mixed two different measures. Correcting to a single consistent series gives −24%. Gavin's −25% remains accurate on his own basis, as does his finding that D65's decline is the steepest among 21 nearby K-8 districts. ISBE's "total served" measure over this analysis's window gives 7,894 → approximately 5,997, a −24.0% decline — the same answer.
 
@@ -1229,7 +1050,7 @@ All primary documents were obtained via FOIA requests to District 65 or retrieve
 
 ### Legion of Data Nerds companion analyses
 
-- [District 65 Administrative Growth Over Time](admin-growth-final) — inflation-adjusted dollar trends and right-sizing scenarios
+- [District 65 Administrative Growth Over Time](admin-growth-final.html) — inflation-adjusted dollar trends and right-sizing scenarios
 - [D65 Peer Budget Analysis](https://d65-legionofnerds.github.io/dataanalysis/budget_analysis.html){:target="_blank"} — per-pupil functional expenditure comparison
 
 ---
@@ -1248,15 +1069,15 @@ This version reconciles the post-SDRP cabinet count to six, reframes the sub-cab
 
 ## Appendix: Alternative Figure
 
-<div class="viz-wrap">
+<div class="viz-wrap org-legacy">
   <div class="viz-header">Alternative Figure: Two-Tier Growth as Bone Chart</div>
   <div class="viz-body">
-    <p style="font-size:13px;color:#6b6458;margin-bottom:16px;font-family:'IBM Plex Mono',monospace;">An alternative rendering of the two-tier administrative growth figure using bone iconography, in keeping with the "cut to the bone" framing. Cabinet shown as bottom knob; sub-cabinet as upper shaft. The fractured bone represents the post-SDRP structure.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:14px;font-size:11px;color:#6b6458;font-family:'IBM Plex Mono',monospace;">
-      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:#c0392b;"></span>Cabinet</span>
-      <span style="display:flex;align-items:center;gap:5px;"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:#f09595;"></span>Sub-cabinet</span>
+    <p class="viz-note intro">An alternative rendering of the two-tier administrative growth figure using bone iconography, in keeping with the "cut to the bone" framing. Cabinet shown as bottom knob; sub-cabinet as upper shaft. The fractured bone represents the post-SDRP structure.</p>
+    <div class="legend above">
+      <span><span class="sw" style="background:#c0392b"></span>Cabinet</span>
+      <span><span class="sw" style="background:#f09595"></span>Sub-cabinet</span>
     </div>
-    <div style="display:flex;align-items:flex-end;gap:6px;height:280px;padding:0 8px;" id="boneAppendix"></div>
+    <div class="bone-box" id="boneAppendix"></div>
   </div>
 </div>
 

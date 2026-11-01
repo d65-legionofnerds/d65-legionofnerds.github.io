@@ -11,3 +11,15 @@ Reach the nerds at d65.legionofnerds@gmail.com
 
 # Our partners
 [Invest in Neighborhood Schools](https://www.investinevanston.com/)
+
+# Updating the website
+The site is built from this repo with Jekyll and published automatically when changes reach `main`.
+To publish a new analysis you add **one Markdown file** with a few lines of settings at the top; the
+homepage, section pages, All stories and search update themselves.
+
+**Read [CLAUDE.md](CLAUDE.md) first.** It covers the steps, the settings for each page, the house
+style (the yellow highlighter and the red margin notes), charts, and how to check your work. If you
+use Claude Code or another AI assistant, it reads those instructions automatically.
+
+A starting template for a new analysis is in [tools/templates/new-analysis.md](tools/templates/new-analysis.md).
+

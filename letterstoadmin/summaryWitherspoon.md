@@ -1,17 +1,17 @@
 ---
-title: Summary to Witherspoon
-parent: Letters to the Admin
-layout: home
-nav_order: 2
+title: "A Year of SDRP Analysis: Summary for Dr. Witherspoon"
+date: 2026-09-18
+topic: closures
+type: admin-letter
+summary: "A recap of what we learned analyzing SDRP Phase III data and methods, with a request to meet on data, methodology and process."
 ---
-
 
 Email sent 9/18/26
 
 
 Dear Dr. Witherspoon,
 
-I am Jean Clipperton (DSM Lincoln grad!) writing on behalf of the Legion of Data Nerds with what I hope will be a helpful recap of what we've learned from analyzing the SDRP 3 data and methodology over the last year, specifically dealing with closures and consolidation. I would like the opportunity to meet briefly (via zoom or in person) to go over data, methodology, and process concerns in more detail. We believe it is critical to recognize and be aware of the underlying assumptions of a financial stability plan that features consolidation. If you can provide me with your availability, I will make something work on my end.
+I am Jean Clipperton (DSM Lincoln grad!) writing on behalf of the Legion of Data Nerds with what I hope will be a helpful recap of what we've learned from analyzing the SDRP 3 data and methodology over the last year, specifically dealing with closures and consolidation. <mark>I would like the opportunity to meet briefly (via zoom or in person) to go over data, methodology, and process concerns in more detail.</mark> We believe it is critical to recognize and be aware of the underlying assumptions of a financial stability plan that features consolidation. If you can provide me with your availability, I will make something work on my end.
 
 ## Methods
 

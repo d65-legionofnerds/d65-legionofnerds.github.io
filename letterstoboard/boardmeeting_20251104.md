@@ -1,11 +1,11 @@
 ---
-title: November 3 Board Meeting
-parent: Letters to the Board
-layout: home
-nav_order: 1
+title: "If Nobody Knows, We Shouldn’t Close"
+date: 2025-11-03
+topic: closures
+type: board-letter
+summary: "Our statement to the Board urging evidence-informed decisions, and our concerns about how modeling choices predetermined the results."
 ---
 
-# If nobody knows, we shouldn't close
 11/3/2025
 
 On behalf of the Legion of Data Nerds, we write as one voice urging this Board to use evidence-informed decision-making to build a thriving future for our community, our schools, and our children.

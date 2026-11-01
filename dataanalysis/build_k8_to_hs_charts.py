@@ -12,6 +12,8 @@ and bring them BACK to ETHS for high school — visible as ETHS Grade 9 being
 Reads:  data/d65_to_eths_cohorts.csv
 Writes: assets/k8_to_hs_*.html
 """
+import sys
+import textwrap
 from pathlib import Path
 import pandas as pd
 import plotly.graph_objects as go
@@ -20,6 +22,10 @@ from plotly.subplots import make_subplots
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 ASSETS = ROOT / "assets"
+
+# write_html adds the phone layout (layout.meta.narrow); see tools/patch_plotly_layout.py.
+sys.path.insert(0, str(ROOT.parent / "tools"))
+from patch_plotly_layout import write_html as write_chart_html  # noqa: E402
 
 D65_COLOR  = "#2980b9"   # blue
 ETHS_COLOR = "#c0392b"   # red — high contrast vs D65
@@ -43,22 +49,48 @@ plot_df["ratio"]             = plot_df["eths_grade9_count"] / plot_df["d65_grade
 plot_df["cohort_label"]      = plot_df["d65_grade8_year"] + " → " + plot_df["eths_grade9_year"]
 
 
-def base_layout(title, xt="School Year (D65 8th-grade cohort, then ETHS 9th-grade)", yt="", height=550, legend_y=-0.20):
+def wrap(text, width):
+    return "<br>".join(textwrap.wrap(text, width))
+
+
+def title_top(text):
+    """Top margin for a bold 18 px title of this many lines."""
+    return 28 + text.count("<br>") * 24 + 34
+
+
+def base_layout(title, xt="School Year (D65 8th-grade cohort, then ETHS 9th-grade)", yt="", height=550, legend_y=None):
+    # The legend sits at the bottom of the figure (yref="container"), below the rotated year labels
+    # and the axis title; legend_y is no longer used.
+    text = f"<b>{wrap(title, 64)}</b>"
     return dict(
-        title=dict(text=f"<b>{title}</b>", x=0.5, xanchor="center", font=dict(size=18)),
+        title=dict(text=text, x=0.5, xanchor="center", font=dict(size=18),
+                   yref="container", y=1 - 28 / height, yanchor="top"),
         xaxis_title=xt, yaxis_title=yt,
         height=height,
-        legend=dict(orientation="h", y=legend_y, x=0.5, xanchor="center"),
+        legend=dict(orientation="h", x=0.5, xanchor="center", yref="container", y=0, yanchor="bottom"),
         plot_bgcolor="white",
-        xaxis=dict(showgrid=True, gridcolor="#eee"),
+        xaxis=dict(showgrid=True, gridcolor="#eee", automargin=True),
         yaxis=dict(showgrid=True, gridcolor="#eee"),
-        margin=dict(l=70, r=30, t=70, b=110),
+        margin=dict(l=70, r=30, t=title_top(text), b=60),
     )
 
 
-def write(fig, name):
+def write(fig, name, restyle=None):
+    """Write the chart, with a phone layout: title wrapped narrower, x labels shortened to the
+    D65 8th-grade year (the axis title says what the pair means), and bar labels hidden where
+    they would have to shrink below 8 px."""
+    phone_title = f"<b>{wrap(fig.layout.title.text[3:-4].replace('<br>', ' '), 28)}</b>"
+    cats = list(plot_df["cohort_label"])
+    narrow = {
+        "title.text": phone_title, "margin.t": title_top(phone_title), "margin.l": 50, "margin.r": 10,
+        "xaxis.tickvals": cats, "xaxis.ticktext": [c.split(" → ")[0] for c in cats],
+        "xaxis.title.text": "D65 8th-grade year<br>(ETHS 9th grade the next fall)",
+        "uniformtext.mode": "hide", "uniformtext.minsize": 8, "legend.font.size": 11,
+    }
+    if "yaxis2" in fig.layout.to_plotly_json():   # chart 2 has a right-hand axis
+        narrow["margin.r"] = 50
     out = ASSETS / f"k8_to_hs_{name}.html"
-    fig.write_html(out, include_plotlyjs="cdn", div_id=f"k8_to_hs_{name}")
+    write_chart_html(fig, out, narrow=narrow, restyle=restyle, include_plotlyjs="cdn", div_id=f"k8_to_hs_{name}")
     print(f"Wrote {out}")
 
 
@@ -113,8 +145,7 @@ fig2.update_yaxes(title_text="Gain as % of D65 cohort", ticksuffix="%", secondar
 fig2.update_layout(**base_layout(
     "Net External Gain at the K-8 → High School Transition",
     yt=""))
-fig2.update_layout(xaxis=dict(tickangle=-45),
-                   legend=dict(orientation="h", y=-0.25, x=0.5, xanchor="center"))
+fig2.update_layout(xaxis=dict(tickangle=-45))
 write(fig2, "external_gain_trend")
 
 
@@ -152,7 +183,8 @@ fig3.update_layout(barmode="stack", **base_layout(
     "Composition of Each ETHS Freshman Class",
     yt="ETHS 9th-grade enrollment"))
 fig3.update_layout(xaxis=dict(tickangle=-45))
-write(fig3, "eths_composition")
+# On phones the stack totals (trace 3, text only) collide; hide them there (the axis gives the total).
+write(fig3, "eths_composition", restyle={"mode": [None, None, "none"]})
 
 
 # ------------------------------------------------------------
@@ -171,11 +203,11 @@ fig4.add_trace(go.Scatter(
 mean_pct = plot_df["gain_pct"].mean()
 fig4.add_hline(y=mean_pct, line=dict(color="#999", width=1, dash="dash"),
                annotation_text=f"10-yr mean: {mean_pct:.1f}%",
-               annotation_position="right")
+               annotation_position="top left")
 fig4.update_layout(**base_layout(
     "Has the K-8 Trust Gap Grown? — External Gain as % of D65 Cohort, by Year",
     yt="External gain as % of D65 cohort",
-    height=550))
+    height=530))   # 530 + page margins fits the page's 550 px frame
 fig4.update_yaxes(ticksuffix="%")
 fig4.update_layout(xaxis=dict(tickangle=-45))
 write(fig4, "trend_pct")

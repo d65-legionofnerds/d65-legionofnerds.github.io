@@ -1,10 +1,18 @@
 ---
-title: Kingsley Closure Survey Results
-layout: default
-parent: Data Analysis
+title: "Kingsley Closure Survey Results"
+date: 2026-01-25
+topic: closures
+type: analysis
+summary: "What Kingsley families told us about new boundaries, transition support and whether they plan to stay in D65."
+image: /assets/img/lead/kingsley_closure_survey.png
+image_alt: "Flow chart of the 120 survey respondents from their assigned school under the proposed boundaries to their preferred school: assigned Lincolnwood 57, Willard 33, Orrington 23 and Foster 7; preferred Lincolnwood 62, Willard 21, Orrington 16 and Foster 6, plus a few other answers."
+image_source: dataanalysis/assets/kingsley_survey/assigned_vs_preferred_school.html
+takeaways:
+  - "69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27, but many respondents would prefer the flexibility to choose the school that is right for them."
+  - "There was overwhelming support (78%) for walkable attendance boundaries combined with guaranteed placement at a designated Kingsley receiving school for those that request it."
+  - "The large majority (85%) indicated they were likely to remain in District 65 for 2026-27, but 10% indicated they were likely to leave."
+  - "The most commonly cited reasons that may contribute to a choice to leave were lack of trust in district administration (63%), lack of transparency and accountability in district decision-making (58%), and lack of trust in the board of education (55%)."
 ---
-
-# Kingsley Closure Analysis
 
 ## Introduction
 
@@ -47,7 +55,7 @@ Lincolnwood emerged consistently as the most preferred receiving school.
 
 69% indicated that their assigned school under the proposed boundaries is also their preferred school for 2026–27, but many respondents would prefer the flexibility to choose the school that is right for them.
 
-<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0"></iframe>
+<iframe src="assets/kingsley_survey/assigned_vs_preferred_school.html" width="100%" height="650" frameborder="0" title="Kingsley respondents’ assigned school under the proposed boundaries compared with their preferred school"></iframe>
 
 Survey results show strong alignment between Kingsley families and the district’s attendance boundaries for families entering the district in fall of 2026. A large majority of respondents (75%) identified walkability, safety, and ease of access as the most important factors in setting future boundaries.
 
@@ -87,7 +95,7 @@ Families expressed concerns about how kids will feel during the transition, whet
 
 ### Intent to Stay
 
-Respondents were asked how likely it is that their child(ren) would remain in District 65 for the 2026-27 school year. The large majority (85%) indicated they were likely to remain, but 10% of respondents indicated they were likely to leave District 65.
+Respondents were asked how likely it is that their child(ren) would remain in District 65 for the 2026-27 school year. <mark>The large majority (85%) indicated they were likely to remain, but 10% of respondents indicated they were likely to leave District 65.</mark>
 
 ![Intent to Stay](assets/kingsley_survey/intent_to_stay.png)
 
@@ -136,7 +144,7 @@ Generally parents expressed anger and frustration about the process. Parents rep
 
 ## Discussion
 
-Kingsley parents are supportive of the walkable boundaries the board approved and most intend to remain in District 65 next year. However, there is also broad community support for allowing early guaranteed placement to keep the current Kingsley cohorts together, and strong sentiments of dissatisfaction at the district leadership level. 
+<mark>Kingsley parents are supportive of the walkable boundaries the board approved and most intend to remain in District 65 next year.</mark> However, there is also broad community support for allowing early guaranteed placement to keep the current Kingsley cohorts together, and strong sentiments of dissatisfaction at the district leadership level. 
 
 Kingsley parents identified numerous ways to help ease their children's transition to a new school, foremost being ample opportunities to tour and become familiar with the new spaces.
 

@@ -1,0 +1,2 @@
+{%- comment -%} "Closures · Analysis" line above a headline. Pass s (story) and optionally no_topic=true. {%- endcomment -%}
+<div class="kicker">{% unless include.no_topic %}<a class="tp" href="{{ '/topics/' | append: include.s.topic | append: '/' | relative_url }}">{{ include.s.topic_short }}</a> · {% endunless %}{{ include.s.type_label }}{% if include.s.format and include.s.external %} · {{ include.s.format }}{% endif %}</div>

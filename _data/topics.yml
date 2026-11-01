@@ -1,0 +1,25 @@
+# The four sections of the site. Every page with `topic:` must use one of these ids.
+# `short` is the label in the section bar; `question` is the line highlighted under the section name.
+- id: closures
+  name: School Closures
+  short: Closures
+  question: Did closing schools save what was promised?
+  blurb: The SDRP closure process, what the Kingsley and Bessie Rhodes closures actually changed, and the new proposal to close Lincolnwood and Dewey.
+
+- id: buildings
+  name: Enrollment & Buildings
+  short: Enrollment & Buildings
+  question: How full are our schools, and how big are classes?
+  blurb: Enrollment trends, building utilization and class sizes, from the District’s own dashboards and section lists.
+
+- id: budget
+  name: Budget & Savings
+  short: Budget
+  question: Where else could the District find savings?
+  blurb: Budget levers, discrepancies in the District’s projections, comparisons with peer districts, and ideas for sharing costs with the City.
+
+- id: admin
+  name: Administration & Staffing
+  short: Administration
+  question: Has central administration grown?
+  blurb: Ten years of administrator headcount, pay and org charts, set against enrollment.

@@ -1,0 +1,30 @@
+# Kinds of work. Every page with `topic:` must have a `type:` from this list.
+# `group` is the filter chip it falls under on the All stories page.
+# Only `analysis` pieces can lead the homepage (newest analysis leads unless one is pinned with `lead: true`).
+- id: analysis
+  label: Analysis
+  group: Analyses
+- id: explainer
+  label: Explainer
+  group: Explainers
+- id: memo
+  label: Memo
+  group: Memos
+- id: guest
+  label: Guest memo
+  group: Memos
+- id: board-letter
+  label: Letter to the Board
+  group: Letters
+- id: admin-letter
+  label: Letter to the Administration
+  group: Letters
+- id: oped
+  label: Op-ed
+  group: Op-eds
+- id: tool
+  label: Interactive tool
+  group: Tools & code
+- id: code
+  label: Data & code
+  group: Tools & code
