@@ -22,7 +22,3 @@ These concerns are not about the community process or its underlying goals. They
 ## Contact us
 
 Reach the Nerds at [{{ site.email }}](mailto:{{ site.email }}).
-
-## Our partners
-
-[{{ site.partner.name }}]({{ site.partner.url }})

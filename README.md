@@ -9,9 +9,6 @@ These concerns are not about the community process or underlying goals. The conc
 # Contact us
 Reach the nerds at d65.legionofnerds@gmail.com
 
-# Our partners
-[Invest in Neighborhood Schools](https://www.investinevanston.com/)
-
 # Updating the website
 The site is built from this repo with Jekyll and published automatically when changes reach `main`.
 To publish a new analysis you add **one Markdown file** with a few lines of settings at the top; the

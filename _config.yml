@@ -11,9 +11,6 @@ lang: en_US
 email: d65.legionofnerds@gmail.com
 github: https://github.com/d65-legionofnerds
 repo: https://github.com/d65-legionofnerds/d65-legionofnerds.github.io
-partner:
-  name: Invest in Neighborhood Schools
-  url: https://www.investinevanston.com/
 
 # Used by jekyll-seo-tag for link previews when a page has no image of its own.
 logo: /assets/logo.png

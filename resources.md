@@ -63,6 +63,11 @@ Below we provide links to salary information on administrators. Note that there 
 [Board meeting agendas](https://meetings.boardbook.org/Public/Organization/1247){:target="_blank"}
 
 
+## Community groups
+
+[Invest in Neighborhood Schools](https://www.investinevanston.com/){:target="_blank"}
+
+
 ## Third Party Resources
 
 [Institute of Education Sciences](https://ies.ed.gov/){:target="_blank"}
