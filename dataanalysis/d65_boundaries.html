@@ -412,7 +412,7 @@ svg.fitmap{display:block;width:100%;height:auto;max-height:calc(100vh - 96px);ma
   <div class="tabbar" role="tablist" aria-label="View">
     <div class="tg tg-o23"><div class="tgl" aria-hidden="true">Oct 23 draft (latest)</div><div class="tgb">
       <button type="button" role="tab" id="tab-oi-btn" aria-selected="false" aria-controls="tab-oi" aria-label="Oct 23 draft impact analysis">What changes</button>
-      <button type="button" role="tab" id="tab-oc-btn" aria-selected="false" aria-controls="tab-oc" aria-label="Students near each school, circles explorer">School circles</button>
+      <button type="button" role="tab" id="tab-oc-btn" aria-selected="false" aria-controls="tab-oc" aria-label="Map Explorer: students who live near each school">Map Explorer</button>
     </div></div>
     <div class="tg tg-stu"><div class="tgl" aria-hidden="true">By estimated students</div><div class="tgb">
       <button type="button" role="tab" id="tab-es-btn" aria-selected="true" aria-controls="tab-es" aria-label="Elementary, by estimated students">Elementary</button>
@@ -441,7 +441,7 @@ svg.fitmap{display:block;width:100%;height:auto;max-height:calc(100vh - 96px);ma
     <div class="ab">
       <h4>Sources</h4>
       <ul>
-        <li><b>Boundary lines.</b> District 65's "FY28 Proposed Boundaries" Google map: the 2026-27 layer (today) and the "Oct. 23, 2026 Proposed Boundaries" layer, pulled October 23, 2026, and drawn on a street basemap from the U.S. Census 2023 road file (the same map frame as D65 School Circles). The Oct 23 layer also draws King Arts' small neighborhood area west of Dodge; it is King Arts' area today too, so it is left out of Dewey's 2026-27 area. Earlier versions of this page used the Oct 13 layer ("FY28 Tentative Boundaries," downloaded October 14).</li>
+        <li><b>Boundary lines.</b> District 65's "FY28 Proposed Boundaries" Google map: the 2026-27 layer (today) and the "Oct. 23, 2026 Proposed Boundaries" layer, pulled October 23, 2026, and drawn on a street basemap from the U.S. Census 2023 road file (the same map frame as the Map Explorer). The Oct 23 layer also draws King Arts' small neighborhood area west of Dodge; it is King Arts' area today too, so it is left out of Dewey's 2026-27 area. Earlier versions of this page used the Oct 13 layer ("FY28 Tentative Boundaries," downloaded October 14).</li>
         <li><b>Enrollment.</b> October 1, 2026 enrollment by school (3,204 K-5 students across the ten neighborhood elementary schools; 1,759 at Chute, Haven and Nichols). King Arts, Park, Hill and other programs are not included.</li>
         <li><b>Student moves.</b> The district's counts for the Oct 23 draft, shared October 28, 2026 ("Boundary Impacts for LODN" sheet): 660 current K-4 students change school (Lincolnwood to Willard 154, Dewey to Washington 73, Dewey to Lincoln 42, Lincolnwood to Foster 38, Lincoln to Oakton 37, Washington to Dawes 37, Oakton to Dawes 19, Dewey to Orrington 10, Dewey to Foster under 10, 31 to King Arts); 144 change elementary and middle school. Program and transfer moves are withheld by area.</li>
         <li><b>Where students live.</b> U.S. Census Bureau American Community Survey 2020-2024 5-year estimates, table B14002 (school enrollment by level and public or private school), by block group. Within each block group, students are placed on census blocks by each block's under-18 population in the 2020 Census (redistricting file P1 and P3). Block and district lines are 2020 TIGER files, including the Census Bureau's boundary for Evanston Community Consolidated School District 65, so the Skokie part of the district is included.</li>
@@ -453,7 +453,7 @@ svg.fitmap{display:block;width:100%;height:auto;max-height:calc(100vh - 96px);ma
         <li><b>Land area tabs</b> measure the share of each FY27 attendance area's land that moves to each new zone. Parks, campus and cemetery land count the same as homes. About 83 lakefront acres are left out because the two maps don't line up there.</li>
         <li><b>Student tabs</b> split each school's October 1 enrollment using the district's own totals. Where the district hasn't said how Dewey students divide between Lincoln and Washington, figures are shown as a range with its midpoint.</li>
         <li><b>Boundary builder</b> divides the map into cells about 200 feet across. Each cell's students come from the FY27 area and Oct 23 zone it falls in, following where children live by census block. Public school K-5 students per block group come from ACS table B14002 (kindergarten, grades 1-4, and a quarter of grades 5-8), then are placed on blocks by 2020 under-18 population. By default each FY27 area's census total is matched to its school's October 1 enrollment, so the FY27 zones reproduce actual counts and the census decides where within each area students live. You can switch to one district-wide factor (census counts times 0.75, so the ten schools total 3,204) or back to the earlier even-by-land spread. Each school's grade counts are an even sixth of its total, since grade-level counts by school aren't published. Sections are the fewest classes that keep each grade at or under the class size cap, and classrooms are the district's homeroom room counts. Utilization divides students by seats: the lower of the district's teaching stations × 24 and the 2022 Cordogan Clark capacity (the same rule as the other LoDN maps). The district's FY28 table (October 7, 2026) gives different numbers for some schools, for example Willard 512 and Orrington 360.</li>
-        <li><b>Who lives there tabs</b> count residents, not enrolled students: 2020 Census kids by block (ages 5 to 10 for K-5), so kids at King Arts, private or charter schools are included. Ages 10 to 14 come as one group, so single ages are split evenly. These tabs use their own map alignment (by street intersections, accurate to about a block), so their lines can differ slightly from the land area tabs. Kid-based walking distance follows streets, alleys and paths from each census block to its assigned school (2023 Census road file; expressways and ramps left out), the same walks used on D65 School Circles.</li>
+        <li><b>Who lives there tabs</b> count residents, not enrolled students: 2020 Census kids by block (ages 5 to 10 for K-5), so kids at King Arts, private or charter schools are included. Ages 10 to 14 come as one group, so single ages are split evenly. These tabs use their own map alignment (by street intersections, accurate to about a block), so their lines can differ slightly from the land area tabs. Kid-based walking distance follows streets, alleys and paths from each census block to its assigned school (2023 Census road file; expressways and ramps left out), the same walks used on the Map Explorer.</li>
         <li><b>Middle school zones</b> are elementary zones grouped by feeder. Middle school student counts are a rough end state using 0.55 middle schoolers per K-5 student, and changes would phase in with incoming 6th graders.</li>
       </ul>
       <h4>Limits</h4>
@@ -753,8 +753,8 @@ svg.fitmap{display:block;width:100%;height:auto;max-height:calc(100vh - 96px);ma
   <iframe class="o23frame" id="oiframe" title="Oct 23 draft: what changes" data-src="d65_circles.html#proposed"></iframe>
   </section>
   <section id="tab-oc" role="tabpanel" aria-labelledby="tab-oc-btn" hidden>
-  <div class="viewnote vn-o23" role="note"><b>School circles.</b> Draw a circle around each school and count the students who live inside it, with the Oct 23 or today's lines underneath. <a href="d65_circles.html#circles" target="_blank" rel="noopener">Open on its own page</a></div>
-  <iframe class="o23frame" id="ocframe" title="School circles explorer" data-src="d65_circles.html#circles"></iframe>
+  <div class="viewnote vn-o23" role="note"><b>Map Explorer.</b> Draw a circle around each school and count the students who live inside it, with the Oct 23 or today's lines underneath. <a href="d65_circles.html#circles" target="_blank" rel="noopener">Open on its own page</a></div>
+  <iframe class="o23frame" id="ocframe" title="Map Explorer" data-src="d65_circles.html#circles"></iframe>
   </section>
   <section id="tab-kr" role="tabpanel" aria-labelledby="tab-kr-btn" hidden>
   <div class="viewnote vn-past" role="note"><b>Open this chart on its own page:</b> <a href="https://claude.ai/artifact/YTUAxSBtUcz3yTVZT6cgqt" target="_blank" rel="noopener">Where the Kingsley and Bessie Rhodes students went</a></div>
@@ -1040,7 +1040,7 @@ for(const [s,g] of Object.entries(SAV)){
             <li>Land shares, walking distances, disruption rates, Census-based tabs, demographics and the boundary builder's Oct 23 starting map recomputed. The same methods reproduce the page's earlier Oct 13 figures.</li>
             <li>Seats use the LoDN rule (lower of teaching stations × 24 and Cordogan Clark), the same as the other maps.</li>
             <li>The basemap is now a plain street map (U.S. Census 2023 roads). The old one was the district's Oct 13 map image, which showed the Oct 13 zones underneath.</li>
-            <li>New "Oct 23 draft" tabs: what changes, and the school circles explorer.</li>
+            <li>New "Oct 23 draft" tabs: what changes, and the Map Explorer.</li>
           </ul></div>
         <div class="vday"><b>Oct. 18, 2026, 7:30 PM CT</b> &middot; JC
           <ul>
@@ -1528,7 +1528,7 @@ const SCH=["Dawes","Dewey","Foster","Lincoln","Lincolnwood","Oakton","Orrington"
 const ROOMS={Dawes:23,Dewey:25,Foster:24,Lincoln:30,Lincolnwood:20,Oakton:28,Orrington:19,Walker:18,Washington:26,Willard:24};
 const GR=["K","1","2","3","4","5"];
 /* Seats: lower of the district's teaching stations x 24 and the 2022 Cordogan Clark capacity (LoDN rule, the same on
-   D65 School Circles and the Oct 23 map pages). Source: repo dataanalysis/data/sy27_fall/capacity_comparison.csv. */
+   the Map Explorer and the Oct 23 map pages). Source: repo dataanalysis/data/sy27_fall/capacity_comparison.csv. */
 const CAP={Dawes:432,Dewey:537,Foster:576,Lincoln:576,Lincolnwood:432,Oakton:467,Orrington:432,Walker:432,Washington:530,Willard:533};
 const UPC=v=>Math.round(v*100)+"%",UCL=v=>v>1?"warn":v>=.9?"uhi":"";
 const SC=n=>OC(n);
@@ -1862,7 +1862,7 @@ const mi=v=>v.toFixed(2);
 (function(){
   const b=DS.district.before,a=DS.district.after;
   const kp=(k,vb,va,unit,worse)=>`<div class="kpi"><div class="k">${k}</div><div class="v">${vb}${unit} <small>→</small> ${va}${unit}</div><div class="d ${worse?'up':''}">${worse?'Worse':'Better'} for families overall</div></div>`;
-  let h=`<p class="sub" style="margin:0">Distance from each census block to its assigned school building, walking along streets, alleys and paths (2023 Census road file; expressways and ramps left out), the same walks as D65 School Circles. Each result is weighted by where elementary-age kids actually live (2020 Census blocks), so parks, campus and cemetery land count for nothing.</p>`;
+  let h=`<p class="sub" style="margin:0">Distance from each census block to its assigned school building, walking along streets, alleys and paths (2023 Census road file; expressways and ramps left out), the same walks as the Map Explorer. Each result is weighted by where elementary-age kids actually live (2020 Census blocks), so parks, campus and cemetery land count for nothing.</p>`;
   h+=`<div class="kpis"><div class="kpi"><div class="k">Kids changing schools</div><div class="v">~${DS.district.moved.toLocaleString()} <small>of ${DS.district.kids.toLocaleString()}</small></div><div class="d">${Math.round(DS.district.moved*100/DS.district.kids)}% of elementary-age kids</div></div>${kp("Average walk per kid",mi(b.avg),mi(a.avg)," mi",a.avg>b.avg)}${kp("Kids within 1 mile",b.le1,a.le1,"%",a.le1<b.le1)}${kp("Kids over 1.5 miles",b.gt15,a.gt15,"%",a.gt15>b.gt15)}</div>`;
   // dumbbell
   const rows=Object.entries(DS.schools).map(([n,v])=>({n,b:v.before.avg,a:v.after.avg,mb:v.before.max,ma:v.after.max})).sort((x,y)=>(y.a-y.b)-(x.a-x.b));

@@ -129,7 +129,7 @@ rep('''h+=`<tr class="grp"><td colspan="2">${n}${RM.includes(n)?' (proposed clos
 # ---------- 5. builder: seats on the LoDN rule, Oct 23 wording ----------
 i = s.index('/* District FY28 utilization table (Oct 7, 2026)'); j = s.index('const UPC=', i)
 s = s[:i] + '''/* Seats: lower of the district's teaching stations x 24 and the 2022 Cordogan Clark capacity (LoDN rule, the same on
-   D65 School Circles and the Oct 23 map pages). Source: repo dataanalysis/data/sy27_fall/capacity_comparison.csv. */
+   the Map Explorer and the Oct 23 map pages). Source: repo dataanalysis/data/sy27_fall/capacity_comparison.csv. */
 const CAP={Dawes:432,Dewey:537,Foster:576,Lincoln:576,Lincolnwood:432,Oakton:467,Orrington:432,Walker:432,Washington:530,Willard:533};
 ''' + s[j:]
 rep('<button type="button" id="dwfy28">FY28 tentative</button>', '<button type="button" id="dwfy28">Oct 23 draft</button>')
@@ -277,9 +277,9 @@ rep('''<li><b>See what the district's proposal changes:</b>''', '''<li><b>Every 
 
 # ---------- 9. method sentences that changed with the new walks and King Arts' area ----------
 rep('Distance from each home to its assigned school building, measured along the street grid (blocks east-west plus blocks north-south). Each result is weighted by where elementary-age kids actually live (2020 Census blocks), so parks, campus and cemetery land count for nothing.',
-    'Distance from each census block to its assigned school building, walking along streets, alleys and paths (2023 Census road file; expressways and ramps left out), the same walks as D65 School Circles. Each result is weighted by where elementary-age kids actually live (2020 Census blocks), so parks, campus and cemetery land count for nothing.')
+    'Distance from each census block to its assigned school building, walking along streets, alleys and paths (2023 Census road file; expressways and ramps left out), the same walks as the Map Explorer. Each result is weighted by where elementary-age kids actually live (2020 Census blocks), so parks, campus and cemetery land count for nothing.')
 rep('Kid-based walking distance is measured along the street grid from each home to its assigned school and ignores canal and rail crossings.',
-    'Kid-based walking distance follows streets, alleys and paths from each census block to its assigned school (2023 Census road file; expressways and ramps left out), the same walks used on D65 School Circles.')
+    'Kid-based walking distance follows streets, alleys and paths from each census block to its assigned school (2023 Census road file; expressways and ramps left out), the same walks used on the Map Explorer.')
 rep("King Arts is a district-wide magnet with no attendance area, so the boundary maps don't change its riders;", "King Arts draws from across the district, and its small neighborhood area is the same on every map, so the boundary maps don't change its riders;")
 rep('Foster has no report card yet, so its own students are estimated from Census kids and use district-average rates.', 'Foster has no report card yet, so its rates are estimates.')
 rep('End state for today\'s middle school grades: about 59 students (range 53 to 64) once fully phased in.', 'End state for today\'s middle school grades: about 59 students (range 54 to 64) once fully phased in.')
@@ -293,7 +293,7 @@ m = re.search(r'(id="base"[^>]*?href=")(data:image/[^"]+)(")', s)
 s = s[:m.start(2)] + b1 + s[m.end(2):]
 m = re.search(r'(const BASE2=")(data:image/[^"]+)(")', s)
 s = s[:m.start(2)] + b2 + s[m.end(2):]
-for a, bb in [("placed on the district's FY28 map image. The Oct 23 layer", "drawn on a street basemap from the U.S. Census 2023 road file (the same map frame as D65 School Circles). The Oct 23 layer"),
+for a, bb in [("placed on the district's FY28 map image. The Oct 23 layer", "drawn on a street basemap from the U.S. Census 2023 road file (the same map frame as the Map Explorer). The Oct 23 layer"),
               ("(pulled Oct 23, 2026), placed on the district's FY28 map image.", "(pulled Oct 23, 2026), drawn on a street basemap from the U.S. Census 2023 road file.")]:
     rep(a, bb)
 
@@ -315,7 +315,7 @@ rep('<details class="vlog"><summary>All updates</summary>', '''<details class="v
             <li>Land shares, walking distances, disruption rates, Census-based tabs, demographics and the boundary builder's Oct 23 starting map recomputed. The same methods reproduce the page's earlier Oct 13 figures.</li>
             <li>Seats use the LoDN rule (lower of teaching stations × 24 and Cordogan Clark), the same as the other maps.</li>
             <li>The basemap is now a plain street map (U.S. Census 2023 roads). The old one was the district's Oct 13 map image, which showed the Oct 13 zones underneath.</li>
-            <li>New "Oct 23 draft" tabs: what changes, and the school circles explorer.</li>
+            <li>New "Oct 23 draft" tabs: what changes, and the Map Explorer.</li>
           </ul></div>''')
 
 open(out, 'w').write(s)

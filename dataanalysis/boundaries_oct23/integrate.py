@@ -5,7 +5,7 @@ def rep(a,b,n=1):
     global s; assert s.count(a)==n,(a[:70],s.count(a)); s=s.replace(a,b)
 # tab group, first in the bar
 rep('<div class="tg tg-stu"><div class="tgl" aria-hidden="true">By estimated students</div>',
- '<div class="tg tg-o23"><div class="tgl" aria-hidden="true">Oct 23 draft (latest)</div><div class="tgb">\n      <button type="button" role="tab" id="tab-oi-btn" aria-selected="false" aria-controls="tab-oi" aria-label="Oct 23 draft impact analysis">What changes</button>\n      <button type="button" role="tab" id="tab-oc-btn" aria-selected="false" aria-controls="tab-oc" aria-label="Students near each school, circles explorer">School circles</button>\n    </div></div>\n    <div class="tg tg-stu"><div class="tgl" aria-hidden="true">By estimated students</div>')
+ '<div class="tg tg-o23"><div class="tgl" aria-hidden="true">Oct 23 draft (latest)</div><div class="tgb">\n      <button type="button" role="tab" id="tab-oi-btn" aria-selected="false" aria-controls="tab-oi" aria-label="Oct 23 draft impact analysis">What changes</button>\n      <button type="button" role="tab" id="tab-oc-btn" aria-selected="false" aria-controls="tab-oc" aria-label="Map Explorer: students who live near each school">Map Explorer</button>\n    </div></div>\n    <div class="tg tg-stu"><div class="tgl" aria-hidden="true">By estimated students</div>')
 # panels, after the Kingsley/Rhodes panel opener
 rep('<section id="tab-kr" role="tabpanel" aria-labelledby="tab-kr-btn" hidden>',
  '''<section id="tab-oi" role="tabpanel" aria-labelledby="tab-oi-btn" hidden>
@@ -13,8 +13,8 @@ rep('<section id="tab-kr" role="tabpanel" aria-labelledby="tab-kr-btn" hidden>',
   <iframe class="o23frame" id="oiframe" title="Oct 23 draft: what changes" data-src="d65_circles.html#proposed"></iframe>
   </section>
   <section id="tab-oc" role="tabpanel" aria-labelledby="tab-oc-btn" hidden>
-  <div class="viewnote vn-o23" role="note"><b>School circles.</b> Draw a circle around each school and count the students who live inside it, with the Oct 23 or today's lines underneath. <a href="d65_circles.html#circles" target="_blank" rel="noopener">Open on its own page</a></div>
-  <iframe class="o23frame" id="ocframe" title="School circles explorer" data-src="d65_circles.html#circles"></iframe>
+  <div class="viewnote vn-o23" role="note"><b>Map Explorer.</b> Draw a circle around each school and count the students who live inside it, with the Oct 23 or today's lines underneath. <a href="d65_circles.html#circles" target="_blank" rel="noopener">Open on its own page</a></div>
+  <iframe class="o23frame" id="ocframe" title="Map Explorer" data-src="d65_circles.html#circles"></iframe>
   </section>
   <section id="tab-kr" role="tabpanel" aria-labelledby="tab-kr-btn" hidden>''')
 rep('const TABS=["es","mss","el","ms","kids","demo","draw","bus","kr"];','const TABS=["oi","oc","es","mss","el","ms","kids","demo","draw","bus","kr"];')
