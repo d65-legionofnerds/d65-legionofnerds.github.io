@@ -301,6 +301,9 @@ for a, bb in [("placed on the district's FY28 map image. The Oct 23 layer", "dra
 rep("so student counts, class sizes and utilization here are rough estimates, not a forecast.</div>",
     "so student counts, class sizes and utilization here are rough estimates, not a forecast. Starting from the Oct 23 draft, this puts far more students at Dawes (about 530) than the district's counts do (about 340 next fall on our projection), because Washington's 195 dual-language students are spread over Washington's area and half of that area moves to Dawes. Use the By estimated students tab for the district's counts. King Arts' neighborhood area is left blank: it is King Arts' area on both maps.</div>")
 
+
+rep('<p class="credit" style="margin:18px 0 6px;font-size:12.5px;color:var(--muted);text-align:center">Tool developed and expanded based on initial work by Paul McDonald.</p>', '')
+
 # ---------- 8. version tile ----------
 rep('<div><span class="vk">Last updated</span><span class="vv">Sunday, October 18, 2026</span></div>', '<div><span class="vk">Last updated</span><span class="vv">Monday, November 2, 2026</span></div>')
 rep('<div><span class="vk">Time</span><span class="vv">7:30 PM CT</span></div>', '<div><span class="vk">Time</span><span class="vv">5:00 PM CT</span></div>')
@@ -314,6 +317,7 @@ rep('<details class="vlog"><summary>All updates</summary>', '''<details class="v
             <li>Student tabs use the district's Oct 28 counts of current K-4 students (660 move, 144 change middle school) instead of estimates built from the Oct 13 deck; program moves the district withheld are marked as our estimates. The district projection column is replaced by our projection for next fall on the same counts.</li>
             <li>Land shares, walking distances, disruption rates, Census-based tabs, demographics and the boundary builder's Oct 23 starting map recomputed. The same methods reproduce the page's earlier Oct 13 figures.</li>
             <li>Seats use the LoDN rule (lower of teaching stations × 24 and Cordogan Clark), the same as the other maps.</li>
+            <li>Removed the credit line at the bottom of the page.</li>
             <li>The basemap is now a plain street map (U.S. Census 2023 roads). The old one was the district's Oct 13 map image, which showed the Oct 13 zones underneath.</li>
             <li>New "Oct 23 draft" tabs: what changes, and the Map Explorer.</li>
           </ul></div>''')
