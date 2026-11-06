@@ -1,0 +1,46 @@
+---
+layout: base
+---
+{%- capture topic_url %}/topics/{{ page.topic }}/{% endcapture -%}
+<article class="wrap art{% if page.wide %} art-wide{% endif %}">
+  <header class="art-top">
+    {% if page.topic %}<div class="kicker"><a class="tp" href="{{ topic_url | relative_url }}">{{ page.topic_short }}</a> · {{ page.type_label }}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.dek or page.summary %}<p class="dek">{{ page.dek | default: page.summary }}</p>{% endif %}
+  </header>
+  {% if page.topic %}
+  <div class="byl">
+    <span class="who">By {{ page.author | default: "the Legion of Data Nerds" }}</span>
+    <span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></span>
+    {% if page.updated %}<span>Updated <time datetime="{{ page.updated | date: '%Y-%m-%d' }}">{{ page.updated | date: "%B %-d, %Y" }}</time></span>{% endif %}
+    <span>{{ page.read_minutes }} min read</span>
+    <span class="share"><button type="button" class="copy-link" data-url="{{ page.url | absolute_url }}">Copy link</button></span>
+  </div>
+  {% endif %}
+
+  <div class="art-body">
+    {% if page.takeaways %}
+    <section class="short" aria-labelledby="short-version">
+      <h2 id="short-version">The short version</h2>
+      <ol>{% for t in page.takeaways %}<li>{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ol>
+    </section>
+    {% endif %}
+    <nav class="instory" aria-labelledby="in-this-story" hidden>
+      <h2 id="in-this-story">In this story</h2>
+      <ol></ol>
+    </nav>
+    <div class="prose" data-pagefind-body>
+{{ content }}
+    </div>
+  </div>
+
+  {% if page.related.size > 0 %}
+  <aside class="related" aria-labelledby="related-h">
+    <h2 id="related-h">More on {{ page.topic_name }}</h2>
+    <ul>
+    {% for s in page.related %}<li>{% include kicker.html s=s no_topic=true %}{% include story-link.html s=s %}<small>{{ s.date | date: "%B %-d, %Y" }}</small></li>{% endfor %}
+    </ul>
+    <a class="box-more" href="{{ topic_url | relative_url }}">All {{ page.topic_name }} coverage →</a>
+  </aside>
+  {% endif %}
+</article>

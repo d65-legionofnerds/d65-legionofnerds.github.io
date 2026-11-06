@@ -1,38 +1,13 @@
 ---
-title: Admin Growth FAQ
-layout: default
-parent: Data Analysis
+title: "Admin Growth: Frequently Asked Questions"
+date: 2026-05-04
+updated: 2026-10-16
+topic: admin
+type: explainer
+summary: "How administrators are counted, which data sources we use, and what the numbers mean."
 ---
 
-# Admin Growth Analysis — Frequently Asked Questions
-
-This page answers common questions about the [Admin Growth analysis](admin-growth-final). Click any question to expand the answer. If you have a question not covered here, reach out to the [Legion of Data Nerds](mailto:d65.legionofnerds@gmail.com).
-
-<style>
-details {
-  margin-bottom: 1.5em;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.5em;
-}
-details summary {
-  cursor: pointer;
-  font-size: 1.15em;
-  font-weight: 700;
-  padding: 0.4em 0;
-  list-style: none;
-}
-details summary::before {
-  content: "▶ ";
-  font-size: 0.8em;
-  color: #888;
-}
-details[open] summary::before {
-  content: "▼ ";
-}
-details summary::-webkit-details-marker {
-  display: none;
-}
-</style>
+This page answers common questions about the [Admin Growth analysis](admin-growth-final.html). Click any question to expand the answer. If you have a question not covered here, reach out to the [Legion of Data Nerds](mailto:d65.legionofnerds@gmail.com).
 
 ---
 
@@ -52,7 +27,7 @@ It depends on which data source you use and how you define "administrator." The 
 | IMRF Support Staff (above threshold) | 101 | Non-certificated admin and support staff whose compensation exceeds the $75K statutory threshold — reported under PA 97-0609 |
 | **Total unique individuals** | **147** | 6 people appear in both TRS Admin and IMRF reports and these duplicates have been removed |
 
-**CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **88**. This is the number used in the admin density and right-sizing analysis. *(Corrected October 16, 2026; an earlier version counted six people twice. See the [correction note](admin-growth-final#correction-people-listed-twice).)*
+**CPI-Indexed Count** — When we apply a CPI-indexed threshold ($75K in 2016 dollars = ~$103K in 2026) to make year-over-year comparisons apples-to-apples, the higher-paid admin headcount is **88**. This is the number used in the admin density and right-sizing analysis. *(Corrected October 16, 2026; an earlier version counted six people twice. See the [correction note](admin-growth-final.html#correction-people-listed-twice).)*
 
 **D65 Staff Directory (SY2025-26)** — The District's own public website lists **1,448 total staff** across all roles. Of those, **86 are based at the JEH Administrative Center** (central office), including 22 senior leaders (directors and above) and 19 mid-level administrators (managers, coordinators, supervisors). The remaining ~45 JEH staff are support roles (IT specialists, payroll, HR, nutrition services, custodial, etc.). See the staff directory question below for more detail.
 
@@ -124,7 +99,7 @@ Yes — substantially. All dollar figures in the analysis are inflation-adjusted
 
 Meanwhile, K-8 enrollment fell from 7,371 to 5,630 students — a **24% decline**.
 
-The growth is driven by **adding more positions, not by paying existing staff more**. Average per-person compensation has roughly tracked inflation (i.e., stayed flat in real terms). When total real spending grows 21%+ but per-person real spending is flat, the math forces the conclusion: D65 hired more administrators.
+<mark>The growth is driven by <strong>adding more positions, not by paying existing staff more</strong>.</mark> Average per-person compensation has roughly tracked inflation (i.e., stayed flat in real terms). When total real spending grows 21%+ but per-person real spending is flat, the math forces the conclusion: D65 hired more administrators.
 
 </details>
 
@@ -142,7 +117,11 @@ The numbers make this clear:
 | Principals & Assistant Principals | 34 | 28 | **-18%** (declined) |
 | **Total** | **75** | **88** | **+17%** |
 
-*(An earlier version of this table listed 101 in the IMRF row. That is the count above the raw $75,000 statutory threshold, not the CPI-indexed count used in this analysis — the indexed figure is 42. The 75 → 94 totals used throughout the analysis were always based on the indexed counts.) *(Corrected October 16, 2026: six people on both the administrator and IMRF reports in SY2025-26 were counted twice. Counting each once, the IMRF row is 36 and the total 88. See the [correction note](admin-growth-final#correction-people-listed-twice).)*
+> **Corrections**
+> An earlier version of this table listed 101 in the IMRF row. That is the count above the raw $75,000 statutory threshold, not the CPI-indexed count used in this analysis — the indexed figure is 42. The 75 → 94 totals used throughout the analysis were always based on the indexed counts.
+>
+> Corrected October 16, 2026: six people on both the administrator and IMRF reports in SY2025-26 were counted twice. Counting each once, the IMRF row is 36 and the total 88. See the [correction note](admin-growth-final.html#correction-people-listed-twice).
+{: .note .inline}
 
 Principal headcount is driven by the number of school buildings, which has been roughly stable (and will decrease by one with Kingsley's closure). The growth signal — the reason this analysis exists — is entirely in the non-principal categories: the central-office directors, executive directors, chiefs, coordinators, managers, and support staff that have been added over the past decade.
 
@@ -159,7 +138,7 @@ According to [Larry Gavin's March 2026 *Evanston RoundTable* analysis](https://e
 
 - D65's **-25% enrollment decline** since FY2019 is the steepest among 21 nearby K-8 districts; the next-largest decline was 14.3%.
 - Despite this decline, D65's total FTEs **increased by approximately 130 (+10%)** over the same period.
-- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **15.6 per 1,000** — roughly 30% above the peer median (corrected October 16, 2026 from 16.7 and 40%). (Gavin's −25% figure is measured from FY2019 and uses ISBE's broader "total served" population; on this page's SY2015-16 baseline and K-8 measure the decline is 24%. See the [correction note](admin-growth-final#correction-the-enrollment-series).)
+- Peer K-8 districts cluster around **12 administrators per 1,000 students**; D65 is at **15.6 per 1,000** — roughly 30% above the peer median (corrected October 16, 2026 from 16.7 and 40%). (Gavin's −25% figure is measured from FY2019 and uses ISBE's broader "total served" population; on this page's SY2015-16 baseline and K-8 measure the decline is 24%. See the [correction note](admin-growth-final.html#correction-the-enrollment-series).)
 
 The Legion's "match peer K-8 median" right-sizing scenario (~68 admin, ~20 cuts, $2.65M savings) is based on bringing D65 in line with that ~12 per 1,000 peer benchmark.
 
@@ -183,7 +162,7 @@ No. D65 math proficiency on the IAR (Illinois Assessment of Readiness) went from
 
 This is the District's own long-running internal count. The November 2025 enrollment memo describes it as "a fixed methodology that has been applied for well over a decade," and every year in the series comes from a District document (*Opening of Schools* reports through SY2020-21, then the annual enrollment projections memos).
 
-**An earlier version of this page said 25%.** That figure compared a broader 2016 count (7,523, which included Park, Rice, and pre-K students with IEPs at JEH) against a narrower 2026 count (5,625, which excluded them). Two different populations. It has been corrected — see the [full correction note](admin-growth-final#correction-the-enrollment-series) for what changed and why.
+**An earlier version of this page said 25%.** That figure compared a broader 2016 count (7,523, which included Park, Rice, and pre-K students with IEPs at JEH) against a narrower 2026 count (5,625, which excluded them). Two different populations. It has been corrected — see the [full correction note](admin-growth-final.html#correction-the-enrollment-series) for what changed and why.
 
 **Why exclude Park, Rice and JEH at all?** Because the District does, in the series it maintains itself, and because those programs are counted inconsistently across the decade's reports. The alternative — ISBE's broader **"Total Served"** count, which includes them — gives 7,894 → ~5,997, a **24.0% decline**. Essentially the same answer. Larry Gavin's *RoundTable* analyses use that broader basis.
 
@@ -276,7 +255,7 @@ No. The Legion of Data Nerds is a group of D65 parents — not political operati
 
 What we are is **transparent about the data and honest about what we don't know**. The analysis documents publicly available facts: how many administrators the District employs, how much they cost, how those numbers have changed over a decade, and how D65 compares to peer districts. We do not claim that every added position was unjustified, and we do not name specific individuals who should be let go.
 
-In fact, the [main analysis](admin-growth-final#were-these-additions-justified) explicitly asks the questions that would need to be answered before making specific cuts: Was each new role created with a documented business case? Are measurable outcomes being tracked? What evidence exists that a function would deteriorate if a role were eliminated? The District has not made answers to these questions publicly available.
+In fact, the [main analysis](admin-growth-final.html#were-these-additions-justified) explicitly asks the questions that would need to be answered before making specific cuts: Was each new role created with a documented business case? Are measurable outcomes being tracked? What evidence exists that a function would deteriorate if a role were eliminated? The District has not made answers to these questions publicly available.
 
 There is a meaningful difference between saying *"the data shows the administrative footprint has grown substantially while enrollment has declined, and the District should explain why"* and saying *"fire everyone."* The Legion is doing the former. The District's own [April 2026 proposal](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=3520ac44-24e5-4fc9-bd6f-8e47912427da){:target="_blank"} identified $8.3M in admin cuts — larger than anything the Legion has proposed. We are asking the same questions the District itself is asking; we're just asking them in public.
 

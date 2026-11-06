@@ -26,6 +26,9 @@ Reads:
 
 Writes HTML files to assets/admin_growth_final_*.html.
 """
+import re
+import sys
+import textwrap
 from pathlib import Path
 import pandas as pd
 import plotly.graph_objects as go
@@ -33,6 +36,10 @@ import plotly.graph_objects as go
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 ASSETS = ROOT / "assets"
+
+# write_html adds the phone layout (layout.meta.narrow) used by the right-sizing chart.
+sys.path.insert(0, str(ROOT.parent / "tools"))
+from patch_plotly_layout import write_html as write_chart_html  # noqa: E402
 
 COLORS = {
     "TRS Admin": "#c0392b",
@@ -110,22 +117,61 @@ agg["total_comp_real"]    = agg["total_comp"] * agg["adj_to_2026"]
 agg["avg_comp_real"]      = agg["avg_comp"]   * agg["adj_to_2026"]
 
 
-def base_layout(title, xt="School Year (ending)", yt="", height=550, legend_y=-0.18):
+def wrap(text, width):
+    """Break plain text into lines of at most `width` characters, joined with <br>."""
+    return "<br>".join(textwrap.wrap(text, width))
+
+
+def fmt_title(title, main_width, sub_width):
+    """Title + optional "<br><span style='...'>subtitle</span>", wrapped to the given line widths
+    (characters; 18 px bold title, 13 px subtitle). Returns (text, top margin in px)."""
+    main, _, rest = title.partition("<br>")
+    m = re.fullmatch(r"<span style='([^']*)'>(.*)</span>", rest)
+    main = wrap(main, main_width)
+    lines = main.count("<br>") + 1
+    text = f"<b>{main}</b>"
+    sub_lines = 0
+    if m:
+        sub = wrap(m.group(2), sub_width)
+        sub_lines = sub.count("<br>") + 1
+        text += f"<br><span style='{m.group(1)}'>{sub}</span>"
+    return text, 28 + (lines - 1) * 24 + sub_lines * 18 + 34
+
+
+# Line widths (characters) that fit the title in the ~740 px wide frame and in a ~350 px phone frame.
+TITLE_WIDE, SUB_WIDE = 64, 95
+TITLE_PHONE, SUB_PHONE = 28, 42
+PHONE_TITLES = {}   # wide title text -> (phone title text, phone top margin)
+
+
+def base_layout(title, xt="School Year (ending)", yt="", height=550, legend_y=None):
+    # legend_y is no longer used: the legend sits at the bottom of the figure (yref="container"),
+    # below the axis title, so it can't collide with rotated year labels on phones.
+    text, top = fmt_title(title, TITLE_WIDE, SUB_WIDE)
+    PHONE_TITLES[text] = fmt_title(title, TITLE_PHONE, SUB_PHONE)
     return dict(
-        title=dict(text=f"<b>{title}</b>", x=0.5, xanchor="center", font=dict(size=18)),
+        title=dict(text=text, x=0.5, xanchor="center", font=dict(size=18),
+                   yref="container", y=1 - 28 / height, yanchor="top"),
         xaxis_title=xt, yaxis_title=yt,
         height=height,
-        legend=dict(orientation="h", y=legend_y, x=0.5, xanchor="center"),
+        legend=dict(orientation="h", x=0.5, xanchor="center", yref="container", y=0, yanchor="bottom"),
         plot_bgcolor="white",
         xaxis=dict(showgrid=True, gridcolor="#eee", dtick=1),
         yaxis=dict(showgrid=True, gridcolor="#eee"),
-        margin=dict(l=70, r=30, t=70, b=80),
+        margin=dict(l=70, r=30, t=top, b=60),
     )
 
 
-def write(fig, name):
+def write(fig, name, narrow=None):
+    """Write the chart. On phones (see tools/patch_plotly_layout.py) the title is re-wrapped to the
+    phone widths, plus any chart-specific `narrow` layout values."""
+    narrow = dict(narrow or {})
+    phone = PHONE_TITLES.get(fig.layout.title.text)
+    if phone and phone[0] != fig.layout.title.text:
+        narrow = {"title.text": phone[0], "margin.t": phone[1], **narrow}
     out = ASSETS / f"admin_growth_final_{name}.html"
-    fig.write_html(out, include_plotlyjs="cdn", div_id=f"admin_growth_final_{name}")
+    write_chart_html(fig, out, narrow=narrow or None, include_plotlyjs="cdn",
+                     div_id=f"admin_growth_final_{name}")
     print(f"Wrote {out}")
 
 
@@ -174,7 +220,7 @@ figB.add_trace(go.Scatter(
 ))
 figB.add_trace(go.Scatter(
     x=afr_per_pupil["year"], y=afr_per_pupil["pool_excl_prin_per_pupil_real"],
-    name="Admin excl. principals ($12.49M FY25, 2026 $)", mode="lines+markers",
+    name=f"Admin excl. principals (${afr.loc[afr['year'] == 2025, 'pool_excl_principals_real'].iloc[0]/1e6:.2f}M FY25, 2026 $)", mode="lines+markers",
     line=dict(color="#c0392b", width=3, dash="dot"), marker=dict(size=9),
     hovertemplate="<b>FY%{x}</b><br>Admin excl principals per pupil: $%{y:,.0f}<extra></extra>",
 ))
@@ -390,7 +436,7 @@ write(figH, "imrf_categories")
 # ============================================================
 # AFR pool denominators (FY25 in 2026 $ - the most recent finalized AFR)
 AFR_POOL_TOTAL = afr.loc[afr["year"] == 2025, "pool_total_real"].iloc[0]   # $17.48M (corrected)
-AFR_POOL_EXCL_PRIN = afr.loc[afr["year"] == 2025, "pool_excl_principals_real"].iloc[0]   # $12.49M
+AFR_POOL_EXCL_PRIN = afr.loc[afr["year"] == 2025, "pool_excl_principals_real"].iloc[0]   # FY25, 2026 $
 
 # District's per-cut average (their math: $8,287,312 / 64 cuts)
 DISTRICT_PER_CUT = 8_287_312 / 64
@@ -507,16 +553,27 @@ figI.update_layout(**base_layout(
     yt="",
     height=1000))
 figI.update_xaxes(showticklabels=False, showgrid=False, zeroline=False)
-figI.add_annotation(
-    text=("<i>Dark grey: District figures for enacted and proposed cuts (closures: District's Oct 13, 2026 estimates).<br>"
-          "Orange: District's April 2026 admin-cut proposal. Light orange: admin FTE in the District's Oct 13, 2026 plan.<br>"
-          "Red: Legion right-sizing scenarios. All admin bars sized at $129K/position (District's own avg).</i>"),
-    xref="paper", yref="paper", x=0, y=-0.02,
-    showarrow=False, xanchor="left", yanchor="top",
-    font=dict(size=11, color="#666"), align="left",
-)
-figI.update_layout(margin=dict(l=320, r=80, t=110, b=110))
-write(figI, "right_sizing_comparison")
+# Long category labels: wrap them (display only; the bar categories stay the full labels).
+I_LABELS = [lab.replace("<br>", " ") for lab in mdf["label"]]
+figI.update_yaxes(tickvals=list(mdf["label"]), ticktext=[wrap(lab, 36) for lab in I_LABELS], automargin=True)
+I_NOTE = ["Dark grey: District figures for enacted and proposed cuts (closures: District's Oct 13, 2026 estimates).",
+          "Orange: District's April 2026 admin-cut proposal. Light orange: admin FTE in the District's Oct 13, 2026 plan.",
+          "Red: Legion right-sizing scenarios. All admin bars sized at $129K/position (District's own avg)."]
+I_NOTE_STYLE = dict(xref="paper", yref="paper", x=0, y=-0.01, showarrow=False, xanchor="left", yanchor="top",
+                    font=dict(size=11, color="#666"), align="left")
+figI.add_annotation(text="<i>" + "<br>".join(wrap(s, 75) for s in I_NOTE) + "</i>", **I_NOTE_STYLE)
+figI.update_layout(margin=dict(l=10, r=20, b=110))
+# Phone layout: no room for a label column beside the bars, so each label goes above its bar
+# (annotations), the bars get the full width and thinner, and the note wraps narrower.
+I_PHONE_ANNOTATIONS = [dict(text="<i>" + "<br>".join(wrap(s, 46) for s in I_NOTE) + "</i>", **I_NOTE_STYLE)] + [
+    dict(text=wrap(lab, 50), xref="paper", x=0, xanchor="left", yref="y", y=cat, yanchor="bottom", yshift=8,
+         showarrow=False, align="left", font=dict(size=10, color="#333"))
+    for cat, lab in zip(mdf["label"], I_LABELS)]
+write(figI, "right_sizing_comparison", narrow={
+    "yaxis.showticklabels": False, "margin.l": 8, "margin.r": 8, "margin.b": 150, "bargap": 0.68,
+    "xaxis.autorange": False, "xaxis.range": [0, float(mdf["savings"].max()) * 1.75],
+    "annotations": I_PHONE_ANNOTATIONS,
+})
 
 
 # ============================================================
@@ -549,7 +606,7 @@ figJ.add_trace(go.Bar(
     marker=dict(color="rgba(230,126,34,0.35)", line=dict(color="#e67e22", width=2)),
     text=[f"{implied_lo:.0f}–{implied_hi:.0f}"], textposition="inside",
     insidetextanchor="middle", textfont=dict(color="#7e5109", size=13),
-    name=f"Administrators needed for the deck's {DECK_RATIO_FY27}:1 (at 5,462–5,941 students)",
+    name=f"Administrators needed for the deck's {DECK_RATIO_FY27}:1<br>(at 5,462–5,941 students)",
     hovertemplate=(f"<b>FY27, per the deck</b><br>Administrators needed for {DECK_RATIO_FY27}:1: "
                    f"{implied_lo:.0f}–{implied_hi:.0f}<extra></extra>"),
 ))
@@ -561,11 +618,11 @@ figJ.update_xaxes(type="category")
 figJ.update_yaxes(range=[0, 80])
 figJ.update_layout(bargap=0.25)
 figJ.add_annotation(
-    text="FY23→FY24: District changed its employee-category definitions",
+    text="FY23→FY24: District changed its<br>employee-category definitions",
     x="FY24", y=68, ax=-60, ay=-45, showarrow=True, arrowhead=2,
     font=dict(size=11, color="#555"),
 )
-write(figJ, "update_admin_fte")
+write(figJ, "update_admin_fte", narrow={"annotations[0].ax": -45, "annotations[0].ay": -28})
 
 
 # ============================================================

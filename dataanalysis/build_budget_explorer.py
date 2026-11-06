@@ -696,7 +696,6 @@ input[type="checkbox"] { cursor: pointer; accent-color: #5e5eb5; flex-shrink: 0;
 @media (max-width: 768px) {
   body { padding: 10px; }
   h1 { font-size: 1.2em; }
-  #chart { height: 380px; }
   .tree-container { max-height: 300px; }
 }
 </style>
@@ -1096,19 +1095,23 @@ function updateChart() {
     return base;
   });
 
+  // Phones: year labels upright (vertical) so they don't overlap; the legend sits at the bottom of
+  // the figure (yref "container") and pushes the plot up instead of running into the page below.
+  const narrow = document.getElementById("chart").clientWidth < 560;
   const layout = {
     plot_bgcolor: "white",
     paper_bgcolor: "white",
     height: 500,
-    margin: { l: 75, r: 30, t: 30, b: 80 },
-    xaxis: { showgrid: true, gridcolor: "#eee", tickangle: -45 },
+    margin: { l: narrow ? 55 : 75, r: narrow ? 10 : 30, t: 30, b: 60 },
+    xaxis: { showgrid: true, gridcolor: "#eee", tickangle: narrow ? -90 : -45, automargin: true },
     yaxis: {
       showgrid: true, gridcolor: "#eee",
       title: metricAxisTitle(),
       tickformat: state.metric === "percent" ? ".1f" : "$,.0f",
       rangemode: "tozero",
     },
-    legend: { orientation: "h", y: -0.25, x: 0.5, xanchor: "center", font: { size: 11 } },
+    legend: { orientation: "h", x: 0.5, xanchor: "center", yref: "container", y: 0, yanchor: "bottom",
+              font: { size: 11 } },
     hovermode: compare ? "closest" : "x unified",
   };
 

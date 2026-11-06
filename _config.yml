@@ -1,11 +1,55 @@
+# Legion of Data Nerds site settings.
+# How to publish, and the house style, are in CLAUDE.md at the top of the repo.
+
 title: Legion of Data Nerds
-description: Concerned parents reviewing D65 closure scenarios
-theme: just-the-docs
-
+tagline: Checking District 65’s numbers since 2025.
+description: Volunteer data analysis of Evanston/Skokie School District 65 by a group of Evanston parents.
 url: https://d65-legionofnerds.github.io
+baseurl: ""
+lang: en_US
 
-aux_links:
-  Legion of Nerds on GitHub: https://github.com/d65-legionofnerds
+email: d65.legionofnerds@gmail.com
+github: https://github.com/d65-legionofnerds
+repo: https://github.com/d65-legionofnerds/d65-legionofnerds.github.io
 
+# Used by jekyll-seo-tag for link previews when a page has no image of its own.
+logo: /assets/logo.png
+image: /assets/logo.png
+twitter:
+  card: summary_large_image
 
-favicon: /assets/favicon.png 
+# true only in the preview build (_config_preview.yml): adds a banner and keeps search engines out.
+preview: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    disable: true
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: article
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - AGENTS.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .ruby-version
+  - .claude
+  - .github
+  - vendor
+  - tools
+  - _config_preview.yml
+  # 1.1 GB of raw ISBE spreadsheets. Pages link to them on GitHub, not on the site.
+  - dataanalysis/data/afr/
+  - dataanalysis/__pycache__

@@ -1,0 +1,46 @@
+---
+layout: base
+---
+{%- comment -%}
+All stories, grouped by month. With `types:` in front matter (e.g. [board-letter]) the page lists only
+those types and drops the filters: that is how the old section pages (Letters to the Board, etc.) work.
+{%- endcomment -%}
+{%- assign groups = site.data.types | map: "group" | uniq -%}
+<div class="wrap">
+  <section class="flag{% unless page.types %} flag-tight{% endunless %}">
+    <div class="k">{{ page.kicker | default: "The archive" }}</div>
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {% if page.intro %}<p class="b">{{ page.intro }}</p>{% endif %}
+  </section>
+
+  {% unless page.types %}
+  <div class="filters" hidden>
+    <div class="tabs" role="group" aria-label="Section">
+      <button type="button" class="tab" data-f="topic" data-v="all" aria-pressed="true">Everything</button>
+      {% for t in site.data.topics %}<button type="button" class="tab" data-f="topic" data-v="{{ t.id }}" aria-pressed="false">{{ t.short }}</button>{% endfor %}
+    </div>
+    <div class="kinds" role="group" aria-label="Kind of work">
+      <button type="button" class="kind" data-f="group" data-v="all" aria-pressed="true">All</button>
+      {% for g in groups %}<button type="button" class="kind" data-f="group" data-v="{{ g }}" aria-pressed="false">{{ g }}</button>{% endfor %}
+      <label class="lsearch"><span class="sr">Filter by words</span><input type="search" placeholder="Filter by words" autocomplete="off"></label>
+    </div>
+  </div>
+  {% endunless %}
+
+  <div class="lib-count" aria-live="polite"></div>
+  <div class="archive-list">
+  {%- assign cur = "" -%}
+  {%- for s in site.data.stories -%}
+    {%- if page.types -%}{%- unless page.types contains s.type -%}{%- continue -%}{%- endunless -%}{%- endif -%}
+    {%- if s.month != cur -%}
+      {%- unless cur == "" %}</section>{% endunless %}
+      <section class="month-group"><h2 class="month">{{ s.month_label }}</h2>
+      {%- assign cur = s.month -%}
+    {%- endif %}
+    <div class="arch-item" data-text="{{ s.title | append: ' ' | append: s.summary | strip_html | downcase | escape }}">{% include story.html s=s %}</div>
+  {%- endfor -%}
+  {%- unless cur == "" %}</section>{% endunless %}
+  </div>
+  <p class="empty" hidden>Nothing matches. <button type="button" class="reset">Clear the filters</button></p>
+  {% if content != "" %}<div class="prose archive-note">{{ content }}</div>{% endif %}
+</div>

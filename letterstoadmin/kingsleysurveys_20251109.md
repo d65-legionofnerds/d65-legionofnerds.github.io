@@ -1,11 +1,10 @@
 ---
-title: Major concerns about Kingsley surveys
-parent: Letters to the Admin
-layout: home
-nav_order: 1
+title: "Major Concerns About the Kingsley Surveys"
+date: 2025-11-09
+topic: closures
+type: admin-letter
+summary: "Two surveys went to the Kingsley community two hours apart, which will lower response rates. We also list problems in their design, from a single open-ended question to no limit on responses per person."
 ---
-
-# Major concerns about Kingsley surveys
 
 My name is Lauren McNamara and I am writing on behalf of the Legion of Data Nerds with concerns on the two surveys sent to the Kingsley community on Friday 11/7. Dr. Turner sent a Boundary Input Survey at 2:00pm and Principal Davis sent a Preparing for Possible School Closure Survey at 4:00 pm. For context, I have 11 years of experience working in survey research at a top nonpartisan research organization, and I have direct experience in working to pull insight out of open-ended responses.
 
@@ -38,7 +37,7 @@ Additionally, for both surveys:
 
 The Boundary Input survey appears to be a quick and dirty way to collect feedback. This is no way to define school boundaries. School boundaries should be set based on a thoughtful and considered vision for our district. Instead of helping answer questions with data insights and inform policy, this rushed and opaque survey effort will likely result in more distrust and unanswered questions. 
 
-I ask the district to slow down to gather data on financial savings already in progress and not send rushed surveys while forcing school closures.
+<mark>I ask the district to slow down to gather data on financial savings already in progress and not send rushed surveys while forcing school closures.</mark>
 
 Thank you,
 
