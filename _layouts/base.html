@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="{{ '/assets/img/favicon-180.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {% if page.url == '/search/' %}<link rel="stylesheet" href="{{ '/pagefind/pagefind-ui.css' | relative_url }}">{% endif %}
 </head>
@@ -18,12 +18,11 @@
 {% if site.preview %}<div class="preview-bar">Preview of the redesigned site. Not the live site: <a href="https://d65-legionofnerds.github.io/">d65-legionofnerds.github.io</a></div>{% endif %}
 <header class="mast">
   <div class="wrap">
-    <a class="shield" href="{{ '/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/img/shield-light.png' | relative_url }}" alt="" width="58" height="57"></a>
-    <div>
-      <a class="name" href="{{ '/' | relative_url }}"><span>{{ site.title }}</span></a>
-      <div class="tag">{{ site.tagline }}</div>
+    <a class="plate" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/shield.png' | relative_url }}" alt="" width="54" height="53"><span class="name">{{ site.title }}</span></a>
+    <div class="dateline">
+      <span class="tag">{{ site.tagline }}</span>
+      {% assign newest = site.data.stories | first %}<span class="upd">Updated {{ newest.updated | default: newest.date | date: "%b %-d, %Y" }}</span>
     </div>
-    <div class="side">Evanston/Skokie District 65<br>{% assign newest = site.data.stories | first %}<b>Updated {{ newest.updated | default: newest.date | date: "%b %-d, %Y" }}</b></div>
   </div>
 </header>
 <nav class="sections" aria-label="Sections">

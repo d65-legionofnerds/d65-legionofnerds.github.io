@@ -86,8 +86,12 @@ picture, too many highlights, long summary) don't stop the build, but fix them.
 
 ## 3. The house style ("Marked Up")
 
-The look is a local newsroom's data desk: condensed capitals, a serif body, generous white space.
-Its two signature marks only work if they stay rare and consistent.
+The look is a printed data desk: a black-on-white newspaper nameplate, serif headlines and text
+(Newsreader), small labels in a typewriter monospace (IBM Plex Mono), black rules, generous white
+space. The site is deliberately black and white with two marks of colour, so it reads as a sober,
+data-first source and doesn't resemble other D65 groups' sites: don't add other fonts, brand colours
+(navy, blue, green, amber, cream backgrounds), rounded buttons or illustrations. The two signature
+marks only work if they stay rare and consistent.
 
 ### 3.1 The highlighter: `<mark>`
 
@@ -161,7 +165,7 @@ These are short data files, not code. Change them when the facts change:
 | What | File | Notes |
 |---|---|---|
 | By the numbers (4 figures) | `_data/numbers.yml` | Each figure must appear in its `source` page. Check it when you update that page. |
-| Coming up (navy box) | `_data/upcoming.yml` | Give every entry an `until` date; it hides itself after that. |
+| Coming up (black box) | `_data/upcoming.yml` | Give every entry an `until` date; it hides itself after that. |
 | How we got here (closures timeline) | `_data/timeline.yml` | Mark a future date `upcoming: true`. |
 | In the news | `_data/news.yml` | Newest first. The three newest show on the homepage. |
 | PDFs, outside articles, apps, standalone HTML tools | `_data/links.yml` | Same fields as front matter plus `link:` and optional `format:` (PDF, App, Map). |

@@ -18,7 +18,8 @@ takeaways:
 
 <style>
 /* Legacy charts on this page only. Every rule is scoped to .org-legacy, so nothing reaches the rest of the site. */
-.org-legacy{font-family:var(--label)}
+.org-legacy{font-family:var(--serif)}
+.org-legacy .viz-header,.org-legacy .comp-head,.org-legacy .comp-group{font-family:var(--label)}
 .org-legacy.viz-wrap{margin:36px 0;background:#fff;border:1px solid var(--hair);overflow:hidden}
 .org-legacy .viz-header{background:var(--ink);color:#fff;padding:12px 20px;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:.08em;text-transform:uppercase}
 .org-legacy .viz-body{padding:24px 20px 18px}
