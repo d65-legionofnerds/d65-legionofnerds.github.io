@@ -1,11 +1,11 @@
 ---
-title: iPad Procurement
-parent: Letters to the Board
-layout: home
-nav_order: 2
+title: "iPad Procurement and a Shared-Cart Alternative"
+date: 2026-03-24
+topic: budget
+type: board-letter
+summary: "A shared-cart model for grades 1–4, using iPads the District already had, would have saved an estimated $200,938 compared with the 1:1 purchase the Board approved."
 ---
 
-# iPad Procurement & Shared Cart Strategy (Option 2b)
 March 24, 2026
 
 This document provides a comparative analysis between the original 1:1 procurement plan and the proposed Option 2 (Shared Cart Model). This proposed strategy leverages existing inventory to optimize the budget while maintaining educational technology standards. It models approxmiately 300 students at 8 elementary schools. This model saves money (est $200,000), allows flexibility for reconsideration of tech model and curriculum through reducing the size of the iPad fleet, while retaining two full carts that can float for Library and Computer Science. We do not assume any variability of in-grade lesson scheduling nor do we assume that Library and CS will overlap. This approach balances the number of devices with enough flexibility for testing and e-learning. 
@@ -37,7 +37,7 @@ We recognize that the [vote has happened](https://evanstonroundtable.com/2026/03
 ## 1. Executive Budget Comparison
 
 | Expenditure Category | Original 1:1 Model | Option 2 (Shared) | Variance (Savings) |
-|---------------------|------------------|------------------|--------------------|
+|---------------------|-----------------:|-----------------:|-------------------:|
 | 1st/2nd & 3rd/4th iPads (Net New) | $183,708.00 | $0.00 | ($183,708.00) |
 | 1st/2nd & 3rd/4th Cases (Net New) | $17,230.35 | $0.00 | ($17,230.35) |
 | 3rd Grade Keyboard Cases | $62,368.80 | $62,368.80 | — |
@@ -50,7 +50,7 @@ We recognize that the [vote has happened](https://evanstonroundtable.com/2026/03
 ## 2. Procurement Breakdown
 
 | Item Description | Qty Needed | Inventory Applied | Net New | Unit Price | Total Cost |
-|-----------------|-----------|------------------|----------|------------|------------|
+|-----------------|----------:|-----------------:|---------:|-----------:|-----------:|
 | iPad Wi-Fi 128GB (11th Gen) | 469 | 550 | -81 | $324.00 | $0.00 |
 | Brenthaven 360 Case | 469 | 624 | -155 | $34.95 | $0.00 |
 | 3rd Grade Keyboard Case | 624 | 0 | 624 | $99.95 | $62,368.80 |
@@ -87,7 +87,7 @@ We build on the prior cart model presented on 3/23 to showcase how savings can s
 ### A. Total Device Footprint
 
 | Category | Enrollment | Environment | iPads |
-|----------|-----------|-------------|--------|
+|----------|----------:|-------------|-------:|
 | K | 38 | Library only | 0 |
 | Grades 1 & 2 | 100 | Shared Carts | 55 |
 | Grades 3 & 4 | 100 | Shared Carts | 55 |
@@ -95,15 +95,16 @@ We build on the prior cart model presented on 3/23 to showcase how savings can s
 | Specials (Library & CS) | — | Shared Carts | 46 |
 | **TOTAL** | **300** |  | **219** |
 
-**Efficiency Note:**  
-Savings of **81 iPads per 300 students** compared to a 1:1 model.
+> **Efficiency note**
+> Savings of **81 iPads per 300 students** compared to a 1:1 model.
+{: .note}
 
 ---
 
 ### B. Shared Cart Allocation Logic
 
 | Grouping | Configuration | iPads |
-|----------|--------------|--------|
+|----------|--------------|-------:|
 | Pair A | 1st (22) / 2nd (19) + 1 | 23 |
 | Pair B | 1st (20) / 2nd (19) + 2 | 22 |
 | Pair C | 1st (20) + 1 / 3rd (20) + 1 | 22 |
@@ -165,4 +166,3 @@ The 300-student row aligns with the procurement figures in the main proposal ($6
 - By comparison, the original 1:1 plan ran approximately **$459/student** — Option 2b represents a **~76% reduction** in per-student cost
 - The inventory windfall is **time-limited**: future refresh cycles will need to budget for shared cart hardware replacement (~46 devices per school)
 - The variable cost structure preserves **strategic flexibility** — any future pivot to Chromebooks or reduced device counts produces proportional savings rather than stranded inventory
-```

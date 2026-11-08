@@ -1,0 +1,54 @@
+---
+layout: base
+---
+{%- assign t = site.data.topics | where: "id", page.topic_page | first -%}
+{%- assign its = site.data.stories | where: "topic", page.topic_page -%}
+{%- assign feat = its | where: "featured", true | where: "type", "analysis" | first -%}
+{%- unless feat -%}{%- assign feat = its | where: "type", "analysis" | first -%}{%- endunless -%}
+{%- unless feat -%}{%- assign feat = its | first -%}{%- endunless -%}
+{%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
+<div class="wrap">
+  <section class="flag">
+    <div class="k">Section · {{ its.size }} stories</div>
+    <h1>{{ t.name }}</h1>
+    <p class="q"><span class="hl">{{ t.question }}</span></p>
+    <p class="b">{{ t.blurb }}</p>
+  </section>
+  <div class="cols">
+    <div>
+      {% if feat %}
+      <article class="feature">
+        {% include kicker.html s=feat no_topic=true %}
+        <h2>{% include story-link.html s=feat %}</h2>
+        <p>{{ feat.summary }}</p>
+        <div class="when">{{ feat.date | date: "%B %-d, %Y" }}{% if feat.updated %} · Updated {{ feat.updated | date: "%b %-d, %Y" }}{% endif %}</div>
+      </article>
+      {% endif %}
+      {% for s in its %}{% if s.url == feat.url %}{% continue %}{% endif %}{% include story.html s=s no_topic=true %}{% endfor %}
+    </div>
+    <aside class="rail">
+      {% if page.topic_page == "closures" %}
+      <div class="box">
+        <h2>How we got here</h2>
+        <ol class="tline">
+          {% for e in site.data.timeline %}{% assign ed = e.date | date: "%Y%m%d" | plus: 0 %}
+          <li{% if e.upcoming and ed >= today %} class="up" data-until="{{ e.date | date: '%Y-%m-%d' }}"{% endif %}><b>{{ e.label }}</b><span>{{ e.text }}</span></li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+      {% assign n = site.data.numbers | where: "topic", page.topic_page | first %}
+      {% if n %}
+      <div class="box">
+        <h2>The number</h2>
+        <p class="big-n"><span class="hl">{{ n.value }}</span></p>
+        <p class="n-text">{{ n.text }} <a href="{{ n.url | relative_url }}">Source</a></p>
+      </div>
+      {% endif %}
+      <div class="box">
+        <h2>Other sections</h2>
+        <ul>{% for x in site.data.topics %}{% if x.id != page.topic_page %}<li><a href="{{ '/topics/' | append: x.id | append: '/' | relative_url }}">{{ x.name }}</a></li>{% endif %}{% endfor %}</ul>
+      </div>
+    </aside>
+  </div>
+</div>

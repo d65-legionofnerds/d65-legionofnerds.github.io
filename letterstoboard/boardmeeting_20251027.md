@@ -1,11 +1,11 @@
 ---
-title: October 27 Board Meeting
-parent: Letters to the Board
-layout: home
-nav_order: 2
+title: "Let’s Work Together for Evanston Students"
+date: 2025-10-27
+topic: closures
+type: board-letter
+summary: "Our first statement to the Board: do the data actually support this plan? We urged caution over acceleration."
 ---
 
-# Let's work together for Evanston students
 10/27/25
 
 We are writing to you as a group of parents with many years of data expertise representing 4 elementary and 2 middle schools from all over Evanston. We are speaking as one voice to urge you to build a system that best serves our community’s most important asset, our children.  We also urge you to read carefully the [Guest Essay: Why District 65 must slow down on school closures - Evanston RoundTable](https://evanstonroundtable.com/2025/10/24/guest-essay-why-district-65-must-slow-down-on-school-closures/)
@@ -38,7 +38,7 @@ Bigger picture, to account for data uncertainty, the board needs to consider the
 What the district has planned will cram multiple schools above their capacities with minimal attention to ADA accessibility with a hope to ‘figure it out later.’-- per the district administration. We don’t know the real financial benefit, how teachers will be chosen to stay or go, or the cost and length of bus transportation. In 2013, Chicago Public Schools followed a similarly rushed timeline and administrators and teachers found that the process was chaotic, and that [“None of the schools felt prepared for the transition.”](https://consortium.uchicago.edu/sites/default/files/2018-10/School%20Closings%20in%20Chicago-May2018-Consortium.pdf) (pg 32 of pdf). Furthermore, the study found that students felt alienated in their new schools and that [ Math NWEA Test Scores Were Negatively Affected for Students from Closed Schools, Even Four Years Later](https://consortium.uchicago.edu/sites/default/files/2018-10/School%20Closings%20in%20Chicago-May2018-Consortium.pdf). (pg 55 of pdf)
 
 
-**The current approach will have lasting effects on student wellbeing and academic performance. We must not optimize for classroom seats at the expense of our students. **
+**The current approach will have lasting effects on student wellbeing and academic performance. We must not optimize for classroom seats at the expense of our students.**
 
 ## A Financial “Crisis” That Isn’t. A School Utilization “Crisis” That Isn’t. A Lack of Accountability That Is.
 

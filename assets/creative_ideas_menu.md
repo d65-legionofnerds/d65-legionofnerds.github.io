@@ -1,10 +1,10 @@
 ---
-title: Menu of Creative Ideas
-layout: default
-nav_exclude: true
+title: "Menu of Creative Ideas for City–D65 Collaboration"
+date: 2026-01-14
+topic: budget
+type: memo
+summary: "Community-sourced ideas for City–D65 collaboration and new revenue, from sharing the cost of crossing guards to a public library branch and cell tower leasing."
 ---
-
-# Menu of Creative Ideas for City-D65 Collaboration
 
 *Sourced from the community[^1]*
 
@@ -47,4 +47,4 @@ nav_exclude: true
 - Solar panel leasing
 - Corporate sponsorship on District facilities
 
-[^1]: Sourced from various community groups such as [Washington Task Force's Proposal](https://docs.google.com/document/d/1lXnbLu4qDZVPpkkSR6gUtjixeo058Iu2Y0INtc_w52M/edit?tab=t.0), [IINS's Proposal](https://docs.google.com/document/d/16DQeS5KwDmaMp6KvusTa4sDtj11S7351omQ19_7x6SY/edit?tab=t.0#heading=h.bkvouunq8u0d), a [memo from Vic Filippini](https://d65-legionofnerds.github.io/assets/VicFilippiniMemo.pdf), and the [Legion of Data Nerds](https://d65-legionofnerds.github.io/).
+[^1]: Sourced from various community groups such as [Washington Task Force's Proposal](https://docs.google.com/document/d/1lXnbLu4qDZVPpkkSR6gUtjixeo058Iu2Y0INtc_w52M/edit?tab=t.0), [IINS's Proposal](https://docs.google.com/document/d/16DQeS5KwDmaMp6KvusTa4sDtj11S7351omQ19_7x6SY/edit?tab=t.0#heading=h.bkvouunq8u0d), a [memo from Vic Filippini](VicFilippiniMemo.pdf), and the [Legion of Data Nerds]({{ '/' | relative_url }}).

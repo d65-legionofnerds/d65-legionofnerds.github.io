@@ -1,11 +1,10 @@
 ---
-title: November 1 Meeting Recap
-parent: Letters to the Admin
-layout: home
-nav_order: 2
+title: "November 1 Meeting Recap: Methodological Concerns"
+date: 2025-11-01
+topic: closures
+type: admin-letter
+summary: "How the 95% utilization benchmark and the scorecard’s measures constrained which answers were possible."
 ---
-
-# November 1 Meeting Recap
 
 Thank you for your time. 
 

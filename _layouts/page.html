@@ -1,0 +1,16 @@
+---
+layout: base
+---
+{%- comment -%} Plain page (Resources, About, Search, In the news): section flag + one text column. {%- endcomment -%}
+<div class="wrap">
+  <section class="flag">
+    <div class="k">{{ page.kicker | default: site.title }}</div>
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {% if page.intro %}<p class="b">{{ page.intro }}</p>{% endif %}
+  </section>
+  <div class="page-body{% if page.wide %} page-wide{% endif %}">
+    <div class="prose"{% unless page.no_index %} data-pagefind-body{% endunless %}>
+{{ content }}
+    </div>
+  </div>
+</div>

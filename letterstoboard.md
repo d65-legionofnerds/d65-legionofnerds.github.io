@@ -1,9 +1,7 @@
 ---
+layout: archive
 title: Letters to the Board
-layout: home
-nav_order: 2
+kicker: What we’ve told the District
+intro: Statements the Legion of Data Nerds has read to, or sent to, the District 65 school board.
+types: [board-letter]
 ---
-
-# Letters to the Board
-
-Statements the Legion of Nerds has read to the school board.

@@ -1,10 +1,10 @@
 ---
 title: D65 Resources
-layout: home
-nav_order: 6
+layout: page
+kicker: Resources
+intro: District documents we’ve saved, salary and staffing disclosures, District 65 sources and independent research.
+description: District 65 documents, salary disclosures and research the Legion of Data Nerds draws on.
 ---
-
-# D65 Resources
 
 ## Materials Presented at Board Meetings
 
@@ -61,6 +61,11 @@ Below we provide links to salary information on administrators. Note that there 
 [D65 Board of Education](https://www.district65.net/about/board-of-education){:target="_blank"}
 
 [Board meeting agendas](https://meetings.boardbook.org/Public/Organization/1247){:target="_blank"}
+
+
+## Community groups
+
+[Invest in Neighborhood Schools](https://www.investinevanston.com/){:target="_blank"}
 
 
 ## Third Party Resources

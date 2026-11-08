@@ -13,6 +13,8 @@ Palette: dataviz reference palette. Blue = savings, red = costs went up (the div
 warm grays for context. Status is never colour-only: every verdict carries a symbol and a word,
 and low-confidence lines are hollow markers.
 """
+import sys
+import textwrap
 from pathlib import Path
 import pandas as pd
 import plotly.graph_objects as go
@@ -21,6 +23,10 @@ from plotly.subplots import make_subplots
 ROOT = Path(__file__).parent
 DATA, ASSETS = ROOT / "data", ROOT.parent / "assets"
 ASSETS.mkdir(exist_ok=True)
+
+# write_html adds each chart's phone layout (layout.meta.narrow); see tools/patch_plotly_layout.py.
+sys.path.insert(0, str(ROOT.parent.parent / "tools"))
+from patch_plotly_layout import write_html as write_chart_html  # noqa: E402
 
 INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
 GRID, AXIS, SURFACE = "#e1e0d9", "#c3c2b7", "#fcfcfb"
@@ -58,11 +64,26 @@ def base_layout(title, subtitle, height, **kw):
     return lay
 
 
-def save(fig, name):
-    fig.write_html(ASSETS / f"closure_{name}.html", include_plotlyjs="cdn", div_id=f"closure_{name}",
-                   config=dict(displaylogo=False, modeBarButtonsToRemove=["lasso2d", "select2d"],
-                               responsive=True))
+def save(fig, name, narrow=None, restyle=None):
+    write_chart_html(fig, ASSETS / f"closure_{name}.html", narrow=narrow, restyle=restyle,
+                     include_plotlyjs="cdn", div_id=f"closure_{name}",
+                     config=dict(displaylogo=False, modeBarButtonsToRemove=["lasso2d", "select2d"],
+                                 responsive=True))
     print("wrote", f"closure_{name}.html")
+
+
+def wrap(text, width):
+    return "<br>".join(textwrap.wrap(text, width, break_long_words=False))
+
+
+def phone_title(title, subtitle, height, size=16, sub_width=46):
+    """Phone-layout values for the title: smaller, wrapped, with the top margin to match."""
+    main = wrap(title, 30)
+    sub = wrap(subtitle.replace("<br>", " "), sub_width)
+    lines = main.count("<br>") + sub.count("<br>") + 2
+    return {"title.text": f"<b>{main}</b><br><span style='font-size:12px;color:{INK2}'>{sub}</span>",
+            "title.font.size": size, "title.y": 1 - 18 / height,
+            "margin.t": 18 + lines * round(size * 1.3) + 14}
 
 
 NEUTRAL = "#6e6d68"
@@ -137,15 +158,33 @@ fig.update_xaxes(range=[-450, 760], tickvals=[-400, -200, 0, 200, 400, 600],
 fig.update_xaxes(title_text="$ thousands per year  (right of zero = savings, left = costs went up)",
                  title_font=dict(size=12, color=INK2), row=2, col=1)
 fig.update_yaxes(autorange="reversed", showgrid=False, linecolor=AXIS, tickfont=dict(color=INK, size=13))
+SC_TITLE = "Kingsley + Rhodes closures: what the FY27 budget shows, line by line"
+SC_SUB = ("Per line item, per year. The colored bar is a range because FY27 raises are not published by group;<br>"
+          "it assumes spending would have grown with raises/inflation had the schools stayed open.")
 fig.update_layout(**base_layout(
-    "Kingsley + Rhodes closures: what the FY27 budget shows, line by line",
-    "Per line item, per year. The colored bar is a range because FY27 raises are not published by group;<br>"
-    "it assumes spending would have grown with raises/inflation had the schools stayed open.",
+    SC_TITLE, SC_SUB,
     1010, margin=dict(l=20, r=235, t=135, b=90),
     legend=dict(orientation="h", x=0, y=-0.085, xanchor="left", font=dict(size=12, color=INK2),
                 bgcolor="rgba(0,0,0,0)"),
     bargap=0.25, hovermode="closest"))
-save(fig, "scorecard")
+# Phone layout: the same chart, compressed: wrapped line-item labels, smaller verdict notes in a
+# narrower right margin, three x ticks, and the legend at the bottom of the figure.
+SC_TICKS = dict(tickvals=[-400, 0, 400], ticktext=["−$400K", "$0", "$400K"])
+sc_phone = {**phone_title(SC_TITLE, SC_SUB, 1010),
+            "margin.l": 4, "margin.r": 100, "margin.b": 150,
+            "yaxis.tickvals": list(people.category), "yaxis.ticktext": [wrap(c, 14) for c in people.category],
+            "yaxis2.tickvals": list(ops.category), "yaxis2.ticktext": [wrap(c, 14) for c in ops.category],
+            "yaxis.tickfont.size": 10, "yaxis2.tickfont.size": 10,
+            "xaxis.tickvals": SC_TICKS["tickvals"], "xaxis.ticktext": SC_TICKS["ticktext"],
+            "xaxis2.tickvals": SC_TICKS["tickvals"], "xaxis2.ticktext": SC_TICKS["ticktext"],
+            "xaxis.tickangle": 0, "xaxis2.tickangle": 0,
+            "xaxis2.title.text": "$ thousands per year<br>(right of zero = savings, left = costs went up)",
+            "legend.yref": "container", "legend.y": 0, "legend.yanchor": "bottom", "legend.font.size": 10}
+for i, a in enumerate(fig.layout.annotations):
+    if a.x == 1.01:                        # the verdict notes beside each line item
+        sc_phone[f"annotations[{i}].font.size"] = 9.5
+        sc_phone[f"annotations[{i}].x"] = 1.02
+save(fig, "scorecard", narrow=sc_phone)
 
 # =============================================================================================
 # 2. Headline: projected vs. visible, all items vs. cleaner-signal items
@@ -186,11 +225,26 @@ fig.update_xaxes(range=[-0.6, 3.6], tickvals=[-0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3
                  ticktext=["−$0.5M", "$0", "$0.5M", "$1M", "$1.5M", "$2M", "$2.5M", "$3M", "$3.5M"], gridcolor=GRID, linecolor=AXIS,
                  tickfont=dict(color=MUTED), title_text="$ millions per year", title_font=dict(size=12, color=INK2))
 fig.update_yaxes(autorange="reversed", tickfont=dict(color=INK, size=13), showgrid=False, linecolor=AXIS)
-fig.update_layout(**base_layout(
-    "Of $2.9M in projected savings, how much can we see?",
-    "Annual savings projected by the district for the two closures vs. what the FY27 budget implies.",
-    500, margin=dict(l=20, r=40, t=100, b=200), bargap=0.45))
-save(fig, "headline")
+HL_TITLE = "Of $2.9M in projected savings, how much can we see?"
+HL_SUB = "Annual savings projected by the district for the two closures vs. what the FY27 budget implies."
+# 480 tall so that, with the page's own margins, it fits the 500 px frame on the page
+fig.update_layout(**base_layout(HL_TITLE, HL_SUB, 480, margin=dict(l=20, r=40, t=100, b=190), bargap=0.45))
+fig.update_annotations(y=-0.8)
+# Phone layout: no room for a label column, so each row's label sits above its bar (annotations),
+# the bars get the full width, and the x axis keeps four ticks.
+hl_note = fig.layout.annotations[0].to_plotly_json()
+hl_note.update(text=hl_note["text"].replace("<br>", " "), y=-0.24, yanchor="top")
+hl_note["text"] = wrap(hl_note["text"], 52)
+hl_phone = {**phone_title(HL_TITLE, HL_SUB, 480),
+            "yaxis.showticklabels": False, "margin.l": 8, "margin.r": 8, "margin.b": 130,
+            "xaxis.range": [-0.6, 4.1], "xaxis.tickvals": [0, 1, 2, 3], "xaxis.ticktext": ["$0", "$1M", "$2M", "$3M"],
+            "xaxis.tickangle": 0,
+            "annotations": [hl_note] + [
+                dict(text=wrap(label.replace("<br>", " "), 50), xref="paper", x=0, xanchor="left", yref="y", y=label,
+                     yanchor="bottom", yshift=13, showarrow=False, align="left", font=dict(size=10, color=INK),
+                     bgcolor=SURFACE)
+                for label, *_ in rows]}
+save(fig, "headline", narrow=hl_phone)
 
 # =============================================================================================
 # 3. Seasonal small multiples: FY25 / FY26 / FY27 by month (fills in as reports arrive)
@@ -219,14 +273,36 @@ fig.update_yaxes(tickformat="$~s", tickfont=dict(color=MUTED, size=11), gridcolo
                  rangemode="tozero", linecolor=AXIS)
 for a in fig.layout.annotations[:len(PANELS)]:
     a.update(font=dict(size=13, color=INK))
+MO_TITLE = "Year to date: is spending running lower than in the years the schools were open?"
+MO_SUB = (f"Cumulative dollars spent since July 1, each fiscal year.<br>The blue line fills in as monthly reports are "
+          f"published ({N27} of 12 months so far).")
 fig.update_layout(**base_layout(
-    "Year to date: is spending running lower than in the years the schools were open?",
-    f"Cumulative dollars spent since July 1, each fiscal year.<br>The blue line fills in as monthly reports are "
-    f"published ({N27} of 12 months so far).",
+    MO_TITLE, MO_SUB,
     700, margin=dict(l=20, r=20, t=120, b=60),
     legend=dict(orientation="h", x=0, y=-0.08, xanchor="left", font=dict(size=12, color=INK2),
                 bgcolor="rgba(0,0,0,0)"), hovermode="closest"))
-save(fig, "monthly")
+# Phone layout: the eight panels as 4 rows x 2 columns instead of 2 x 4, with the panel titles moved
+# along, a smaller title, and the legend at the bottom of the figure.
+MO_PHONE_H = 1000   # taller on phones: 4 rows of panels need the room
+mo_phone = {**phone_title(MO_TITLE, MO_SUB, MO_PHONE_H, size=15, sub_width=50),
+            "height": MO_PHONE_H, "margin.l": 40, "margin.r": 6, "margin.b": 70,
+            "legend.yref": "container", "legend.y": 0, "legend.yanchor": "bottom", "legend.font.size": 10,
+            "annotations[8].font.size": 9}
+_area = MO_PHONE_H - mo_phone["margin.t"] - mo_phone["margin.b"]   # px between the top and bottom margins
+_band, _title_px, _ticks_px = _area / 4, 18, 24
+for i in range(len(PANELS)):
+    r, c = divmod(i, 2)
+    top = 1 - (r * _band + _title_px) / _area
+    bottom = 1 - ((r + 1) * _band - _ticks_px) / _area
+    ax = "" if i == 0 else str(i + 1)
+    x0, x1 = (0.0, 0.43) if c == 0 else (0.57, 1.0)
+    mo_phone[f"xaxis{ax}.domain"] = [x0, x1]
+    mo_phone[f"yaxis{ax}.domain"] = [round(bottom, 4), round(top, 4)]
+    mo_phone[f"annotations[{i}].x"] = (x0 + x1) / 2
+    mo_phone[f"annotations[{i}].y"] = round(top, 4)
+    mo_phone[f"annotations[{i}].font.size"] = 11
+    mo_phone[f"xaxis{ax}.tickangle"] = 0
+save(fig, "monthly", narrow=mo_phone)
 
 # =============================================================================================
 # 4. The promise over time (Kingsley): how the savings number was presented
@@ -260,10 +336,19 @@ for s in SNAP:
 fig.update_yaxes(range=[0, 2.35], tickprefix="$", ticksuffix="M", gridcolor=GRID, linecolor=AXIS,
                  tickfont=dict(color=MUTED), title_text="$ millions per year", title_font=dict(size=12, color=INK2))
 fig.update_xaxes(tickfont=dict(color=INK, size=13), linecolor=AXIS)
+PR_TITLE = "The Kingsley savings figure, as presented over time"
+PR_SUB = "Annual savings from closing Kingsley, as presented to the Board and the public."
 fig.update_layout(**base_layout(
-    "The Kingsley savings figure, as presented over time",
-    "Annual savings from closing Kingsley, as presented to the Board and the public.",
+    PR_TITLE, PR_SUB,
     520, margin=dict(l=20, r=20, t=100, b=130), barmode="relative", bargap=0.45,
     legend=dict(orientation="v", x=0, y=-0.14, xanchor="left", yanchor="top", font=dict(size=12, color=INK2),
                 bgcolor="rgba(0,0,0,0)")))
-save(fig, "promise")
+# Phone layout: x labels kept horizontal (re-wrapped to fit a column), legend at the bottom.
+save(fig, "promise", narrow={
+    **phone_title(PR_TITLE, PR_SUB, 520),
+    "margin.l": 10, "margin.r": 6, "margin.b": 125,
+    "xaxis.tickvals": [s[0] for s in SNAP],
+    "xaxis.ticktext": ["Sep 29, 2025<br>Scenario 1A", "Nov–Dec 2025<br>Scenario 1A-R", "Oct 7, 2026<br>District<br>closure file"],
+    "xaxis.tickangle": 0, "xaxis.tickfont.size": 10,
+    "legend.yref": "container", "legend.y": 0, "legend.yanchor": "bottom", "legend.font.size": 10,
+})

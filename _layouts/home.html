@@ -1,0 +1,91 @@
+---
+layout: base
+---
+{%- assign lead = site.data.lead_story -%}
+{%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
+<div class="wrap">
+  {% if lead %}
+  <section class="lead" aria-label="Latest analysis">
+    <div>
+      {% include kicker.html s=lead %}
+      <h1>{% include story-link.html s=lead %}</h1>
+      <p class="dek">{{ lead.summary }}</p>
+      <div class="by">By the Legion of Data Nerds · {{ lead.date | date: "%B %-d, %Y" }}{% if lead.updated %} · Updated {{ lead.updated | date: "%b %-d" }}{% endif %}{% if lead.minutes %} · {{ lead.minutes }} min read{% endif %}</div>
+      <a class="more" href="{{ lead.url | relative_url }}">Read the analysis</a>
+    </div>
+    {% if lead.image %}
+    <figure>
+      <a href="{{ lead.url | relative_url }}" tabindex="-1"><img src="{{ lead.image | relative_url }}" alt="{{ lead.image_alt | escape }}" width="1200" height="675"></a>
+      {% if lead.image_caption %}<figcaption>{{ lead.image_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  {% if site.data.numbers.size > 0 %}
+  <section class="numbers" aria-labelledby="by-the-numbers">
+    <h2 id="by-the-numbers">By the numbers</h2>
+    <div class="nums">
+      {% for n in site.data.numbers limit: 4 %}
+      <div class="stat"><b><span class="hl">{{ n.value }}</span></b><p>{{ n.text }}</p><a href="{{ n.url | relative_url }}">Read the analysis →</a></div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="cols">
+    <div>
+      <div class="river-h"><h2>Latest</h2><a href="{{ '/archive/' | relative_url }}">All stories →</a></div>
+      {% assign shown = 0 %}
+      {% for s in site.data.stories %}
+        {% if s.url == lead.url %}{% continue %}{% endif %}
+        {% include story.html s=s %}
+        {% assign shown = shown | plus: 1 %}
+        {% if shown >= 8 %}{% break %}{% endif %}
+      {% endfor %}
+      <a class="all-link" href="{{ '/archive/' | relative_url }}">See all {{ site.data.stories.size }} stories →</a>
+    </div>
+
+    <aside class="rail" aria-label="More from the Legion">
+      {% for u in site.data.upcoming %}
+        {% assign until = u.until | date: "%Y%m%d" | plus: 0 %}
+        {% if until >= today %}
+        <div class="box soon" data-until="{{ u.until | date: '%Y-%m-%d' }}">
+          <h2>Coming up</h2>
+          <div class="d">{{ u.label }}</div>
+          <p>{{ u.text }}</p>
+          {% if u.link %}<a href="{{ u.link | relative_url }}">{{ u.link_text | default: "Read more" }} →</a>{% endif %}
+        </div>
+        {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <div class="box">
+        <h2>What we’ve told the District</h2>
+        <ul>
+        {% assign letters = site.data.stories | where: "type_group", "Letters" %}
+        {% for s in letters limit: 4 %}
+          <li>{% include story-link.html s=s %}<small>{{ s.type_label }} · {{ s.date | date: "%b %-d, %Y" }}</small></li>
+        {% endfor %}
+        </ul>
+        <a class="box-more" href="{{ '/archive/' | relative_url }}?group=Letters">All letters →</a>
+      </div>
+
+      <div class="box">
+        <h2>In the news</h2>
+        <ul>
+        {% for n in site.data.news limit: 3 %}
+          <li><a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a><small>{{ n.outlet }} · {{ n.date | date: "%b %-d, %Y" }}</small></li>
+        {% endfor %}
+        </ul>
+        <a class="box-more" href="{{ '/sdrpnews.html' | relative_url }}">All coverage →</a>
+      </div>
+
+      <div class="box about-box">
+        <h2>About the Legion</h2>
+        <p>We’re a group of Evanston parents reviewing District 65’s plans, checking their assumptions, and looking for solutions beyond closing schools outright. Together we have more than 200 years of professional experience in data analysis, research methods and evidence-informed decision-making.</p>
+        <p><a href="{{ '/about/' | relative_url }}">More about us</a> · <a href="mailto:{{ site.email }}">Write to us</a></p>
+      </div>
+    </aside>
+  </div>
+</div>

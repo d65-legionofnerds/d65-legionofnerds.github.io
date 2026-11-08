@@ -1,13 +1,18 @@
 ---
-title: K-8 to High School Transition
-layout: default
-nav_exclude: true
-search_exclude: true
-noindex: true
-sitemap: false
+title: "Examining Parent Trust: D65 8th Grade vs. ETHS 9th Grade"
+date: 2026-04-28
+topic: buildings
+type: analysis
+summary: "Every year for a decade, ETHS’s freshman class has outnumbered the prior year’s D65 8th grade, by about 152 students (~20%) on average. That is consistent with, but doesn’t prove, a trust-driven flow from private K-8 to ETHS."
+image: /assets/img/lead/k8-to-hs-transition.png
+image_alt: "Bar chart of the net external gain at the D65-to-ETHS transition, 2015-16 → 2016-17 through 2024-25 → 2025-26, with the gain as a share of the D65 8th-grade cohort: a peak of +266 students (35.8%), a low of +71 (8.5%) during COVID, then +189 and +172 (about 26%) in the two most recent years."
+image_source: dataanalysis/assets/k8_to_hs_external_gain_trend.html
+takeaways:
+  - "In every year of the past decade, ETHS’s freshman class has been larger than the D65 8th-grade class that graduated the prior June."
+  - "The 10-year average is approximately 152 extra students per year, or ~20% of each D65 8th-grade class."
+  - "The gain bottomed at 8.5% during the COVID years and has rebounded since 2022-23: the two most recent years came in at 26%, on a shrinking D65 base."
+  - "The data alone cannot distinguish among the possible explanations. The pattern is consistent with but doesn’t prove a trust-driven private-to-public flow."
 ---
-
-# Examining Parent Trust: D65 8th Grade vs. ETHS 9th Grade
 
 ## The question
 
@@ -23,25 +28,33 @@ If parent trust in D65 is declining, we'd expect this gap to grow over time as m
 
 ### Cohort comparison: D65 8th-grade vs. the following year's ETHS 9th-grade
 
-<iframe src="assets/k8_to_hs_cohort_side_by_side.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/k8_to_hs_cohort_side_by_side.html" width="100%" height="600" frameborder="0" title="D65 8th-grade class vs. the following year's ETHS 9th-grade class"></iframe>
 
 In every year of the past decade, ETHS's freshman class has been **larger** than the D65 8th-grade class that graduated the prior June. There is no year in this 10-year window where the inflow at the K-8 → 9 transition went the other direction.
 
 ### Net external gain at the transition
 
-<iframe src="assets/k8_to_hs_external_gain_trend.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/k8_to_hs_external_gain_trend.html" width="100%" height="600" frameborder="0" title="Net external gain at the K-8 to high school transition, by year"></iframe>
 
-The orange bars show the *absolute* number of "extra" freshmen (ETHS 9th-grade minus the prior year's D65 8th-grade). The dotted line shows that gain as a percentage of the D65 cohort. The 10-year average is approximately **152 extra students per year, or ~20% of each D65 8th-grade class**.
+> **How to read this chart**
+> The orange bars show the *absolute* number of "extra" freshmen (ETHS 9th-grade minus the prior year's D65 8th-grade). The dotted line shows that gain as a percentage of the D65 cohort.
+{: .note}
+
+<mark>The 10-year average is approximately <strong>152 extra students per year, or ~20% of each D65 8th-grade class</strong>.</mark>
 
 ### Composition of each ETHS freshman class
 
-<iframe src="assets/k8_to_hs_eths_composition.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/k8_to_hs_eths_composition.html" width="100%" height="600" frameborder="0" title="Composition of each ETHS freshman class: implied D65 continuers and the external gain"></iframe>
 
-This stacked view shows each ETHS freshman class as the sum of two components: an *implied* "D65 continuers" portion equal to the prior year's D65 8th-grade size (blue), plus the external gain (orange). About 80% of each ETHS freshman class is consistent in size with the D65 graduating cohort the year before.
+> **How to read this chart**
+> This stacked view shows each ETHS freshman class as the sum of two components: an *implied* "D65 continuers" portion equal to the prior year's D65 8th-grade size (blue), plus the external gain (orange).
+{: .note}
+
+About 80% of each ETHS freshman class is consistent in size with the D65 graduating cohort the year before.
 
 ### Has the gap changed over time?
 
-<iframe src="assets/k8_to_hs_trend_pct.html" width="100%" height="550" frameborder="0"></iframe>
+<iframe src="assets/k8_to_hs_trend_pct.html" width="100%" height="550" frameborder="0" title="External gain as a share of the D65 8th-grade cohort over time"></iframe>
 
 The trend over the past decade is non-monotonic. Key observations from the underlying numbers:
 
@@ -78,7 +91,7 @@ A larger ETHS 9th-grade class than the prior D65 8th-grade is consistent with se
 6. **D65 students who left Evanston**: Families who moved out of Evanston between 8th grade and high school would *reduce* the ETHS 9th-grade count relative to the D65 cohort. The fact that ETHS 9 still exceeds D65 8 means inflows clearly outpace outflows at this transition.
 7. **Reclassified ETHS 9th-graders**: Each year, ~30-80 ETHS students who didn't earn 12 credits as freshmen remain in 9th grade for a second year. These students are part of the official "Total Grade 9" count and inflate the comparison by that amount.
 
-A more rigorous study would separate these factors using individual-level enrollment data (which D65 and ETHS both have) rather than the aggregate counts available in public reports. The pattern shown here is *consistent with* but doesn't *prove* a trust-driven private-to-public flow.
+A more rigorous study would separate these factors using individual-level enrollment data (which D65 and ETHS both have) rather than the aggregate counts available in public reports. <mark>The pattern shown here is <em>consistent with</em> but doesn't <em>prove</em> a trust-driven private-to-public flow.</mark>
 
 ### What would strengthen the trust hypothesis specifically
 

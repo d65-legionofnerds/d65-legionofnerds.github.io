@@ -1,26 +1,36 @@
 ---
-title: SY27 Building Use and Closure Costs (v2)
-layout: default
-parent: Data Analysis
+title: "SY27 Building Use, Class Size and Closure Costs"
+date: 2026-09-28
+updated: 2026-10-11
+topic: buildings
+type: analysis
+featured: true
+summary: "High-utilization buildings don’t have bigger classes, the smallest classes are at the dual-language schools, and one closure nets roughly $0.2–0.7M a year after busing."
+image: /assets/img/lead/sy27_building_use.png
+image_alt: "Scatter plot of 11 elementary schools, utilization against average class size as of October 1, 2026. The fitted line is nearly flat (r = −0.14, R² = 0.02): Oakton has the highest utilization (78%) and the smallest classes (16.0), Willard the lowest utilization (51%) and among the largest classes (21.2)."
+image_source: dataanalysis/assets/enrollment26_class_size_vs_utilization_v2.png
+takeaways:
+  - "Across 11 elementary schools, utilization explains about 2% of the difference in class size (r = −0.14), and that holds when any one school is left out."
+  - "The smallest classes are at the schools with dual-language (TWI) programs: TWI schools average 17.5 students per class; the other schools average 20.3."
+  - "After added busing, closing one school nets roughly $0.2–0.7M a year, about 1–3.5% of the $20 million target. That’s before moving and renovation costs, which come first."
 ---
-
-# SY27 Building Use, Class Size and Closure Costs (v2)
 
 > **v2 data, all as of October 1, 2026.**
 > - **Class counts:** the district's FY27 (fall 2026) K–5 section list, a spreadsheet (`k5_sections_fy27.xlsx`) received by email from District 65 on October 1, 2026: 188 sections by school, grade and program (TWI, monolingual, ACC). It replaces our estimated class counts (190).
 > - **Enrollment:** re-pulled from the district dashboard, [data.district65.net](https://data.district65.net){:target="_blank"}, on October 1, 2026: 5,415 students (5,462 on the September 23 pull).
 > - **Class sizes are grade averages** (students in the grade ÷ sections), because the section list doesn't give students per class.
 > - The busing and building-savings section below is unchanged from v1.
+{: .note .inline}
 
 ## Summary: savings need to work with the district we have
 
 District 65 faces a financial crisis that is both immediate and far-reaching: the district is looking to cut about 10% of its budget, roughly $20 million. A solution needs to account for the long time horizon while also producing savings in the short term. The Nerds' goal is to provide insight and data analysis to inform decision making.
 
-- **School closures are being treated as the primary lever, but each one saves less than it appears.** After added busing, closing one school nets roughly $0.2–0.7M a year, about 1–3.5% of the $20 million target. Closing two schools would still come to only about 2–7% of the target. Busing takes back 20–35% of the building savings ([details](#closing-schools-busing-costs-vs-building-savings)). That's before moving and renovation costs, which come first.
+- **School closures are being treated as the primary lever, but each one saves less than it appears.** <mark>After added busing, closing one school nets roughly $0.2–0.7M a year, about 1–3.5% of the $20 million target.</mark> Closing two schools would still come to only about 2–7% of the target. Busing takes back 20–35% of the building savings ([details](#closing-schools-busing-costs-vs-building-savings)). That's before moving and renovation costs, which come first.
 - **Closing too many schools can raise costs in both the short and long term,** through added transportation and moving costs and potential renovations needed to accommodate programs. (See [Closing schools: busing costs vs. building savings](#closing-schools-busing-costs-vs-building-savings).)
 - **Staff time and labor are not being counted.** Much of the budget challenge comes from staffing. Closures focus administrators on problems whose gains are mostly long-term, and pull attention away from the larger short-term savings available through staffing.
 
-Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** Across 11 elementary schools, utilization explains about 2% of the difference in class size (r = −0.14), and that holds when any one school is left out (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
+Closing buildings may be one way to address the budget gap, but **solving for high utilization is not the answer.** <mark>Across 11 elementary schools, utilization explains about 2% of the difference in class size (r = −0.14), and that holds when any one school is left out</mark> (finding 1 below). Any plan has to work with the buildings we have, not an idealized version of an imagined district.
 
 - **Some of the lowest utilization is in larger buildings.** Lincoln, for example, is at 59% of a 576-seat capacity (October 1). Instead of focusing only on the utilization rate, the district could look at other good uses for the space, such as partnering with a local preschool.
 - **The smallest classes are at the schools with dual-language (TWI) programs** (finding 3 below). Paradoxically, TWI programs are hard to get into, yet have smaller classes in the upper grades, through attrition and the design of the program. The district could allow more strands in K–2 and then consider consolidating strands in grades 4–5.[^twi]
@@ -58,7 +68,9 @@ We need to work with the buildings and the district we have: chasing an artifici
 
 ![Class size vs. utilization, elementary schools](assets/enrollment26_class_size_vs_utilization_v2.png)
 
-Each dot is an elementary school: utilization against average class size (enrollment and sections as of October 1, 2026). The red line is a least-squares fit.
+> **How to read this chart**
+> Each dot is an elementary school: utilization against average class size (enrollment and sections as of October 1, 2026). The red line is a least-squares fit.
+{: .note}
 
 - **The line is flat.** Class size changes by about −0.03 students per point of utilization (r = −0.14, R² = 0.02, p = 0.69, 11 schools). Utilization explains about 2% of the difference in class size between schools.
 - **The two extremes point opposite ways.** Oakton has the highest utilization (78%) and the smallest classes (16.0). Willard has the lowest utilization (51%) and among the largest classes (21.2).
@@ -111,7 +123,9 @@ Average class size per school (average of its K–5 grades; King Arts K–5 only
 
 ![Class size by school and grade, K–5](assets/enrollment26_class_size_heatmap_v2.png)
 
-Red is small classes, purple is about 18, and blue is large (up to the 24 cap). The last column is each school's average.
+> **How to read this chart**
+> Red is small classes, purple is about 18, and blue is large (up to the 24 cap). The last column is each school's average.
+{: .note}
 
 - **23 of the 66 school-grades are under 18.** They are concentrated at Oakton (5 of 6 grades), Dewey (4), and Dawes, Foster and Washington (3 each).
 - **Small grades split awkwardly.** Orrington's 4th grade has 26 students in 2 classes (13 each). A 25th student forces a second class.

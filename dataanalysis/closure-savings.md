@@ -1,19 +1,23 @@
 ---
-title: Did the Kingsley and Bessie Rhodes closures save money?
-layout: default
-nav_exclude: true
-search_exclude: true
-noindex: true
-sitemap: false
+title: "Did closing Kingsley and Bessie Rhodes save money?"
+date: 2026-10-29
+topic: closures
+type: analysis
+summary: "The District projected about $2.9M a year in savings from closing the two schools. Tracking those 17 budget lines in the monthly Treasurer’s reports, only part of it shows up in the FY27 budget so far."
+image: /assets/img/lead/closure-savings.png
+image_source: dataanalysis/assets/closure_headline.html
+image_alt: "Bar chart: the District projected $2.90M a year in savings across 17 line items; the FY27 budget shows between −$0.19M and +$0.68M across all 17 after raises and inflation. For the 8 cleaner line items, $1.77M was projected and the budget shows +$0.42M to +$0.92M."
+takeaways:
+  - "Across the 8 line items where the budget lines are clean enough to read, roughly 24%-52% of the projected savings is visible in the FY27 budget once we account for raises and inflation."
+  - "The other 9 lines are too noisy to judge: insurance, electricity, gas and water are driven by prices and by the new Foster School."
+  - "Budget is not spending. Only July-September 2026 has been reported; the winter heating bills and the October-June payroll are the real test."
 ---
 
-# Did closing Kingsley and Bessie Rhodes save money?
-
-*DRAFT. District 65 closed both schools after SY2025-26 and projected about **$2.9M a year** in savings across 17 budget lines. The district does not report costs by school, so we tracked each of those 17 lines in the monthly Treasurer's reports and compared FY27 (2026-27) against FY26 (2025-26, schools open) and FY25. Reports through September 2026 (3 of 12 months) are included.*
+District 65 closed both schools after SY2025-26 and projected about **$2.9M a year** in savings across 17 budget lines. The district does not report costs by school, so we tracked each of those 17 lines in the monthly Treasurer's reports and compared FY27 (2026-27) against FY26 (2025-26, schools open) and FY25. Reports through September 2026 (3 of 12 months) are included.
 
 ## The short answer
 
-**It is too early to prove the savings, and the budget shows only part of what was projected.** Across the 8 line items where the budget lines are clean enough to read, roughly **24%-52%** of the projected savings is visible in the FY27 budget once we account for raises and inflation. The other 9 lines are too noisy to judge: insurance, electricity, gas and water are driven by prices and by the new Foster School, and others rose for reasons the reports do not give.
+**<mark>It is too early to prove the savings, and the budget shows only part of what was projected.</mark>** Across the 8 line items where the budget lines are clean enough to read, roughly **24%-52%** of the projected savings is visible in the FY27 budget once we account for raises and inflation. The other 9 lines are too noisy to judge: insurance, electricity, gas and water are driven by prices and by the new Foster School, and others rose for reasons the reports do not give.
 
 <iframe src="assets/closure_headline.html" width="100%" height="500" frameborder="0"></iframe>
 
@@ -33,7 +37,9 @@ Budgets are plans. Spending is the evidence. Only July-September 2026 has been r
 
 <iframe src="assets/closure_promise.html" width="100%" height="540" frameborder="0"></iframe>
 
-*Kingsley only. The 2025 scenarios were presented "in addition to the Board approved closure of Bessie Rhodes." The Oct 2026 file does not itemize the other levers, so part of the drop from $1.66M to $1.56M is missing detail, not a lower estimate. Staff figures in the 2025 models include benefits; the tracker's staff lines are salary objects only.*
+> **About this chart**
+> Kingsley only. The 2025 scenarios were presented "in addition to the Board approved closure of Bessie Rhodes." The Oct 2026 file does not itemize the other levers, so part of the drop from $1.66M to $1.56M is missing detail, not a lower estimate. Staff figures in the 2025 models include benefits; the tracker's staff lines are salary objects only.
+{: .note}
 
 ## How we corrected for raises and inflation
 

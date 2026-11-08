@@ -1,0 +1,63 @@
+# Work that isn't a page on this site: PDFs, outside articles, apps and standalone HTML tools.
+# Each entry shows up on the homepage, its topic page and All stories exactly like a page would.
+# Fields are the same as a page's front matter, plus `link:` (a full URL, or a path inside this repo
+# with no leading slash) and optional `format:` (PDF, App, Map...).
+# Keep the newest entries at the top. The site sorts by date anyway.
+
+- title: "Financial Levers App"
+  date: 2025-12-01
+  topic: budget
+  type: tool
+  format: App
+  link: https://jclip.shinyapps.io/Financial_Levers/
+  summary: "An interactive companion to the Financial Levers memo for testing budget levers."
+
+- title: "Financial Levers App Explainer"
+  date: 2025-12-01
+  topic: budget
+  type: explainer
+  format: PDF
+  link: assets/12_01_App_explainer.pdf
+  summary: "A guide to using the Financial Levers app."
+
+- title: "Financial Discrepancy Memo"
+  date: 2025-11-20
+  topic: budget
+  type: memo
+  format: PDF
+  link: assets/FinancialDiscrepancyMemo.pdf
+  summary: "A $2M gap between the District consultant’s financial projections presented on Nov. 3 and Nov. 17."
+
+- title: "Financial Levers Memo"
+  date: 2025-11-12
+  updated: 2025-11-17
+  topic: budget
+  type: memo
+  format: PDF
+  featured: true
+  link: assets/FinancialLeversMemoV2.pdf
+  summary: "Levers to reach above 70% utilization in every middle-school feeder pattern while prioritizing students, Title I schools and programming."
+
+- title: "Victor Filippini on Lincolnwood Deed Restrictions"
+  date: 2025-11-09
+  topic: closures
+  type: guest
+  format: PDF
+  link: assets/VicFilippiniMemoLincolnwood.pdf
+  summary: "Victor Filippini’s memo on the deed restrictions that apply to the Lincolnwood school site."
+
+- title: "Victor Filippini on D65 and City Government Cooperation"
+  date: 2025-11-06
+  topic: budget
+  type: guest
+  format: PDF
+  link: assets/VicFilippiniMemo.pdf
+  summary: "Victor Filippini’s memo on cooperation between D65 and Evanston city government."
+
+- title: "Why District 65 Must Slow Down on School Closures"
+  date: 2025-10-24
+  topic: closures
+  type: oped
+  format: Evanston RoundTable
+  link: https://evanstonroundtable.com/2025/10/24/guest-essay-why-district-65-must-slow-down-on-school-closures/
+  summary: "Our guest essay in the Evanston RoundTable."

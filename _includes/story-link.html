@@ -1,0 +1,6 @@
+{%- comment -%} Title link for a story hash `s`. External links open in a new tab and get a ↗. {%- endcomment -%}
+{%- if include.s.external -%}
+<a href="{{ include.s.url }}" target="_blank" rel="noopener">{{ include.s.title }}</a><span class="ext" aria-label="(opens another site)">↗</span>
+{%- else -%}
+<a href="{{ include.s.url | relative_url }}">{{ include.s.title }}</a>{% if include.s.format %}<span class="ext">{{ include.s.format }}</span>{% endif %}
+{%- endif -%}

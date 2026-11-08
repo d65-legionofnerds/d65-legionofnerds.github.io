@@ -1,13 +1,19 @@
 ---
-title: No Changes Budget Model Explained
-layout: default
-nav_exclude: true
+title: "No Changes Budget Model Explained"
+date: 2025-11-29
+topic: budget
+type: explainer
+summary: "A plain-language walk through the District’s “no action” budget slide and the terms behind it."
+takeaways:
+  - "The slide shows the budget if the district takes no action, which it will not: there is broad board, administration, and community support for taking decisive action."
+  - "The table covers operating expenses only. Subtracting expenditures from revenues gives a negative amount each year, showing the district as up to $12M over budget by FY30."
+  - "Beginning in FY26, lease certificate payments to fund the building of Foster School come due at $3.2M per year through FY2042."
+  - "There is no law or regulation requiring school districts to hold 90 days cash on hand, and the district held 90 Days Cash on Hand only 7 times over the past 22 years."
 ---
 
-# No Changes Budget Model Explained
 *Last Update: 11/29/2025*
 
-The district has presented a slide in several board meetings illustrating the budget scenario if we take no action. It has an unsettling amount of red text and negative numbers. It is also definitively not the case that the district will take no action; there is broad board, administration, and community support for taking decisive action to solve these financial issues. This view can be used to illustrate how our current reality differs from business as usual, but the table without context is hard to interpret.
+The district has presented a slide in several board meetings illustrating the budget scenario if we take no action. It has an unsettling amount of red text and negative numbers. It is also definitively not the case that the district will take no action; there is broad board, administration, and community support for taking decisive action to solve these financial issues. <mark>This view can be used to illustrate how our current reality differs from business as usual, but the table without context is hard to interpret.</mark>
 
 This piece begins with definitions of key terms in the order they appear in the text. [Click here to skip to the explanation.](#budget-model-explanation)
 
@@ -29,9 +35,10 @@ This piece begins with definitions of key terms in the order they appear in the 
 * **Referendum:** A question on the ballot that offers the community a choice between accepting and rejecting a proposal.
 
 
-**Units**
-* Capital M in a dollar amount denotes millions rounded to two digits. For example, $3.2M represents $3,200,000 (rounded) and could reflect an underlying amount like $3,227,125.
-* Capital K in a dollar amount denotes dollars rounded to the thousands. For example, $916K represents $916,000 (rounded) and could reflect an underlying amount like $915,610.
+> **Units**
+> * Capital M in a dollar amount denotes millions rounded to two digits. For example, $3.2M represents $3,200,000 (rounded) and could reflect an underlying amount like $3,227,125.
+> * Capital K in a dollar amount denotes dollars rounded to the thousands. For example, $916K represents $916,000 (rounded) and could reflect an underlying amount like $915,610.
+{: .note}
 
 ## Budget Model Explanation
 
@@ -57,4 +64,4 @@ The Other Sources/(Uses) amount for FY26 was described at the November 3 board m
 
 The beginning fund balance represents the amount the district has in [fund balance reserves](#definitions) at the start of each fiscal year and at the end of each fiscal year, after the operating deficit is paid from the reserves and fund balance transfers are removed from the reserves.
 
-Finally, the line for Days [Cash on Hand >90 Days](#definitions) represents the anticipated number of days of expenses the district could cover with the fund balance reserves. The board has identified a target of maintaining 90 days worth of cash on hand and this is considered a best practice. There is no law or regulation requiring school districts to hold 90 days cash on hand and a review of historical budgets indicates that the district held 90 Days Cash on Hand only 7 times over the past 22 years, less than one-third of the time.
+Finally, the line for Days [Cash on Hand >90 Days](#definitions) represents the anticipated number of days of expenses the district could cover with the fund balance reserves. The board has identified a target of maintaining 90 days worth of cash on hand and this is considered a best practice. <mark>There is no law or regulation requiring school districts to hold 90 days cash on hand and a review of historical budgets indicates that the district held 90 Days Cash on Hand only 7 times over the past 22 years, less than one-third of the time.</mark>

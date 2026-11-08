@@ -1,12 +1,10 @@
 ---
-title: Boundary Maps (Oct 23 Draft)
-layout: default
-parent: Data Analysis
+title: "Boundary Maps: the Oct 23, 2026 Draft"
+date: 2026-11-02
+topic: closures
+type: tool
+summary: "Interactive maps of the District’s Oct 23, 2026 boundary draft, which closes Dewey and Lincolnwood. They use the District’s own lines and its Oct 28, 2026 counts of students who change school."
 ---
-
-# Boundary Maps: the Oct 23, 2026 Draft
-
-Interactive maps of the district's Oct 23, 2026 boundary draft, which closes Dewey and Lincolnwood. They use the district's own lines and its Oct 28, 2026 counts of students who change school.
 
 ## [Boundary Overlay and School Closure Analysis Tool](d65_boundaries.html){:target="_blank"}
 
