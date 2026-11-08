@@ -4,14 +4,6 @@
 # with no leading slash) and optional `format:` (PDF, App, Map...).
 # Keep the newest entries at the top. The site sorts by date anyway.
 
-- title: "D65 Boundary Overlay and School Closure Analysis Tool"
-  date: 2026-10-18
-  topic: closures
-  type: tool
-  format: Map
-  link: dataanalysis/d65_boundaries.html
-  summary: "An interactive map of what the District’s proposal to close Dewey and Lincolnwood would change: which neighborhoods move, walking distances, who lives there, and where Kingsley and Bessie Rhodes students went. You can also draw your own boundaries."
-
 - title: "Financial Levers App"
   date: 2025-12-01
   topic: budget
