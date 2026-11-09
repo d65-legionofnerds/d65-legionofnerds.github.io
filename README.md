@@ -15,8 +15,10 @@ To publish a new analysis you add **one Markdown file** with a few lines of sett
 homepage, section pages, All stories and search update themselves.
 
 **Read [CLAUDE.md](CLAUDE.md) first.** It covers the steps, the settings for each page, the house
-style (the yellow highlighter and the red margin notes), charts, and how to check your work. If you
-use Claude Code or another AI assistant, it reads those instructions automatically.
+style (the yellow highlighter and the red margin notes), charts, and how to check your work. It
+also has step-by-step recipes for the everyday updates (a news link, a revised District figure, a
+correction, a Board meeting date), our editorial standards, and setup. If you use Claude Code or
+another AI assistant, it reads those instructions automatically.
 
 A starting template for a new analysis is in [tools/templates/new-analysis.md](tools/templates/new-analysis.md).
 

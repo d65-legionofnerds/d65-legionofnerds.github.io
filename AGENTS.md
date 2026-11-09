@@ -3,4 +3,5 @@
 Read and follow **CLAUDE.md** in this folder before changing anything. It explains how to publish
 a page (one Markdown file with front matter; the homepage and lists update themselves), the house
 style (highlighter `<mark>`, red margin notes `{: .note}`, colour rules), how to make and embed
-charts, and how to check the build before pushing.
+charts, and how to check the build before pushing. Section 14 of CLAUDE.md is written for you:
+check sources before changing a number, keep other members' work intact, verify with screenshots.

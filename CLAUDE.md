@@ -10,6 +10,21 @@ The site: <https://d65-legionofnerds.github.io>. It is a Jekyll site with its ow
 `main` (about two minutes). The repo is **public**: anything committed can be read on GitHub,
 even if it is not on the site.
 
+**What do you want to do?**
+
+| Task | See |
+|---|---|
+| Publish a new analysis | section 1 |
+| Add a news article to "In the news" | 11.1 |
+| Update a page because the District revised a figure or new data came in | 11.2 |
+| Correct a mistake | 11.3 |
+| Update a Board meeting date ("Coming up", the closures timeline) | 11.4 |
+| Add a letter, memo, PDF or interactive tool | section 6 |
+| Set up a computer, pull and push changes | section 13 |
+
+Everyone: the editorial standards are in **section 12**. **AI assistants: read section 14 before
+changing anything.**
+
 ---
 
 ## 1. Publish a new analysis (the common case)
@@ -34,7 +49,7 @@ page.** The new page appears automatically:
 - in site search, and in "More on …" at the bottom of related articles
 
 To update an existing analysis, edit its file and add `updated: YYYY-MM-DD`. If the change
-alters a finding, add a dated note (section 3.2).
+alters a finding, add a dated note (section 3.2). The full checklist is in section 11.2.
 
 ## 2. Front matter
 
@@ -142,8 +157,8 @@ caveats. Write a blockquote whose first line is a bold label, then `{: .note}` o
 ### 3.3 Colour
 
 Yellow means our key finding (the highlighter). Red means our notes, plus costs and negative
-numbers. Nothing else gets colour in text. For a cost or loss in a table, write
-`<span class="neg">cost $329,000</span>`.
+numbers, plus a homepage figure the District has revised (section 3.5). Nothing else gets colour in
+text. For a cost or loss in a table, write `<span class="neg">cost $329,000</span>`.
 
 ### 3.4 Big numbers inside an article
 
@@ -164,10 +179,10 @@ These are short data files, not code. Change them when the facts change:
 
 | What | File | Notes |
 |---|---|---|
-| By the numbers (4 figures) | `_data/numbers.yml` | Each figure must appear in its `source` page. Check it when you update that page. |
-| Coming up (black box) | `_data/upcoming.yml` | Give every entry an `until` date; it hides itself after that. |
-| How we got here (closures timeline) | `_data/timeline.yml` | Mark a future date `upcoming: true`. |
-| In the news | `_data/news.yml` | Newest first. The three newest show on the homepage. |
+| By the numbers (4 figures) | `_data/numbers.yml` | Each figure must appear in its `source` page. Check it when you update that page. When the District revises a figure, add `was:` (the old value): it prints as a red-pen correction, the old value small and struck through, the new one in red. Use it only for a revision the source page explains, with a dated note; drop `was:` once the change is old news. |
+| Coming up (black box) | `_data/upcoming.yml` | Give every entry an `until` date; it hides itself after that. Fields: section 11.4. |
+| How we got here (closures timeline) | `_data/timeline.yml` | Oldest first. Mark a future date `upcoming: true`. Fields: section 11.4. |
+| In the news | `_data/news.yml` | Add new items at the **top**: the homepage shows the first three in the file, not the three latest dates. Fields: section 11.1. |
 | PDFs, outside articles, apps, standalone HTML tools | `_data/links.yml` | Same fields as front matter plus `link:` and optional `format:` (PDF, App, Map). |
 
 ## 4. Writing the body
@@ -285,6 +300,12 @@ picture? An assistant can do this with Playwright screenshots of `_site` served 
 No Ruby installed? Push to a branch and open a pull request: the CI check builds the site and
 reports the same problems. Merging to `main` publishes.
 
+On Windows, if the build fails with a file-path error, build into a short folder instead:
+`bundle exec jekyll build -d C:/tmp/ldn-site`.
+
+After pushing, the live site updates in about two minutes. If it doesn't, open the repo's
+**Actions** tab on GitHub: a red run names the file and line that stopped the build.
+
 Commit messages: say what changed for readers ("Add analysis: ...", "Update SY27 building use
 with Oct 1 data").
 
@@ -295,7 +316,7 @@ with Oct 1 data").
 | `_config.yml` | Site settings and the list of files kept off the site (`exclude`) |
 | `_plugins/stories.rb` | Collects every page with `topic:` plus `_data/links.yml` into `site.data.stories`, picks the lead, checks front matter |
 | `_layouts/` | `base` (masthead, nav, footer), `home`, `article` (default for every page), `topic`, `archive`, `page` |
-| `_includes/` | `story.html` (a list entry), `kicker.html`, `story-link.html` |
+| `_includes/` | `story.html` (a list entry), `kicker.html`, `story-link.html`, `num-value.html` (a "By the numbers" figure, with the `was:` correction) |
 | `assets/css/site.css`, `assets/js/site.js` | The whole design; small progressive enhancements |
 | `topics/*.md`, `archive.md`, `letterstoboard.md`, `letterstoadmin.md`, `publications.md`, `dataanalysis.md` | Listing pages, generated from the stories |
 | `sdrpnews.md`, `resources.md`, `about.md`, `search.md` | Plain pages |
@@ -318,3 +339,157 @@ indexes article text only (`data-pagefind-body`). It doesn't exist in a plain lo
 - Grade order: `GRADE_ORDER = ["K", "1", "2", "3", "4", "5", "6", "7", "8"]` (strings).
 - Some older scripts have hard-coded Windows paths; make them relative before running elsewhere.
 - File paths are case-sensitive on the build server: match iframe `src` to the file name exactly.
+
+## 11. Common updates, step by step
+
+### 11.1 Add a news article
+
+Add an entry at the **top** of `_data/news.yml`. The homepage side rail shows the first three
+entries in the file (it does not sort by date), and the In the news page lists them all in file order.
+
+```yaml
+- title: "District 65 releases another boundary proposal, shrinking Foster back to current area"
+  outlet: Evanston RoundTable     # as the outlet writes its name: Evanston RoundTable, Evanston Now, FOIA Gras
+  date: 2026-11-06                # the article's publication date
+  url: https://evanstonroundtable.com/2026/11/06/district-65-releases-another-boundary-proposal-shrinking-foster-back-to-current-area/
+  also:                           # optional: a related document, shown under the article
+    title: "10/10/2025 Finance Committee Letter to the Board"
+    url: https://evanstonnow.com/wp-content/uploads/2025/10/20251010-Finance-Committee-Letter-to-Board.pdf
+```
+
+- Use the headline exactly as the outlet published it. Coverage of the closures, District
+  finances, the SDRP and boundaries belongs here. Our own pieces don't (they're already stories).
+- If the article reports a new District figure that one of our pages uses, also do 11.2.
+
+### 11.2 The District revised a figure, or new data changes a finding
+
+1. **Confirm it in the source.** Open the District document or the article and check exactly which
+   figure changed: for which schools, which years, and what it includes. Example: in November 2026
+   the District's revised "$2.3 million" was its estimate for closing Lincolnwood and Dewey (down
+   from $2.9 million). It did not revise the $3.0 million it credited to Kingsley and Bessie Rhodes,
+   even though it was easy to read it that way.
+2. **Find every place the old figure appears**, in pages and in `_data/`:
+   `git grep -n -e "2.9M" -e "2.9 million"`. Several pages, `_data/numbers.yml` and
+   `_data/timeline.yml` often cite the same number.
+3. **Keep the analysis intact.** Where a page reports what the District said at the time, leave the
+   original figure; it was true then. Add a dated `Update · <date>` note near the top (section 3.2),
+   and explain the revision in the text where the figure is discussed, with a link to the source.
+   Add `updated:` to the front matter.
+4. **If a finding changes,** bring the `summary`, `takeaways`, highlights and `image_alt` into line,
+   and re-run the chart and its picture (sections 5 and 5.3).
+5. **The homepage:** if the figure is in `_data/numbers.yml`, change `value` and its `text`. To show
+   the change as a red-pen correction, put the old value in `was:` (section 3.5). If it's a
+   milestone, add a row to `_data/timeline.yml` (11.4).
+6. Build and check (section 8).
+
+### 11.3 Correct a mistake
+
+Fix the text, then add a dated note saying what was wrong and what changed. Add `updated:` to the
+front matter. If the wrong number also appears in the summary, takeaways, a chart, `image_alt` or
+`_data/numbers.yml`, fix it there too. Corrections are never silent.
+
+```markdown
+> **Correction · Nov 12, 2026**
+> An earlier version gave Dewey's staffing savings as $962,104. The District's figure is $926,104.
+{: .note}
+```
+
+### 11.4 Board meetings and other dates
+
+**Coming up** (the black box in the homepage side rail), `_data/upcoming.yml`. It shows the soonest
+entry whose `until` date hasn't passed. One entry per date:
+
+```yaml
+- date: 2026-11-16
+  label: "Nov 16"
+  until: 2026-11-17               # the day after: the entry disappears then
+  text: "The Board is scheduled to vote on the District’s October plan, which proposes closing Lincolnwood and Dewey."
+  link: topics/closures/          # no leading slash
+  link_text: "Closures coverage"
+```
+
+**How we got here** (the closures timeline on the School Closures page), `_data/timeline.yml`,
+oldest first:
+
+```yaml
+- date: 2026-11-16
+  label: "Nov 16, 2026"
+  text: "Board scheduled to vote on the October plan (moved from Nov 9)."
+  upcoming: true                  # a future date: shown in red until it passes
+```
+
+- **When a meeting moves,** change both files: don't leave the old date up.
+- **After a meeting,** remove `upcoming: true` and rewrite the line as what happened ("Board votes
+  5-2 to ..."). Then check whether anything decided there changes a figure our pages cite (11.2).
+
+## 12. Editorial standards
+
+- **Independent.** We are parents checking the District's numbers. We are not affiliated with the
+  District, any campaign or any advocacy group. No partner credits, logos or "in partnership with".
+  Other community groups appear only as plain links under Resources → Community groups.
+- **Every number has a source a reader can open:** the District document (link it on BoardBook, with
+  the slide or page), the dataset, or the article, with its date.
+- **Keep the District's figures and ours apart.** Write "the District estimates..." and "we
+  estimate...". In charts, grey is the District's figure and blue is ours (section 5.1). Give a
+  range when we're unsure, and say what data would settle it.
+- **Be fair to the District.** Quote it exactly, include its explanation when it gives one, and
+  say when we've asked it a question ("What we asked the District" note). Update the page when
+  it answers.
+- **Absolute dates:** "November 3, 2026", never "Tuesday" or "last week". Pages are read months later.
+- **Let the numbers argue.** Plain words, no adjectives doing the work ("shocking", "massive").
+- **Students:** never identify a student. Keep FERPA-masked counts masked (section 10).
+- **The repo is public:** drafts, data files and commit messages can all be read on GitHub.
+
+## 13. Setting up, and working with others
+
+One time, on a new computer:
+
+```bash
+git clone https://github.com/d65-legionofnerds/d65-legionofnerds.github.io.git
+cd d65-legionofnerds.github.io
+bundle install                                  # Ruby 3.3+ and Bundler, for the local build
+pip install -r dataanalysis/requirements.txt    # analysis scripts
+pip install playwright pillow                   # chart pictures (5.3) and screenshots
+python -m playwright install chromium
+```
+
+To push to `main` your GitHub account needs write access to the repo; ask a site admin.
+
+Every time:
+
+1. `git pull` before you start: other members push too.
+2. Make the change, build and check (section 8).
+3. `git status`, then `git add` **only the files you meant to change**. Don't use `git add -A` or
+   `git add .`: they pick up screenshots, test builds and personal settings. Never commit
+   `.claude/settings.local.json`.
+4. `git commit -m "Add analysis: ..."`, then `git push`. If the push is rejected because someone
+   pushed first, run `git pull --rebase`, build again, then push.
+
+## 14. Notes for AI assistants
+
+Members mostly update this site through an AI assistant. Work like a careful editor:
+
+- **Start with `git pull`**, then read this file and the whole page you're about to change.
+- **Do what was asked, and keep the rest intact.** These analyses are other members' work: don't
+  rewrite text, restyle charts, rename files or change findings beyond the request. Before changing
+  a finding, the homepage lead or `_data/numbers.yml` on your own initiative, ask.
+- **Check the source before you change a number.** If what the person describes doesn't match the
+  source (a different school, year or scope), say so and ask before editing. Section 11.2 has a
+  real example.
+- **Never invent:** no numbers, quotes, dates or links that aren't in a source. If you estimate
+  something, label it as our estimate and show how it was made.
+- **Getting sources.** District documents are on BoardBook
+  (<https://meetings.boardbook.org/Public/Organization/1247>, the agenda items' attachments).
+  Some news sites block automated fetching (the Evanston RoundTable often answers "429 Too Many
+  Requests"). If a page won't load, ask the person to save it (File → Save page as) or paste the
+  text, rather than working from a summary or from memory.
+- **Check your work like a reader:** build (section 8), serve the built site locally
+  (`python -m http.server` in the build folder) and take Playwright screenshots of every page you
+  changed and of the homepage, at about 1,280 px and 390 px wide. Fix every build "problem" and
+  every "Check:" warning you caused.
+- **Keep the repo clean:** screenshots, downloaded articles and test builds go in a temporary folder
+  outside the repo, never in it.
+- **Design changes** (layouts, includes, plugins, CSS) need a site admin's OK. Propose them on a
+  branch with a pull request (section 7) unless the admin says otherwise.
+- **Report back** in plain words: what changed on which pages, the sources you used, and anything
+  you couldn't verify.
