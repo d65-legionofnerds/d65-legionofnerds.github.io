@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec jekyll build *)",
+      "Bash(bundle exec jekyll serve *)",
+      "Bash(python tools/chart_image.py *)",
+      "Bash(python3 tools/chart_image.py *)",
+      "Bash(python tools/patch_plotly_layout.py *)",
+      "Bash(python3 tools/patch_plotly_layout.py *)",
+      "Bash(git pull *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "PowerShell(bundle exec jekyll build *)",
+      "PowerShell(bundle exec jekyll serve *)",
+      "PowerShell(python tools/chart_image.py *)",
+      "PowerShell(python tools/patch_plotly_layout.py *)",
+      "PowerShell(git pull *)",
+      "PowerShell(git status *)",
+      "PowerShell(git diff *)",
+      "PowerShell(git log *)",
+      "WebFetch(domain:evanstonroundtable.com)",
+      "WebFetch(domain:foiagras.com)",
+      "WebFetch(domain:meetings.boardbook.org)",
+      "WebFetch(domain:district65.net)",
+      "WebFetch(domain:www.district65.net)",
+      "WebFetch(domain:resources.finalsite.net)",
+      "WebFetch(domain:evanstonnow.com)"
+    ]
+  }
+}

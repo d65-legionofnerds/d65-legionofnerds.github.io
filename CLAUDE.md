@@ -455,6 +455,12 @@ python -m playwright install chromium
 
 To push to `main` your GitHub account needs write access to the repo; ask a site admin.
 
+Claude Code: `.claude/settings.json` (shared, committed) pre-approves the routine commands in
+this file (building the site, the chart tools, `git pull` / `status` / `diff` / `log`) and reading
+the District, RoundTable, Evanston Now and FOIA Gras sites. Everything else still asks first. Keep
+it that narrow. Your own extra permissions go in `.claude/settings.local.json`, which git ignores:
+never commit it.
+
 Every time:
 
 1. `git pull` before you start: other members push too.
@@ -484,7 +490,8 @@ Members mostly update this site through an AI assistant. Work like a careful edi
   Requests"). If a page won't load, ask the person to save it (File → Save page as) or paste the
   text, rather than working from a summary or from memory.
 - **Check your work like a reader:** build (section 8), serve the built site locally
-  (`python -m http.server` in the build folder) and take Playwright screenshots of every page you
+  (`python -m http.server 4000 --bind 127.0.0.1` in the build folder, so it isn't visible to
+  the rest of the network) and take Playwright screenshots of every page you
   changed and of the homepage, at about 1,280 px and 390 px wide. Fix every build "problem" and
   every "Check:" warning you caused.
 - **Keep the repo clean:** screenshots, downloaded articles and test builds go in a temporary folder
