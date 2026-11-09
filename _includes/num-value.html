@@ -1,0 +1,9 @@
+{%- comment -%}
+  The value of a "By the numbers" figure (_data/numbers.yml). With `was:` it prints as a red-pen
+  correction: the old value struck through, the new one in red. Usage: {% include num-value.html n=n %}
+{%- endcomment -%}
+{%- if include.n.was -%}
+<del class="was"><span class="sr">was </span>{{ include.n.was }}</del> <ins class="now"><span class="sr">now </span>{{ include.n.value }}</ins>
+{%- else -%}
+<span class="hl">{{ include.n.value }}</span>
+{%- endif -%}

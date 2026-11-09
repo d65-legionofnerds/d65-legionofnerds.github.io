@@ -3,7 +3,8 @@
    typewriter monospace (IBM Plex Mono), a lead story, a story river with a side rail. Signature marks:
    key sentences swiped with a yellow highlighter (<mark>), and red-pen notes in the margin for updates,
    corrections and how to read a chart (blockquote.note).
-   Colour rules: black and white. Yellow = our key finding. Red = our notes, and costs / negative numbers.
+   Colour rules: black and white. Yellow = our key finding. Red = our notes, costs / negative numbers,
+   and a revised figure (del.was / ins.now).
    Nothing else: no brand blues, navies, greens or ambers, no rounded buttons. */
 
 :root{
@@ -84,6 +85,9 @@ nav.sections .muted.on{color:var(--ink)}
 .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
 .stat b{display:inline-block;font:700 clamp(40px,4.4vw,56px)/1 var(--display);letter-spacing:-.02em;font-variant-numeric:lining-nums}
 .stat b .hl{padding:0 .08em}
+/* A revised figure (numbers.yml `was:`): the old value struck through in red pen, the new one in red ink. */
+del.was{font-size:.46em;font-weight:600;color:var(--ink-2);text-decoration:line-through;text-decoration-color:var(--pen);text-decoration-thickness:.1em;margin-right:.12em}
+ins.now{text-decoration:none;color:var(--pen)}
 .stat p{font-size:16px;line-height:1.45;margin-top:10px;color:#2a2a2a}
 .stat a{font:600 12px var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--link);text-decoration:none;display:inline-block;margin-top:10px}
 .cols{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;padding-block:8px 72px}

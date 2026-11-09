@@ -1,9 +1,12 @@
 # "By the numbers" strip on the homepage (four figures) and "The number" box on section pages.
 # Every figure must appear, word for word, in the page it links to (`source`, path from the repo root).
 # When you update an analysis, check whether its figure here still holds.
-- value: "$3.0M"
+# When the District revises a figure, add `was:` with the old value: it prints struck through in
+# red pen, with the new `value` in red. Say in the source page what changed and when.
+- value: "$2.3M"
+  was: "$2.9M"
   topic: closures
-  text: "a year in savings the District credits to closing Kingsley and Bessie Rhodes."
+  text: "a year in savings the District now projects from closing Lincolnwood and Dewey, after revising insurance and upkeep costs."
   source: dataanalysis/sy26-sy27-changes.md
 
 - value: "24–52%"

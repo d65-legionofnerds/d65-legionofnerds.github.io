@@ -27,7 +27,7 @@ layout: base
     <h2 id="by-the-numbers">By the numbers</h2>
     <div class="nums">
       {% for n in site.data.numbers limit: 4 %}
-      <div class="stat"><b><span class="hl">{{ n.value }}</span></b><p>{{ n.text }}</p><a href="{{ n.url | relative_url }}">Read the analysis →</a></div>
+      <div class="stat"><b>{% include num-value.html n=n %}</b><p>{{ n.text }}</p><a href="{{ n.url | relative_url }}">Read the analysis →</a></div>
       {% endfor %}
     </div>
   </section>

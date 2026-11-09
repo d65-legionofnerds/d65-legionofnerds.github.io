@@ -18,7 +18,10 @@
 - date: 2026-10-13
   label: "Oct 13, 2026"
   text: "“A Sustainable Path Forward” plan proposes closing Lincolnwood and Dewey."
-- date: 2026-11-09
-  label: "Nov 9, 2026"
-  text: "Board scheduled to act on the October plan."
+- date: 2026-11-03
+  label: "Nov 3, 2026"
+  text: "Revised District slides lower the Lincolnwood and Dewey savings estimate from $2.9M to about $2.3M a year."
+- date: 2026-11-16
+  label: "Nov 16, 2026"
+  text: "Board scheduled to vote on the October plan (moved from Nov 9)."
   upcoming: true

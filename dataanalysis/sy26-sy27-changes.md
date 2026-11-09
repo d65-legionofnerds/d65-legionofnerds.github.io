@@ -1,6 +1,7 @@
 ---
 title: "SY26 to SY27: What Changed After Kingsley and Bessie Rhodes Closed"
 date: 2026-10-17
+updated: 2026-11-09
 topic: closures
 type: analysis
 featured: true
@@ -16,6 +17,10 @@ takeaways:
 ---
 
 Kingsley and Bessie Rhodes closed at the end of SY2025-26. In October 2026 the District credited the two closures with **$3.0 million a year** in savings, **$2.0 million of it from staffing**, and proposed closing **Lincolnwood and Dewey** on the same basis. SY2026-27 staffing data is now available and allows us to compare how the actual staffing data compares to these figures.
+
+> **Update · Nov 9, 2026**
+> The District has lowered its estimate for closing Lincolnwood and Dewey from $2.9 million to about $2.3 million a year, after revising what it would still spend on insurance and building upkeep ([Evanston RoundTable](https://evanstonroundtable.com/2026/11/05/district-65-now-says-financial-projection-off-by-27-35-million-school-closure-savings-less-than-previously-forecasted/){:target="_blank"}). We haven't seen a revised figure for Kingsley and Bessie Rhodes. See section 1.
+{: .note}
 
 
 ## Summary
@@ -95,6 +100,8 @@ While the District owns the buildings and leaves them unused, **the likely build
 > We have asked the District specifically whether it still pays insurance on the closed buildings.
 {: .note}
 
+**The District has since made this kind of adjustment for the closures it now proposes.** At a November 3 meeting with two parents, administrators showed a slide lowering the savings from closing Lincolnwood and Dewey from about $2.9 million to about $2.3 million a year, or about $2 million once added transportation costs are counted. One of the parents said the change came from revised estimates of what the District would still spend on insurance and building upkeep ([Evanston RoundTable, November 5, 2026](https://evanstonroundtable.com/2026/11/05/district-65-now-says-financial-projection-off-by-27-35-million-school-closure-savings-less-than-previously-forecasted/){:target="_blank"}). If the District's staffing estimates for those two schools ($1,820,887, [section 2](#possible-double-counting)) are unchanged, their building savings fall from about $1.1 million to about $0.5 million a year: roughly the adjustment this page makes for Kingsley and Bessie Rhodes ($0.98 million claimed, $0.3–0.5 million likely). The District hasn't published the revised slide, and we haven't seen a revised figure for Kingsley and Bessie Rhodes.
+
 *The deck also cites $200,000 in transportation savings (["A Sustainable Path Forward," October 13, 2026](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"}).*
 
 ## 2. What did closing two schools actually cut in positions?
@@ -161,6 +168,7 @@ More information on how these numbers were calculated or a specific school open 
 4. The change in district operating costs as students and teachers from Kingsley and Bessie Rhodes joined other schools, including Foster. For example, the District counts $10,500 of discretionary supplies per closed school as a saving: did that spending go away, or did discretionary budgets rise at the schools that received more students? The same question applies to the other per-pupil and per-classroom costs that move with students.
 5. Whether the Lincolnwood and Dewey staffing estimates overlap the 103 positions in the staffing line.
 6. SY2025-26 staffing as FTE, so the two years are measured the same way.
+7. The revised Lincolnwood and Dewey estimate, line by line, and whether the same insurance and upkeep revision applies to the $3.0 million credited to Kingsley and Bessie Rhodes.
 
 ---
 
@@ -176,6 +184,7 @@ More information on how these numbers were calculated or a specific school open 
 | Fall 2026 | Kingsley and Bessie Rhodes closed; Foster School opens. Net change: one fewer elementary building. | |
 | September 28, 2026 | FY27 budget adopted; reflects "an estimated $6.3 million in expenditure reductions approved by the Board last spring, including staffing reductions, school closures, and other operational changes." | [FY27 Final Budget Memo](https://meetings.boardbook.org/Documents/FileViewerOrPublic/1247?file=14472808){:target="_blank"} |
 | October 13, 2026 | "A Sustainable Path Forward" deck: Kingsley and Bessie Rhodes closures estimated at $3.0M a year combined; proposes closing Lincolnwood and Dewey using the same method. | [D65 Agendas & Minutes](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"} |
+| November 3, 2026 | Revised slides shown to two parents lower the Lincolnwood and Dewey estimate from $2.9M to about $2.3M a year (about $2M after added transportation costs), after revised insurance and upkeep estimates. No revised Kingsley and Bessie Rhodes figure reported. | [Evanston RoundTable, Nov 5, 2026](https://evanstonroundtable.com/2026/11/05/district-65-now-says-financial-projection-off-by-27-35-million-school-closure-savings-less-than-previously-forecasted/){:target="_blank"} |
 
 **What the District says the two closures save ([October 13, 2026 deck](https://meetings.boardbook.org/Documents/WebViewer/1247?file=14549463){:target="_blank"}):**
 

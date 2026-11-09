@@ -1,6 +1,32 @@
 # Press coverage of the SDRP and the closures. Shown on the In the news page (sdrpnews.html);
-# the three newest also appear in the homepage side rail. Add new items at the top.
+# the FIRST THREE in this file appear in the homepage side rail (no sorting), so add new items at the
+# top. Fields and how-to: CLAUDE.md section 11.1.
 # `also` is an optional related document, shown under the article.
+
+- title: "Analysis and viewpoint: Closing more schools will accelerate District 65’s enrollment decline"
+  outlet: Evanston RoundTable
+  date: 2026-11-08
+  url: https://evanstonroundtable.com/2026/11/08/district-65-school-closures-analysis/
+
+- title: "District 65 releases another boundary proposal, shrinking Foster back to current area"
+  outlet: Evanston RoundTable
+  date: 2026-11-06
+  url: https://evanstonroundtable.com/2026/11/06/district-65-releases-another-boundary-proposal-shrinking-foster-back-to-current-area/
+
+- title: "District 65 now says financial projection off by $27.35 million, school closure savings less than previously forecasted"
+  outlet: Evanston RoundTable
+  date: 2026-11-05
+  url: https://evanstonroundtable.com/2026/11/05/district-65-now-says-financial-projection-off-by-27-35-million-school-closure-savings-less-than-previously-forecasted/
+
+- title: "My Comment to the Board Tonight"
+  outlet: FOIA Gras
+  date: 2026-10-26
+  url: https://foiagras.com/p/letter-to-board-oct/
+
+- title: "20 Reasons this District 65 Closure Plan is a Bad Idea"
+  outlet: FOIA Gras
+  date: 2026-10-25
+  url: https://foiagras.com/p/d65-proposal-half-baked/
 
 - title: "District 65 parents submit three proposals offering alternatives to two school closures"
   outlet: Evanston RoundTable

@@ -1,6 +1,7 @@
 ---
 title: "Did closing Kingsley and Bessie Rhodes save money?"
 date: 2026-10-29
+updated: 2026-11-09
 topic: closures
 type: analysis
 summary: "The District projected about $2.9M a year in savings from closing the two schools. Tracking those 17 budget lines in the monthly Treasurer’s reports, only part of it shows up in the FY27 budget so far."
@@ -14,6 +15,10 @@ takeaways:
 ---
 
 District 65 closed both schools after SY2025-26 and projected about **$2.9M a year** in savings across 17 budget lines. The district does not report costs by school, so we tracked each of those 17 lines in the monthly Treasurer's reports and compared FY27 (2026-27) against FY26 (2025-26, schools open) and FY25. Reports through September 2026 (3 of 12 months) are included.
+
+> **Update · Nov 9, 2026**
+> The District has lowered its estimate for the next proposed closures, Lincolnwood and Dewey, from $2.9 million to about $2.3 million a year, after revising insurance and upkeep costs ([Evanston RoundTable](https://evanstonroundtable.com/2026/11/05/district-65-now-says-financial-projection-off-by-27-35-million-school-closure-savings-less-than-previously-forecasted/){:target="_blank"}). That is a different $2.9 million from the Kingsley and Bessie Rhodes projection tracked here, which we haven't seen revised.
+{: .note}
 
 ## The short answer
 
@@ -57,7 +62,7 @@ Estimated savings = that expected FY27 cost minus the FY27 budget. Because the g
 - **Budget is not spending.** FY27 figures are the budget adopted in the September 2026 report, not what has been spent.
 - **No school-level costs.** The reports are by fund and object, so each projected item is matched to the closest district-wide line. Moves that happen to land on the same line (such as raises) cannot be separated from the closures.
 - **Foster School opened in FY27.** Bessie Rhodes students moved into it, so the new building's staff, utilities, custodians and insurance sit on the same district-wide lines. The district's own 2025 model credited Foster with only $50K of net savings.
-- **Closed buildings still cost money until they are sold.** In June 2026 the Board reached a general consensus (no formal vote) to sell both properties, and neither is sold. Insurance and some maintenance continue.
+- **Closed buildings still cost money until they are sold.** In June 2026 the Board reached a general consensus (no formal vote) to sell both properties, and neither is sold. Insurance and some maintenance continue. The District has since lowered its savings estimate for the proposed Lincolnwood and Dewey closures after revising these costs (see the update above).
 - **The district's budget already assumes the cuts.** The FY27 budget memo states it reflects "$6.3 million in expenditure reductions," including staffing reductions and school closures. Comparing budget to budget measures what the district planned, not what happens.
 - **Not every projected saving is on these lines.** The 2025 models also counted transportation, fewer class sections and leases. The tracker does not.
 

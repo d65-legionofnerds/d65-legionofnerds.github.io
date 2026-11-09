@@ -41,7 +41,7 @@ layout: base
       {% if n %}
       <div class="box">
         <h2>The number</h2>
-        <p class="big-n"><span class="hl">{{ n.value }}</span></p>
+        <p class="big-n">{% include num-value.html n=n %}</p>
         <p class="n-text">{{ n.text }} <a href="{{ n.url | relative_url }}">Source</a></p>
       </div>
       {% endif %}

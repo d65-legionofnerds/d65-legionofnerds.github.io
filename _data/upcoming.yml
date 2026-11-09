@@ -1,9 +1,16 @@
-# The navy "Coming up" box in the homepage side rail.
+# The black "Coming up" box in the homepage side rail. Fields and how-to: CLAUDE.md section 11.4.
 # Shows the soonest entry whose `until` date hasn't passed. The page also hides it in the browser
 # after `until`, so it disappears even if nobody rebuilds the site. Delete old entries whenever.
 - date: 2026-11-09
   label: "Nov 9"
   until: 2026-11-10
-  text: "The Board is scheduled to act on the District’s October plan, which proposes closing Lincolnwood and Dewey."
+  text: "The Board discusses the District’s October plan, which proposes closing Lincolnwood and Dewey. No vote tonight: it moved to Nov 16."
+  link: topics/closures/
+  link_text: "Closures coverage"
+
+- date: 2026-11-16
+  label: "Nov 16"
+  until: 2026-11-17
+  text: "The Board is scheduled to vote on the District’s October plan, which proposes closing Lincolnwood and Dewey."
   link: topics/closures/
   link_text: "Closures coverage"
