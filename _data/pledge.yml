@@ -1,0 +1,14 @@
+# The referendum pledge box at the top of the homepage. Set show: false to take it off the site.
+# It uses For A Brighter Evanston's compact counter embed (live count + "I pledge" button, about
+# 180 px tall). The form is hosted and run by them; names and emails go to them, not to us.
+# For the full form instead, use https://forabrighterevanston.org/pledge-embed/?source=d65-legionofnerds
+# and set .pledge-form iframe to height:1100px in site.css.
+show: true
+heading: "Take the referendum pledge"
+text: >-
+  Pledge to support a District 65 referendum if the Board votes no on the current plan to close
+  Dewey and Lincolnwood and builds a better one with the community.
+note: "Run by For A Brighter Evanston, not the Legion of Data Nerds. What you enter goes to them."
+link: https://forabrighterevanston.org/pledge/
+embed: https://forabrighterevanston.org/pledge-counter/?source=d65-legionofnerds
+resize_js: https://forabrighterevanston.org/assets/js/pledge-resize.js

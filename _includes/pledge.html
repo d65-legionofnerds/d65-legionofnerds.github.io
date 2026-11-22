@@ -1,0 +1,14 @@
+{%- assign p = site.data.pledge -%}
+{%- if p and p.show -%}
+<section class="pledge" aria-labelledby="pledge-h">
+  <div class="pledge-copy">
+    <h2 id="pledge-h">{{ p.heading }}</h2>
+    <p>{{ p.text }} <a href="{{ p.link }}" target="_blank" rel="noopener">Read the pledge</a></p>
+    <p class="pledge-note">{{ p.note }}</p>
+  </div>
+  <div class="pledge-form">
+    <iframe src="{{ p.embed }}" title="Referendum pledge form" loading="lazy"></iframe>
+    <script src="{{ p.resize_js }}" async></script>
+  </div>
+</section>
+{%- endif -%}
