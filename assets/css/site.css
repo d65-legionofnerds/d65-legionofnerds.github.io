@@ -90,6 +90,13 @@ del.was{font-size:.46em;font-weight:600;color:var(--ink-2);text-decoration:line-
 ins.now{text-decoration:none;color:var(--pen)}
 .stat p{font-size:16px;line-height:1.45;margin-top:10px;color:#2a2a2a}
 .stat a{font:600 12px var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--link);text-decoration:none;display:inline-block;margin-top:10px}
+/* Referendum pledge box (top of the homepage, _includes/pledge.html). The counter is an outside iframe. */
+.pledge{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;border-bottom:4px solid var(--ink);padding-block:24px;align-items:center}
+.pledge h2{font:700 clamp(24px,2.4vw,30px)/1.1 var(--display);letter-spacing:-.015em;margin:0 0 8px}
+.pledge-copy p{margin:0 0 8px;font-size:17px;line-height:1.45}
+.pledge-copy p a{white-space:nowrap}
+.pledge-copy .pledge-note{margin:0;font:500 12px/1.4 var(--label);color:var(--ink-2)}
+.pledge-form iframe{display:block;width:100%;max-width:700px;height:180px;border:0}
 .cols{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;padding-block:8px 72px}
 .river-h{display:flex;justify-content:space-between;align-items:baseline;border-top:4px solid var(--ink);padding-top:12px;margin-bottom:6px}
 .river-h h2{font:700 13px var(--label);letter-spacing:.1em;text-transform:uppercase}
@@ -274,7 +281,7 @@ footer.site a{color:#f0f0f0}
   .art-wide .prose .note,.prose .note.inline{float:none;width:auto;max-width:var(--text);margin:22px 0}
 }
 @media (max-width:1040px){
-  .lead,.cols{grid-template-columns:minmax(0,1fr)}
+  .lead,.cols,.pledge{grid-template-columns:minmax(0,1fr)}
   .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
   .related ul{grid-template-columns:minmax(0,1fr)}
 }

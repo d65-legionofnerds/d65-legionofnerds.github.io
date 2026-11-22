@@ -4,6 +4,8 @@ layout: base
 {%- assign lead = site.data.lead_story -%}
 {%- assign today = site.time | date: "%Y%m%d" | plus: 0 -%}
 <div class="wrap">
+  {% include pledge.html %}
+
   {% if lead %}
   <section class="lead" aria-label="Latest analysis">
     <div>
